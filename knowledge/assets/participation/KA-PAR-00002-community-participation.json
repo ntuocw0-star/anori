@@ -1,0 +1,286 @@
+{
+  "id": "KA-PAR-00002",
+  "canonical": "Community Participation",
+  "zh": "社区参与",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "knowledge_domain": "KD-PAR",
+  "position_in_system": {
+    "role": "Participation Science 最成熟节点，也是最有证据支撑的子域",
+    "upstream": [
+      "KA-PAR-00001 Child Participation",
+      "KA-FAM-05001 Family QoL（间接）"
+    ],
+    "downstream": [
+      "KA-PAR-00003 Belonging（Sprint 8）",
+      "Quality of Life"
+    ],
+    "note": "Community Participation 是 Participation Science 中文献最丰富、证据最稳固的节点，含多维模型和经典量表"
+  },
+  "definition": {
+    "anori": "社区参与不只是「出去活动」，而是感到自己还属于比家庭更大的世界——有人认识你，你参与了一件事，你在那里是有意义的。它可以很小：一个固定见面的朋友、一项喜欢的活动、一个社区里有你位置的地方。不需要很多，但需要真实。",
+    "research": "个体参与社区活动、社会角色和公共生活的程度，包括频率、投入度和多样性。基于 ICF 定义，社区参与是人与环境互动的结果，受到个人因素和环境因素共同影响。",
+    "model": "Community Participation Model（建立分析框架）：Access（可及性）/ Relationships（关系）/ Decision（决策参与）/ Roles（社会角色）/ Belonging（归属感）",
+    "icf_alignment": "Activities & Participation (d9)：社区、社会和公民生活"
+  },
+  "why_it_matters": "Community Participation 是整个 Participation Science 证据最稳固的节点。经典综述和大规模研究一致发现，社区参与程度和生活质量、家庭生活质量、照顾者负担都有可测量的关联。它同时是 Belonging 的前驱变量，也是 Family QoL 的重要预测因子（双向关系）。",
+  "dimensions": [
+    {
+      "dimension": "可及性（Access）",
+      "description": "物理环境、交通、费用等进入社区的条件"
+    },
+    {
+      "dimension": "关系（Relationships）",
+      "description": "社区中的人际联结和友谊"
+    },
+    {
+      "dimension": "决策参与（Decision）",
+      "description": "在社区事务中的发言权和自主权"
+    },
+    {
+      "dimension": "社会角色（Roles）",
+      "description": "在社区中承担的有意义角色"
+    },
+    {
+      "dimension": "归属感（Belonging）",
+      "description": "感到自己属于这个社区的主观体验"
+    }
+  ],
+  "core_vars": [
+    {
+      "var_id": "VAR-000023",
+      "name": "社区参与",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "upstream_predictor"
+    },
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "upstream_barrier"
+    },
+    {
+      "var_id": "VAR-000025",
+      "name": "能力主义",
+      "role": "environmental_barrier"
+    },
+    {
+      "var_id": "VAR-000027",
+      "name": "社会经济地位",
+      "role": "moderator"
+    },
+    {
+      "var_id": "VAR-000019",
+      "name": "幸福感",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000022",
+      "name": "生活质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000039",
+      "name": "家庭共同休闲",
+      "role": "facilitator"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "facilitator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000013",
+      "summary": "照顾者负担↑ → 社区参与↓",
+      "grade": "High",
+      "direction": "barrier → KA"
+    },
+    {
+      "rel_id": "REL-000027",
+      "summary": "社区参与 → 家庭生活质量↑（双向）",
+      "grade": "High",
+      "direction": "KA ↔ FQoL"
+    },
+    {
+      "rel_id": "REL-000080",
+      "summary": "社区参与 → 生活质量↑",
+      "grade": "High",
+      "direction": "KA → outcome"
+    },
+    {
+      "rel_id": "REL-000083",
+      "summary": "社区参与 → 归属感/幸福感↑",
+      "grade": "High",
+      "direction": "KA → Belonging"
+    },
+    {
+      "rel_id": "REL-000084",
+      "summary": "能力主义 → 社区参与↓",
+      "grade": "High",
+      "direction": "barrier → KA"
+    },
+    {
+      "rel_id": "REL-000085",
+      "summary": "社区参与模型：多维结构与FQoL关联",
+      "grade": "High",
+      "direction": "conceptual"
+    },
+    {
+      "rel_id": "REL-000086",
+      "summary": "SES 调节社区参与机会（参与不平等）",
+      "grade": "High",
+      "direction": "moderator → KA"
+    },
+    {
+      "rel_id": "REL-000087",
+      "summary": "家庭共同休闲/社区康乐 → 社区参与↑",
+      "grade": "High",
+      "direction": "facilitator → KA"
+    },
+    {
+      "rel_id": "REL-000025",
+      "summary": "正式支持 → 促进社区参与",
+      "grade": "Very Low",
+      "direction": "facilitator → KA",
+      "note": "STR 待升级"
+    },
+    {
+      "rel_id": "REL-000088",
+      "summary": "社区参与 → 儿童心理健康↑（长期）",
+      "grade": "Very Low",
+      "direction": "KA → child outcome",
+      "note": "STR"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 8,
+    "total_rel_count": 10,
+    "strongest_evidence": "Verdonschot et al. 2009 经典综述；Qi et al. 2025（参与障碍）；Community Participation Model；Thompson-Hodgetts et al. 2026",
+    "evidence_gaps": [
+      "正式支持 → 社区参与（REL-000025，Very Low，STR待升级）",
+      "社区参与 → 儿童心理健康（REL-000088，骨架，STR）"
+    ]
+  },
+  "barriers_and_facilitators": {
+    "barriers": [
+      {
+        "type": "环境障碍",
+        "examples": [
+          "交通不便",
+          "物理无障碍不足",
+          "活动费用高"
+        ]
+      },
+      {
+        "type": "态度障碍",
+        "examples": [
+          "能力主义偏见",
+          "社区接受度低",
+          "污名化"
+        ]
+      },
+      {
+        "type": "系统障碍",
+        "examples": [
+          "服务不足",
+          "转衔断层",
+          "信息缺乏"
+        ]
+      },
+      {
+        "type": "家庭障碍",
+        "examples": [
+          "照顾者负担过重",
+          "时间精力不足"
+        ]
+      }
+    ],
+    "facilitators": [
+      {
+        "type": "家庭支持",
+        "examples": [
+          "家庭休闲活动",
+          "家庭生活质量"
+        ]
+      },
+      {
+        "type": "专业支持",
+        "examples": [
+          "服务协调",
+          "同伴支持",
+          "社区融合计划"
+        ]
+      },
+      {
+        "type": "社区态度",
+        "examples": [
+          "接纳性社区环境",
+          "工作人员培训"
+        ]
+      },
+      {
+        "type": "政策支持",
+        "examples": [
+          "融合政策",
+          "无障碍法规"
+        ]
+      }
+    ]
+  },
+  "measurement": {
+    "scales": [
+      "Community Participation Measures（ICF框架综述，Chang et al.）",
+      "PEM-CY（参与与环境测量）",
+      "CAPE（儿童参与与享受评估）",
+      "Community Integration Questionnaire（CIQ）"
+    ],
+    "note": "测量时应同时评估参与频率和参与质量（投入度、享受感），单独测频率会低估真实参与状态"
+  },
+  "common_misunderstanding": [
+    "参与就是出现在那里（实际上归属感和投入度才是真正的参与）",
+    "参与能力是个人特征（实际上主要由环境支持和社区接受度决定）",
+    "SES 不影响参与（实际上 SES 显著调节参与机会，参与不平等有系统性根源）",
+    "消除身体障碍就够了（实际上态度障碍和社会排斥往往更难克服）"
+  ],
+  "website": {
+    "page_slug": "community-interaction",
+    "related_problems": [
+      "PRB-0016",
+      "PRB-0019",
+      "PRB-0020",
+      "PRB-0006"
+    ],
+    "anori_reframe": "社区参与不需要恢复到以前的状态，也不需要很广泛。只需要在今天的生活里，有一个真实的连接——一个认识你、你也认识他的地方。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "怎么帮孩子融入社区？",
+      "孩子总被排斥，怎么办？",
+      "什么影响孩子参与社区活动？",
+      "社区参与对孩子发展有什么影响？",
+      "怎么让孩子在社区里有归属感？"
+    ],
+    "answer_template": "研究发现，社区参与最重要的影响因素不是孩子的能力，而是环境的接纳程度和家庭支持的充分性。{evidence_card} 说明了哪些因素最有证据支持参与改善。"
+  },
+  "related_kas": [
+    "KA-PAR-00001",
+    "KA-FAM-05001",
+    "KA-FAM-02003"
+  ],
+  "related_concepts": [
+    "CON-000003"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，8条High grade REL，是 KD-PAR 证据最强的节点"
+    }
+  ]
+}

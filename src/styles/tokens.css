@@ -1,0 +1,101 @@
+/**
+ * Anori Design Tokens
+ * Sprint 15.1B
+ *
+ * 由 global.css 的真实生产变量原值迁移而来。
+ * 不在此阶段调整颜色、字号、间距或圆角数值。
+ */
+
+:root {
+  /* ── Color ──────────────────────────────────────────────── */
+  --ink:          #1C2B3A;
+  --paper:        #F5F1EB;
+  --paper-warm:   #EEEBE3;
+  --surface:      #FDFCF9;
+  --surface-card: #E8EEF3;
+  --border:       #D8DDE3;
+  --muted:        #5A6978;   /* darkened from #6B7A8A for WCAG AA on --paper */
+  --muted-lt:     #A0AABB;
+  --brand:        #2D6A8F;
+
+  /* Semantic Confidence (COLOR-001 Section 7) */
+  --confidence-high:   #5B9E7A;
+  --confidence-medium: #E8A84F;
+  --confidence-low:    #2D6A8F;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font:         "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --mono:         "JetBrains Mono", "Courier New", monospace;
+
+  --text-xs:   0.72rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.375rem;
+  --text-2xl:  1.75rem;
+  --text-3xl:  2.25rem;
+  --text-4xl:  3rem;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-14: 3.5rem;
+  --sp-16: 4rem;
+  --sp-24: 6rem;
+
+  /* Standard layout rhythm (AUDIT-003) */
+  --section-pad-top:    var(--sp-12);
+  --section-pad-bottom: var(--sp-24);
+  --section-gap:        var(--sp-16);
+  --component-gap:      var(--sp-6);
+
+  /* ── Shape ───────────────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius:     6px;
+  --radius-lg:  12px;
+  --radius-pill: 999px;
+
+  /* ── Shadow (AUDIT-001) ──────────────────────────────────── */
+  --shadow-sm: 0 1px 4px  rgba(28,43,58,0.06);
+  --shadow-md: 0 4px 16px rgba(28,43,58,0.08);
+  --shadow-lg: 0 8px 32px rgba(28,43,58,0.10);
+
+  /* ── Motion ──────────────────────────────────────────────── */
+  --transition: 0.15s ease;
+
+  /* ── Z-index ─────────────────────────────────────────────── */
+  --z-nav:   100;
+  --z-modal: 200;
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --max-w:     1100px;
+  --max-prose: 640px;
+}
+
+:root {
+  /* Soft backgrounds — use sparingly, not on every module */
+  --bg-subtle:     #F2F0EB;   /* slightly warmer than --paper, for light section separation */
+  --bg-nature:     #EFF4F0;   /* barely-there sage, for nature element backgrounds only */
+  --surface-alt:      #FDFCF8;  /* 卡片面轻量变体，与 --surface 差 1 位 B 通道 */
+  --bg-brand-subtle:  #EEF4FB;  /* brand 蓝浅底，paths-section / knowledge 区块 */
+  --bg-brand-tint:    #F3F7FB;  /* brand 蓝更浅，method 卡片 / hover 背景 */
+  --bg-high-tint:     #F2F8F5;  /* confidence-high 绿浅底（resource 轻量版）*/
+  --bg-high-subtle:   #F4FAF7;  /* confidence-high 绿浅底（标准版）*/
+  --bg-medium-subtle: #FFFBF3;  /* confidence-medium 黄浅底 */
+
+  /* Spacing rhythm — Sprint 12 */
+  --space-ending:  var(--sp-16);  /* whitespace before Ending */
+  --space-module:  var(--sp-10);  /* standard gap between page modules */
+
+  /* Nature palette — SVG elements only */
+  --nature-green:  #8FAF95;   /* leaf / sprout fill */
+  --nature-line:   #C8D8C4;   /* divider line with leaf motif */
+}

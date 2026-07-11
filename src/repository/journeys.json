@@ -1,0 +1,151 @@
+{
+  "schema_version": "2.0",
+  "description": "Anori Support Journey — QG-001 v1.0 实现。每条边来自家长的问题推进，不是网站分类。",
+  "question_graph_version": "QG-001-v1.0",
+
+  "journeys": [
+
+    {
+      "id": "JRN-A",
+      "title": "路径 A：我越来越累",
+      "description": "从身心变化出发，经由休息，走向寻求支持。",
+      "start": "health",
+      "question_left": "为什么最近什么都变得越来越难？",
+      "steps": [
+        {
+          "slug": "leisure",
+          "primary_next": true,
+          "question_answered": "为什么我越来越撑不住？",
+          "because": "如果这些变化已经让你越来越疲惫，也许先看看休息，比继续寻找更多解释更重要。",
+          "alternative_next": "family-relationships"
+        },
+        {
+          "slug": "support-from-others",
+          "primary_next": true,
+          "question_answered": "是不是只能靠我一个人？",
+          "because": "休息是一件事，但如果连休息都很难，可能是因为一直一个人在撑。",
+          "alternative_next": "financial-wellbeing"
+        }
+      ]
+    },
+
+    {
+      "id": "JRN-B",
+      "title": "路径 B：孩子变化越来越明显",
+      "description": "从孩子和家庭的变化出发，走向寻求支持。",
+      "start": "health",
+      "question_left": "为什么最近什么都变得越来越难？",
+      "steps": [
+        {
+          "slug": "family-relationships",
+          "primary_next": true,
+          "question_answered": "如果一直这样下去，我们会变成什么样？",
+          "because": "如果你注意到的变化，不只是你自己，也开始影响整个家庭的气氛，可以先看看这里。",
+          "alternative_next": "leisure"
+        },
+        {
+          "slug": "support-from-others",
+          "primary_next": true,
+          "question_answered": "是不是只能靠我一个人？",
+          "because": "家里的变化，很多时候需要有人一起来看，而不只是自己想。",
+          "alternative_next": "disability-services"
+        }
+      ]
+    },
+
+    {
+      "id": "JRN-C",
+      "title": "汇合：支持之后",
+      "description": "从寻求支持出发，分叉进入经济或服务，最终在社区收束。",
+      "start": "support-from-others",
+      "question_left": "是不是只能靠我一个人？",
+      "steps": [
+        {
+          "slug": "financial-wellbeing",
+          "primary_next": true,
+          "question_answered": "有没有一种办法，不是什么都只能靠钱解决？",
+          "because": "寻求支持之后，很多家长下一个碰到的，是资源和经济的现实问题。",
+          "alternative_next": "disability-services"
+        },
+        {
+          "slug": "community-interaction",
+          "primary_next": true,
+          "question_answered": "原来不是只有我，那接下来呢？",
+          "because": "资源和经济之后，很多家长开始想找到和自己处境相似的人。",
+          "alternative_next": null
+        }
+      ]
+    },
+
+    {
+      "id": "JRN-D",
+      "title": "汇合：服务之后",
+      "description": "从专业服务出发，走向社区收束。",
+      "start": "disability-services",
+      "question_left": "这么多帮助，我该先从哪一步开始？",
+      "steps": [
+        {
+          "slug": "community-interaction",
+          "primary_next": true,
+          "question_answered": "原来不是只有我，那接下来呢？",
+          "because": "进入专业支持之后，很多家长开始想要连接更大的社群。",
+          "alternative_next": "support-from-others"
+        }
+      ]
+    },
+
+    {
+      "id": "JRN-E",
+      "title": "侧支：Values",
+      "description": "从任何「照顾了很久」的页面自然进入。",
+      "start": "values",
+      "question_left": "除了照顾别人，我还剩下什么？",
+      "steps": [
+        {
+          "slug": "leisure",
+          "primary_next": true,
+          "question_answered": "是不是只有我会这样累？",
+          "because": "先让自己慢慢停下来，才能重新看见还剩下什么。",
+          "alternative_next": "support-from-others"
+        }
+      ]
+    },
+
+    {
+      "id": "JRN-F",
+      "title": "侧支：Career",
+      "description": "从任何「撑不住」的页面自然进入。",
+      "start": "career",
+      "question_left": "如果继续这样，我还能坚持多久？",
+      "steps": [
+        {
+          "slug": "leisure",
+          "primary_next": true,
+          "question_answered": "是不是只有我会这样累？",
+          "because": "如果工作和照顾都在拉着你，先看看休息——不是因为可以马上解决，而是因为先停一步，才能看清楚。",
+          "alternative_next": "values"
+        },
+        {
+          "slug": "values",
+          "primary_next": false,
+          "question_answered": "除了照顾别人，我还剩下什么？",
+          "because": "坚持了这么久，可能也需要先问一问：什么是最值得守住的。",
+          "alternative_next": null
+        }
+      ]
+    }
+
+  ],
+
+  "page_primary_next": {
+    "health":                 { "primary": "leisure",              "because": "如果这些变化已经让你越来越疲惫，也许先看看休息，比继续寻找更多解释更重要。" },
+    "leisure":                { "primary": "support-from-others",  "because": "休息是一件事，但如果连休息都很难，可能是因为一直一个人在撑。" },
+    "family-relationships":   { "primary": "support-from-others",  "because": "家里的变化，很多时候需要有人一起来看，而不只是自己想。" },
+    "values":                 { "primary": "leisure",              "because": "先让自己慢慢停下来，才能重新看见还剩下什么。" },
+    "career":                 { "primary": "leisure",              "because": "如果工作和照顾都在拉着你，先看看休息——不是因为可以马上解决，而是因为先停一步，才能看清楚。" },
+    "support-from-others":    { "primary": "financial-wellbeing",  "because": "寻求支持之后，很多家长下一个碰到的，是资源和经济的现实问题。" },
+    "financial-wellbeing":    { "primary": "community-interaction","because": "资源和经济之后，很多家长开始想找到和自己处境相似的人。" },
+    "disability-services":    { "primary": "community-interaction","because": "进入专业支持之后，很多家长开始想要连接更大的社群。" },
+    "community-interaction":  { "primary": null,                   "because": null }
+  }
+}

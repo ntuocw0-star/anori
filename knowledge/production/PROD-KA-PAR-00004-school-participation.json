@@ -1,0 +1,202 @@
+{
+  "id": "PROD-KA-PAR-00004",
+  "ka_id": "KA-PAR-00004",
+  "canonical": "School Participation",
+  "zh": "学校参与",
+  "created": "2026-07-07",
+  "sprint": "E3-08",
+  "version": "v1.0",
+  "production_standard": "Production Standard v1.0",
+  "theme": "有位置，不只是在场",
+  "concept_page": {
+    "title": "学校参与（School Participation）",
+    "subtitle": "学校参与不只是去上学，而是在学校里有真正属于自己的位置——在课堂、在课间、在活动里。",
+    "definition_anori": "学校参与不只是孩子去学校上课。它包括：孩子在课堂里能不能真正参与学习、在课间有没有同学一起、在学校活动里有没有自己的位置。学校是孩子花时间最多的地方，学校里的参与质量，直接影响孩子的发展和归属感。",
+    "definition_research": "学生在学校环境中参与学习活动、社交互动、课外活动和学校生活的程度，包括学术参与、社会参与和课外活动参与三个维度。",
+    "why_it_matters": "学校是儿童最重要的参与情境，也是归属感最早形成的场所之一。学校参与质量影响学业发展、同伴关系、自我效能感和长期社区参与能力。同伴支持和学校转衔支持是目前证据最强的两个改善路径。"
+  },
+  "parent_version": {
+    "memorable_sentence": "学校参与不只是去上学，而是在学校里有真正属于自己的位置——在课堂、在课间、在活动里。",
+    "headline": "学校参与：有位置，不只是在场",
+    "core_message": "学校参与不只是孩子去学校上课。它包括：孩子在课堂里能不能真正参与学习、在课间有没有同学一起、在学校活动里有没有自己的位置。学校是孩子花时间最多的地方，学校里的参与质量，直接影响孩子的发展和归属感。",
+    "reframe": "学校参与不只是让孩子去学校，而是让孩子在学校里有真正属于自己的位置——在课堂、在课间、在活动里。"
+  },
+  "evidence_cards": [
+    {
+      "rel_id": "REL-000093",
+      "grade": "High",
+      "note": "来自 KA KA-PAR-00004 key_rels"
+    },
+    {
+      "rel_id": "REL-000094",
+      "grade": "High",
+      "note": "来自 KA KA-PAR-00004 key_rels"
+    },
+    {
+      "rel_id": "REL-000095",
+      "grade": "High",
+      "note": "来自 KA KA-PAR-00004 key_rels"
+    }
+  ],
+  "common_misunderstanding": [
+    {
+      "misunderstanding": "只要孩子在学校就是参与了",
+      "reality": "实际上边缘化出席不等于真正参与"
+    },
+    {
+      "misunderstanding": "学术成绩好就是参与好",
+      "reality": "实际上社会参与和归属感同样重要"
+    },
+    {
+      "misunderstanding": "同伴关系是孩子自己的事",
+      "reality": "实际上需要学校主动创造支持性环境"
+    },
+    {
+      "misunderstanding": "转衔只是换学校",
+      "reality": "实际上需要提前规划、多方协作、持续支持"
+    }
+  ],
+  "ai_retrieval": {
+    "trigger_questions": [
+      "孩子在学校没有朋友怎么办？",
+      "孩子被排斥/被欺凌怎么办？",
+      "怎么帮孩子更好地参与学校生活？",
+      "学校转衔怎么规划？",
+      "融合教育有什么支持方法？"
+    ],
+    "citation_priority": [
+      "REL-000094",
+      "REL-000095",
+      "REL-000093"
+    ],
+    "memorable_sentence": "学校参与不只是去上学，而是在学校里有真正属于自己的位置——在课堂、在课间、在活动里。",
+    "core_answer": "研究发现，改善学校参与最有证据支持的方法是同伴支持安排和提前转衔规划。{evidence_card} 说明了这两种方法如何帮助障碍学生真正融入学校。"
+  },
+  "popup_layers": {
+    "layer_1": {
+      "trigger": "一句话理解",
+      "content": "学校参与不只是去上学，而是在学校里有真正属于自己的位置——在课堂、在课间、在活动里。"
+    },
+    "layer_2": {
+      "trigger": "为什么会这样？",
+      "content": [
+        "学校参与不只是孩子去学校上课。它包括：孩子在课堂里能不能真正参与学习、在课间有没有同学一起、在学校活动里有没有自己的位置。学校是孩子花时间最多的地方，学校里的参与质量，直接影响孩子的发展和归属感。"
+      ]
+    },
+    "layer_3": {
+      "trigger": "研究怎么说？",
+      "content": [
+        {
+          "rel_id": "REL-000094",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000095",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000093",
+          "grade": "High"
+        }
+      ]
+    },
+    "layer_4": {
+      "trigger": "可以看看哪些相关内容？",
+      "related_concepts": [
+        {
+          "zh": "归属感",
+          "slug": "belonging",
+          "tagline": "学校里的归属感，从同伴开始"
+        },
+        {
+          "zh": "社区参与",
+          "slug": "community-participation",
+          "tagline": "学校参与是社区参与的起点"
+        },
+        {
+          "zh": "同伴支持",
+          "slug": "peer-support",
+          "tagline": "同伴支持是最有证据的干预方式"
+        }
+      ]
+    }
+  },
+  "problem_mapping": {
+    "related_problems": [
+      "PRB-0007",
+      "PRB-0008",
+      "PRB-0009",
+      "PRB-0010"
+    ]
+  },
+  "website_card": {
+    "card_title": "学校参与",
+    "card_tagline": "学校参与不只是去上学，而是在学校里有真正属于自己的位置——在课堂、在课间、在活动里。",
+    "card_link": "/disability-services"
+  },
+  "ui_ready": {
+    "component_type": "concept_card",
+    "color_theme": "blue",
+    "icon": "school",
+    "astro_component": "ConceptCard",
+    "react_component": "KAConceptCard",
+    "render_fields": {
+      "card_title": "website_card.card_title",
+      "card_tagline": "website_card.card_tagline",
+      "popup_layer_1": "popup_layers.layer_1.content",
+      "popup_layer_2": "popup_layers.layer_2.content",
+      "popup_layer_3": "popup_layers.layer_3.content",
+      "popup_layer_4": "popup_layers.layer_4"
+    }
+  },
+  "qa_checklist": [
+    {
+      "check": "每条 Evidence Card 都有 rel_id 对应",
+      "status": "✅"
+    },
+    {
+      "check": "Parent Version 没有专业术语或都已解释",
+      "status": "✅"
+    },
+    {
+      "check": "Common Misunderstanding 先说误解再说实际",
+      "status": "✅"
+    },
+    {
+      "check": "Reframe 不是鼓励也不是评判",
+      "status": "✅"
+    },
+    {
+      "check": "AI Retrieval 有明确的触发问题",
+      "status": "✅"
+    },
+    {
+      "check": "Problem Mapping 有对应 PRB ID",
+      "status": "✅"
+    },
+    {
+      "check": "Website Card tagline 符合 Anori Voice",
+      "status": "✅"
+    },
+    {
+      "check": "AI citation_priority 已设定",
+      "status": "✅"
+    },
+    {
+      "check": "memorable_sentence 六处锚点完全一致",
+      "status": "✅"
+    },
+    {
+      "check": "popup_layers 四层完整",
+      "status": "✅"
+    },
+    {
+      "check": "ui_ready.render_fields 完整映射",
+      "status": "✅"
+    },
+    {
+      "check": "Anori Voice 验证：无责备、无宿命感",
+      "status": "✅"
+    }
+  ]
+}

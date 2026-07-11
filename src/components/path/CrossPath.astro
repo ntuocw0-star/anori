@@ -1,0 +1,17 @@
+---
+export interface Props {
+  label: string;
+  title: string;
+  desc: string;
+  href: string;
+}
+const { label, title, desc, href } = Astro.props;
+---
+<section class="up-section">
+  <a href={href} class="up-crosspath">
+    <span class="up-crosspath-label">{label}</span>
+    <p class="up-crosspath-title">{title}</p>
+    <p class="up-crosspath-desc">{desc}</p>
+    <span class="up-crosspath-arrow">→</span>
+  </a>
+</section>

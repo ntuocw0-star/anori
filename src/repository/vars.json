@@ -1,0 +1,658 @@
+{
+  "meta": {
+    "version": "1.0",
+    "date": "2026-07-01",
+    "status": "Stable Release",
+    "total_canonical": 44,
+    "total_deprecated": 2,
+    "total": 49
+  },
+  "variables": [
+    {
+      "id": "VAR-000001",
+      "canonical_name": "Financial Stress",
+      "chinese_name": "经济压力",
+      "aliases": [
+        "Economic Stress",
+        "Financial Hardship",
+        "Financial Pressure"
+      ],
+      "variable_type": "Risk",
+      "definition": "家庭因经济资源不足或不确定性产生的压力状态。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000002",
+      "canonical_name": "Parent Stress",
+      "chinese_name": "父母压力",
+      "aliases": [
+        "Parental Stress",
+        "Parenting Stress",
+        "家长压力",
+        "家长焦虑",
+        "家长疲惫"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "父母在照顾子女过程中感受到的心理压力总体水平。",
+      "cross_reference": "See also: VAR-000009 (Caregiver Burden) — related but distinct concept",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000003",
+      "canonical_name": "Parenting Quality",
+      "chinese_name": "教养质量",
+      "aliases": [
+        "Parenting Behavior",
+        "Sensitive Parenting",
+        "Parenting Practice"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "父母在日常互动中表现出的回应性、一致性与情感支持水平。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000004",
+      "canonical_name": "Family Quality of Life",
+      "chinese_name": "家庭生活质量",
+      "aliases": [
+        "FQoL",
+        "Family Well-being",
+        "Family Life Quality"
+      ],
+      "variable_type": "Outcome",
+      "definition": "家庭作为整体系统在多个生活领域的满意度与功能水平。",
+      "central_outcome": true,
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000005",
+      "canonical_name": "Parent Emotion Regulation",
+      "chinese_name": "父母情绪调节",
+      "aliases": [
+        "Parental Emotion Regulation",
+        "Caregiver Emotion Regulation"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "父母识别、管理和调节自身情绪的能力。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000006",
+      "canonical_name": "Psychological Flexibility",
+      "chinese_name": "心理灵活性",
+      "aliases": [
+        "Cognitive Flexibility (parenting context)"
+      ],
+      "variable_type": "Protective",
+      "definition": "父母在压力情境中保持开放、适应性行动的心理能力（ACT框架）。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000007",
+      "canonical_name": "Social Support - Informal",
+      "chinese_name": "非正式社会支持",
+      "aliases": [
+        "Informal Support",
+        "Natural Support",
+        "Family and Friend Support"
+      ],
+      "variable_type": "Protective",
+      "definition": "来自家人、朋友、邻居等非正式网络的情感、工具和信息支持。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000008",
+      "canonical_name": "Social Support - Formal",
+      "chinese_name": "正式社会支持",
+      "aliases": [
+        "Formal Support",
+        "Professional Support",
+        "Service Support"
+      ],
+      "variable_type": "Protective",
+      "definition": "来自医疗、教育、社会服务等正式机构的支持。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000009",
+      "canonical_name": "Caregiver Burden",
+      "chinese_name": "照顾者负担",
+      "aliases": [
+        "Caring Burden",
+        "Caregiver Strain",
+        "Caregiving Burden"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "照顾者在长期照护过程中积累的心理、身体和社会负担。",
+      "cross_reference": "See also: VAR-000002 (Parent Stress) — related but distinct concept",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000010",
+      "canonical_name": "Peer Victimization",
+      "chinese_name": "同伴欺凌受害",
+      "aliases": [
+        "Bullying Victimization",
+        "Peer Bullying"
+      ],
+      "variable_type": "Risk",
+      "definition": "个体在同伴关系中遭受排斥、欺凌或负面对待的经历。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000011",
+      "canonical_name": "Friendship Support Satisfaction",
+      "chinese_name": "友谊支持满意度",
+      "aliases": [
+        "Friend Support Satisfaction",
+        "Peer Support Quality"
+      ],
+      "variable_type": "Protective",
+      "definition": "个体对其友谊关系所提供支持的满意程度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000012",
+      "canonical_name": "Depression",
+      "chinese_name": "抑郁",
+      "aliases": [
+        "Depressive Symptoms",
+        "Depressive Disorder"
+      ],
+      "variable_type": "Outcome",
+      "definition": "个体经历的抑郁情绪症状水平。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000013",
+      "canonical_name": "Child Mental Health",
+      "chinese_name": "儿童心理健康",
+      "aliases": [
+        "Child Psychological Well-being",
+        "Child Emotional Health"
+      ],
+      "variable_type": "Outcome",
+      "definition": "儿童的整体心理健康状态，包括内化和外化问题。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000014",
+      "canonical_name": "Child Adjustment",
+      "chinese_name": "儿童适应",
+      "aliases": [
+        "Child Adaptation",
+        "Child Behavioral Adjustment"
+      ],
+      "variable_type": "Outcome",
+      "definition": "儿童适应家庭、学校和社会环境的能力与表现。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000015",
+      "canonical_name": "Family Functioning",
+      "chinese_name": "家庭功能",
+      "aliases": [
+        "Family Function",
+        "Family System Functioning"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "家庭成员之间沟通、角色分工、情感联结和问题解决的整体运作质量。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000016",
+      "canonical_name": "Emotion Socialization",
+      "chinese_name": "情绪社会化",
+      "aliases": [
+        "Parental Emotion Socialization",
+        "Emotional Coaching"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "家庭中父母对儿童情绪的回应、示范和教导方式。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000017",
+      "canonical_name": "Child Social Competence",
+      "chinese_name": "儿童社交能力",
+      "aliases": [
+        "Social Skills",
+        "Peer Relationship Quality"
+      ],
+      "variable_type": "Outcome",
+      "definition": "儿童在同伴互动中表现出的社交理解、沟通和合作能力。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000018",
+      "canonical_name": "Family Resilience",
+      "chinese_name": "家庭韧性",
+      "aliases": [
+        "Family Adaptive Capacity",
+        "Family Hardiness"
+      ],
+      "variable_type": "Protective",
+      "definition": "家庭面对逆境时动员资源、维持功能并从困难中恢复的能力。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000019",
+      "canonical_name": "Well-being",
+      "chinese_name": "幸福感",
+      "aliases": [
+        "Psychological Well-being",
+        "Subjective Well-being"
+      ],
+      "variable_type": "Outcome",
+      "definition": "个体或家庭的整体幸福感与生活满意度。Well-being reflects subjective psychological state and satisfaction, whereas Quality of Life represents a broader multidimensional life outcome.",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000020",
+      "canonical_name": "Family Leisure",
+      "chinese_name": "家庭休闲",
+      "aliases": [
+        "Family Recreation",
+        "Shared Family Activities"
+      ],
+      "variable_type": "Protective",
+      "definition": "家庭成员共同参与的休闲、娱乐和放松活动（领域概念）。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000021",
+      "canonical_name": "Leisure Participation",
+      "chinese_name": "休闲参与",
+      "aliases": [
+        "Recreation Participation",
+        "Leisure Engagement"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "个体参与休闲和娱乐活动的频率、多样性和投入程度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000022",
+      "canonical_name": "Quality of Life",
+      "chinese_name": "生活质量",
+      "aliases": [
+        "QoL",
+        "Individual Quality of Life",
+        "Life Quality"
+      ],
+      "variable_type": "Outcome",
+      "definition": "个体在身体、心理、社会和环境层面的整体生活质量。Quality of Life includes but is not limited to subjective well-being.",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000023",
+      "canonical_name": "Community Participation",
+      "chinese_name": "社区参与",
+      "aliases": [
+        "Community Inclusion",
+        "Civic Participation",
+        "Community Social Participation"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "个体参与社区活动、社会角色和公共生活的程度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000024",
+      "canonical_name": "Caregiver Burden [DEPRECATED]",
+      "status": "Deprecated",
+      "deprecated_reason": "Duplicate Canonical Variable",
+      "replaced_by": "VAR-000009",
+      "deprecation_date": "2026-07-01",
+      "deprecation_batch": "Audit-001"
+    },
+    {
+      "id": "VAR-000025",
+      "canonical_name": "Ableism",
+      "chinese_name": "能力主义",
+      "aliases": [
+        "Ableist Attitudes",
+        "Disability Discrimination",
+        "Microaggression"
+      ],
+      "variable_type": "Risk",
+      "definition": "社会对残障人士的偏见、歧视和隐性负面态度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000026",
+      "canonical_name": "Social Exclusion",
+      "chinese_name": "社会排斥",
+      "aliases": [
+        "Marginalization",
+        "Social Rejection"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "个体被排除在社会参与机会之外的状态。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000027",
+      "canonical_name": "Socioeconomic Status",
+      "chinese_name": "社会经济地位",
+      "aliases": [
+        "SES",
+        "Income Level",
+        "Socioeconomic Position"
+      ],
+      "variable_type": "Context",
+      "definition": "家庭的收入、教育和职业地位等社会经济背景因素。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000028",
+      "canonical_name": "Social Exclusion [DEPRECATED]",
+      "status": "Deprecated",
+      "deprecated_reason": "Merged Canonical Variable",
+      "replaced_by": "VAR-000026",
+      "merge_date": "2026-07-01",
+      "merge_batch": "Audit-001"
+    },
+    {
+      "id": "VAR-000029",
+      "canonical_name": "Gender",
+      "chinese_name": "性别",
+      "aliases": [
+        "Sex",
+        "Gender Identity"
+      ],
+      "variable_type": "Context",
+      "definition": "个体的性别身份，作为调节变量影响多种家庭和社会过程。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000030",
+      "canonical_name": "Service Access",
+      "chinese_name": "服务可及性",
+      "aliases": [
+        "Access to Services",
+        "Service Utilization",
+        "Service Uptake"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "家庭实际获得并使用所需专业服务的程度，受可及性、可负担性、可接受性等因素影响。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000031",
+      "canonical_name": "Service Coordination",
+      "chinese_name": "服务协调",
+      "aliases": [
+        "Care Coordination",
+        "Service Navigation",
+        "Interagency Coordination"
+      ],
+      "variable_type": "Protective",
+      "definition": "跨机构或跨专业整合服务，减少家庭在系统间导航负担的协调机制。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000032",
+      "canonical_name": "Service Satisfaction",
+      "chinese_name": "服务满意度",
+      "aliases": [
+        "Satisfaction with Services",
+        "User Satisfaction"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "家庭对所获得专业服务质量、回应性和有效性的主观满意程度。",
+      "status": "Active",
+      "note": "Reclassified from Outcome to Intermediate in Audit-002. Satisfaction influences continued engagement and FQoL."
+    },
+    {
+      "id": "VAR-000033",
+      "canonical_name": "Unmet Service Need",
+      "chinese_name": "未满足服务需求",
+      "aliases": [
+        "Unmet Need",
+        "Service Gap"
+      ],
+      "variable_type": "Risk",
+      "definition": "家庭感知到需要但未能获得的服务缺口，与压力增加和结果变差相关。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000034",
+      "canonical_name": "Work-Family Conflict",
+      "chinese_name": "工作家庭冲突",
+      "aliases": [
+        "Family-Work Conflict",
+        "Caregiving-Work Conflict"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "照顾责任与工作要求之间产生的时间、角色及心理冲突。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000035",
+      "canonical_name": "Employment Stability",
+      "chinese_name": "就业稳定性",
+      "aliases": [
+        "Job Retention",
+        "Employment Continuity"
+      ],
+      "variable_type": "Outcome",
+      "definition": "照顾者维持稳定就业及职业发展的能力。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000036",
+      "canonical_name": "Transition Readiness",
+      "chinese_name": "转衔准备度",
+      "aliases": [
+        "School-to-Adulthood Readiness",
+        "Transition Preparedness"
+      ],
+      "variable_type": "Protective",
+      "definition": "青年进入成年阶段前，在自我决定、生活技能、社会支持和服务知识方面的综合准备程度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000037",
+      "canonical_name": "Adult Service Access",
+      "chinese_name": "成人服务可及性",
+      "aliases": [
+        "Adult Support Access",
+        "Post-school Service Utilization"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "成年残障人士实际发现（find）、进入（access）并持续使用（utilize）医疗、就业、居住、社区支持等成人阶段服务的程度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000038",
+      "canonical_name": "Independent Living",
+      "chinese_name": "独立生活",
+      "aliases": [
+        "Residential Independence",
+        "Living Autonomy",
+        "Daily Living Independence"
+      ],
+      "variable_type": "Outcome",
+      "definition": "个人在居住、财务、日常生活和社会角色方面自主管理的实际能力与状态。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000039",
+      "canonical_name": "Shared Family Leisure",
+      "chinese_name": "家庭共同休闲",
+      "aliases": [
+        "Family Shared Activities",
+        "Joint Family Recreation",
+        "Family Leisure Activities"
+      ],
+      "variable_type": "Protective",
+      "definition": "家庭成员共同参与的、以连接和愉悦为目的的休闲和娱乐活动（具体行为变量，区别于VAR-000020领域概念）。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000040",
+      "canonical_name": "Leisure Satisfaction",
+      "chinese_name": "休闲满意度",
+      "aliases": [
+        "Leisure Quality",
+        "Satisfaction with Leisure",
+        "Leisure Enjoyment"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "个人或家庭对所参与休闲活动的质量、意义和满足感的主观评价。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000041",
+      "canonical_name": "Family Routine Balance",
+      "chinese_name": "家庭日常结构平衡",
+      "aliases": [
+        "Family Routine",
+        "Daily Routine Structure",
+        "Family Schedule Balance"
+      ],
+      "variable_type": "Protective",
+      "definition": "家庭日常生活中稳定、可预期的时间安排与活动结构，为共同休闲和家庭互动创造条件。Routine的价值不在于严格规律，而在于为家庭共同活动创造可预测的时间与心理空间（Predictable Opportunity）。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000042",
+      "canonical_name": "Policy Support",
+      "chinese_name": "政策支持",
+      "aliases": [
+        "Policy Enablement",
+        "Systemic Support",
+        "Institutional Support"
+      ],
+      "variable_type": "Protective",
+      "definition": "政府、机构或系统层面为循证实践实施所提供的资源、授权、规范和持续激励机制。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000043",
+      "canonical_name": "Implementation Fidelity",
+      "chinese_name": "实施忠实度",
+      "aliases": [
+        "Program Fidelity",
+        "Treatment Fidelity",
+        "Intervention Fidelity"
+      ],
+      "variable_type": "Intermediate",
+      "definition": "循证干预或支持方案在实际执行过程中与原设计方案的符合程度，包括内容、剂量、质量和参与度。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000044",
+      "canonical_name": "Implementation Barrier",
+      "chinese_name": "实施障碍",
+      "aliases": [
+        "Systemic Barrier",
+        "Organizational Barrier",
+        "Implementation Challenge"
+      ],
+      "variable_type": "Risk",
+      "definition": "阻碍循证实践在真实环境中有效实施的系统性、组织性、文化性或资源性障碍因素。",
+      "status": "Active"
+    },
+    {
+      "id": "VAR-000045",
+      "chinese_name": "照顾者自我效能",
+      "definition": "照顾者对自己有能力有效完成照顾任务、应对挑战并维持自身状态的信念和信心。",
+      "aliases": [
+        "Caregiver Self-efficacy",
+        "Parenting Self-efficacy",
+        "Caregiver Competence"
+      ]
+    },
+    {
+      "id": "VAR-000046",
+      "chinese_name": "照顾意义感",
+      "definition": "照顾者在照顾过程中感受到的目的感、价值感和人生意义，包括对照顾经历的正向诠释。",
+      "aliases": [
+        "Caregiver Meaning",
+        "Meaning-making",
+        "Benefit Finding",
+        "Positive Appraisal"
+      ]
+    },
+    {
+      "id": "VAR-000047",
+      "chinese_name": "自我关怀",
+      "definition": "个体以善意、理解和接纳的态度对待自己的困难和失败，而不是批评或评判自己的能力。",
+      "aliases": [
+        "Self-compassion",
+        "Self-kindness",
+        "Mindful Self-compassion"
+      ]
+    },
+    {
+      "id": "VAR-000048",
+      "chinese_name": "照顾者韧性",
+      "definition": "照顾者在长期压力和逆境中维持或恢复心理功能、适应能力和照顾能力的过程。",
+      "aliases": [
+        "Caregiver Resilience",
+        "Caregiver Adaptation",
+        "Psychological Resilience"
+      ]
+    },
+    {
+      "id": "VAR-000049",
+      "chinese_name": "照顾者身份认同",
+      "definition": "照顾者对自身在照顾角色中的自我定义、价值观和身份的感知，包括照顾如何影响个人身份的重构。",
+      "aliases": [
+        "Caregiver Identity",
+        "Role Identity",
+        "Identity Reconstruction",
+        "Caregiver Values"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CANDIDATE-VAR-001",
+      "canonical_name": "Flexible Work Arrangement",
+      "proposed_type": "Protective",
+      "status": "Candidate",
+      "origin_batch": "C-006",
+      "review_trigger": "High-quality SR, longitudinal, or policy implementation study in disability-family context"
+    },
+    {
+      "id": "CANDIDATE-VAR-002",
+      "canonical_name": "Self-Determination",
+      "proposed_type": "Protective",
+      "status": "Candidate",
+      "origin_batch": "C-007",
+      "review_trigger": "SR or longitudinal with cross-cultural replication in ASD/DD population"
+    },
+    {
+      "id": "CANDIDATE-VAR-003",
+      "canonical_name": "Leisure Barrier",
+      "proposed_type": "Risk",
+      "status": "Candidate",
+      "origin_batch": "C-008",
+      "review_trigger": "SR or empirical study on leisure barriers in families with disabled children"
+    },
+    {
+      "id": "CANDIDATE-VAR-004",
+      "canonical_name": "Organizational Readiness",
+      "proposed_type": "Protective",
+      "status": "Candidate",
+      "origin_batch": "C-009",
+      "review_trigger": "SR or longitudinal in family support / autism services context"
+    },
+    {
+      "id": "CANDIDATE-VAR-005",
+      "canonical_name": "Family Values",
+      "aliases": [
+        "Cultural Values",
+        "Family Beliefs",
+        "Shared Family Values"
+      ],
+      "proposed_type": "Context",
+      "status": "Candidate",
+      "origin_batch": "Audit-007",
+      "review_trigger": "SR or empirical study establishing Values as independent mechanism variable in family support outcomes"
+    }
+  ]
+}

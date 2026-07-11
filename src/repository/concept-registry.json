@@ -1,0 +1,462 @@
+{
+  "meta": {
+    "version": "1.0",
+    "created": "2026-07-07",
+    "description": "Anori Concept Registry — 横跨四层的公共语言资产",
+    "note": "Concept 是系统的语义中心（Semantic Core），不依附于任何单一层级。VAR 是 Evidence Layer 的测量变量，Concept 是整个系统的共享语言。",
+    "tiers": {
+      "tier_1": "系统根概念（Root Concepts）——已横跨 Experience / Narrative / Content / Evidence",
+      "tier_2": "Anori 原创概念（Anori-native Concepts）——从 Narrative 和 Voice 中生长出来",
+      "knowledge_operation": "知识操作（Knowledge Operations）——描述 Anori 对知识的处理方式，不是内容概念"
+    }
+  },
+  "concepts": [
+    {
+      "id": "CON-000001",
+      "tier": "tier_1",
+      "canonical": "Family Quality of Life",
+      "zh": "家庭生活质量",
+      "en": "Family Quality of Life",
+      "aliases": [
+        "家庭生活质量",
+        "FQoL",
+        "Family Well-being",
+        "家庭整体状态"
+      ],
+      "anori_definition": "不是生活是否轻松，而是整个家庭是否还能维持自己认为重要的生活。它包括家庭关系的质量、照顾者的状态、孩子的发展，以及家庭还能不能做自己在乎的事情。",
+      "research_definition": "家庭作为整体系统在多个生活领域的满意度与功能水平。",
+      "anori_reframe": "家庭生活质量不是一个固定的标准，而是家庭在当前处境下还能维持的那个样子。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000004"
+        ],
+        "related_rels": [
+          "REL-000003",
+          "REL-000011",
+          "REL-000027",
+          "REL-000041",
+          "REL-000044",
+          "REL-000051",
+          "REL-000055"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "health",
+          "family-relationships",
+          "community-interaction",
+          "support-from-others",
+          "leisure",
+          "career",
+          "financial-wellbeing"
+        ],
+        "problems": [],
+        "endings": [
+          "community-interaction"
+        ],
+        "evidence_cards": [
+          "REL-000003",
+          "REL-000011",
+          "REL-000027"
+        ]
+      },
+      "related_concepts": [
+        "CON-000002",
+        "CON-000003",
+        "CON-000004"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000002",
+      "tier": "tier_1",
+      "canonical": "Caregiver Burden",
+      "zh": "照顾者负担",
+      "en": "Caregiver Burden",
+      "aliases": [
+        "照顾者负担",
+        "照顾者压力",
+        "Caregiver Strain",
+        "Caring Burden",
+        "长期照顾压力"
+      ],
+      "anori_definition": "长期照顾带来的不只是疲惫，而是一种持续消耗——时间、精力、情绪、注意力，以及对未来的想象力。它不是软弱，而是长期高强度投入之后的自然结果。",
+      "research_definition": "照顾者在长期照护过程中积累的心理、身体和社会负担。",
+      "anori_reframe": "照顾者负担不是个人管理能力不足的结果，而是结构性处境的必然反应。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000009",
+          "VAR-000002"
+        ],
+        "related_rels": [
+          "REL-000006",
+          "REL-000007",
+          "REL-000013",
+          "REL-000028",
+          "REL-000032",
+          "REL-000049"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "health",
+          "family-relationships",
+          "disability-services",
+          "leisure",
+          "support-from-others",
+          "career"
+        ],
+        "problems": [
+          "PRB-0022"
+        ],
+        "endings": [
+          "leisure"
+        ],
+        "evidence_cards": [
+          "REL-000006",
+          "REL-000007",
+          "REL-000013",
+          "REL-000049"
+        ]
+      },
+      "related_concepts": [
+        "CON-000001",
+        "CON-000005",
+        "CON-000007"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000003",
+      "tier": "tier_1",
+      "canonical": "Community Participation",
+      "zh": "社区参与",
+      "en": "Community Participation",
+      "aliases": [
+        "社区参与",
+        "连接",
+        "Community Inclusion",
+        "Civic Participation",
+        "社会连接",
+        "重新连接"
+      ],
+      "anori_definition": "不只是参加活动，而是感到自己仍然属于某个比家庭更大的世界。它可以是一位朋友、一个群组、一次散步，或者任何让人感到「外面还有我的位置」的事情。",
+      "research_definition": "个体参与社区活动、社会角色和公共生活的程度。",
+      "anori_reframe": "社区参与不需要恢复到以前的状态，而是在照顾之后，找到一个今天还能维持的连接。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000023"
+        ],
+        "related_rels": [
+          "REL-000013",
+          "REL-000014",
+          "REL-000027",
+          "REL-000029",
+          "REL-000032"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "community-interaction",
+          "support-from-others"
+        ],
+        "problems": [
+          "PRB-0019",
+          "PRB-0020"
+        ],
+        "endings": [
+          "community-interaction"
+        ],
+        "evidence_cards": [
+          "REL-000013",
+          "REL-000027",
+          "REL-000029"
+        ]
+      },
+      "related_concepts": [
+        "CON-000001",
+        "CON-000002",
+        "CON-000007"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000004",
+      "tier": "tier_1",
+      "canonical": "Help-seeking",
+      "zh": "求助",
+      "en": "Help-seeking",
+      "aliases": [
+        "求助",
+        "寻求支持",
+        "寻求专业帮助",
+        "寻求服务",
+        "Help-seeking Behavior"
+      ],
+      "anori_definition": "不是承认自己失败，而是承认照顾孩子这件事，不应该只有一个人在承担。求助是一个行动，也是一种重新定义——把「靠自己」变成「和别人一起」。",
+      "research_definition": "个体在面对困难时，主动寻找外部支持或专业资源的行为。",
+      "anori_reframe": "求助，不是承认做不到，而是让照顾孩子这件事，不再只有你一个人在承担。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000030",
+          "VAR-000031",
+          "VAR-000032"
+        ],
+        "related_rels": [
+          "REL-000033",
+          "REL-000034",
+          "REL-000035",
+          "REL-000055"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "disability-services",
+          "support-from-others"
+        ],
+        "problems": [
+          "PRB-0021",
+          "PRB-0024"
+        ],
+        "endings": [
+          "disability-services"
+        ],
+        "evidence_cards": [
+          "REL-000033",
+          "REL-000034",
+          "REL-000055"
+        ]
+      },
+      "related_concepts": [
+        "CON-000003",
+        "CON-000002"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000005",
+      "tier": "tier_2",
+      "canonical": "Rhythm",
+      "zh": "节奏",
+      "en": "Rhythm",
+      "aliases": [
+        "节奏",
+        "可持续的节奏",
+        "生活节奏",
+        "照顾节奏"
+      ],
+      "anori_definition": "不是每一天都做到最好，而是找到一种让照顾、工作和自己都还能继续走下去的方式。节奏不追求完美，它追求持续。",
+      "research_definition": "（Anori 原创概念，无直接对应研究变量）",
+      "anori_reframe": "真正需要重新建立的，不是一个完美的安排，而是一个可以持续的节奏。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000034",
+          "VAR-000035"
+        ],
+        "related_rels": [
+          "REL-000038",
+          "REL-000039",
+          "REL-000041"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "career",
+          "leisure"
+        ],
+        "problems": [
+          "PRB-0022"
+        ],
+        "endings": [
+          "career"
+        ],
+        "evidence_cards": [
+          "REL-000038",
+          "REL-000039"
+        ]
+      },
+      "related_concepts": [
+        "CON-000002",
+        "CON-000006",
+        "CON-000007"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000006",
+      "tier": "tier_2",
+      "canonical": "Priority",
+      "zh": "优先顺序",
+      "en": "Priority",
+      "aliases": [
+        "优先顺序",
+        "优先级",
+        "先守住什么",
+        "先处理什么"
+      ],
+      "anori_definition": "在资源有限的时候，不是同时解决所有压力，而是知道现在最需要先守住什么。其他还没做到的，不代表永远失去了。",
+      "research_definition": "（Anori 原创概念，在 financial-wellbeing 和 career 页面的核心重新定义）",
+      "anori_reframe": "重新安排资源，不是放弃其他重要的事，而是让真正重要的事，都还有机会慢慢发生。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000001",
+          "VAR-000035"
+        ],
+        "related_rels": [
+          "REL-000040",
+          "REL-000041"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "financial-wellbeing",
+          "career"
+        ],
+        "problems": [
+          "PRB-0021"
+        ],
+        "endings": [
+          "financial-wellbeing"
+        ],
+        "evidence_cards": []
+      },
+      "related_concepts": [
+        "CON-000002",
+        "CON-000005"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000007",
+      "tier": "tier_2",
+      "canonical": "Rest",
+      "zh": "休息",
+      "en": "Rest",
+      "aliases": [
+        "休息",
+        "喘息",
+        "恢复",
+        "Respite",
+        "照顾者休息"
+      ],
+      "anori_definition": "不是等所有事情都好了才能开始的奖励，而是让照顾者还能继续走下去的必要条件。休息不需要很长，今天找到一小段只属于自己的时间，就已经是在照顾整个家庭了。",
+      "research_definition": "照顾者从照顾责任中暂时抽离，以恢复体力、情绪和认知资源的过程。",
+      "anori_reframe": "休息不是奖励，而是让你还能继续走下去的一部分。",
+      "evidence": {
+        "related_vars": [
+          "VAR-000020",
+          "VAR-000021",
+          "VAR-000039",
+          "VAR-000040"
+        ],
+        "related_rels": [
+          "REL-000047",
+          "REL-000048",
+          "REL-000049",
+          "REL-000051",
+          "REL-000012"
+        ]
+      },
+      "appears_in": {
+        "pages": [
+          "leisure",
+          "values",
+          "support-from-others"
+        ],
+        "problems": [
+          "PRB-0022"
+        ],
+        "endings": [
+          "leisure"
+        ],
+        "evidence_cards": [
+          "REL-000047",
+          "REL-000051",
+          "REL-000049",
+          "REL-000048"
+        ]
+      },
+      "related_concepts": [
+        "CON-000002",
+        "CON-000005"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "CON-000008",
+      "tier": "knowledge_operation",
+      "canonical": "Reframe",
+      "zh": "重新定义",
+      "en": "Reframe",
+      "aliases": [
+        "重新定义",
+        "重新理解",
+        "Reframe",
+        "重新框架"
+      ],
+      "anori_definition": "Anori 处理知识的核心操作。不是否定原有的理解，而是在保留原有感受的基础上，给它一个新的意义框架。每一页 Ending 都完成一次 Reframe。",
+      "research_definition": "认知重评（Cognitive Reappraisal）：通过改变对情境的解释方式来调节情绪反应。",
+      "anori_reframe": "（Reframe 本身就是操作，不需要被 Reframe。）",
+      "operation_pattern": {
+        "structure": "原有理解 → Anori Reframe → 新的意义",
+        "examples": [
+          {
+            "original": "求助是承认失败",
+            "reframe": "求助是让照顾不再只有你一个人承担"
+          },
+          {
+            "original": "休息是奖励",
+            "reframe": "休息是继续走下去的一部分"
+          },
+          {
+            "original": "放弃一个选项是没有尽力",
+            "reframe": "放弃是在保护整个家庭还能继续走下去"
+          }
+        ]
+      },
+      "evidence": {
+        "related_vars": [
+          "VAR-000005",
+          "VAR-000006"
+        ],
+        "related_rels": []
+      },
+      "appears_in": {
+        "pages": [
+          "health",
+          "family-relationships",
+          "disability-services",
+          "community-interaction",
+          "support-from-others",
+          "leisure",
+          "values",
+          "career",
+          "financial-wellbeing"
+        ],
+        "problems": [],
+        "endings": [
+          "health",
+          "family-relationships",
+          "disability-services",
+          "community-interaction",
+          "support-from-others",
+          "leisure",
+          "values",
+          "career",
+          "financial-wellbeing"
+        ],
+        "evidence_cards": []
+      },
+      "related_concepts": [
+        "CON-000001",
+        "CON-000002",
+        "CON-000003",
+        "CON-000004",
+        "CON-000005",
+        "CON-000006",
+        "CON-000007"
+      ],
+      "status": "Active"
+    }
+  ]
+}

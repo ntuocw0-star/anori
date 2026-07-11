@@ -1,0 +1,27 @@
+---
+// C-010 SiteFooter — no props, fixed content
+---
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-brand">Anori</p>
+    <p class="footer-principle">帮助观察，而不是帮助判断</p>
+    <p class="footer-meta">
+      Repository v1.0 · Anori · {new Date().getFullYear()} ·
+      <a href="/about">关于 Anori</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: var(--sp-12) 0;
+  margin-top: var(--sp-24);
+}
+.footer-inner { display: flex; flex-direction: column; gap: var(--sp-2); }
+.footer-brand { font-size: var(--text-base); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+.footer-principle { font-size: var(--text-sm); color: var(--muted); }
+.footer-meta { font-size: var(--text-xs); color: var(--muted-lt); }
+.footer-meta a { color: var(--muted-lt); border-bottom: 1px solid var(--border); }
+.footer-meta a:hover { color: var(--ink); }
+</style>

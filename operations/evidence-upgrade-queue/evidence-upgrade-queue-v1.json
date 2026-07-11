@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "version": "1.0",
+    "created": "2026-07-07",
+    "description": "Evidence Upgrade Queue — 按优先级排列需要从 Low → High 的骨架 REL",
+    "principle": "Low 允许用强框架/间接证据；High 必须等直接 SR/Meta/纵向研究",
+    "total_items": 5
+  },
+  "queue": [
+    {
+      "rank": 1,
+      "rel_id": "REL-000078",
+      "path": "Family Quality of Life → Child Participation",
+      "current_grade": "Low",
+      "target_grade": "High",
+      "why_critical": "KD-FAM ↔ KD-PAR 的唯一跨域桥接，升级后整个 Knowledge Network 的核心连接变为强证据",
+      "search_query": "family quality of life child community participation disability systematic review longitudinal",
+      "evidence_type_needed": "SR 或纵向研究（直接证明 FQoL → Participation，非反向）",
+      "impact": [
+        "CP-FAM-001",
+        "CP-PAR-001",
+        "KOS Network bridge"
+      ]
+    },
+    {
+      "rank": 2,
+      "rel_id": "REL-000076",
+      "path": "Caregiver Burden → Family Quality of Life",
+      "current_grade": "Low",
+      "target_grade": "High",
+      "why_critical": "Family Science 主链下半段的关键节点，升级后 CP-FAM-001 全链 High grade",
+      "search_query": "caregiver burden family quality of life systematic review meta-analysis disability",
+      "evidence_type_needed": "SR 或 Meta-analysis",
+      "impact": [
+        "CP-FAM-001 主链完整性",
+        "KA-FAM-02003",
+        "KA-FAM-05001"
+      ]
+    },
+    {
+      "rank": 3,
+      "rel_id": "REL-000074",
+      "path": "Parent Stress → Caregiver Burden",
+      "current_grade": "Low",
+      "target_grade": "High",
+      "why_critical": "Family Science 主链中段，Parent Stress 累积为 Caregiver Burden 的机制路径",
+      "search_query": "parent stress caregiver burden accumulation longitudinal systematic review disability",
+      "evidence_type_needed": "纵向研究 或 SR",
+      "impact": [
+        "CP-FAM-001 主链完整性",
+        "KA-FAM-02002",
+        "KA-FAM-02003"
+      ]
+    },
+    {
+      "rank": 4,
+      "rel_id": "REL-000098",
+      "path": "Participation QoL → Family Quality of Life",
+      "current_grade": "Very Low",
+      "target_grade": "High",
+      "why_critical": "KOS 的反馈环，证明后系统动力学闭环成立，两条主链真正形成 Network",
+      "search_query": "participation quality of life family wellbeing longitudinal feedback disability",
+      "evidence_type_needed": "纵向研究（需要追踪参与 QoL 对 Family QoL 的时滞效应）",
+      "impact": [
+        "Knowledge Network 闭环",
+        "System Dynamics 验证"
+      ]
+    },
+    {
+      "rank": 5,
+      "rel_id": "REL-000017",
+      "path": "Family Functioning → Family Quality of Life",
+      "current_grade": "Low",
+      "target_grade": "High",
+      "why_critical": "Family Science 内部核心路径，Family Functioning 作为 FQoL 的直接预测因子",
+      "search_query": "family functioning family quality of life systematic review meta-analysis disability",
+      "evidence_type_needed": "SR 或 Meta-analysis",
+      "impact": [
+        "CP-FAM-001 主链完整性",
+        "KA-FAM-03001",
+        "KA-FAM-05001"
+      ]
+    }
+  ]
+}

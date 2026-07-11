@@ -1,0 +1,35 @@
+{
+  "schemaId": "PDF-Manifest",
+  "schema_version": "1.0",
+  "generated_at": "2026-07-11T06:22:44.957Z",
+  "summary": {
+    "total": 2,
+    "ok": 2,
+    "skipped": 2,
+    "failed": 0
+  },
+  "items": [
+    {
+      "contentId": "KA-000001",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000001-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000001\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-11T06:13:37.344Z",
+      "htmlHash": "sha256:46750104981eb45d376781a0bd82975c6af969ea8f9535c28d91a14737a15355",
+      "skipped": true
+    },
+    {
+      "contentId": "KA-000002",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000002-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000002\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-11T06:13:41.499Z",
+      "htmlHash": "sha256:c0553aec0ac3e5ef5e5dbb965f0a80519cdb2ec60dbddd400066c97ff79db7a1",
+      "skipped": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+---
+// C-005 RelCard — R-005: no ID, no score, no mediator shown
+import { relationZh } from "../lib/repository";
+export interface Props {
+  source_name: string;
+  relation: string;
+  target_name: string;
+  effect_polarity: string;
+  evidence_grade: string;
+  note?: string;
+}
+const { source_name, relation, target_name, effect_polarity, evidence_grade, note } = Astro.props;
+const verb = relationZh[relation] ?? relation;
+const polarityZh: Record<string, string> = {
+  Protective: "保护因素", Risk: "风险因素", Mixed: "结果不一",
+};
+---
+
+<div class="rel-card" data-polarity={effect_polarity}>
+  <div class="rel-chain">
+    <span class="rel-var">{source_name}</span>
+    <span class="rel-verb">{verb}</span>
+    <span class="rel-arrow">→</span>
+    <span class="rel-var">{target_name}</span>
+  </div>
+  <div class="rel-meta">
+    <span class="rel-polarity" data-pol={effect_polarity}>
+      {polarityZh[effect_polarity] ?? effect_polarity}
+    </span>
+    <span class="rel-grade">{evidence_grade}</span>
+  </div>
+  {note && <p class="rel-note">{note}</p>}
+</div>
+
+<style>
+.rel-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color var(--transition);
+  padding: var(--sp-4) var(--sp-6);
+  display: flex; flex-direction: column; gap: var(--sp-3);
+}
+.rel-card:hover { border-color: var(--muted-lt); }
+.rel-chain {
+  display: flex; align-items: center; gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+.rel-var { font-weight: 600; font-size: var(--text-sm); }
+.rel-verb {
+  font-size: var(--text-xs); background: var(--surface);
+  border: 1px solid var(--border); padding: 2px 8px;
+  border-radius: var(--radius-sm); color: var(--muted);
+}
+.rel-arrow { color: var(--muted-lt); font-size: var(--text-sm); }
+.rel-meta {
+  display: flex; gap: var(--sp-4);
+  font-size: var(--text-xs); color: var(--muted);
+}
+.rel-polarity[data-pol="Protective"] { color: #2D6A4F; }
+.rel-polarity[data-pol="Risk"] { color: #8B5E3C; }
+.rel-note {
+  font-size: var(--text-xs); color: var(--muted-lt);
+  border-top: 1px solid var(--border); padding-top: var(--sp-2);
+  font-style: italic;
+}
+</style>
+

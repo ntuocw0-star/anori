@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteNav from '../../../components/SiteNav.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import seriesData from '../../../repository/library/series.json';
+import topicsData from '../../../repository/library/topics.json';
+import eaData from '../../../generated/evidence/ea.json';
+import etData from '../../../generated/evidence/et.json';
+import kaData from '../../../repository/knowledge.json';
+import { normalizeAllEA } from '../../../repository/adapters/ea';
+import { normalizeAllET } from '../../../repository/adapters/et';
+import { normalizeAllKA } from '../../../repository/adapters/ka';
+import { TERMS } from '../../../i18n/terminology';
+
+export function getStaticPaths() {
+  return ((seriesData as any).series as any[])
+    .filter(series => series.status === 'active')
+    .map(series => ({ params: { seriesSlug: series.slug }, props: { series } }));
+}
+
+const { series } = Astro.props as any;
+const topic = ((topicsData as any).topics as any[]).find(item => item.id === series.topic);
+const eaMap = new Map(normalizeAllEA(eaData as any).map(item => [item.id, item]));
+const etMap = new Map(normalizeAllET(etData as any).map(item => [item.id, item]));
+const kaMap = new Map(normalizeAllKA(kaData as any).map(item => [item.id, item]));
+const refs = series.content_refs ?? {};
+const eaItems = (refs.ea ?? []).map((id: string) => eaMap.get(id) ?? { id, missing: true });
+const etItems = (refs.et ?? []).map((id: string) => etMap.get(id) ?? { id, missing: true });
+const kaItems = (refs.ka ?? []).map((id: string) => kaMap.get(id) ?? { id, missing: true });
+const eaTitle = (item: any) => item.source?.paperTitle ?? item.id;
+const etTitle = (item: any) => item.topic ?? item.id;
+const kaTitle = (item: any) => item.title ?? item.id;
+---
+<BaseLayout title={`${series.label} · ${TERMS.library.label} · Anori`} description={series.description}>
+  <SiteNav />
+  <main class="series-page">
+    <Breadcrumb items={[
+      { label: '首页', href: '/' },
+      { label: TERMS.library.label, href: '/library' },
+      ...(topic ? [{ label: topic.label, href: `/library/${topic.slug}` }] : []),
+      { label: series.label },
+    ]} />
+
+    <header>
+      {topic && <a class="topic-badge" href={`/library/${topic.slug}`}>{topic.label}</a>}
+      <h1>{series.label}</h1>
+      <p>{series.description}</p>
+      <div class="stats">
+        <span><strong>{eaItems.length}</strong>{TERMS.ea.label}</span>
+        <span><strong>{etItems.length}</strong>{TERMS.et.label}</span>
+        <span><strong>{kaItems.length}</strong>{TERMS.ka.label}</span>
+      </div>
+    </header>
+
+    <section class="content-section">
+      <h2><span>{TERMS.ea.abbr}</span>{TERMS.ea.label}</h2>
+      <p class="intro">本{TERMS.series.label}收录的{TERMS.ea.label}，每篇对应一项同行评审研究。</p>
+      <ul>
+        {eaItems.map((item: any) => {
+          const missing = 'missing' in item;
+          return <li class:list={[missing && 'missing']}>
+            {missing ? (
+              <div class="static"><div><strong>内容记录暂未找到</strong><code>{item.id}</code></div><small>引用断链</small></div>
+            ) : (
+              <a href={`/library/ea/${item.id}`}><div><strong>{eaTitle(item)}</strong><code>{item.id}</code></div><span>→</span></a>
+            )}
+          </li>;
+        })}
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2><span>{TERMS.et.abbr}</span>{TERMS.et.label}</h2>
+      <p class="intro">将研究发现转化为更容易理解的说明。</p>
+      <ul>
+        {etItems.map((item: any) => {
+          const missing = 'missing' in item;
+          return <li class:list={[missing && 'missing']}>
+            <div class="static"><div><strong>{missing ? '内容记录暂未找到' : etTitle(item)}</strong><code>{item.id}</code></div><small>{missing ? '引用断链' : `${TERMS.series.label}内阅读`}</small></div>
+          </li>;
+        })}
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2><span>{TERMS.ka.abbr}</span>{TERMS.ka.label}</h2>
+      <p class="intro">基于研究证据为家长与实践者整理的{TERMS.ka.label}，可直接阅读与应用。</p>
+      <ul>
+        {kaItems.map((item: any) => {
+          const missing = 'missing' in item;
+          return <li class:list={[missing && 'missing']}>
+            {missing ? (
+              <div class="static"><div><strong>内容记录暂未找到</strong><code>{item.id}</code></div><small>引用断链</small></div>
+            ) : (
+              <a href={`/library/ka/${item.id}`}><div><strong>{kaTitle(item)}</strong><code>{item.id}</code></div><span>→</span></a>
+            )}
+          </li>;
+        })}
+      </ul>
+    </section>
+
+    <section class="bridge"><p>想找更多相关内容？</p><a href={`/search?q=${encodeURIComponent(series.label)}`}>在{TERMS.search.label}中查看相关结果 →</a></section>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+.series-page{max-width:760px;margin:0 auto;padding:var(--sp-6) var(--sp-6) var(--sp-24)}
+header{padding:var(--sp-10) 0 var(--sp-8);border-bottom:1px solid var(--border);margin-bottom:var(--sp-8)}
+.topic-badge{font-size:var(--text-xs);color:var(--brand);border:1px solid rgba(45,106,143,.3);padding:.2rem .55rem;border-radius:var(--radius-pill)}
+header h1{font-size:var(--text-3xl);margin:var(--sp-3) 0}header>p{color:var(--muted)}
+.stats{display:flex;gap:var(--sp-8);margin-top:var(--sp-5);padding-top:var(--sp-4);border-top:1px solid var(--border);font-size:var(--text-xs);color:var(--muted)}
+.stats strong{display:block;font-size:var(--text-xl);color:var(--ink)}
+.content-section{margin-top:var(--sp-10)}.content-section h2{display:flex;align-items:center;gap:var(--sp-2);font-size:var(--text-lg)}
+.content-section h2 span{font-size:var(--text-xs);background:var(--surface-card);padding:.15rem .45rem;border-radius:3px}
+.intro{font-size:var(--text-sm);color:var(--muted);margin:var(--sp-2) 0 var(--sp-4)}
+ul{list-style:none;display:flex;flex-direction:column;gap:var(--sp-2)}li{border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+li>a,.static{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-4);padding:var(--sp-4)}li strong{display:block;font-size:var(--text-sm);line-height:1.5}
+code{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:.15rem}.static small{color:var(--muted)}li.missing{border-style:dashed;opacity:.6}
+.bridge{margin-top:var(--sp-10);border-top:1px solid var(--border);padding-top:var(--sp-5);font-size:var(--text-sm)}.bridge p{color:var(--muted)}.bridge a{color:var(--brand)}
+@media(max-width:560px){.stats{gap:var(--sp-4);flex-wrap:wrap}}
+</style>

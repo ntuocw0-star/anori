@@ -1,0 +1,21 @@
+---
+import type { TimelineStage } from '../../types/path';
+
+export interface Props {
+  intro?: string;
+  stages: TimelineStage[];
+}
+const { intro, stages } = Astro.props;
+---
+<section class="up-section">
+  <p class="up-section-label">时间参考</p>
+  {intro && <p class="up-prose up-prose--secondary">{intro}</p>}
+  <div class="up-timeline">
+    {stages.map((stage: TimelineStage) => (
+      <div class="up-timeline-item">
+        <p class="up-timeline-period">{stage.period}</p>
+        <p class="up-timeline-text">{stage.what_to_expect}</p>
+      </div>
+    ))}
+  </div>
+</section>

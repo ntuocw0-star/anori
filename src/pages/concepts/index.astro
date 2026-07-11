@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+const concepts = [
+  { slug: "community-participation", zh: "社区参与",    tagline: "不只是出去活动，而是感到自己属于那里。",                                   color: "blue" },
+  { slug: "belonging",               zh: "归属感",      tagline: "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。",                   color: "teal" },
+  { slug: "caregiver-burden",        zh: "照顾者负担",  tagline: "照顾者负担不是个人失败，而是长期照顾处境中常见的结果。",                   color: "coral" },
+  { slug: "family-quality-of-life",  zh: "家庭生活质量",tagline: "家庭生活质量，不只是孩子过得好，而是整个家庭都还能继续生活。",             color: "teal" },
+  { slug: "child-participation",     zh: "儿童参与",    tagline: "机会来自环境，不只来自孩子本身。",                                         color: "blue" },
+  { slug: "parent-stress",           zh: "父母压力",    tagline: "父母压力不是不够坚强，而是需求和支持之间长期失衡的必然反应。",             color: "coral" },
+  { slug: "family-functioning",      zh: "家庭功能",    tagline: "家庭功能不是「好不好」，而是家庭在压力下是否还能共同面对生活。",           color: "blue" },
+  { slug: "family-support",          zh: "家庭支持",    tagline: "家庭支持不只是有人帮忙，而是帮到你真正需要的那件事。",                     color: "teal" },
+  { slug: "school-participation",    zh: "学校参与",    tagline: "学校参与不只是去上学，而是在学校里有真正属于自己的位置。",                 color: "blue" },
+  { slug: "participation-qol",       zh: "参与生活质量",tagline: "不是孩子达到某个标准，而是孩子因为真正参与而感到生活有意义。",             color: "teal" },
+];
+
+const colorMap: Record<string, string> = {
+  blue:  "var(--brand)",
+  teal:  "#1A8A72",
+  coral: "#C84B2F",
+};
+---
+
+<BaseLayout title="知识概念 — Anori" description="Anori 整理的核心知识概念，帮助理解孩子发展与家庭处境。">
+<SiteNav />
+
+<div class="clist-hero">
+  <div class="wrap">
+    <Breadcrumb items={[{ label: "首页", href: "/" }, { label: "知识概念" }]} />
+    <h1 class="clist-title">知识概念</h1>
+    <p class="clist-sub">这些概念来自研究文献，帮助你用更准确的语言理解孩子和家庭的处境。</p>
+  </div>
+</div>
+
+<div class="wrap clist-body">
+  <div class="clist-grid">
+    {concepts.map(c => (
+      <a href={`/concepts/${c.slug}`} class="clist-card" style={`--c:${colorMap[c.color] ?? colorMap.blue}`}>
+        <p class="clist-zh">{c.zh}</p>
+        <p class="clist-tagline">{c.tagline}</p>
+        <span class="clist-cta">了解这个概念 →</span>
+      </a>
+    ))}
+  </div>
+</div>
+
+<SiteFooter />
+</BaseLayout>
+
+<style>
+.clist-hero {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--sp-16, 4rem) 0 var(--sp-10, 2.5rem);
+}
+.clist-title {
+  font-size: var(--text-3xl, 1.875rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: var(--sp-3, 0.75rem);
+}
+.clist-sub {
+  font-size: var(--text-base, 1rem);
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 520px;
+}
+.clist-body {
+  padding-top: var(--sp-12, 3rem);
+  padding-bottom: var(--sp-24, 6rem);
+}
+.clist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--sp-4, 1rem);
+}
+.clist-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2, 0.5rem);
+  padding: var(--sp-6, 1.5rem);
+  background: white;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--c);
+  border-radius: var(--radius, 8px);
+  text-decoration: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.clist-card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-color: var(--c);
+}
+.clist-zh {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 600;
+  color: var(--c);
+  margin: 0;
+}
+.clist-tagline {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+.clist-cta {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--c);
+  font-weight: 500;
+  margin-top: var(--sp-2, 0.5rem);
+}
+@media (max-width: 480px) {
+  .clist-grid { grid-template-columns: 1fr; }
+}
+</style>

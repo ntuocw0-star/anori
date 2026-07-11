@@ -1,0 +1,217 @@
+{
+  "snapshot_date": "2026-07-07",
+  "system_name": "Anori Knowledge System",
+  "version": "KOS v1.0 — Maintenance Mode",
+  "one_line": "一套围绕家长心理过程设计的、可以随研究持续成长的知识体验系统。",
+  "architecture": {
+    "layer_1_experience": {
+      "status": "frozen",
+      "key_files": [
+        "[id].astro",
+        "search.astro",
+        "problems.json"
+      ],
+      "summary": "25个Problem，五层语言字段（search_reason/intro/first_step/why_worth_reading/why_recommended）"
+    },
+    "layer_2_narrative": {
+      "status": "frozen",
+      "key_files": [
+        "anori-writing-guide-v1.md",
+        "knowledge-template-v1.md"
+      ],
+      "summary": "Knowledge Narrative方法论，Anori Voice，Knowledge Template v1.0"
+    },
+    "layer_3_content": {
+      "status": "frozen",
+      "key_files": [
+        "page-content.json",
+        "methods.json"
+      ],
+      "summary": "9个Knowledge Page完整Knowledge Body，8个Method含first_step"
+    },
+    "layer_4_evidence": {
+      "status": "active",
+      "key_files": [
+        "phase4-round1-closeout.md",
+        "phase4-round2-brief.md"
+      ],
+      "summary": "33张evidence_cards（High:7 / Low:2 / VeryLow:24），所有High/Low rels已引用",
+      "next_trigger": "任意覆盖family-relationships/values/leisure/career的新SR或Meta-analysis"
+    },
+    "cross_layer_semantic": {
+      "status": "repository_asset_not_runtime",
+      "key_files": [
+        "concept-registry.json"
+      ],
+      "summary": "8个概念（Tier1×4/Tier2×3/Operation×1）+ Search Target Registry（11条精准搜索目标）",
+      "next_integration": "Search Semantic Layer → AI Semantic Layer → Page Runtime"
+    },
+    "knowledge_network": {
+      "status": "established",
+      "description": "两条主链通过跨域桥接和反馈循环形成真正的 Knowledge Network",
+      "domains": [
+        "KD-FAM (Family Science)",
+        "KD-PAR (Participation Science)"
+      ],
+      "bridge_rel": "REL-000078 (FQoL → Child Participation)",
+      "feedback_rel": "REL-000098 (Participation QoL → FQoL)",
+      "planned_domains": [
+        "KD-TRA (Transition Science)",
+        "KD-DEV",
+        "KD-EI"
+      ]
+    }
+  },
+  "frozen_principles": [
+    "每个新字段必须回答一个新的用户问题",
+    "每个Knowledge Page围绕一个核心问题展开",
+    "Ending不鼓励，不评判，只帮家长重新定义一个行为",
+    "Knowledge Translation：Evidence → 家长语言，不是Evidence → 中文",
+    "Evidence更新：事件驱动，每条新High grade立即进入系统",
+    "先冻结边界，再让能力自然长出来",
+    "REL 是稳定对象，Evidence Grade 是生命周期属性，通过 evidence_timeline 追踪演化",
+    "骨架 REL 标记知识缺口，自动生成 Search Target Registry，驱动精准文献补全"
+  ],
+  "next_triggers": {
+    "phase4_round2": "新的SR/Meta覆盖family-relationships/values/leisure/career → Evidence Library Expansion",
+    "search_semantic": "Search重构时 → Concept Registry第一次参与Runtime",
+    "ai_semantic": "AI功能建设时 → Concept Registry成为Semantic Index",
+    "resource_profile": "Resource Profile建设时 → Concept Registry提供共享定义",
+    "str_priority_a": "Caregiver Self-efficacy / Meaning-making / Self-compassion / Resilience 的 SR/Meta → 升级6条骨架REL",
+    "str_priority_b": "Family Functioning / Family Resilience 主干关系的 SR → 升级5条原有骨架REL"
+  },
+  "key_metrics": {
+    "problems": 25,
+    "knowledge_pages": 9,
+    "methods": 8,
+    "evidence_cards": 42,
+    "evidence_high": 16,
+    "evidence_low": 2,
+    "evidence_very_low": 24,
+    "concepts": 8,
+    "language_fields_per_problem": 5,
+    "rels_total": 101,
+    "rels_high": 32,
+    "rels_skeleton": 22,
+    "vars_total": 49,
+    "ka_total": 10,
+    "core_pathways_frozen": 2,
+    "knowledge_domains": 2
+  },
+  "hierarchy": [
+    "Evidence",
+    "Variable (VAR)",
+    "Relation (REL)",
+    "Knowledge Asset (KA)",
+    "Core Pathway (CP)",
+    "Knowledge Domain (KD)",
+    "Knowledge Network"
+  ],
+  "next_priorities": {
+    "priority_1": "STR 骨架 REL 升级（22 条，用已有文献提升 evidence_grade）",
+    "priority_2": "Knowledge Network 桥接关系完善（REL-000078 需要 SR 升级到 High）",
+    "priority_3": "KD-TRA 开启（建立在已冻结的双主链之上）"
+  },
+  "phase": "Phase 3: Evidence Consolidation",
+  "mode": "Maintenance Mode — 结构冻结，证据持续演进",
+  "evidence_upgrade_queue": {
+    "file": "evidence-upgrade-queue-v1.json",
+    "total": 5,
+    "rank_1": "REL-000078 FQoL → Child Participation (Low → High)",
+    "rank_2": "REL-000076 Caregiver Burden → FQoL (Low → High)",
+    "rank_3": "REL-000074 Parent Stress → Caregiver Burden (Low → High)",
+    "rank_4": "REL-000098 Participation QoL → FQoL (Very Low → High，需纵向研究)",
+    "rank_5": "REL-000017 Family Functioning → FQoL (Low → High)"
+  },
+  "system_definition": "Anori KOS 已进入 Maintenance Mode：架构保持稳定，知识持续增长，证据不断成熟，任务由系统状态自动触发，而非人工重新规划。",
+  "three_long_term_properties": {
+    "structure_stability": "Architecture、KA、Core Pathway、Knowledge Domain 不随文献增加而改变",
+    "evidence_evolvability": "REL 的生命周期 = Evidence Grade 的演进（Very Low → Low → High），而不是结构演进",
+    "task_self_generation": {
+      "STR": "发现知识缺口时生成",
+      "EUQ": "已有关系但需更高等级证据时生成",
+      "KD_expansion": "只有找到 Bridge REL 才启动（Rule 10）",
+      "Architecture": "无触发条件，保持冻结"
+    }
+  },
+  "kos_vs_literature_db": {
+    "literature_database": "管理资料",
+    "knowledge_operating_system": "管理知识的生命周期"
+  },
+  "engineering_principle": "设计意图（Design Intent）保持稳定，系统状态（System State）持续更新；二者始终分离，但保持同步。",
+  "documentation_layers": {
+    "human_documentation": {
+      "purpose": "Design Intent — 给人理解",
+      "files": [
+        "anori-architecture-v1.md",
+        "anori-evolution-rules-v1.md",
+        "family-science-core-pathway-v1.md",
+        "CP-PAR-001-*.json"
+      ]
+    },
+    "machine_documentation": {
+      "purpose": "System State — 给系统运行",
+      "files": [
+        "system-snapshot-*.json",
+        "rels.json",
+        "vars.json",
+        "evidence-upgrade-queue-v1.json",
+        "evidence-search-targets.md",
+        "knowledge-domain-registry.json"
+      ]
+    }
+  },
+  "project_era": {
+    "era_1": {
+      "name": "Knowledge Collection",
+      "status": "completed",
+      "output": "文献库"
+    },
+    "era_2": {
+      "name": "Knowledge Organization",
+      "status": "completed",
+      "output": "KOS v1.0"
+    },
+    "era_3": {
+      "name": "Knowledge Production",
+      "status": "active",
+      "output": "Concept Pages / Website / AI Retrieval"
+    },
+    "era_4": {
+      "name": "Knowledge Evolution",
+      "status": "ongoing",
+      "output": "Maintenance Mode — Evidence Upgrade"
+    }
+  },
+  "kos_status": {
+    "version": "v1.0",
+    "status": "Frozen",
+    "mode": "Maintenance",
+    "project_focus": "Knowledge Production"
+  },
+  "era_3_workflow": {
+    "old": "文献 → Evidence → REL → KA → Core Pathway",
+    "new": "KA → Evidence Card → Concept Page → Problem Page → Website",
+    "unit_of_work": "Knowledge Asset（不再是 REL）",
+    "central_question": "How do we deliver knowledge?（不再是 How do we organize knowledge?）"
+  },
+  "era_3_deliverables": {
+    "per_ka": [
+      "Concept Page",
+      "Evidence Cards（家长语言）",
+      "Parent Version 解释",
+      "Research Version 说明",
+      "Common Misunderstanding",
+      "AI Retrieval Template",
+      "Problem Mapping",
+      "Website Card"
+    ],
+    "priority_kas": [
+      "KA-FAM-01001 Family Support",
+      "KA-PAR-00002 Community Participation",
+      "KA-PAR-00003 Belonging",
+      "KA-FAM-05001 Family Quality of Life",
+      "KA-FAM-02003 Caregiver Burden"
+    ]
+  }
+}

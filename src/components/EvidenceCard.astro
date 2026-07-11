@@ -1,0 +1,210 @@
+---
+import { relationZh } from "../lib/repository";
+
+export interface Props {
+  rel_id: string;
+  source_name: string;
+  relation: string;
+  target_name: string;
+  effect_polarity: string;
+  evidence_grade: string;
+  meaning: string;
+  observation_prompts: [string, string, string];
+}
+
+const {
+  rel_id, source_name, relation, target_name,
+  effect_polarity, evidence_grade, meaning, observation_prompts,
+} = Astro.props;
+
+const verb = relationZh[relation] ?? relation;
+
+const polarityLabel: Record<string, string> = {
+  Protective: "保护因素", Risk: "风险因素", Mixed: "结果不一",
+};
+
+const gradeColor: Record<string, string> = {
+  "Very High": "#2D6A4F", "High": "#3D6B5E",
+  "Moderate": "#7A6850",
+  "Low": "#8B6A40", "Low-Moderate": "#8B6A40", "Very Low": "#9A7060",
+};
+---
+
+<div class="ec">
+
+  <!-- 层1 Research — 极小，灰色，证据身份 -->
+  <div class="ec-research">
+    <span class="ec-grade" style={`color: ${gradeColor[evidence_grade] ?? '#8B7A60'}`}>
+      {evidence_grade}
+    </span>
+    <span class="ec-sep">·</span>
+    <span class="ec-polarity" data-pol={effect_polarity}>
+      {polarityLabel[effect_polarity] ?? effect_polarity}
+    </span>
+    <span class="ec-id">{rel_id}</span>
+  </div>
+
+  <!-- 层2 Finding — 关系链 -->
+  <div class="ec-finding">
+    <div class="ec-chain">
+      <span class="ec-node">{source_name}</span>
+      <span class="ec-connector" aria-hidden="true">
+        <span class="ec-verb">{verb}</span>
+        <span class="ec-arrow">&#8594;</span>
+      </span>
+      <span class="ec-node">{target_name}</span>
+    </div>
+  </div>
+
+  <!-- 层3 Meaning — 翻译层，最重要，白底微暖 -->
+  <div class="ec-meaning">
+    <p class="ec-layer-label">这意味着什么</p>
+    <p class="ec-meaning-text">{meaning}</p>
+  </div>
+
+  <!-- 层4 Observation — 可勾选，朱砂色标签，暖米黄 -->
+  <div class="ec-observation">
+    <p class="ec-layer-label ec-obs-label-color">可以观察</p>
+    <ul class="ec-obs-list">
+      {observation_prompts.map((prompt: string, i: number) => (
+        <li class="ec-obs-item">
+          <button
+            class="ec-check"
+            role="checkbox"
+            aria-checked="false"
+            aria-label={`标记已观察：${prompt}`}
+            onclick="const c=this;const li=c.closest('.ec-obs-item');const isChecked=c.getAttribute('aria-checked')==='true';c.setAttribute('aria-checked',String(!isChecked));c.classList.toggle('is-checked',!isChecked);li.classList.toggle('is-done',!isChecked)"
+          ></button>
+          <span class="ec-obs-text">{prompt}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+</div>
+
+<style>
+.ec {
+  background: var(--surface-alt);
+  border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+/* ── 层1 Research ────────────────────────────────────── */
+.ec-research {
+  display: flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-6) var(--sp-2);
+  background: rgba(148,136,120,0.05);
+  border-bottom: 1px solid rgba(160,148,132,0.08);
+}
+.ec-grade {
+  font-size: 9px; font-weight: 400;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  opacity: 0.55;
+}
+.ec-sep { color: var(--muted-lt); font-size: 9px; opacity: 0.5; }
+.ec-polarity {
+  font-size: 9px; color: var(--muted-lt); letter-spacing: 0.04em; opacity: 0.6;
+}
+.ec-polarity[data-pol="Protective"] { color: #4A8A68; }
+.ec-polarity[data-pol="Risk"] { color: #8B5E3C; }
+.ec-id {
+  margin-left: auto;
+  font-size: 9px; font-family: var(--mono);
+  color: var(--muted-lt); opacity: 0.5;
+}
+
+/* ── 层2 Finding ─────────────────────────────────────── */
+.ec-finding {
+  padding: var(--sp-6) var(--sp-6) var(--sp-5);
+  border-bottom: 1px solid rgba(160,148,132,0.1);
+  background: #FEFEFE;
+}
+.ec-chain {
+  display: flex; align-items: center;
+  gap: var(--sp-3); flex-wrap: wrap;
+}
+.ec-node {
+  font-size: var(--text-xl); font-weight: 600;
+  color: var(--ink); letter-spacing: -0.02em;
+  background: rgba(148,136,120,0.08);
+  padding: var(--sp-2) var(--sp-4); border-radius: var(--radius);
+  border: 1px solid rgba(148,136,120,0.13);
+}
+.ec-connector {
+  display: inline-flex; align-items: center;
+  gap: var(--sp-2); color: var(--muted-lt);
+}
+.ec-verb {
+  font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--muted-lt);
+  background: rgba(148,136,120,0.08);
+  padding: 2px var(--sp-2); border-radius: 3px;
+}
+.ec-arrow {
+  font-size: var(--text-lg); color: rgba(148,136,120,0.45);
+  line-height: 1; font-weight: 300;
+}
+
+/* ── 层3 Meaning ─────────────────────────────────────── */
+.ec-meaning {
+  padding: var(--sp-5) var(--sp-6) var(--sp-6);
+  border-bottom: 1px solid rgba(160,148,132,0.08);
+  background: var(--surface-alt);
+  border-left: 2px solid rgba(148,136,120,0.28);  /* FROZEN */
+}
+.ec-layer-label {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: var(--sp-4);
+}
+.ec-meaning-text {
+  font-size: var(--text-base); color: var(--ink);
+  line-height: 1.85;
+}
+
+/* ── 层4 Observation ──────────────────────────────────── */
+.ec-observation {
+  padding: var(--sp-5) var(--sp-6);
+  background: #FAF5EA;
+}
+.ec-obs-label-color { color: rgba(180,90,70,0.75) !important; }
+.ec-obs-list {
+  list-style: none; display: flex; flex-direction: column; gap: var(--sp-4);
+}
+.ec-obs-item {
+  display: flex; align-items: flex-start; gap: var(--sp-3);
+}
+.ec-check {
+  width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
+  border: 1.5px solid rgba(185,90,72,0.3);
+  border-radius: var(--radius-sm); background: rgba(250,245,234,0.8);
+  cursor: pointer; padding: 0; font-size: 11px; color: white;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: var(--font);
+}
+.ec-check:hover {
+  border-color: rgba(185,90,72,0.6);
+  background: rgba(250,240,225,1);
+}
+.ec-check.is-checked {
+  background: rgba(185,90,72,0.8);
+  border-color: rgba(185,90,72,0.8);
+}
+.ec-check.is-checked:hover {
+  background: rgba(185,90,72,0.95);
+}
+.ec-check.is-checked::after { content: '✓'; }
+.ec-obs-text {
+  font-size: var(--text-sm); color: var(--ink); line-height: 1.7;
+}
+/* 勾选后文字变淡 — 通过 JS 加 parent class */
+.ec-obs-item.is-done .ec-obs-text {
+  color: var(--muted-lt);
+  text-decoration: line-through;
+  text-decoration-color: rgba(185,90,72,0.35);
+}
+</style>

@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title: string;
+  steps: string[];
+}
+const { title, steps } = Astro.props;
+---
+<section class="up-section">
+  <p class="up-section-label">{title}</p>
+  <div class="up-reflection">
+    {steps.map((step: string) => (
+      <div class="up-reflection-item">
+        <span class="up-reflection-check">✓</span>
+        <p>{step}</p>
+      </div>
+    ))}
+  </div>
+</section>

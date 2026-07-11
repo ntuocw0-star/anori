@@ -1,0 +1,1178 @@
+{
+  "meta": {
+    "version": "1.4",
+    "created": "2026-07-06",
+    "description": "Problem Library v1.0 — 家长真实问题入口层",
+    "rule": "所有 title 和 aliases 必须来自家长真实会说的话，不使用专业术语。",
+    "updated": "2026-07-07",
+    "why_recommended_rule": "一到两句话。前提是用户已接受「这个问题就是我」，回答的是「为什么下一步是它」。不介绍资源本身，而是承接用户当前的心理状态。",
+    "why_worth_reading_rule": "一到两句话。前提是用户已接受「这个问题就是我」，回答的是「为什么现在值得读这一页」。不介绍页面内容，而是承接用户当前的心理状态，说明这一页在当前时机的价值。",
+    "search_reason_rule": "一句话，15～25字。用户刚完成搜索，还没确认结果是不是说自己。帮他认出情况，不解释 Problem 内容。用家长会说的话，不用系统语言。",
+    "intro_rule": "2句左右。从家长观察到的现象出发，帮助确认「这是不是在说我」。不诊断，不说正常/不正常，不急着给方法。"
+  },
+  "problems": [
+    {
+      "id": "PRB-0001",
+      "title": "孩子最近特别爱发脾气",
+      "aliases": [
+        "容易生气",
+        "情绪不好",
+        "一直发火",
+        "脾气越来越大"
+      ],
+      "intro": "很多家长会先注意到，孩子最近比以前更容易发火，或者一点小事就很难平静下来。下面整理了一些可以先参考的方向。",
+      "category": "emotion",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0002"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "情绪变化背后有时有身体原因，这一页整理了孩子行为和健康状态之间常见的关联，可以帮你先排除一些方向。"
+        },
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "孩子情绪不好的时候，家庭气氛往往也会跟着紧张，这一页整理了这种情况下家庭关系常见的张力和可以先了解的方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000002",
+          "why_recommended": "如果你注意到的是情绪变化，这份资源整理了行为和情绪背后常见的发育因素，可以帮你先了解有哪些方向值得观察。"
+        },
+        {
+          "id": "RES-000017",
+          "why_recommended": "如果情绪变化已经持续一段时间，这份资源整理了家长在考虑是否需要专业了解时最常问的问题，可以先参考一下。"
+        }
+      ],
+      "search_reason": "如果你注意到的是孩子最近脾气越来越大、容易发火，这里可能有帮助。",
+      "related_kas": [
+        "family-quality-of-life",
+        "family-functioning"
+      ]
+    },
+    {
+      "id": "PRB-0002",
+      "title": "孩子经常哭，很难安抚",
+      "aliases": [
+        "一直哭",
+        "哭个不停",
+        "哄不好",
+        "情绪崩溃"
+      ],
+      "intro": "很多家长会先注意到孩子哭的频率变高了，或者哄了很久还是安静不下来。下面整理了一些可以先参考的方向。",
+      "category": "emotion",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0003"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "持续哭闹有时和孩子无法表达的身体不适有关，这一页可以帮你先了解有哪些身体因素值得先排查。"
+        },
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "孩子持续难以安抚时，对家庭关系的影响往往比想象中大，这一页可以帮你先了解这个阶段家庭关系常见的压力点。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000001",
+          "why_recommended": "如果孩子的哭闹主要发生在睡前或夜间，这份资源整理了这个阶段常见的情绪和睡眠问题，可以帮你先判断是否需要进一步了解。"
+        },
+        {
+          "id": "RES-000005",
+          "why_recommended": "它整理了孩子持续难以安抚时，家长最常遇到的情况和可以先观察的方向，不需要你已经有结论才能看。"
+        }
+      ],
+      "search_reason": "如果你注意到的是孩子一直哭、很难哄好，这里可能有帮助。",
+      "related_kas": [
+        "family-quality-of-life",
+        "family-functioning"
+      ]
+    },
+    {
+      "id": "PRB-0003",
+      "title": "孩子情绪变化很大，捉摸不定",
+      "aliases": [
+        "情绪起伏大",
+        "一会哭一会笑",
+        "情绪波动",
+        "不稳定"
+      ],
+      "intro": "很多家长会先注意到，孩子的情绪开始变得很难预测，好的时候很好，但一旦崩溃就很难拉回来。下面整理了一些可以先参考的方向。",
+      "category": "emotion",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0008"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "情绪起伏大的时候，睡眠和身体状态往往是最先值得检查的方向，这一页整理了相关的观察框架。"
+        },
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "情绪起伏大的孩子往往会把家庭里原有的张力放大，这一页整理了这种情况下家庭关系常见的挑战。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000002",
+          "why_recommended": "孩子情绪起伏大的时候，这份资源整理了发育阶段情绪调节的常见模式，可以帮你先判断目前的变化是否需要进一步关注。"
+        },
+        {
+          "id": "RES-000018",
+          "why_recommended": "它整理了情绪起伏和发育阶段之间的常见关联，可以帮你先了解孩子目前的变化通常出现在哪个阶段。"
+        }
+      ],
+      "search_reason": "如果孩子情绪变化很快、捉摸不定，这里整理了这种情况常见的方向。",
+      "related_kas": [
+        "family-quality-of-life"
+      ]
+    },
+    {
+      "id": "PRB-0004",
+      "title": "孩子突然变得很焦虑或害怕",
+      "aliases": [
+        "怕很多东西",
+        "突然很担心",
+        "很紧张",
+        "怕上学"
+      ],
+      "intro": "很多家长会先注意到，孩子最近开始担心一些以前不在意的事，或者对某些情况的恐惧变得很强烈。下面整理了一些可以先参考的方向。",
+      "category": "emotion",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0007"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "焦虑和害怕有时和睡眠不足或身体压力有关，这一页可以帮你先了解健康层面有哪些值得注意的变化。"
+        },
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "孩子焦虑或害怕时，家庭成员对如何回应常常会有不同意见，这一页可以帮你先了解这类分歧怎么处理。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000005",
+          "why_recommended": "如果孩子最近突然变得害怕或焦虑，这份资源整理了这个阶段常见的情绪变化，可以帮你先了解哪些情况通常需要进一步关注。"
+        },
+        {
+          "id": "RES-000032",
+          "why_recommended": "焦虑和睡眠之间常有关联，如果孩子最近睡眠也受到影响，这份资源整理了这类情况的常见处理方向，可以先读一遍。"
+        }
+      ],
+      "search_reason": "如果孩子最近突然变得很担心、害怕很多事情，这里可能接近你的情况。",
+      "related_kas": [
+        "family-quality-of-life",
+        "parent-stress"
+      ]
+    },
+    {
+      "id": "PRB-0005",
+      "title": "孩子最近对以前喜欢的事也没兴趣了",
+      "aliases": [
+        "什么都不想做",
+        "提不起劲",
+        "对什么都无所谓",
+        "越来越被动"
+      ],
+      "intro": "很多家长会先注意到，孩子对以前很喜欢的事情开始提不起劲，甚至不太愿意尝试任何东西。下面整理了一些可以先参考的方向。",
+      "category": "emotion",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0002"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "对事情失去兴趣有时是身体或睡眠出问题的早期信号，这一页可以帮你先了解要观察哪些方向。"
+        },
+        {
+          "slug": "leisure",
+          "why_worth_reading": "孩子对事情失去兴趣时，家长自己的状态往往也很难轻松，这一页整理了这个阶段照顾者恢复状态的常见方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000005",
+          "why_recommended": "对事情失去兴趣有时是情绪状态变化的早期信号，这份资源整理了家长在这种情况下常见的疑问，不需要你已经有结论才能看。"
+        },
+        {
+          "id": "RES-000033",
+          "why_recommended": "孩子对事情失去兴趣的时候，家长自己的状态也常常受到影响。这份资源整理了照顾者支持方面的常见情况，可以先看看。"
+        }
+      ],
+      "search_reason": "如果孩子对以前喜欢的事情都提不起劲了，这里可能有帮助。",
+      "related_kas": [
+        "parent-stress"
+      ]
+    },
+    {
+      "id": "PRB-0006",
+      "title": "孩子不愿意开口说话",
+      "aliases": [
+        "不说话",
+        "很少开口",
+        "沉默",
+        "交流困难",
+        "沟通困难",
+        "不开口"
+      ],
+      "intro": "很多家长会先注意到，孩子越来越少主动开口，就算问他也很难得到回应。下面整理了一些可以先参考的方向。",
+      "category": "communication",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0007"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "不说话有时和孩子的整体健康状态有关，这一页整理了身体因素和行为变化之间的常见关联，可以先参考。"
+        },
+        {
+          "slug": "community-interaction",
+          "why_worth_reading": "孩子不说话有时和社交环境有关，这一页整理了孩子与外部世界连接困难时，家长可以先了解的常见方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000002",
+          "why_recommended": "如果孩子不只是不说话，还有其他沟通上的变化，这份资源整理了语言发育相关的常见情况，可以帮你先建立整体认识。"
+        },
+        {
+          "id": "RES-000010",
+          "why_recommended": "如果孩子不说话已经影响到日常沟通，这份资源整理了语言和沟通支持的常见方向，可以帮你先了解有哪些可以尝试。"
+        }
+      ],
+      "search_reason": "如果孩子越来越不开口说话、很少和人沟通，这里可能接近你的情况。",
+      "related_kas": [
+        "community-participation",
+        "belonging"
+      ]
+    },
+    {
+      "id": "PRB-0007",
+      "title": "叫名字经常没有反应",
+      "aliases": [
+        "不回应",
+        "叫不到",
+        "好像没听到",
+        "无视"
+      ],
+      "intro": "很多家长会先注意到，叫孩子名字的时候，他好像没有听到，或者反应越来越慢。下面整理了一些可以先参考的方向。",
+      "category": "communication",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0008"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "叫名字没有反应有时和感官或身体状态有关，这一页可以帮你先了解健康层面有哪些方向值得先了解。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000016",
+          "why_recommended": "叫名字没有反应有时需要认真对待，这份资源整理了这类情况的常见筛查方向，可以帮你先了解通常建议观察什么。"
+        },
+        {
+          "id": "RES-000002",
+          "why_recommended": "叫名字没有反应有时和语言发育有关，这份资源整理了这类情况家长最常问的问题，可以帮你先了解下一步可以观察什么。"
+        }
+      ],
+      "search_reason": "如果叫孩子名字经常没有反应，这里整理了这种情况可以先了解的方向。",
+      "related_kas": [
+        "school-participation"
+      ]
+    },
+    {
+      "id": "PRB-0008",
+      "title": "孩子不看别人的眼睛",
+      "aliases": [
+        "不对视",
+        "眼神飘",
+        "不看人",
+        "目光不集中"
+      ],
+      "intro": "很多家长会先注意到，孩子和别人说话时不太看对方的眼睛，或者目光经常飘向别处。下面整理了一些可以先参考的方向。",
+      "category": "communication",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0002"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "不对视有时和孩子整体的身心状态有关，这一页可以帮你先了解健康角度有哪些值得观察的方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000016",
+          "why_recommended": "不对视是发育评估里常被关注的一点，这份资源整理了相关的常见情况，可以帮你先了解哪些变化值得进一步观察。"
+        },
+        {
+          "id": "RES-000017",
+          "why_recommended": "不对视有时是需要认真对待的信号，这份资源整理了评估前家长最常问的问题，可以帮你先建立一个整体认识。"
+        }
+      ],
+      "search_reason": "如果你注意到孩子不太看别人眼睛，这里整理了这种情况可以先观察的方向。",
+      "related_kas": [
+        "school-participation"
+      ]
+    },
+    {
+      "id": "PRB-0009",
+      "title": "孩子说话越来越少，以前会说的词不说了",
+      "aliases": [
+        "语言退步",
+        "词汇减少",
+        "不如以前会说",
+        "说话减少",
+        "交流减少"
+      ],
+      "intro": "很多家长会先注意到，孩子以前会说的词开始消失，或者说话的量明显比以前少了。下面整理了一些可以先参考的方向。",
+      "category": "communication",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0008"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "语言退步是比较值得认真对待的变化，这一页整理了身体健康和发育之间的关联，可以帮你先建立观察框架。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000016",
+          "why_recommended": "语言退步是这份资源特别关注的情况之一，可以帮你先了解这类变化通常建议在什么阶段进行评估。"
+        },
+        {
+          "id": "RES-000002",
+          "why_recommended": "语言退步是比较需要认真对待的变化，这份资源整理了这个阶段家长常遇到的情况，可以帮你先了解通常建议观察哪些方面。"
+        }
+      ],
+      "search_reason": "如果孩子说话越来越少、以前会说的词不说了，这里可能接近你的情况。",
+      "related_kas": [
+        "school-participation"
+      ]
+    },
+    {
+      "id": "PRB-0010",
+      "title": "孩子好像听不懂别人说的话",
+      "aliases": [
+        "理解困难",
+        "听不懂指令",
+        "说了也没反应",
+        "沟通困难",
+        "交流有困难",
+        "听不懂"
+      ],
+      "intro": "很多家长会先注意到，跟孩子说话或给他指令的时候，他好像没有真正理解意思。下面整理了一些可以先参考的方向。",
+      "category": "communication",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0003"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "理解困难有时和孩子的整体发育健康有关，这一页可以帮你先了解在考虑评估之前有哪些健康层面值得先关注。"
+        },
+        {
+          "slug": "disability-services",
+          "why_worth_reading": "如果孩子的理解困难让你开始考虑是否需要专业介入，这一页整理了专业服务体系的基本框架，可以帮你先知道下一步可以找谁。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000002",
+          "why_recommended": "理解困难可能和语言发育有关，这份资源整理了相关的常见情况，可以帮你先了解哪些变化值得进一步评估。"
+        },
+        {
+          "id": "RES-000020",
+          "why_recommended": "如果你在考虑孩子的理解困难是否需要评估，这份资源说明了评估通常包括哪些环节，适合在做决定之前先读一遍。"
+        }
+      ],
+      "search_reason": "如果孩子好像听不懂别人说的话、指令也没有反应，这里可能有帮助。",
+      "related_kas": [
+        "school-participation"
+      ]
+    },
+    {
+      "id": "PRB-0011",
+      "title": "孩子很难睡着",
+      "aliases": [
+        "入睡困难",
+        "睡不着",
+        "躺很久睡不着",
+        "要哄很久"
+      ],
+      "intro": "很多家长会先注意到，孩子晚上躺了很久还是睡不着，或者每天入睡都变得很费力。下面整理了一些可以先参考的方向。",
+      "category": "sleep",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0008"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "入睡困难有时和孩子的身体状态或照顾者的疲惫程度都有关，这一页可以帮你从健康角度先看看有哪些方向。"
+        },
+        {
+          "slug": "leisure",
+          "why_worth_reading": "孩子入睡困难通常也会影响照顾者的休息，这一页整理了整个家庭在睡眠困难阶段可以先了解的恢复方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000001",
+          "why_recommended": "它整理了入睡困难时家长最常遇到的情况和可以先观察的方向，不需要你已经知道原因才能看。"
+        },
+        {
+          "id": "RES-000032",
+          "why_recommended": "入睡困难有时和焦虑或情绪状态有关，这份资源整理了这个连接点家长最常问的问题，适合在还不确定原因时先了解一下。"
+        }
+      ],
+      "search_reason": "如果孩子很难睡着、要哄很久才能入睡，这里整理了常见的方向。",
+      "related_kas": [
+        "family-functioning",
+        "parent-stress"
+      ]
+    },
+    {
+      "id": "PRB-0012",
+      "title": "孩子半夜总醒",
+      "aliases": [
+        "频繁醒来",
+        "睡眠浅",
+        "夜醒",
+        "半夜哭"
+      ],
+      "intro": "很多家长会先注意到，孩子半夜会醒来好几次，每次都要花很长时间才能再入睡。下面整理了一些可以先参考的方向。",
+      "category": "sleep",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0007"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "夜醒频繁会影响孩子和整个家庭的状态，这一页整理了睡眠和健康之间的常见关联，可以先读一遍。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000001",
+          "why_recommended": "如果夜醒已经持续一段时间，这份资源整理了这个阶段常见的睡眠模式，可以帮你先了解哪些情况通常需要进一步关注。"
+        },
+        {
+          "id": "RES-000005",
+          "why_recommended": "夜醒频繁有时和情绪状态有关，这份资源整理了睡眠问题和情绪变化之间常见的关联，可以帮你先判断是否需要进一步了解。"
+        }
+      ],
+      "search_reason": "如果孩子半夜总醒、睡眠很浅，这里可能接近你的情况。",
+      "related_kas": [
+        "family-functioning",
+        "parent-stress"
+      ]
+    },
+    {
+      "id": "PRB-0013",
+      "title": "孩子睡眠越来越差，影响白天状态",
+      "aliases": [
+        "睡不好",
+        "白天没精神",
+        "睡眠质量差",
+        "越来越难睡"
+      ],
+      "intro": "很多家长会先注意到，孩子睡眠越来越不稳定，白天也开始变得没精神或者很容易情绪化。下面整理了一些可以先参考的方向。",
+      "category": "sleep",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0008"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "长期睡眠不好会影响孩子和照顾者双方的状态，这一页可以帮你先了解健康层面有哪些值得关注的方向。"
+        },
+        {
+          "slug": "leisure",
+          "why_worth_reading": "长期睡眠不好会影响整个家庭的恢复能力，这一页整理了这个阶段照顾者最常遇到的疲惫模式和可以先了解的方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000032",
+          "why_recommended": "如果睡眠越来越差已经开始影响白天，这份资源整理了这个阶段家长可以先观察和了解的方向，不需要你已经有结论。"
+        },
+        {
+          "id": "RES-000033",
+          "why_recommended": "长期睡眠不好不只影响孩子，也会影响照顾者的状态。这份资源整理了这个阶段家长常遇到的支持需求，不需要已经撑不住才看。"
+        }
+      ],
+      "search_reason": "如果孩子睡眠越来越差、白天也没精神，这里整理了可以先了解的方向。",
+      "related_kas": [
+        "family-quality-of-life",
+        "family-functioning"
+      ]
+    },
+    {
+      "id": "PRB-0014",
+      "title": "孩子早上很难起床，情绪很差",
+      "aliases": [
+        "起床困难",
+        "早上发脾气",
+        "不愿意起床",
+        "早上状态差"
+      ],
+      "intro": "很多家长会先注意到，孩子早上很难叫起来，或者起床之后情绪很差，很难平静地开始一天。下面整理了一些可以先参考的方向。",
+      "category": "sleep",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0002"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "起床困难和早上情绪差有时和睡眠质量直接相关，这一页整理了相关的健康观察框架，可以先参考。"
+        },
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "早上的情绪困难往往会影响整个家庭的氛围，这一页整理了这种情况下家庭关系常见的张力和可以先了解的方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000005",
+          "why_recommended": "早上情绪很差有时是睡眠质量或情绪状态的信号，这份资源整理了相关的常见情况，可以帮你先了解可以先观察哪些方向。"
+        },
+        {
+          "id": "RES-000032",
+          "why_recommended": "起床困难有时和睡眠质量有关，这份资源整理了相关的常见情况，可以帮你先了解哪些方向值得进一步观察。"
+        }
+      ],
+      "search_reason": "如果孩子早上很难起床、情绪很差，这里可能有帮助。",
+      "related_kas": [
+        "family-functioning"
+      ]
+    },
+    {
+      "id": "PRB-0015",
+      "title": "孩子白天睡很多，晚上却睡不着",
+      "aliases": [
+        "昼夜颠倒",
+        "白天犯困",
+        "作息混乱",
+        "睡眠时间倒"
+      ],
+      "intro": "很多家长会先注意到，孩子白天睡得多，但到了晚上反而精神很好，很难按时入睡。下面整理了一些可以先参考的方向。",
+      "category": "sleep",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0003"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "昼夜作息混乱会对整个家庭的状态产生影响，这一页可以帮你先了解有哪些健康层面的因素值得关注。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000001",
+          "why_recommended": "昼夜作息混乱是睡眠问题里比较常见的一种，这份资源整理了家长在这种情况下最常问的问题，可以帮你先建立整体认识。"
+        },
+        {
+          "id": "RES-000005",
+          "why_recommended": "昼夜颠倒的作息有时和情绪或其他因素有关，这份资源整理了这种情况下家长常见的疑问，适合在还没有结论时先读一遍。"
+        }
+      ],
+      "search_reason": "如果孩子白天睡很多、晚上却睡不着，这里整理了这种情况常见的方向。",
+      "related_kas": [
+        "family-functioning",
+        "parent-stress"
+      ]
+    },
+    {
+      "id": "PRB-0016",
+      "title": "孩子越来越不愿意去学校",
+      "aliases": [
+        "抗拒上学",
+        "不想去学校",
+        "每天找理由不去",
+        "上学前哭闹"
+      ],
+      "intro": "很多家长会先注意到，孩子开始找各种理由不去学校，或者每天早上出门前都会有很强烈的抗拒。下面整理了一些可以先参考的方向。",
+      "category": "school",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0003"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "不愿意去学校有时和孩子的身体或情绪健康状态有关，这一页可以帮你先了解有哪些方向值得先排查。"
+        },
+        {
+          "slug": "community-interaction",
+          "why_worth_reading": "不愿意去学校有时是社会连接出现困难的信号，这一页整理了学校和社区层面家长可以先了解的方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000008",
+          "why_recommended": "如果孩子不愿意去学校已经持续一段时间，这份资源整理了学校相关支持的常见情况，可以帮你先了解有哪些方向可以尝试。"
+        },
+        {
+          "id": "RES-000011",
+          "why_recommended": "它专门整理了拒绝上学这个情况，包括家长最常遇到的疑问和可以先了解的方向，比较有针对性。"
+        }
+      ],
+      "search_reason": "如果孩子越来越抗拒去学校、每天都很难出门，这里可能接近你的情况。",
+      "related_kas": [
+        "community-participation",
+        "child-participation",
+        "participation-qol"
+      ]
+    },
+    {
+      "id": "PRB-0017",
+      "title": "老师建议做评估，我不知道该怎么办",
+      "aliases": [
+        "老师说要评估",
+        "被建议评估",
+        "不知道评估是什么",
+        "评估要怎么做"
+      ],
+      "intro": "当老师提出评估建议时，很多家长第一反应并不是马上决定，而是不知道这意味着什么。下面整理了一些可以先参考的方向。",
+      "category": "school",
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0004"
+      ],
+      "related_pages": [
+        {
+          "slug": "disability-services",
+          "why_worth_reading": "如果老师已经建议评估，这一页整理了专业服务体系的常见流程和家长最常遇到的困惑，适合在正式开始之前先读。"
+        },
+        {
+          "slug": "health",
+          "why_worth_reading": "评估前先了解孩子整体的健康状态，往往能帮助你在和专业人员沟通时提供更有用的观察，这一页可以先读。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000017",
+          "why_recommended": "如果你对评估流程还不熟悉，这份资源整理了评估前家长最常问的问题，可以帮你先建立一个整体认识，再决定下一步。"
+        },
+        {
+          "id": "RES-000020",
+          "why_recommended": "它说明了评估通常包括哪些环节，以及家长可以如何配合，适合在正式开始之前先读一遍。"
+        }
+      ],
+      "search_reason": "如果老师已经提到评估，但你还不知道下一步怎么办，这里整理了常见的疑问。",
+      "related_kas": [
+        "school-participation",
+        "child-participation"
+      ]
+    },
+    {
+      "id": "PRB-0018",
+      "title": "孩子上课坐不住，老师反映有困难",
+      "aliases": [
+        "注意力不集中",
+        "坐不住",
+        "上课乱跑",
+        "老师说有问题"
+      ],
+      "intro": "很多家长会先从老师那里得知，孩子在课堂上很难安静坐着，或者注意力很难集中在当下的事情上。下面整理了一些可以先参考的方向。",
+      "category": "school",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0003"
+      ],
+      "related_pages": [
+        {
+          "slug": "health",
+          "why_worth_reading": "坐不住和注意力困难有时和孩子的睡眠或身体状态有关，这一页可以帮你先了解健康层面有哪些值得先排查。"
+        },
+        {
+          "slug": "disability-services",
+          "why_worth_reading": "坐不住和课堂困难有时需要专业介入，这一页整理了相关专业服务的基本框架，可以帮你先了解有哪些方向可以寻求帮助。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000008",
+          "why_recommended": "老师反映课堂困难时，这份资源整理了家长可以先了解的学校支持方向，适合在和学校沟通之前先读一遍。"
+        },
+        {
+          "id": "RES-000013",
+          "why_recommended": "它整理了注意力和课堂困难相关的常见情况，可以帮你先了解这类情况通常建议观察哪些方面，再决定下一步。"
+        }
+      ],
+      "search_reason": "如果老师反映孩子上课坐不住、注意力有困难，这里整理了可以先了解的方向。",
+      "related_kas": [
+        "school-participation",
+        "child-participation"
+      ]
+    },
+    {
+      "id": "PRB-0019",
+      "title": "孩子在学校没有朋友",
+      "aliases": [
+        "没有朋友",
+        "很孤独",
+        "不合群",
+        "同学不理他"
+      ],
+      "intro": "很多家长会先注意到，孩子放学回来很少提到同学，或者在学校的时候大多数时间都是一个人。下面整理了一些可以先参考的方向。",
+      "category": "school",
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0006"
+      ],
+      "related_pages": [
+        {
+          "slug": "community-interaction",
+          "why_worth_reading": "在学校没有朋友是社会连接困难最直接的表现，这一页整理了这种情况下家长可以先了解的社交支持方向。"
+        },
+        {
+          "slug": "health",
+          "why_worth_reading": "在学校没有朋友有时和孩子整体的身心状态有关，这一页整理了健康因素和社交行为之间的常见关联。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000008",
+          "why_recommended": "孩子在学校没有朋友是很多家长会担心的情况，这份资源整理了社交支持相关的常见方向，可以帮你先了解可以从哪里开始。"
+        },
+        {
+          "id": "RES-000036",
+          "why_recommended": "它整理了孩子社交困难时家长最常问的问题，比较有针对性，可以在还没有结论时先读一遍。"
+        }
+      ],
+      "search_reason": "如果孩子在学校没有朋友、总是一个人，这里可能有帮助。",
+      "related_kas": [
+        "community-participation",
+        "belonging",
+        "child-participation",
+        "participation-qol"
+      ]
+    },
+    {
+      "id": "PRB-0020",
+      "title": "孩子和同学关系很差，可能被欺负了",
+      "aliases": [
+        "被欺负",
+        "被排挤",
+        "同学欺负他",
+        "学校不开心"
+      ],
+      "intro": "很多家长会先从孩子的状态或只言片语中，开始担心他在学校里是不是受到了一些不好的对待。下面整理了一些可以先参考的方向。",
+      "category": "school",
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0005"
+      ],
+      "related_pages": [
+        {
+          "slug": "community-interaction",
+          "why_worth_reading": "被欺负往往意味着孩子在学校的社会连接出了问题，这一页整理了这种情况下可以先了解的方向。"
+        },
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "孩子被欺负时，家庭成员的反应和处理方式往往会产生分歧，这一页可以帮你先了解这类情况下家庭关系的常见挑战。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000009",
+          "why_recommended": "如果孩子可能被欺负了，但还不确定下一步该怎么办，这份资源整理了这种情况下家长可以先了解的方向。"
+        },
+        {
+          "id": "RES-000047",
+          "why_recommended": "如果你怀疑孩子被欺负了，这份资源整理了这种情况下家长可以先了解的处理方向，不需要你已经确认才能看。"
+        }
+      ],
+      "search_reason": "如果你担心孩子在学校被欺负或被排挤，这里整理了这种情况可以先了解的方向。",
+      "related_kas": [
+        "community-participation",
+        "belonging",
+        "child-participation"
+      ]
+    },
+    {
+      "id": "PRB-0021",
+      "title": "我不知道该怎么办，感觉无从下手",
+      "aliases": [
+        "不知道从哪里开始",
+        "完全不知道该做什么",
+        "感觉很迷茫",
+        "无从下手"
+      ],
+      "intro": "很多家长在意识到孩子需要帮助之后，会发现自己完全不知道第一步应该做什么。下面整理了一些可以先参考的方向。",
+      "category": "caregiver",
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0004"
+      ],
+      "related_pages": [
+        {
+          "slug": "support-from-others",
+          "why_worth_reading": "完全不知道从哪里开始时，外部支持往往是最先值得了解的方向，这一页整理了可以先寻求哪些类型的帮助。"
+        },
+        {
+          "slug": "disability-services",
+          "why_worth_reading": "完全不知道从哪里开始时，这一页整理了专业服务体系的导航框架，可以帮你先了解大概有哪些方向可以尝试。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000009",
+          "why_recommended": "它整理了不知道从哪里开始的家长最常问的问题，适合在完全没有方向的时候先读一遍，帮你找到第一个可以行动的点。"
+        },
+        {
+          "id": "RES-000024",
+          "why_recommended": "完全不知道从哪里开始的时候，这份资源整理了导航类的支持方向，可以帮你先找到一个可以行动的起点。"
+        }
+      ],
+      "search_reason": "如果你完全不知道从哪里开始、感觉无从下手，这里可能是第一步。",
+      "related_kas": [
+        "caregiver-burden",
+        "family-support"
+      ]
+    },
+    {
+      "id": "PRB-0022",
+      "title": "我很累，已经撑了很久",
+      "aliases": [
+        "精疲力竭",
+        "撑不下去了",
+        "太累了",
+        "已经很久了"
+      ],
+      "intro": "很多长期照顾孩子的家长，会在某个时候发现自己已经很累，却还是不知道能不能停下来。下面整理了一些可以先参考的方向。",
+      "category": "caregiver",
+      "related_methods": [
+        "MTH-0005",
+        "MTH-0006"
+      ],
+      "related_pages": [
+        {
+          "slug": "leisure",
+          "why_worth_reading": "已经撑了很久的时候，这一页整理了照顾者在持续消耗后可以先了解的恢复方向，不需要你先有余力才能看。"
+        },
+        {
+          "slug": "support-from-others",
+          "why_worth_reading": "已经撑了很久的时候，这一页整理了照顾者常见的支持需求和可以先了解的外部资源，适合在还有余力时先看。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000029",
+          "why_recommended": "它专门整理了照顾者在持续疲惫时可以了解的支持资源，适合在你开始觉得很难撑下去的时候先看看有哪些方向。"
+        },
+        {
+          "id": "RES-000033",
+          "why_recommended": "它整理了照顾者在持续疲惫时常见的情况和可以先了解的支持方向，适合在你还有余力的时候先读一遍。"
+        }
+      ],
+      "search_reason": "如果你已经撑了很久，感觉越来越难，这里是给照顾者的方向。",
+      "related_kas": [
+        "caregiver-burden",
+        "family-quality-of-life",
+        "parent-stress",
+        "family-support"
+      ]
+    },
+    {
+      "id": "PRB-0023",
+      "title": "家里对孩子的看法不一致，经常争吵",
+      "aliases": [
+        "家人意见不同",
+        "和伴侣意见不合",
+        "祖辈干涉",
+        "家里争吵"
+      ],
+      "intro": "很多家庭会在照顾压力增加之后，发现家人之间对同一件事的看法越来越不一样，也越来越难以平静地沟通。下面整理了一些可以先参考的方向。",
+      "category": "caregiver",
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0005"
+      ],
+      "related_pages": [
+        {
+          "slug": "family-relationships",
+          "why_worth_reading": "家里已经开始争吵，这一页整理了照顾压力下家庭关系常见的冲突模式，以及可以先尝试的方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000009",
+          "why_recommended": "家里意见不一致的时候，这份资源整理了家庭沟通相关的常见情况，可以帮你先了解有哪些方向可以尝试。"
+        },
+        {
+          "id": "RES-000045",
+          "why_recommended": "如果家里争吵已经影响到日常，这份资源整理了家庭关系支持的常见情况，可以帮你先了解有哪些方向可以尝试。"
+        }
+      ],
+      "search_reason": "如果家里对孩子的事意见不一致、经常争吵，这里整理了这种情况常见的方向。",
+      "related_kas": [
+        "family-quality-of-life",
+        "family-functioning",
+        "participation-qol"
+      ]
+    },
+    {
+      "id": "PRB-0024",
+      "title": "我不知道要不要去找专业人员",
+      "aliases": [
+        "要不要看医生",
+        "要不要找专家",
+        "不确定是否需要评估",
+        "是否需要帮助"
+      ],
+      "intro": "很多家长会在观察了一段时间之后，开始想知道：现在这种情况，是不是需要找专业的人来看看。下面整理了一些可以先参考的方向。",
+      "category": "caregiver",
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0004"
+      ],
+      "related_pages": [
+        {
+          "slug": "disability-services",
+          "why_worth_reading": "如果你还在考虑要不要寻求专业帮助，这一页整理了专业服务体系的常见入口，适合在做决定之前先了解整体结构。"
+        },
+        {
+          "slug": "support-from-others",
+          "why_worth_reading": "还不确定要不要寻求帮助时，这一页整理了外部支持的不同类型，可以帮你先了解有哪些选项，再决定下一步。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000020",
+          "why_recommended": "如果你还在考虑要不要寻求专业评估，这份资源整理了评估流程和家长常见的疑问，不需要你已经决定才能看。"
+        },
+        {
+          "id": "RES-000009",
+          "why_recommended": "如果你还在考虑要不要寻求帮助，这份资源整理了这个决定阶段家长最常有的疑问，不需要你已经决定好才能看。"
+        }
+      ],
+      "search_reason": "如果你还不确定要不要去找专业帮助，这里整理了这个阶段常见的疑问。",
+      "related_kas": [
+        "caregiver-burden",
+        "family-support"
+      ]
+    },
+    {
+      "id": "PRB-0025",
+      "title": "我担心自己做得不够好",
+      "aliases": [
+        "觉得自己不够好",
+        "内疚",
+        "自责",
+        "总觉得不够努力"
+      ],
+      "intro": "很多家长会在长期照顾之后，开始觉得自己做的还不够，或者担心自己的某个决定是不是错的。下面整理了一些可以先参考的方向。",
+      "category": "caregiver",
+      "related_methods": [
+        "MTH-0005",
+        "MTH-0002"
+      ],
+      "related_pages": [
+        {
+          "slug": "values",
+          "why_worth_reading": "担心自己做得不够好时，往往和内心对好家长的定义有关，这一页可以帮你先了解这类想法背后常见的价值观张力。"
+        },
+        {
+          "slug": "support-from-others",
+          "why_worth_reading": "自责和内疚的时候，外部支持往往比独自面对更有帮助，这一页整理了可以先了解的支持方向。"
+        }
+      ],
+      "related_resources": [
+        {
+          "id": "RES-000033",
+          "why_recommended": "自责和内疚是很多照顾者都会有的感受，这份资源整理了这方面的常见经历，可以帮你先了解自己的状态是否需要一些支持。"
+        },
+        {
+          "id": "RES-000046",
+          "why_recommended": "它整理了照顾者自责和内疚相关的常见经历，可以帮你先了解这种感受是否需要一些支持，或者可以从哪里开始。"
+        }
+      ],
+      "search_reason": "如果你一直担心自己做得不够好、容易自责，这里可能接近你的情况。",
+      "related_kas": [
+        "parent-stress",
+        "family-support"
+      ]
+    },
+    {
+      "id": "PRB-P007-001",
+      "title": "剪头发、刷牙、洗头，每次都像打仗",
+      "category": "sensory",
+      "aliases": [
+        "孩子不让剪头发",
+        "剪头发崩溃",
+        "剪头发要按住",
+        "洗头每次哭",
+        "刷牙是噩梦",
+        "不让剪指甲",
+        "理发店进不去",
+        "洗澡时候哭",
+        "日常护理很难"
+      ],
+      "search_reason": "如果孩子的日常护理每次都是挣扎，这里整理了为什么会这样，以及今天可以做什么。",
+      "related_path": "p007",
+      "related_page": "s002",
+      "tags": [
+        "感觉",
+        "触觉",
+        "日常护理",
+        "剪头发",
+        "刷牙"
+      ]
+    },
+    {
+      "id": "PRB-P007-002",
+      "title": "普通的声音，孩子反应像是在受苦",
+      "category": "sensory",
+      "aliases": [
+        "怕吸尘器",
+        "怕吹风机",
+        "冲马桶会尖叫",
+        "怕铃声",
+        "去商场会崩溃",
+        "怕气球爆",
+        "一有响声就捂耳朵",
+        "学校铃声很难",
+        "餐厅太吵坐不住",
+        "怕雷声"
+      ],
+      "search_reason": "如果孩子对普通的声音反应很大，这里解释了为什么，以及什么有帮助。",
+      "related_path": "p007",
+      "related_page": "s001",
+      "tags": [
+        "感觉",
+        "听觉",
+        "声音",
+        "捂耳朵",
+        "崩溃"
+      ]
+    },
+    {
+      "id": "PRB-P007-003",
+      "title": "孩子一直转圈、跑跳、停不下来",
+      "category": "sensory",
+      "aliases": [
+        "一直转圈转不晕",
+        "停不下来",
+        "喜欢跳一直跳",
+        "一直蹦蹦跳跳",
+        "喜欢被甩被抛",
+        "是多动症吗",
+        "坐不住",
+        "一直运动停不下来"
+      ],
+      "search_reason": "如果孩子一直在动、停不下来，这里帮你理解这背后是什么。",
+      "related_path": "p007",
+      "related_page": "s003",
+      "tags": [
+        "感觉",
+        "前庭",
+        "运动",
+        "感觉寻求",
+        "停不下来"
+      ]
+    },
+    {
+      "id": "PRB-P007-004",
+      "title": "孩子一直咬东西、闻东西、把东西放嘴里",
+      "category": "sensory",
+      "aliases": [
+        "咬衣服",
+        "咬手",
+        "咬铅笔",
+        "把东西放嘴里",
+        "一直闻东西",
+        "闻人",
+        "口欲期没过",
+        "走路要摸墙",
+        "一直摸别人"
+      ],
+      "search_reason": "如果孩子一直咬东西或闻东西，这里解释了这是什么，以及什么可以帮助他。",
+      "related_path": "p007",
+      "related_page": "s003",
+      "tags": [
+        "感觉",
+        "口腔",
+        "本体觉",
+        "感觉寻求",
+        "咬"
+      ]
+    },
+    {
+      "id": "PRB-P007-005",
+      "title": "孩子不知道自己有多大力气，经常撞人或弄坏东西",
+      "category": "sensory",
+      "aliases": [
+        "用力太大",
+        "抱人太用力",
+        "写字把纸弄破",
+        "经常撞到门框",
+        "经常撞到东西",
+        "推同学不是故意的",
+        "不知道轻重",
+        "开关门很大声",
+        "走路很响"
+      ],
+      "search_reason": "如果孩子经常用力过大或撞到东西，这里解释了为什么，以及什么有帮助。",
+      "related_path": "p007",
+      "related_page": "s003",
+      "tags": [
+        "感觉",
+        "本体觉",
+        "力道",
+        "撞",
+        "推人"
+      ]
+    },
+    {
+      "id": "PRB-P007-006",
+      "title": "一到人多嘈杂的地方，孩子就崩溃",
+      "category": "sensory",
+      "aliases": [
+        "超市里总会崩溃",
+        "生日派对哭着跑出来",
+        "学校餐厅吃不下",
+        "医院诊所很难配合",
+        "游泳课换衣服崩溃",
+        "节假日不想出门",
+        "人多地方走一会儿就不行",
+        "突然的变化无法接受",
+        "学校回来就崩溃"
+      ],
+      "search_reason": "如果孩子在复杂环境里特别容易崩溃，这里帮你理解发生了什么。",
+      "related_path": "p007",
+      "related_page": "s004",
+      "tags": [
+        "感觉",
+        "环境",
+        "过载",
+        "崩溃",
+        "商场",
+        "学校"
+      ]
+    }
+  ]
+}

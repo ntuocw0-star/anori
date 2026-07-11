@@ -1,0 +1,248 @@
+{
+  "id": "KA-PAR-00001",
+  "canonical": "Child Participation",
+  "zh": "儿童参与",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "knowledge_domain": "KD-PAR",
+  "position_in_system": {
+    "role": "Participation Science 总节点和入口",
+    "upstream": "KD-FAM（Family Quality of Life，REL-000078）",
+    "downstream": [
+      "School Participation",
+      "Community Participation",
+      "Leisure Participation",
+      "Employment Participation（成年后）"
+    ],
+    "note": "Child Participation 是 Family Science 和 Participation Science 的连接点，也是所有参与子域的总汇聚节点"
+  },
+  "definition": {
+    "anori": "儿童参与不只是「孩子有没有出去活动」，而是孩子能不能真正融入并有意义地参与生活中对他重要的事情——学校、朋友、社区、兴趣。参与不是表现，而是归属感。一个孩子参与了一件事，不只是在那里，而是感到自己属于那里。",
+    "research": "儿童在日常生活中参与有意义活动的程度，包括参与的频率（做了多少）、参与的投入度（真正投入了多少）和参与的多样性（参与了哪些类型的活动）。基于 ICF 的参与定义强调「参与」是人与环境互动的结果，而非个人特征。",
+    "icf_alignment": "Activities & Participation (d1-d9)：学习与应用知识、一般任务与要求、沟通、行动、自理、家庭生活、人际关系、主要生活领域、社区社会和公民生活"
+  },
+  "why_it_matters": "Child Participation 是整个 Participation Science 的总节点。它接收来自 Family Science（FQoL）的上游影响，向下分化为 School、Community、Leisure 等具体参与域，最终汇聚到 Quality of Life。研究一致发现，参与机会和参与质量，是预测残障儿童长期发展结果最重要的环境因素之一——不是孩子本身的能力，而是环境是否支持参与。",
+  "dimensions": [
+    {
+      "dimension": "参与频率（Frequency）",
+      "description": "孩子实际参与活动的次数"
+    },
+    {
+      "dimension": "参与投入度（Involvement）",
+      "description": "孩子在参与过程中的投入程度和享受感"
+    },
+    {
+      "dimension": "参与多样性（Diversity）",
+      "description": "孩子参与活动类型的广度"
+    },
+    {
+      "dimension": "参与情境（Context）",
+      "description": "家庭、学校、社区等不同情境下的参与"
+    },
+    {
+      "dimension": "参与障碍（Barriers）",
+      "description": "阻碍参与的环境、态度和系统因素"
+    },
+    {
+      "dimension": "参与促进（Facilitators）",
+      "description": "支持参与的支持、工具和机会"
+    }
+  ],
+  "core_vars": [
+    {
+      "var_id": "VAR-000023",
+      "name": "社区参与",
+      "role": "primary_subtype"
+    },
+    {
+      "var_id": "VAR-000021",
+      "name": "休闲参与",
+      "role": "primary_subtype"
+    },
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "upstream_driver"
+    },
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "upstream_barrier"
+    },
+    {
+      "var_id": "VAR-000013",
+      "name": "儿童心理健康",
+      "role": "mediator"
+    },
+    {
+      "var_id": "VAR-000022",
+      "name": "生活质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000025",
+      "name": "能力主义",
+      "role": "environmental_barrier"
+    },
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "facilitator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000078",
+      "summary": "家庭生活质量 → 促进儿童社区参与",
+      "grade": "Very Low",
+      "direction": "upstream → KA",
+      "note": "Family Science 桥接，STR 目标"
+    },
+    {
+      "rel_id": "REL-000013",
+      "summary": "照顾者负担 → 限制社区参与",
+      "grade": "High",
+      "direction": "barrier → KA"
+    },
+    {
+      "rel_id": "REL-000027",
+      "summary": "社区参与 → 提升家庭生活质量",
+      "grade": "High",
+      "direction": "KA → outcome（双向）"
+    },
+    {
+      "rel_id": "REL-000080",
+      "summary": "社区参与 → 提升生活质量",
+      "grade": "High",
+      "direction": "KA → outcome"
+    },
+    {
+      "rel_id": "REL-000011",
+      "summary": "家庭休闲 → 提升家庭生活质量",
+      "grade": "High",
+      "direction": "subtype → upstream"
+    },
+    {
+      "rel_id": "REL-000081",
+      "summary": "家庭生活质量 → 促进休闲参与",
+      "grade": "Very Low",
+      "direction": "upstream → KA subtype",
+      "note": "STR"
+    },
+    {
+      "rel_id": "REL-000031",
+      "summary": "能力主义 → 降低生活质量（障碍）",
+      "grade": "Very Low",
+      "direction": "barrier → outcome"
+    },
+    {
+      "rel_id": "REL-000082",
+      "summary": "儿童心理健康 → 促进社区参与",
+      "grade": "Very Low",
+      "direction": "mediator → KA",
+      "note": "STR"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 4,
+    "total_rel_count": 8,
+    "strongest_evidence": "REL-000013（Verdonschot 2009，照顾者负担限制参与，High）；REL-000027（社区参与→FQoL，High）；REL-000080（社区参与→QoL，High）",
+    "evidence_gaps": [
+      "FQoL → Child Participation（REL-000078，最重要桥接 REL，需要 SR）",
+      "FQoL → Leisure Participation（REL-000081，骨架）",
+      "Child Mental Health → Community Participation（REL-000082，骨架）"
+    ]
+  },
+  "participation_subtypes": [
+    {
+      "subtype": "School Participation",
+      "ka": "KA-PAR-01001",
+      "status": "planned"
+    },
+    {
+      "subtype": "Community Participation",
+      "ka": "KA-PAR-02001",
+      "status": "planned"
+    },
+    {
+      "subtype": "Leisure Participation",
+      "ka": "KA-PAR-03001",
+      "status": "planned"
+    },
+    {
+      "subtype": "Employment Participation",
+      "ka": "KA-PAR-04001",
+      "status": "planned（成年后）"
+    }
+  ],
+  "str_new_targets": [
+    {
+      "rel_id": "REL-000078",
+      "priority": "A",
+      "search_query": "family quality of life child participation disability systematic review longitudinal",
+      "target_type": "SR / Longitudinal"
+    },
+    {
+      "rel_id": "REL-000081",
+      "priority": "B",
+      "search_query": "family quality of life leisure participation disability",
+      "target_type": "SR 或实证研究"
+    },
+    {
+      "rel_id": "REL-000082",
+      "priority": "B",
+      "search_query": "child mental health community participation disability systematic review",
+      "target_type": "SR"
+    }
+  ],
+  "common_misunderstanding": [
+    "参与就是孩子去了某个地方（实际上参与的质量和投入度比频率更重要）",
+    "参与能力是孩子本身的特征（实际上主要由环境支持决定）",
+    "孩子有障碍就无法真正参与（实际上合适的支持可以改变参与结果）",
+    "家庭支持和孩子参与是独立的（实际上 FQoL 是 Child Participation 最重要的上游驱动）"
+  ],
+  "measurement": {
+    "scales": [
+      "CAPE（Children's Assessment of Participation and Enjoyment）",
+      "PEM-CY（Participation and Environment Measure for Children and Youth）",
+      "LIFE-H（Assessment of Life Habits）",
+      "ICF 参与维度评估工具"
+    ],
+    "note": "CAPE 同时测量参与频率和享受感，PEM-CY 专门评估环境因素对参与的影响，推荐两者配合使用"
+  },
+  "website": {
+    "page_slug": "community-interaction",
+    "related_problems": [
+      "PRB-0016",
+      "PRB-0019",
+      "PRB-0020"
+    ],
+    "anori_reframe": "参与不是表现，而是归属感。帮助孩子参与，不只是安排活动，而是创造让他感到自己属于那里的机会。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "怎么帮助孩子参与更多活动？",
+      "孩子总是一个人，怎么办？",
+      "为什么参与对孩子这么重要？",
+      "孩子有障碍还能参与社区吗？",
+      "什么影响孩子参与学校和社区？"
+    ],
+    "answer_template": "研究发现，影响儿童参与的最重要因素不是孩子的能力，而是环境是否提供足够支持。{evidence_card} 说明了家庭支持和社区包容性如何直接影响参与机会。"
+  },
+  "related_kas": [
+    "KA-FAM-05001",
+    "KA-FAM-02003",
+    "KA-FAM-01001"
+  ],
+  "related_concepts": [
+    "CON-000003"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，Participation Science 第一个节点，KD-FAM 和 KD-PAR 的桥接点"
+    }
+  ]
+}

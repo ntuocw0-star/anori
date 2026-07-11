@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "created": "2026-07-01",
+  "description": "Anori Knowledge Navigation Schema — 理解路径，不是关系图",
+  "philosophy": "帮助家长一步一步走向更完整的理解，而不是展示知识的连接图谱",
+  "connection_types": {
+    "evidence": {
+      "description": "PAGE 关联的循证研究（REL）",
+      "source": "pages.json → supporting_rel → rels.json",
+      "status": "active"
+    },
+    "resources": {
+      "description": "PAGE 关联的外部资源（Resource Digest）",
+      "source": "resources.json → related_pages → PAGE slug",
+      "status": "active"
+    },
+    "related_pages": {
+      "description": "同一家庭处境下，值得继续了解的其他主题",
+      "source": "related-pages.json",
+      "status": "active",
+      "display": "也许你还想了解"
+    },
+    "journey": {
+      "description": "从当前主题出发的理解路径，反映很多家长的阅读轨迹",
+      "source": "journeys.json",
+      "status": "active",
+      "display": "继续理解"
+    }
+  },
+  "page_slugs": [
+    "health", "family-relationships", "values",
+    "financial-wellbeing", "support-from-others",
+    "disability-services", "leisure", "career", "community-interaction"
+  ]
+}

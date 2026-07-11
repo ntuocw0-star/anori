@@ -1,0 +1,38 @@
+---
+import type { EvidenceKALink } from '../../types/path';
+
+export interface Props {
+  headline: string;
+  points: string[];
+  emotion_translation?: string;
+  ka_link?: EvidenceKALink;
+}
+const { headline, points, emotion_translation, ka_link } = Astro.props;
+---
+<section class="up-section">
+  <div class="up-evidence">
+    <div class="up-evidence-header">
+      <div class="up-evidence-top">
+        <span class="up-evidence-tag">研究发现</span>
+        <p class="up-evidence-headline">{headline}</p>
+      </div>
+    </div>
+    <ul class="up-evidence-points">
+      {points.map((pt: string) => (
+        <li>{pt}</li>
+      ))}
+    </ul>
+    {emotion_translation && (
+      <p class="up-evidence-emotion">{emotion_translation}</p>
+    )}
+    {ka_link && (
+      <div class="up-evidence-ka">
+        <a href={ka_link.href} class="up-evidence-ka-link">
+          <span class="up-evidence-ka-label">深入阅读</span>
+          <span class="up-evidence-ka-title">{ka_link.label}</span>
+          <span class="up-evidence-ka-arrow">→</span>
+        </a>
+      </div>
+    )}
+  </div>
+</section>

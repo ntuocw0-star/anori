@@ -1,0 +1,32 @@
+---
+import type { AbcCard } from '../../types/path';
+
+export interface Props {
+  cards: AbcCard[];
+}
+const { cards } = Astro.props;
+---
+{cards?.length > 0 && (
+  <section class="up-section">
+    <p class="up-section-label">A-B-C 观察框架</p>
+    <div class="up-abc-grid">
+      {cards.map((card: AbcCard) => (
+        <div class={`up-abc-card up-abc-card--${card.color}`}>
+          <div class="up-abc-header">
+            <span class="up-abc-letter">{card.letter}</span>
+            <div>
+              <p class="up-abc-label">{card.label}</p>
+              <p class="up-abc-question">{card.question}</p>
+            </div>
+          </div>
+          <ul class="up-abc-prompts">
+            {card.prompts.map((p: string) => <li>{p}</li>)}
+          </ul>
+          {card.example && (
+            <p class="up-abc-example">例：{card.example}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+)}

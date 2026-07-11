@@ -1,0 +1,472 @@
+---
+/**
+ * /resource/[id].astro — Resource Evidence Hub
+ *
+ * 架构原则：
+ * - 每个模块独立渲染，数据存在就显示，不存在就不占位
+ * - 页面可从几百字扩展到上万字，无需改版
+ * - 为未来扩展字段预留插槽（related_methods / related_concepts / evidence_sources 等）
+ *
+ * 模块顺序：
+ * ① 入口句（entry_question）
+ * ② 这是什么（resource_intro）
+ * ③ 为什么推荐（recommendation_reason）
+ * ④ Anori 中文导览（digest_summary）
+ * ⑤ 核心要点（key_points）
+ * ⑥ 实用建议（practical_suggestions — 预留）
+ * ⑦ 关联方法（related_methods — 预留）
+ * ⑧ 关联知识页（related_pages）
+ * ⑨ 关联概念（related_concepts — 预留）
+ * ⑩ 关联资源（related_resources — 预留）
+ * ⑪ 证据来源（evidence_sources — 预留）
+ * ⑫ 官方网站（external_url）
+ */
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { resources, pages, type Resource } from "../../lib/repository";
+
+export async function getStaticPaths() {
+  return resources.map(r => ({
+    params: { id: r.id },
+    props: { resource: r },
+  }));
+}
+
+const { resource: r } = Astro.props as { resource: Resource };
+const externalUrl = r.external_url ?? r.url ?? null;
+
+// 关联知识页（当前已有字段）
+const relatedPages = (r.related_pages ?? [])
+  .map((slug: string) => pages.find((p: any) => p.slug === slug))
+  .filter(Boolean);
+
+// 预留字段（未来数据填入后自动渲染）
+const practicalSuggestions: string[]  = r.practical_suggestions ?? [];
+const relatedMethods: Record<string, unknown>[]    = (r as Record<string, any>).related_methods ?? [];
+const relatedConcepts: Record<string, unknown>[]   = (r as Record<string, any>).related_concepts ?? [];
+const relatedResources: Record<string, unknown>[]  = (r as Record<string, any>).related_resources ?? [];
+const evidenceSources: Record<string, unknown>[]   = (r as Record<string, any>).evidence_sources ?? [];
+const keyPoints: string[] = r.key_points ?? [];
+
+const accessLabel: Record<string, string> = {
+  free: "免费", registration: "免费注册", paid: "付费", mixed: "部分免费",
+};
+const typeLabel: Record<string, string> = {
+  "International Organization": "国际组织",
+  "Government Agency": "政府机构",
+  "Non-profit Organization": "公益机构",
+  "Academic Institution": "学术机构",
+  "Professional Association": "专业协会",
+  "Parent Organization": "家长组织",
+  "Healthcare Organization": "医疗机构",
+};
+---
+
+<BaseLayout
+  title={`${r.title_zh ?? r.title} — Anori 资源导览`}
+  description={r.description_zh ?? r.description}
+>
+<SiteNav />
+
+<!-- ① 顶部 -->
+<div class="rh-top">
+  <div class="wrap">
+    <Breadcrumb items={[
+      { label: "首页", href: "/" },
+      { label: "资源库", href: "/resource" },
+      { label: r.organization_short ?? r.organization },
+    ]} />
+
+    <div class="rh-meta-row">
+      <span class="rh-badge">Anori 资源导览</span>
+      <span class="rh-org">{r.organization_short ?? r.organization}</span>
+      {r.evidence_level && <span class="rh-level">{r.evidence_level}</span>}
+    </div>
+
+    <h1 class="rh-title">{r.title_zh ?? r.title}</h1>
+    {r.title_zh && <p class="rh-title-en">{r.title}</p>}
+
+    <p class="rh-notice">
+      这是一份由 Anori 整理的中文资源导览。即使暂时无法访问原始网站，也可以先通过本页了解核心内容。
+    </p>
+  </div>
+</div>
+
+<div class="wrap rh-layout">
+  <main class="rh-main">
+
+    <!-- ① 入口句 -->
+    {r.entry_question && (
+      <div class="rh-entry">
+        <p class="rh-entry-label">适合你，如果</p>
+        <p class="rh-entry-text">{r.entry_question}</p>
+      </div>
+    )}
+
+    <!-- ② 这是什么资源 -->
+    {r.resource_intro && (
+      <section class="rh-section">
+        <p class="rh-section-label">这是什么资源</p>
+        <p class="rh-body">{r.resource_intro}</p>
+      </section>
+    )}
+
+    <!-- ③ 为什么 Anori 推荐 -->
+    {r.recommendation_reason && (
+      <section class="rh-section rh-section--why">
+        <p class="rh-section-label">为什么 Anori 推荐</p>
+        <p class="rh-body">{r.recommendation_reason}</p>
+      </section>
+    )}
+
+    <!-- ④ Anori 中文导览（核心） -->
+    {r.digest_summary && (
+      <section class="rh-section rh-section--digest">
+        <p class="rh-section-label">Anori 中文导览</p>
+        <p class="rh-body rh-body--digest">{r.digest_summary}</p>
+      </section>
+    )}
+
+    <!-- ⑤ 核心要点 -->
+    {keyPoints.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">如果时间有限，建议先了解</p>
+        <ul class="rh-points">
+          {keyPoints.map((pt: string) => (
+            <li class="rh-point">{pt}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- ⑥ 实用建议（预留，数据填入后自动显示） -->
+    {practicalSuggestions.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">家长可以怎么使用</p>
+        <ul class="rh-suggestions">
+          {practicalSuggestions.map((s: string) => (
+            <li class="rh-suggestion">{s}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- ⑦ 关联方法（预留） -->
+    {relatedMethods.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">相关干预方法</p>
+        <div class="rh-chips">
+          {relatedMethods.map((m: any) => (
+            <span class="rh-chip">{m.name ?? m}</span>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- ⑧ 关联知识页（当前已有数据） -->
+    {relatedPages.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">相关知识主题</p>
+        <div class="rh-page-links">
+          {relatedPages.map((pg: any) => (
+            <a href={`/${pg.slug}`} class="rh-page-link">
+              <span class="rh-page-title">{pg.title}</span>
+              <span class="rh-page-trigger">{pg.trigger_statements?.[0] ?? pg.subtitle ?? ""}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- ⑨ 关联概念（预留） -->
+    {relatedConcepts.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">相关知识概念</p>
+        <div class="rh-chips">
+          {relatedConcepts.map((c: any) => (
+            <a href={`/concepts/${c.slug}`} class="rh-chip rh-chip--link">
+              {c.zh ?? c.name}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- ⑩ 关联资源（预留） -->
+    {relatedResources.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">你可能还想了解</p>
+        <div class="rh-res-links">
+          {relatedResources.map((res: any) => (
+            <a href={`/resource/${res.id}`} class="rh-res-link">
+              {res.title_zh ?? res.title}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- ⑪ 证据来源（预留） -->
+    {evidenceSources.length > 0 && (
+      <section class="rh-section">
+        <p class="rh-section-label">证据来源</p>
+        <ul class="rh-sources">
+          {evidenceSources.map((s: any) => (
+            <li class="rh-source">{s.org ?? s}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- ⑫ 官方网站（次要，放最后） -->
+    <section class="rh-section rh-section--official">
+      <p class="rh-section-label">原始来源</p>
+      <p class="rh-official-note">
+        如果你可以访问原始网站，可以从这里打开官方资料。本页内容即使不访问外链也完整可读。
+      </p>
+      <div class="rh-official-row">
+        <div class="rh-official-info">
+          <p class="rh-official-org">{r.organization}</p>
+          {externalUrl && (
+            <p class="rh-official-domain">
+              {externalUrl.replace('https://','').replace('http://','').split('/')[0]}
+            </p>
+          )}
+        </div>
+        {externalUrl && (
+          <a href={externalUrl} target="_blank" rel="noopener noreferrer" class="rh-official-btn">
+            前往官方网站 ↗
+          </a>
+        )}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 侧边栏 -->
+  <aside class="rh-aside">
+    <div class="rh-aside-card">
+      <p class="rh-aside-label">资源类型</p>
+      <p class="rh-aside-value">{typeLabel[r.resource_type] ?? r.resource_type}</p>
+    </div>
+    <div class="rh-aside-card">
+      <p class="rh-aside-label">适用范围</p>
+      <p class="rh-aside-value">{
+        r.countries?.includes('International') ? '国际参考' :
+        r.countries?.map((c: string) => ({
+          'United States': '美国', 'United Kingdom': '英国',
+          'Australia': '澳大利亚', 'Canada': '加拿大',
+          'Singapore': '新加坡',
+        }[c] ?? c)).join('、')
+      }</p>
+    </div>
+    <div class="rh-aside-card">
+      <p class="rh-aside-label">费用</p>
+      <p class="rh-aside-value">{accessLabel[r.access] ?? r.access}</p>
+    </div>
+    {r.last_verified && (
+      <div class="rh-aside-card">
+        <p class="rh-aside-label">最后核实</p>
+        <p class="rh-aside-value">{r.last_verified}</p>
+      </div>
+    )}
+    <a href="/resource" class="rh-back">← 返回资源库</a>
+  </aside>
+</div>
+
+<SiteFooter />
+</BaseLayout>
+
+<style>
+/* ── 顶部 ─────────────────────────────────── */
+.rh-top {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--sp-12) 0 var(--sp-10);
+}
+.rh-meta-row {
+  display: flex; align-items: center; gap: var(--sp-3);
+  flex-wrap: wrap; margin-bottom: var(--sp-4);
+}
+.rh-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: white;
+  background: var(--brand);
+  padding: 3px var(--sp-3); border-radius: var(--radius-sm);
+}
+.rh-org {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.rh-level {
+  font-size: 10px; color: var(--muted);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 2px var(--sp-2);
+}
+.rh-title {
+  font-size: var(--text-3xl); font-weight: 600;
+  letter-spacing: -0.03em; line-height: 1.2; margin-bottom: var(--sp-2);
+}
+.rh-title-en { font-size: var(--text-sm); color: var(--muted-lt); font-style: italic; margin-bottom: var(--sp-4); }
+.rh-notice {
+  font-size: var(--text-sm); color: var(--muted); line-height: 1.75;
+  max-width: 560px; padding: var(--sp-3) var(--sp-4);
+  background: rgba(45,106,143,0.06); border-left: 2px solid var(--brand);
+  border-radius: 0 6px 6px 0;
+}
+
+/* ── 布局 ─────────────────────────────────── */
+.rh-layout {
+  display: grid; grid-template-columns: 1fr 220px;
+  gap: var(--sp-16); align-items: start;
+  padding-top: var(--sp-12); padding-bottom: var(--sp-24);
+}
+.rh-main { display: flex; flex-direction: column; gap: var(--sp-12); }
+
+/* ── 通用区块 ─────────────────────────────── */
+.rh-section { display: flex; flex-direction: column; gap: var(--sp-5); }
+.rh-section-label {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted-lt);
+  padding-bottom: var(--sp-3); border-bottom: 1px solid var(--border);
+}
+.rh-body {
+  font-size: var(--text-base); color: var(--ink);
+  line-height: 1.85; max-width: var(--max-prose);
+}
+
+/* ── 入口句 ───────────────────────────────── */
+.rh-entry {
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); max-width: 580px;
+}
+.rh-entry-label {
+  font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--muted-lt); margin-bottom: var(--sp-2);
+}
+.rh-entry-text { font-size: var(--text-base); color: var(--ink); line-height: 1.8; }
+
+/* ── 为什么推荐 ───────────────────────────── */
+.rh-section--why {
+  background: #FAF6EE; border-radius: 10px;
+  padding: var(--sp-6); border-left: 2px solid rgba(185,90,72,0.35);
+}
+.rh-section--why .rh-section-label { border-color: rgba(185,90,72,0.2); }
+
+/* ── 中文导览（核心） ─────────────────────── */
+.rh-section--digest {
+  background: #F4F8FB; border-radius: 10px;
+  padding: var(--sp-6); border-left: 2px solid var(--brand);
+}
+.rh-section--digest .rh-section-label { border-color: rgba(45,106,143,0.2); }
+.rh-body--digest { font-size: var(--text-base); color: var(--ink); line-height: 1.95; }
+
+/* ── 核心要点 ─────────────────────────────── */
+.rh-points { list-style: none; display: flex; flex-direction: column; gap: var(--sp-3); }
+.rh-point {
+  font-size: var(--text-base); color: var(--ink); line-height: 1.7;
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface-alt); border-radius: 8px;
+  border: 1px solid rgba(160,148,132,0.12);
+  border-left: 2px solid rgba(148,136,120,0.3);
+}
+
+/* ── 实用建议（预留） ─────────────────────── */
+.rh-suggestions { list-style: none; display: flex; flex-direction: column; gap: var(--sp-3); }
+.rh-suggestion {
+  font-size: var(--text-base); color: var(--ink); line-height: 1.7;
+  padding: var(--sp-3) var(--sp-4); border-radius: var(--radius);
+  background: var(--bg-high-tint); border-left: 2px solid var(--confidence-high);
+}
+
+/* ── Chip（方法/概念等） ─────────────────── */
+.rh-chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.rh-chip {
+  font-size: var(--text-sm); color: var(--muted);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); padding: var(--sp-1) var(--sp-4);
+}
+.rh-chip--link { text-decoration: none; color: var(--brand); }
+.rh-chip--link:hover { border-color: var(--brand); }
+
+/* ── 关联知识页 ───────────────────────────── */
+.rh-page-links { display: flex; flex-direction: column; gap: var(--sp-3); }
+.rh-page-link {
+  display: flex; flex-direction: column; gap: var(--sp-1);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--bg-high-subtle); border-left: 3px solid var(--confidence-high);
+  border-radius: 0 8px 8px 0; text-decoration: none;
+  transition: background 0.15s;
+}
+.rh-page-link:hover { background: #ECF6F1; }
+.rh-page-title { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+.rh-page-trigger { font-size: var(--text-xs); color: var(--muted); line-height: 1.6; }
+
+/* ── 关联资源（预留） ─────────────────────── */
+.rh-res-links { display: flex; flex-direction: column; gap: var(--sp-2); }
+.rh-res-link {
+  font-size: var(--text-sm); color: var(--brand);
+  text-decoration: none; padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+.rh-res-link:hover { color: var(--ink); }
+
+/* ── 证据来源（预留） ─────────────────────── */
+.rh-sources { list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); }
+.rh-source { font-size: var(--text-sm); color: var(--muted); line-height: 1.6; }
+.rh-source::before { content: "· "; color: var(--muted-lt); }
+
+/* ── 官方网站（⑫，次要） ─────────────────── */
+.rh-section--official {
+  padding-top: var(--sp-6); border-top: 1px solid var(--border);
+}
+.rh-official-note {
+  font-size: var(--text-sm); color: var(--muted); line-height: 1.7;
+  padding: var(--sp-3) var(--sp-4);
+  background: rgba(148,136,120,0.06); border-radius: var(--radius);
+  border-left: 2px solid var(--border);
+}
+.rh-official-row {
+  display: flex; align-items: center; gap: var(--sp-6); flex-wrap: wrap;
+  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
+  border-radius: 10px; padding: var(--sp-5) var(--sp-6);
+}
+.rh-official-info { flex: 1; }
+.rh-official-org { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+.rh-official-domain { font-size: var(--text-xs); color: var(--muted-lt); font-family: var(--mono); }
+.rh-official-btn {
+  font-size: var(--text-sm); font-weight: 500; color: var(--muted);
+  background: rgba(148,136,120,0.1); padding: var(--sp-2) var(--sp-5);
+  border-radius: var(--radius); text-decoration: none; white-space: nowrap;
+  transition: all 0.15s;
+}
+.rh-official-btn:hover { background: rgba(148,136,120,0.18); color: var(--ink); }
+
+/* ── 侧边栏 ───────────────────────────────── */
+.rh-aside { position: sticky; top: 80px; display: flex; flex-direction: column; gap: var(--sp-3); }
+.rh-aside-card {
+  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
+  border-radius: 10px; padding: var(--sp-4) var(--sp-5);
+}
+.rh-aside-label {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted-lt); margin-bottom: var(--sp-2);
+}
+.rh-aside-value { font-size: var(--text-sm); color: var(--ink); line-height: 1.6; }
+.rh-back {
+  font-size: var(--text-sm); color: var(--muted);
+  padding: var(--sp-2) 0; border-bottom: 1px solid var(--border);
+  text-decoration: none; transition: color 0.15s;
+}
+.rh-back:hover { color: var(--ink); }
+
+/* ── 响应式 ───────────────────────────────── */
+@media (max-width: 900px) {
+  .rh-layout { grid-template-columns: 1fr; }
+  .rh-aside { position: static; }
+}
+</style>

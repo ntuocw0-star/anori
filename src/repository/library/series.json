@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-07-10",
+  "series": [
+    {
+      "id": "series-aac",
+      "slug": "aac",
+      "label": "AAC 文献库",
+      "description": "系统整理 AAC 领域的核心研究证据、证据解读与知识摘要。",
+      "topic": "topic-aac",
+      "status": "active",
+      "canonical": "/library/series/aac",
+      "source_keys": [
+        "AAC",
+        "aac",
+        "辅助沟通",
+        "augmentative and alternative communication"
+      ],
+      "cover": {
+        "title": "AAC 专题资料",
+        "subtitle": "研究证据 → 证据解读 → 知识摘要",
+        "image": null
+      },
+      "statistics": {
+        "ea": 3,
+        "et": 5,
+        "ka": 2
+      },
+      "content_refs": {
+        "ea": [
+          "EA-000001",
+          "EA-000002",
+          "EA-000003"
+        ],
+        "et": [
+          "ET-000001",
+          "ET-000002",
+          "ET-000003",
+          "ET-000004",
+          "ET-000006"
+        ],
+        "ka": [
+          "KA-000001",
+          "KA-000002"
+        ]
+      },
+      "order": 1
+    }
+  ]
+}

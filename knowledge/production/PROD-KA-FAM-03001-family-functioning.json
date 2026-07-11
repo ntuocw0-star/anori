@@ -1,0 +1,198 @@
+{
+  "id": "PROD-KA-FAM-03001",
+  "ka_id": "KA-FAM-03001",
+  "canonical": "Family Functioning",
+  "zh": "家庭功能",
+  "created": "2026-07-07",
+  "sprint": "E3-06",
+  "version": "v1.0",
+  "production_standard": "Production Standard v1.0",
+  "theme": "共同面对，而不是各自承担",
+  "concept_page": {
+    "title": "家庭功能（Family Functioning）",
+    "subtitle": "家庭功能不是「好不好」，而是家庭成员在压力下是否还能共同面对生活。",
+    "definition_anori": "家庭功能不是「好不好」，而是家庭成员是否还能共同面对生活——能不能沟通、能不能互相支持、能不能在压力来临时一起调整。它不是某一天的表现，而是一个家庭长期运作的方式。",
+    "definition_research": "家庭在沟通、角色分工、情感支持、问题解决和适应变化等方面的整体运作状态。高功能家庭能够灵活应对压力，维持清晰的角色和边界，并在成员之间保持情感联结。",
+    "why_it_matters": "家庭功能是整条机制主链的枢纽变量。它向上承接家庭支持的效果，向下同时影响父母压力、照顾者负担和家庭生活质量。研究一致发现，当家庭功能保持在较好水平，其他干预的效果也会显著提升；反之，功能受损的家庭即使获得了外部支持，也难以充分利用。"
+  },
+  "parent_version": {
+    "memorable_sentence": "家庭功能不是「好不好」，而是家庭成员在压力下是否还能共同面对生活。",
+    "headline": "家庭功能：共同面对，而不是各自承担",
+    "core_message": "家庭功能不是「好不好」，而是家庭成员是否还能共同面对生活——能不能沟通、能不能互相支持、能不能在压力来临时一起调整。它不是某一天的表现，而是一个家庭长期运作的方式。",
+    "reframe": "家庭功能不是需要修复的缺陷，而是可以在支持下慢慢恢复的能力。"
+  },
+  "evidence_cards": [
+    {
+      "rel_id": "REL-000056",
+      "grade": "High",
+      "note": "来自 KA KA-FAM-03001 key_rels"
+    },
+    {
+      "rel_id": "REL-000057",
+      "grade": "High",
+      "note": "来自 KA KA-FAM-03001 key_rels"
+    },
+    {
+      "rel_id": "REL-000058",
+      "grade": "High",
+      "note": "来自 KA KA-FAM-03001 key_rels"
+    }
+  ],
+  "common_misunderstanding": [
+    {
+      "misunderstanding": "家庭功能差意味着家庭不够爱彼此",
+      "reality": "实际是压力和信息落差造成的，不是爱的缺失"
+    },
+    {
+      "misunderstanding": "家庭功能是固定的",
+      "reality": "实际上会随支持和干预改变"
+    },
+    {
+      "misunderstanding": "只要孩子好了家庭功能自然会恢复",
+      "reality": "实际上需要主动支持"
+    }
+  ],
+  "ai_retrieval": {
+    "trigger_questions": [
+      "为什么一家人都越来越累？",
+      "家庭功能是什么意思？",
+      "家庭关系会影响孩子吗？",
+      "为什么支持家庭比只支持孩子更重要？",
+      "家里气氛越来越差是为什么？"
+    ],
+    "citation_priority": [
+      "REL-000056",
+      "REL-000057",
+      "REL-000058"
+    ],
+    "memorable_sentence": "家庭功能不是「好不好」，而是家庭成员在压力下是否还能共同面对生活。",
+    "core_answer": "研究发现，家庭功能是连接外部支持和家庭状态的关键环节。{evidence_card} 说明了当家庭功能改善时，照顾者压力和孩子参与度都会随之变化。"
+  },
+  "popup_layers": {
+    "layer_1": {
+      "trigger": "一句话理解",
+      "content": "家庭功能不是「好不好」，而是家庭成员在压力下是否还能共同面对生活。"
+    },
+    "layer_2": {
+      "trigger": "为什么会这样？",
+      "content": [
+        "家庭功能不是「好不好」，而是家庭成员是否还能共同面对生活——能不能沟通、能不能互相支持、能不能在压力来临时一起调整。它不是某一天的表现，而是一个家庭长期运作的方式。"
+      ]
+    },
+    "layer_3": {
+      "trigger": "研究怎么说？",
+      "content": [
+        {
+          "rel_id": "REL-000056",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000057",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000058",
+          "grade": "High"
+        }
+      ]
+    },
+    "layer_4": {
+      "trigger": "可以看看哪些相关内容？",
+      "related_concepts": [
+        {
+          "zh": "家庭支持",
+          "slug": "family-support",
+          "tagline": "支持改善家庭功能的起点"
+        },
+        {
+          "zh": "父母压力",
+          "slug": "parent-stress",
+          "tagline": "家庭功能越好，压力越低"
+        },
+        {
+          "zh": "家庭生活质量",
+          "slug": "family-quality-of-life",
+          "tagline": "功能改善，整体质量随之提升"
+        }
+      ]
+    }
+  },
+  "problem_mapping": {
+    "related_problems": [
+      "PRB-0001",
+      "PRB-0002",
+      "PRB-0014",
+      "PRB-0023"
+    ]
+  },
+  "website_card": {
+    "card_title": "家庭功能",
+    "card_tagline": "家庭功能不是「好不好」，而是家庭成员在压力下是否还能共同面对生活。",
+    "card_link": "/family-relationships"
+  },
+  "ui_ready": {
+    "component_type": "concept_card",
+    "color_theme": "teal",
+    "icon": "family-function",
+    "astro_component": "ConceptCard",
+    "react_component": "KAConceptCard",
+    "render_fields": {
+      "card_title": "website_card.card_title",
+      "card_tagline": "website_card.card_tagline",
+      "popup_layer_1": "popup_layers.layer_1.content",
+      "popup_layer_2": "popup_layers.layer_2.content",
+      "popup_layer_3": "popup_layers.layer_3.content",
+      "popup_layer_4": "popup_layers.layer_4"
+    }
+  },
+  "qa_checklist": [
+    {
+      "check": "每条 Evidence Card 都有 rel_id 对应",
+      "status": "✅"
+    },
+    {
+      "check": "Parent Version 没有专业术语或都已解释",
+      "status": "✅"
+    },
+    {
+      "check": "Common Misunderstanding 先说误解再说实际",
+      "status": "✅"
+    },
+    {
+      "check": "Reframe 不是鼓励也不是评判",
+      "status": "✅"
+    },
+    {
+      "check": "AI Retrieval 有明确的触发问题",
+      "status": "✅"
+    },
+    {
+      "check": "Problem Mapping 有对应 PRB ID",
+      "status": "✅"
+    },
+    {
+      "check": "Website Card tagline 符合 Anori Voice",
+      "status": "✅"
+    },
+    {
+      "check": "AI citation_priority 已设定",
+      "status": "✅"
+    },
+    {
+      "check": "memorable_sentence 六处锚点完全一致",
+      "status": "✅"
+    },
+    {
+      "check": "popup_layers 四层完整",
+      "status": "✅"
+    },
+    {
+      "check": "ui_ready.render_fields 完整映射",
+      "status": "✅"
+    },
+    {
+      "check": "Anori Voice 验证：无责备、无宿命感",
+      "status": "✅"
+    }
+  ]
+}

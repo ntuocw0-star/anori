@@ -1,0 +1,189 @@
+{
+  "id": "KA-PAR-00004",
+  "canonical": "School Participation",
+  "zh": "学校参与",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "knowledge_domain": "KD-PAR",
+  "ka_type": "context_ka",
+  "participation_context": "School",
+  "context_note": "School Participation 是 Child Participation 在学校情境中的具体表现，属于 Participation Context Layer（情境层），不在 CP-PAR-001 机制主链中",
+  "position_in_system": {
+    "role": "Participation Context KA：解释参与在学校情境中如何发生",
+    "layer": "Participation Context（情境层）",
+    "connects_to_core": "通过 Community Participation 和 Belonging 连接机制主链",
+    "parallel_contexts": [
+      "Community Participation（已建）",
+      "Leisure Participation（待建）",
+      "Employment Participation（计划）"
+    ]
+  },
+  "definition": {
+    "anori": "学校参与不只是孩子去学校上课。它包括：孩子在课堂里能不能真正参与学习、在课间有没有同学一起、在学校活动里有没有自己的位置。学校是孩子花时间最多的地方，学校里的参与质量，直接影响孩子的发展和归属感。",
+    "research": "学生在学校环境中参与学习活动、社交互动、课外活动和学校生活的程度，包括学术参与、社会参与和课外活动参与三个维度。",
+    "icf_alignment": "Activities & Participation (d1) > Learning and Applying Knowledge; (d7) > Interpersonal Relationships; (d820) School Education"
+  },
+  "why_it_matters": "学校是儿童最重要的参与情境，也是归属感最早形成的场所之一。学校参与质量影响学业发展、同伴关系、自我效能感和长期社区参与能力。同伴支持和学校转衔支持是目前证据最强的两个改善路径。",
+  "dimensions": [
+    {
+      "dimension": "学术参与（Academic）",
+      "description": "参与课堂学习、完成学业任务"
+    },
+    {
+      "dimension": "社会参与（Social）",
+      "description": "与同学的互动、友谊、同伴关系"
+    },
+    {
+      "dimension": "课外参与（Extracurricular）",
+      "description": "参加学校活动、兴趣小组、运动队"
+    },
+    {
+      "dimension": "归属感（Belonging）",
+      "description": "感到自己是学校群体的一员"
+    }
+  ],
+  "core_vars": [
+    {
+      "var_id": "VAR-000023",
+      "name": "社区/学校参与",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000010",
+      "name": "同伴欺凌受害",
+      "role": "barrier"
+    },
+    {
+      "var_id": "VAR-000011",
+      "name": "友谊支持满意度",
+      "role": "facilitator"
+    },
+    {
+      "var_id": "VAR-000036",
+      "name": "转衔准备度",
+      "role": "facilitator"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "facilitator"
+    },
+    {
+      "var_id": "VAR-000019",
+      "name": "归属感",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000017",
+      "name": "儿童社交能力",
+      "role": "mediator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000094",
+      "summary": "同伴欺凌 → 学校/社区参与↓",
+      "grade": "High",
+      "direction": "barrier → KA"
+    },
+    {
+      "rel_id": "REL-000095",
+      "summary": "同伴支持安排（RCT）→ 学校融合参与↑",
+      "grade": "High",
+      "direction": "facilitator → KA"
+    },
+    {
+      "rel_id": "REL-000096",
+      "summary": "学校转衔规划 → 学校参与持续性↑",
+      "grade": "High",
+      "direction": "facilitator → KA"
+    },
+    {
+      "rel_id": "REL-000083",
+      "summary": "学校参与 → 归属感↑",
+      "grade": "High",
+      "direction": "KA → outcome（via Community Participation）"
+    },
+    {
+      "rel_id": "REL-000097",
+      "summary": "专业支持服务 → 学校参与↑",
+      "grade": "Very Low",
+      "direction": "facilitator → KA",
+      "note": "STR"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 4,
+    "total_rel_count": 5,
+    "strongest_evidence": "Carter et al. 2016 RCT（同伴支持安排，最高等级干预证据）；Strnadová et al. SR（学校转衔规划）",
+    "evidence_gaps": [
+      "专业支持服务 → 学校参与（骨架 REL，STR）"
+    ]
+  },
+  "key_interventions": [
+    {
+      "intervention": "Peer Support Arrangements",
+      "zh": "同伴支持安排",
+      "evidence_grade": "High（RCT）",
+      "mechanism": "训练普通同学支持障碍学生参与学校活动",
+      "ref": "Carter et al. 2016"
+    },
+    {
+      "intervention": "Transition Planning",
+      "zh": "转衔规划",
+      "evidence_grade": "High（SR）",
+      "mechanism": "提前规划学校转衔（小学→中学→高中），连接家庭、学校和专业支持",
+      "ref": "Strnadová et al. SR"
+    }
+  ],
+  "common_misunderstanding": [
+    "只要孩子在学校就是参与了（实际上边缘化出席不等于真正参与）",
+    "学术成绩好就是参与好（实际上社会参与和归属感同样重要）",
+    "同伴关系是孩子自己的事（实际上需要学校主动创造支持性环境）",
+    "转衔只是换学校（实际上需要提前规划、多方协作、持续支持）"
+  ],
+  "measurement": {
+    "scales": [
+      "School Function Assessment（SFA）",
+      "Participation and Environment Measure for Children and Youth（PEM-CY）— 学校维度",
+      "Strengths and Difficulties Questionnaire（SDQ）— 同伴关系维度"
+    ],
+    "note": "PEM-CY 同时评估参与程度和环境因素，适合学校情境的综合评估"
+  },
+  "website": {
+    "page_slug": "disability-services",
+    "related_problems": [
+      "PRB-0007",
+      "PRB-0008",
+      "PRB-0009",
+      "PRB-0010"
+    ],
+    "anori_reframe": "学校参与不只是让孩子去学校，而是让孩子在学校里有真正属于自己的位置——在课堂、在课间、在活动里。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "孩子在学校没有朋友怎么办？",
+      "孩子被排斥/被欺凌怎么办？",
+      "怎么帮孩子更好地参与学校生活？",
+      "学校转衔怎么规划？",
+      "融合教育有什么支持方法？"
+    ],
+    "answer_template": "研究发现，改善学校参与最有证据支持的方法是同伴支持安排和提前转衔规划。{evidence_card} 说明了这两种方法如何帮助障碍学生真正融入学校。"
+  },
+  "related_kas": [
+    "KA-PAR-00001",
+    "KA-PAR-00002",
+    "KA-PAR-00003"
+  ],
+  "related_concepts": [
+    "CON-000003"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，Context KA，不在 CP-PAR-001 机制主链，属于 Participation Context Layer"
+    }
+  ]
+}

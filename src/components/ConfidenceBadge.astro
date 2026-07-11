@@ -1,0 +1,75 @@
+---
+// C-011 ConfidenceBadge — ECS-001 compliant
+// Confidence is never optional. (ECS-001 Section 3)
+// Color alone is insufficient — always includes text. (UI-001 Section 9)
+export interface Props {
+  grade: string; // "High" | "Low" | "Very Low" | fallback
+}
+const { grade } = Astro.props;
+
+const gradeMap: Record<string, { label: string; cls: string }> = {
+  High:     { label: "研究支持较充分",       cls: "high" },
+  Low:      { label: "目前研究仍有限",       cls: "low" },
+  "Very Low": { label: "相关研究尚在早期",   cls: "verylow" },
+};
+
+const resolved = gradeMap[grade] ?? { label: "研究支持程度待确认", cls: "unknown" };
+---
+
+<span class={`cb cb--${resolved.cls}`} title={`证据可信度：${grade}`}>
+  <span class="cb-dot" aria-hidden="true"></span>
+  <span class="cb-label">{resolved.label}</span>
+</span>
+
+<style>
+.cb {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-xs);
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* High */
+.cb--high {
+  background: #EAF4EE;
+  border-color: #C2DFC9;
+  color: #2E7A47;
+}
+.cb--high .cb-dot { background: var(--confidence-high); }
+
+/* Low */
+.cb--low {
+  background: #FEF6E8;
+  border-color: #F3D99B;
+  color: #8A6200;
+}
+.cb--low .cb-dot { background: var(--confidence-medium); }
+
+/* Very Low */
+.cb--verylow {
+  background: #EFF4F8;
+  border-color: #C4D5E3;
+  color: #3A5A72;
+}
+.cb--verylow .cb-dot { background: var(--confidence-low); }
+
+/* Unknown fallback */
+.cb--unknown {
+  background: #F4F4F4;
+  border-color: #DDD;
+  color: #777;
+}
+.cb--unknown .cb-dot { background: #B0ABA4; }
+
+.cb-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+</style>

@@ -1,0 +1,23 @@
+---
+import type { LifeMoment } from '../../types/path';
+
+export interface Props {
+  items: LifeMoment[];
+  label?: string;
+}
+const { items, label = '日常时机' } = Astro.props;
+---
+<section class="up-section">
+  <p class="up-section-label">{label}</p>
+  <div class="up-moments">
+    {items.map((m: LifeMoment) => (
+      <div class="up-moment">
+        <span class="up-moment-emoji">{m.emoji}</span>
+        <div class="up-moment-body">
+          <p class="up-moment-title">{m.moment}</p>
+          <p class="up-moment-text">{m.how}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteNav from '../../../components/SiteNav.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import ContentPageLayout from '../../../components/library/ContentPageLayout.astro';
+import seriesData from '../../../repository/library/series.json';
+import kaData from '../../../repository/knowledge.json';
+import eaData from '../../../generated/evidence/ea.json';
+import { normalizeAllKA } from '../../../repository/adapters/ka';
+import { normalizeAllEA } from '../../../repository/adapters/ea';
+import BundleDownloadPanel from '../../../download/components/BundleDownloadPanel.astro';
+import { TERMS } from '../../../i18n/terminology';
+import pdfManifest from '../../../generated/pdf-manifest.json';
+
+const allKA = normalizeAllKA(kaData as any);
+const allEA = normalizeAllEA(eaData as any);
+export function getStaticPaths() { return normalizeAllKA(kaData as any).map(ka => ({ params: { kaId: ka.id }, props: { ka } })); }
+const { ka } = Astro.props as any;
+const allSeries = (seriesData as any).series as any[];
+const resolvedSeries = ka.seriesIds.map((id: string) => allSeries.find(s => s.id === id)).filter(Boolean);
+const displayTitle = ka.title ?? ka.id;
+const seriesNavList = resolvedSeries.flatMap((series: any) => {
+  const refs = series.content_refs?.ka ?? [];
+  const index = refs.indexOf(ka.id);
+  if (index < 0) return [];
+  const make = (id: string | undefined) => { if (!id) return null; const item = allKA.find(entry => entry.id === id); return item ? { id, title: item.title ?? id, href: `/library/ka/${id}` } : null; };
+  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical, prev: make(refs[index - 1]), next: make(refs[index + 1]) }];
+});
+const relatedEA = ka.evidenceRefs.map((id: string) => allEA.find(item => item.id === id) ?? { id, missing: true });
+const relatedKA = resolvedSeries.length ? (resolvedSeries[0].content_refs?.ka ?? []).filter((id: string) => id !== ka.id).slice(0, 3).map((id: string) => allKA.find(item => item.id === id) ?? { id, missing: true }) : [];
+const meta = { id: ka.id, type: 'KA' as const, title: displayTitle, summary: ka.summary, updatedAt: ka.updatedAt, status: ka.status, seriesIds: ka.seriesIds };
+const pdfEntry = (pdfManifest as any).items?.find((item: any) => item.contentId === ka.id && item.bundleType === 'ka-one-page');
+const pdfAvailable = pdfEntry?.status === 'ok' && typeof pdfEntry.path === 'string';
+const pdfHref = pdfAvailable ? pdfEntry.path : null;
+---
+<BaseLayout title={`${displayTitle} · ${TERMS.ka.label} · ${TERMS.library.label} · Anori`} description={ka.summary ?? `${ka.id} ${TERMS.ka.label}`}>
+  <SiteNav />
+  <ContentPageLayout meta={meta} seriesNavList={seriesNavList}>
+    <div slot="body" class="ka-body">
+      {ka.subtitle && <section class="lead"><p>{ka.subtitle}</p></section>}
+      {ka.body && <section><p>{ka.body}</p></section>}
+      {ka.keyPoints.length > 0 && <section><h2>研究告诉我们什么</h2><ul>{ka.keyPoints.map((item: string) => <li>{item}</li>)}</ul></section>}
+      {ka.whatYouCanDo.length > 0 && <section><h2>今天可以做什么</h2><ol>{ka.whatYouCanDo.map((item: string) => <li>{item}</li>)}</ol></section>}
+      {ka.whatToAvoid.length > 0 && <section><h2>先避免什么</h2><ul>{ka.whatToAvoid.map((item: string) => <li>{item}</li>)}</ul></section>}
+      {ka.seekHelpIf.length > 0 && <section><h2>什么时候寻求帮助</h2><ul>{ka.seekHelpIf.map((item: string) => <li>{item}</li>)}</ul></section>}
+      {(ka.evidenceLevel || ka.evidenceNote) && <section><h2>证据说明</h2>{ka.evidenceLevel && <p><strong>证据等级：</strong>{ka.evidenceLevel}</p>}{ka.evidenceNote && <p>{ka.evidenceNote}</p>}</section>}
+    </div>
+    {relatedKA.length > 0 && <div slot="related-series"><p class="related-title">同{TERMS.series.label}{TERMS.ka.label}</p><ul class="related-list">{relatedKA.map((item: any) => <li class:list={['missing' in item && 'missing']}>{'missing' in item?<div><span>内容记录暂未找到</span><code>{item.id}</code></div>:<a href={`/library/ka/${item.id}`}><span>{item.title ?? item.id}</span><code>{item.id}</code></a>}</li>)}</ul></div>}
+    {relatedEA.length > 0 && <div slot="related-topic"><p class="related-title">来源{TERMS.ea.label}</p><ul class="related-list">{relatedEA.map((item: any) => <li class:list={['missing' in item && 'missing']}>{'missing' in item?<div><span>内容记录暂未找到</span><code>{item.id}</code></div>:<a href={`/library/ea/${item.id}`}><span>{item.source.paperTitle ?? item.id}</span><code>{item.id}</code></a>}</li>)}</ul></div>}
+    <div slot="download">
+      <BundleDownloadPanel
+        contentId={ka.id}
+        bundles={[
+          {
+            label: `${TERMS.onePageSummary.label}（网页版）`,
+            href: `/download/ka/${ka.id}/one-page`,
+            status: 'available',
+            bundleType: 'ka-one-page',
+            action: 'open',
+            hint: '适合在线阅读或浏览器打印',
+          },
+          {
+            label: `${TERMS.onePageSummary.label}（PDF）`,
+            href: pdfHref,
+            status: pdfAvailable ? 'available' : 'fallback',
+            bundleType: 'ka-one-page',
+            action: 'download',
+            hint: pdfAvailable ? '已生成，可直接下载' : '暂不可用',
+          },
+          {
+            label: TERMS.parentGuide.label,
+            href: null,
+            status: 'coming-soon',
+            bundleType: 'ka-parent-guide',
+          },
+        ]}
+      />
+    </div>
+  </ContentPageLayout>
+  <SiteFooter />
+</BaseLayout>
+<style>
+.ka-body{font-size:var(--text-base);line-height:1.8}.ka-body section+section{margin-top:var(--sp-10)}.ka-body h2{font-size:var(--text-sm);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-bottom:var(--sp-2);border-bottom:1px solid var(--border);margin-bottom:var(--sp-4)}.ka-body ul,.ka-body ol{padding-left:1.25rem}.ka-body li+li{margin-top:var(--sp-2)}.lead{font-size:var(--text-lg);font-weight:500}.related-title{font-size:var(--text-sm);color:var(--muted);margin:var(--sp-4) 0 var(--sp-3)}.related-list{list-style:none;display:flex;flex-direction:column;gap:var(--sp-2)}.related-list a,.related-list>li>div{display:flex;justify-content:space-between;gap:var(--sp-4);padding:var(--sp-3) var(--sp-4);border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}.related-list code{font-family:var(--mono);font-size:.7rem;color:var(--muted)}.related-list .missing{opacity:.6}
+</style>

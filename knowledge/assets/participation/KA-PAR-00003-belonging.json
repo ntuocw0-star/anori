@@ -1,0 +1,179 @@
+{
+  "id": "KA-PAR-00003",
+  "canonical": "Belonging",
+  "zh": "归属感",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "knowledge_domain": "KD-PAR",
+  "position_in_system": {
+    "role": "Community Participation 到 QoL 的心理机制转化层",
+    "upstream": "KA-PAR-00002 Community Participation",
+    "downstream": "KA-PAR-00005 Participation Quality of Life",
+    "relationship_to_community_participation": {
+      "community_participation": "客观参与层（频率、角色、可及性）",
+      "belonging": "主观体验层（被接纳感、重要感、归属感）",
+      "why_independent": "Belonging 是 Community Participation 的核心维度之一，但同时在 Mental Health、Wellbeing 和 QoL 中具有独立的心理机制——它解释了为什么「参加了活动却仍然感到孤独」"
+    }
+  },
+  "definition": {
+    "anori": "归属感不是「孩子有没有在场」，而是「孩子是否感到自己是其中的一员」。一个孩子参加了活动，不代表他感到属于那里。真正的归属感是：有人认识你、你也认识他们、你的存在对那个地方有意义。归属感很小，但它是参与最终转化为生活质量的关键。",
+    "research": "个体对自己归属于某个群体、社区或环境的主观感知，包括被接纳感、被重视感和社会联结感。Belonging 是参与的质性维度，区别于参与的量化指标（频率、多样性）。",
+    "icf_alignment": "Activities & Participation (d7) > Interpersonal Relationships; Personal Factors > Psychological Wellbeing"
+  },
+  "why_it_matters": "Belonging 是解释「为什么参加了活动但仍然感到孤独」的关键机制。研究发现，参与频率和参与质量（归属感）对 QoL 的影响路径不同——频率主要影响机会，而归属感直接影响心理健康和长期幸福感。没有归属感的参与，不会转化为真正的 QoL 改善。",
+  "core_vars": [
+    {
+      "var_id": "VAR-000019",
+      "name": "幸福感/归属感",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000023",
+      "name": "社区参与",
+      "role": "upstream"
+    },
+    {
+      "var_id": "VAR-000011",
+      "name": "友谊支持满意度",
+      "role": "facilitator"
+    },
+    {
+      "var_id": "VAR-000025",
+      "name": "能力主义",
+      "role": "barrier"
+    },
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "facilitator"
+    },
+    {
+      "var_id": "VAR-000022",
+      "name": "生活质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000012",
+      "name": "抑郁",
+      "role": "outcome_risk"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000083",
+      "summary": "社区参与 → 归属感/幸福感↑",
+      "grade": "High",
+      "direction": "upstream → KA"
+    },
+    {
+      "rel_id": "REL-000089",
+      "summary": "社区态度接纳 → 归属感↑",
+      "grade": "High",
+      "direction": "facilitator → KA"
+    },
+    {
+      "rel_id": "REL-000090",
+      "summary": "友谊支持满意度 → 归属感↑（缓冲欺凌影响）",
+      "grade": "High",
+      "direction": "facilitator → KA"
+    },
+    {
+      "rel_id": "REL-000091",
+      "summary": "归属感 → 生活质量↑",
+      "grade": "High",
+      "direction": "KA → outcome"
+    },
+    {
+      "rel_id": "REL-000092",
+      "summary": "能力主义 → 归属感↓（社会排斥机制）",
+      "grade": "High",
+      "direction": "barrier → KA"
+    },
+    {
+      "rel_id": "REL-000008",
+      "summary": "友谊支持满意度调节欺凌→抑郁的路径",
+      "grade": "Very Low",
+      "direction": "moderator"
+    },
+    {
+      "rel_id": "REL-000093",
+      "summary": "家庭/社区非正式支持 → 归属感↑",
+      "grade": "Very Low",
+      "direction": "facilitator → KA",
+      "note": "STR"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 5,
+    "total_rel_count": 7,
+    "strongest_evidence": "Qi et al. 2025（能力主义→排斥→归属感受损）；Libster et al. 2025（友谊支持满意度→Belonging）；Community Participation Reviews（参与→归属感→QoL）",
+    "evidence_gaps": [
+      "家庭支持 → Belonging（REL 骨架，STR）",
+      "Belonging → Mental Health（独立路径，需要 SR）"
+    ]
+  },
+  "belonging_vs_participation": {
+    "community_participation_indicators": [
+      "参与活动次数",
+      "参与角色",
+      "活动类型多样性",
+      "物理可及性"
+    ],
+    "belonging_indicators": [
+      "被同伴接纳的感知",
+      "感到自己重要",
+      "社区中有人认识自己",
+      "愿意继续参与"
+    ],
+    "key_insight": "孩子可以频繁参与活动但归属感极低；也可以参与频率较低但归属感很强。频率不等于归属感，这是两个需要分开评估的维度。"
+  },
+  "common_misunderstanding": [
+    "只要孩子参加活动就有归属感（实际上归属感是主观体验，与参与频率不一定相关）",
+    "归属感是孩子自己的问题（实际上主要由社区态度和支持质量决定）",
+    "消除歧视就能建立归属感（实际上需要主动创造接纳性环境，不只是减少歧视）",
+    "归属感只与同伴关系有关（实际上家庭支持、活动设计、工作人员态度都是重要因素）"
+  ],
+  "measurement": {
+    "scales": [
+      "Sense of Belonging Instrument（SOBI）",
+      "Psychological Sense of School Membership（PSSM）",
+      "Community Integration Questionnaire（CIQ）含归属感维度"
+    ],
+    "note": "Belonging 的测量比 Community Participation 更难标准化，建议结合量化和质性方法"
+  },
+  "website": {
+    "page_slug": "community-interaction",
+    "related_problems": [
+      "PRB-0019",
+      "PRB-0020",
+      "PRB-0006"
+    ],
+    "anori_reframe": "帮助孩子参与，不只是安排活动，而是创造让他感到自己属于那里的机会。归属感很小，但它是参与最终变成生活质量的那一步。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "孩子总觉得自己融不进去",
+      "孩子参加活动但没有朋友",
+      "怎样才能让孩子真正有归属感？",
+      "孩子被排斥怎么办？",
+      "孩子参加了但还是很孤独"
+    ],
+    "answer_template": "研究发现，归属感和参与频率是两个不同的维度。{evidence_card} 说明了社区态度、友谊质量和家庭支持如何影响归属感，而不只是参与机会。"
+  },
+  "related_kas": [
+    "KA-PAR-00002",
+    "KA-PAR-00001",
+    "KA-FAM-01001"
+  ],
+  "related_concepts": [
+    "CON-000003"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，5条High grade REL，明确与 Community Participation 的层级关系"
+    }
+  ]
+}

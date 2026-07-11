@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import SiteNav from '../../../../components/SiteNav.astro';
+import SiteFooter from '../../../../components/SiteFooter.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import KAOnePageDocument from '../../../../download/templates/KAOnePageDocument.astro';
+import { buildKAOnePageBundle } from '../../../../download/presenters/ka-one-page';
+import { normalizeAllKA } from '../../../../repository/adapters/ka';
+import { normalizeAllEA } from '../../../../repository/adapters/ea';
+import kaData from '../../../../repository/knowledge.json';
+import eaData from '../../../../generated/evidence/ea.json';
+import manifest from '../../../../generated/manifest.json';
+import { TERMS } from '../../../../i18n/terminology';
+import pdfManifest from '../../../../generated/pdf-manifest.json';
+
+export function getStaticPaths() {
+  return normalizeAllKA(kaData as any).map(ka => ({ params: { kaId: ka.id }, props: { ka } }));
+}
+const { ka } = Astro.props as any;
+const eaList = normalizeAllEA(eaData as any);
+const bundle = buildKAOnePageBundle(ka, eaList, {
+  repositoryVersion: manifest.repository_version,
+  generatorVersion: manifest.generator_version,
+});
+const fullHref = `/library/ka/${ka.id}`;
+const pdfEntry = (pdfManifest as any).items?.find((item: any) => item.contentId === ka.id && item.bundleType === 'ka-one-page');
+const pdfHref = pdfEntry?.status === 'ok' ? pdfEntry.path : null;
+const breadcrumbs = [
+  { label: '首页', href: '/' },
+  { label: TERMS.library.label, href: '/library' },
+  { label: bundle.title, href: fullHref },
+  { label: TERMS.onePageSummary.label },
+];
+---
+<BaseLayout title={`${bundle.title} · ${TERMS.onePageSummary.label} · Anori`} description={bundle.summary ?? `${bundle.contentId} ${TERMS.ka.label}`}>
+  <SiteNav />
+  <div class="bundle-shell">
+    <Breadcrumb items={breadcrumbs} />
+    <div class="bundle-toolbar">
+      <a href={fullHref} class="toolbar-back">← 返回完整页面</a>
+      <div class="toolbar-actions">
+        {pdfHref && (
+          <a href={pdfHref} class="toolbar-download" download>
+            ↓ 下载 PDF
+          </a>
+        )}
+        <button type="button" onclick="window.print()">⎙ 浏览器打印</button>
+      </div>
+    </div>
+  </div>
+  <KAOnePageDocument bundle={bundle} />
+  <SiteFooter />
+</BaseLayout>
+<style>
+.bundle-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-6) 0;
+}
+.bundle-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+}
+.toolbar-back {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.toolbar-download,
+.bundle-toolbar button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: .45rem .85rem;
+  cursor: pointer;
+}
+.toolbar-download {
+  color: white;
+  background: var(--brand);
+  border: 1px solid var(--brand);
+}
+.toolbar-download:hover {
+  filter: brightness(.94);
+}
+.bundle-toolbar button {
+  color: var(--brand);
+  background: transparent;
+  border: 1px solid var(--brand);
+}
+.bundle-toolbar button:hover {
+  background: var(--brand);
+  color: white;
+}
+@media (max-width: 640px) {
+  .bundle-shell { padding: var(--sp-4); }
+  .bundle-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .toolbar-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .toolbar-download,
+  .bundle-toolbar button {
+    flex: 1;
+    white-space: nowrap;
+  }
+}
+@media print {
+  .bundle-shell,
+  :global(.site-nav),
+  :global(.site-footer) { display: none !important; }
+}
+</style>

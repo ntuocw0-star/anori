@@ -1,0 +1,13 @@
+---
+export interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+{text && (
+  <div class="up-closing">
+    {text.split("\n").map((line: string) => (
+      <p>{line}</p>
+    ))}
+  </div>
+)}

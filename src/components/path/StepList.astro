@@ -1,0 +1,28 @@
+---
+import type { Step } from '../../types/path';
+
+export interface Props {
+  steps: Step[];
+  label?: string;
+}
+const { steps, label = '步骤' } = Astro.props;
+---
+{steps?.length > 0 && (
+  <section class="up-section">
+    <p class="up-section-label">{label}</p>
+    <div class="up-steps">
+      {steps.map((step: Step) => (
+        <div class="up-step">
+          <span class="up-step-num">{step.number}</span>
+          <div class="up-step-body">
+            <p class="up-step-title">{step.title}</p>
+            <p class="up-step-text">{step.body}</p>
+            {step.example && (
+              <p class="up-step-example">{step.example}</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}

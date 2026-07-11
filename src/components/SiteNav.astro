@@ -1,0 +1,106 @@
+---
+// C-009 SiteNav — Sprint 3
+// CHANGE-005: Language Switcher Shell added (Master Spec Part 15, NAV-001 Section 5)
+export interface Props {
+  active?: "home" | "child" | "family" | "resource" | "search";
+}
+const { active } = Astro.props;
+
+const links = [
+  { key: "home",     label: "首页",   href: "/" },
+  { key: "child",    label: "孩子",   href: "/child" },
+  { key: "family",   label: "家庭",   href: "/family" },
+  { key: "resource", label: "资源",   href: "/resource" },
+  { key: "search",   label: "搜索",   href: "/search" },
+];
+---
+
+<nav class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/brand/logo.png" alt="Anori" style="height:36px;width:auto;display:block;" />
+      Anori
+    </a>
+
+    <div class="nav-links">
+      {links.map(l => (
+        <a href={l.href} class:list={[{ active: active === l.key }]}>
+          {l.label}
+        </a>
+      ))}
+    </div>
+
+    <div class="nav-right">
+      <!-- CHANGE-005: Language Switcher Shell — routing in Phase 3 -->
+      <div class="nav-lang" aria-label="语言选择">
+        <span class="nav-lang-current">中文</span>
+        <!-- Future: <a href="/en/">EN</a> -->
+      </div>
+
+      <a href="/search" class="nav-search" aria-label="搜索">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="6.5" cy="6.5" r="4.5" stroke="#6B7A8A" stroke-width="1.5"/>
+          <path d="M10 10 L14 14" stroke="#6B7A8A" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<style>
+.site-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center;
+  justify-content: space-between; height: 60px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: var(--sp-4);
+  font-size: var(--text-lg); font-weight: 600;
+  letter-spacing: -0.02em; color: var(--ink);
+}
+.nav-links { display: flex; gap: var(--sp-6); }
+.nav-links a {
+  font-size: var(--text-sm); color: var(--muted);
+  transition: color 0.15s; position: relative;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 2px; background: var(--brand); border-radius: 2px;
+}
+.nav-right {
+  display: flex; align-items: center; gap: var(--sp-4);
+}
+/* Language Switcher Shell */
+.nav-lang {
+  display: flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--text-xs); color: var(--muted-lt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: var(--sp-1) var(--sp-3);
+  cursor: default;
+}
+.nav-lang-current {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+}
+.nav-search {
+  width: 32px; height: 32px; display: flex;
+  align-items: center; justify-content: center;
+  border-radius: 50%; border: 1px solid var(--border);
+  transition: border-color 0.15s;
+}
+.nav-search:hover { border-color: var(--ink); }
+
+@media (max-width: 640px) {
+  .nav-lang { display: none; }
+  .nav-links { gap: var(--sp-4); }
+}
+</style>

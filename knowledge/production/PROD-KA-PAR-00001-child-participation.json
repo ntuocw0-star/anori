@@ -1,0 +1,235 @@
+{
+  "id": "PROD-KA-PAR-00001",
+  "ka_id": "KA-PAR-00001",
+  "canonical": "Child Participation",
+  "zh": "儿童参与",
+  "created": "2026-07-07",
+  "version": "v1.0",
+  "production_standard": "Production Standard v1.0",
+  "generated_by": "Production Engine v1.0",
+  "theme": "机会来自环境，不只来自孩子",
+  "human_layer": {
+    "memorable_sentence": "孩子参与生活，不只是能做什么，而是有机会做什么——机会来自环境，不只来自孩子本身。",
+    "theme": "机会来自环境，不只来自孩子",
+    "citation_priority": [
+      "REL-000013",
+      "REL-000027",
+      "REL-000080"
+    ],
+    "color_theme": "blue",
+    "icon": "child-participation"
+  },
+  "concept_page": {
+    "title": "儿童参与（Child Participation）",
+    "subtitle": "孩子参与生活，不只是能做什么，而是有机会做什么——机会来自环境，不只来自孩子本身。",
+    "definition_anori": "儿童参与不只是「孩子有没有出去活动」，而是孩子能不能真正融入并有意义地参与生活中对他重要的事情——学校、朋友、社区、兴趣。参与不是表现，而是归属感。一个孩子参与了一件事，不只是在那里，而是感到自己属于那里。",
+    "definition_research": "儿童在日常生活中参与有意义活动的程度，包括参与的频率（做了多少）、参与的投入度（真正投入了多少）和参与的多样性（参与了哪些类型的活动）。基于 ICF 的参与定义强调「参与」是人与环境互动的结果，而非个人特征。",
+    "why_it_matters": "Child Participation 是整个 Participation Science 的总节点。它接收来自 Family Science（FQoL）的上游影响，向下分化为 School、Community、Leisure 等具体参与域，最终汇聚到 Quality of Life。研究一致发现，参与机会和参与质量，是预测残障儿童长期发展结果最重要的环境因素之一——不是孩子本身的能力，而是环境是否支持参与。"
+  },
+  "parent_version": {
+    "memorable_sentence": "孩子参与生活，不只是能做什么，而是有机会做什么——机会来自环境，不只来自孩子本身。",
+    "headline": "儿童参与：机会来自环境，不只来自孩子",
+    "core_message": "儿童参与不只是「孩子有没有出去活动」，而是孩子能不能真正融入并有意义地参与生活中对他重要的事情——学校、朋友、社区、兴趣。参与不是表现，而是归属感。一个孩子参与了一件事，不只是在那里，而是感到自己属于那里。",
+    "reframe": "参与不是表现，而是归属感。帮助孩子参与，不只是安排活动，而是创造让他感到自己属于那里的机会。"
+  },
+  "evidence_cards": [
+    {
+      "rel_id": "REL-000013",
+      "grade": "High",
+      "note": "来自 citation_priority，详见 rels.json"
+    },
+    {
+      "rel_id": "REL-000027",
+      "grade": "High",
+      "note": "来自 citation_priority，详见 rels.json"
+    },
+    {
+      "rel_id": "REL-000080",
+      "grade": "High",
+      "note": "来自 citation_priority，详见 rels.json"
+    }
+  ],
+  "common_misunderstanding": [
+    {
+      "misunderstanding": "参与就是孩子去了某个地方",
+      "reality": "实际上参与的质量和投入度比频率更重要"
+    },
+    {
+      "misunderstanding": "参与能力是孩子本身的特征",
+      "reality": "实际上主要由环境支持决定"
+    },
+    {
+      "misunderstanding": "孩子有障碍就无法真正参与",
+      "reality": "实际上合适的支持可以改变参与结果"
+    },
+    {
+      "misunderstanding": "家庭支持和孩子参与是独立的",
+      "reality": "实际上 FQoL 是 Child Participation 最重要的上游驱动"
+    }
+  ],
+  "ai_retrieval": {
+    "trigger_questions": [
+      "怎么帮助孩子参与更多活动？",
+      "孩子总是一个人，怎么办？",
+      "为什么参与对孩子这么重要？",
+      "孩子有障碍还能参与社区吗？",
+      "什么影响孩子参与学校和社区？"
+    ],
+    "citation_priority": [
+      "REL-000013",
+      "REL-000027",
+      "REL-000080"
+    ],
+    "memorable_sentence": "孩子参与生活，不只是能做什么，而是有机会做什么——机会来自环境，不只来自孩子本身。",
+    "core_answer": "研究发现，影响儿童参与的最重要因素不是孩子的能力，而是环境是否提供足够支持。{evidence_card} 说明了家庭支持和社区包容性如何直接影响参与机会。"
+  },
+  "popup_layers": {
+    "layer_1": {
+      "trigger": "一句话理解",
+      "content": "孩子参与生活，不只是能做什么，而是有机会做什么——机会来自环境，不只来自孩子本身。"
+    },
+    "layer_2": {
+      "trigger": "为什么会这样？",
+      "content": [
+        "儿童参与不只是「孩子有没有出去活动」，而是孩子能不能真正融入并有意义地参与生活中对他重要的事情——学校、朋友、社区、兴趣。参与不是表现，而是归属感。一个孩子参与了一件事，不只是在那里，而是感到自己属于那里。"
+      ]
+    },
+    "layer_3": {
+      "trigger": "研究怎么说？",
+      "content": [
+        {
+          "rel_id": "REL-000013",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000027",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000080",
+          "grade": "High"
+        }
+      ]
+    },
+    "layer_4": {
+      "trigger": "可以看看哪些相关内容？",
+      "related_concepts": [
+        {
+          "zh": "社区参与",
+          "slug": "community-participation",
+          "tagline": "参与最重要的子域"
+        },
+        {
+          "zh": "家庭生活质量",
+          "slug": "family-quality-of-life",
+          "tagline": "家庭状态影响参与机会"
+        },
+        {
+          "zh": "归属感",
+          "slug": "belonging",
+          "tagline": "参与之后，感到属于那里"
+        }
+      ],
+      "related_pages": [
+        {
+          "slug": "community-interaction",
+          "zh": "社区互动"
+        },
+        {
+          "slug": "disability-services",
+          "zh": "专业支持服务"
+        }
+      ]
+    }
+  },
+  "problem_mapping": {
+    "related_problems": [
+      "PRB-0016",
+      "PRB-0019",
+      "PRB-0020"
+    ]
+  },
+  "website_card": {
+    "card_title": "儿童参与",
+    "card_tagline": "孩子参与生活，不只是能做什么，而是有机会做什么——机会来自环境，不只来自孩子本身。",
+    "card_link": "/community-interaction"
+  },
+  "ui_ready": {
+    "component_type": "concept_card",
+    "color_theme": "blue",
+    "icon": "child-participation",
+    "astro_component": "ConceptCard",
+    "react_component": "KAConceptCard",
+    "render_fields": {
+      "card_title": "website_card.card_title",
+      "card_tagline": "website_card.card_tagline",
+      "popup_layer_1": "popup_layers.layer_1.content",
+      "popup_layer_2": "popup_layers.layer_2.content",
+      "popup_layer_3": "popup_layers.layer_3.content",
+      "popup_layer_4": "popup_layers.layer_4"
+    }
+  },
+  "qa_checklist": [
+    {
+      "check": "每条 Evidence Card 都有 rel_id 对应",
+      "status": "✅"
+    },
+    {
+      "check": "Parent Version 没有专业术语或都已解释",
+      "status": "✅"
+    },
+    {
+      "check": "Common Misunderstanding 先说误解再说实际",
+      "status": "✅"
+    },
+    {
+      "check": "Reframe 不是鼓励也不是评判",
+      "status": "✅"
+    },
+    {
+      "check": "AI Retrieval 有明确的触发问题",
+      "status": "✅"
+    },
+    {
+      "check": "Problem Mapping 有对应 PRB ID",
+      "status": "✅"
+    },
+    {
+      "check": "Website Card tagline 符合 Anori Voice",
+      "status": "✅"
+    },
+    {
+      "check": "AI citation_priority 已设定（≤3条）",
+      "status": "✅"
+    },
+    {
+      "check": "memorable_sentence 六处锚点完全一致",
+      "status": "✅"
+    },
+    {
+      "check": "popup_layers 四层完整（Layer 1-4）",
+      "status": "✅"
+    },
+    {
+      "check": "ui_ready.render_fields 完整映射",
+      "status": "✅"
+    },
+    {
+      "check": "Anori Voice 验证：无责备、无宿命感、保留改善空间",
+      "status": "✅"
+    },
+    {
+      "check": "QA-14 Bridge Validation：明确连接两个以上 Knowledge Domain",
+      "status": "✅"
+    }
+  ],
+  "bridge_validation": {
+    "connected_domains": [
+      "KD-FAM",
+      "KD-PAR"
+    ],
+    "bridge_rel": "REL-000078",
+    "network_role": "Family QoL 的下游，所有参与子域的总节点"
+  },
+  "sprint": "E3-10"
+}

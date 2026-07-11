@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { pages } from "../lib/repository";
+---
+
+<BaseLayout
+  title="家庭正在经历的 · Anori"
+  description="九个主题覆盖家庭生活的核心领域。找到你现在最关心的那一个。"
+>
+<SiteNav active="family" />
+<div class="sub-hero">
+  <div class="wrap">
+    <Breadcrumb items={[{ label: "首页", href: "/" }, { label: "家庭" }]} />
+    <h1 class="sub-title">家庭正在经历的</h1>
+    <p class="sub-body">九个主题覆盖家庭生活的核心领域。找到你现在最关心的那一个。</p>
+  </div>
+</div>
+<div class="wrap content">
+  <div class="page-grid">
+    {pages.map(p => (
+      <a href={`/${p.slug}`} class="page-card">
+        <div class="card-inner">
+          <p class="card-title">{p.title}</p>
+          <p class="card-sub">{p.subtitle}</p>
+          <p class="card-body">{p.what_is_this}</p>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+    ))}
+  </div>
+</div>
+<SiteFooter />
+
+<style>
+.sub-hero {
+  padding: var(--sp-16) 0 var(--sp-12);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.sub-title {
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: var(--sp-4);
+}
+.sub-body {
+  font-size: var(--text-lg);
+  color: var(--muted);
+  max-width: 480px;
+  line-height: 1.8;
+}
+.content {
+  padding-top: var(--sp-12);
+  padding-bottom: var(--sp-24);
+}
+.page-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.page-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  color: inherit;
+  text-decoration: none;
+}
+.page-card:hover {
+  border-color: var(--brand);
+  box-shadow: var(--shadow-md);
+}
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.card-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--ink);
+}
+.card-sub {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+.card-body {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: var(--sp-2);
+  max-width: 560px;
+}
+.card-arrow {
+  font-size: var(--text-2xl);
+  color: var(--brand);
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .sub-title { font-size: var(--text-3xl); }
+  .card-body { display: none; }
+}
+</style>
+</BaseLayout>

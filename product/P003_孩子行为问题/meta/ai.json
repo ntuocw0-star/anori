@@ -1,0 +1,154 @@
+{
+  "path": "P002",
+  "title": "孩子不会表达情绪",
+  "one_sentence": "崩溃不是脾气问题。先读懂来源，再决定支持方式。",
+  "outcome": "帮助家长从「看到崩溃」走到「读懂崩溃背后的原因」",
+  "domain": "情绪调节 / 感觉处理 / AAC×情绪",
+  "pages": [
+    {
+      "id": "journey",
+      "url": "/paths/p002/journey",
+      "type": "journey",
+      "core_question": "孩子动不动就崩溃，我应该怎么办？",
+      "one_outcome": "知道问题不在孩子，在于缺少支持工具",
+      "today_action": "读「什么是情绪表达？」，理解情绪表达的四个层次",
+      "applicable_when": [
+        "孩子频繁崩溃",
+        "孩子情绪爆发",
+        "不知道怎么帮孩子平静"
+      ],
+      "related_paths": [
+        "P001 孩子不会说话",
+        "P003 孩子行为问题"
+      ],
+      "safety_boundary": "本路径不提供诊断。如有严重自伤行为，请参考 P003 S005 并寻求专业支持。"
+    },
+    {
+      "id": "u001",
+      "url": "/paths/p002/u001",
+      "type": "understanding",
+      "core_question": "情绪表达是什么？为什么孩子说不出来？",
+      "one_outcome": "知道情绪表达是四件事，卡在哪里帮哪里",
+      "today_action": "找到孩子今天最常卡住的是哪一层",
+      "applicable_when": [
+        "孩子无法用语言表达情绪",
+        "孩子情绪识别困难"
+      ],
+      "related_paths": [],
+      "safety_boundary": "情绪调节困难可能涉及神经发展差异，建议必要时寻求专业评估。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "sup001",
+      "url": "/paths/p002/sup001",
+      "type": "support",
+      "core_question": "为什么我试过的方法都没效果？",
+      "one_outcome": "知道不是方法错，而是时机错",
+      "today_action": "下次崩溃前，先问「现在是哪个阶段」",
+      "applicable_when": [
+        "各种方法都试过但没效果",
+        "不知道什么时候介入"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s001",
+      "url": "/paths/p002/s001",
+      "type": "support_plus",
+      "core_question": "崩溃正在发生，我该做什么？",
+      "one_outcome": "崩溃最高点只做一件事：待在附近不说话",
+      "today_action": "下次崩溃时，先不说话，待在孩子附近",
+      "applicable_when": [
+        "孩子正在崩溃",
+        "崩溃最高点不知所措"
+      ],
+      "related_paths": [],
+      "safety_boundary": "如有自伤行为，优先确保安全，参考 P003 S005。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s002",
+      "url": "/paths/p002/s002",
+      "type": "support_plus",
+      "core_question": "什么时候可以跟孩子讲道理？",
+      "one_outcome": "知道大脑关闭时道理进不去，等信号",
+      "today_action": "等到五个身体信号出现，再开口",
+      "applicable_when": [
+        "想知道何时沟通",
+        "孩子平静后的对话时机"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s003",
+      "url": "/paths/p002/s003",
+      "type": "support_plus",
+      "core_question": "孩子是不是感觉有问题？怎么判断？",
+      "one_outcome": "知道感觉过载路径，开始记录感觉地图",
+      "today_action": "观察今天孩子在哪个环境、哪个时间最容易烦躁",
+      "applicable_when": [
+        "怀疑感觉过载",
+        "崩溃来源不明",
+        "感觉处理差异"
+      ],
+      "related_paths": [],
+      "safety_boundary": "感觉处理差异建议由职能治疗师（OT）评估。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s004",
+      "url": "/paths/p002/s004",
+      "type": "support_plus",
+      "core_question": "安慰没有用，还能做什么？",
+      "one_outcome": "崩溃来自说不出来时，给工具比安慰有效",
+      "today_action": "把 AAC 工具放到崩溃最常发生的地方",
+      "applicable_when": [
+        "安慰无效的崩溃",
+        "崩溃来自沟通失败"
+      ],
+      "related_paths": [
+        "P001 孩子不会说话"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s005",
+      "url": "/paths/p002/s005",
+      "type": "support_plus",
+      "core_question": "怎么让老师也能支持孩子的情绪？",
+      "one_outcome": "今天给老师发一个早期信号",
+      "today_action": "给老师发一条消息，分享孩子的一个早期崩溃信号",
+      "applicable_when": [
+        "孩子在学校也有情绪困难",
+        "想建立家校情绪支持一致性"
+      ],
+      "related_paths": [
+        "P004 孩子学校适应"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s006",
+      "url": "/paths/p002/s006",
+      "type": "support_plus",
+      "core_question": "坚持了这么久，有没有在改善？",
+      "one_outcome": "知道进步是积累，开始记录第一个信号",
+      "today_action": "记录今天孩子的一个崩溃情况：发生了什么、持续多久、怎么恢复",
+      "applicable_when": [
+        "不确定是否有进步",
+        "想了解情绪发展的时间框架"
+      ],
+      "related_paths": [
+        "P003 孩子行为问题"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    }
+  ]
+}

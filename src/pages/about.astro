@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<BaseLayout
+  title="关于 Anori"
+  description="一个帮助家庭理解孩子的循证知识平台。我们的原则、立场与建立初衷。"
+>
+<SiteNav />
+<div class="sub-hero">
+  <div class="wrap">
+    <Breadcrumb items={[{ label: "首页", href: "/" }, { label: "关于 Anori" }]} />
+    <h1 class="sub-title">Anori</h1>
+    <p class="sub-body">一个帮助家庭理解孩子的循证知识平台。</p>
+  </div>
+</div>
+<div class="wrap content">
+
+  <section class="about-block">
+    <h2>为什么建立 Anori</h2>
+    <p>当一个孩子被诊断为自闭症、ADHD 或其他发展差异，家长面对的不只是孩子的问题，而是一整套新的现实：陌生的术语、相互矛盾的建议、不知道从哪里开始的茫然，以及一种无处不在的压力——你必须做出正确的决定，否则就是对孩子不负责任。</p>
+    <p>Anori 建立于一个简单的信念：家长需要的不是更多焦虑，而是更清晰的理解。我们收录来自国际研究的循证知识，以家长真实关心的问题为入口，帮助你看见家庭里正在发生的事。</p>
+  </section>
+
+  <section class="about-block">
+    <h2>我们的原则</h2>
+    <ul class="principle-list">
+      <li><strong>不把孩子当病人</strong>孩子有特殊需求，不等于孩子是一个需要被修复的对象。</li>
+      <li><strong>不随便定义孩子</strong>诊断是一个工具，不是一个答案。</li>
+      <li><strong>不制造焦虑</strong>Anori 不会用恐惧驱动你，不会夸大风险。</li>
+      <li><strong>知识来自研究</strong>所有页面内容均来自国际循证研究，我们不创造答案。</li>
+      <li><strong>合理收入，但不利用焦虑盈利</strong>我们不会用焦虑驱动付费。</li>
+      <li><strong>很多家庭最初来到这里，是因为孩子遇到了困难；但我们希望，最终被支持的是整个家庭。</strong></li>
+    </ul>
+  </section>
+
+  <section class="about-block">
+    <h2>助你，亦助我</h2>
+    <p>建立 Anori 的人，也是有特殊需求孩子的家长，或曾经历过类似处境的人。我们理解那种在凌晨三点独自搜索的感觉，理解你希望有人说「你不是一个人」而不是给你一份清单。</p>
+    <p>这个平台不只是为了帮助你——也是在帮助我们自己整理、理解、找到方向。我们在同一条路上。</p>
+  </section>
+
+  <div class="closing">
+    <p class="closing-text">帮助观察，<br>而不是帮助判断。</p>
+    <p class="closing-meta">Repository v1.0 · Frozen 2026-07-01</p>
+  </div>
+
+</div>
+<SiteFooter />
+
+
+<style>
+.sub-hero { padding: var(--sp-16) 0 var(--sp-12); background: var(--surface); border-bottom: 1px solid var(--border); }
+.sub-title { font-size: var(--text-4xl); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: var(--sp-4); }
+.sub-body { font-size: var(--text-lg); color: var(--muted); max-width: 480px; line-height: 1.8; }
+.content { padding-top: var(--sp-12); padding-bottom: var(--sp-24); max-width: var(--max-prose); }
+.about-block { margin-bottom: var(--sp-16); }
+.about-block h2 { font-size: var(--text-xl); font-weight: 600; padding-bottom: var(--sp-3); border-bottom: 1px solid var(--border); margin-bottom: var(--sp-6); }
+.about-block p { font-size: var(--text-base); line-height: 1.9; color: var(--ink); margin-bottom: var(--sp-4); }
+.principle-list { list-style: none; display: flex; flex-direction: column; gap: var(--sp-4); }
+.principle-list li { font-size: var(--text-base); line-height: 1.7; padding-left: var(--sp-4); border-left: 2px solid var(--border); }
+.principle-list li strong { font-weight: 600; display: block; margin-bottom: var(--sp-1); }
+.closing { border-top: 1px solid var(--border); padding-top: var(--sp-12); }
+.closing-text { font-size: var(--text-2xl); color: var(--muted); line-height: 1.7; border-left: 3px solid var(--border); padding-left: var(--sp-6); }
+.closing-meta { font-size: var(--text-xs); color: var(--muted-lt); margin-top: var(--sp-6); font-family: var(--mono); }
+</style>
+</BaseLayout>

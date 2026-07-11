@@ -1,0 +1,263 @@
+{
+  "id": "PROD-KA-PAR-00003",
+  "ka_id": "KA-PAR-00003",
+  "canonical": "Belonging",
+  "zh": "归属感",
+  "created": "2026-07-07",
+  "sprint": "E3-02",
+  "version": "v1.0",
+  "production_standard": "Production Standard v1.0",
+  "concept_page": {
+    "title": "归属感（Belonging）",
+    "subtitle": "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。",
+    "definition_research": "个体对自己归属于某个群体、社区或环境的主观感知，包括被接纳感、被重视感和社会联结感。Belonging 是参与的质性维度，区别于参与的量化指标（频率、多样性）。",
+    "distinction": {
+      "community_participation": "客观参与层——孩子去了哪里、参与了什么、频率多少",
+      "belonging": "主观体验层——孩子有没有感到自己属于那里、被接纳、被重视",
+      "key_insight": "同一个孩子，参与频率相同，但归属感可以截然不同——取决于社区态度和支持质量，不是参与次数。"
+    },
+    "why_it_matters": "Belonging 是参与转化为生活质量的关键心理机制。没有归属感的参与，不会转化为真正的 QoL 改善。这解释了为什么「孩子参加了活动但还是很孤独」——参与发生了，但归属感没有建立。",
+    "icf_reference": "Activities & Participation (d7): Interpersonal Relationships; Personal Factors > Psychological Wellbeing"
+  },
+  "parent_version": {
+    "memorable_sentence": "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。",
+    "headline": "归属感：帮助孩子真正融入，不只是「让他参加活动」",
+    "core_message": "孩子不仅要参加活动，更要觉得自己是其中的一员。一个孩子参加了活动，不代表他感到属于那里。真正的归属感是：有人认识他、他也认识他们、他的存在对那个地方有意义。归属感很小，但它是参与最终转化为生活质量的关键。",
+    "what_research_says": [
+      "研究发现，社区态度对孩子的归属感影响，比孩子本身的能力更大——接纳性强的社区，能显著改善归属感。",
+      "友谊质量（而不是友谊数量）是保护孩子免受孤立影响最重要的缓冲因素。有一个真正满意的朋友，比有很多表面朋友更重要。",
+      "能力主义偏见和日常微歧视，会直接损害孩子的归属感——即使没有明显的欺凌，持续的忽视和排斥也会积累成孤立感。"
+    ],
+    "what_you_can_do": [
+      "找一个让孩子感到「有人认识我」的地方，比安排很多活动更重要",
+      "关注活动的质量和氛围——工作人员是否接纳、其他孩子是否友善，比活动类型更重要",
+      "帮助孩子建立一段真正满意的友谊，比增加社交机会的数量更有效"
+    ],
+    "reframe": "帮助孩子参与，不只是安排活动，而是创造让他感到自己属于那里的机会。归属感很小，但它是参与最终变成生活质量的那一步。"
+  },
+  "evidence_cards": [
+    {
+      "rel_id": "REL-000083",
+      "grade": "High",
+      "headline": "社区参与和归属感/幸福感之间有正向关联——参与的质量比频率更重要。",
+      "meaning": "研究发现，真正影响归属感的，不是孩子参与了多少次，而是参与的体验质量——有没有被接纳、有没有真实的连接。"
+    },
+    {
+      "rel_id": "REL-000089",
+      "grade": "High",
+      "headline": "社区对残障的接纳态度，直接影响孩子的归属感体验。",
+      "meaning": "研究发现，社区态度比物理环境更重要——孩子在接纳性强的环境里，归属感会显著不同。这意味着改变社区态度，是提升归属感最有效的路径之一。"
+    },
+    {
+      "rel_id": "REL-000090",
+      "grade": "High",
+      "headline": "友谊支持满意度是保护孩子免受排斥影响的重要缓冲——有一个真正满意的朋友，比有很多表面朋友更重要。",
+      "meaning": "2025 年的研究发现，友谊的质量（满意度）比数量更重要。这说明，帮孩子建立一段真正的友谊，比安排更多社交机会更有价值。"
+    },
+    {
+      "rel_id": "REL-000091",
+      "grade": "High",
+      "headline": "归属感的建立，会反过来提升生活质量。",
+      "meaning": "研究发现，归属感不只是参与的副产品，它本身就是 QoL 改善的驱动力。也就是说，当孩子感到属于某个地方，这件事本身就在改善他的整体生活状态。"
+    }
+  ],
+  "common_misunderstanding": [
+    {
+      "misunderstanding": "孩子参加了活动，就有归属感了",
+      "reality": "出席不等于归属。真正的归属感是主观体验——孩子有没有感到被接纳、被重视、属于那里。同一个活动，不同的孩子体验到的归属感可以完全不同。"
+    },
+    {
+      "misunderstanding": "多安排社交活动，归属感自然就会有",
+      "reality": "研究发现，友谊质量比数量更重要。一段真正满意的友谊，比参加很多活动更能建立归属感。质量优先，不是数量优先。"
+    },
+    {
+      "misunderstanding": "归属感是孩子自己的问题，要靠他自己努力",
+      "reality": "研究一致发现，归属感主要由环境决定——社区态度、活动设计、工作人员接纳度，这些因素的影响远大于孩子本身的特质。"
+    },
+    {
+      "misunderstanding": "没有明显欺凌，孩子应该感觉还好",
+      "reality": "日常的忽视、微歧视和边缘化，即使没有明显欺凌，也会持续损害归属感。归属感的损害往往是累积的，不是单次事件造成的。"
+    }
+  ],
+  "ai_retrieval": {
+    "trigger_questions": [
+      "孩子总觉得自己融不进去",
+      "孩子参加活动但没有朋友",
+      "怎样才能让孩子真正有归属感？",
+      "孩子被排斥怎么办？",
+      "孩子参加了但还是很孤独",
+      "归属感和参与有什么关系？"
+    ],
+    "citation_priority": [
+      "REL-000090",
+      "REL-000089",
+      "REL-000091"
+    ],
+    "memorable_sentence": "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。",
+    "core_answer": "研究发现，归属感和参与频率是两个不同的维度。孩子在那里，不代表孩子属于那里。影响归属感最重要的因素是社区态度和友谊质量，不是参与次数。",
+    "escalation": "如果用户问到具体改善方法，引导到 KA-PAR-00002 Community Participation（社区态度）或 KA-PAR-00004 School Participation（同伴支持安排）"
+  },
+  "popup_layers": {
+    "layer_1": {
+      "trigger": "一句话理解",
+      "content": "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。"
+    },
+    "layer_2": {
+      "trigger": "为什么会这样？",
+      "content": [
+        "社区对残障的态度，比孩子本身的能力更影响归属感——接纳性强的环境，孩子的归属感会显著不同。",
+        "友谊质量比友谊数量更重要——一段真正满意的友谊，比参加很多活动更能建立归属感。",
+        "日常的忽视和微歧视，即使没有明显欺凌，也会持续累积损害归属感。"
+      ]
+    },
+    "layer_3": {
+      "trigger": "研究怎么说？",
+      "content": [
+        {
+          "headline": "社区态度对归属感的影响，大于孩子本身的特质。",
+          "grade": "High",
+          "rel_id": "REL-000089"
+        },
+        {
+          "headline": "有一个真正满意的朋友，比有很多表面朋友更重要。",
+          "grade": "High",
+          "rel_id": "REL-000090"
+        },
+        {
+          "headline": "归属感建立后，会反过来提升整体生活质量。",
+          "grade": "High",
+          "rel_id": "REL-000091"
+        }
+      ]
+    },
+    "layer_4": {
+      "trigger": "可以看看哪些相关内容？",
+      "related_concepts": [
+        {
+          "zh": "社区参与",
+          "slug": "community-participation",
+          "tagline": "参与的机会，归属感的前提"
+        },
+        {
+          "zh": "同伴支持",
+          "slug": "peer-support",
+          "tagline": "真正的友谊，从支持开始"
+        },
+        {
+          "zh": "家庭支持",
+          "slug": "family-support",
+          "tagline": "家庭的支持，影响参与的起点"
+        }
+      ],
+      "related_pages": [
+        {
+          "slug": "community-interaction",
+          "zh": "社区互动"
+        },
+        {
+          "slug": "disability-services",
+          "zh": "专业支持服务"
+        }
+      ]
+    }
+  },
+  "problem_mapping": {
+    "related_problems": [
+      "PRB-0019",
+      "PRB-0020",
+      "PRB-0006"
+    ],
+    "problem_descriptions": [
+      {
+        "id": "PRB-0019",
+        "zh": "孩子参加活动但感觉格格不入"
+      },
+      {
+        "id": "PRB-0020",
+        "zh": "不知道怎么帮孩子建立社区连接"
+      },
+      {
+        "id": "PRB-0006",
+        "zh": "家庭越来越封闭，和外界的联系越来越少"
+      }
+    ]
+  },
+  "website_card": {
+    "card_title": "归属感",
+    "card_tagline": "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。",
+    "card_evidence_badge": "5 条高质量研究支持",
+    "card_key_insight": "影响归属感最重要的因素是社区态度，不是孩子本身。",
+    "card_link": "/community-interaction",
+    "card_related": [
+      "社区参与",
+      "同伴支持",
+      "家庭生活质量"
+    ]
+  },
+  "ui_ready": {
+    "component_type": "concept_card",
+    "color_theme": "blue",
+    "icon": "belonging",
+    "evidence_badge": "5 条高质量研究支持",
+    "astro_component": "ConceptCard",
+    "react_component": "KAConceptCard",
+    "render_fields": {
+      "card_title": "website_card.card_title",
+      "card_tagline": "website_card.card_tagline",
+      "popup_layer_1": "popup_layers.layer_1.content",
+      "popup_layer_2": "popup_layers.layer_2.content",
+      "popup_layer_3": "popup_layers.layer_3.content",
+      "popup_layer_4": "popup_layers.layer_4"
+    }
+  },
+  "qa_checklist": [
+    {
+      "check": "每条 Evidence Card 都有 rel_id 对应",
+      "status": "✅"
+    },
+    {
+      "check": "Evidence Card 只使用 High/Low grade REL",
+      "status": "✅"
+    },
+    {
+      "check": "Parent Version 没有专业术语或都已解释",
+      "status": "✅"
+    },
+    {
+      "check": "Common Misunderstanding 先说误解再说实际",
+      "status": "✅"
+    },
+    {
+      "check": "Reframe 不是鼓励也不是评判",
+      "status": "✅"
+    },
+    {
+      "check": "AI Retrieval 有明确的触发问题",
+      "status": "✅"
+    },
+    {
+      "check": "Problem Mapping 有对应 PRB ID",
+      "status": "✅"
+    },
+    {
+      "check": "Website Card tagline 符合 Anori Voice",
+      "status": "✅"
+    },
+    {
+      "check": "AI citation_priority 已设定（≤3条最优先REL）",
+      "status": "✅"
+    },
+    {
+      "check": "memorable_sentence 已定义（家长会记住的一句话）",
+      "status": "✅"
+    },
+    {
+      "check": "popup_layers 四层完整（Layer 1-4）",
+      "status": "✅"
+    },
+    {
+      "check": "ui_ready.render_fields 完整映射到 JSON 字段",
+      "status": "✅"
+    }
+  ]
+}

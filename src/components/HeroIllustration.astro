@@ -1,0 +1,41 @@
+---
+export interface Props {
+  opacity?: number;
+}
+const { opacity = 0.95 } = Astro.props;
+---
+
+<div class="illus-layer" aria-hidden="true" style={`opacity: ${opacity}`}>
+  <img
+    src="/brand/hero-illustration.jpg"
+    alt=""
+    role="presentation"
+    class="illus-img"
+    loading="eager"
+    decoding="async"
+  />
+</div>
+
+<style>
+.illus-layer {
+  position: absolute;
+  right: -3%;        /* 人物再往右 */
+  top: 0;
+  bottom: 0;
+  width: 54%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.illus-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 112%;       /* 放大 8% 让人物更有陪伴感 */
+  height: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+  display: block;
+  /* 草地柔化：降饱和度 + 轻微提亮 */
+  filter: saturate(0.82) brightness(1.04);
+}
+</style>

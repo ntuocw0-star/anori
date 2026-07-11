@@ -1,0 +1,30 @@
+---
+// C-003 AccordionItem — native <details>, no JS
+export interface Props {
+  summary: string;
+  body: string;
+  href?: string;
+  hrefLabel?: string;
+}
+const { summary, body, href, hrefLabel = "查看完整内容 →" } = Astro.props;
+---
+
+<details>
+  <summary>{summary}</summary>
+  <div class="detail-body">
+    <p set:html={body} />
+    {href && (
+      <p style="margin-top: var(--sp-4)">
+        <a href={href} class="acc-link">{hrefLabel}</a>
+      </p>
+    )}
+  </div>
+</details>
+
+<style>
+.acc-link {
+  color: var(--ink); font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+.acc-link:hover { border-color: var(--ink); }
+</style>

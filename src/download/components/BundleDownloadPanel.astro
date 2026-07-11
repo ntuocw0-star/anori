@@ -1,0 +1,189 @@
+---
+import type { BundlePanelItem } from '../bundle-types';
+import { TERMS } from '../../i18n/terminology';
+
+interface Props {
+  contentId: string;
+  bundles: BundlePanelItem[];
+}
+
+const { contentId, bundles } = Astro.props;
+const available = bundles.filter(item => item.status === 'available' && item.href);
+const fallback = bundles.filter(item => item.status === 'fallback');
+const comingSoon = bundles.filter(item => item.status === 'coming-soon');
+const onePageHref = `/download/ka/${contentId}/one-page`;
+---
+
+<section class="bundle-panel" aria-labelledby={`bundle-title-${contentId}`}>
+  <div class="bundle-heading">
+    <div>
+      <p class="bundle-label" id={`bundle-title-${contentId}`}>{TERMS.bundle.label}</p>
+      <p class="bundle-description">选择适合你的阅读或保存方式。</p>
+    </div>
+  </div>
+
+  {available.length > 0 && (
+    <ul class="bundle-list" role="list">
+      {available.map(item => (
+        <li>
+          <a
+            href={item.href!}
+            class:list={['bundle-action', `bundle-action--${item.action ?? 'open'}`]}
+            download={item.action === 'download' ? '' : undefined}
+            target={item.action === 'download' ? undefined : '_self'}
+          >
+            <span class="bundle-icon" aria-hidden="true">
+              {item.action === 'download' ? '↓' : item.action === 'print' ? '⎙' : '↗'}
+            </span>
+            <span class="bundle-action-copy">
+              <strong>{item.label}</strong>
+              {item.hint && <small>{item.hint}</small>}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  {fallback.length > 0 && (
+    <div class="bundle-fallback" role="status">
+      <p>PDF 暂时不可用，你仍然可以打开网页版并使用浏览器打印。</p>
+      <a href={onePageHref} class="bundle-fallback-link">
+        <span aria-hidden="true">⎙</span>
+        打开{TERMS.onePageSummary.label}并打印
+      </a>
+    </div>
+  )}
+
+  {comingSoon.length > 0 && (
+    <ul class="soon-list" aria-label="即将推出" role="list">
+      {comingSoon.map(item => (
+        <li class="soon">
+          <span aria-hidden="true">○</span>
+          <span>{item.label}</span>
+          <small>即将推出</small>
+        </li>
+      ))}
+    </ul>
+  )}
+</section>
+
+<style>
+.bundle-panel {
+  padding: var(--sp-4) 0;
+}
+.bundle-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+.bundle-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  margin: 0 0 var(--sp-1);
+}
+.bundle-description {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+.bundle-list,
+.soon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--sp-2);
+}
+.bundle-action {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-height: 48px;
+  padding: var(--sp-3) var(--sp-4);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+.bundle-action:hover {
+  border-color: var(--brand);
+  background: var(--paper-warm);
+  transform: translateY(-1px);
+}
+.bundle-action--download {
+  border-color: color-mix(in srgb, var(--brand) 45%, var(--border));
+}
+.bundle-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--brand);
+  background: var(--surface-card);
+  font-weight: 700;
+}
+.bundle-action-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.bundle-action-copy strong {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.bundle-action-copy small {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.bundle-fallback {
+  padding: var(--sp-4);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--paper-warm);
+}
+.bundle-fallback p {
+  margin: 0 0 var(--sp-3);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+.bundle-fallback-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--brand);
+}
+.soon-list {
+  margin-top: var(--sp-3);
+}
+.soon {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--muted-lt);
+  font-size: var(--text-sm);
+  padding: var(--sp-2) var(--sp-1);
+}
+.soon small {
+  margin-left: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .1rem .35rem;
+  font-size: .68rem;
+}
+@media (max-width: 560px) {
+  .bundle-action { align-items: flex-start; }
+}
+</style>

@@ -1,0 +1,204 @@
+{
+  "id": "CP-PAR-001",
+  "name": "Participation Science Core Pathway",
+  "zh": "参与科学核心路径",
+  "version": "1.0",
+  "status": "frozen",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "knowledge_domain": "KD-PAR",
+  "completion": "100%",
+  "central_question": "家庭支持最终怎样帮助孩子真正参与生活，并从参与中获得归属感和更好的生活质量？",
+  "bridge_from": {
+    "pathway": "CP-FAM-001",
+    "entry_ka": "KA-FAM-05001",
+    "entry_rel": "REL-000078",
+    "description": "Family Quality of Life 是 CP-PAR-001 的上游驱动，两条主链通过 REL-000078 连接"
+  },
+  "nodes": [
+    {
+      "step": 1,
+      "ka_id": "KA-PAR-00001",
+      "node": "Child Participation",
+      "zh": "儿童参与",
+      "status": "built",
+      "key_rel_to_next": "REL-000013/083",
+      "grade": "High"
+    },
+    {
+      "step": 2,
+      "ka_id": "KA-PAR-00002",
+      "node": "Community Participation",
+      "zh": "社区参与",
+      "status": "built",
+      "key_rel_to_next": "REL-000083",
+      "grade": "High"
+    },
+    {
+      "step": 3,
+      "ka_id": "KA-PAR-00003",
+      "node": "Belonging",
+      "zh": "归属感",
+      "status": "built",
+      "key_rel_to_next": "REL-000091",
+      "grade": "High"
+    },
+    {
+      "step": 4,
+      "ka_id": "KA-PAR-00004",
+      "node": "Participation Quality of Life",
+      "zh": "参与生活质量",
+      "status": "built",
+      "key_rel_to_next": null,
+      "grade": "High"
+    }
+  ],
+  "concept_hierarchy": {
+    "description": "Community Participation 和 Belonging 的层级关系",
+    "community_participation": {
+      "type": "Domain Concept（客观参与）",
+      "dimensions": [
+        "Access（进入）",
+        "Relationships（关系）",
+        "Roles（角色）",
+        "Decision Making（自主）",
+        "Belonging（归属感）"
+      ]
+    },
+    "belonging": {
+      "type": "Independent KA（主观体验机制）",
+      "rationale": "Belonging 是 Community Participation 的一个维度，但在 Wellbeing、Mental Health 和 QoL 中具有独立的心理机制，因此独立建 KA"
+    }
+  },
+  "feedback_loops": [
+    "Community Participation ↔ Family QoL（双向，REL-000027 High）",
+    "Belonging → Community Participation（归属感促进持续参与）"
+  ],
+  "bridge_to": {
+    "domain": "KD-TRA",
+    "description": "School Participation → Employment Participation → Adult Life（Sprint 9 后与 KD-TRA 连接）"
+  },
+  "key_evidence": [
+    {
+      "rel_id": "REL-000013",
+      "summary": "照顾者负担 → 社区参与↓",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000027",
+      "summary": "社区参与 ↔ FQoL（双向）",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000080",
+      "summary": "社区参与 → QoL↑",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000083",
+      "summary": "社区参与 → 归属感/幸福感↑",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000084",
+      "summary": "能力主义 → 参与↓",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000087",
+      "summary": "家庭休闲 → 社区参与↑",
+      "grade": "High"
+    }
+  ],
+  "str_priority_targets": [
+    "REL-000078：FQoL → Child Participation（主链入口，最高优先）",
+    "Belonging → QoL（待建 REL，Sprint 8）",
+    "Peer Support → Belonging（待建 REL，Sprint 8）"
+  ],
+  "citation_template": "Based on CP-PAR-001 (Anori KOS v1.0), Community Participation is conceptualized as the objective participation layer, while Belonging represents the subjective psychological mechanism through which participation converts to wellbeing outcomes.",
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "version": "Draft v1.0",
+      "note": "建立，2/5 节点完成（Child Participation + Community Participation）"
+    },
+    {
+      "date": "2026-07-07",
+      "version": "Draft v1.0 update",
+      "note": "Sprint 8 完成，Belonging 节点建立"
+    },
+    {
+      "date": "2026-07-07",
+      "note": "架构决定：School Participation 移至 Context Layer，Core Pathway 纯化为4步机制链"
+    },
+    {
+      "date": "2026-07-07",
+      "version": "Frozen v1.0",
+      "note": "Sprint 10 完成，Participation QoL 建立，CP-PAR-001 正式冻结。首次出现跨域反馈循环，KOS 升级为 Knowledge Network。"
+    }
+  ],
+  "architecture": {
+    "layer_1_core_pathway": {
+      "description": "机制层（Core Mechanism）——解释参与如何转化为 QoL",
+      "nodes": [
+        "Child Participation",
+        "Community Participation",
+        "Belonging",
+        "Participation Quality of Life"
+      ],
+      "status": "冻结主干，不接收新节点"
+    },
+    "layer_2_participation_context": {
+      "description": "情境层（Participation Context）——解释参与在哪里发生",
+      "contexts": [
+        {
+          "context": "School Participation",
+          "ka": "KA-PAR-00004",
+          "status": "Sprint 9"
+        },
+        {
+          "context": "Leisure Participation",
+          "ka": "KA-PAR-00005",
+          "status": "planned"
+        },
+        {
+          "context": "Employment Participation",
+          "ka": "KA-PAR-00006",
+          "status": "planned"
+        },
+        {
+          "context": "Healthcare Participation",
+          "ka": "KA-PAR-00007",
+          "status": "planned"
+        },
+        {
+          "context": "Family Participation",
+          "ka": "KA-PAR-00008",
+          "status": "planned"
+        }
+      ],
+      "extensibility": "新增参与情境（数字参与、文化参与等）直接在此层添加，不修改 Core Pathway"
+    },
+    "ka_types": {
+      "core_ka": {
+        "description": "负责解释机制",
+        "examples": [
+          "Family Functioning",
+          "Parent Stress",
+          "Community Participation",
+          "Belonging"
+        ]
+      },
+      "context_ka": {
+        "description": "负责解释机制发生在哪里",
+        "examples": [
+          "School Participation",
+          "Leisure Participation",
+          "Employment Participation"
+        ]
+      }
+    },
+    "diagram": "\n                    Child Participation\n                          │\n        ┌─────────────────┼─────────────────┐\n        │                 │                 │\n        ▼                 ▼                 ▼\nSchool Participation  Community Participation  Leisure Participation\n(Context KA)              │                (Context KA)\n                          ▼\n                      Belonging\n                          │\n                          ▼\n             Participation Quality of Life\n    "
+  },
+  "frozen_date": "2026-07-07"
+}

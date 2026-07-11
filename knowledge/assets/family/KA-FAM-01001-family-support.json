@@ -1,0 +1,157 @@
+{
+  "id": "KA-FAM-01001",
+  "canonical": "Family Support",
+  "zh": "家庭支持",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "definition": {
+    "anori": "家庭在照顾特殊需要孩子的过程中，来自身边的人和专业系统的实际帮助。它包括：有人分担实际的事（接送、照顾）；有人提供信息和建议；有人只是愿意听；有人让家庭感到不孤单。这四种支持，缺少任何一种，都会产生特定的疲惫。",
+    "research": "来自正式（专业机构）和非正式（亲友、社区）渠道的工具性、情感性、信息性和归属性支持，用于减少照顾者压力并改善家庭功能。",
+    "icf_alignment": "Environmental Factors > Support and Relationships"
+  },
+  "why_it_matters": "家庭支持是整个知识树的起点。研究一致发现，支持的可及性和质量，是预测照顾者负担、家庭功能和家庭生活质量最稳定的因素之一。没有足够支持的家庭，其他干预的效果也会被大幅削减。",
+  "core_vars": [
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000018",
+      "name": "家庭韧性",
+      "role": "mediator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000006",
+      "summary": "非正式支持 → 降低父母压力",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000007",
+      "summary": "正式支持 → 降低照顾者负担",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000056",
+      "summary": "非正式支持 → 提升家庭功能",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000057",
+      "summary": "正式支持 → 提升家庭功能",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000059",
+      "summary": "正式支持 → 提升家庭生活质量",
+      "grade": "High"
+    },
+    {
+      "rel_id": "REL-000026",
+      "summary": "非正式支持 → 提升家庭生活质量",
+      "grade": "Very Low"
+    },
+    {
+      "rel_id": "REL-000025",
+      "summary": "正式支持 → 促进社区参与",
+      "grade": "Very Low"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 5,
+    "total_rel_count": 7,
+    "strongest_evidence": "Dunst & Trivette 2009 SR：非正式社会支持通过家庭功能改善照顾者状态",
+    "evidence_gap": "Family Support → Caregiver Self-efficacy 路径证据仍为 Very Low（REL-000065）"
+  },
+  "subtypes": [
+    {
+      "type": "Informal Support",
+      "zh": "非正式支持",
+      "examples": [
+        "亲友帮忙照顾",
+        "邻居支持",
+        "同类家庭互助",
+        "宗教社群"
+      ],
+      "var_id": "VAR-000007"
+    },
+    {
+      "type": "Formal Support",
+      "zh": "正式支持",
+      "examples": [
+        "专业咨询",
+        "早期干预",
+        "服务协调",
+        "喘息服务"
+      ],
+      "var_id": "VAR-000008"
+    },
+    {
+      "type": "Informational Support",
+      "zh": "信息性支持",
+      "examples": [
+        "关于孩子情况的解释",
+        "服务导航",
+        "权益信息"
+      ],
+      "var_id": null
+    },
+    {
+      "type": "Emotional Support",
+      "zh": "情感性支持",
+      "examples": [
+        "倾听",
+        "陪伴",
+        "确认感受"
+      ],
+      "var_id": null
+    }
+  ],
+  "common_misunderstanding": [
+    "支持的数量比支持的类型匹配更重要（实际相反）",
+    "寻求支持代表照顾者能力不足（实际上是维持照顾的必要条件）",
+    "有支持就等于用到了支持（两者之间存在显著落差）"
+  ],
+  "website": {
+    "page_slug": "support-from-others",
+    "related_problems": [
+      "PRB-0021",
+      "PRB-0022",
+      "PRB-0024",
+      "PRB-0025"
+    ],
+    "anori_reframe": "知道自己今天需要什么支持，然后为这一件事开口——这已经是在照顾自己了。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "我需要帮助但不知道找谁",
+      "家人帮忙但帮的不是我需要的",
+      "我很累但开不了口",
+      "怎么向别人寻求支持"
+    ],
+    "answer_template": "研究发现，支持的类型匹配比数量更重要。{evidence_card} 可以帮助判断自己现在最需要哪种支持。"
+  },
+  "related_kas": [
+    "KA-FAM-01002",
+    "KA-FAM-02003",
+    "KA-FAM-03001"
+  ],
+  "related_concepts": [
+    "CON-000004"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，基于现有 REL 和 Evidence"
+    }
+  ]
+}

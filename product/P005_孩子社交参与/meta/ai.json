@@ -1,0 +1,156 @@
+{
+  "path": "P005",
+  "title": "孩子社交参与",
+  "one_sentence": "社交不是让孩子变成别的样子，而是帮他在这个世界里找到属于他的方式存在。",
+  "outcome": "帮助家长从「怎么让孩子变得合群」走到「帮他找到属于他的方式，在这个世界里存在」",
+  "domain": "社交参与 / 友谊 / 社交代价",
+  "pages": [
+    {
+      "id": "journey",
+      "url": "/paths/p005/journey",
+      "type": "journey",
+      "core_question": "孩子在人群里不会加入，也交不到朋友，我能做什么？",
+      "one_outcome": "目标不是合群，而是找到属于他的方式存在",
+      "today_action": "读「社交参与是什么？」，理解社交对孩子来说真正在发生什么",
+      "applicable_when": [
+        "孩子没有朋友",
+        "孩子社交退缩",
+        "孩子在人群里孤立"
+      ],
+      "related_paths": [
+        "P004 孩子学校适应"
+      ],
+      "safety_boundary": "本路径不提供社交技巧训练课程。如有严重社交焦虑，建议寻求心理支持。"
+    },
+    {
+      "id": "u001",
+      "url": "/paths/p005/u001",
+      "type": "understanding",
+      "core_question": "为什么社交对孩子这么难？",
+      "one_outcome": "社交是同时发生的很多件事，代价决定能否参与",
+      "today_action": "观察孩子在尝试加入社交时，停在哪一步",
+      "applicable_when": [
+        "不理解孩子为什么不会社交",
+        "认为孩子不想交朋友"
+      ],
+      "related_paths": [],
+      "safety_boundary": "社交困难可能涉及多种神经发展差异。本页提供框架理解，不提供诊断。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "sup001",
+      "url": "/paths/p005/sup001",
+      "type": "support",
+      "core_question": "孩子的社交起点在哪里？怎么开始帮他？",
+      "one_outcome": "从他现在能做到的地方往前走一步",
+      "today_action": "想一件孩子最容易开口的情境，阻力最小的那一个",
+      "applicable_when": [
+        "不知道从哪里开始帮孩子社交",
+        "想建立渐进社交计划"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s001",
+      "url": "/paths/p005/s001",
+      "type": "support_plus",
+      "core_question": "孩子想说话但开不了口，我能做什么？",
+      "one_outcome": "开口的阻力降低，他自己就会开口",
+      "today_action": "下次孩子沉默时，多等五秒，不要替他说",
+      "applicable_when": [
+        "孩子不开口",
+        "孩子社交沉默",
+        "想帮孩子开始对话"
+      ],
+      "related_paths": [
+        "P001 孩子不会说话（开口困难）"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s002",
+      "url": "/paths/p005/s002",
+      "type": "support_plus",
+      "core_question": "孩子认识了同学，但关系没有发展，怎么办？",
+      "one_outcome": "友谊断在「没有下一步」，帮他想那个下一步",
+      "today_action": "帮孩子想一件下次见到那个同学可以聊的事",
+      "applicable_when": [
+        "孩子有泛泛之交但没有深交",
+        "友谊停滞不前"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s003",
+      "url": "/paths/p005/s003",
+      "type": "support_plus",
+      "core_question": "孩子和同学发生误解，关系破裂了怎么办？",
+      "one_outcome": "误解可以修复，修复只需要一句话",
+      "today_action": "先陪孩子坐一会儿，不评判，先听他说发生了什么",
+      "applicable_when": [
+        "社交误解发生",
+        "关系出现裂痕",
+        "孩子被排斥"
+      ],
+      "related_paths": [
+        "P002 情绪处理"
+      ],
+      "safety_boundary": "如有持续霸凌情况，本路径内容不足以处理，请联系学校和专业支持。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s004",
+      "url": "/paths/p005/s004",
+      "type": "support_plus",
+      "core_question": "什么样的社交情境对孩子最合适？",
+      "one_outcome": "对的环境让他真实出现，代价低才能投入社交",
+      "today_action": "想一想孩子最像他自己的地方是哪里",
+      "applicable_when": [
+        "想找适合孩子的社交环境",
+        "孩子在某些情境社交更好"
+      ],
+      "related_paths": [
+        "P004 学校社交环境"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s005",
+      "url": "/paths/p005/s005",
+      "type": "support_plus",
+      "core_question": "我应该怎么帮孩子社交？帮多少才合适？",
+      "one_outcome": "支持不是代替，帮他建立能力而不是替他做",
+      "today_action": "下次孩子遇到社交困难，先问「你觉得可以怎么做」",
+      "applicable_when": [
+        "不知道介入多少",
+        "担心帮太多或帮太少"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s006",
+      "url": "/paths/p005/s006",
+      "type": "support_plus",
+      "core_question": "支持了很久，孩子的社交有没有在改善？",
+      "one_outcome": "进步是积累，换一个衡量方式",
+      "today_action": "回想这个月，孩子有没有哪一刻比以前更自在",
+      "applicable_when": [
+        "不确定是否有进步",
+        "想了解社交发展的时间框架"
+      ],
+      "related_paths": [
+        "P004 学校社交"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    }
+  ]
+}

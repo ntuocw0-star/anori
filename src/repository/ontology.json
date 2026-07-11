@@ -1,0 +1,20 @@
+{
+  "meta": { "version": "1.0", "status": "Frozen", "date": "2026-07-01" },
+  "populations": [
+    { "id": "POP-001", "label": "Parents (General)", "zh": "家长（一般）" },
+    { "id": "POP-002", "label": "Mothers", "zh": "母亲" },
+    { "id": "POP-003", "label": "Fathers", "zh": "父亲" },
+    { "id": "POP-006", "label": "Children with ASD", "zh": "自闭症儿童" },
+    { "id": "POP-007", "label": "Children with ADHD", "zh": "ADHD 儿童" },
+    { "id": "POP-008", "label": "Children with Developmental Disabilities", "zh": "发展障碍儿童" },
+    { "id": "POP-014", "label": "Families (General)", "zh": "家庭（一般）" }
+  ],
+  "age_stages": [
+    { "id": "AGE-00", "range": "All", "label": "All Ages", "zh": "全年龄段" },
+    { "id": "AGE-01", "range": "0–3", "label": "Early Intervention", "zh": "早期干预" },
+    { "id": "AGE-02", "range": "3–6", "label": "Preschool", "zh": "学前" },
+    { "id": "AGE-03", "range": "6–12", "label": "School-age", "zh": "学龄" },
+    { "id": "AGE-04", "range": "12–18", "label": "Adolescence", "zh": "青少年" },
+    { "id": "AGE-05", "range": "18–30", "label": "Young Adulthood", "zh": "青年" }
+  ]
+}

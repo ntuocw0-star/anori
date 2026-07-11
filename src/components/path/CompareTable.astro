@@ -1,0 +1,25 @@
+---
+import type { CompareTableCol } from '../../types/path';
+
+export interface Props {
+  label: string;
+  cols: CompareTableCol[];
+}
+const { label, cols } = Astro.props;
+---
+<section class="up-section">
+  <p class="up-section-label">{label}</p>
+  <div class="up-compare-table">
+    {cols.map((col: CompareTableCol) => (
+      <div class={`up-compare-col up-compare-col--${col.color}`}>
+        <div class="up-compare-header">
+          <span class="up-compare-icon">{col.icon}</span>
+          <p class="up-compare-title">{col.title}</p>
+        </div>
+        <ul class="up-compare-rows">
+          {col.rows.map((row: string) => <li>{row}</li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>

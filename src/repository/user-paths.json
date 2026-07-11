@@ -1,0 +1,1121 @@
+{
+  "meta": {
+    "version": "1.1",
+    "sprint": "11",
+    "description": "Anori KOS User Paths — P001–P005，每条路径对应一个家长真实处境",
+    "total_paths": 6,
+    "total_pages": 54,
+    "status": "P001–P006 active"
+  },
+  "paths": [
+    {
+      "id": "p001",
+      "title": "孩子不会说话",
+      "one_sentence": "不会说话不等于不会沟通。今天可以从一张图片开始。",
+      "description": "帮助家长从「孩子不会说话」走到「今天开始 AAC」",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "孩子不会说话 Journey",
+          "type": "journey",
+          "one_outcome": "知道下一步去哪里",
+          "one_moment": "选择第一步进入",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "什么是 AAC？",
+          "type": "understanding",
+          "one_outcome": "理解 AAC 不是放弃语言，是通向语言",
+          "one_moment": "放下一个误解",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "什么是 AAC？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "AAC 怎么开始？",
+          "type": "support",
+          "one_outcome": "今天知道第一件事是什么",
+          "one_moment": "找到第一个沟通时机",
+          "next": [
+            "s001",
+            "s002",
+            "s003"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "AAC 怎么开始？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "PECS 怎么开始？",
+          "type": "support_plus",
+          "one_outcome": "今天做出第一张图片",
+          "one_moment": "第一次图片交换",
+          "next": [
+            "s002",
+            "s003"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "PECS 怎么开始？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "SGD 适合谁？",
+          "type": "support_plus",
+          "one_outcome": "今天能判断 SGD 现在适不适合",
+          "one_moment": "做出判断",
+          "next": [
+            "s003",
+            "s001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "SGD 适合谁？"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "家里每天怎么配合 AAC？",
+          "type": "support_plus",
+          "one_outcome": "今晚吃饭把工具放桌上",
+          "one_moment": "今晚吃饭",
+          "next": [
+            "s004",
+            "s005",
+            "s006"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "家里每天怎么配合？"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "学校老师需要知道什么？",
+          "type": "support_plus",
+          "one_outcome": "今天知道怎么给老师发第一条消息",
+          "one_moment": "发出那条消息",
+          "next": [
+            "s005",
+            "s006"
+          ],
+          "prev": "s003",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "学校老师需要知道什么？"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "孩子不愿意使用 AAC 怎么办？",
+          "type": "support_plus",
+          "one_outcome": "今天允许自己停下来观察",
+          "one_moment": "今天先停，明天再试",
+          "next": [
+            "s006",
+            "s003"
+          ],
+          "prev": "s004",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "孩子不愿意使用 AAC？"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "多久能看到变化？",
+          "type": "support_plus",
+          "one_outcome": "知道什么是真正的进步并开始记录",
+          "one_moment": "写下第一个记录",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p002",
+          "breadcrumb": [
+            "首页",
+            "孩子不会说话",
+            "多久能看到变化？"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p002",
+      "title": "孩子不会表达情绪",
+      "one_sentence": "崩溃不是脾气问题。先读懂来源，再决定支持方式。",
+      "description": "帮助家长从「看到崩溃」走到「读懂崩溃背后的原因」",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "孩子不会表达情绪 Journey",
+          "type": "journey",
+          "one_outcome": "知道问题不在孩子，在于缺少支持工具",
+          "one_moment": "选择从哪一步进入",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "什么是情绪表达？",
+          "type": "understanding",
+          "one_outcome": "知道情绪表达是四件事，卡在哪里帮哪里",
+          "one_moment": "识别今天看到的是哪一层",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "什么是情绪表达？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "为什么普通方法有时没效果？",
+          "type": "support",
+          "one_outcome": "知道不是方法错，而是时机错",
+          "one_moment": "下次先问来源再决定方法",
+          "next": [
+            "s001",
+            "s003",
+            "s004"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "为什么普通方法有时没效果？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "崩溃发生时怎么办？",
+          "type": "support_plus",
+          "one_outcome": "崩溃最高点只做一件事：待在附近不说话",
+          "one_moment": "下次崩溃时先不说话",
+          "next": [
+            "s002",
+            "s003",
+            "sup001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "崩溃发生时怎么办？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "什么时候不用讲道理？",
+          "type": "support_plus",
+          "one_outcome": "知道大脑关闭时道理进不去，等信号",
+          "one_moment": "看到三个身体信号再开口",
+          "next": [
+            "s003",
+            "s004"
+          ],
+          "prev": "s001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "什么时候不用讲道理？"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "什么时候先处理环境？",
+          "type": "support_plus",
+          "one_outcome": "知道感觉过载路径，开始记录感觉地图",
+          "one_moment": "今天观察哪里最容易烦躁",
+          "next": [
+            "s004",
+            "s001",
+            "s005"
+          ],
+          "prev": "s002",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "什么时候先处理环境？"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "什么时候 AAC 比安慰更重要？",
+          "type": "support_plus",
+          "one_outcome": "崩溃来自说不出来时，给工具比安慰有效",
+          "one_moment": "把 AAC 放到崩溃高发区",
+          "next": [
+            "s005",
+            "s006"
+          ],
+          "prev": "s003",
+          "cross_path_from": "p001",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "什么时候 AAC 比安慰更重要？"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "学校老师需要知道什么？",
+          "type": "support_plus",
+          "one_outcome": "今天给老师发一个早期信号",
+          "one_moment": "发出那条消息",
+          "next": [
+            "s006",
+            "s001"
+          ],
+          "prev": "s004",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "学校老师需要知道什么？"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "多久能看到变化？",
+          "type": "support_plus",
+          "one_outcome": "知道进步是积累，开始记录第一个信号",
+          "one_moment": "写下第一个观察",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p003",
+          "breadcrumb": [
+            "首页",
+            "孩子不会表达情绪",
+            "多久能看到变化？"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p003",
+      "title": "孩子行为问题",
+      "one_sentence": "行为是信息，不是问题。找到来源，才能真正帮到孩子。",
+      "description": "帮助家长从「怎么阻止行为」走到「读懂行为背后的来源」",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "孩子行为问题 Journey",
+          "type": "journey",
+          "one_outcome": "知道行为有来源，不是故意",
+          "one_moment": "开始问「他为什么这样？」",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "行为背后是什么？",
+          "type": "understanding",
+          "one_outcome": "知道六种功能，同一行为可以来自不同来源",
+          "one_moment": "回想一次行为，猜一个来源",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "行为背后是什么？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "怎么找到行为的来源？",
+          "type": "support",
+          "one_outcome": "今天能用 A-B-C 观察一次行为",
+          "one_moment": "记录一次 ABC",
+          "next": [
+            "s001",
+            "s002",
+            "s003"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "怎么找到行为的来源？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "行为发生时怎么办？",
+          "type": "support_plus",
+          "one_outcome": "安全第一，来源不同回应不同",
+          "one_moment": "下次先确认安全，不说话",
+          "next": [
+            "s002",
+            "s003",
+            "sup001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "行为发生时怎么办？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "怎么帮孩子建立替代行为？",
+          "type": "support_plus",
+          "one_outcome": "替代行为必须满足同一功能才会被使用",
+          "one_moment": "准备一个替代，放到旁边",
+          "next": [
+            "s003",
+            "s004"
+          ],
+          "prev": "s001",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "怎么帮孩子建立替代行为？"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "怎么预防行为问题发生？",
+          "type": "support_plus",
+          "one_outcome": "找到高风险时段，改变一个触发条件",
+          "one_moment": "观察今天哪里最容易发生",
+          "next": [
+            "s004",
+            "s002"
+          ],
+          "prev": "s002",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "怎么预防行为问题发生？"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "学校老师需要知道什么？",
+          "type": "support_plus",
+          "one_outcome": "给老师来源信息，而不是行为清单",
+          "one_moment": "今天告诉老师一个来源",
+          "next": [
+            "s005",
+            "s006"
+          ],
+          "prev": "s003",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "学校老师需要知道什么？"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "自伤行为怎么办？",
+          "type": "support_plus",
+          "one_outcome": "自伤有来源，今天先记录 ABC",
+          "one_moment": "记录一次自伤 ABC",
+          "next": [
+            "s006",
+            "sup001"
+          ],
+          "prev": "s004",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "自伤行为怎么办？"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "多久能看到变化？",
+          "type": "support_plus",
+          "one_outcome": "改变是渐进的，调整也是进步",
+          "one_moment": "写下一个小变化",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p004",
+          "breadcrumb": [
+            "首页",
+            "孩子行为问题",
+            "多久能看到变化？"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p004",
+      "title": "孩子学校适应",
+      "one_sentence": "学校不是另一个战场，而是支持系统的一部分。而你，是这个系统的中心。",
+      "description": "帮助家长把学校从「需要对抗的地方」，变成「共同支持孩子成长的伙伴」",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "孩子学校适应 Journey",
+          "type": "journey",
+          "one_outcome": "学校是支持系统的一部分，家长是中心",
+          "one_moment": "选择从哪一步进入",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "为什么孩子在学校会出问题？",
+          "type": "understanding",
+          "one_outcome": "学校有六项要求，放学后崩溃是正常现象",
+          "one_moment": "观察放学后第一个小时",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "为什么孩子在学校会出问题？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "学校需要知道什么？",
+          "type": "support",
+          "one_outcome": "支持方式比诊断标签更能帮老师今天行动",
+          "one_moment": "写下三件事：支持/困难/优势",
+          "next": [
+            "s001",
+            "s002",
+            "s003"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "学校需要知道什么？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "第一次和老师怎么沟通？",
+          "type": "support_plus",
+          "one_outcome": "第一次沟通是开始合作，不是解释孩子",
+          "one_moment": "准备好第一句话",
+          "next": [
+            "s002",
+            "sup001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "第一次和老师怎么沟通？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "学校可以提供哪些支持？",
+          "type": "support_plus",
+          "one_outcome": "很多支持今天就能开始，不需要审批",
+          "one_moment": "选一个，今天告诉老师",
+          "next": [
+            "s003",
+            "s004"
+          ],
+          "prev": "s001",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "学校可以提供哪些支持？"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "老师说学校没问题怎么办？",
+          "type": "support_plus",
+          "one_outcome": "家校看到的不同，合在一起才完整",
+          "one_moment": "记录一次放学后具体状态",
+          "next": [
+            "s004",
+            "s005"
+          ],
+          "prev": "s002",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "老师说学校没问题怎么办？"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "同学关系怎么办？",
+          "type": "support_plus",
+          "one_outcome": "目标是有一个真实连结，不是很多朋友",
+          "one_moment": "问一个低压问题，找到一件好事",
+          "next": [
+            "s005",
+            "s006"
+          ],
+          "prev": "s003",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "同学关系怎么办？"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "家庭和学校怎么保持一致？",
+          "type": "support_plus",
+          "one_outcome": "一致是方向一致，不是完全复制",
+          "one_moment": "把一件有效的事告诉老师",
+          "next": [
+            "s006"
+          ],
+          "prev": "s004",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "家庭和学校怎么保持一致？"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "什么时候需要调整学校支持？",
+          "type": "support_plus",
+          "one_outcome": "调整不是失败，支持随孩子成长更新",
+          "one_moment": "观察最近状态与上月的变化",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p005",
+          "breadcrumb": [
+            "首页",
+            "孩子学校适应",
+            "什么时候需要调整学校支持？"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p005",
+      "title": "孩子社交参与",
+      "one_sentence": "社交不是让孩子变成别的样子，而是帮他在这个世界里找到属于他的方式存在。",
+      "description": "帮助家长从「怎么让孩子变得合群」走到「帮他找到属于他的方式，在这个世界里存在」",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "孩子社交参与 Journey",
+          "type": "journey",
+          "one_outcome": "目标不是合群，而是找到属于他的方式存在",
+          "one_moment": "选择从哪一步进入",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "社交参与是什么？为什么更难？",
+          "type": "understanding",
+          "one_outcome": "社交是同时发生的很多件事，代价决定能否参与",
+          "one_moment": "观察他在哪个地方停下来了",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "社交参与是什么？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "怎么找到孩子的社交起点？",
+          "type": "support",
+          "one_outcome": "从他现在能做到的地方往前走一步",
+          "one_moment": "想一件他最容易开口的情境",
+          "next": [
+            "s001",
+            "s002",
+            "s004"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "怎么找到孩子的社交起点？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "怎么帮孩子开口？",
+          "type": "support_plus",
+          "one_outcome": "开口的阻力降低，他自己就会开口",
+          "one_moment": "沉默时多等五秒，不替他说",
+          "next": [
+            "s002",
+            "s003",
+            "s004"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "怎么帮孩子开口？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "怎么帮孩子维持友谊？",
+          "type": "support_plus",
+          "one_outcome": "友谊断在「没有下一步」，帮他想那个下一步",
+          "one_moment": "帮他想一个下次可以聊的事",
+          "next": [
+            "s003",
+            "s004"
+          ],
+          "prev": "s001",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "怎么帮孩子维持友谊？"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "当社交误解发生了怎么办？",
+          "type": "support_plus",
+          "one_outcome": "误解可以修复，修复只需要一句话",
+          "one_moment": "陪他坐一会儿，不评判，先听",
+          "next": [
+            "s004",
+            "s005"
+          ],
+          "prev": "s002",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "当社交误解发生了怎么办？"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "怎么找到适合孩子的社交环境？",
+          "type": "support_plus",
+          "one_outcome": "对的环境让他真实出现，代价低才能投入社交",
+          "one_moment": "想他在哪里最像他自己",
+          "next": [
+            "s005",
+            "s006"
+          ],
+          "prev": "s003",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "怎么找到适合的社交环境？"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "家长怎么支持孩子的社交？",
+          "type": "support_plus",
+          "one_outcome": "支持不是代替，帮他建立能力而不是替他做",
+          "one_moment": "先问「你觉得可以怎么做」",
+          "next": [
+            "s006"
+          ],
+          "prev": "s004",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "家长怎么支持孩子的社交？"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "多久能看到变化？",
+          "type": "support_plus",
+          "one_outcome": "进步是积累，换一个衡量方式",
+          "one_moment": "记录这个月有没有更自在的时刻",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p004",
+          "breadcrumb": [
+            "首页",
+            "孩子社交参与",
+            "多久能看到变化？"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p006",
+      "title": "我已经很累了，该怎么办？",
+      "one_sentence": "你一直在支撑孩子，却很少有人问过：你还撑得住吗？",
+      "description": "帮助长期照顾有特殊需求孩子的家长，识别耗竭、减少自责、连接支持、重新分配负担",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "我已经很累了，该怎么办？",
+          "type": "journey",
+          "one_outcome": "知道累不是因为不够努力，而是因为一直没有被支持",
+          "one_moment": "第一次允许自己说「我需要帮助」",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "为什么会累成这样？",
+          "type": "understanding",
+          "one_outcome": "理解耗竭是系统性结果，不是个人失败",
+          "one_moment": "找到自己现在最接近的一个耗竭信号",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "为什么会累成这样？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "今天能用什么支持？",
+          "type": "support",
+          "one_outcome": "识别出今天真实可用的一种支持",
+          "one_moment": "写下一个现在就能联系的人或服务",
+          "next": [
+            "s001",
+            "s003",
+            "s004"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "今天能用什么支持？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "自责和内疚怎么办？",
+          "type": "support_plus",
+          "one_outcome": "内疚不是证明你不够好，而是证明你在乎",
+          "one_moment": "说出一件你今天做得够的事",
+          "next": [
+            "s002",
+            "s003"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "自责和内疚怎么办？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "家人意见不一致，争吵越来越多怎么办？",
+          "type": "support_plus",
+          "one_outcome": "分歧来自压力，不是谁对谁错",
+          "one_moment": "找出家里分歧最集中的一个点，今天先说出来，不争",
+          "next": [
+            "s003",
+            "s001"
+          ],
+          "prev": "s001",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "家人意见不一致怎么办？"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "怎么告诉别人我需要帮助？",
+          "type": "support_plus",
+          "one_outcome": "开口是让支持系统运作的第一步，不是软弱",
+          "one_moment": "准备好一句话，下次有人问「还好吗」时说出真实的答案",
+          "next": [
+            "s004",
+            "s002"
+          ],
+          "prev": "s002",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "怎么告诉别人我需要帮助？"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "我需要找专业帮助吗？怎么找？",
+          "type": "support_plus",
+          "one_outcome": "知道什么情况需要专业支持，以及第一步找谁",
+          "one_moment": "今天搜索或联系一个照顾者支持资源",
+          "next": [
+            "s005",
+            "s003"
+          ],
+          "prev": "s003",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "我需要找专业帮助吗？"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "怎么在照顾之余保留一点自己的空间？",
+          "type": "support_plus",
+          "one_outcome": "保留空间不是自私，是可持续照顾的前提",
+          "one_moment": "找出一件今天有15分钟属于你自己的事",
+          "next": [
+            "s006",
+            "s004"
+          ],
+          "prev": "s004",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "怎么在照顾之余保留一点自己的空间？"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "照顾自己不是一次性的事",
+          "type": "support_plus",
+          "one_outcome": "照顾自己是需要定期更新的系统，不是一次充电",
+          "one_moment": "今天设一个提醒，下个月重新检视自己的状态",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p001",
+          "breadcrumb": [
+            "首页",
+            "我已经很累了，该怎么办？",
+            "照顾自己不是一次性的事"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p007",
+      "title": "感觉处理",
+      "one_sentence": "剪头发崩溃、怕吸尘器、一直转圈——这些可能来自同一个原因。",
+      "description": "帮助家长理解感觉处理差异，从今天就能开始的调整方式",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "感觉处理 Journey",
+          "type": "journey",
+          "one_outcome": "理解为什么这些行为可能来自同一个原因",
+          "one_moment": "找到最相关的那一页",
+          "next": [
+            "u001",
+            "s001",
+            "s002",
+            "s003",
+            "s004"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "感觉处理"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "感觉处理怎么运作",
+          "type": "understanding",
+          "one_outcome": "理解感觉处理差异的神经机制",
+          "one_moment": "建立感觉地图的概念",
+          "next": [
+            "sup001",
+            "s001",
+            "s003"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "感觉处理怎么运作"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "OT 是什么，怎么找",
+          "type": "support",
+          "one_outcome": "知道什么时候去找 OT，以及第一次去说什么",
+          "one_moment": "存下一家 OT 机构的联系方式",
+          "next": [
+            "s001",
+            "s002"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "OT 是什么，怎么找"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "声音对他来说真的更响",
+          "type": "support_plus",
+          "one_outcome": "记录下孩子最怕的三种声音",
+          "one_moment": "第一次提前告知声音",
+          "next": [
+            "s004",
+            "sup001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "声音对他来说真的更响"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "日常护理为什么这么难",
+          "type": "support_plus",
+          "one_outcome": "试一个日常护理的新开场白",
+          "one_moment": "第一次提前告知护理流程",
+          "next": [
+            "s005",
+            "sup001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "日常护理为什么这么难"
+          ]
+        },
+        {
+          "id": "s003",
+          "title": "他的身体在找它需要的东西",
+          "type": "support_plus",
+          "one_outcome": "识别孩子在寻求什么类型的感觉输入",
+          "one_moment": "提供第一个安全的替代出口",
+          "next": [
+            "s005",
+            "sup001"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "他的身体在找它需要的东西"
+          ]
+        },
+        {
+          "id": "s004",
+          "title": "人多嘈杂的地方，他的系统装不下",
+          "type": "support_plus",
+          "one_outcome": "为下一次公共场合建立出口计划",
+          "one_moment": "和孩子约好离开信号",
+          "next": [
+            "s005",
+            "s001"
+          ],
+          "prev": "s001",
+          "cross_path": "p002",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "人多嘈杂的地方，他的系统装不下"
+          ]
+        },
+        {
+          "id": "s005",
+          "title": "家庭日常怎么调整",
+          "type": "support_plus",
+          "one_outcome": "选一个日常场景试一个调整",
+          "one_moment": "今天比昨天多理解他一点点",
+          "next": [
+            "s006"
+          ],
+          "prev": "s002",
+          "cross_path": "p006",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "家庭日常怎么调整"
+          ]
+        },
+        {
+          "id": "s006",
+          "title": "从这里继续",
+          "type": "support_plus",
+          "one_outcome": "写下 P007 最重要的一个理解",
+          "one_moment": "看见行为背后的需求",
+          "next": [],
+          "prev": "s005",
+          "cross_path": "p001",
+          "breadcrumb": [
+            "首页",
+            "感觉处理",
+            "从这里继续"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+---
+/**
+ * /paths/[path]/[page].astro
+ * Sprint 11–12 — User Path Pages (P001–P006)
+ *
+ * Routes: /paths/p001/journey … /paths/p006/s006 (54 pages total)
+ * Data:   src/repository/user-paths.json + path-content.json + path-seo.json
+ * CSS:    src/styles/global.css (.up-* classes, global scope)
+ * Components: src/components/path/ (20 components)
+ *
+ * Page Types:
+ *   journey      — Entry page: reframe + path map + first step
+ *   understanding — Concept page: what & why
+ *   support      — First action: how to start today
+ *   support_plus — Specific scenario support
+ *
+ * Sprint 12 Phase A: CSS → global.css
+ * Sprint 12 Phase B: 12 components extracted (TodayBox, EvidenceBox…)
+ * Sprint 12 Phase C: 8 components extracted (Closing, Reframe, StepList…)
+ * TODO: Replace `any` types with shared TypeScript interfaces (non-blocking)
+ */
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SiteNav from "../../../components/SiteNav.astro";
+import SiteFooter from "../../../components/SiteFooter.astro";
+import Breadcrumb from "../../../components/Breadcrumb.astro";
+import userPathsData from "../../../repository/user-paths.json";
+import pathContentData from "../../../repository/path-content.json";
+import pathSeoData from "../../../repository/path-seo.json";
+import TodayBox from "../../../components/path/TodayBox.astro";
+import ParentMessage from "../../../components/path/ParentMessage.astro";
+import EvidenceBox from "../../../components/path/EvidenceBox.astro";
+import ProfessionalBlock from "../../../components/path/ProfessionalBlock.astro";
+import Timeline from "../../../components/path/Timeline.astro";
+import ProgressSignals from "../../../components/path/ProgressSignals.astro";
+import SupportGrid from "../../../components/path/SupportGrid.astro";
+import NextSteps from "../../../components/path/NextSteps.astro";
+import CrossPath from "../../../components/path/CrossPath.astro";
+import DecisionBox from "../../../components/path/DecisionBox.astro";
+import LifeMoments from "../../../components/path/LifeMoments.astro";
+import PathReflection from "../../../components/path/PathReflection.astro";
+import Closing from "../../../components/path/Closing.astro";
+import Reframe from "../../../components/path/Reframe.astro";
+import StepList from "../../../components/path/StepList.astro";
+import DoDont from "../../../components/path/DoDont.astro";
+import AbcCards from "../../../components/path/AbcCards.astro";
+import StateMap from "../../../components/path/StateMap.astro";
+import CompareTable from "../../../components/path/CompareTable.astro";
+import ConversationStarter from "../../../components/path/ConversationStarter.astro";
+
+export async function getStaticPaths() {
+  const paths: any[] = [];
+  for (const up of (userPathsData as any).paths) {
+    for (const pg of up.pages) {
+      paths.push({
+        params: { path: up.id, page: pg.id },
+        props: {
+          userPath: up,
+          pageInfo: pg,
+          content: ((pathContentData as any)[up.id] ?? {})[pg.id] ?? {},
+        },
+      });
+    }
+  }
+  return paths;
+}
+
+const { userPath, pageInfo, content } = Astro.props as any;
+
+// ── Navigation helpers ────────────────────────────────────
+const allPages: any[] = userPath.pages;
+const currentIndex = allPages.findIndex((p: any) => p.id === pageInfo.id);
+const prevPage = pageInfo.prev
+  ? allPages.find((p: any) => p.id === pageInfo.prev)
+  : null;
+const primaryNext = Array.isArray(pageInfo.next) && pageInfo.next.length > 0
+  ? allPages.find((p: any) => p.id === pageInfo.next[0])
+  : null;
+
+// ── Type helpers ──────────────────────────────────────────
+const isJourney = pageInfo.type === "journey";
+const isUnderstanding = pageInfo.type === "understanding";
+const isSupport = pageInfo.type === "support";
+const isSupportPlus = pageInfo.type === "support_plus";
+
+const typeLabel: Record<string, string> = {
+  journey: "路径入口",
+  understanding: "理解",
+  support: "第一步",
+  support_plus: "具体支持",
+};
+
+// ── Next steps (support/support_plus pages) ───────────────
+const nextStepsResolved = (content.next_steps ?? []).map((ns: any) => {
+  if (ns.href) return ns; // cross-path link already has href
+  const pg = allPages.find((p: any) => p.id === ns.page);
+  return pg ? { ...ns, href: `/paths/${userPath.id}/${ns.page}` } : null;
+}).filter(Boolean);
+
+// ── Breadcrumb ────────────────────────────────────────────
+const breadcrumbItems = [
+  { label: "首页", href: "/" },
+  { label: userPath.title, href: `/paths/${userPath.id}/journey` },
+  ...(isJourney ? [] : [{ label: pageInfo.title }]),
+];
+
+// ── Page SEO (from path-seo.json, fallback to one_outcome) ──
+const seoData = ((pathSeoData as any)[userPath.id] ?? {})[pageInfo.id] ?? {};
+const pageTitle = seoData.title ?? `${pageInfo.title} — ${userPath.title} — Anori`;
+const pageDesc  = seoData.description ?? pageInfo.one_outcome ?? userPath.one_sentence;
+const pageKeywords: string[] = seoData.keywords ?? [];
+---
+
+<BaseLayout title={pageTitle} description={pageDesc} keywords={pageKeywords}>
+<SiteNav />
+
+<!-- ── Top bar ────────────────────────────────────────── -->
+<div class="up-top">
+  <div class="wrap">
+    <Breadcrumb items={breadcrumbItems} />
+    <div class="up-meta">
+      <span class="up-path-label">{userPath.title}</span>
+      <span class="up-type-badge up-type-badge--{pageInfo.type}">
+        {typeLabel[pageInfo.type] ?? pageInfo.type}
+      </span>
+    </div>
+    <h1 class="up-title">{content.hero_title ?? pageInfo.title}</h1>
+    {content.hero_companion && (
+      <p class="up-companion">{content.hero_companion}</p>
+    )}
+  </div>
+</div>
+
+<!-- ── Today Box (all non-journey pages) ─────────────── -->
+{!isJourney && content.today_box && (
+  <TodayBox text={content.today_box} />
+)}
+
+<!-- ── Main layout ────────────────────────────────────── -->
+<div class="wrap up-layout">
+  <main class="up-main">
+
+    <!-- JOURNEY PAGE ─────────────────────────────────── -->
+    {isJourney && (
+      <div class="up-journey">
+
+        {/* Reframe */}
+        {content.reframe && <Reframe text={content.reframe} />}
+
+        {/* What you might feel */}
+        {content.what_you_might_feel?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">你可能正在经历的</p>
+            <ul class="up-feel-list">
+              {content.what_you_might_feel.map((item: string) => (
+                <li class="up-feel-item">{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Path map */}
+        {content.path_map?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">这条路径会带你走过</p>
+            <div class="up-path-map">
+              {content.path_map.map((step: any, i: number) => (
+                <a
+                  href={`/paths/${userPath.id}/${step.page}`}
+                  class="up-path-step"
+                >
+                  <span class="up-path-step-num">{step.step}</span>
+                  <div class="up-path-step-body">
+                    <p class="up-path-step-label">{step.label}</p>
+                    <p class="up-path-step-desc">{step.desc}</p>
+                  </div>
+                  <span class="up-path-step-arrow">→</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Support Grid */}
+        {content.support_grid && (
+          <SupportGrid
+            label={content.support_grid.label}
+            title={content.support_grid.title}
+            subtitle={content.support_grid.subtitle}
+            cards={content.support_grid.cards}
+            pathId={userPath.id}
+          />
+        )}
+
+        {/* Today box for journey */}
+        {content.today_box && (
+          <TodayBox text={content.today_box} variant="journey" />
+        )}
+
+        {/* Closing */}
+        {content.closing && <Closing text={content.closing} />}
+      </div>
+    )}
+
+    <!-- UNDERSTANDING PAGE ───────────────────────────── -->
+    {isUnderstanding && (
+      <div class="up-understanding">
+
+        {/* Reframe */}
+        {content.reframe && <Reframe text={content.reframe} />}
+
+        {/* What is AAC / core concept */}
+        {content.what_is_aac && (
+          <section class="up-section">
+            <p class="up-section-label">什么是 AAC</p>
+            <p class="up-prose">{content.what_is_aac.intro}</p>
+            {content.what_is_aac.not_only_devices && (
+              <p class="up-prose up-prose--secondary">{content.what_is_aac.not_only_devices}</p>
+            )}
+            {content.what_is_aac.types?.length > 0 && (
+              <div class="up-type-grid">
+                {content.what_is_aac.types.map((t: any) => (
+                  <div class="up-type-card">
+                    <p class="up-type-card-name">{t.name}</p>
+                    <p class="up-type-card-examples">{t.examples}</p>
+                    <p class="up-type-card-when">{t.when}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
+        {/* Common misreadings */}
+        {content.common_misreadings?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">常见误解</p>
+            <div class="up-misreadings">
+              {content.common_misreadings.map((m: any) => (
+                <div class="up-misreading-card">
+                  <p class="up-misreading-q">「{m.misreading}」</p>
+                  <p class="up-misreading-a">{m.reality}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Evidence Box */}
+        {content.evidence_box && (
+          <EvidenceBox
+            headline={content.evidence_box.headline}
+            points={content.evidence_box.points}
+            emotion_translation={content.evidence_box.emotion_translation}
+            ka_link={content.evidence_box.ka_link}
+          />
+        )}
+
+        {/* Professional Block */}
+        {content.professional_block && (
+          <ProfessionalBlock
+            if_have={content.professional_block.if_have}
+            if_not={content.professional_block.if_not}
+          />
+        )}
+
+        {/* Next Steps */}
+        <NextSteps steps={nextStepsResolved} />
+
+        {/* Closing */}
+        {content.closing && <Closing text={content.closing} />}
+      </div>
+    )}
+
+    <!-- SUPPORT / SUPPORT+ PAGES ────────────────────── -->
+    {(isSupport || isSupportPlus) && (
+      <div class="up-support">
+
+        {/* Reframe */}
+        {content.reframe && <Reframe text={content.reframe} />}
+
+        {/* Intro text */}
+        {content.first_step_intro && (
+          <p class="up-prose">{content.first_step_intro}</p>
+        )}
+
+        {/* What is (SGD / PECS intro) */}
+        {content.what_is_sgd && (
+          <p class="up-prose up-prose--secondary">{content.what_is_sgd}</p>
+        )}
+        {content.what_is_pecs && (
+          <p class="up-prose up-prose--secondary">{content.what_is_pecs}</p>
+        )}
+
+        {/* Steps */}
+        {content.steps?.length > 0 && (
+          <StepList steps={content.steps} />
+        )}
+
+        {/* Decision Box */}
+        {content.decision_box && (
+          <DecisionBox
+            can_consider={content.decision_box.can_consider}
+            wait_first={content.decision_box.wait_first}
+          />
+        )}
+
+        {/* If ready (SGD) */}
+        {content.if_ready && (
+          <section class="up-section">
+            <p class="up-section-label">{content.if_ready.title}</p>
+            <ul class="up-list">
+              {content.if_ready.items.map((item: string) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Life Moments */}
+        {content.life_moments?.length > 0 && (
+          <LifeMoments items={content.life_moments} />
+        )}
+
+        {/* Do/Don't */}
+        {content.do_dont && (
+          <DoDont
+            do={content.do_dont.do}
+            dont={content.do_dont.dont}
+          />
+        )}
+
+        {/* What teacher needs to know */}
+        {content.what_teacher_needs?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">老师需要知道的</p>
+            <div class="up-teacher-items">
+              {content.what_teacher_needs.map((item: any) => (
+                <div class="up-teacher-item">
+                  <p class="up-teacher-category">{item.category}</p>
+                  <p class="up-teacher-content">{item.content}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Conversation Starter */}
+        {content.conversation_starter && (
+          <ConversationStarter
+            title={content.conversation_starter.title}
+            text={content.conversation_starter.text}
+          />
+        )}
+
+        {/* ABC Cards */}
+        {content.abc_cards?.length > 0 && (
+          <AbcCards cards={content.abc_cards} />
+        )}
+
+        {/* State Map */}
+        {content.state_map?.length > 0 && (
+          <StateMap stages={content.state_map} />
+        )}
+
+        {/* Compare Table */}
+        {content.compare_table && (
+          <CompareTable
+            label={content.compare_table.label}
+            cols={content.compare_table.cols}
+          />
+        )}
+
+        {/* Parent Message */}
+        {content.parent_message && (
+          <ParentMessage
+            label={content.parent_message.label}
+            text={content.parent_message.text}
+          />
+        )}
+
+        {/* Possible reasons (s005) */}
+        {content.possible_reasons?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">可能的原因</p>
+            <div class="up-reasons">
+              {content.possible_reasons.map((r: any) => (
+                <div class="up-reason">
+                  <p class="up-reason-title">{r.reason}</p>
+                  <p class="up-reason-body">{r.body}</p>
+                  <p class="up-reason-todo">{r.what_to_do}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Progress Signals */}
+        {content.progress_signals && (
+          <ProgressSignals
+            title={content.progress_signals.title}
+            items={content.progress_signals.items}
+          />
+        )}
+
+        {/* What progress looks like (s006) */}
+        {content.what_progress_looks_like && (
+          <section class="up-section">
+            <p class="up-section-label">什么是真正的进步</p>
+            <p class="up-prose">{content.what_progress_looks_like.intro}</p>
+            {content.what_progress_looks_like.early_signs?.length > 0 && (
+              <div class="up-subsection">
+                <p class="up-subsection-label">早期信号</p>
+                <ul class="up-progress-signals">
+                  {content.what_progress_looks_like.early_signs.map((s: string) => (
+                    <li>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {content.what_progress_looks_like.medium_signs?.length > 0 && (
+              <div class="up-subsection">
+                <p class="up-subsection-label">中期信号</p>
+                <ul class="up-progress-signals">
+                  {content.what_progress_looks_like.medium_signs.map((s: string) => (
+                    <li>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
+
+        {/* Timeline */}
+        {content.timeline && (
+          <Timeline
+            intro={content.timeline.intro}
+            stages={content.timeline.stages}
+          />
+        )}
+
+        {/* Path Reflection */}
+        {content.path_reflection && (
+          <PathReflection
+            title={content.path_reflection.title}
+            steps={content.path_reflection.steps}
+          />
+        )}
+
+        {/* Evidence Box */}
+        {content.evidence_box && (
+          <EvidenceBox
+            headline={content.evidence_box.headline}
+            points={content.evidence_box.points}
+            emotion_translation={content.evidence_box.emotion_translation}
+            ka_link={content.evidence_box.ka_link}
+          />
+        )}
+
+        {/* Professional Block */}
+        {content.professional_block && (
+          <ProfessionalBlock
+            if_have={content.professional_block.if_have}
+            if_not={content.professional_block.if_not}
+          />
+        )}
+
+        {/* Cross-path */}
+        {content.cross_path && (
+          <CrossPath
+            label={content.cross_path.label}
+            title={content.cross_path.title}
+            desc={content.cross_path.desc}
+            href={content.cross_path.href}
+          />
+        )}
+
+        {/* Next Steps */}
+        <NextSteps steps={nextStepsResolved} />
+
+        {/* Closing */}
+        {content.closing && <Closing text={content.closing} />}
+      </div>
+    )}
+
+  </main>
+
+  <!-- ── Sidebar ────────────────────────────────────── -->
+  <aside class="up-aside">
+
+    <!-- Path progress -->
+    <div class="up-aside-card">
+      <p class="up-aside-label">你在这条路径的位置</p>
+      <ul class="up-progress-list">
+        {allPages.map((pg: any) => (
+          <li class:list={["up-progress-item", { "up-progress-item--current": pg.id === pageInfo.id }]}>
+            {pg.id === pageInfo.id ? (
+              <span>{pg.title}</span>
+            ) : (
+              <a href={`/paths/${userPath.id}/${pg.id}`}>{pg.title}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* One outcome */}
+    {pageInfo.one_outcome && (
+      <div class="up-aside-card">
+        <p class="up-aside-label">这一页完成了什么</p>
+        <p class="up-aside-outcome">{pageInfo.one_outcome}</p>
+      </div>
+    )}
+
+    {/* Navigation */}
+    <div class="up-aside-card up-aside-card--nav">
+      <p class="up-aside-label">导航</p>
+      {prevPage && (
+        <a href={`/paths/${userPath.id}/${prevPage.id}`} class="up-aside-link">
+          ← {prevPage.title}
+        </a>
+      )}
+      {primaryNext && (
+        <a href={`/paths/${userPath.id}/${primaryNext.id}`} class="up-aside-link up-aside-link--next">
+          {primaryNext.title} →
+        </a>
+      )}
+      <a href={`/paths/${userPath.id}/journey`} class="up-aside-link">回到路径入口</a>
+      <a href="/" class="up-aside-link">← 首页</a>
+    </div>
+
+  </aside>
+</div>
+
+<SiteFooter />
+</BaseLayout>
+
+
+<!-- styles in global.css -->

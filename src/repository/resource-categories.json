@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "categories": [
+    {
+      "id": "CAT-001",
+      "slug": "guidelines",
+      "label": "指南与标准",
+      "label_en": "Guidelines & Standards",
+      "description": "国际与国家级临床实践指南、诊断标准与支持框架",
+      "resource_types": [
+        "Guideline",
+        "Policy Document"
+      ],
+      "icon": null
+    },
+    {
+      "id": "CAT-002",
+      "slug": "assessment",
+      "label": "评估与筛查",
+      "label_en": "Assessment & Screening",
+      "description": "发育评估工具、筛查量表与诊断支持资源",
+      "resource_types": [
+        "Assessment / Screening",
+        "Online Tool"
+      ],
+      "icon": null
+    },
+    {
+      "id": "CAT-003",
+      "slug": "government",
+      "label": "政府资源",
+      "label_en": "Government Resources",
+      "description": "各国政府提供的官方支持资源、福利政策与服务目录",
+      "resource_types": [
+        "Government Resource",
+        "Service Directory"
+      ],
+      "icon": null
+    },
+    {
+      "id": "CAT-004",
+      "slug": "ngo",
+      "label": "非营利组织",
+      "label_en": "NGO & Nonprofits",
+      "description": "国际与地方非营利组织提供的家庭支持资源",
+      "resource_types": [
+        "NGO Resource",
+        "Parent Community"
+      ],
+      "icon": null
+    },
+    {
+      "id": "CAT-005",
+      "slug": "professional",
+      "label": "专业组织",
+      "label_en": "Professional Organizations",
+      "description": "专业协会、临床组织与继续教育资源",
+      "resource_types": [
+        "Professional Organization",
+        "Training / Course"
+      ],
+      "icon": null
+    },
+    {
+      "id": "CAT-006",
+      "slug": "research",
+      "label": "研究与循证",
+      "label_en": "Research & Evidence",
+      "description": "循证研究数据库、系统评价与研究机构",
+      "resource_types": [
+        "Research Website"
+      ],
+      "icon": null
+    },
+    {
+      "id": "CAT-007",
+      "slug": "family",
+      "label": "家庭支持",
+      "label_en": "Family Support",
+      "description": "直接面向家长和照顾者的支持资源、社群与工具",
+      "resource_types": [
+        "Parent Community",
+        "Online Tool",
+        "Book"
+      ],
+      "icon": null
+    }
+  ],
+  "countries": [
+    "International",
+    "United States",
+    "United Kingdom",
+    "Australia",
+    "Canada",
+    "Japan",
+    "China",
+    "Hong Kong",
+    "Taiwan",
+    "Singapore",
+    "New Zealand",
+    "Germany",
+    "France",
+    "Netherlands",
+    "Sweden",
+    "Other"
+  ],
+  "audiences": [
+    "Parent",
+    "Professional",
+    "Educator",
+    "Researcher",
+    "Policy Maker"
+  ],
+  "topic_tags": [
+    "ASD",
+    "ADHD",
+    "Developmental Disability",
+    "Intellectual Disability",
+    "Early Intervention",
+    "School Support",
+    "Mental Health",
+    "Family Support",
+    "Caregiver Wellbeing",
+    "Financial Support",
+    "Service Access",
+    "Community",
+    "Transition to Adulthood",
+    "Employment",
+    "Leisure",
+    "Screening",
+    "Diagnosis",
+    "Behaviour",
+    "Communication",
+    "Sensory",
+    "Sleep",
+    "Legal Rights",
+    "Policy",
+    "Research"
+  ],
+  "access_types": [
+    "free",
+    "registration",
+    "paid",
+    "mixed"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "KA-FAM-03001",
+  "canonical": "Family Functioning",
+  "zh": "家庭功能",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "definition": {
+    "anori": "家庭功能不是「好不好」，而是家庭成员是否还能共同面对生活——能不能沟通、能不能互相支持、能不能在压力来临时一起调整。它不是某一天的表现，而是一个家庭长期运作的方式。",
+    "research": "家庭在沟通、角色分工、情感支持、问题解决和适应变化等方面的整体运作状态。高功能家庭能够灵活应对压力，维持清晰的角色和边界，并在成员之间保持情感联结。",
+    "icf_alignment": "Environmental Factors (e4) > Attitudes; Activities & Participation (d7) > Interpersonal Interactions"
+  },
+  "why_it_matters": "家庭功能是整条机制主链的枢纽变量。它向上承接家庭支持的效果，向下同时影响父母压力、照顾者负担和家庭生活质量。研究一致发现，当家庭功能保持在较好水平，其他干预的效果也会显著提升；反之，功能受损的家庭即使获得了外部支持，也难以充分利用。",
+  "core_vars": [
+    {
+      "var_id": "VAR-000015",
+      "name": "家庭功能",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000002",
+      "name": "父母压力",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000003",
+      "name": "教养质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000018",
+      "name": "家庭韧性",
+      "role": "moderator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000056",
+      "summary": "非正式社会支持 → 提升家庭功能",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000057",
+      "summary": "正式专业支持 → 提升家庭功能",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000058",
+      "summary": "家庭功能 → 降低父母压力",
+      "grade": "High",
+      "direction": "KA → outcome"
+    },
+    {
+      "rel_id": "REL-000017",
+      "summary": "家庭功能 → 提升家庭生活质量",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "STR 目标：需要 SR 升级"
+    },
+    {
+      "rel_id": "REL-000048",
+      "summary": "家庭共同休闲 → 提升家庭功能",
+      "grade": "Very Low",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000016",
+      "summary": "教养质量 → 提升家庭功能",
+      "grade": "Very Low",
+      "direction": "predictor → KA",
+      "note": "STR 目标：需要文献升级"
+    },
+    {
+      "rel_id": "REL-000021",
+      "summary": "家庭功能 → 影响儿童心理健康",
+      "grade": "Very Low",
+      "direction": "KA → child outcome"
+    },
+    {
+      "rel_id": "REL-000023",
+      "summary": "家庭功能 → 提升教养质量",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "STR 目标：EVD-TODO-005"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 3,
+    "total_rel_count": 8,
+    "strongest_evidence": "Paster et al. 2009 Meta-analysis：家庭功能越好，父母压力越低，跨诊断成立",
+    "evidence_gaps": [
+      "家庭功能 → 家庭生活质量（REL-000017，Very Low，STR-EVD-TODO-004）",
+      "家庭功能 → 教养质量（REL-000023，Very Low，STR-EVD-TODO-005）",
+      "家庭功能 → 照顾者负担（尚无 REL，STR 空白）"
+    ]
+  },
+  "mechanism_chain": {
+    "description": "Family Functioning 在主链中的枢纽位置",
+    "upstream": [
+      "KA-FAM-01001 Family Support",
+      "Family Leisure",
+      "Family Resilience"
+    ],
+    "downstream": [
+      "KA-FAM-02002 Parent Stress",
+      "KA-FAM-02003 Caregiver Burden",
+      "KA-FAM-05001 Family Quality of Life",
+      "Child Participation"
+    ],
+    "diagram": "Family Support → Family Functioning → { Parent Stress ↓, Caregiver Burden ↓, Family QoL ↑, Child Participation ↑ }"
+  },
+  "domains": [
+    "沟通（Communication）",
+    "角色分工（Roles）",
+    "情感回应（Affective Responsiveness）",
+    "问题解决（Problem Solving）",
+    "行为控制（Behaviour Control）",
+    "整体功能（General Functioning）"
+  ],
+  "common_misunderstanding": [
+    "家庭功能差意味着家庭不够爱彼此（实际是压力和信息落差造成的，不是爱的缺失）",
+    "家庭功能是固定的（实际上会随支持和干预改变）",
+    "只要孩子好了家庭功能自然会恢复（实际上需要主动支持）"
+  ],
+  "measurement": {
+    "scales": [
+      "FAD（Family Assessment Device）",
+      "FACES（Family Adaptability and Cohesion Scale）",
+      "McMaster Family Functioning Model"
+    ],
+    "note": "不同量表关注维度不同，FAD 覆盖最广，FACES 侧重凝聚力和适应性"
+  },
+  "website": {
+    "page_slug": "family-relationships",
+    "related_problems": [
+      "PRB-0001",
+      "PRB-0002",
+      "PRB-0003",
+      "PRB-0014",
+      "PRB-0023"
+    ],
+    "anori_reframe": "家庭功能不是需要修复的缺陷，而是可以在支持下慢慢恢复的能力。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "为什么一家人都越来越累？",
+      "家庭功能是什么意思？",
+      "家庭关系会影响孩子吗？",
+      "为什么支持家庭比只支持孩子更重要？",
+      "家里气氛越来越差是为什么？"
+    ],
+    "answer_template": "研究发现，家庭功能是连接外部支持和家庭状态的关键环节。{evidence_card} 说明了当家庭功能改善时，照顾者压力和孩子参与度都会随之变化。"
+  },
+  "related_kas": [
+    "KA-FAM-01001",
+    "KA-FAM-02002",
+    "KA-FAM-02003",
+    "KA-FAM-05001"
+  ],
+  "related_concepts": [
+    "CON-000001",
+    "CON-000002"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，3条High grade REL，5条STR缺口已标注"
+    }
+  ]
+}

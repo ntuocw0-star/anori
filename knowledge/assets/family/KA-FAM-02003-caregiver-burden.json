@@ -1,0 +1,254 @@
+{
+  "id": "KA-FAM-02003",
+  "canonical": "Caregiver Burden",
+  "zh": "照顾者负担",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "distinction_from_parent_stress": {
+    "parent_stress": "当前感受到的压力状态——即时的、可波动的",
+    "caregiver_burden": "长期照顾造成的多维累积负荷——跨时间积累的、多领域的",
+    "relationship": "Parent Stress 持续积累会加重 Caregiver Burden；Caregiver Burden 反过来降低应对 Parent Stress 的能力"
+  },
+  "definition": {
+    "anori": "照顾者负担不只是「很累」，而是长期照顾在多个生活领域同时造成的累积消耗——包括时间和精力、情绪状态、经济资源、角色冲突（照顾者 vs 其他角色），以及持续导航服务系统的认知负荷。它不是某一天的感受，而是日积月累之后，某一天突然发现自己已经空了。",
+    "research": "照顾者在长期提供非正式照护过程中，在情绪、生理、社会、经济和时间等多个维度所经历的客观负荷（客观负担）与主观体验（主观负担）的总和。",
+    "icf_alignment": "Personal Factors; Environmental Factors (e3) > Support and Relationships; Activities & Participation (d) > Self-care"
+  },
+  "why_it_matters": "Caregiver Burden 是整条 Family Science 主链最下游的累积变量，也是干预最紧迫的切入点。它不只影响照顾者自身的健康，还通过家庭功能、教养质量和服务利用能力，间接影响孩子的发展和参与。研究一致发现，照顾者负担如果长期未获支持，会导致整个家庭系统功能性崩溃。",
+  "dimensions": [
+    {
+      "dimension": "时间负担",
+      "example": "没有自己的时间，每天被照顾任务占满"
+    },
+    {
+      "dimension": "情绪负担",
+      "example": "长期焦虑、悲伤、内疚、无助"
+    },
+    {
+      "dimension": "生理负担",
+      "example": "睡眠剥夺、慢性疲劳、健康问题"
+    },
+    {
+      "dimension": "经济负担",
+      "example": "照顾支出增加、工作时间减少"
+    },
+    {
+      "dimension": "角色冲突",
+      "example": "照顾者身份压过其他所有角色"
+    },
+    {
+      "dimension": "服务导航负担",
+      "example": "持续寻找、申请、协调服务的认知消耗"
+    },
+    {
+      "dimension": "社会隔离负担",
+      "example": "社交减少、孤独感增加"
+    }
+  ],
+  "core_vars": [
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000002",
+      "name": "父母压力",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "protective"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "protective"
+    },
+    {
+      "var_id": "VAR-000015",
+      "name": "家庭功能",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000030",
+      "name": "服务可及性",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000018",
+      "name": "家庭韧性",
+      "role": "moderator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000007",
+      "summary": "正式社会支持 → 降低照顾者负担",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000028",
+      "summary": "家庭韧性 → 降低照顾者负担",
+      "grade": "Very Low",
+      "direction": "moderator → KA"
+    },
+    {
+      "rel_id": "REL-000032",
+      "summary": "社区参与 → 降低照顾者负担",
+      "grade": "Very Low",
+      "direction": "protective → KA"
+    },
+    {
+      "rel_id": "REL-000049",
+      "summary": "家庭共同休闲 → 降低照顾者负担",
+      "grade": "Very Low",
+      "direction": "protective → KA"
+    },
+    {
+      "rel_id": "REL-000013",
+      "summary": "照顾者负担 → 限制社区参与",
+      "grade": "High",
+      "direction": "KA → outcome"
+    },
+    {
+      "rel_id": "REL-000074",
+      "summary": "父母压力 → 加重照顾者负担（累积）",
+      "grade": "Very Low",
+      "direction": "predictor → KA",
+      "note": "骨架 REL，STR Priority A"
+    },
+    {
+      "rel_id": "REL-000075",
+      "summary": "照顾者负担 → 损害家庭功能",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "骨架 REL，STR Priority A"
+    },
+    {
+      "rel_id": "REL-000076",
+      "summary": "照顾者负担 → 降低家庭生活质量",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "骨架 REL，STR Priority A"
+    },
+    {
+      "rel_id": "REL-000077",
+      "summary": "照顾者负担过重 → 降低服务利用能力",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "骨架 REL，STR Priority B"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 2,
+    "total_rel_count": 9,
+    "strongest_evidence": "REL-000007：正式社会支持降低照顾者负担（High，Dunst & Trivette Meta）；REL-000013：照顾者负担限制社区参与（High，Verdonschot SR）",
+    "evidence_gaps": [
+      "父母压力 → 照顾者负担累积路径（REL-000074，骨架，需要 SR/Longitudinal）",
+      "照顾者负担 → 家庭功能损害（REL-000075，骨架，需要 SR）",
+      "照顾者负担 → 家庭生活质量（REL-000076，骨架，需要 SR）",
+      "照顾者负担 → 服务利用能力（REL-000077，骨架，需要实证研究）"
+    ]
+  },
+  "mechanism_chain": {
+    "description": "Caregiver Burden 在主链中的累积终点位置",
+    "upstream": [
+      "KA-FAM-02002 Parent Stress",
+      "KA-FAM-03001 Family Functioning（不足）",
+      "Service Access（不足）"
+    ],
+    "downstream": [
+      "KA-FAM-05001 Family Quality of Life↓",
+      "Family Functioning↓（反馈循环）",
+      "Service Utilization↓",
+      "Child Participation↓"
+    ],
+    "core_pathway": "Family Support → Family Functioning → Parent Stress → Caregiver Burden → Family Quality of Life",
+    "feedback_loop": "Caregiver Burden → Family Functioning↓ → Parent Stress↑（恶性循环）"
+  },
+  "str_new_targets": [
+    {
+      "rel_id": "REL-000074",
+      "priority": "A",
+      "search_query": "parent stress caregiver burden accumulation longitudinal systematic review",
+      "target_type": "SR / Longitudinal"
+    },
+    {
+      "rel_id": "REL-000075",
+      "priority": "A",
+      "search_query": "caregiver burden family functioning disability systematic review",
+      "target_type": "SR"
+    },
+    {
+      "rel_id": "REL-000076",
+      "priority": "A",
+      "search_query": "caregiver burden family quality of life systematic review meta-analysis",
+      "target_type": "SR / Meta"
+    },
+    {
+      "rel_id": "REL-000077",
+      "priority": "B",
+      "search_query": "caregiver burden service access utilization disability",
+      "target_type": "实证研究 / SR"
+    }
+  ],
+  "measurement": {
+    "scales": [
+      "ZBI（Zarit Burden Interview）— 最广泛使用的照顾者负担量表",
+      "CSI（Caregiver Strain Index）",
+      "CRA（Caregiver Reaction Assessment）— 区分正负面反应",
+      "CBS（Caregiver Burden Scale）"
+    ],
+    "note": "ZBI 是黄金标准，区分主观负担（情绪）和客观负担（时间/经济），适合跨研究比较"
+  },
+  "common_misunderstanding": [
+    "照顾者负担等于不爱孩子（实际上是长期高强度投入后的必然结果）",
+    "负担重是因为照顾者不够强大（实际上是支持系统不足造成的）",
+    "只要孩子情况改善，负担自然消失（实际上累积负担需要专门支持才能恢复）",
+    "照顾者负担只影响照顾者本人（实际上通过多条路径影响整个家庭）"
+  ],
+  "website": {
+    "page_slug": "disability-services",
+    "related_problems": [
+      "PRB-0022",
+      "PRB-0021",
+      "PRB-0024"
+    ],
+    "anori_reframe": "照顾者负担不是照顾者的失败，而是长期需求与支持之间结构性失衡的必然结果。减少负担，不只是个人调整，而是需要整个支持系统介入。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "我已经照顾很久了，越来越累",
+      "照顾者负担是什么意思？",
+      "长期照顾对家长自己有什么影响？",
+      "我感觉自己快撑不住了",
+      "为什么我越来越没有力气？"
+    ],
+    "answer_template": "照顾者负担是长期照顾在多个生活领域同时造成的累积消耗。{evidence_card} 说明了哪些支持方式对减少负担最有研究支持，以及负担如何影响整个家庭。"
+  },
+  "related_kas": [
+    "KA-FAM-02002",
+    "KA-FAM-03001",
+    "KA-FAM-01001",
+    "KA-FAM-05001"
+  ],
+  "related_concepts": [
+    "CON-000002"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，2条High grade REL，4条新骨架REL，明确与Parent Stress的区分"
+    }
+  ]
+}

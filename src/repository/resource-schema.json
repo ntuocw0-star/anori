@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.2",
+  "description": "Canonical schema for a single resource entry in Anori Resource Repository",
+  "required_fields": [
+    "id",
+    "title",
+    "organization",
+    "countries",
+    "resource_type",
+    "audience",
+    "topic_tags",
+    "language",
+    "access",
+    "url",
+    "description"
+  ],
+  "fields": {
+    "id": {
+      "type": "string",
+      "format": "RES-XXXXXX",
+      "example": "RES-000001",
+      "note": "Sequential, never reused"
+    },
+    "title": {
+      "type": "string",
+      "example": "Early Intervention Services for Children with Autism",
+      "note": "Official English title preferred; add translated title in title_zh if available"
+    },
+    "title_zh": {
+      "type": "string",
+      "required": false,
+      "example": "自闭症儿童早期干预服务"
+    },
+    "organization": {
+      "type": "string",
+      "example": "Centers for Disease Control and Prevention (CDC)"
+    },
+    "organization_short": {
+      "type": "string",
+      "example": "CDC",
+      "required": false
+    },
+    "resource_type": {
+      "type": "string",
+      "values": [
+        "Guideline",
+        "Assessment / Screening",
+        "Service Directory",
+        "Research Website",
+        "Government Resource",
+        "NGO Resource",
+        "Professional Organization",
+        "Parent Community",
+        "Book",
+        "Online Tool",
+        "Training / Course",
+        "Policy Document"
+      ],
+      "example": "Guideline"
+    },
+    "audience": {
+      "type": "array",
+      "values": [
+        "Parent",
+        "Professional",
+        "Educator",
+        "Researcher",
+        "Policy Maker",
+        "Child",
+        "Young Person"
+      ],
+      "example": [
+        "Parent",
+        "Professional"
+      ]
+    },
+    "topic_tags": {
+      "type": "array",
+      "values": [
+        "ASD",
+        "ADHD",
+        "Developmental Disability",
+        "Intellectual Disability",
+        "Early Intervention",
+        "School Support",
+        "Mental Health",
+        "Family Support",
+        "Caregiver Wellbeing",
+        "Financial Support",
+        "Service Access",
+        "Community",
+        "Transition to Adulthood",
+        "Employment",
+        "Leisure",
+        "Screening",
+        "Diagnosis",
+        "Behaviour",
+        "Communication",
+        "Sensory",
+        "Sleep",
+        "Nutrition",
+        "Legal Rights",
+        "Policy",
+        "Research",
+        "Training"
+      ],
+      "example": [
+        "ASD",
+        "Early Intervention",
+        "Family Support"
+      ]
+    },
+    "language": {
+      "type": "array",
+      "values": [
+        "en",
+        "zh-CN",
+        "zh-TW",
+        "ja",
+        "ko",
+        "es",
+        "fr",
+        "de",
+        "ar",
+        "Other"
+      ],
+      "example": [
+        "en"
+      ]
+    },
+    "evidence_level": {
+      "type": "string",
+      "required": false,
+      "values": [
+        "High",
+        "Moderate",
+        "Low",
+        "Expert Consensus",
+        "Not Rated"
+      ],
+      "example": "High",
+      "note": "Only for Guideline and Assessment types"
+    },
+    "description": {
+      "type": "string",
+      "max_length": 300,
+      "example": "CDC's comprehensive guide to early signs of autism and pathways to diagnosis and support services in the United States.",
+      "note": "Plain language, parent-facing. Avoid jargon."
+    },
+    "description_zh": {
+      "type": "string",
+      "required": false,
+      "max_length": 200,
+      "example": "美国疾控中心提供的自闭症早期信号与支持服务指南。"
+    },
+    "url": {
+      "type": "string",
+      "format": "https://...",
+      "example": "https://www.cdc.gov/autism"
+    },
+    "is_free": {
+      "type": "boolean",
+      "default": true,
+      "example": true
+    },
+    "has_pdf": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "is_online_tool": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "related_pages": {
+      "type": "array",
+      "values": [
+        "health",
+        "family-relationships",
+        "values",
+        "financial-wellbeing",
+        "support-from-others",
+        "disability-services",
+        "leisure",
+        "career",
+        "community-interaction"
+      ],
+      "example": [
+        "health",
+        "disability-services"
+      ],
+      "note": "Links to Anori PAGE slugs — enables Knowledge Gateway cross-referencing"
+    },
+    "status": {
+      "type": "string",
+      "values": [
+        "Active",
+        "Deprecated",
+        "Under Review"
+      ],
+      "default": "Active"
+    },
+    "date_added": {
+      "type": "string",
+      "format": "YYYY-MM-DD",
+      "example": "2026-07-01"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "YYYY-MM-DD",
+      "required": false,
+      "example": "2026-07-01"
+    },
+    "countries": {
+      "type": "array",
+      "values": [
+        "International",
+        "United States",
+        "United Kingdom",
+        "Australia",
+        "Canada",
+        "Japan",
+        "China",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "New Zealand",
+        "Germany",
+        "France",
+        "Netherlands",
+        "Sweden",
+        "Other"
+      ],
+      "example": [
+        "United States"
+      ],
+      "note": "Array to support multi-country organizations (e.g. WHO = ['International'])"
+    },
+    "access": {
+      "type": "string",
+      "values": [
+        "free",
+        "registration",
+        "paid",
+        "mixed"
+      ],
+      "default": "free",
+      "example": "free",
+      "note": "free = no cost no account; registration = free but requires signup; paid = subscription or purchase; mixed = some free some paid"
+    },
+    "resource_intro": {
+      "type": "string",
+      "required": false,
+      "max_length": 150,
+      "example": "WHO 是联合国负责全球公共卫生的机构，制定全球健康标准与政策框架。",
+      "note": "一句话说明机构是谁，不是描述资源内容"
+    },
+    "recommendation_reason": {
+      "type": "string",
+      "required": false,
+      "max_length": 200,
+      "example": "如果你想理解孩子的发展，而不是只关注某一个问题，这份资源值得作为长期参考。",
+      "note": "Anori 推荐这条资源的理由，面向家长语言"
+    },
+    "recommendation_level": {
+      "type": "string",
+      "values": [
+        "foundational",
+        "recommended",
+        "advanced"
+      ],
+      "default": "recommended",
+      "display": {
+        "foundational": "基础阅读",
+        "recommended": "推荐阅读",
+        "advanced": "深入阅读"
+      },
+      "note": "foundational = 家长必读基础; recommended = 值得参考; advanced = 专业或深度内容"
+    }
+  },
+  "example_entry": {
+    "id": "RES-000001",
+    "title": "Learn the Signs. Act Early.",
+    "title_zh": "了解信号，及早行动",
+    "organization": "Centers for Disease Control and Prevention",
+    "organization_short": "CDC",
+    "resource_type": "Government Resource",
+    "audience": [
+      "Parent",
+      "Professional"
+    ],
+    "topic_tags": [
+      "ASD",
+      "ADHD",
+      "Developmental Disability",
+      "Early Intervention",
+      "Screening"
+    ],
+    "language": [
+      "en",
+      "es",
+      "zh-CN"
+    ],
+    "evidence_level": "High",
+    "description": "CDC's milestone tracker and early intervention resource hub for parents and caregivers. Includes free app, developmental milestone checklists, and pathways to services.",
+    "description_zh": "美国疾控中心提供的发育里程碑追踪工具和早期干预资源，含免费应用程序和里程碑检查表。",
+    "url": "https://www.cdc.gov/ncbddd/actearly/index.html",
+    "is_free": true,
+    "has_pdf": true,
+    "is_online_tool": true,
+    "related_pages": [
+      "health",
+      "disability-services"
+    ],
+    "status": "Active",
+    "date_added": "2026-07-01",
+    "last_verified": "2026-07-01",
+    "countries": [
+      "United States"
+    ],
+    "access": "free"
+  }
+}

@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import ResourceCard from "../components/ResourceCard.astro";
+import resourcesData from "../repository/resources.json";
+import categoriesData from "../repository/resource-categories.json";
+import pagesData from "../repository/pages.json";
+
+const allResources = (resourcesData as any).resources ?? [];
+const categories = (categoriesData as any).categories ?? [];
+
+// URL 参数过滤
+const topicParam = Astro.url.searchParams.get("topic") ?? "";
+const resources = topicParam
+  ? allResources.filter((r: any) =>
+      Array.isArray(r.related_pages) && r.related_pages.includes(topicParam)
+    )
+  : allResources;
+
+// 找到 topic 对应的页面名称
+const allPages = (pagesData as any).pages ?? [];
+const topicPage = topicParam ? allPages.find((p: any) => p.slug === topicParam) : null;
+const topicLabel = topicPage?.title ?? topicParam;
+
+const isEmpty = resources.length === 0 && !topicParam;
+---
+const isEmpty = resources.length === 0;
+---
+
+<BaseLayout title="资源" description="国际循证资源库 — 政府指南、NGO 支持、专业工具">
+<SiteNav active="resource" />
+
+<div class="res-page">
+  <div class="wrap">
+
+    <!-- 顶部 -->
+    <div class="res-hero">
+      <Breadcrumb items={[
+        { label: "首页", href: "/" },
+        { label: "资源", href: "/resource" },
+        ...(topicParam ? [{ label: topicLabel }] : []),
+      ]} />
+      <h1 class="res-title">{topicParam ? `${topicLabel} · 相关资源` : "资源库"}</h1>
+      <p class="res-desc">
+        {topicParam
+          ? `共 ${resources.length} 份与「${topicLabel}」相关的资源。`
+          : <>来自国际组织、政府机构和专业协会的可信资源。<br/>每一条都经过筛选，适合家长和照顾者直接使用。</>
+        }
+      </p>
+      {topicParam && (
+        <a href="/resource" class="res-clear-filter">查看全部资源 →</a>
+      )}
+    </div>
+
+    {isEmpty ? (
+      <!-- 空状态 — 内容导入中 -->
+      <div class="res-empty">
+        <div class="res-empty-inner">
+          <p class="res-empty-label">资源整理中</p>
+          <h2 class="res-empty-title">第一批资源正在整理。</h2>
+          <p class="res-empty-body">
+            我们会陆续收录来自国际组织、政府机构和专业协会的可信资源，
+            按照与 Repository 同等的质量标准逐条审核后导入。
+          </p>
+          <div class="res-empty-cats">
+            {categories.map((cat: any) => (
+              <div class="res-empty-cat">
+                <p class="res-empty-cat-name">{cat.label}</p>
+                <p class="res-empty-cat-desc">{cat.description}</p>
+              </div>
+            ))}
+          </div>
+          <p class="res-empty-note">
+            如果你知道某个优质资源还没有收录，欢迎告诉我们。
+          </p>
+        </div>
+      </div>
+    ) : (
+      <!-- 有资源时的布局 -->
+      <div class="res-layout">
+
+        <!-- 分类侧边 -->
+        <aside class="res-sidebar">
+          <p class="res-sidebar-label">资源分类</p>
+          <nav class="res-nav">
+            <a href="#" class="res-nav-item active" data-filter="all">全部资源</a>
+            {categories.map((cat: any) => (
+              <a href="#" class="res-nav-item" data-filter={cat.slug}>{cat.label}</a>
+            ))}
+          </nav>
+          <div class="res-sidebar-divider"></div>
+          <p class="res-sidebar-label">访问方式</p>
+          <nav class="res-nav">
+            <a href="#" class="res-nav-item" data-access="free">免费</a>
+            <a href="#" class="res-nav-item" data-access="registration">免费注册</a>
+            <a href="#" class="res-nav-item" data-access="all">全部</a>
+          </nav>
+        </aside>
+
+        <!-- 资源网格 -->
+        <main class="res-grid" id="res-grid">
+          {resources.map((r: any) => (
+            <ResourceCard
+              id={r.id}
+              title={r.title}
+              title_zh={r.title_zh}
+              organization={r.organization}
+              organization_short={r.organization_short}
+              countries={r.countries}
+              resource_type={r.resource_type}
+              audience={r.audience}
+              topic_tags={r.topic_tags}
+              language={r.language}
+              access={r.access}
+              description={r.description}
+              description_zh={r.description_zh}
+              url={r.url}
+              related_pages={r.related_pages}
+            />
+          ))}
+        </main>
+
+      </div>
+    )}
+
+  </div>
+</div>
+
+<SiteFooter />
+</BaseLayout>
+
+<style>
+.res-page {
+  min-height: 80vh;
+  background: #F8F6F1;
+  padding: var(--sp-20) 0 var(--sp-24);
+}
+
+/* ── 顶部 ──────────────────────────────────────────────── */
+.res-hero { margin-bottom: var(--sp-12); }
+.res-title {
+  font-size: var(--text-3xl); font-weight: 600;
+  letter-spacing: -0.03em; margin-bottom: var(--sp-3);
+}
+.res-desc { font-size: var(--text-base); color: var(--muted); line-height: 1.8; }
+.res-clear-filter {
+  display: inline-block;
+  margin-top: var(--sp-3);
+  font-size: var(--text-sm);
+  color: var(--brand);
+  font-weight: 500;
+}
+
+/* ── 空状态 ────────────────────────────────────────────── */
+.res-empty { max-width: 680px; }
+.res-empty-inner {
+  background: var(--surface-alt);
+  border: 1px solid rgba(160,148,132,0.14);
+  border-radius: 16px; padding: var(--sp-10);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+.res-empty-label {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted-lt);
+  margin-bottom: var(--sp-3);
+}
+.res-empty-title {
+  font-size: var(--text-3xl); font-weight: 600;
+  letter-spacing: -0.03em; line-height: 1.2; margin-bottom: var(--sp-4);
+}
+.res-empty-body {
+  font-size: var(--text-base); color: var(--muted);
+  line-height: 1.85; margin-bottom: var(--sp-8);
+}
+.res-empty-cats {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3); margin-bottom: var(--sp-8);
+}
+.res-empty-cat {
+  background: #FAF8F4;
+  border: 1px solid rgba(148,136,120,0.1);
+  border-radius: 8px; padding: var(--sp-4);
+}
+.res-empty-cat-name {
+  font-size: var(--text-sm); font-weight: 600;
+  color: var(--ink); margin-bottom: var(--sp-1);
+}
+.res-empty-cat-desc { font-size: var(--text-xs); color: var(--muted); line-height: 1.6; }
+.res-empty-note { font-size: var(--text-xs); color: var(--muted-lt); font-style: italic; }
+
+/* ── 有资源布局 ────────────────────────────────────────── */
+.res-layout { display: grid; grid-template-columns: 200px 1fr; gap: var(--sp-12); }
+.res-sidebar { display: flex; flex-direction: column; gap: var(--sp-2); }
+.res-sidebar-label {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted-lt);
+  margin-bottom: var(--sp-3); margin-top: var(--sp-2);
+}
+.res-sidebar-label:first-child { margin-top: 0; }
+.res-nav { display: flex; flex-direction: column; gap: 2px; }
+.res-nav-item {
+  font-size: var(--text-sm); color: var(--muted);
+  padding: var(--sp-2) var(--sp-3); border-radius: var(--radius);
+  transition: background 0.15s, color 0.15s; text-decoration: none;
+  display: block;
+}
+.res-nav-item:hover { background: rgba(148,136,120,0.08); color: var(--ink); }
+.res-nav-item.active { background: rgba(148,136,120,0.12); color: var(--ink); font-weight: 500; }
+.res-sidebar-divider { height: 1px; background: var(--border); margin: var(--sp-5) 0; }
+.res-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-5);
+}
+
+/* ── 响应式 ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .res-layout { grid-template-columns: 1fr; }
+  .res-sidebar { flex-direction: row; flex-wrap: wrap; }
+  .res-grid { grid-template-columns: 1fr; }
+  .res-empty-cats { grid-template-columns: 1fr; }
+}
+</style>

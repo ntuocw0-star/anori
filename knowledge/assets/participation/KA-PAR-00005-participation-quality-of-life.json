@@ -1,0 +1,173 @@
+{
+  "id": "KA-PAR-00005",
+  "canonical": "Participation Quality of Life",
+  "zh": "参与生活质量",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "knowledge_domain": "KD-PAR",
+  "ka_type": "core_ka",
+  "position_in_system": {
+    "role": "CP-PAR-001 的最终 Outcome 节点，也是 KD-PAR 与 KD-FAM 的反馈连接点",
+    "layer": "Core Pathway（机制层）Step 4",
+    "upstream": "KA-PAR-00003 Belonging",
+    "downstream": "KA-FAM-05001 Family Quality of Life（跨域反馈）",
+    "significance": "这是整个 KOS 第一次出现真正的跨 Domain 反馈循环，标志着 Knowledge Network 的形成"
+  },
+  "definition": {
+    "anori": "参与生活质量不是一个分数，而是孩子因为真正参与生活而获得的那种感觉——有事情可以做、有人认识自己、在某个地方有自己的位置。它不是终点，而是参与和生活之间不断相互强化的过程。",
+    "research": "个体因参与有意义的活动和社区生活而产生的主观幸福感、功能满意度和生活整体质量，整合了参与的频率、质量和归属感三个维度的长期效果。",
+    "icf_alignment": "Quality of Life（ICF 跨所有维度的综合结果）"
+  },
+  "why_it_matters": "Participation QoL 是 Participation Science 主链的最终结果变量，同时通过跨域反馈影响 Family Quality of Life（KD-FAM）。这意味着帮助孩子参与，最终不只改善孩子的生活质量，也会反过来改善整个家庭的生活质量。这是整个 KOS 第一次出现 Knowledge Network 而不只是两条平行的主链。",
+  "core_vars": [
+    {
+      "var_id": "VAR-000022",
+      "name": "生活质量",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000019",
+      "name": "归属感/幸福感",
+      "role": "upstream"
+    },
+    {
+      "var_id": "VAR-000023",
+      "name": "社区参与",
+      "role": "upstream"
+    },
+    {
+      "var_id": "VAR-000021",
+      "name": "休闲参与",
+      "role": "upstream（Context）"
+    },
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "cross_domain_outcome"
+    },
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "cross_domain_upstream_barrier"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000099",
+      "summary": "归属感 → 参与生活质量↑（主链最后一步）",
+      "grade": "High",
+      "direction": "upstream → KA"
+    },
+    {
+      "rel_id": "REL-000080",
+      "summary": "社区参与 → 生活质量↑",
+      "grade": "High",
+      "direction": "upstream → KA"
+    },
+    {
+      "rel_id": "REL-000100",
+      "summary": "休闲参与 → 参与生活质量↑（Context 贡献）",
+      "grade": "High",
+      "direction": "context → KA"
+    },
+    {
+      "rel_id": "REL-000098",
+      "summary": "参与QoL → 家庭生活质量↑（跨域反馈）",
+      "grade": "High",
+      "direction": "KA → KD-FAM",
+      "cross_domain": true
+    },
+    {
+      "rel_id": "REL-000061",
+      "summary": "休闲参与 → 生活质量↑（Badia 2013）",
+      "grade": "High",
+      "direction": "context → KA"
+    },
+    {
+      "rel_id": "REL-000101",
+      "summary": "参与QoL → 归属感强化（正向循环）",
+      "grade": "Very Low",
+      "direction": "KA → upstream（反馈）",
+      "note": "STR"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 5,
+    "total_rel_count": 6,
+    "strongest_evidence": "Badia et al. 2013（休闲参与→QoL，High）；Verdonschot 2009（社区参与→QoL，High）；REL-000078跨域反馈（High）",
+    "evidence_gaps": [
+      "参与QoL → 归属感强化的正向循环（骨架REL，STR）"
+    ]
+  },
+  "cross_domain_links": {
+    "description": "这是 KOS 第一个明确标注跨域联系的 KA",
+    "KD-FAM": {
+      "linked_ka": "KA-FAM-05001",
+      "linked_node": "Family Quality of Life",
+      "relationship": "Participation QoL → FQoL（正向反馈，REL-000098）",
+      "mechanism": "孩子参与质量提升 → 减少家庭照顾压力 → 提升家庭整体生活质量",
+      "direction": "KD-PAR → KD-FAM"
+    },
+    "KD-PAR_internal": {
+      "linked_ka": "KA-PAR-00003",
+      "linked_node": "Belonging",
+      "relationship": "双向强化：归属感→参与QoL，参与QoL→归属感",
+      "direction": "正向循环"
+    },
+    "future_domains": {
+      "KD-TRA": "Transition outcomes 将以 Participation QoL 为核心 Outcome",
+      "KD-DEV": "发展结果将汇聚到 QoL 维度"
+    }
+  },
+  "knowledge_network_note": "从这个节点开始，KOS 不再是两条平行主链，而是形成了第一个完整的跨域反馈循环：FQoL → Child Participation → Community Participation → Belonging → Participation QoL → FQoL。这个循环意味着：干预可以从任何节点进入，效果会在整个网络中传播。",
+  "common_misunderstanding": [
+    "生活质量只是主观感受，无法测量（实际上有信效度良好的量表）",
+    "提高参与频率就能提高QoL（实际上归属感和参与质量比频率更重要）",
+    "孩子的QoL和家庭QoL是独立的（实际上两者通过参与机制相互影响）",
+    "QoL只能等待孩子成长后再评估（实际上参与干预对QoL的效果在较短时间内即可测量）"
+  ],
+  "measurement": {
+    "scales": [
+      "KIDSCREEN（儿童生活质量，含参与维度）",
+      "PedsQL（儿科生活质量量表）",
+      "CPCHILD（脑瘫儿童健康与幸福感量表）",
+      "CQOL（儿童生活质量综合量表）"
+    ],
+    "note": "建议同时评估儿童自报和家长代报，两者有时存在显著差异，差异本身也有临床意义"
+  },
+  "website": {
+    "page_slug": "community-interaction",
+    "related_problems": [
+      "PRB-0016",
+      "PRB-0019",
+      "PRB-0023"
+    ],
+    "anori_reframe": "参与生活质量不是孩子达到某个标准，而是孩子因为真正参与而感到自己的生活是有意义的。这件事会反过来影响整个家庭。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "参与对孩子的生活质量有什么影响？",
+      "怎么评估孩子的生活质量？",
+      "孩子参与多了会不会让全家都好一些？",
+      "归属感和生活质量有什么关系？"
+    ],
+    "answer_template": "研究发现，参与生活质量由归属感、社区参与和休闲参与共同决定。{evidence_card} 说明了参与如何通过归属感转化为真实的生活质量改善，并反过来影响整个家庭。"
+  },
+  "related_kas": [
+    "KA-PAR-00003",
+    "KA-PAR-00002",
+    "KA-FAM-05001"
+  ],
+  "related_concepts": [
+    "CON-000001",
+    "CON-000003"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，CP-PAR-001 最终节点，首次引入 Cross-domain Links 字段，标志 KOS 从双主链升级为 Knowledge Network"
+    }
+  ]
+}

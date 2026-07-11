@@ -1,0 +1,30 @@
+---
+// C-008 Breadcrumb
+export interface Props {
+  items: Array<{ label: string; href?: string }>;
+}
+const { items } = Astro.props;
+---
+<nav aria-label="面包屑" class="breadcrumb">
+  {items.map((item, i) => (
+    <>
+      {i > 0 && <span aria-hidden="true">/</span>}
+      {item.href
+        ? <a href={item.href}>{item.label}</a>
+        : <span class="current" aria-current="page">{item.label}</span>
+      }
+    </>
+  ))}
+</nav>
+
+<style>
+.breadcrumb {
+  display: flex; gap: var(--sp-2); align-items: center;
+  font-size: var(--text-xs); color: var(--muted-lt);
+  margin-bottom: var(--sp-6);
+}
+.breadcrumb a { color: var(--muted-lt); transition: color 0.15s; }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb span { color: var(--muted-lt); }
+.breadcrumb .current { color: var(--muted); }
+</style>

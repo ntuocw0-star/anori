@@ -1,0 +1,38 @@
+---
+import type { StateMapItem } from '../../types/path';
+
+export interface Props {
+  stages: StateMapItem[];
+}
+const { stages } = Astro.props;
+---
+{stages?.length > 0 && (
+  <section class="up-section">
+    <p class="up-section-label">三个阶段，三种回应</p>
+    <div class="up-state-map">
+      {stages.map((stage: StateMapItem) => (
+        <div class={`up-state-card up-state-card--${stage.color}`}>
+          <div class="up-state-header">
+            <span class="up-state-icon">{stage.icon}</span>
+            <div>
+              <p class="up-state-name">{stage.state}</p>
+              <p class="up-state-timing">{stage.timing}</p>
+            </div>
+          </div>
+          <p class="up-state-signals-label">信号</p>
+          <p class="up-state-signals">{stage.signals}</p>
+          <div class="up-state-actions">
+            <div class="up-state-do">
+              <p class="up-state-do-label">✓ 有效</p>
+              <p class="up-state-do-text">{stage.what_works}</p>
+            </div>
+            <div class="up-state-dont">
+              <p class="up-state-dont-label">○ 避免</p>
+              <p class="up-state-dont-text">{stage.what_not}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}

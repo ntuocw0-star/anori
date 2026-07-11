@@ -1,0 +1,149 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import KnowledgeCard from "../components/KnowledgeCard.astro";
+import { varById } from "../lib/repository";
+
+const src = varById["VAR-000002"];
+const tgt = varById["VAR-000003"];
+const relationLabel = `${src?.chinese_name ?? "父母压力"} → ${tgt?.chinese_name ?? "教养质量"}`;
+---
+
+<BaseLayout
+  title="孩子遇到了什么？· Anori"
+  description="从孩子的困难出发，找到背后的家庭支持方向。"
+>
+<SiteNav active="child" />
+
+<div class="sub-hero">
+  <div class="wrap">
+    <Breadcrumb items={[{ label: "首页", href: "/" }, { label: "孩子" }]} />
+    <h1 class="sub-title">孩子遇到了什么？</h1>
+    <p class="sub-body">从孩子的困难出发，找到背后的家庭支持方向。</p>
+  </div>
+</div>
+
+<div class="wrap content">
+
+  <section class="block">
+    <p class="section-label">常见困难</p>
+    <div class="concern-grid">
+      <a href="/health" class="concern-card">
+        <p class="concern-tag">行为与情绪</p>
+        <h3 class="concern-title">孩子状态突然变化</h3>
+        <p class="concern-body">行为改变、情绪波动、找不到原因 → 健康与身心状态</p>
+      </a>
+      <a href="/disability-services" class="concern-card">
+        <p class="concern-tag">评估与干预</p>
+        <h3 class="concern-title">不知道该接受哪种服务</h3>
+        <p class="concern-body">建议太多、方向不一致 → 专业服务</p>
+      </a>
+      <a href="/community-interaction" class="concern-card">
+        <p class="concern-tag">社交</p>
+        <h3 class="concern-title">孩子在学校或社区遇到困难</h3>
+        <p class="concern-body">融入困难、被孤立 → 社会连接</p>
+      </a>
+      <a href="/leisure" class="concern-card">
+        <p class="concern-tag">日常生活</p>
+        <h3 class="concern-title">找不到孩子喜欢的活动</h3>
+        <p class="concern-body">参与困难、缺乏成功体验 → 休息与休闲</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="section-label">研究发现</p>
+    <h2 class="section-title">父母压力升高时，教养质量会下降</h2>
+    <p class="section-sub">这是研究中最稳定的发现之一</p>
+    <KnowledgeCard
+      topic="家长身心状态 × 教养方式"
+      title="当父母长期处于高压状态时，对孩子的回应会发生变化"
+      relation_label={relationLabel}
+      body="研究发现，当父母长期处于高压状态时，对孩子的回应性和教养敏感性会显著降低。这不是父母不够努力——而是压力在神经系统层面改变了我们的反应方式。纵向研究确认了这个方向：先有压力升高，之后才出现教养质量下降，而不是相反。"
+      observations={[
+        "你在疲惫时对孩子的回应，和精力充沛时有什么不同？",
+        "哪些时刻你最容易感到「失控」或「不像自己」？",
+        "压力来源里，有没有可以暂时减少的部分？",
+      ]}
+      source_summary="综合 1 项元分析、1 项纵向研究、3 项横截面研究。适用人群：特殊需求儿童的家长（学龄期）。"
+      href="/health"
+    />
+  </section>
+
+</div>
+
+<SiteFooter />
+
+<style>
+.sub-hero {
+  padding: var(--sp-16) 0 var(--sp-12);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.sub-title {
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: var(--sp-4);
+}
+.sub-body {
+  font-size: var(--text-lg);
+  color: var(--muted);
+  max-width: 480px;
+  line-height: 1.8;
+}
+.content {
+  padding-top: var(--sp-12);
+  padding-bottom: var(--sp-24);
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-16);
+}
+.concern-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+}
+@media (max-width: 640px) {
+  .concern-grid { grid-template-columns: 1fr; }
+}
+.concern-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-6);
+  color: inherit;
+  display: block;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.concern-card:hover {
+  border-color: var(--muted-lt);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.concern-tag {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+}
+.concern-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+}
+.concern-body {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.7;
+}
+</style>
+</BaseLayout>

@@ -1,0 +1,160 @@
+---
+// ResourceCard v1.1 — Anori Resource Digest
+// 主 CTA：查看整理（站内页）
+// 次 CTA：原始来源 ↗（外链）
+
+export interface Props {
+  title: string;
+  title_zh?: string;
+  organization: string;
+  organization_short?: string;
+  countries: string[];
+  resource_type: string;
+  audience: string[];
+  topic_tags: string[];
+  language: string[];
+  access: string;
+  description: string;
+  description_zh?: string;
+  url?: string;             // 兼容旧字段
+  external_url?: string;    // 原始来源
+  anori_path?: string;      // 站内整理页
+  digest_status?: string;   // pending | ready
+  id?: string;              // 资源 ID，用于构建详情页链接
+  related_pages?: string[]; // 关联知识页 slug 列表
+}
+
+const {
+  id,
+  title, title_zh,
+  organization, organization_short,
+  countries, resource_type,
+  topic_tags, language, access,
+  description, description_zh,
+  external_url, url, anori_path,
+  digest_status = "pending",
+} = Astro.props;
+
+const accessLabel: Record<string, string> = {
+  free: "免费", registration: "免费注册", paid: "付费", mixed: "部分免费",
+};
+const org = organization_short ?? organization;
+const countryType = [countries[0], resource_type].filter(Boolean).join(" · ");
+const hasChinese = language.some(l => l.startsWith("zh"));
+const destUrl = `/resource/${id}`;
+const sourceUrl = external_url ?? url ?? "#";
+const isPending = digest_status === "pending";
+---
+
+<div class="rc">
+
+  <!-- 层1: Organization -->
+  <div class="rc-org-block">
+    <p class="rc-org">{org}</p>
+    <p class="rc-org-sub">{countryType}</p>
+  </div>
+
+  <!-- 层2: Title -->
+  <div class="rc-title-block">
+    <p class="rc-title">{title_zh ?? title}</p>
+    {title_zh && <p class="rc-title-sub">{title}</p>}
+  </div>
+
+  <!-- 层3: Description -->
+  <p class="rc-desc">{description_zh ?? description}</p>
+
+  <!-- 层4: Metadata -->
+  <div class="rc-meta">
+    <div class="rc-tags">
+      {topic_tags.slice(0, 3).map(tag => (
+        <span class="rc-tag">{tag}</span>
+      ))}
+    </div>
+    <div class="rc-badges">
+      <span class="rc-badge">{accessLabel[access] ?? access}</span>
+      {hasChinese && <span class="rc-badge">中文</span>}
+    </div>
+  </div>
+
+  <!-- CTA 行 -->
+  <div class="rc-cta-row">
+    <a href={destUrl} class="rc-cta-primary">
+      {isPending ? "整理进行中" : "阅读整理 →"}
+      
+    </a>
+    <a href={sourceUrl} target="_blank" rel="noopener noreferrer" class="rc-cta-ext">
+      原始来源 ↗
+    </a>
+  </div>
+
+</div>
+
+<style>
+.rc {
+  display: flex; flex-direction: column; gap: var(--sp-4);
+  background: var(--surface-alt);
+  border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-lg); padding: var(--sp-6);
+  position: relative; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+/* 朱砂红左线 — CTA hover 时显示 */
+.rc::before {
+  content: '';
+  position: absolute; left: 10px; top: 20%; height: 60%; width: 1.5px;
+  background: rgba(185,90,72,0.85);
+  transform: scaleY(0); transform-origin: center;
+  transition: transform 0.25s ease;
+}
+.rc:hover::before { transform: scaleY(1); }
+
+/* 层1 */
+.rc-org-block { display: flex; flex-direction: column; gap: 3px; }
+.rc-org { font-size: var(--text-sm); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); }
+.rc-org-sub { font-size: 10px; color: var(--muted-lt); }
+
+/* 层2 */
+.rc-title-block { display: flex; flex-direction: column; gap: 3px; }
+.rc-title { font-size: var(--text-base); font-weight: 600; color: var(--ink); line-height: 1.4; letter-spacing: -0.01em; }
+.rc-title-sub { font-size: var(--text-xs); color: var(--muted-lt); font-style: italic; }
+
+/* 层3 */
+.rc-desc { font-size: var(--text-sm); color: var(--muted); line-height: 1.75; flex: 1; }
+
+/* 层4 */
+.rc-meta {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: var(--sp-3); flex-wrap: wrap;
+  padding-top: var(--sp-3);
+  border-top: 1px solid rgba(148,136,120,0.1);
+}
+.rc-tags { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+.rc-tag { font-size: 10px; color: var(--muted-lt); background: rgba(148,136,120,0.07); padding: 2px var(--sp-2); border-radius: var(--radius-sm); }
+.rc-badges { display: flex; gap: var(--sp-2); }
+.rc-badge { font-size: 10px; color: var(--muted-lt); background: rgba(148,136,120,0.07); padding: 2px var(--sp-2); border-radius: var(--radius-sm); }
+
+/* CTA 行 */
+.rc-cta-row {
+  display: flex; align-items: center; gap: var(--sp-4);
+  padding-top: var(--sp-3);
+  border-top: 1px solid rgba(148,136,120,0.1);
+}
+.rc-cta-primary {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--text-xs); font-weight: 600;
+  color: var(--ink); background: rgba(148,136,120,0.1);
+  padding: var(--sp-2) var(--sp-4); border-radius: var(--radius);
+  text-decoration: none; transition: background 0.15s;
+}
+.rc-cta-primary:hover { background: rgba(148,136,120,0.18); }
+.rc-pending-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(148,136,120,0.4); flex-shrink: 0;
+}
+.rc-cta-ext {
+  font-size: var(--text-xs); color: var(--muted-lt);
+  text-decoration: none; border-bottom: 1px solid var(--border);
+  transition: color 0.15s;
+}
+.rc-cta-ext:hover { color: var(--muted); border-color: var(--muted); }
+</style>

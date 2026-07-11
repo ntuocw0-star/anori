@@ -1,0 +1,71 @@
+---
+// FeedbackVote — Sprint 10 第一版
+// 仅记录本地点击状态，不接数据库
+---
+
+<div class="feedback-vote" id="feedback-vote">
+  <p class="fv-question">这页对你有帮助吗？</p>
+  <div class="fv-buttons" id="fv-buttons">
+    <button class="fv-btn" data-vote="helpful">有帮助</button>
+    <button class="fv-btn" data-vote="neutral">一般</button>
+    <button class="fv-btn" data-vote="unhelpful">没有帮助</button>
+  </div>
+  <p class="fv-thanks" id="fv-thanks" hidden>谢谢你的反馈，我们会继续改进。</p>
+</div>
+
+<script>
+  const key = "anori-feedback-" + window.location.pathname;
+  const buttons = document.getElementById("fv-buttons");
+  const thanks = document.getElementById("fv-thanks");
+
+  if (localStorage.getItem(key)) {
+    buttons?.setAttribute("hidden", "");
+    thanks?.removeAttribute("hidden");
+  }
+
+  buttons?.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    const vote = target?.dataset?.vote;
+    if (!vote) return;
+    localStorage.setItem(key, vote);
+    buttons.setAttribute("hidden", "");
+    thanks?.removeAttribute("hidden");
+  });
+</script>
+
+<style>
+.feedback-vote {
+  margin: var(--sp-16) 0 var(--sp-8);
+  padding: var(--sp-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: center;
+}
+.fv-question {
+  font-size: var(--text-base);
+  color: var(--ink);
+  margin-bottom: var(--sp-4);
+}
+.fv-buttons {
+  display: flex;
+  gap: var(--sp-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.fv-btn {
+  padding: var(--sp-2) var(--sp-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: none;
+  font-size: var(--text-sm);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.fv-btn:hover { border-color: var(--ink); }
+.fv-thanks {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+</style>

@@ -1,0 +1,156 @@
+{
+  "$schema": "Human Layer Schema v1.0",
+  "$description": "每个 KA 进入 Production Engine 时必须提供的五个人工判断字段。所有其他内容由 Engine 从 KA JSON 自动生成。",
+  "$rule": "Production Standard PS Rule 3 — Automation First",
+
+  "required_fields": {
+
+    "memorable_sentence": {
+      "type": "string",
+      "description": "家长会记住的一句话。六处锚点统一使用同一句：Parent Version 第一句 / Website Card Tagline / Popup Layer 1 / AI Core Answer / Concept Page Subtitle / Anori Reframe。",
+      "constraints": [
+        "不超过 40 字",
+        "不使用专业术语",
+        "符合 Anori Voice：不责备、不宿命感、保留改善空间",
+        "可以是重新定义（Reframe）或反直觉洞察"
+      ],
+      "examples": [
+        "参与，不只是去了那里，而是觉得自己属于那里。",
+        "参与频率不等于归属感。孩子在那里，不代表孩子属于那里。",
+        "照顾者负担不是个人失败，而是长期照顾处境中常见的结果。",
+        "家庭生活质量，不只是孩子过得好，而是整个家庭都还能继续生活。"
+      ]
+    },
+
+    "theme": {
+      "type": "string",
+      "description": "这个 KA 的核心视角，2-8 字。用于 Parent Version Headline 和内部标注。",
+      "constraints": ["2-8 字", "概括这个 KA 的核心重新框架"],
+      "examples": [
+        "类型匹配，比数量更重要",
+        "有位置，不只是在场",
+        "共同面对，而不是各自承担",
+        "理解，而不是责备"
+      ]
+    },
+
+    "citation_priority": {
+      "type": "array",
+      "items": "string",
+      "description": "AI 回答时优先引用的 REL ID，最多 3 条。排序依据：对家长影响最直接、证据等级最高、最反直觉。",
+      "constraints": [
+        "最多 3 条",
+        "必须是已存在于 rels.json 的 REL ID",
+        "优先选 High grade REL",
+        "排序：最重要的放第一"
+      ],
+      "example": ["REL-000084", "REL-000027", "REL-000013"]
+    },
+
+    "visual_config": {
+      "type": "object",
+      "description": "渲染时使用的视觉配置。决定卡片颜色和图标。",
+      "properties": {
+        "color_theme": {
+          "type": "string",
+          "enum": ["blue", "teal", "coral", "purple", "gray"],
+          "description": "卡片主色调",
+          "mapping": {
+            "blue":   "Participation / 社区 / 学校类",
+            "teal":   "Family Support / 家庭支持类",
+            "coral":  "Caregiver / 压力 / 负担类",
+            "purple": "Bridge / 跨域 / QoL 类",
+            "gray":   "Context / 情境 / 补充类"
+          }
+        },
+        "icon": {
+          "type": "string",
+          "description": "Tabler icon 名称（outline），用于卡片图标",
+          "examples": ["community", "belonging", "family", "school", "support", "stress", "quality-of-life"]
+        }
+      },
+      "required": ["color_theme", "icon"]
+    },
+
+    "voice_flags": {
+      "type": "object",
+      "description": "声明这个 KA 需要哪些额外的 Anori Voice 验证。",
+      "properties": {
+        "voice_validation": {
+          "type": "boolean",
+          "description": "true = 需要验证无责备、无宿命感、保留改善空间（情感类 KA 必须设为 true）",
+          "default": false
+        },
+        "bridge": {
+          "type": "boolean",
+          "description": "true = 连接两个以上 Knowledge Domain，需要 QA-14 Bridge Validation",
+          "default": false
+        },
+        "bridge_config": {
+          "type": "object",
+          "description": "当 bridge=true 时必须提供",
+          "properties": {
+            "connected_domains": {"type": "array", "items": "string"},
+            "bridge_rel": {"type": "string"},
+            "network_role": {"type": "string"}
+          }
+        }
+      }
+    }
+
+  },
+
+  "optional_fields": {
+
+    "related_concepts": {
+      "type": "array",
+      "description": "Layer 4 中展示的相关概念链接，3 条左右",
+      "item_schema": {
+        "zh": "中文名称",
+        "slug": "URL slug",
+        "tagline": "一句话描述关联"
+      }
+    },
+
+    "related_pages": {
+      "type": "array",
+      "description": "Layer 4 中展示的相关知识页链接",
+      "item_schema": {
+        "slug": "URL slug",
+        "zh": "页面中文名"
+      }
+    },
+
+    "sprint": {
+      "type": "string",
+      "description": "生产批次标注，例如 E3-05",
+      "example": "E3-05"
+    }
+
+  },
+
+  "example_minimal": {
+    "memorable_sentence": "参与，不只是去了那里，而是觉得自己属于那里。",
+    "theme": "有位置，不只是在场",
+    "citation_priority": ["REL-000084", "REL-000027", "REL-000013"],
+    "visual_config": {"color_theme": "blue", "icon": "community"},
+    "voice_flags": {"voice_validation": false, "bridge": false}
+  },
+
+  "example_bridge_ka": {
+    "memorable_sentence": "家庭生活质量，不只是孩子过得好，而是整个家庭都还能继续生活。",
+    "theme": "整个家庭，不只是孩子",
+    "citation_priority": ["REL-000003", "REL-000060", "REL-000027"],
+    "visual_config": {"color_theme": "purple", "icon": "family"},
+    "voice_flags": {
+      "voice_validation": true,
+      "bridge": true,
+      "bridge_config": {
+        "connected_domains": ["KD-FAM", "KD-PAR"],
+        "bridge_rel": "REL-000078",
+        "network_role": "KD-FAM 的最终 Outcome，同时是 KD-PAR 的入口驱动"
+      }
+    },
+    "sprint": "E3-04"
+  }
+}

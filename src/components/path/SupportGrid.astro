@@ -1,0 +1,29 @@
+---
+import type { SupportCard } from '../../types/path';
+
+export interface Props {
+  label?: string;
+  title: string;
+  subtitle?: string;
+  cards: SupportCard[];
+  pathId: string;
+}
+const { label = '支持方式', title, subtitle, cards, pathId } = Astro.props;
+---
+<section class="up-section">
+  <p class="up-section-label">{label}</p>
+  <p class="up-support-grid-title">{title}</p>
+  {subtitle && <p class="up-support-grid-sub">{subtitle}</p>}
+  <div class="up-support-grid">
+    {cards.map((card: SupportCard, i: number) => (
+      <a
+        href={card.page ? `/paths/${pathId}/${card.page}` : (card.href ?? '#')}
+        class={`up-sg-card up-sg-card--${i}`}
+      >
+        <span class="up-sg-icon">{card.icon}</span>
+        <p class="up-sg-title">{card.title}</p>
+        <p class="up-sg-desc">{card.desc}</p>
+      </a>
+    ))}
+  </div>
+</section>

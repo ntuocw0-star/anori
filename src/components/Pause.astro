@@ -1,0 +1,76 @@
+---
+/**
+ * Pause.astro — SUPPORT-001 Pause Component
+ *
+ * Three types (SUPPORT-001 Section 2):
+ *   type="B" — after Triggers, before Knowledge. "You are not alone."
+ *   type="A" — between two high-load blocks. Transition.
+ *   type="C" — before Journey CTA. "Today this is enough."
+ *
+ * Usage:
+ *   <Pause type="B" />
+ *   <Pause type="A" text="这是研究看到的。" />
+ *   <Pause type="C" />
+ */
+
+export interface Props {
+  type: "A" | "B" | "C";
+  text?: string; // optional override
+}
+
+const { type, text } = Astro.props;
+
+const defaults: Record<string, string> = {
+  B: "如果这些你都很熟悉，你不是一个人。",
+  A: "这是研究看到的。",
+  C: "",
+};
+
+const content = text ?? defaults[type];
+---
+
+<div class={`pause pause-${type.toLowerCase()}`} role="separator" aria-label="段落过渡">
+  <p class="pause-text">{content}</p>
+</div>
+
+<style>
+.pause {
+  margin: var(--sp-8) 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.pause-text {
+  font-size: var(--text-sm);
+  color: var(--muted-lt);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Type B: 认出家长 — slightly warmer */
+.pause-b .pause-text {
+  color: var(--muted);
+  font-size: var(--text-base);
+}
+
+/* Type A: 过渡 — neutral, minimal */
+.pause-a {
+  margin: var(--sp-6) 0;
+}
+.pause-a .pause-text {
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+}
+
+/* Type C: 结束 — slightly more space above */
+.pause-c {
+  margin-top: var(--sp-10);
+  padding-top: var(--sp-8);
+  border-top: 1px solid var(--border);
+}
+.pause-c .pause-text {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-style: italic;
+}
+</style>

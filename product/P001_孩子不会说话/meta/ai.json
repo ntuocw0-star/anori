@@ -1,0 +1,154 @@
+{
+  "path": "P001",
+  "title": "孩子不会说话",
+  "one_sentence": "不会说话不等于不会沟通。今天可以从一张图片开始。",
+  "outcome": "帮助家长从「孩子不会说话」走到「今天开始 AAC」",
+  "domain": "AAC / 辅助沟通 / PECS / SGD",
+  "pages": [
+    {
+      "id": "journey",
+      "url": "/paths/p001/journey",
+      "type": "journey",
+      "core_question": "孩子不会说话，我应该怎么帮他？",
+      "one_outcome": "知道下一步去哪里",
+      "today_action": "读「什么是 AAC？」，放下一个常见误解",
+      "applicable_when": [
+        "孩子完全不说话",
+        "孩子语言发展迟缓",
+        "孩子有沟通困难"
+      ],
+      "related_paths": [
+        "P002 孩子不会表达情绪"
+      ],
+      "safety_boundary": "本路径不提供诊断。如有严重言语障碍，建议寻求语言治疗师评估。"
+    },
+    {
+      "id": "u001",
+      "url": "/paths/p001/u001",
+      "type": "understanding",
+      "core_question": "AAC 是什么？用了会不会让孩子更不说话？",
+      "one_outcome": "理解 AAC 不是放弃语言，是通向语言",
+      "today_action": "读完这一页，放下对 AAC 的一个误解",
+      "applicable_when": [
+        "对 AAC 有顾虑",
+        "不了解辅助沟通",
+        "担心 AAC 抑制语言"
+      ],
+      "related_paths": [],
+      "safety_boundary": "AAC 不会阻碍语言发展；研究发现反而可能促进口语。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "sup001",
+      "url": "/paths/p001/sup001",
+      "type": "support",
+      "core_question": "今天应该做什么第一步？",
+      "one_outcome": "今天知道第一件事是什么",
+      "today_action": "找到孩子今天最想要的东西，准备一张图片",
+      "applicable_when": [
+        "准备开始 AAC",
+        "不知道从哪里开始"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s001",
+      "url": "/paths/p001/s001",
+      "type": "support_plus",
+      "core_question": "PECS 怎么开始？需要专业人员吗？",
+      "one_outcome": "今天做出第一张图片",
+      "today_action": "找一张孩子最喜欢的东西的图片，打印出来",
+      "applicable_when": [
+        "想从低科技 AAC 起步",
+        "没有设备",
+        "第一次尝试图片沟通"
+      ],
+      "related_paths": [
+        "P002 AAC×情绪"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s002",
+      "url": "/paths/p001/s002",
+      "type": "support_plus",
+      "core_question": "孩子适合用语音设备吗？现在就应该买吗？",
+      "one_outcome": "今天能判断 SGD 现在适不适合",
+      "today_action": "对照「可以考虑」清单，判断是否处于评估 SGD 的阶段",
+      "applicable_when": [
+        "考虑购买 AAC 设备",
+        "想了解高科技 AAC"
+      ],
+      "related_paths": [],
+      "safety_boundary": "建议在语言治疗师指导下进行 SGD 评估，不建议自行购买昂贵设备前未经评估。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s003",
+      "url": "/paths/p001/s003",
+      "type": "support_plus",
+      "core_question": "在家怎么用 AAC？需要专门的练习时间吗？",
+      "one_outcome": "今晚吃饭把工具放桌上",
+      "today_action": "今晚吃饭，把 AAC 工具放在桌上",
+      "applicable_when": [
+        "已开始使用 AAC",
+        "想把 AAC 融入日常"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s004",
+      "url": "/paths/p001/s004",
+      "type": "support_plus",
+      "core_question": "怎么让学校老师也支持 AAC？",
+      "one_outcome": "今天知道怎么给老师发第一条消息",
+      "today_action": "写一条消息给老师，告诉他孩子在家的沟通方式",
+      "applicable_when": [
+        "孩子在学校没有使用 AAC",
+        "想建立家校 AAC 一致性"
+      ],
+      "related_paths": [
+        "P004 孩子学校适应"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s005",
+      "url": "/paths/p001/s005",
+      "type": "support_plus",
+      "core_question": "孩子就是不愿意用工具，是方法不对吗？",
+      "one_outcome": "今天允许自己停下来观察",
+      "today_action": "今天先停止要求孩子使用 AAC，只是观察他什么时候想表达什么",
+      "applicable_when": [
+        "孩子拒绝使用 AAC 工具",
+        "AAC 使用遇到阻力"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s006",
+      "url": "/paths/p001/s006",
+      "type": "support_plus",
+      "core_question": "用了这么久，为什么还没有进步？",
+      "one_outcome": "知道什么是真正的进步并开始记录",
+      "today_action": "写下孩子今天用过或靠近过 AAC 工具的一次",
+      "applicable_when": [
+        "担心没有进步",
+        "想了解 AAC 进步的时间框架"
+      ],
+      "related_paths": [
+        "P002 孩子不会表达情绪"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    }
+  ]
+}

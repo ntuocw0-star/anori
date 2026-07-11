@@ -1,0 +1,1965 @@
+{
+  "meta": {
+    "version": "1.0",
+    "date": "2026-07-01",
+    "status": "Stable Release",
+    "total_active": 100,
+    "total_rejected": 1,
+    "relation_vocabulary": [
+      "increases",
+      "decreases",
+      "predicts",
+      "associated_with",
+      "mediates",
+      "moderates",
+      "enables",
+      "constrains",
+      "precedes"
+    ],
+    "schema_version": "2.0",
+    "schema_note": "evidence_timeline 字段记录 REL 的证据等级演化历史。grade 是当前最高等级，timeline 是完整演化记录。",
+    "updated": "2026-07-07"
+  },
+  "relations": [
+    {
+      "id": "REL-000001",
+      "source": "VAR-000001",
+      "relation": "increases",
+      "target": "VAR-000002",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Low",
+      "evidence_score": 37,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000002",
+      "source": "VAR-000002",
+      "relation": "decreases",
+      "target": "VAR-000003",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 37,
+      "mediator": "VAR-000005",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000003",
+      "source": "VAR-000002",
+      "relation": "decreases",
+      "target": "VAR-000004",
+      "effect_polarity": "Risk",
+      "evidence_grade": "High",
+      "evidence_score": 83,
+      "mediator": "VAR-000015",
+      "moderator": "VAR-000007",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000004",
+      "source": "VAR-000005",
+      "relation": "mediates",
+      "target": "VAR-000013",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 8,
+      "status": "Active",
+      "note": "VAR-000005 mediates VAR-000002 -> VAR-000013",
+      "evidence_last_reviewed": "2026-07-01",
+      "mediator": "VAR-000005",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000005",
+      "source": "VAR-000006",
+      "relation": "mediates",
+      "target": "VAR-000014",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "status": "Active",
+      "note": "VAR-000006 mediates VAR-000002 -> VAR-000014",
+      "evidence_last_reviewed": "2026-07-01",
+      "mediator": "VAR-000006",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000006",
+      "source": "VAR-000007",
+      "relation": "decreases",
+      "target": "VAR-000002",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 30,
+      "evidence_grade_exception": true,
+      "exception_basis": "Large-scale Meta (EC-011) — Dunst 2023, 23 studies",
+      "score_grade": "Very Low",
+      "reviewer_grade": "High",
+      "exception_reviewer": "Audit-004",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000007",
+      "source": "VAR-000008",
+      "relation": "decreases",
+      "target": "VAR-000009",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 20,
+      "evidence_grade_exception": true,
+      "exception_basis": "Large-scale Meta (EC-011) — Dunst 2022, 82 samples, 7675 participants",
+      "score_grade": "Very Low",
+      "reviewer_grade": "High",
+      "exception_reviewer": "Audit-004",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000008",
+      "source": "VAR-000011",
+      "relation": "moderates",
+      "target": "VAR-000012",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "note": "VAR-000011 moderates VAR-000010 -> VAR-000012",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "moderator": "VAR-000011",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000009",
+      "source": "VAR-000015",
+      "relation": "associated_with",
+      "target": "VAR-000016",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "moderator": "Gender",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evd_todo": "EVD-TODO-001",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000010",
+      "source": "VAR-000018",
+      "relation": "mediates",
+      "target": "VAR-000019",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "note": "VAR-000018 mediates VAR-000015 -> VAR-000019",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evd_todo": "EVD-TODO-002",
+      "mediator": "VAR-000018",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000011",
+      "source": "VAR-000020",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 29,
+      "evidence_grade_exception": true,
+      "exception_basis": "Large-scale Meta (EC-011) — Hodge et al. 2017",
+      "score_grade": "Very Low",
+      "reviewer_grade": "High",
+      "exception_reviewer": "Audit-004",
+      "mediator": "VAR-000015",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000012",
+      "source": "VAR-000021",
+      "relation": "increases",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 6,
+      "mediator": "VAR-000023",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000013",
+      "source": "VAR-000009",
+      "relation": "constrains",
+      "target": "VAR-000023",
+      "effect_polarity": "Risk",
+      "evidence_grade": "High",
+      "evidence_score": 10,
+      "evidence_grade_exception": true,
+      "exception_basis": "Large-scale Meta (EC-011) — Verdonschot et al. 2009, classic widely-cited SR",
+      "score_grade": "Very Low",
+      "reviewer_grade": "High",
+      "exception_reviewer": "Audit-004",
+      "moderator": "VAR-000007",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000014",
+      "source": "VAR-000025",
+      "relation": "constrains",
+      "target": "VAR-000023",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "mediator": "VAR-000026",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000015",
+      "source": "VAR-000027",
+      "relation": "moderates",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "moderator": "VAR-000027",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000016",
+      "source": "VAR-000003",
+      "relation": "increases",
+      "target": "VAR-000015",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 15,
+      "bidirectional_pair": "REL-000023",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evd_todo": "EVD-TODO-003",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000017",
+      "source": "VAR-000015",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Low",
+      "evidence_score": 42,
+      "moderator": "VAR-000007",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2010",
+          "grade": "Low",
+          "note": "Zuna et al. FQoL Framework：家庭功能是FQoL的核心领域，框架建立了理论路径"
+        }
+      ],
+      "primary_citation": "Zuna et al. 2010, Family Quality of Life Framework, Intellectual and Developmental Disabilities; Beach Center on Disability FQoL Scale (Turnbull et al.)",
+      "primary_citation_year": 2010,
+      "note": "家庭功能 → 家庭生活质量，FQoL Framework 核心路径，升级为 Low；待 SR 升级为 High"
+    },
+    {
+      "id": "REL-000018",
+      "source": "VAR-000005",
+      "relation": "increases",
+      "target": "VAR-000003",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 8,
+      "moderator": "VAR-000002",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000019",
+      "source": "VAR-000006",
+      "relation": "decreases",
+      "target": "VAR-000002",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000020",
+      "source": "VAR-000015",
+      "relation": "increases",
+      "target": "VAR-000017",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "mediator": "VAR-000016",
+      "moderator": "Gender",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000021",
+      "source": "VAR-000015",
+      "relation": "decreases",
+      "target": "VAR-000013",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 19,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000022",
+      "source": "VAR-000018",
+      "relation": "increases",
+      "target": "VAR-000015",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 13,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000023",
+      "source": "VAR-000015",
+      "relation": "increases",
+      "target": "VAR-000003",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 18,
+      "bidirectional_pair": "REL-000016",
+      "note": "Long-term bidirectional reinforcement. Not circular causation.",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evd_todo": "EVD-TODO-005",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000024",
+      "source": "VAR-000007",
+      "relation": "increases",
+      "target": "VAR-000018",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 30,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000025",
+      "source": "VAR-000008",
+      "relation": "enables",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 16,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000026",
+      "source": "VAR-000007",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 39,
+      "mediator": "VAR-000015",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000027",
+      "source": "VAR-000023",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 32,
+      "evidence_grade_exception": true,
+      "exception_basis": "Large-scale Meta (EC-011)",
+      "score_grade": "Very Low",
+      "reviewer_grade": "High",
+      "exception_reviewer": "Audit-004",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000028",
+      "source": "VAR-000018",
+      "relation": "decreases",
+      "target": "VAR-000009",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 13,
+      "mediator": "VAR-000015",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000029",
+      "source": "VAR-000023",
+      "relation": "increases",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 32,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "High",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000030",
+      "source": "VAR-000020",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 6,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000031",
+      "source": "VAR-000025",
+      "relation": "decreases",
+      "target": "VAR-000022",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "mediator": "VAR-000023",
+      "moderator": "Cultural context",
+      "note": "Evidence-suggested only. Do not cite as established finding.",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000032",
+      "source": "VAR-000023",
+      "relation": "decreases",
+      "target": "VAR-000009",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "status": "Rejected",
+      "rejected_reason": "Insufficient evidence for causal direction (C-004)",
+      "review_eligible": true,
+      "review_trigger": "Longitudinal or experimental evidence for Community Participation -> Caregiver Burden",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000033",
+      "source": "VAR-000030",
+      "relation": "increases",
+      "target": "VAR-000008",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 16,
+      "moderator": "VAR-000027",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000034",
+      "source": "VAR-000030",
+      "relation": "decreases",
+      "target": "VAR-000009",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 24,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000035",
+      "source": "VAR-000030",
+      "relation": "decreases",
+      "target": "VAR-000002",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 16,
+      "mediator": "VAR-000009",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000036",
+      "source": "VAR-000033",
+      "relation": "increases",
+      "target": "VAR-000002",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 27,
+      "moderator": "VAR-000027",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000037",
+      "source": "VAR-000033",
+      "relation": "decreases",
+      "target": "VAR-000004",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 19,
+      "mediator": "VAR-000002",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000038",
+      "source": "VAR-000009",
+      "relation": "increases",
+      "target": "VAR-000034",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 8,
+      "moderator": "Employment context",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000039",
+      "source": "VAR-000034",
+      "relation": "decreases",
+      "target": "VAR-000035",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 8,
+      "moderator": "Workplace flexibility",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000040",
+      "source": "VAR-000035",
+      "relation": "decreases",
+      "target": "VAR-000001",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 8,
+      "mediator": "Household income",
+      "moderator": "VAR-000027",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000041",
+      "source": "VAR-000035",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 8,
+      "mediator": "VAR-000001",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000042",
+      "source": "VAR-000036",
+      "relation": "enables",
+      "target": "VAR-000037",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 33,
+      "mediator": "CANDIDATE-VAR-002",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000043",
+      "source": "VAR-000037",
+      "relation": "increases",
+      "target": "VAR-000038",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 23,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000044",
+      "source": "VAR-000038",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 13,
+      "mediator": "VAR-000009",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000045",
+      "source": "VAR-000037",
+      "relation": "decreases",
+      "target": "VAR-000002",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 13,
+      "mediator": "VAR-000009",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000046",
+      "source": "VAR-000037",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 16,
+      "moderator": "VAR-000027",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000047",
+      "source": "VAR-000041",
+      "relation": "enables",
+      "target": "VAR-000039",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 10,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000048",
+      "source": "VAR-000039",
+      "relation": "increases",
+      "target": "VAR-000015",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 26,
+      "mediator": "VAR-000040",
+      "moderator": "Cultural background",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000049",
+      "source": "VAR-000039",
+      "relation": "decreases",
+      "target": "VAR-000009",
+      "effect_polarity": "Protective",
+      "evidence_consistency": "Moderate",
+      "evidence_grade": "Very Low",
+      "evidence_score": 3,
+      "mediator": "VAR-000015",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000050",
+      "source": "VAR-000039",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 6,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000051",
+      "source": "VAR-000040",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 26,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000052",
+      "source": "VAR-000042",
+      "relation": "increases",
+      "target": "VAR-000043",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 16,
+      "mediator": "CANDIDATE-VAR-004",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000053",
+      "source": "VAR-000044",
+      "relation": "decreases",
+      "target": "VAR-000043",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 20,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000054",
+      "source": "VAR-000043",
+      "relation": "increases",
+      "target": "VAR-000030",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 26,
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Very Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000055",
+      "source": "VAR-000043",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Low",
+      "evidence_score": 58,
+      "mediator": "VAR-000030",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-01",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-01",
+          "grade": "Low",
+          "note": "initial grade"
+        }
+      ]
+    },
+    {
+      "id": "REL-000056",
+      "source": "VAR-000007",
+      "relation": "increases",
+      "target": "VAR-000015",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 72,
+      "primary_citation": "Dunst & Trivette 2009, SR, Journal of Child and Family Studies",
+      "primary_citation_year": 2009,
+      "note": "非正式社会支持通过增强家庭功能改善照顾者状态，大规模SR",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2009",
+          "grade": "High",
+          "note": "Dunst & Trivette 2009, SR, Journal of Child and Family Studies"
+        }
+      ]
+    },
+    {
+      "id": "REL-000057",
+      "source": "VAR-000008",
+      "relation": "increases",
+      "target": "VAR-000015",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 68,
+      "primary_citation": "Cappe et al. 2011, SR, Research in Developmental Disabilities",
+      "primary_citation_year": 2011,
+      "note": "正式专业支持与家庭功能改善的关系，SR level evidence",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2011",
+          "grade": "High",
+          "note": "Cappe et al. 2011, SR, Research in Developmental Disabilities"
+        }
+      ]
+    },
+    {
+      "id": "REL-000058",
+      "source": "VAR-000015",
+      "relation": "decreases",
+      "target": "VAR-000002",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 65,
+      "primary_citation": "Paster et al. 2009, Meta-analysis, Family Relations",
+      "primary_citation_year": 2009,
+      "note": "家庭功能越好，父母压力越低，Meta-analysis跨诊断结果",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2009",
+          "grade": "High",
+          "note": "Paster et al. 2009, Meta-analysis, Family Relations"
+        }
+      ]
+    },
+    {
+      "id": "REL-000059",
+      "source": "VAR-000008",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 61,
+      "primary_citation": "Zuna et al. 2010, Family Quality of Life Framework, Intellectual and Developmental Disabilities",
+      "primary_citation_year": 2010,
+      "note": "正式支持对家庭生活质量的提升，FQoL Framework核心文献",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2010",
+          "grade": "High",
+          "note": "Zuna et al. 2010, Family Quality of Life Framework, Intellectual and Development"
+        }
+      ]
+    },
+    {
+      "id": "REL-000060",
+      "source": "VAR-000039",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 78,
+      "primary_citation": "Hodge et al. 2017, Meta-analysis, Journal of Family Theory & Review, DOI:10.1111/jftr.12202",
+      "primary_citation_year": 2017,
+      "note": "家庭共同休闲与FQoL，Meta-analysis，这批文献㉜，直接覆盖Family Leisure → FQoL",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2017",
+          "grade": "High",
+          "note": "Hodge et al. 2017, Meta-analysis, Journal of Family Theory & Review, DOI:10.1111"
+        }
+      ]
+    },
+    {
+      "id": "REL-000061",
+      "source": "VAR-000021",
+      "relation": "increases",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 66,
+      "primary_citation": "Badia et al. 2013, empirical study, Journal of Applied Research in Intellectual Disabilities, DOI:10.1111/jar.12052",
+      "primary_citation_year": 2013,
+      "note": "休闲参与与生活质量，这批文献㉘，发展障碍成人样本",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2013",
+          "grade": "High",
+          "note": "Badia et al. 2013, empirical study, Journal of Applied Research in Intellectual "
+        }
+      ]
+    },
+    {
+      "id": "REL-000062",
+      "source": "VAR-000020",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 70,
+      "primary_citation": "Badia et al. 2023, empirical study, Leisure Sciences, DOI:10.1177/17446295231168442",
+      "primary_citation_year": 2023,
+      "note": "休闲教育→适应行为→FQoL，这批文献㉕，2023最新证据",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2023",
+          "grade": "High",
+          "note": "Badia et al. 2023, empirical study, Leisure Sciences, DOI:10.1177/17446295231168"
+        }
+      ]
+    },
+    {
+      "id": "REL-000063",
+      "source": "VAR-000036",
+      "relation": "enables",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 69,
+      "primary_citation": "Lindsay et al. 2018, Systematic Review, Disability and Rehabilitation",
+      "primary_citation_year": 2018,
+      "note": "转衔干预→教育/就业/独立生活→成人参与，这批文献⑬，SR level",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2018",
+          "grade": "High",
+          "note": "Lindsay et al. 2018, Systematic Review, Disability and Rehabilitation"
+        }
+      ]
+    },
+    {
+      "id": "REL-000064",
+      "source": "VAR-000036",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 67,
+      "primary_citation": "Coñoman et al. 2024, Systematic Review, Journal of Intellectual & Developmental Disability",
+      "primary_citation_year": 2024,
+      "note": "学校到就业支持→就业准备→社区参与→成人独立，这批文献⑯，SR level",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2024",
+          "grade": "High",
+          "note": "Coñoman et al. 2024, Systematic Review, Journal of Intellectual & Developmental "
+        }
+      ]
+    },
+    {
+      "id": "REL-000065",
+      "source": "VAR-000007",
+      "relation": "increases",
+      "target": "VAR-000045",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "骨架 REL，待 Caregiver Self-efficacy 文献填入",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evd_todo": "需要 SR：Family Support → Caregiver Self-efficacy",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000066",
+      "source": "VAR-000045",
+      "relation": "increases",
+      "target": "VAR-000003",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "骨架 REL，待文献填入",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evd_todo": "需要 SR/Meta：Caregiver Self-efficacy → Parenting Quality",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000067",
+      "source": "VAR-000045",
+      "relation": "increases",
+      "target": "VAR-000015",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "骨架 REL，待文献填入",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evd_todo": "需要文献支持",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000068",
+      "source": "VAR-000046",
+      "relation": "decreases",
+      "target": "VAR-000009",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "骨架 REL，待 Meaning-making 文献填入",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evd_todo": "需要 SR：Meaning-making → Caregiver Burden",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000069",
+      "source": "VAR-000047",
+      "relation": "decreases",
+      "target": "VAR-000002",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "骨架 REL，待 Self-compassion 文献填入",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evd_todo": "需要 SR/Meta：Self-compassion → Parental Stress",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000070",
+      "source": "VAR-000048",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "骨架 REL，待 Caregiver Resilience 文献填入",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evd_todo": "需要 SR：Caregiver Resilience → FQoL",
+      "evidence_timeline": []
+    },
+    {
+      "id": "REL-000071",
+      "source": "VAR-000002",
+      "relation": "decreases",
+      "target": "VAR-000003",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "父母压力 → 降低教养质量",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 Meta-analysis/SR：Parent Stress → Parenting Quality/Capacity"
+    },
+    {
+      "id": "REL-000072",
+      "source": "VAR-000002",
+      "relation": "decreases",
+      "target": "VAR-000004",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "父母压力 → 降低家庭生活质量",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 SR：Parent Stress → Family Quality of Life"
+    },
+    {
+      "id": "REL-000073",
+      "source": "VAR-000002",
+      "relation": "decreases",
+      "target": "VAR-000023",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "父母压力 → 限制儿童社区参与",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 Longitudinal/Meta：Parent Stress → Child Participation"
+    },
+    {
+      "id": "REL-000074",
+      "source": "VAR-000002",
+      "relation": "increases",
+      "target": "VAR-000009",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Low",
+      "evidence_score": 38,
+      "note": "父母压力 → 照顾者负担，Stress Process Model 理论支持，升级为 Low；待纵向研究升级为 High",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "1992",
+          "grade": "Low",
+          "note": "Pearlin Stress Process Model：parent stress 是 caregiver burden 的直接前驱变量，经典理论框架"
+        }
+      ],
+      "evd_todo": "需要 SR/Longitudinal：Parent Stress → Caregiver Burden accumulation",
+      "primary_citation": "Pearlin et al. 1990, Stress Process Model, Gerontologist; Abidin 1992, Parenting Stress Index manual",
+      "primary_citation_year": 1992
+    },
+    {
+      "id": "REL-000075",
+      "source": "VAR-000009",
+      "relation": "decreases",
+      "target": "VAR-000015",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "照顾者负担 → 损害家庭功能",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 SR：Caregiver Burden → Family Functioning"
+    },
+    {
+      "id": "REL-000076",
+      "source": "VAR-000009",
+      "relation": "decreases",
+      "target": "VAR-000004",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Low",
+      "evidence_score": 40,
+      "note": "照顾者负担 → 家庭生活质量，间接证据升级为 Low；待专门 SR 升级为 High",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2017",
+          "grade": "Low",
+          "note": "Hodge 2017 Meta + Badia 2023：照顾者负担作为FQoL预测因子，间接证据支持"
+        }
+      ],
+      "evd_todo": "需要 SR：Caregiver Burden → Family Quality of Life",
+      "primary_citation": "Badia et al. 2023 (㉕); Hodge et al. 2017 Meta-analysis (㉜); composite from FQoL antecedent studies",
+      "primary_citation_year": 2017
+    },
+    {
+      "id": "REL-000077",
+      "source": "VAR-000009",
+      "relation": "decreases",
+      "target": "VAR-000030",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "照顾者负担过重 → 降低服务寻求和利用能力",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要实证研究：Caregiver Burden → Service Access/Utilization"
+    },
+    {
+      "id": "REL-000078",
+      "source": "VAR-000004",
+      "relation": "enables",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Low",
+      "evidence_score": 35,
+      "note": "FQoL → Child Participation，间接证据链支持，Low grade；STR保留：需要直接SR/Longitudinal升级为High",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2026-07-07",
+          "grade": "Low",
+          "note": "间接证据链升级：照顾者负担→参与受限（High）+ FQoL双向关系（High）推断 FQoL→参与促进；非直接SR，待升级"
+        }
+      ],
+      "evd_todo": "需要 SR/Longitudinal：直接证明 Family QoL → Child Community Participation（当前为间接推断）",
+      "primary_citation": "Indirect evidence chain: REL-000013 (Caregiver Burden → Participation constraint, High) + REL-000076 (Burden → FQoL↓, Low) + REL-000027 (Participation ↔ FQoL bidirectional, High)",
+      "primary_citation_year": 2009
+    },
+    {
+      "id": "REL-000079",
+      "source": "VAR-000009",
+      "relation": "decreases",
+      "target": "VAR-000004",
+      "effect_polarity": "Risk",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "照顾者负担 → 降低家庭生活质量（补全 REL-000076 的引用完整性）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "与 REL-000076 合并验证，需要 SR：Caregiver Burden → FQoL"
+    },
+    {
+      "id": "REL-000080",
+      "source": "VAR-000023",
+      "relation": "associated_with",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 71,
+      "primary_citation": "Verdonschot et al. 2009, Review, Journal of Intellectual Disability Research, DOI:10.1111/j.1365-2788.2008.01144.x",
+      "primary_citation_year": 2009,
+      "note": "社区参与与生活质量正相关，经典综述，已在 community-interaction 页面引用",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2009",
+          "grade": "High",
+          "note": "Verdonschot et al. classic review"
+        }
+      ]
+    },
+    {
+      "id": "REL-000081",
+      "source": "VAR-000004",
+      "relation": "enables",
+      "target": "VAR-000021",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "家庭生活质量 → 促进休闲参与（FQoL → Leisure Participation）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 SR/Longitudinal：Family QoL → Leisure Participation"
+    },
+    {
+      "id": "REL-000082",
+      "source": "VAR-000013",
+      "relation": "enables",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "儿童心理健康 → 促进社区参与",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 SR：Child Mental Health → Community Participation"
+    },
+    {
+      "id": "REL-000083",
+      "source": "VAR-000023",
+      "relation": "increases",
+      "target": "VAR-000019",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 64,
+      "primary_citation": "Verdonschot et al. 2009, Review, Journal of Intellectual Disability Research",
+      "primary_citation_year": 2009,
+      "note": "社区参与 → 增强归属感/幸福感，经典综述",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2009",
+          "grade": "High",
+          "note": "Verdonschot classic review"
+        }
+      ]
+    },
+    {
+      "id": "REL-000084",
+      "source": "VAR-000025",
+      "relation": "constrains",
+      "target": "VAR-000023",
+      "effect_polarity": "Risk",
+      "evidence_grade": "High",
+      "evidence_score": 58,
+      "primary_citation": "Qi et al. 2025, DOI:10.1177/00208728251335177",
+      "primary_citation_year": 2025,
+      "note": "能力主义微歧视 → 限制社区参与，2025年新证据",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2025",
+          "grade": "High",
+          "note": "Qi et al. 2025"
+        }
+      ]
+    },
+    {
+      "id": "REL-000085",
+      "source": "VAR-000023",
+      "relation": "associated_with",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 60,
+      "primary_citation": "Community Participation Model（⑰ Building a Model of Analysis）",
+      "primary_citation_year": 2020,
+      "note": "社区参与多维模型：Access/Relationships/Decision/Roles/Belonging，与FQoL关联",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2020",
+          "grade": "High",
+          "note": "Community Participation Model"
+        }
+      ]
+    },
+    {
+      "id": "REL-000086",
+      "source": "VAR-000027",
+      "relation": "moderates",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 55,
+      "primary_citation": "Kim, Park & Namkung（⑲ The Link Between Disability and Social Participation Revisited）",
+      "primary_citation_year": 2022,
+      "note": "SES 显著调节社区参与机会，参与不平等有系统性社会经济根源",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2022",
+          "grade": "High",
+          "note": "Kim et al. population study"
+        }
+      ]
+    },
+    {
+      "id": "REL-000087",
+      "source": "VAR-000039",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 62,
+      "primary_citation": "Thompson-Hodgetts et al. 2026, Disability and Rehabilitation（㉒ Community Recreation Inclusion）",
+      "primary_citation_year": 2026,
+      "note": "自闭症儿童 Community Recreation → Belonging → Participation，2026最新证据",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2026",
+          "grade": "High",
+          "note": "Thompson-Hodgetts et al. 2026"
+        }
+      ]
+    },
+    {
+      "id": "REL-000088",
+      "source": "VAR-000023",
+      "relation": "increases",
+      "target": "VAR-000013",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "社区参与 → 改善儿童心理健康（长期影响）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 Longitudinal/SR：Community Participation → Child Mental Health"
+    },
+    {
+      "id": "REL-000089",
+      "source": "VAR-000023",
+      "relation": "increases",
+      "target": "VAR-000019",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 68,
+      "primary_citation": "Inclusion, Exclusion and Isolation of Autistic People（㉓ Community Attitudes & Autistic Experience）",
+      "primary_citation_year": 2023,
+      "note": "社区态度→Belonging→Participation，自闭症社区融合研究",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2023",
+          "grade": "High",
+          "note": "Community attitudes → Belonging → Participation"
+        }
+      ]
+    },
+    {
+      "id": "REL-000090",
+      "source": "VAR-000011",
+      "relation": "increases",
+      "target": "VAR-000019",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 62,
+      "primary_citation": "Libster et al. 2025, Autism Journal（② Satisfaction with Friendship Support）",
+      "primary_citation_year": 2025,
+      "note": "友谊支持满意度→降低欺凌影响→心理健康/Belonging",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2025",
+          "grade": "High",
+          "note": "Libster et al. 2025"
+        }
+      ]
+    },
+    {
+      "id": "REL-000091",
+      "source": "VAR-000019",
+      "relation": "increases",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 65,
+      "primary_citation": "Community Participation Review: Belonging as QoL mechanism（⑰ ⑳ 综合）",
+      "primary_citation_year": 2020,
+      "note": "归属感→生活质量，跨研究一致发现",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2020",
+          "grade": "High",
+          "note": "Community participation reviews"
+        }
+      ]
+    },
+    {
+      "id": "REL-000092",
+      "source": "VAR-000025",
+      "relation": "decreases",
+      "target": "VAR-000019",
+      "effect_polarity": "Risk",
+      "evidence_grade": "High",
+      "evidence_score": 60,
+      "primary_citation": "Qi et al. 2025（㉑ Barriers: Ableist Microaggressions）",
+      "primary_citation_year": 2025,
+      "note": "能力主义微歧视→社会排斥→归属感受损",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2025",
+          "grade": "High",
+          "note": "Qi et al. 2025"
+        }
+      ]
+    },
+    {
+      "id": "REL-000093",
+      "source": "VAR-000007",
+      "relation": "increases",
+      "target": "VAR-000019",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "家庭/社区非正式支持 → 归属感（骨架）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 SR：Family/Community Support → Belonging in disability context"
+    },
+    {
+      "id": "REL-000094",
+      "source": "VAR-000010",
+      "relation": "decreases",
+      "target": "VAR-000023",
+      "effect_polarity": "Risk",
+      "evidence_grade": "High",
+      "evidence_score": 63,
+      "primary_citation": "Peer Victimization in Youth with ASD（① 文献1批次）",
+      "primary_citation_year": 2023,
+      "note": "同伴欺凌 → 降低学校/社区参与意愿",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2023",
+          "grade": "High",
+          "note": "ASD peer victimization study"
+        }
+      ]
+    },
+    {
+      "id": "REL-000095",
+      "source": "VAR-000011",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 61,
+      "primary_citation": "Carter et al. 2016, Exceptional Children（④ Peer Support Arrangements RCT）, DOI:10.1177/0014402915598780",
+      "primary_citation_year": 2016,
+      "note": "同伴支持安排（RCT）→ 学校融合参与↑，重度障碍高中生",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2016",
+          "grade": "High",
+          "note": "Carter et al. RCT"
+        }
+      ]
+    },
+    {
+      "id": "REL-000096",
+      "source": "VAR-000036",
+      "relation": "enables",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 60,
+      "primary_citation": "Strnadová et al. Primary to High School Transition SR（⑤ 文献1批次）",
+      "primary_citation_year": 2023,
+      "note": "学校转衔规划 → 学校参与持续性↑，SR level",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2023",
+          "grade": "High",
+          "note": "Strnadová et al. SR"
+        }
+      ]
+    },
+    {
+      "id": "REL-000097",
+      "source": "VAR-000008",
+      "relation": "increases",
+      "target": "VAR-000023",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "专业支持服务 → 学校参与改善（骨架）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 SR：Formal Support → School Participation in disability context"
+    },
+    {
+      "id": "REL-000098",
+      "source": "VAR-000022",
+      "relation": "increases",
+      "target": "VAR-000004",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 66,
+      "primary_citation": "Badia et al. 2023, Leisure Sciences（㉕ Leisure Education→FQoL）；Verdonschot 2009 review",
+      "primary_citation_year": 2023,
+      "note": "参与生活质量 → 反馈提升家庭生活质量（KD-PAR → KD-FAM 跨域反馈循环）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2023",
+          "grade": "High",
+          "note": "Badia 2023 + Verdonschot 2009 composite"
+        }
+      ],
+      "cross_domain": true,
+      "bridge": "KD-PAR → KD-FAM"
+    },
+    {
+      "id": "REL-000099",
+      "source": "VAR-000019",
+      "relation": "increases",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 64,
+      "primary_citation": "Verdonschot et al. 2009；Community Participation reviews（⑰ ⑳ composite）",
+      "primary_citation_year": 2020,
+      "note": "归属感 → 参与生活质量（机制主链最后一步）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2020",
+          "grade": "High",
+          "note": "Community participation reviews"
+        }
+      ]
+    },
+    {
+      "id": "REL-000100",
+      "source": "VAR-000021",
+      "relation": "increases",
+      "target": "VAR-000022",
+      "effect_polarity": "Protective",
+      "evidence_grade": "High",
+      "evidence_score": 66,
+      "primary_citation": "Badia et al. 2013, Journal of Applied Research in Intellectual Disabilities（㉘）",
+      "primary_citation_year": 2013,
+      "note": "休闲参与 → 参与生活质量↑（来自 Leisure context）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [
+        {
+          "date": "2013",
+          "grade": "High",
+          "note": "Badia et al. 2013"
+        }
+      ]
+    },
+    {
+      "id": "REL-000101",
+      "source": "VAR-000022",
+      "relation": "increases",
+      "target": "VAR-000019",
+      "effect_polarity": "Protective",
+      "evidence_grade": "Very Low",
+      "evidence_score": 0,
+      "note": "参与QoL → 强化归属感（正向循环，骨架）",
+      "status": "Active",
+      "evidence_last_reviewed": "2026-07-07",
+      "evidence_timeline": [],
+      "evd_todo": "需要 Longitudinal：Participation QoL → Belonging reinforcement"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CANDIDATE-001",
+      "proposed_source": "VAR-000030",
+      "proposed_relation": "increases",
+      "proposed_target": "VAR-000004",
+      "status": "Candidate",
+      "origin_batch": "C-005",
+      "review_trigger": "2+ longitudinal or RCT studies on direct Service Access -> FQoL"
+    },
+    {
+      "id": "CANDIDATE-002",
+      "proposed_source": "CANDIDATE-VAR-001",
+      "proposed_relation": "decreases",
+      "proposed_target": "VAR-000034",
+      "status": "Candidate",
+      "origin_batch": "C-006",
+      "review_trigger": "SR or longitudinal in disability-family flexible work context"
+    },
+    {
+      "id": "CANDIDATE-003",
+      "proposed_source": "VAR-000036",
+      "proposed_relation": "increases",
+      "proposed_target": "VAR-000035",
+      "status": "Candidate",
+      "origin_batch": "C-007",
+      "review_trigger": "SR or longitudinal linking transition planning to employment outcomes"
+    },
+    {
+      "id": "CANDIDATE-004",
+      "proposed_source": "CANDIDATE-VAR-003",
+      "proposed_relation": "constrains",
+      "proposed_target": "VAR-000039",
+      "status": "Candidate",
+      "origin_batch": "C-008",
+      "review_trigger": "SR or empirical study on leisure barriers in disability-family context"
+    },
+    {
+      "id": "CANDIDATE-005",
+      "proposed_source": "CANDIDATE-VAR-004",
+      "proposed_relation": "increases",
+      "proposed_target": "VAR-000043",
+      "status": "Candidate",
+      "origin_batch": "C-009",
+      "review_trigger": "SR or longitudinal linking organizational readiness to implementation fidelity"
+    }
+  ]
+}

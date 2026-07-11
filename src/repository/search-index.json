@@ -1,0 +1,493 @@
+{
+  "search_version": 1,
+  "generated_at": "2026-07-01",
+  "meta": {
+    "total_pages": 9,
+    "total_tags": 13,
+    "scoring": {
+      "exact_tag": 100,
+      "exact_title": 80,
+      "trigger_match": 60,
+      "subtitle_match": 40,
+      "fuzzy_title": 35,
+      "fuzzy_subtitle": 25
+    },
+    "total_knowledge": 1
+  },
+  "start_here": [
+    {
+      "id": "sh-001",
+      "title": "孩子的变化",
+      "subtitle": "孩子最近突然变了，但说不清原因。",
+      "query": "孩子突然变了",
+      "destination": "health",
+      "icon": null
+    },
+    {
+      "id": "sh-002",
+      "title": "家里的压力",
+      "subtitle": "为了孩子，家里越来越累。",
+      "query": "家里很累",
+      "destination": "financial-wellbeing",
+      "icon": null
+    },
+    {
+      "id": "sh-003",
+      "title": "不知道找谁",
+      "subtitle": "服务很多，但不知道从哪里开始。",
+      "query": "不知道找谁",
+      "destination": "disability-services",
+      "icon": null
+    }
+  ],
+  "tag_map": {
+    "压力": {
+      "slugs": [
+        "health",
+        "financial-wellbeing",
+        "support-from-others"
+      ]
+    },
+    "学校": {
+      "slugs": [
+        "health",
+        "disability-services",
+        "community-interaction"
+      ]
+    },
+    "睡眠": {
+      "slugs": [
+        "health",
+        "leisure"
+      ]
+    },
+    "服务": {
+      "slugs": [
+        "disability-services",
+        "support-from-others"
+      ]
+    },
+    "经济": {
+      "slugs": [
+        "financial-wellbeing",
+        "career"
+      ]
+    },
+    "情绪": {
+      "slugs": [
+        "health",
+        "family-relationships"
+      ]
+    },
+    "家庭关系": {
+      "slugs": [
+        "family-relationships",
+        "values"
+      ]
+    },
+    "孤独": {
+      "slugs": [
+        "community-interaction",
+        "support-from-others"
+      ]
+    },
+    "工作": {
+      "slugs": [
+        "career",
+        "financial-wellbeing"
+      ]
+    },
+    "休息": {
+      "slugs": [
+        "leisure",
+        "health"
+      ]
+    },
+    "争吵": {
+      "slugs": [
+        "family-relationships"
+      ]
+    },
+    "焦虑": {
+      "slugs": [
+        "health",
+        "support-from-others"
+      ]
+    },
+    "支持": {
+      "slugs": [
+        "support-from-others",
+        "disability-services"
+      ]
+    },
+    "AAC": {
+      "slugs": [],
+      "ka_ids": [
+        "KA-000001"
+      ]
+    },
+    "辅助沟通": {
+      "slugs": [],
+      "ka_ids": [
+        "KA-000001"
+      ]
+    },
+    "家长支持": {
+      "slugs": [],
+      "ka_ids": [
+        "KA-000001"
+      ]
+    }
+  },
+  "index": [
+    {
+      "type": "page",
+      "slug": "health",
+      "title": "健康",
+      "subtitle": "身心状态的不确定性",
+      "trigger": "孩子突然变了",
+      "triggers": [
+        "孩子突然变了",
+        "最近特别容易哭",
+        "最近特别容易发脾气",
+        "突然不愿意出门",
+        "最近总说肚子痛",
+        "最近睡不好",
+        "最近一直很累",
+        "最近吃得特别少",
+        "最近一直生病",
+        "不知道是不是身体原因",
+        "突然没有精神",
+        "最近越来越没有力气",
+        "最近一直喊痛",
+        "不知道是不是健康问题"
+      ],
+      "tags": [
+        "健康"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 10,
+      "related": [
+        "leisure",
+        "support-from-others",
+        "disability-services"
+      ],
+      "keywords": "健康 身心状态的不确定性 孩子突然变了 最近特别容易哭 最近特别容易发脾气 突然不愿意出门 最近总说肚子痛 最近睡不好 最近一直很累 最近吃得特别少 最近一直生病 不知道是不是身体原因 突然没有精神 最近越来越没有力气 最近一直喊痛 不知道是不是健康问题"
+    },
+    {
+      "type": "page",
+      "slug": "family-relationships",
+      "title": "家庭关系",
+      "subtitle": "冲突与分工结构",
+      "trigger": "家里气氛越来越差",
+      "triggers": [
+        "家里气氛越来越差",
+        "最近总是吵架",
+        "不知道怎么沟通",
+        "孩子一说话就生气",
+        "家人不理解我",
+        "夫妻意见总是不一样",
+        "照顾孩子总是争执",
+        "感觉没人理解",
+        "不知道怎么和孩子说",
+        "家里越来越沉默",
+        "沟通越来越困难",
+        "关系越来越紧张",
+        "不知道该怎么开口",
+        "一家人都很累"
+      ],
+      "tags": [
+        "家庭关系"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 9,
+      "related": [
+        "values",
+        "support-from-others",
+        "leisure"
+      ],
+      "keywords": "家庭关系 冲突与分工结构 家里气氛越来越差 最近总是吵架 不知道怎么沟通 孩子一说话就生气 家人不理解我 夫妻意见总是不一样 照顾孩子总是争执 感觉没人理解 不知道怎么和孩子说 家里越来越沉默 沟通越来越困难 关系越来越紧张 不知道该怎么开口 一家人都很累"
+    },
+    {
+      "type": "page",
+      "slug": "values",
+      "title": "价值观",
+      "subtitle": "自我照顾、信念与长期坚持",
+      "trigger": "一直都是我在照顾",
+      "triggers": [
+        "一直都是我在照顾",
+        "没人帮我",
+        "照顾孩子太累了",
+        "没有自己的时间",
+        "一直放不下",
+        "不知道还能坚持多久",
+        "总觉得很疲惫",
+        "已经忘记照顾自己",
+        "一直都是我负责",
+        "照顾压力很大",
+        "需要有人分担",
+        "我是不是应该再坚持",
+        "不知道自己还撑不撑得住",
+        "感觉失去了自己"
+      ],
+      "tags": [
+        "价值观"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 8,
+      "related": [
+        "family-relationships",
+        "disability-services"
+      ],
+      "keywords": "价值观 自我照顾、信念与长期坚持 一直都是我在照顾 没人帮我 照顾孩子太累了 没有自己的时间 一直放不下 不知道还能坚持多久 总觉得很疲惫 已经忘记照顾自己 一直都是我负责 照顾压力很大 需要有人分担 我是不是应该再坚持 不知道自己还撑不撑得住 感觉失去了自己"
+    },
+    {
+      "type": "page",
+      "slug": "financial-wellbeing",
+      "title": "经济",
+      "subtitle": "经济压力与家庭选择",
+      "trigger": "钱不够怎么办",
+      "triggers": [
+        "钱不够怎么办",
+        "经济压力很大",
+        "治疗太贵了",
+        "不知道先做哪个",
+        "负担越来越重",
+        "请假成本太高",
+        "没办法一直陪孩子",
+        "不知道有没有补助",
+        "一直担心费用",
+        "不知道还能坚持多久",
+        "经济压力影响家庭",
+        "工作和孩子顾不过来",
+        "资源有限怎么办",
+        "不知道怎么选择"
+      ],
+      "tags": [
+        "经济"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 7,
+      "related": [
+        "career",
+        "support-from-others",
+        "family-relationships"
+      ],
+      "keywords": "经济 经济压力与家庭选择 钱不够怎么办 经济压力很大 治疗太贵了 不知道先做哪个 负担越来越重 请假成本太高 没办法一直陪孩子 不知道有没有补助 一直担心费用 不知道还能坚持多久 经济压力影响家庭 工作和孩子顾不过来 资源有限怎么办 不知道怎么选择"
+    },
+    {
+      "type": "page",
+      "slug": "support-from-others",
+      "title": "外部支持",
+      "subtitle": "资源结构",
+      "trigger": "不知道找谁帮忙",
+      "triggers": [
+        "不知道找谁帮忙",
+        "没人可以帮我",
+        "感觉只有我一个人",
+        "不知道有哪些资源",
+        "不知道哪里可以求助",
+        "家里没人理解",
+        "想找人聊聊",
+        "需要一点帮助",
+        "不知道有哪些支持",
+        "一直都是自己撑着",
+        "不知道有没有人可以帮忙",
+        "想找社区资源",
+        "需要家庭支持",
+        "需要外部支持"
+      ],
+      "tags": [
+        "外部支持"
+      ],
+      "synonyms": [],
+      "category": "resources",
+      "priority": 6,
+      "related": [
+        "health",
+        "community-interaction",
+        "disability-services"
+      ],
+      "keywords": "外部支持 资源结构 不知道找谁帮忙 没人可以帮我 感觉只有我一个人 不知道有哪些资源 不知道哪里可以求助 家里没人理解 想找人聊聊 需要一点帮助 不知道有哪些支持 一直都是自己撑着 不知道有没有人可以帮忙 想找社区资源 需要家庭支持 需要外部支持"
+    },
+    {
+      "type": "page",
+      "slug": "disability-services",
+      "title": "专业服务",
+      "subtitle": "系统交互",
+      "trigger": "不知道该找谁",
+      "triggers": [
+        "不知道该找谁",
+        "不知道应该看什么",
+        "需要帮助",
+        "不知道下一步怎么办",
+        "已经试了很多方法",
+        "不知道找哪个专业",
+        "到底该去哪里",
+        "不知道该问谁",
+        "已经撑了很久",
+        "不知道什么时候该求助",
+        "家里越来越困难",
+        "不知道怎么办了",
+        "需要有人一起想办法",
+        "感觉已经没有方向"
+      ],
+      "tags": [
+        "专业服务"
+      ],
+      "synonyms": [],
+      "category": "resources",
+      "priority": 5,
+      "related": [
+        "support-from-others",
+        "health",
+        "financial-wellbeing"
+      ],
+      "keywords": "专业服务 系统交互 不知道该找谁 不知道应该看什么 需要帮助 不知道下一步怎么办 已经试了很多方法 不知道找哪个专业 到底该去哪里 不知道该问谁 已经撑了很久 不知道什么时候该求助 家里越来越困难 不知道怎么办了 需要有人一起想办法 感觉已经没有方向"
+    },
+    {
+      "type": "page",
+      "slug": "leisure",
+      "title": "休息",
+      "subtitle": "恢复机制",
+      "trigger": "最近真的很累",
+      "triggers": [
+        "最近真的很累",
+        "家里一直很累",
+        "孩子睡不好",
+        "我也睡不好",
+        "每天都很累",
+        "一点小事就受不了",
+        "家里没有安静的时候",
+        "感觉一直在撑着",
+        "没有时间休息",
+        "孩子晚上总醒",
+        "我快撑不住了",
+        "不知道怎么休息",
+        "想让家里轻一点",
+        "每天都像在耗着"
+      ],
+      "tags": [
+        "休息"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 4,
+      "related": [
+        "health",
+        "career",
+        "family-relationships"
+      ],
+      "keywords": "休息 恢复机制 最近真的很累 家里一直很累 孩子睡不好 我也睡不好 每天都很累 一点小事就受不了 家里没有安静的时候 感觉一直在撑着 没有时间休息 孩子晚上总醒 我快撑不住了 不知道怎么休息 想让家里轻一点 每天都像在耗着"
+    },
+    {
+      "type": "page",
+      "slug": "career",
+      "title": "工作",
+      "subtitle": "工作、时间与照顾的平衡",
+      "trigger": "工作和孩子顾不过来",
+      "triggers": [
+        "工作和孩子顾不过来",
+        "不知道怎么平衡工作",
+        "请假太多",
+        "工作影响家庭",
+        "家庭影响工作",
+        "时间总是不够",
+        "每天都很赶",
+        "工作压力越来越大",
+        "不知道还能坚持多久",
+        "一直觉得来不及",
+        "没有自己的时间",
+        "照顾和工作冲突",
+        "不知道怎么安排时间",
+        "每天都在赶时间"
+      ],
+      "tags": [
+        "工作"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 3,
+      "related": [
+        "financial-wellbeing",
+        "leisure",
+        "family-relationships"
+      ],
+      "keywords": "工作 工作、时间与照顾的平衡 工作和孩子顾不过来 不知道怎么平衡工作 请假太多 工作影响家庭 家庭影响工作 时间总是不够 每天都很赶 工作压力越来越大 不知道还能坚持多久 一直觉得来不及 没有自己的时间 照顾和工作冲突 不知道怎么安排时间 每天都在赶时间"
+    },
+    {
+      "type": "page",
+      "slug": "community-interaction",
+      "title": "社会连接",
+      "subtitle": "社区、学校与日常连接",
+      "trigger": "不知道怎么面对学校",
+      "triggers": [
+        "不知道怎么面对学校",
+        "不知道怎么和老师沟通",
+        "想重新回到生活",
+        "不知道怎么重新开始",
+        "感觉越来越孤单",
+        "想认识其他家庭",
+        "社区有没有资源",
+        "不知道哪里有人理解",
+        "想重新参加活动",
+        "不知道怎么融入",
+        "想让生活恢复正常",
+        "不知道怎么面对别人",
+        "重新开始生活",
+        "希望有人同行"
+      ],
+      "tags": [
+        "社会连接"
+      ],
+      "synonyms": [],
+      "category": "family",
+      "priority": 2,
+      "related": [
+        "support-from-others",
+        "leisure",
+        "family-relationships"
+      ],
+      "keywords": "社会连接 社区、学校与日常连接 不知道怎么面对学校 不知道怎么和老师沟通 想重新回到生活 不知道怎么重新开始 感觉越来越孤单 想认识其他家庭 社区有没有资源 不知道哪里有人理解 想重新参加活动 不知道怎么融入 想让生活恢复正常 不知道怎么面对别人 重新开始生活 希望有人同行"
+    },
+    {
+      "type": "知识",
+      "id": "KA-000001",
+      "title": "为什么很多家长坚持不下去？",
+      "subtitle": "不是意志力的问题，而是系统给的支撑不够",
+      "body": "研究发现，决定家长能否坚持使用 AAC 的，主要不是意志力，而是支持系统是否在场。专业支持断裂、家校词汇不一致、家长角色过载，是最常见的三个原因。",
+      "href": "/knowledge/ka-000001",
+      "tags": [
+        "AAC",
+        "辅助沟通",
+        "家长支持",
+        "坚持",
+        "家校协作"
+      ],
+      "triggers": [
+        "为什么坚持不下去",
+        "试过 AAC 但孩子不用",
+        "学校用 AAC 但家里不知道怎么配合",
+        "感觉撑不住了",
+        "专业人员不再跟进",
+        "AAC 开始了但停下来了"
+      ],
+      "related_path": [
+        "p001",
+        "p004",
+        "p006"
+      ],
+      "related_ea": [
+        "EA-000001"
+      ],
+      "evidence_level": "High",
+      "priority": 8,
+      "summary": "研究发现，决定家长能否坚持使用 AAC 的，主要不是意志力，而是支持系统是否在场。专业支持断裂、家校词汇不一致、家长角色过载，是最常见的三个原因。",
+      "keywords": "为什么很多家长坚持不下去？ 不是意志力的问题，而是系统给的支撑不够 研究发现，决定家长能否坚持使用 AAC 的，主要不是意志力，而是支持系统是否在场。专业支持断裂、家校词汇不一致、家长角色过载，是最常见的三个原因。 为什么坚持不下去 试过 AAC 但孩子不用 学校用 AAC 但家里不知道怎么配合 感觉撑不住了 专业人员不再跟进 AAC 开始了但停下来了"
+    }
+  ]
+}

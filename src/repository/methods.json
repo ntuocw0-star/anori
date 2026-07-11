@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "version": "1.1",
+    "created": "2026-07-06",
+    "description": "Method Library v1.0 — Anori 家长思考方法库",
+    "rule": "Method 不提供答案，只提供帮助思考的方法。语气：很多时候/可以先/往往/通常。禁止：应该/必须/最好。",
+    "updated": "2026-07-07",
+    "first_step_rule": "一句话，15～30字，今天就能开始，不带命令语气，不说应该/必须，不要求结果，只帮助迈出第一步。"
+  },
+  "methods": [
+    {
+      "id": "MTH-0001",
+      "name": "先观察，再判断",
+      "core_message": "很多时候，先理解发生了什么，比急着找到答案更重要。",
+      "description": "当家长不确定发生了什么时，最有价值的第一步不是找答案，而是先记录变化。",
+      "when_to_use": "当你担心孩子某个变化，但还不知道是否需要专业评估时。",
+      "first_step": "今天可以先记录两次孩子出现这种情况前发生了什么。",
+      "related_pages": [
+        "health",
+        "family-relationships"
+      ],
+      "related_resources": [
+        "RES-000002",
+        "RES-000017"
+      ],
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0008"
+      ]
+    },
+    {
+      "id": "MTH-0002",
+      "name": "关注变化，不关注标签",
+      "core_message": "孩子的一个行为不代表全部，变化的过程比某一刻的表现更重要。",
+      "description": "观察孩子时，往往比单一行为更有价值的，是一段时间内的变化趋势。",
+      "when_to_use": "当你开始担心孩子是否有某种情况，或者面对他人的判断时。",
+      "first_step": "今天先留意有没有和以前不一样的地方，不急着下结论。",
+      "related_pages": [
+        "health",
+        "values"
+      ],
+      "related_resources": [
+        "RES-000001",
+        "RES-000016"
+      ],
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0007"
+      ]
+    },
+    {
+      "id": "MTH-0003",
+      "name": "先理解，再行动",
+      "core_message": "在采取行动之前，先花时间理解情况，通常能减少走弯路的次数。",
+      "description": "很多时候，家长面对的困难不是缺少行动，而是还没有弄清楚问题的全貌。",
+      "when_to_use": "当你感到需要立刻做点什么，但还不清楚从哪里开始时。",
+      "first_step": "今天先试着描述发生了什么，再想下一步要不要调整。",
+      "related_pages": [
+        "disability-services",
+        "support-from-others"
+      ],
+      "related_resources": [
+        "RES-000020",
+        "RES-000024"
+      ],
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0004"
+      ]
+    },
+    {
+      "id": "MTH-0004",
+      "name": "一次解决一个问题",
+      "core_message": "同时面对所有问题会让人瘫痪，先选一个最影响日常生活的，从这里开始。",
+      "description": "把所有问题列出来之后，可以先问自己：哪一个，如果解决了，会让其他事情也变得容易一点？",
+      "when_to_use": "当你感到被很多事情同时压着，不知道先处理哪一件时。",
+      "first_step": "今天先挑一个最困扰你的情况，其他先放一放。",
+      "related_pages": [
+        "financial-wellbeing",
+        "career"
+      ],
+      "related_resources": [
+        "RES-000025",
+        "RES-000044"
+      ],
+      "related_methods": [
+        "MTH-0003",
+        "MTH-0006"
+      ]
+    },
+    {
+      "id": "MTH-0005",
+      "name": "支持家庭，而不是只支持孩子",
+      "core_message": "孩子不会脱离家庭成长，支持家庭，也是支持孩子。",
+      "description": "照顾者的状态，往往直接影响孩子能获得的支持质量。家庭是一个整体，不是只有孩子需要被照顾。",
+      "when_to_use": "当你觉得自己应该把所有注意力放在孩子身上，而忽略了自己或其他家庭成员的需求时。",
+      "first_step": "今天也留一点时间关注自己的状态，不一定只关注孩子。",
+      "related_pages": [
+        "family-relationships",
+        "leisure",
+        "values"
+      ],
+      "related_resources": [
+        "RES-000029",
+        "RES-000033"
+      ],
+      "related_methods": [
+        "MTH-0004",
+        "MTH-0006"
+      ]
+    },
+    {
+      "id": "MTH-0006",
+      "name": "优先寻找可以改变的事情",
+      "core_message": "先从今天能够做到的一件事开始，通常比等待最好的答案更容易。",
+      "description": "不是所有情况都可以立刻改变，但往往总有一件事是今天可以开始的。从那里开始，通常比等待完整的解决方案更有效。",
+      "when_to_use": "当你感到情况很难改变，或者不知道能做什么时。",
+      "first_step": "今天先找一件你现在就能尝试调整的小事情。",
+      "related_pages": [
+        "support-from-others",
+        "community-interaction"
+      ],
+      "related_resources": [
+        "RES-000009",
+        "RES-000045"
+      ],
+      "related_methods": [
+        "MTH-0004",
+        "MTH-0007"
+      ]
+    },
+    {
+      "id": "MTH-0007",
+      "name": "长期比一次更重要",
+      "core_message": "真正帮助理解变化的，通常不是一次结果，而是持续的观察。",
+      "description": "一次评估、一次谈话、一次观察，往往不足以反映真实情况。持续关注同一件事，通常比一次深入更有价值。",
+      "when_to_use": "当你刚完成一次评估或咨询，想知道接下来该怎么办时。",
+      "first_step": "今天先完成一次记录，比一次做到很多更重要。",
+      "related_pages": [
+        "health",
+        "family-relationships"
+      ],
+      "related_resources": [
+        "RES-000017",
+        "RES-000018"
+      ],
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0008"
+      ]
+    },
+    {
+      "id": "MTH-0008",
+      "name": "记录比记忆更可靠",
+      "core_message": "记录不是为了分析，而是为了让重要的变化不会被遗忘。",
+      "description": "家长长期观察到的细节，往往是专业人员最需要、也最难从单次见面中获得的信息。把它写下来，通常比事后回忆更准确。",
+      "when_to_use": "当你准备和医生、老师或专业人员谈话，或者想整理自己的观察时。",
+      "first_step": "今天把观察到的一件事情写下来，哪怕只有一句话。",
+      "related_pages": [
+        "health",
+        "disability-services"
+      ],
+      "related_resources": [
+        "RES-000002",
+        "RES-000020"
+      ],
+      "related_methods": [
+        "MTH-0001",
+        "MTH-0007"
+      ]
+    }
+  ]
+}

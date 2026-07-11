@@ -1,0 +1,22 @@
+{
+  "name": "anori",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "predev": "node scripts/build-evidence-index.mjs",
+    "dev": "astro dev",
+    "prebuild": "node scripts/build-evidence-index.mjs",
+    "build": "astro build",
+    "postbuild": "node scripts/build-bundle-pdfs.mjs && node scripts/validate-repository.mjs",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^4.16.0",
+    "puppeteer": "^25.3.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.5.0"
+  }
+}

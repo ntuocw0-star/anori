@@ -1,0 +1,111 @@
+---
+/**
+ * pages/concepts/[ka].astro
+ * Anori — Concept Page
+ * 路由：/concepts/community-participation、/concepts/belonging 等
+ *
+ * 数据来源：knowledge/PROD-KA-*.json
+ * 渲染：KAConceptCard.astro（五层 Progressive Disclosure）
+ */
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import KAConceptCard from "../../components/knowledge/KAConceptCard.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+// 静态路径生成：从 PROD JSON 文件列表建立路由
+export async function getStaticPaths() {
+  // 在真实项目中，用 import.meta.glob 读取所有 PROD-KA-*.json
+  // import.meta.glob('../../../knowledge/PROD-KA-*.json', { eager: true })
+  // 这里用 slug-to-file 映射示意
+  const prodFiles = [
+    { slug: "community-participation", file: "PROD-KA-PAR-00002-community-participation" },
+    { slug: "belonging",               file: "PROD-KA-PAR-00003-belonging" },
+    { slug: "caregiver-burden",        file: "PROD-KA-FAM-02003-caregiver-burden" },
+    { slug: "family-quality-of-life",  file: "PROD-KA-FAM-05001-family-quality-of-life" },
+    { slug: "child-participation",     file: "PROD-KA-PAR-00001-child-participation" },
+    { slug: "parent-stress",           file: "PROD-KA-FAM-02002-parent-stress" },
+    { slug: "family-functioning",      file: "PROD-KA-FAM-03001-family-functioning" },
+    { slug: "family-support",          file: "PROD-KA-FAM-01001-family-support" },
+    { slug: "school-participation",    file: "PROD-KA-PAR-00004-school-participation" },
+    { slug: "participation-qol",       file: "PROD-KA-PAR-00005-participation-quality-of-life" },
+  ];
+
+  return prodFiles.map(({ slug, file }) => ({
+    params: { ka: slug },
+    props: { fileName: file },
+  }));
+}
+
+// 用 import.meta.glob 读取所有 PROD JSON，再按 fileName 取对应文件
+const { fileName } = Astro.props as { fileName: string };
+
+const allProdFiles = import.meta.glob("../../../knowledge/production/*.json", { eager: true });
+const matchKey = Object.keys(allProdFiles).find((k) => k.includes(fileName));
+const prod: Record<string, any> = matchKey ? (allProdFiles[matchKey] as any).default ?? (allProdFiles[matchKey] as any) : {};
+
+const title = prod.zh || prod.canonical || "";
+const description = prod.website_card?.card_tagline ?? "";
+---
+
+<BaseLayout title={`${title} — Anori 知识`} description={description}>
+<SiteNav />
+
+<div class="concept-page wrap">
+
+  <!-- Breadcrumb -->
+  <Breadcrumb items={[
+    { label: "首页", href: "/" },
+    { label: "知识概念", href: "/concepts" },
+    { label: title },
+  ]} />
+
+  <!-- KA Card — 核心内容 -->
+  <div class="concept-card-wrap">
+    <KAConceptCard prod={prod} />
+  </div>
+
+  <!-- Back link -->
+  <div class="concept-back">
+    <a href="/concepts" class="back-link">← 查看所有知识概念</a>
+  </div>
+
+</div>
+
+<SiteFooter />
+</BaseLayout>
+
+<style>
+  .concept-page {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .concept-card-wrap {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .concept-page { padding-top: 1rem; gap: var(--sp-4); }
+    .concept-card-wrap { max-width: 100%; }
+  }
+
+  .concept-back { margin-top: var(--sp-2); }
+  .back-link {
+    font-size: .88rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+</style>

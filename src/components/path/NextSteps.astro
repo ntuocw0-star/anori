@@ -1,0 +1,22 @@
+---
+import type { NextStep } from '../../types/path';
+
+export interface Props {
+  steps: NextStep[];
+}
+const { steps } = Astro.props;
+---
+{steps.length > 0 && (
+  <section class="up-section">
+    <p class="up-section-label">下一步</p>
+    <div class="up-next-grid">
+      {steps.map((ns: NextStep) => (
+        <a href={ns.href} class="up-next-card">
+          <p class="up-next-label">{ns.label}</p>
+          <p class="up-next-desc">{ns.desc}</p>
+          <span class="up-next-arrow">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

@@ -1,0 +1,262 @@
+{
+  "id": "KA-FAM-05001",
+  "canonical": "Family Quality of Life",
+  "zh": "家庭生活质量",
+  "version": "1.1",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "definition": {
+    "anori": "家庭生活质量不是「生活是否轻松」，而是整个家庭是否还能维持自己认为重要的生活——家人之间还能好好说话、照顾者还有一点属于自己的空间、孩子还能参与一些他在乎的事情。它不是一个高标准，而是一个底线：家庭还在运作，还在往前走。",
+    "research": "家庭作为整体系统，在多个生活领域（家庭互动、教养、情感幸福感、身体/物质幸福感、残障相关支持）的满意度与功能水平。FQoL 区别于个人 QoL，强调家庭作为整体单位的共同体验。",
+    "framework": "Family Quality of Life Framework（Zuna, Turnbull & Summers 2010）；Beach Center FQoL Scale",
+    "icf_alignment": "Activities & Participation (d7) > Interpersonal Interactions; Environmental Factors (e) > Support and Relationships"
+  },
+  "why_it_matters": "FQoL 是整个 Family Science 知识图谱的汇聚节点——所有上游变量（Family Support、Family Functioning、Parent Stress、Caregiver Burden）的效果，最终都在这里体现。它同时是 Participation Science 的桥接点：当家庭生活质量改善，儿童社区参与的可能性也会随之提升。研究一致发现，FQoL 是预测家庭长期可持续性最重要的综合指标。",
+  "domains": [
+    {
+      "domain": "家庭互动（Family Interaction）",
+      "description": "家庭成员之间的关系质量、沟通方式和情感联结",
+      "key_var": "VAR-000015"
+    },
+    {
+      "domain": "教养（Parenting）",
+      "description": "父母在照顾和教育孩子方面的能力感和满意度",
+      "key_var": "VAR-000003"
+    },
+    {
+      "domain": "情感幸福感（Emotional Wellbeing）",
+      "description": "家庭成员的心理健康状态，包括压力、希望和应对能力",
+      "key_var": "VAR-000002"
+    },
+    {
+      "domain": "身体/物质幸福感（Physical/Material Wellbeing）",
+      "description": "家庭的健康状况、经济稳定性和居住安全",
+      "key_var": "VAR-000001"
+    },
+    {
+      "domain": "残障相关支持（Disability-related Support）",
+      "description": "家庭获得的专业服务、信息和社区资源的质量和充分性",
+      "key_var": "VAR-000030"
+    }
+  ],
+  "core_vars": [
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000002",
+      "name": "父母压力",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000015",
+      "name": "家庭功能",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000020",
+      "name": "家庭休闲",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000023",
+      "name": "社区参与",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000018",
+      "name": "家庭韧性",
+      "role": "moderator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000003",
+      "summary": "父母压力↑ → 家庭生活质量↓",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000011",
+      "summary": "家庭休闲 → 家庭生活质量↑",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000027",
+      "summary": "社区参与 → 家庭生活质量↑",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000059",
+      "summary": "正式支持 → 家庭生活质量↑",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000060",
+      "summary": "家庭共同休闲 → 家庭生活质量↑（Meta）",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000062",
+      "summary": "休闲教育 → 家庭生活质量↑",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000017",
+      "summary": "家庭功能 → 家庭生活质量↑",
+      "grade": "Very Low",
+      "direction": "predictor → KA",
+      "note": "STR EVD-TODO-004"
+    },
+    {
+      "rel_id": "REL-000026",
+      "summary": "非正式支持 → 家庭生活质量↑",
+      "grade": "Very Low",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000076",
+      "summary": "照顾者负担 → 家庭生活质量↓",
+      "grade": "Very Low",
+      "direction": "predictor → KA",
+      "note": "STR Priority A"
+    },
+    {
+      "rel_id": "REL-000078",
+      "summary": "家庭生活质量 → 促进儿童社区参与",
+      "grade": "Very Low",
+      "direction": "KA → Participation（桥接）",
+      "note": "Family Science → Participation Science 的连接"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 6,
+    "total_rel_count": 10,
+    "strongest_evidence": "Hodge et al. 2017 Meta-analysis（家庭共同休闲→FQoL）；Zuna et al. 2010 Framework；REL-000027（社区参与→FQoL，High）",
+    "evidence_gaps": [
+      "家庭功能 → FQoL（REL-000017，Very Low，最重要的 STR 目标）",
+      "照顾者负担 → FQoL（REL-000076，Very Low，STR Priority A）",
+      "FQoL → 儿童社区参与（REL-000078，骨架，Family→Participation 桥）"
+    ]
+  },
+  "core_pathway": {
+    "name": "Family Science Core Pathway v1.0",
+    "status": "frozen",
+    "chain": [
+      {
+        "step": 1,
+        "ka": "KA-FAM-01001",
+        "node": "Family Support",
+        "key_rel": "REL-000056/057",
+        "grade": "High"
+      },
+      {
+        "step": 2,
+        "ka": "KA-FAM-03001",
+        "node": "Family Functioning",
+        "key_rel": "REL-000058",
+        "grade": "High"
+      },
+      {
+        "step": 3,
+        "ka": "KA-FAM-02002",
+        "node": "Parent Stress",
+        "key_rel": "REL-000074",
+        "grade": "Very Low→STR"
+      },
+      {
+        "step": 4,
+        "ka": "KA-FAM-02003",
+        "node": "Caregiver Burden",
+        "key_rel": "REL-000076",
+        "grade": "Very Low→STR"
+      },
+      {
+        "step": 5,
+        "ka": "KA-FAM-05001",
+        "node": "Family Quality of Life",
+        "key_rel": "REL-000078",
+        "grade": "Very Low→Bridge"
+      }
+    ],
+    "feedback_loop": "Caregiver Burden → Family Functioning↓ → Parent Stress↑（自我强化循环）",
+    "bridge_to_participation": "FQoL → Child Community Participation（REL-000078，Participation Science 入口）"
+  },
+  "measurement": {
+    "scales": [
+      "Beach Center FQoL Scale — 最广泛使用，5个领域，含定量和定性",
+      "Family Quality of Life Survey（FQOLS-2006）",
+      "FQoL Scale（Bedia et al.）— 适用于发展障碍家庭"
+    ],
+    "note": "建议优先使用 Beach Center FQoL Scale，跨文化研究支持较好"
+  },
+  "common_misunderstanding": [
+    "FQoL 就是孩子生活质量（实际上是以家庭为单位的整体评估）",
+    "孩子情况改善了 FQoL 自然会好（实际上需要多维度同时支持）",
+    "FQoL 是感受，无法客观测量（实际上有信效度良好的量表）",
+    "FQoL 低是家庭的错（实际上主要由支持系统的充分性决定）"
+  ],
+  "website": {
+    "page_slug": "family-relationships",
+    "related_problems": [
+      "PRB-0001",
+      "PRB-0002",
+      "PRB-0003",
+      "PRB-0022",
+      "PRB-0023"
+    ],
+    "anori_reframe": "家庭生活质量不是一个需要达到的标准，而是一个家庭还在往前走的状态。它不要求完美，只要求还能继续。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "整个家庭都受到影响，怎么办？",
+      "家庭生活质量怎么衡量和改善？",
+      "为什么支持家庭比只支持孩子更重要？",
+      "家里所有人都很累，这正常吗？",
+      "什么叫家庭整体幸福感？"
+    ],
+    "answer_template": "家庭生活质量是整个家庭在多个领域的整体状态，不只是孩子的发展。{evidence_card} 说明了哪些因素对提升家庭整体质量最有研究支持。"
+  },
+  "related_kas": [
+    "KA-FAM-01001",
+    "KA-FAM-03001",
+    "KA-FAM-02002",
+    "KA-FAM-02003"
+  ],
+  "related_concepts": [
+    "CON-000001"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 初始建立（已在 architecture 文档中记录）"
+    },
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.1 完整版：加入 Core Pathway 冻结、domains、feedback loop、Participation 桥接"
+    }
+  ]
+}

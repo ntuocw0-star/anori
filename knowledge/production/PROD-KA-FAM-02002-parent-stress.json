@@ -1,0 +1,198 @@
+{
+  "id": "PROD-KA-FAM-02002",
+  "ka_id": "KA-FAM-02002",
+  "canonical": "Parent Stress",
+  "zh": "父母压力",
+  "created": "2026-07-07",
+  "sprint": "E3-05",
+  "version": "v1.0",
+  "production_standard": "Production Standard v1.0",
+  "theme": "失衡，不是失败",
+  "concept_page": {
+    "title": "父母压力（Parent Stress）",
+    "subtitle": "父母压力不是不够坚强，而是长期照顾处境中，需求和支持之间失衡的必然反应。",
+    "definition_anori": "Parent Stress 不是「家长不够坚强」，而是当照顾需求、生活压力与可获得的支持之间长期失衡时产生的持续压力状态。它不是个人意志力的问题，而是结构性处境的自然结果。",
+    "definition_research": "父母在履行照顾与教养角色过程中感受到的心理、生理和社会压力，受到儿童特征、家庭功能、社会支持及服务系统等多因素影响。",
+    "why_it_matters": "Parent Stress 是 Family Science 机制主链的核心传导变量。它向上承接 Family Support 不足和 Family Functioning 受损的后果，向下同时影响 Parenting Quality、Caregiver Burden 和 Family Quality of Life。研究一致发现，降低父母压力是改善整个家庭系统状态最有效的干预切入点之一。"
+  },
+  "parent_version": {
+    "memorable_sentence": "父母压力不是不够坚强，而是长期照顾处境中，需求和支持之间失衡的必然反应。",
+    "headline": "父母压力：失衡，不是失败",
+    "core_message": "Parent Stress 不是「家长不够坚强」，而是当照顾需求、生活压力与可获得的支持之间长期失衡时产生的持续压力状态。它不是个人意志力的问题，而是结构性处境的自然结果。",
+    "reframe": "压力不是失败，而是长期需求超过支持后的自然结果。改变的不只是自己，更是支持系统。"
+  },
+  "evidence_cards": [
+    {
+      "rel_id": "REL-000006",
+      "grade": "High",
+      "note": "来自 KA KA-FAM-02002 key_rels"
+    },
+    {
+      "rel_id": "REL-000058",
+      "grade": "High",
+      "note": "来自 KA KA-FAM-02002 key_rels"
+    },
+    {
+      "rel_id": "REL-000003",
+      "grade": "High",
+      "note": "来自 KA KA-FAM-02002 key_rels"
+    }
+  ],
+  "common_misunderstanding": [
+    {
+      "misunderstanding": "父母压力是因为孩子太难带",
+      "reality": "实际上支持不足才是主因"
+    },
+    {
+      "misunderstanding": "压力是个人心理问题，调整心态就能解决",
+      "reality": "实际上是结构性处境造成的"
+    },
+    {
+      "misunderstanding": "父母压力不会影响孩子",
+      "reality": "实际上通过教养质量和家庭氛围直接影响"
+    }
+  ],
+  "ai_retrieval": {
+    "trigger_questions": [
+      "为什么家长压力这么大？",
+      "Parent Stress 是什么？",
+      "家长压力会影响孩子吗？",
+      "怎样降低长期照顾压力？",
+      "我是不是做得不够好？",
+      "我已经没有力气了"
+    ],
+    "citation_priority": [
+      "REL-000006",
+      "REL-000058",
+      "REL-000003"
+    ],
+    "memorable_sentence": "父母压力不是不够坚强，而是长期照顾处境中，需求和支持之间失衡的必然反应。",
+    "core_answer": "研究发现，父母压力主要来自照顾需求和可获得支持之间的长期失衡。{evidence_card} 说明了哪些支持方式对降低压力最有研究支持。"
+  },
+  "popup_layers": {
+    "layer_1": {
+      "trigger": "一句话理解",
+      "content": "父母压力不是不够坚强，而是长期照顾处境中，需求和支持之间失衡的必然反应。"
+    },
+    "layer_2": {
+      "trigger": "为什么会这样？",
+      "content": [
+        "Parent Stress 不是「家长不够坚强」，而是当照顾需求、生活压力与可获得的支持之间长期失衡时产生的持续压力状态。它不是个人意志力的问题，而是结构性处境的自然结果。"
+      ]
+    },
+    "layer_3": {
+      "trigger": "研究怎么说？",
+      "content": [
+        {
+          "rel_id": "REL-000006",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000058",
+          "grade": "High"
+        },
+        {
+          "rel_id": "REL-000003",
+          "grade": "High"
+        }
+      ]
+    },
+    "layer_4": {
+      "trigger": "可以看看哪些相关内容？",
+      "related_concepts": [
+        {
+          "zh": "照顾者负担",
+          "slug": "caregiver-burden",
+          "tagline": "压力持续积累，会变成负担"
+        },
+        {
+          "zh": "家庭支持",
+          "slug": "family-support",
+          "tagline": "支持增加，压力才会减少"
+        },
+        {
+          "zh": "家庭功能",
+          "slug": "family-functioning",
+          "tagline": "家庭运作改善，压力随之下降"
+        }
+      ]
+    }
+  },
+  "problem_mapping": {
+    "related_problems": [
+      "PRB-0022",
+      "PRB-0005",
+      "PRB-0025"
+    ]
+  },
+  "website_card": {
+    "card_title": "父母压力",
+    "card_tagline": "父母压力不是不够坚强，而是长期照顾处境中，需求和支持之间失衡的必然反应。",
+    "card_link": "/health"
+  },
+  "ui_ready": {
+    "component_type": "concept_card",
+    "color_theme": "coral",
+    "icon": "stress",
+    "astro_component": "ConceptCard",
+    "react_component": "KAConceptCard",
+    "render_fields": {
+      "card_title": "website_card.card_title",
+      "card_tagline": "website_card.card_tagline",
+      "popup_layer_1": "popup_layers.layer_1.content",
+      "popup_layer_2": "popup_layers.layer_2.content",
+      "popup_layer_3": "popup_layers.layer_3.content",
+      "popup_layer_4": "popup_layers.layer_4"
+    }
+  },
+  "qa_checklist": [
+    {
+      "check": "每条 Evidence Card 都有 rel_id 对应",
+      "status": "✅"
+    },
+    {
+      "check": "Parent Version 没有专业术语或都已解释",
+      "status": "✅"
+    },
+    {
+      "check": "Common Misunderstanding 先说误解再说实际",
+      "status": "✅"
+    },
+    {
+      "check": "Reframe 不是鼓励也不是评判",
+      "status": "✅"
+    },
+    {
+      "check": "AI Retrieval 有明确的触发问题",
+      "status": "✅"
+    },
+    {
+      "check": "Problem Mapping 有对应 PRB ID",
+      "status": "✅"
+    },
+    {
+      "check": "Website Card tagline 符合 Anori Voice",
+      "status": "✅"
+    },
+    {
+      "check": "AI citation_priority 已设定",
+      "status": "✅"
+    },
+    {
+      "check": "memorable_sentence 六处锚点完全一致",
+      "status": "✅"
+    },
+    {
+      "check": "popup_layers 四层完整",
+      "status": "✅"
+    },
+    {
+      "check": "ui_ready.render_fields 完整映射",
+      "status": "✅"
+    },
+    {
+      "check": "Anori Voice 验证：无责备、无宿命感",
+      "status": "✅"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+---
+export interface Props {
+  label?: string;
+  text: string;
+}
+const { label = '给你的话', text } = Astro.props;
+---
+<section class="up-section">
+  <div class="up-parent-message">
+    <p class="up-parent-message-label">{label}</p>
+    <p class="up-parent-message-text">{text}</p>
+  </div>
+</section>

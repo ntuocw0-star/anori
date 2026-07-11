@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-07-10",
+  "topics": [
+    {
+      "id": "topic-aac",
+      "slug": "aac",
+      "label": "辅助沟通（AAC）",
+      "description": "关于辅助沟通系统的研究、实践与家庭支持资源。",
+      "series": ["series-aac"],
+      "order": 1,
+      "status": "active"
+    }
+  ]
+}

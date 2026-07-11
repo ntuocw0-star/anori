@@ -1,0 +1,2691 @@
+{
+  "meta": {
+    "schema_version": "1.2",
+    "created": "2026-07-01",
+    "status": "Active",
+    "description": "Anori Resource Digest — 外部知识整理与转译层",
+    "batch": "Batch 4 — Understanding Assessment (20/20 Phase 1 complete)"
+  },
+  "resources": [
+    {
+      "id": "RES-000001",
+      "title": "World Health Organization",
+      "title_zh": "世界卫生组织",
+      "organization": "World Health Organization",
+      "organization_short": "WHO",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "audience": [
+        "Parents",
+        "Caregivers",
+        "Professionals"
+      ],
+      "topic_tags": [
+        "Child Development",
+        "Disability",
+        "Family Support",
+        "Health"
+      ],
+      "language": [
+        "en",
+        "zh"
+      ],
+      "access": "free",
+      "url": "https://www.who.int/",
+      "description": "Global health guidance and evidence-based resources for child health, development, disability and family support.",
+      "description_zh": "提供儿童健康、发展、残障与家庭支持相关的全球循证指南和资源。",
+      "related_pages": [
+        "health",
+        "family-relationships",
+        "disability-services",
+        "support-from-others"
+      ],
+      "evidence_level": "Guideline",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "external_url": "https://www.who.int/",
+      "anori_path": "/pages/resource/RES-000001",
+      "digest_status": "ready",
+      "digest_summary": "当孩子的状态让你担心，第一反应往往是找一个具体的答案——但很多时候，问题不是某一件事出了问题，而是多个方面同时在影响孩子。WHO 的儿童健康资源帮助家长建立一个更完整的视角：健康、成长、发展、营养、保护和学习机会，都是相互关联的。作为基础框架，它提醒家长：孩子的状态不能只从一个症状判断，而要放回整个生活环境来理解。",
+      "key_points": [
+        "儿童健康不只是没有生病，也包括营养、安全、发展机会和稳定环境。",
+        "很多儿童健康问题与家庭、服务可及性和社会资源有关，不只是个人原因。",
+        "观察孩子时，不要只盯着单一表现，要同时看睡眠、饮食、情绪、学习和家庭压力。",
+        "如果孩子长期处在不稳定环境中，支持系统本身就是重要的保护因素。"
+      ],
+      "resource_intro": "世界卫生组织（WHO）是联合国负责全球公共卫生工作的专门机构，为各国提供循证健康指南和政策建议。",
+      "recommendation_reason": "如果希望从整体理解儿童健康与发展，而不是只关注单一问题，这是一份值得长期参考的基础资源。",
+      "recommendation_level": "foundational",
+      "resource_purpose": "Understand",
+      "resource_category": "International Health Framework",
+      "entry_question": "如果你想先理解儿童健康的整体框架，而不是只查某一个问题。"
+    },
+    {
+      "id": "RES-000002",
+      "title": "Learn the Signs. Act Early.",
+      "title_zh": "了解信号，及早行动",
+      "organization": "Centers for Disease Control and Prevention",
+      "organization_short": "CDC",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Government Agency",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Developmental Milestones",
+        "Screening",
+        "Early Intervention"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.cdc.gov/actearly/",
+      "description": "Developmental milestone checklists and practical guidance to help families recognize early signs and seek support.",
+      "description_zh": "提供儿童发育里程碑、早期识别和家庭支持工具。",
+      "related_pages": [
+        "health",
+        "disability-services"
+      ],
+      "evidence_level": "Government Guidance",
+      "has_pdf": true,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "external_url": "https://www.cdc.gov/actearly/",
+      "anori_path": "/pages/resource/RES-000002",
+      "digest_status": "ready",
+      "digest_summary": "「感觉哪里不太对，但说不清楚」——这是很多家长在注意到孩子某些变化时的真实感受。CDC 的 Learn the Signs. Act Early. 帮助家长把这种模糊的感觉变成具体的观察：这个年龄的孩子通常会做什么，我的孩子在哪些地方有所不同？它不是用来给孩子下结论的工具，而是帮助家长把观察整理清楚，再决定是否需要和医生进一步讨论。",
+      "key_points": [
+        "发展里程碑是观察线索，不是给孩子下结论的标准。",
+        "家长可以记录孩子在语言、动作、社交和日常能力上的变化。",
+        "如果持续担心，不要等待自己会好，可以尽早咨询专业人员或早期支持服务。",
+        "早期行动的重点不是制造焦虑，而是让家庭更早获得合适支持。"
+      ],
+      "resource_intro": "美国疾病控制与预防中心（CDC）负责公共卫生与疾病预防，并长期提供儿童发展和早期识别资源。",
+      "recommendation_reason": "适合作为家长观察儿童发展变化的第一步工具，帮助整理观察，而不是急于判断或贴标签。",
+      "recommendation_level": "foundational",
+      "resource_purpose": "Take Action",
+      "resource_category": "Developmental Screening",
+      "entry_question": "如果你开始担心孩子的发展，但不确定哪些变化值得继续观察。"
+    },
+    {
+      "id": "RES-000003",
+      "title": "UNICEF Parenting",
+      "title_zh": "联合国儿童基金会家长资源",
+      "organization": "United Nations Children's Fund",
+      "organization_short": "UNICEF",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Parenting",
+        "Family Support",
+        "Child Development"
+      ],
+      "language": [
+        "en",
+        "zh"
+      ],
+      "access": "free",
+      "url": "https://www.unicef.org/parenting",
+      "description": "Evidence-informed parenting advice and practical resources supporting children's healthy development.",
+      "description_zh": "提供基于证据的家庭养育建议与儿童发展资源。",
+      "related_pages": [
+        "family-relationships",
+        "support-from-others",
+        "values"
+      ],
+      "evidence_level": "Guideline",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "external_url": "https://www.unicef.org/parenting",
+      "anori_path": "/pages/resource/RES-000003",
+      "digest_status": "ready",
+      "digest_summary": "养育一个孩子本来就不容易，更不用说当孩子有特殊需求的时候。UNICEF Parenting 的资源用家长可以读进去的语言，把儿童发展、日常照护、家庭支持和家长自身状态放在一起讲。它不提供单一的「正确答案」，而是帮助家长用更温和、更现实的方式看待养育过程中那些让人困惑或难受的部分。",
+      "key_points": [
+        "养育不是只靠家长意志力完成的，它需要信息、支持和可持续的生活节奏。",
+        "儿童发展和家庭互动、照护方式、营养、健康与情绪环境都有关系。",
+        "家长感到困难并不代表失败，很多问题可以通过理解孩子的发展阶段来缓解。",
+        "好的养育资源应该帮助家长看清情况，而不是增加内疚感。"
+      ],
+      "resource_intro": "联合国儿童基金会（UNICEF）致力于促进全球儿童的健康、教育、保护和发展。",
+      "recommendation_reason": "适合希望理解日常养育、家庭支持和儿童发展的家长，内容容易阅读，也更贴近日常生活。",
+      "recommendation_level": "foundational",
+      "resource_purpose": "Understand",
+      "resource_category": "Parenting Support",
+      "entry_question": "如果你想了解日常养育的基础知识，以及如何在家创造有利于发展的环境。"
+    },
+    {
+      "id": "RES-000004",
+      "title": "National Institute for Health and Care Excellence",
+      "title_zh": "英国国家健康与临床优化研究所",
+      "organization": "National Institute for Health and Care Excellence",
+      "organization_short": "NICE",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Guideline Organization",
+      "audience": [
+        "Professionals",
+        "Parents"
+      ],
+      "topic_tags": [
+        "Clinical Guideline",
+        "Autism",
+        "Mental Health",
+        "Disability"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.nice.org.uk/",
+      "description": "National evidence-based guidelines covering health, disability and long-term support.",
+      "description_zh": "提供涵盖健康、残障与长期支持的国家循证指南。",
+      "related_pages": [
+        "health",
+        "disability-services",
+        "values"
+      ],
+      "evidence_level": "Clinical Guideline",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "external_url": "https://www.nice.org.uk/",
+      "anori_path": "/pages/resource/RES-000004",
+      "digest_status": "ready",
+      "digest_summary": "当你准备带孩子去评估，或者已经在等评估结果时，有时候最让人不安的是：不知道这个过程是怎么运作的。NICE 的指南帮助家长理解专业系统是如何看待和处理自闭症评估的——它看哪些信息、通常怎么转介、家庭应该期望获得什么支持。读懂这个逻辑，不是为了自我诊断，而是让你在和专业人员对话时，不会完全摸不着头脑。",
+      "key_points": [
+        "这类指南适合用来理解专业流程，不适合家长自行给孩子下诊断。",
+        "识别并不等于贴标签，关键是看孩子是否需要进一步支持。",
+        "转介和评估应结合孩子的具体情况、家庭观察和专业判断。",
+        "评估结果需要被清楚沟通，家庭也应该得到相应的信息和支持。"
+      ],
+      "resource_intro": "英国国家健康与临床优化研究所（NICE）负责制定英国医疗和社会照护领域的循证指南。",
+      "recommendation_reason": "当需要理解专业评估、诊断流程或长期支持时，这类指南能够帮助家长理解专业系统如何思考。",
+      "recommendation_level": "recommended",
+      "resource_purpose": "Understand",
+      "resource_category": "Clinical Guideline",
+      "entry_question": "如果医生提到了某项建议或诊断，你想了解它背后的依据是什么。"
+    },
+    {
+      "id": "RES-000005",
+      "title": "HealthyChildren.org",
+      "title_zh": "HealthyChildren 家长指南",
+      "organization": "American Academy of Pediatrics",
+      "organization_short": "AAP",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Professional Organization",
+      "audience": [
+        "Parents"
+      ],
+      "topic_tags": [
+        "Child Health",
+        "Parenting",
+        "Development"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.healthychildren.org/",
+      "description": "Trusted pediatric guidance from the American Academy of Pediatrics for children's health and development.",
+      "description_zh": "美国儿科学会面向家长提供的儿童健康与发展指导。",
+      "related_pages": [
+        "health",
+        "family-relationships"
+      ],
+      "evidence_level": "Professional Guidance",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "external_url": "https://www.healthychildren.org/",
+      "anori_path": "/pages/resource/RES-000005",
+      "digest_status": "ready",
+      "digest_summary": "HealthyChildren.org 是美国儿科学会面向家长的儿童健康网站，内容覆盖年龄阶段、健康生活、安全、家庭生活、发育和常见健康问题。它适合作为家长的基础参考：当不知道某个问题是否常见、是否需要咨询医生时，可以先用它整理问题。",
+      "key_points": [
+        "它更适合做日常养育和儿童健康的基础参考，而不是深度研究资料。",
+        "内容按年龄阶段和主题组织，方便家长从孩子当前阶段开始查找。",
+        "它覆盖睡眠、营养、安全、发育、家庭生活和常见健康问题。",
+        "遇到持续、加重或影响生活的问题，仍然应该结合本地医生或专业服务判断。"
+      ],
+      "resource_intro": "美国儿科学会（AAP）是美国最具代表性的儿科专业组织，长期发布儿童健康与养育建议。",
+      "recommendation_reason": "适合作为日常养育和儿童健康问题的基础参考，帮助家长建立稳定、可靠的健康知识框架。",
+      "recommendation_level": "foundational",
+      "resource_purpose": "Take Action",
+      "resource_category": "Child Health Reference",
+      "entry_question": "如果你想查阅某个具体的儿童健康或发展话题，又不想读太多专业文献。"
+    },
+    {
+      "id": "RES-000006",
+      "title": "Caregiver Skills Training",
+      "title_zh": "照护者技能培训（CST）",
+      "organization": "World Health Organization",
+      "organization_short": "WHO",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "audience": [
+        "Parents",
+        "Caregivers",
+        "Professionals"
+      ],
+      "topic_tags": [
+        "Caregiver Support",
+        "Early Intervention",
+        "Family Support"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/caregiver-skills-training",
+      "anori_path": "/pages/resource/RES-000006",
+      "resource_intro": "WHO 开发的家庭照护者培训项目，帮助照护者在日常生活中支持儿童的发展。",
+      "recommendation_reason": "如果家长不知道每天可以做些什么帮助孩子，这是一份非常适合作为起点的资源。",
+      "recommendation_level": "foundational",
+      "digest_status": "ready",
+      "digest_summary": "CST 的重点不是训练孩子，而是帮助照护者把支持融入每天的生活，例如沟通、游戏和日常互动。它强调家庭参与，而不是把所有责任交给专业机构。",
+      "key_points": [
+        "每天的生活本身就是支持儿童发展的机会。",
+        "家长不需要成为治疗师，也可以帮助孩子成长。",
+        "支持方式应该结合家庭生活，而不是增加家庭负担。",
+        "家庭参与越稳定，孩子越容易获得持续支持。"
+      ],
+      "related_pages": [
+        "health",
+        "support-from-others",
+        "family-relationships"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Take Action",
+      "resource_category": "Caregiver Skills Training",
+      "is_online_tool": false,
+      "url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/caregiver-skills-training",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果你想学习具体的照顾技巧，帮助孩子建立沟通、情绪和行为能力。"
+    },
+    {
+      "id": "RES-000007",
+      "title": "Raising Children Network",
+      "title_zh": "澳大利亚育儿网络",
+      "organization": "Raising Children Network",
+      "organization_short": "RCN",
+      "countries": [
+        "Australia"
+      ],
+      "resource_type": "Non-profit Organization",
+      "audience": [
+        "Parents"
+      ],
+      "topic_tags": [
+        "Parenting",
+        "Family Support",
+        "Child Development"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://raisingchildren.net.au",
+      "anori_path": "/pages/resource/RES-000007",
+      "resource_intro": "澳大利亚政府支持的育儿知识平台，为家长提供儿童成长全过程的信息。",
+      "recommendation_reason": "如果想了解孩子不同年龄的发展特点，这个平台非常适合作为长期参考。",
+      "recommendation_level": "foundational",
+      "digest_status": "ready",
+      "digest_summary": "孩子某个阶段突然变了，家长不确定是正常发展还是需要关注——这个平台最擅长帮助家长理解「这个年龄的孩子通常是这样的」。它按年龄阶段组织内容，家长可以直接找到和孩子现在年龄对应的部分，而不是从头到尾阅读一份很长的指南。作为长期参考比作为一次性查询更有价值——值得书签保存，每隔一段时间回来看看孩子下一个阶段会发生什么。",
+      "key_points": [
+        "按照年龄阶段查找内容更容易理解。",
+        "很多行为变化都与发展阶段有关。",
+        "家庭关系也是儿童发展的重要部分。",
+        "先理解孩子，再寻找解决办法。"
+      ],
+      "related_pages": [
+        "health",
+        "family-relationships",
+        "leisure"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Learn More",
+      "resource_category": "Child Development Reference",
+      "is_online_tool": false,
+      "url": "https://raisingchildren.net.au",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果你想找到关于儿童发展、行为或家庭支持的可靠中文或英文参考资料。"
+    },
+    {
+      "id": "RES-000008",
+      "title": "Understood",
+      "title_zh": "Understood 家庭支持平台",
+      "organization": "Understood",
+      "organization_short": "Understood",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "audience": [
+        "Parents",
+        "Teachers"
+      ],
+      "topic_tags": [
+        "Learning",
+        "School",
+        "Family Support"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://www.understood.org",
+      "anori_path": "/pages/resource/RES-000008",
+      "resource_intro": "面向学习与注意力差异家庭的非营利平台。",
+      "recommendation_reason": "适合家长理解学校、学习和家庭之间如何共同支持孩子。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "很多家长发现，和学校的沟通比想象中困难——不是因为老师不好，而是大家关注的切入点不一样。Understood 帮助家长从孩子在学校的真实体验出发理解学习和支持，而不是只停留在诊断名称上。如果你觉得孩子在学校的情况和家里「不像同一个孩子」，这里的内容可以帮助你把两个视角拼在一起。",
+      "key_points": [
+        "理解学习方式比标签更重要。",
+        "家庭和学校需要共同合作。",
+        "孩子的优势同样值得关注。",
+        "支持方式需要因人而异。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "values",
+        "community-interaction"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Learning & School Support",
+      "is_online_tool": false,
+      "url": "https://www.understood.org",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子有学习差异或特殊需求，你想了解其他家庭怎么面对类似的挑战。"
+    },
+    {
+      "id": "RES-000009",
+      "title": "Family Voices",
+      "title_zh": "Family Voices",
+      "organization": "Family Voices",
+      "organization_short": "Family Voices",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Family Support",
+        "Advocacy",
+        "Services"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://familyvoices.org",
+      "anori_path": "/pages/resource/RES-000009",
+      "resource_intro": "由家庭组成的组织，帮助家长了解医疗、教育和社会支持系统。",
+      "recommendation_reason": "如果家长觉得不知道该找谁、该从哪里开始，这类资源非常有帮助。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "刚开始面对孩子的特殊需求时，最让人迷失的感觉之一是：不知道该找谁。Family Voices 是美国最老牌的残障家庭资源导航机构，帮助家庭找到适合自己处境的专业支持和社区资源。它的核心立场是：家长是孩子支持团队的重要成员，不只是接受决定的一方——有权利参与、提问、甚至挑战。如果你在美国，且不知道从哪里开始，这里是一个可以起步的地方。",
+      "key_points": [
+        "家长也是支持团队的重要成员。",
+        "主动了解资源有助于减少压力。",
+        "不同家庭需要不同支持方式。",
+        "家庭经验同样具有价值。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "support-from-others",
+        "financial-wellbeing"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Take Action",
+      "resource_category": "Family Navigation",
+      "is_online_tool": false,
+      "url": "https://familyvoices.org",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果你想了解其他有特殊需求孩子的家庭如何倡导自己的权益和需求。"
+    },
+    {
+      "id": "RES-000010",
+      "title": "Zero to Three",
+      "title_zh": "Zero to Three",
+      "organization": "Zero to Three",
+      "organization_short": "ZTT",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Professional Organization",
+      "audience": [
+        "Parents",
+        "Professionals"
+      ],
+      "topic_tags": [
+        "Early Childhood",
+        "Development",
+        "Parenting"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://www.zerotothree.org",
+      "anori_path": "/pages/resource/RES-000010",
+      "resource_intro": "专注于 0–3 岁儿童发展的专业机构。",
+      "recommendation_reason": "如果孩子年龄较小，这是理解早期发展的优秀参考资源。",
+      "recommendation_level": "foundational",
+      "digest_status": "ready",
+      "digest_summary": "孩子三岁以前发生的事，比很多家长意识到的影响更深远。Zero to Three 的资源帮助家长理解：早期的亲子关系、日常互动的质量、以及家庭环境的稳定性，都是孩子发展最重要的基础之一。它不是要家长成为早期教育专家，而是帮助家长看到：你每天和孩子相处的方式，本身就是对孩子最重要的支持。",
+      "key_points": [
+        "生命早期的发展影响深远。",
+        "稳定的亲子关系具有保护作用。",
+        "回应式互动有助于儿童发展。",
+        "支持家庭就是支持孩子。"
+      ],
+      "related_pages": [
+        "health",
+        "family-relationships",
+        "support-from-others"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Early Development",
+      "is_online_tool": false,
+      "url": "https://www.zerotothree.org",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子还在 0–3 岁，你想了解早期发展的关键窗口和家庭可以做什么。"
+    },
+    {
+      "id": "RES-000011",
+      "title": "Universal Design for Learning (UDL)",
+      "title_zh": "全纳学习设计（UDL）",
+      "organization": "CAST",
+      "organization_short": "CAST",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "resource_type": "Professional Organization",
+      "audience": [
+        "Parents",
+        "Professionals",
+        "Educators"
+      ],
+      "topic_tags": [
+        "Learning",
+        "School Support",
+        "Inclusive Education"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://www.cast.org/impact/universal-design-for-learning-udl",
+      "anori_path": "/pages/resource/RES-000011",
+      "resource_intro": "CAST 是美国非营利教育研究机构，提出了全纳学习设计（UDL）框架，被国际教育界广泛采用。",
+      "recommendation_reason": "同一种教学方式，并不一定适合所有孩子。这份资源帮助家长理解为什么，以及学校可以怎样调整。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "UDL 的核心不是给孩子特殊待遇，而是承认不同孩子有不同的学习方式。理解这一点，家长就不会再认为孩子跟不上是因为不够努力，而是因为学习方式还没有匹配。",
+      "key_points": [
+        "孩子学不好，不一定是能力问题，有时是教学方式还没有找到。",
+        "全纳学习设计强调为所有孩子提供多种学习路径，不只是有标签的孩子。",
+        "家长可以用 UDL 的思路和老师沟通：孩子需要什么样的支持方式？",
+        "了解 UDL 有助于家长评估学校是否真的在支持孩子，而不只是在管理孩子。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "values",
+        "community-interaction"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Inclusive Education Framework",
+      "is_online_tool": false,
+      "url": "https://www.cast.org/impact/universal-design-for-learning-udl",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子在学校遇到学习困难，你想了解学校可以提供哪些不同的教学支持。"
+    },
+    {
+      "id": "RES-000012",
+      "title": "IRIS Center",
+      "title_zh": "IRIS 教育支持中心",
+      "organization": "IRIS Center",
+      "organization_short": "IRIS",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Research Website",
+      "audience": [
+        "Professionals",
+        "Educators",
+        "Parents"
+      ],
+      "topic_tags": [
+        "School Support",
+        "Inclusive Education",
+        "Training"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://iris.peabody.vanderbilt.edu",
+      "anori_path": "/pages/resource/RES-000012",
+      "resource_intro": "IRIS Center 由美国范德比尔特大学运营，提供特殊教育与融合教育的专业培训资源。",
+      "recommendation_reason": "当家长想理解老师在做什么、或者学校为什么这样安排支持时，这类资源能帮助家长进入学校的视角。",
+      "recommendation_level": "advanced",
+      "digest_status": "ready",
+      "digest_summary": "有时候，家校之间的沟通困难，不是因为立场不同，而是因为双方使用的语言和框架完全不一样。IRIS 的资源原本面向教师，但家长读了之后往往会说：「原来老师是这样想的。」了解学校的决策逻辑，可以让家长在开会时问出更有效的问题，而不是带着困惑回家。这不是要你变成教育专家，而是让对话更对等。",
+      "key_points": [
+        "学校的支持安排通常有其背后的教育理念，了解它有助于家长参与决策。",
+        "融合教育不是把所有孩子放在同一间教室，而是根据需求提供不同支持。",
+        "家长可以借助这类资源准备和老师的对话，问出更有效的问题。",
+        "理解教师视角，不是要家长变成专家，而是让沟通更对等。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "values",
+        "support-from-others"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Learn More",
+      "resource_category": "Educational Research",
+      "is_online_tool": false,
+      "url": "https://iris.peabody.vanderbilt.edu",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子的老师或支持人员想进一步了解特殊教育和融合教育的方法。"
+    },
+    {
+      "id": "RES-000013",
+      "title": "Council for Exceptional Children",
+      "title_zh": "特殊儿童委员会（CEC）",
+      "organization": "Council for Exceptional Children",
+      "organization_short": "CEC",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "resource_type": "Professional Organization",
+      "audience": [
+        "Professionals",
+        "Educators",
+        "Parents"
+      ],
+      "topic_tags": [
+        "Special Education",
+        "Inclusive Education",
+        "School Support"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://exceptionalchildren.org",
+      "anori_path": "/pages/resource/RES-000013",
+      "resource_intro": "国际特殊教育领域最具影响力的专业组织，制定特殊教育实践标准并支持教育专业人员。",
+      "recommendation_reason": "当家长想了解特殊教育体系如何运作、专业人员应该达到什么标准时，这是值得参考的来源。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "很多家长在向学校要求支持时，内心有一个隐隐的担忧：我是不是在要求一些本来就不该有的东西？了解 CEC（特殊儿童委员会）的存在，可以帮助家长建立一个基准认知：专业的特殊教育支持是有国际标准的，不是随意给的。要求孩子得到受过专业训练的支持，是家长的合理期待，不是无理取闹。",
+      "key_points": [
+        "特殊教育有国际认可的专业标准，家长可以据此评估孩子获得的支持质量。",
+        "支持不是特权，而是每个有需要的孩子应得的教育权利。",
+        "专业人员的培训背景会影响支持的质量，家长有权了解。",
+        "向学校提问和要求支持，是家长参与教育的重要方式。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "values",
+        "community-interaction"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Special Education Standards",
+      "is_online_tool": false,
+      "url": "https://exceptionalchildren.org",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果你想了解特殊教育领域的国际标准和支持孩子的最佳实践。"
+    },
+    {
+      "id": "RES-000014",
+      "title": "National Center for Learning Disabilities",
+      "title_zh": "美国学习障碍全国中心（NCLD）",
+      "organization": "National Center for Learning Disabilities",
+      "organization_short": "NCLD",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "audience": [
+        "Parents",
+        "Educators"
+      ],
+      "topic_tags": [
+        "Learning",
+        "School Support",
+        "Family Support"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://www.ncld.org",
+      "anori_path": "/pages/resource/RES-000014",
+      "resource_intro": "美国专注于学习差异的非营利组织，帮助家庭理解和支持有学习差异的孩子。",
+      "recommendation_reason": "如果孩子在学校遇到困难，这个资源帮助家长区分：是孩子的能力不足，还是学习方式还没找到？",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "当孩子在学校一直跟不上，家长最容易陷入的一个想法是：是不是孩子不够努力，或者不够聪明？NCLD 的核心立场是：学习差异和智力无关。很多孩子只是在某种特定的学习方式下表现不好，换一种方式会完全不同。理解这一点，不只是帮助孩子，也是在帮助家长放下一个不必要的自责。",
+      "key_points": [
+        "学习差异是神经多样性的一部分，不是智力或努力程度的问题。",
+        "早期识别和支持可以显著改变孩子的学习轨迹。",
+        "家长的理解和支持是孩子在学校成功的重要因素之一。",
+        "孩子的优势和困难同样需要被看见，不只是关注不足。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "values",
+        "career"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Learning Differences",
+      "is_online_tool": false,
+      "url": "https://www.ncld.org",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子被评估为有学习障碍，你想了解这意味着什么，以及如何在家支持。"
+    },
+    {
+      "id": "RES-000015",
+      "title": "UNESCO Inclusive Education",
+      "title_zh": "联合国教科文组织 — 全纳教育",
+      "organization": "United Nations Educational, Scientific and Cultural Organization",
+      "organization_short": "UNESCO",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "audience": [
+        "Parents",
+        "Policy Makers",
+        "Professionals"
+      ],
+      "topic_tags": [
+        "Inclusive Education",
+        "Policy",
+        "School Support",
+        "Legal Rights"
+      ],
+      "language": [
+        "en",
+        "zh-CN",
+        "fr",
+        "es",
+        "ar"
+      ],
+      "access": "free",
+      "external_url": "https://www.unesco.org/en/inclusion",
+      "anori_path": "/pages/resource/RES-000015",
+      "resource_intro": "UNESCO 是联合国负责教育、科学与文化的专门机构，推动全球全纳教育政策与实践。",
+      "recommendation_reason": "每个孩子都有权利参与学习，不是因为特殊照顾，而是因为这是基本权利。这份资源帮助家长理解这个视角。",
+      "recommendation_level": "foundational",
+      "digest_status": "ready",
+      "digest_summary": "全纳教育的核心不是让有特殊需求的孩子适应学校，而是让学校适应每一个孩子。这个立场改变了整个讨论的起点：问题不是孩子哪里不够好，而是系统如何为每个孩子创造参与的条件。",
+      "key_points": [
+        "全纳教育是教育权利，不是特殊优待。",
+        "学校系统应该适应孩子的多样性，而不是要求孩子适应统一标准。",
+        "家长可以用全纳教育的框架和学校讨论孩子的参与权利。",
+        "这个视角帮助家长从权利角度理解孩子的教育需求，而不只是从医疗角度。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "community-interaction",
+        "values"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Education Rights & Policy",
+      "is_online_tool": false,
+      "url": "https://www.unesco.org/en/inclusion",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果你想了解全纳教育是什么，以及它对有特殊需求的孩子意味着什么。"
+    },
+    {
+      "id": "RES-000016",
+      "title": "Modified Checklist for Autism in Toddlers (M-CHAT-R/F)",
+      "title_zh": "幼儿自闭症修订版筛查表（M-CHAT-R/F）",
+      "organization": "M-CHAT Research Group",
+      "organization_short": "M-CHAT",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "Assessment / Screening",
+      "audience": [
+        "Parents",
+        "Professionals"
+      ],
+      "topic_tags": [
+        "Screening",
+        "ASD",
+        "Early Intervention"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://mchatscreen.com",
+      "anori_path": "/pages/resource/RES-000016",
+      "resource_intro": "M-CHAT-R/F 是目前使用最广泛的幼儿自闭症早期筛查工具之一，适用于 16-30 个月的幼儿。",
+      "recommendation_reason": "如果家长对孩子的发展有疑虑，这个工具可以帮助整理观察，但它的结果不是诊断，而是下一步是否需要进一步评估的参考。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "当家长对孩子的某些行为或发展感到担心，很容易就开始在网上搜索自闭症的症状——但那样得到的往往是更多的焦虑，而不是更清晰的认识。M-CHAT 提供了一个更有结构的方式：一份由研究开发的问卷，帮助家长和医生共同判断是否需要做更深入的评估。重要的是：它的结果不是诊断，筛查偏高不等于自闭症，偏低也不等于可以完全放心。它只是帮助决定「下一步是什么」。",
+      "key_points": [
+        "筛查结果只是一个参考，不是诊断，不能用来给孩子贴标签。",
+        "很多孩子筛查结果偏高，但最终评估后并不符合自闭症诊断。",
+        "如果结果有疑虑，下一步是找专业人员做更完整的评估，而不是自己下结论。",
+        "筛查的目的是帮助家庭更早获得支持，而不是让家长更焦虑。"
+      ],
+      "related_pages": [
+        "health",
+        "disability-services"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Take Action",
+      "resource_category": "Developmental Screening",
+      "is_online_tool": true,
+      "url": "https://mchatscreen.com",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子在 16–30 个月之间，你对他的语言、眼神或互动有疑问。"
+    },
+    {
+      "id": "RES-000017",
+      "title": "Ages & Stages Questionnaires (ASQ)",
+      "title_zh": "年龄与发育进程问卷（ASQ）",
+      "organization": "Brookes Publishing",
+      "organization_short": "ASQ",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "Assessment / Screening",
+      "audience": [
+        "Parents",
+        "Professionals"
+      ],
+      "topic_tags": [
+        "Developmental Milestones",
+        "Screening",
+        "Early Intervention"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "mixed",
+      "external_url": "https://agesandstages.com",
+      "anori_path": "/pages/resource/RES-000017",
+      "resource_intro": "ASQ 是一套被广泛使用的儿童发展问卷，覆盖 1 个月到 5 岁半，由家长填写，用于观察儿童发展进程。",
+      "recommendation_reason": "用来观察儿童发展，而不是判断孩子是否正常。它帮助家长把平时零散的观察系统化，找到真正需要关注的地方。",
+      "recommendation_level": "foundational",
+      "digest_status": "ready",
+      "digest_summary": "很多发展上的担心，来自家长一个人在默默观察，却不知道观察到的是否正常。ASQ 把这种「散落的观察」变成有结构的图像：每个问题对应一个发展领域，帮助家长看清楚孩子目前在哪里，哪些地方值得继续关注。它让家长成为发展观察的参与者，而不是只在等专业人员告诉他们答案。",
+      "key_points": [
+        "ASQ 是家长填写的，你的观察本身就是重要的信息。",
+        "它覆盖沟通、运动、解决问题和社交四个发展领域。",
+        "结果显示需要关注，不等于孩子有问题，而是值得进一步了解。",
+        "定期使用可以帮助追踪变化，而不只是在出现担心时才用。"
+      ],
+      "related_pages": [
+        "health",
+        "disability-services"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Take Action",
+      "resource_category": "Developmental Screening",
+      "is_online_tool": true,
+      "url": "https://agesandstages.com",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果你想系统地记录和追踪孩子的发展变化，而不只是凭感觉判断。"
+    },
+    {
+      "id": "RES-000018",
+      "title": "Strengths and Difficulties Questionnaire (SDQ)",
+      "title_zh": "长处与困难问卷（SDQ）",
+      "organization": "SDQ Info",
+      "organization_short": "SDQ",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "Assessment / Screening",
+      "audience": [
+        "Parents",
+        "Professionals",
+        "Educators"
+      ],
+      "topic_tags": [
+        "Mental Health",
+        "Behaviour",
+        "Screening",
+        "School Support"
+      ],
+      "language": [
+        "en",
+        "zh-CN"
+      ],
+      "access": "free",
+      "external_url": "https://www.sdqinfo.org",
+      "anori_path": "/pages/resource/RES-000018",
+      "resource_intro": "SDQ 是一份简短的儿童行为与情绪问卷，可由家长、老师或孩子本人填写，覆盖 4-17 岁。",
+      "recommendation_reason": "帮助整理孩子的优势与困难，而不是给孩子下结论。它同时问优势和困难，是少数真正把孩子的长处放进评估框架的工具。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "大多数评估工具只问孩子哪里有困难，但 SDQ 不一样——它同时问孩子有哪些优势。这个设计不是为了让评估「看起来更正面」，而是因为理解一个孩子，不能只看他做不到的事。如果你想要一个把孩子的长处也放进框架的工具，SDQ 是少数真正做到这一点的选择，而且有中文版。",
+      "key_points": [
+        "SDQ 同时问优势和困难，帮助家长看到孩子的全貌。",
+        "可以由家长、老师和孩子分别填写，比较不同角度的观察。",
+        "结果不是诊断，而是帮助家长决定是否需要进一步支持。",
+        "有中文版本，适合中文家庭使用。"
+      ],
+      "related_pages": [
+        "health",
+        "family-relationships",
+        "disability-services"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Take Action",
+      "resource_category": "Developmental Screening",
+      "is_online_tool": true,
+      "url": "https://www.sdqinfo.org",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果学校或医生建议做一个行为评估，你想了解这类工具通常评估什么。"
+    },
+    {
+      "id": "RES-000019",
+      "title": "Vineland Adaptive Behavior Scales",
+      "title_zh": "Vineland 适应行为量表",
+      "organization": "Pearson Assessments",
+      "organization_short": "Vineland",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "Assessment / Screening",
+      "audience": [
+        "Professionals",
+        "Parents"
+      ],
+      "topic_tags": [
+        "Adaptive Behaviour",
+        "Diagnosis",
+        "Developmental Disability"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "paid",
+      "external_url": "https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Behavior/Vineland-Adaptive-Behavior-Scales-%7C-Third-Edition/p/100001622.html",
+      "anori_path": "/pages/resource/RES-000019",
+      "resource_intro": "Vineland 是国际上最常用的适应行为评估工具之一，由专业人员使用，评估孩子在真实生活中的独立能力。",
+      "recommendation_reason": "当家长想理解评估结果里的「适应行为」是什么意思时，这份资源帮助家长把专业语言翻译成日常理解。",
+      "recommendation_level": "advanced",
+      "digest_status": "ready",
+      "digest_summary": "拿到评估报告，里面出现了「适应行为」这个词——很多家长不确定这是什么意思。Vineland 评估的不是孩子在测试房间里的表现，而是孩子在真实生活中实际能做什么：穿衣、沟通、和别人互动。这个区别很重要：孩子在评估室里的表现，往往和家里不一样。了解 Vineland 在测什么，可以帮助家长更准确地解读评估结果。",
+      "key_points": [
+        "适应行为评估关注真实生活能力，而不是智力测试成绩。",
+        "它覆盖沟通、日常生活、社会化和运动四个领域。",
+        "这类评估需要由专业人员进行，家长的观察是重要输入。",
+        "理解评估结果最重要的是：孩子现在能做什么，而不是分数是多少。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "health",
+        "values"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Understand",
+      "resource_category": "Adaptive Behavior Assessment",
+      "is_online_tool": false,
+      "url": "https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Behavior/Vineland-Adaptive-Behavior-Scales-%7C-Third-Edition/p/100001622.html",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果专业人员提到了适应行为评估，你想了解它评估的是孩子的哪些能力。"
+    },
+    {
+      "id": "RES-000020",
+      "title": "Understanding Evaluations and Assessments",
+      "title_zh": "理解评估与测评结果",
+      "organization": "Child Mind Institute",
+      "organization_short": "CMI",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "NGO Resource",
+      "audience": [
+        "Parents"
+      ],
+      "topic_tags": [
+        "Diagnosis",
+        "Assessment / Screening",
+        "Family Support"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "external_url": "https://childmind.org/topics/evaluations-and-assessments/",
+      "anori_path": "/pages/resource/RES-000020",
+      "resource_intro": "Child Mind Institute 是美国专注于儿童心理健康与学习的非营利机构，提供大量面向家长的资源。",
+      "recommendation_reason": "当评估结果出来以后，家长最需要的不是更多专业术语，而是有人用清楚的语言解释：这意味着什么，下一步该怎么理解。",
+      "recommendation_level": "recommended",
+      "digest_status": "ready",
+      "digest_summary": "拿到评估报告是一件既重要又容易让家长不知所措的事。CMI 的资源帮助家长理解：评估报告在说什么、哪些是最关键的信息、以及如何用这份报告和学校或医疗团队沟通。评估不是终点，而是理解孩子的起点。",
+      "key_points": [
+        "评估报告通常包含很多专业术语，家长不需要全部看懂，但需要理解结论和建议。",
+        "一份好的评估应该告诉你孩子能做什么、在哪里需要支持，而不只是给一个诊断标签。",
+        "拿到报告后，可以要求专业人员用家长能理解的语言解释关键发现。",
+        "评估结果是帮助制定支持计划的工具，不是定义孩子未来的判决。"
+      ],
+      "related_pages": [
+        "disability-services",
+        "values",
+        "support-from-others"
+      ],
+      "status": "Active",
+      "date_added": "2026-07-01",
+      "resource_purpose": "Plan",
+      "resource_category": "Assessment Navigation",
+      "is_online_tool": false,
+      "url": "https://childmind.org/topics/evaluations-and-assessments/",
+      "last_verified": "2026-07",
+      "has_pdf": false,
+      "entry_question": "如果孩子刚刚完成了一项评估，你想理解报告里的内容和建议意味着什么。"
+    },
+    {
+      "id": "RES-000021",
+      "title": "NDIS — National Disability Insurance Scheme",
+      "title_zh": "澳大利亚国家残障保险计划（NDIS）",
+      "organization": "National Disability Insurance Agency",
+      "organization_short": "NDIA",
+      "countries": [
+        "Australia"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Government Benefits",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Disability Benefits",
+        "Government Support",
+        "Funding",
+        "Care Planning"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.ndis.gov.au/",
+      "external_url": "https://www.ndis.gov.au/",
+      "description": "Australia's national scheme providing funding and support coordination for people with permanent and significant disability. Covers therapy, equipment, daily support and community participation.",
+      "description_zh": "澳大利亚面向残障人士的国家资金支持计划，涵盖治疗、辅具、日常支持和社区参与资助，家庭可为孩子申请个别化计划。",
+      "related_pages": [
+        "financial-wellbeing",
+        "disability-services"
+      ],
+      "evidence_level": "Government Policy",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000021",
+      "digest_status": "ready",
+      "resource_intro": "NDIS 是澳大利亚为有永久性残障的人士提供个别化资金支持的国家计划。",
+      "digest_summary": "NDIS 不是一次性补贴，而是一套根据每个人的具体需求制定的个别支持计划。对有特殊需求孩子的家庭来说，最重要的是了解如何提交申请、如何说明孩子的功能影响，以及如何要求支持协调服务。",
+      "key_points": [
+        "NDIS 资金可用于治疗、日常生活支持、辅助技术和社区参与。",
+        "申请需要提交医疗证明文件，说明残障对日常功能的影响。",
+        "获批后可选择自行管理或委托计划管理机构，灵活度较高。"
+      ],
+      "recommendation_reason": "如果你在澳大利亚，这是最重要的政府资金来源。第一步是确认孩子是否符合申请条件。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想参考其他国家如何把治疗、辅助、日常生活和家庭支持连接起来。"
+    },
+    {
+      "id": "RES-000022",
+      "title": "Disability Living Allowance & Child Disability Payment",
+      "title_zh": "英国残障生活津贴与儿童残障付款（DLA/CDP）",
+      "organization": "UK Department for Work and Pensions / Social Security Scotland",
+      "organization_short": "DWP / SSS",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Government Benefits",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Disability Benefits",
+        "Government Support",
+        "Child Disability",
+        "Financial Aid"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.gov.uk/disability-living-allowance-children",
+      "external_url": "https://www.gov.uk/disability-living-allowance-children",
+      "description": "UK government financial support for children under 16 with disabilities or health conditions. Covers care and mobility needs at different rates depending on severity.",
+      "description_zh": "英国针对16岁以下残障或健康状况有特殊需求儿童的政府现金补贴，按照顾和出行需求分级发放，不需要申报收入。",
+      "related_pages": [
+        "financial-wellbeing",
+        "disability-services"
+      ],
+      "evidence_level": "Government Policy",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000022",
+      "digest_status": "ready",
+      "resource_intro": "DLA（残障生活津贴）是英国政府为有残障或特殊健康需求的16岁以下儿童家庭提供的现金支持。",
+      "digest_summary": "DLA 不需要家庭通过收入审查，只根据孩子的照顾和出行需求评估。申请表格较长，但填写时建议描述孩子在「最差状态」下的情况，而非平均水平。苏格兰的对应项目叫 Child Disability Payment（CDP）。",
+      "key_points": [
+        "DLA 分为照顾部分（Care Component）和出行部分（Mobility Component），均有高中低三个级别。",
+        "不需要诊断证明，但需详细描述孩子的日常功能受限情况。",
+        "每2年或根据孩子状况变化需重新申请或续期。"
+      ],
+      "recommendation_reason": "如果你在英国，这是有残障或特殊需求孩子的家庭应优先了解的基础补贴，申请成功可显著缓解照顾相关支出压力。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在了解残障相关的经济支持，想看看其他国家的做法作为参考。"
+    },
+    {
+      "id": "RES-000023",
+      "title": "SG Enable — Financial Assistance Schemes",
+      "title_zh": "新加坡残障支持局 — 经济援助计划",
+      "organization": "SG Enable",
+      "organization_short": "SGE",
+      "countries": [
+        "Singapore"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Government Benefits",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Disability Benefits",
+        "Government Support",
+        "Asia",
+        "Financial Aid"
+      ],
+      "language": [
+        "en",
+        "zh"
+      ],
+      "access": "free",
+      "url": "https://www.sgenable.sg/pages/financial-assistance",
+      "external_url": "https://www.sgenable.sg/",
+      "description": "Singapore's central agency for disability services, providing financial assistance schemes including Assistive Technology Fund, Home Caregiving Grant, and Caregivers Training Grant.",
+      "description_zh": "新加坡残障事务局提供的多项经济援助计划，包括辅助科技基金、居家照顾津贴、照顾者培训津贴等，面向华语家庭提供中英文服务。",
+      "related_pages": [
+        "financial-wellbeing",
+        "disability-services",
+        "support-from-others"
+      ],
+      "evidence_level": "Government Policy",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000023",
+      "digest_status": "ready",
+      "resource_intro": "SG Enable 是新加坡政府统筹残障服务和援助计划的专责机构，提供多种面向残障人士及其家庭的经济支持。",
+      "digest_summary": "在新加坡有残障或特殊需求孩子的家庭，往往不缺乏支持的意愿，而是不知道有哪些渠道可以申请。SG Enable 整合了多个政府援助计划，包括帮助居家照顾者的现金补贴、购买辅具的资金支持，以及照顾者培训课程。网站提供中英双语，华语家庭可以直接使用，是新加坡家庭了解经济支持最完整的起点。",
+      "key_points": [
+        "辅助科技基金（ATF）可资助购买辅助设备，最高可获得90%补贴。",
+        "居家照顾津贴每月可达400新元，按家庭经济状况评级。",
+        "照顾者培训津贴支持家长参加政府认可的残障照顾培训课程。"
+      ],
+      "recommendation_reason": "如果你在新加坡，这是了解政府经济支持最完整的起点，中英双语，适合华语家庭直接使用。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解新加坡为有特殊需求的孩子提供了哪些经济援助方式。"
+    },
+    {
+      "id": "RES-000024",
+      "title": "Easter Seals — Financial Resources Navigator",
+      "title_zh": "伊斯特印章基金会 — 经济资源导航",
+      "organization": "Easter Seals",
+      "organization_short": "Easter Seals",
+      "countries": [
+        "United States",
+        "Canada"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Financial Assistance",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Financial Aid",
+        "Disability Support",
+        "Non-profit",
+        "Care Funding"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.easterseals.com/",
+      "external_url": "https://www.easterseals.com/",
+      "description": "One of North America's leading disability non-profits, providing direct financial assistance, care services, and resource navigation for families of children and adults with disabilities.",
+      "description_zh": "北美规模最大的残障服务非营利机构之一，提供直接经济援助、照顾服务及资源导航，覆盖美国和加拿大。",
+      "related_pages": [
+        "financial-wellbeing",
+        "support-from-others"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000024",
+      "digest_status": "ready",
+      "resource_intro": "Easter Seals 是北美历史最悠久的残障服务机构之一，为各年龄段残障人士及其家庭提供服务和资源。",
+      "digest_summary": "在美国和加拿大，有残障孩子的家庭面对的一个现实是：政府资源往往分散在不同机构，找起来很费力。Easter Seals 在两国各地都有本地分支，提供治疗、喘息服务和经济援助的区域性资源——最实用的方式是直接联系所在城市的本地分部，说明家庭情况和最需要的支持类型，他们会帮助导航。",
+      "key_points": [
+        "覆盖美国和加拿大，有超过550个服务地点。",
+        "可提供直接经济援助、短期照顾服务和资源转介。",
+        "建议直接联系所在城市的本地分支，获取针对性支持。"
+      ],
+      "recommendation_reason": "如果你在美国或加拿大，且需要直接的照顾支持或经济援助，Easter Seals 是除政府渠道外最权威的非营利入口之一。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你不知道从哪里开始了解可以申请哪些经济支持，想先有个整体方向。"
+    },
+    {
+      "id": "RES-000025",
+      "title": "Carers UK — Benefits Calculator & Financial Guide",
+      "title_zh": "英国照顾者协会 — 福利计算器与经济指南",
+      "organization": "Carers UK",
+      "organization_short": "Carers UK",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Financial Assistance",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Carer Benefits",
+        "Financial Aid",
+        "Benefits Calculator",
+        "UK"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.carersuk.org/help-and-advice/financial-support/",
+      "external_url": "https://www.carersuk.org/",
+      "description": "UK's leading carer charity providing a comprehensive financial guide for carers, including benefits entitlements, an online benefits calculator, and advice on managing care costs.",
+      "description_zh": "英国最权威的照顾者支持机构，提供照顾者可申请的全面福利指引和在线福利计算工具，帮助家庭评估可获得的经济支持。",
+      "related_pages": [
+        "financial-wellbeing",
+        "support-from-others",
+        "career"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "foundational",
+      "has_pdf": true,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000025",
+      "digest_status": "ready",
+      "resource_intro": "Carers UK 是英国专注照顾者权益的非营利机构，提供政策倡导、信息支持和经济援助指导。",
+      "digest_summary": "很多在英国的照顾者不知道自己其实有资格申请某些福利，只是从来没有人告诉他们。Carers UK 的在线福利计算器只需要输入基本信息，就能看到你可能有资格申请的所有福利类别。很多家庭在用完这个工具之后发现，自己错过了本可以申请的 Carer's Allowance。如果你在英国，这个工具应该是做经济评估的第一步，而不是最后一步。",
+      "key_points": [
+        "在线福利计算器免费使用，平均只需15分钟，即可识别可申请的所有福利类别。",
+        "Carer's Allowance（照顾者津贴）是英国照顾者主要福利，每周£81.90（2026年），但申请率偏低。",
+        "提供中文翻译版本的部分指南，适合英国华人照顾者参考。"
+      ],
+      "recommendation_reason": "如果你在英国，这个工具应该是你做经济评估的第一步——很多家庭发现自己错过了已有资格申请的福利。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想知道自己目前可能符合哪些补助条件，但不知道从哪里查起。"
+    },
+    {
+      "id": "RES-000026",
+      "title": "IRS Publication 502 — Medical and Dental Expenses",
+      "title_zh": "美国国税局 502 号出版物 — 医疗费用税务减免",
+      "organization": "Internal Revenue Service",
+      "organization_short": "IRS",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Tax & Insurance",
+      "resource_purpose": "Plan",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Tax Deduction",
+        "Medical Expenses",
+        "Disability",
+        "Financial Planning"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.irs.gov/pub/irs-pdf/p502.pdf",
+      "external_url": "https://www.irs.gov/publications/p502",
+      "description": "Official IRS guidance on deducting medical and dental expenses, including therapy, special education costs, and disability-related equipment for dependent children.",
+      "description_zh": "美国国税局关于医疗费用税务扣除的官方指南，包括治疗费用、特殊教育费用和残障辅具等，有孩子特殊需求的家庭可依此申报扣除。",
+      "related_pages": [
+        "financial-wellbeing"
+      ],
+      "evidence_level": "Government Guidance",
+      "recommendation_level": "recommended",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000026",
+      "digest_status": "ready",
+      "resource_intro": "美国国税局每年更新的 Pub 502 是判断哪些医疗和治疗费用可以在报税时扣除的权威文件。",
+      "digest_summary": "有特殊需求孩子的家庭，许多治疗和教育相关支出（如语言治疗、职业治疗、特殊教育学校学费、辅助设备）可能符合医疗费用税务扣除条件，但要超过调整后总收入的7.5%才可计算。建议配合税务顾问使用。",
+      "key_points": [
+        "残障相关支出（如听觉辅具、轮椅、特殊学校）通常可计入医疗费用扣除。",
+        "家庭照顾相关费用如果与工作直接相关，也可能申请照顾费用税收抵免（CDCTC）。",
+        "建议每年报税前整理当年所有医疗和治疗收据，对照 Pub 502 检查适用项目。"
+      ],
+      "recommendation_reason": "在美国，这是确认哪些特殊教育和治疗费用可以减税的权威来源，每年报税前值得花30分钟阅读与自身情况相关的章节。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果孩子有医疗或治疗费用，你想了解是否有税务方面的减免或申报方式。"
+    },
+    {
+      "id": "RES-000027",
+      "title": "MoneySmart — Family Budget Planner",
+      "title_zh": "澳大利亚 MoneySmart — 家庭预算规划工具",
+      "organization": "Australian Securities and Investments Commission",
+      "organization_short": "ASIC MoneySmart",
+      "countries": [
+        "Australia"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Family Budget",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Budget Planning",
+        "Family Finance",
+        "Online Tool",
+        "Care Cost"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://moneysmart.gov.au/budgeting/budget-planner",
+      "external_url": "https://moneysmart.gov.au/",
+      "description": "Free interactive budget planner from Australia's financial regulator, designed to help families track income, expenses and care-related costs across short and long term.",
+      "description_zh": "澳大利亚金融监管机构提供的免费在线家庭预算规划工具，帮助家庭追踪收入、支出和照顾相关成本，适合做短期和中长期规划。",
+      "related_pages": [
+        "financial-wellbeing",
+        "career"
+      ],
+      "evidence_level": "Government Guidance",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000027",
+      "digest_status": "ready",
+      "resource_intro": "MoneySmart 是澳大利亚证券和投资委员会（ASIC）提供的免费金融教育平台，预算规划工具是其中最常用的功能之一。",
+      "digest_summary": "这个工具的价值在于让照顾者把「照顾相关支出」单独列出来，看清它在家庭总支出中的比重，以及是否还有可以调整的空间。不需要注册，直接在浏览器里使用，填写完成后可以下载 PDF 报告。",
+      "key_points": [
+        "可单独列出治疗费用、辅具维护、接送交通等照顾相关支出，便于分析。",
+        "支持短期（月度）和长期（年度）两种规划视图。",
+        "完成后可生成可保存/打印的 PDF 报告，适合与家庭成员或财务顾问分享。"
+      ],
+      "recommendation_reason": "如果你想第一次把家庭的照顾成本整理清楚，这个工具是最低门槛的起点——不需要账户，15分钟可以完成基本版本。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果家庭经济压力开始影响日常决定，你想先整理一下当前的支出情况。"
+    },
+    {
+      "id": "RES-000028",
+      "title": "ILO — Care Work and Care Jobs: For the Future of Decent Work",
+      "title_zh": "国际劳工组织 — 照顾工作与照顾就业：体面工作的未来",
+      "organization": "International Labour Organization",
+      "organization_short": "ILO",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "resource_category": "Caregiver Compensation",
+      "resource_purpose": "Learn More",
+      "audience": [
+        "Parents",
+        "Caregivers",
+        "Policy Makers"
+      ],
+      "topic_tags": [
+        "Caregiver Rights",
+        "Family Leave",
+        "Care Policy",
+        "International",
+        "Employment"
+      ],
+      "language": [
+        "en",
+        "fr",
+        "es"
+      ],
+      "access": "free",
+      "url": "https://www.ilo.org/global/topics/care-economy/",
+      "external_url": "https://www.ilo.org/global/topics/care-economy/",
+      "description": "ILO's comprehensive resource on care work recognition, caregiver compensation policies, and family leave entitlements across countries, helping caregivers understand their global policy context.",
+      "description_zh": "国际劳工组织关于照顾工作认可、照顾者薪酬政策和各国家庭假期制度的综合资源，帮助照顾者理解自身权益在全球政策框架下的位置。",
+      "related_pages": [
+        "financial-wellbeing",
+        "career"
+      ],
+      "evidence_level": "International Policy",
+      "recommendation_level": "advanced",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000028",
+      "digest_status": "ready",
+      "resource_intro": "ILO 是联合国下属的国际劳工机构，长期研究并推动全球照顾工作的政策认可和权利保障。",
+      "digest_summary": "这份资源帮助照顾者理解一个更大的图景：照顾工作在全球范围内如何被（或不被）认可为有价值的劳动，以及各国在照顾者薪酬、带薪休假、职业保护方面的政策差异。对需要向雇主或政策制定者倡导权益的家庭照顾者，这是有力的参照框架。",
+      "key_points": [
+        "全球80%的照顾工作仍由女性承担，但大多数未被计入经济体系。",
+        "有超过70个国家已建立某种形式的照顾者带薪假期或补贴制度。",
+        "ILO 的 C183 母婴保护公约和 R191 建议书是了解国际标准的入口文件。"
+      ],
+      "recommendation_reason": "如果你想理解照顾者经济支持的全球背景，或者需要为自己的权益倡导做准备，这是最权威的国际参照来源。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解国际上如何看待照顾者的工作价值，以及政策层面有哪些讨论。"
+    },
+    {
+      "id": "RES-000029",
+      "title": "ARCH National Respite Network — National Respite Locator",
+      "title_zh": "美国全国喘息服务网络 — 喘息服务查找工具",
+      "organization": "ARCH National Respite Network",
+      "organization_short": "ARCH",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Respite Care",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Respite Care",
+        "Caregiver Relief",
+        "Break from Caring",
+        "Local Services"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://archrespite.org/respitelocator",
+      "external_url": "https://archrespite.org/",
+      "description": "Free online tool to locate respite care services by US state and county. Helps caregivers find temporary relief care for children and adults with disabilities or special needs.",
+      "description_zh": "美国最全面的喘息服务查找工具，按州和县搜索可用的临时照顾服务，帮助照顾者找到短期或定期的替代照顾安排。",
+      "related_pages": [
+        "leisure",
+        "support-from-others"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000029",
+      "digest_status": "ready",
+      "resource_intro": "ARCH 是美国全国喘息服务联盟，其在线查找工具是美国照顾者寻找临时替代照顾最常用的入口。",
+      "digest_summary": "很多照顾者不知道「喘息服务」这个词，或者不确定自己是否有资格使用。ARCH 的查找工具不需要注册，输入邮编即可看到所在地区可用的喘息服务选项，包括居家喘息、日间照顾中心和短期住宿安排。部分服务有补贴或免费配额。",
+      "key_points": [
+        "喘息服务让照顾者可以暂时离开照顾角色，从几小时到几天不等。",
+        "部分州提供政府资助的喘息服务，特别是针对有发展性残障孩子的家庭。",
+        "使用前建议先致电确认服务内容、等待时间和费用安排。"
+      ],
+      "recommendation_reason": "如果你在美国，这是寻找本地喘息服务最直接的起点——输入邮编，五分钟内就能看到附近的选项。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你需要喘息服务，但不知道从哪里开始查找当地有哪些选项。"
+    },
+    {
+      "id": "RES-000030",
+      "title": "Carer Gateway — Respite Care Services",
+      "title_zh": "澳大利亚照顾者门户 — 喘息服务",
+      "organization": "Australian Government — Carer Gateway",
+      "organization_short": "Carer Gateway",
+      "countries": [
+        "Australia"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Respite Care",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Respite Care",
+        "Government Support",
+        "Caregiver Relief",
+        "Australia"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.carergateway.gov.au/services/respite",
+      "external_url": "https://www.carergateway.gov.au/",
+      "description": "Australian Government's centralised carer support service offering free access to planned and emergency respite, counselling and peer support for all carers.",
+      "description_zh": "澳大利亚政府为所有照顾者提供的集中支持平台，提供计划性和紧急喘息服务、辅导和同伴支持，部分服务免费。",
+      "related_pages": [
+        "leisure",
+        "support-from-others",
+        "health"
+      ],
+      "evidence_level": "Government Guidance",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000030",
+      "digest_status": "ready",
+      "resource_intro": "Carer Gateway 是澳大利亚政府为照顾者提供的官方一站式支持平台，喘息服务是其核心服务之一。",
+      "digest_summary": "在澳大利亚，照顾者可以通过 Carer Gateway 申请「计划性喘息」（定期安排的替代照顾）和「紧急喘息」（突发情况下的临时安排）。申请不需要转介，直接拨打1800 422 737或在线申请即可。部分服务免费，部分需要资产评估。",
+      "key_points": [
+        "提供计划性喘息（定期安排）和紧急喘息（突发情况）两种模式。",
+        "照顾者还可申请免费辅导和同伴支持小组，不限于喘息服务。",
+        "首次联系时会有照顾者评估，帮助确定适合的支持类型。"
+      ],
+      "recommendation_reason": "如果你在澳大利亚，这是政府提供的喘息服务官方入口，不需要转介，直接联系即可开始评估。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在澳大利亚，想了解照顾者可以申请哪些喘息支持。"
+    },
+    {
+      "id": "RES-000031",
+      "title": "Carers UK — Taking a Break",
+      "title_zh": "英国照顾者协会 — 照顾者休假指南",
+      "organization": "Carers UK",
+      "organization_short": "Carers UK",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Respite Care",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Respite Care",
+        "Carer Break",
+        "UK",
+        "Short Break",
+        "Caregiver Rest"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.carersuk.org/help-and-advice/your-health-and-wellbeing/taking-a-break/",
+      "external_url": "https://www.carersuk.org/",
+      "description": "Practical guide for UK carers on accessing short breaks and respite, including local authority assessments, funded breaks for carers of disabled children, and what to do in emergencies.",
+      "description_zh": "英国照顾者申请短期休假和喘息服务的实用指南，包括地方政府评估流程、残障儿童家庭可获得的资助喘息选项及紧急情况处理。",
+      "related_pages": [
+        "leisure",
+        "support-from-others"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "foundational",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000031",
+      "digest_status": "ready",
+      "resource_intro": "Carers UK 的照顾者休假指南涵盖了英国照顾者获得喘息服务的完整路径，从申请权利到实际安排。",
+      "digest_summary": "很多英国照顾者不知道自己有权利通过地方政府申请「照顾者需求评估」，这是获得资助喘息服务的法定入口。这份指南解释了整个流程，包括如何在评估中说清楚自己的需求，以及如果申请被拒绝怎么上诉。",
+      "key_points": [
+        "在英国，照顾者有权利要求地方政府进行「照顾者需求评估」，这是获得支持的法定权利。",
+        "残障儿童的家庭可通过儿童服务部门申请「短期住宿」（Short Breaks），部分地区有资助。",
+        "紧急情况下（照顾者突然生病），可联系地方社会服务部门申请紧急喘息安排。"
+      ],
+      "recommendation_reason": "如果你在英国，这是理解照顾者休假权利的最清晰入口——很多照顾者错过了本可申请的支持，只因为不知道有这个权利。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你不确定作为照顾者是否有权申请休假，或者怎么开口和雇主谈。"
+    },
+    {
+      "id": "RES-000032",
+      "title": "WHO — Self-care Interventions for Health",
+      "title_zh": "世界卫生组织 — 健康自我照顾干预指南",
+      "organization": "World Health Organization",
+      "organization_short": "WHO",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "resource_category": "Caregiver Self-care",
+      "resource_purpose": "Understand",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Self-care",
+        "Mental Health",
+        "Caregiver Wellbeing",
+        "International"
+      ],
+      "language": [
+        "en",
+        "zh",
+        "fr",
+        "es",
+        "ar"
+      ],
+      "access": "free",
+      "url": "https://www.who.int/health-topics/self-care",
+      "external_url": "https://www.who.int/health-topics/self-care",
+      "description": "WHO's evidence-based framework on self-care as a health strategy, covering mental health maintenance, stress management and caregiver resilience across international contexts.",
+      "description_zh": "世界卫生组织关于自我照顾作为健康策略的循证框架，涵盖心理健康维护、压力管理和照顾者韧性，适用于不同文化背景的家庭。",
+      "related_pages": [
+        "leisure",
+        "health",
+        "values"
+      ],
+      "evidence_level": "Guideline",
+      "recommendation_level": "foundational",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000032",
+      "digest_status": "ready",
+      "resource_intro": "WHO 的自我照顾指南把照顾自己定义为一种有证据支持的健康策略，而不是奢侈或软弱。",
+      "digest_summary": "这份资源最重要的贡献，是把自我照顾从「如果有时间就做」重新定位为「维持照顾能力的必要条件」。对长期照顾有特殊需求孩子的家长来说，这个框架提供了一个允许自己照顾自己的理由——不是为了自私，而是为了能持续照顾家人。",
+      "key_points": [
+        "WHO 将自我照顾定义为「个人、家庭和社区在医疗专业支持最小化的情况下促进、维护和恢复健康的能力」。",
+        "心理自我照顾（包括休息、情绪调节和社会连接）与身体照顾同等重要。",
+        "有证据显示，照顾者的自我照顾行为与被照顾者的健康结果正向相关。"
+      ],
+      "recommendation_reason": "如果你需要一个「为什么必须照顾自己」的科学依据，而不只是建议，WHO 的框架是最权威的出处。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解哪些自我照顾方法已经有研究支持，而不只是听到别人建议。"
+    },
+    {
+      "id": "RES-000033",
+      "title": "NAMI — Family Members and Caregivers: Self-care",
+      "title_zh": "美国全国精神疾病联盟 — 家庭照顾者自我照顾资源",
+      "organization": "National Alliance on Mental Illness",
+      "organization_short": "NAMI",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Caregiver Self-care",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Self-care",
+        "Caregiver Burnout",
+        "Mental Health",
+        "Family Support"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.nami.org/Support-Education/Family-Members-and-Caregivers",
+      "external_url": "https://www.nami.org/",
+      "description": "NAMI's dedicated resource hub for family caregivers including burnout prevention, self-care strategies, peer support groups and a family helpline.",
+      "description_zh": "美国最大的精神健康非营利机构为家庭照顾者提供的专属资源，包括照顾者耗竭预防、自我照顾策略、同伴支持小组和家庭帮助热线。",
+      "related_pages": [
+        "leisure",
+        "support-from-others",
+        "health"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000033",
+      "digest_status": "ready",
+      "resource_intro": "NAMI 是美国最大的精神健康倡导组织，其家庭照顾者专区关注照顾者自身的心理健康和耗竭风险。",
+      "digest_summary": "很多长期照顾者会经历「照顾者耗竭」（caregiver burnout）——这不是意志力的问题，而是长期超负荷的系统性结果。NAMI 的资源帮助照顾者识别耗竭的早期信号，并提供具体的自我照顾策略，包括线上支持小组和24小时帮助热线（1-800-950-NAMI）。",
+      "key_points": [
+        "照顾者耗竭的早期信号包括：对被照顾者失去耐心、感到孤立、健康状况下降、持续疲惫。",
+        "NAMI Family Support Group 是免费的同伴支持小组，可在线或线下参加。",
+        "NAMI 帮助热线（1-800-950-NAMI）周一至周五提供免费电话咨询。"
+      ],
+      "recommendation_reason": "如果你开始觉得疲惫不只是「累」，而是某种更深的耗竭感，这是一个可以立即接触到支持的入口。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你长期照顾家人，开始感到疲惫或忽略了自己，想找一些实际可用的方法。"
+    },
+    {
+      "id": "RES-000034",
+      "title": "UCLA Mindful — Free Guided Meditations",
+      "title_zh": "加州大学洛杉矶分校正念中心 — 免费冥想引导",
+      "organization": "UCLA Mindful Awareness Research Center",
+      "organization_short": "UCLA Mindful",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "Research Website",
+      "resource_category": "Mindfulness",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Mindfulness",
+        "Stress Reduction",
+        "Meditation",
+        "Caregiver Wellbeing"
+      ],
+      "language": [
+        "en",
+        "es"
+      ],
+      "access": "free",
+      "url": "https://www.uclahealth.org/programs/marc/free-guided-meditations",
+      "external_url": "https://www.uclahealth.org/programs/marc",
+      "description": "Free research-backed guided meditations from UCLA's Mindful Awareness Research Center, ranging from 3 to 19 minutes. Available as audio files and app, no account required.",
+      "description_zh": "加州大学洛杉矶分校正念研究中心提供的免费循证冥想引导，时长3至19分钟，无需注册，可直接在线收听或下载，部分提供西班牙语版本。",
+      "related_pages": [
+        "leisure",
+        "values",
+        "health"
+      ],
+      "evidence_level": "Research-backed",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000034",
+      "digest_status": "ready",
+      "resource_intro": "UCLA 正念研究中心是全球最权威的正念研究机构之一，其免费冥想资源基于 MBSR（正念减压）研究开发。",
+      "digest_summary": "这个资源的价值在于：完全免费、不需要注册、时长灵活（最短3分钟），而且来自研究机构而非商业平台。对于没有时间或精力「开始一个正念练习」的照顾者，3分钟的呼吸引导是一个真正可以今天就开始的入口。",
+      "key_points": [
+        "最短的引导只有3分钟，适合任何碎片时间使用。",
+        "提供粤语和普通话版本的部分引导，适合华语家庭。",
+        "基于 MBSR（正念减压）研究开发，有系统综述支持其对压力的效果。"
+      ],
+      "recommendation_reason": "如果你从来没有试过正念练习，或者觉得「自己没有时间」，从3分钟的引导开始是最低门槛的方式。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想试试冥想或放松练习，但不知道从哪个简单的方式开始。"
+    },
+    {
+      "id": "RES-000035",
+      "title": "Mind — Mindfulness for Wellbeing",
+      "title_zh": "英国 Mind 心理健康机构 — 正念与幸福感",
+      "organization": "Mind",
+      "organization_short": "Mind",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Mindfulness",
+      "resource_purpose": "Understand",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Mindfulness",
+        "Mental Health",
+        "Stress",
+        "Wellbeing",
+        "UK"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.mind.org.uk/information-support/drugs-and-treatments/mindfulness/",
+      "external_url": "https://www.mind.org.uk/",
+      "description": "Mind's balanced guide to mindfulness as a mental health tool, including evidence review, how to get started, and important caveats about when mindfulness may not be the right fit.",
+      "description_zh": "英国最具权威的心理健康非营利机构对正念的平衡介绍，包含证据综述、入门方法，以及何时正念可能不适合的重要说明——对复杂情境下的照顾者尤其有参考价值。",
+      "related_pages": [
+        "leisure",
+        "health",
+        "values"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000035",
+      "digest_status": "ready",
+      "resource_intro": "Mind 是英国最大的心理健康倡导机构，其正念指南以平衡和诚实著称，不夸大也不否定正念的效果。",
+      "digest_summary": "这份资源的特别之处在于它不只说「正念有好处」，还说明了正念可能不适合的情况——例如对某些有创伤经历的人，正念练习可能引发不适。对照顾者来说，这种诚实比单方面的推荐更有参考价值，帮助人们做出真正适合自己的选择。",
+      "key_points": [
+        "正念的证据支持主要来自抑郁复发预防（MBCT），对一般压力也有研究支持。",
+        "Mind 明确指出：正念不是适合所有人的万能方法，有创伤史者应谨慎开始。",
+        "提供从哪里开始的具体建议，包括免费 app、线下课程和书籍。"
+      ],
+      "recommendation_reason": "如果你想了解正念是否适合自己，而不只是被告知「你应该做正念」，这是最诚实平衡的介绍。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解正念对心理健康有什么作用，以及有哪些免费的入门方式。"
+    },
+    {
+      "id": "RES-000036",
+      "title": "Special Olympics — Find Your Program",
+      "title_zh": "特殊奥林匹克 — 查找本地项目",
+      "organization": "Special Olympics International",
+      "organization_short": "Special Olympics",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "resource_category": "Recreation Programs",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers",
+        "Children"
+      ],
+      "topic_tags": [
+        "Inclusive Recreation",
+        "Community Participation",
+        "Disability Sport",
+        "Family Activities"
+      ],
+      "language": [
+        "en",
+        "zh",
+        "es",
+        "fr",
+        "ar"
+      ],
+      "access": "free",
+      "url": "https://www.specialolympics.org/get-involved",
+      "external_url": "https://www.specialolympics.org/",
+      "description": "International program offering free year-round sports training and competition for children and adults with intellectual disabilities, with programs in 190+ countries.",
+      "description_zh": "在190多个国家和地区提供免费全年运动训练和比赛的国际项目，面向智力残障儿童和成人，同时也为家庭提供社区连接的机会。",
+      "related_pages": [
+        "leisure",
+        "community-interaction"
+      ],
+      "evidence_level": "International Program",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000036",
+      "digest_status": "ready",
+      "resource_intro": "特殊奥林匹克是全球最大的针对智力残障人士的运动和社区融合项目，在中国、台湾、香港、新加坡均有运营。",
+      "digest_summary": "特殊奥运不只是一项运动项目，也是很多有智力残障孩子的家庭找到社区归属感的入口。孩子参与训练的同时，家长也有机会认识其他有类似经历的家庭。网站提供按国家和地区查找本地项目的功能，中文地区（大陆、台湾、香港、新加坡）均有对应项目。",
+      "key_points": [
+        "全球190+个国家有本地项目，包括大陆（中国特殊奥林匹克委员会）、台湾、香港和新加坡。",
+        "参与对象主要为8岁以上智力残障人士，大多数本地项目免费或象征性收费。",
+        "家庭志愿者和家长也可以参与，是建立社区连接的自然入口。"
+      ],
+      "recommendation_reason": "如果你的孩子有智力残障，特殊奥运是少数既能让孩子有归属感、也能让家长找到同行者的社区活动。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果孩子对运动或社交活动感兴趣，你想了解是否有适合特殊需求孩子的项目。"
+    },
+    {
+      "id": "RES-000037",
+      "title": "US Department of Labor — FMLA Guide for Employees",
+      "title_zh": "美国劳工部 — 家庭与医疗假法（FMLA）员工指南",
+      "organization": "US Department of Labor",
+      "organization_short": "US DOL",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Family & Medical Leave",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Family Leave",
+        "Employment Rights",
+        "FMLA",
+        "Caregiver Leave"
+      ],
+      "language": [
+        "en",
+        "es"
+      ],
+      "access": "free",
+      "url": "https://www.dol.gov/agencies/whd/fmla",
+      "external_url": "https://www.dol.gov/agencies/whd/fmla",
+      "description": "Official US government guide to the Family and Medical Leave Act, covering eligibility for caregivers of children with serious health conditions, how to apply, and what is protected.",
+      "description_zh": "美国劳工部关于《家庭与医疗假法》的官方指南，涵盖照顾有严重健康状况孩子的家长的资格条件、申请流程和权利保护范围。",
+      "related_pages": [
+        "career",
+        "financial-wellbeing"
+      ],
+      "evidence_level": "Government Guidance",
+      "recommendation_level": "foundational",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000037",
+      "digest_status": "ready",
+      "resource_intro": "FMLA 是美国联邦法律，保障符合条件的员工每年最多12周的无薪保职假期，用于照顾有严重健康状况的家庭成员。",
+      "digest_summary": "很多家长不知道照顾有特殊医疗需求的孩子属于 FMLA 的适用范围。关键条件是：在过去12个月内为同一雇主工作满一年且累计工时达1250小时，且雇主员工人数在50人以上。申请 FMLA 不会自动获批——需要填写表格并提供医疗证明，建议提前与 HR 沟通。",
+      "key_points": [
+        "FMLA 保障每年最多12周的保职假期（工作保留，但通常无薪）。",
+        "照顾有「严重健康状况」的子女（包括发展性残障、慢性病）符合 FMLA 条件。",
+        "可以「间歇性」使用 FMLA——例如每周固定一天带孩子去治疗。"
+      ],
+      "recommendation_reason": "如果你在美国，且需要为孩子请假去治疗或处理特殊需求相关事务，先确认自己是否符合 FMLA 资格——这是保护工作的法律权利。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在美国工作，想了解家庭与医疗假法为照顾者提供了哪些权利保障。"
+    },
+    {
+      "id": "RES-000038",
+      "title": "Carer's Leave Act 2023 — Employee Rights Guide",
+      "title_zh": "英国2023年照顾者假期法 — 员工权利指南",
+      "organization": "UK Department for Business and Trade",
+      "organization_short": "UK DBT",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Government Agency",
+      "resource_category": "Family & Medical Leave",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Carer's Leave",
+        "Employment Rights",
+        "UK",
+        "Family Leave",
+        "Workplace Rights"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.gov.uk/carers-leave",
+      "external_url": "https://www.gov.uk/carers-leave",
+      "description": "UK government guide to the Carer's Leave Act 2023, giving employees the right to one week of unpaid leave per year to arrange or provide care, with no minimum service period required.",
+      "description_zh": "英国2023年《照顾者假期法》员工权利指南，规定所有员工（无论工作年限）每年有权申请最多一周的无薪照顾假，用于安排或提供照顾。",
+      "related_pages": [
+        "career",
+        "financial-wellbeing"
+      ],
+      "evidence_level": "Government Guidance",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000038",
+      "digest_status": "ready",
+      "resource_intro": "2023年4月，英国通过《照顾者假期法》，首次赋予所有员工无需等待一年服务期即可申请照顾假的法定权利。",
+      "digest_summary": "《照顾者假期法》是英国职场照顾者权利的重要进展：从2024年4月起，任何员工从第一天上班起即可申请照顾假，不需要提供证明文件，只需要告知雇主「需要照顾一位依赖者」即可。这一周可以分散使用（例如每周一天，连续五周）。",
+      "key_points": [
+        "从入职第一天起即可申请，无需服务年限门槛。",
+        "每年最多一周（5个工作日），可以连续使用或分散使用（最小单位半天）。",
+        "不需要提供医疗证明，只需说明照顾对象是「依赖者」即可。"
+      ],
+      "recommendation_reason": "如果你在英国，这是2024年后最新的照顾者职场权利——很多雇主和员工都还不了解，值得主动了解和使用。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在英国工作，想了解照顾者假期法规定了哪些权利。"
+    },
+    {
+      "id": "RES-000039",
+      "title": "Flexible Working Foundation — Guide for Employees",
+      "title_zh": "英国弹性工作基金会 — 员工申请弹性工作指南",
+      "organization": "Flexible Working Foundation",
+      "organization_short": "FWF",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Flexible Work",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Flexible Work",
+        "Remote Work",
+        "Part-time",
+        "Work Arrangement",
+        "UK"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.flexibleworkingfoundation.com/",
+      "external_url": "https://www.flexibleworkingfoundation.com/",
+      "description": "UK organisation dedicated to advancing flexible working, providing practical guides for employees on how to make a flexible working request, negotiate arrangements and understand legal rights.",
+      "description_zh": "英国推动弹性工作的专业机构，提供员工如何提出弹性工作申请、谈判工作安排和了解法律权利的实用指南。",
+      "related_pages": [
+        "career"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000039",
+      "digest_status": "ready",
+      "resource_intro": "Flexible Working Foundation 是专注推动英国职场弹性化的非营利机构，提供雇主和员工双方的实用资源。",
+      "digest_summary": "从2024年4月起，英国员工从入职第一天起即可提出弹性工作申请（Flexible Working Request），雇主必须在两个月内回应并说明拒绝理由。这份指南帮助照顾者理解如何写一份有说服力的申请，以及如果被拒绝了有哪些选项。",
+      "key_points": [
+        "英国员工现在从入职第一天即可提出弹性工作申请，每年最多两次。",
+        "申请可以包括：缩短工时、弹性上下班时间、压缩工作周或远程工作。",
+        "雇主可以拒绝，但必须说明商业理由；员工可以申诉或寻求仲裁。"
+      ],
+      "recommendation_reason": "如果你在英国，想申请弹性工作但不确定怎么开口或如何写申请，这是最实用的起点。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想申请弹性工作安排，但不确定如何提出，或者雇主是否必须考虑。"
+    },
+    {
+      "id": "RES-000040",
+      "title": "ILO — Work and Family: Towards New Forms of Work-Life Articulation",
+      "title_zh": "国际劳工组织 — 工作与家庭：迈向新的工作生活协调形式",
+      "organization": "International Labour Organization",
+      "organization_short": "ILO",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "resource_category": "Flexible Work",
+      "resource_purpose": "Learn More",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Work-Life Balance",
+        "Family Policy",
+        "Flexible Work",
+        "International",
+        "Care Policy"
+      ],
+      "language": [
+        "en",
+        "fr",
+        "es"
+      ],
+      "access": "free",
+      "url": "https://www.ilo.org/global/topics/family/",
+      "external_url": "https://www.ilo.org/global/topics/family/",
+      "description": "ILO's international policy resource on work-family reconciliation, covering maternity/paternity leave, flexible work policies and caregiver protections across 100+ countries.",
+      "description_zh": "国际劳工组织关于工作-家庭协调的国际政策资源，涵盖100多个国家的产假、陪产假、弹性工作政策和照顾者保护，帮助理解所在国的政策背景。",
+      "related_pages": [
+        "career",
+        "financial-wellbeing"
+      ],
+      "evidence_level": "International Policy",
+      "recommendation_level": "advanced",
+      "has_pdf": true,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000040",
+      "digest_status": "ready",
+      "resource_intro": "ILO 的工作与家庭专题汇集了全球工作-照顾协调的政策研究和各国比较数据，是了解国际背景的权威来源。",
+      "digest_summary": "当照顾者面临工作与照顾的冲突时，了解所在国的政策背景有助于更清楚地知道自己的权利边界在哪里。这份 ILO 资源提供了100多个国家的政策对比，特别适合在多个国家有工作经历、或对所在国政策不熟悉的照顾者参考。",
+      "key_points": [
+        "ILO 的 C156 家庭责任工人公约是工作-家庭协调的国际法律基础。",
+        "100多个国家的带薪产假、陪产假和照顾假政策在 ILO 数据库中可查询比较。",
+        "研究显示，有弹性工作政策的国家，照顾者的就业率和心理健康指标均更好。"
+      ],
+      "recommendation_reason": "如果你想了解自己所在国的工作-照顾政策在全球处于什么水平，或者需要政策层面的参考来支持倡导，这是最全面的国际来源。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解国际上如何看待工作与家庭之间的平衡，以及有哪些政策方向。"
+    },
+    {
+      "id": "RES-000041",
+      "title": "Women Returners — Back to Work Programmes",
+      "title_zh": "女性重返职场 — 再就业项目指南",
+      "organization": "Women Returners",
+      "organization_short": "Women Returners",
+      "countries": [
+        "United Kingdom",
+        "International"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Return to Work",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Return to Work",
+        "Career Break",
+        "Reentry",
+        "Women",
+        "Returnship"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.womenreturners.com/",
+      "external_url": "https://www.womenreturners.com/",
+      "description": "Leading network supporting women returning to work after extended career breaks, including for caring responsibilities. Provides coaching, returnship programmes directory and employer connections.",
+      "description_zh": "帮助因照顾等原因长期离职的女性重返职场的专业网络，提供辅导、返岗实习项目（Returnship）目录和雇主连接服务，包括多个国家的合作项目。",
+      "related_pages": [
+        "career",
+        "support-from-others"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000041",
+      "digest_status": "ready",
+      "resource_intro": "Women Returners 是英国乃至全球最具代表性的女性重返职场支持网络，专注于因照顾责任而中断职业生涯的群体。",
+      "digest_summary": "很多因照顾孩子而离职的女性，在想重返职场时面临「简历空缺如何解释」和「信心如何恢复」两个核心困难。Women Returners 的 Returnship 项目（通常为3-6个月的有薪返岗实习）是被越来越多大型雇主采用的路径，帮助离职者以低风险方式重新接触职场。",
+      "key_points": [
+        "Returnship（返岗实习）通常为3-6个月，有薪，不需要更新简历到最新技能。",
+        "Women Returners 维护着英国及国际主要雇主的 Returnship 项目目录。",
+        "提供免费的重返职场辅导工作坊和线上社区支持。"
+      ],
+      "recommendation_reason": "如果你因为照顾孩子而离职超过一年，并考虑重新开始工作，这是最直接了解「Returnship」这条路径的资源。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你因为照顾孩子暂时减少了工作，现在想了解重返职场有哪些方式。"
+    },
+    {
+      "id": "RES-000042",
+      "title": "AARP — Back to Work 50+",
+      "title_zh": "美国退休人员协会 — 50岁以上重返职场计划",
+      "organization": "AARP Foundation",
+      "organization_short": "AARP",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Return to Work",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Return to Work",
+        "Career Reentry",
+        "Older Workers",
+        "Job Search",
+        "US"
+      ],
+      "language": [
+        "en",
+        "es"
+      ],
+      "access": "free",
+      "url": "https://www.aarp.org/aarp-foundation/our-work/income/back-to-work-50-plus/",
+      "external_url": "https://www.aarp.org/aarp-foundation/",
+      "description": "Free career re-entry program for workers 50+ who have been out of the workforce, including those who took career breaks to care for family members. Offers training, job search support and employer connections.",
+      "description_zh": "美国面向50岁以上曾中断职业生涯（包括因照顾家人而离职）的工作者的免费重返职场计划，提供培训、求职支持和雇主连接。",
+      "related_pages": [
+        "career",
+        "financial-wellbeing"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000042",
+      "digest_status": "ready",
+      "resource_intro": "AARP Back to Work 50+ 是美国专注于帮助中老年工作者重返就业市场的免费项目，特别关注因照顾责任而离职的群体。",
+      "digest_summary": "在美国，有相当比例的照顾者是在50岁以上因照顾老龄父母或有残障子女而离开职场的。AARP 的计划提供免费的职业技能评估、简历更新、面试准备和与雇主的连接服务，并有西班牙语支持。",
+      "key_points": [
+        "提供免费的职业评估、培训课程和一对一求职辅导。",
+        "与超过100家雇主合作，这些雇主对有职业空缺的申请者更包容。",
+        "有西班牙语版本，覆盖美国西班牙裔照顾者群体。"
+      ],
+      "recommendation_reason": "如果你在美国且在50岁以上考虑重返职场，AARP 是专门为这个群体设计的免费支持资源，可以从这里开始。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在 50 岁以上，正在考虑重返职场，想了解有哪些资源可以支持。"
+    },
+    {
+      "id": "RES-000043",
+      "title": "Caregiver Action Network — Workplace Resources",
+      "title_zh": "美国照顾者行动网络 — 职场资源中心",
+      "organization": "Caregiver Action Network",
+      "organization_short": "CAN",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Workplace Rights",
+      "resource_purpose": "Take Action",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Workplace Rights",
+        "Caregiver Advocacy",
+        "Employment",
+        "Anti-discrimination"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.caregiveraction.org/workplace/",
+      "external_url": "https://www.caregiveraction.org/",
+      "description": "US advocacy organisation providing guidance on workplace rights for caregivers, including how to navigate caregiver discrimination, communicate with employers and access employee assistance programs.",
+      "description_zh": "美国最大的照顾者权益倡导机构，提供照顾者职场权利指南，包括如何应对照顾者歧视、如何与雇主沟通以及如何获取员工援助计划资源。",
+      "related_pages": [
+        "career",
+        "support-from-others"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000043",
+      "digest_status": "ready",
+      "resource_intro": "Caregiver Action Network 是美国最主要的照顾者权益倡导机构，其职场资源中心专注于帮助照顾者维护就业权利。",
+      "digest_summary": "美国法律对「照顾者歧视」（Family Responsibilities Discrimination）的保护比很多人以为的更广——雇主不能仅因为员工有照顾责任就做出不利就业决定。CAN 提供了具体指导，帮助照顾者识别歧视行为、与 HR 沟通，以及必要时如何寻求法律援助。同时也介绍了很多雇主提供的员工援助计划（EAP）中常被忽视的照顾者支持服务。",
+      "key_points": [
+        "「照顾者歧视」在美国多个州有明确法律保护，联邦层面也有部分保障。",
+        "员工援助计划（EAP）通常包含免费的照顾者咨询和转介服务，但很少有人知道。",
+        "CAN 提供免费的照顾者倡导工具包，包括如何与雇主谈判弹性安排的模板。"
+      ],
+      "recommendation_reason": "如果你在美国感到职场上因照顾者身份而受到不公平对待，或者想了解自己的法律权利，这是最清晰的起点。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解其他照顾者如何在工作中应对照顾责任，有哪些实用建议。"
+    },
+    {
+      "id": "RES-000044",
+      "title": "Mind Tools — Work-Life Balance Assessment",
+      "title_zh": "Mind Tools — 工作与生活平衡自我评估",
+      "organization": "Mind Tools",
+      "organization_short": "Mind Tools",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "Research Website",
+      "resource_category": "Work-Life Assessment",
+      "resource_purpose": "Plan",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Work-Life Balance",
+        "Self-assessment",
+        "Stress Management",
+        "Career Planning"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.mindtools.com/pages/article/newHTE_87.htm",
+      "external_url": "https://www.mindtools.com/",
+      "description": "Free self-assessment tool and practical guide for evaluating current work-life balance and identifying specific areas for adjustment, particularly useful for caregivers managing multiple responsibilities.",
+      "description_zh": "免费的工作生活平衡自我评估工具和实用指南，帮助照顾者评估当前状态并找出具体需要调整的方面，特别适合同时承担多重责任的家庭照顾者。",
+      "related_pages": [
+        "career",
+        "leisure",
+        "values"
+      ],
+      "evidence_level": "Professional Guidance",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000044",
+      "digest_status": "ready",
+      "resource_intro": "Mind Tools 是专注职业发展的专业网站，其工作生活平衡评估工具是最被广泛使用的免费自我评估之一。",
+      "digest_summary": "这个评估工具帮助照顾者把一个模糊的感受（「我感觉压力很大」）转化为具体的分析（「问题主要来自工作时间安排，而不是家庭关系」）。完成评估只需要15分钟，结果会显示哪些维度最需要关注，并链接到对应的改善策略。不需要注册。",
+      "key_points": [
+        "评估覆盖工作时间、压力水平、个人时间、关系质量等多个维度。",
+        "结果给出具体的「失衡领域」，而不是只说「需要更好地平衡」。",
+        "每个失衡领域都附有具体的改善建议和延伸阅读。"
+      ],
+      "recommendation_reason": "如果你感到「哪里都不对劲但说不清楚」，用15分钟做这个评估，可以帮助你把模糊的压力感变成可以处理的具体问题。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想评估一下自己目前的工作与生活是否平衡，或者找一个改善的起点。"
+    },
+    {
+      "id": "RES-000045",
+      "title": "Family to Family Health Information Centers (F2F HICs)",
+      "title_zh": "F2F — 美国家庭对家庭健康信息中心",
+      "organization": "Family Voices / Health Resources and Services Administration",
+      "organization_short": "F2F HICs",
+      "countries": [
+        "United States"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Parent Peer Support",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Peer Support",
+        "Family Navigation",
+        "Parent-to-Parent",
+        "Special Needs",
+        "Connection"
+      ],
+      "language": [
+        "en",
+        "es"
+      ],
+      "access": "free",
+      "url": "https://familyvoices.org/f2f/",
+      "external_url": "https://familyvoices.org/f2f/",
+      "description": "Federally-funded network of family-run centers in every US state providing peer support, information and navigation by parents who have children with special health care needs — for parents in the same situation.",
+      "description_zh": "美国联邦资助的家庭运营支持中心网络，由有特殊健康需求孩子的家长为同样处境的家长提供同伴支持、信息导航和资源连接，覆盖全美每个州。",
+      "related_pages": [
+        "support-from-others",
+        "community-interaction"
+      ],
+      "evidence_level": "Government-funded Program",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000045",
+      "digest_status": "ready",
+      "resource_intro": "F2F HICs 是美国联邦政府资助的家庭支持中心网络，由有特殊需求孩子的家长运营，为同样处境的家长提供支持。",
+      "digest_summary": "很多照顾者在某个阶段会发现：专业人员可以解释孩子的状况，但只有另一个经历过同样事情的家长，才真正知道那是什么感觉。F2F HICs 的核心就是这个：由有特殊需求孩子的家长，为同样处境的家长提供一对一的同伴支持和信息导航。在每个美国州都有本地中心，可以直接联系，免费，不需要转介。不是热线，不是数据库——而是一个有过类似经历的人，愿意陪你想清楚下一步。",
+      "key_points": [
+        "由有特殊健康需求孩子的家长运营，同伴支持来自真实相似经历，不是专业训练出来的共情。",
+        "覆盖全美每个州，部分中心提供西班牙语服务，可按地区查找本地联系方式。",
+        "服务范围包括：情感支持、系统导航、资源信息和帮助家长准备与专业团队的对话。"
+      ],
+      "recommendation_reason": "如果你在美国，感到没有人真正理解你正在经历什么，F2F 是一个可以从今天开始联系的入口——不需要准备，不需要解释太多，只需要告诉他们你现在在哪里。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在美国，想了解家庭对家庭支持网络能提供什么，以及如何联系。"
+    },
+    {
+      "id": "RES-000046",
+      "title": "Carers UK — Online Community and Peer Forums",
+      "title_zh": "英国照顾者协会 — 照顾者线上社群与同伴论坛",
+      "organization": "Carers UK",
+      "organization_short": "Carers UK",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Parent Peer Support",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Peer Support",
+        "Online Community",
+        "Carer Connection",
+        "Forum",
+        "UK"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://www.carersuk.org/help-and-advice/talk-to-us/",
+      "external_url": "https://www.carersuk.org/",
+      "description": "Carers UK's online community providing peer forums, chat groups and connection spaces where carers across the UK share experiences, offer support and reduce isolation — available day and night.",
+      "description_zh": "英国照顾者协会提供的线上社群平台，照顾者可以在论坛和聊天群组中分享经历、互相支持，全天候可用，专为减少照顾者孤立感而设计。",
+      "related_pages": [
+        "support-from-others",
+        "leisure",
+        "family-relationships"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": true,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000046",
+      "digest_status": "ready",
+      "resource_intro": "Carers UK 的线上社群是英国最大的照顾者互助空间，提供全天候的同伴连接和论坛讨论。",
+      "digest_summary": "照顾的孤独往往在深夜最重——当孩子终于睡着，你一个人坐着，不知道明天怎么办。Carers UK 的线上社群在这种时候可以是一个出口：不需要解释太多背景，因为在那里的人都是照顾者，他们大概知道那种感觉。论坛按主题分区（疲惫、工作、家庭关系、喘息……），可以读别人的分享，也可以自己写，没有强制参与的要求。加入不需要理由，退出也不需要。",
+      "key_points": [
+        "24小时可用，照顾者在任何时间都可以进入，不受工作时间限制。",
+        "论坛按主题分区，可以只读不写，或者匿名分享，没有必须参与的压力。",
+        "社群由 Carers UK 管理，有基本的内容审核，不是完全无监管的开放平台。"
+      ],
+      "recommendation_reason": "如果你在英国，感到照顾让你越来越孤立，这是一个不需要预约、不需要解释、随时都可以去看看的地方。你不需要准备好，才可以进去。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想联系其他有类似经历的照顾者，但不确定从哪里找到合适的社群。"
+    },
+    {
+      "id": "RES-000047",
+      "title": "ASAN — Autistic Self Advocacy Network",
+      "title_zh": "自闭症自我倡导网络 — 社区连接资源",
+      "organization": "Autistic Self Advocacy Network",
+      "organization_short": "ASAN",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Advocacy Network",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers",
+        "Self-advocates"
+      ],
+      "topic_tags": [
+        "Community",
+        "Advocacy",
+        "Autism",
+        "Peer Network",
+        "Disability Rights",
+        "Connect"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://autisticadvocacy.org/",
+      "external_url": "https://autisticadvocacy.org/",
+      "description": "US-based disability rights network led by autistic people, providing community connection, advocacy resources and a perspective often absent from parent-only forums: the voice of autistic adults about their own lives.",
+      "description_zh": "由自闭症人士主导的残障权利网络，提供社区连接、倡导资源，以及一个在家长论坛中常常缺席的视角：自闭症成年人对自己生活的真实表达。",
+      "related_pages": [
+        "community-interaction",
+        "support-from-others",
+        "values"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000047",
+      "digest_status": "ready",
+      "resource_intro": "ASAN 是美国由自闭症人士领导的最重要的权益倡导组织，其资源帮助家长听到另一种声音。",
+      "digest_summary": "照顾有自闭症孩子的家长，往往长期在「家长视角」里理解孩子。ASAN 提供的是另一个维度：自闭症成年人如何描述自己的需要、自己的困难、以及什么样的支持对他们真正有意义。这不是要家长听从指令，而是让理解更完整。很多家长在接触 ASAN 的内容之后会说：「我以前没有从这个角度想过。」这里也有社区空间，让家长和自我倡导者可以共同思考支持的方向。",
+      "key_points": [
+        "ASAN 的核心立场是「无关我们，不能代表我们」（Nothing About Us Without Us），强调自闭症人士参与自身支持的决策。",
+        "网站有专门为家长和照顾者设计的资源部分，帮助家长理解自我倡导视角。",
+        "接触自我倡导者社群，可以帮助家长在孩子进入青春期和成年期之前，更早建立尊重自主性的支持方式。"
+      ],
+      "recommendation_reason": "如果你想知道你的孩子长大后可能希望如何被对待，先听听那些已经长大的自闭症成年人在说什么——这是一种不需要等待就能开始的理解。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解自闭症当事人和家庭如何看待社区参与和融合，有哪些资源。"
+    },
+    {
+      "id": "RES-000048",
+      "title": "Inclusion International — Global Family Network",
+      "title_zh": "国际融合协会 — 全球家庭网络",
+      "organization": "Inclusion International",
+      "organization_short": "Inclusion Intl",
+      "countries": [
+        "International"
+      ],
+      "resource_type": "International Organization",
+      "resource_category": "Family Organization",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Global Network",
+        "Family Connection",
+        "Intellectual Disability",
+        "Inclusion",
+        "International",
+        "Connect"
+      ],
+      "language": [
+        "en",
+        "es",
+        "fr"
+      ],
+      "access": "free",
+      "url": "https://inclusion-international.org/",
+      "external_url": "https://inclusion-international.org/",
+      "description": "Global federation of family-based organizations in 115 countries supporting people with intellectual disabilities and their families, providing connection to local and national family networks worldwide.",
+      "description_zh": "覆盖115个国家的家庭支持组织联合会，专注于智力残障人士及其家庭，提供连接本地和全国家庭网络的入口，是亚太地区华语家庭可接触的重要国际网络之一。",
+      "related_pages": [
+        "community-interaction",
+        "support-from-others"
+      ],
+      "evidence_level": "International Organization",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000048",
+      "digest_status": "ready",
+      "resource_intro": "Inclusion International 是全球最大的智力残障家庭支持组织联合会，连接115个国家的本地家庭组织。",
+      "digest_summary": "有智力残障孩子的家庭，有时候会感到自己生活在一个很小的圆圈里——周围没有人有类似的经历，连可以分享的对象都很难找到。Inclusion International 做的事情是把这些分散的家庭连接起来：在115个国家有成员组织，其中包括台湾、香港、新加坡和多个亚太地区的机构。通过它，你可以找到所在国或地区的家庭支持组织，从全球网络找到你所在社区里的同路人。",
+      "key_points": [
+        "覆盖115个国家，包括台湾（中华民国智障者家长总会）、香港（香港弱智人士家长联会）、新加坡（MINDS）等亚太成员。",
+        "可以通过网站找到所在国或地区的成员组织，再由成员组织连接本地支持资源。",
+        "组织立场以家庭为中心，关注家长的声音，而不只是专业人员的视角。"
+      ],
+      "recommendation_reason": "如果你想找到一个和你有类似处境的家庭——不只是在网上，而是真实存在于你生活的地方——这个网络可以帮你找到离你最近的那扇门。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你想了解国际上有哪些融合教育和社区参与的家庭网络，作为参考。"
+    },
+    {
+      "id": "RES-000049",
+      "title": "Contact — For Families with Disabled Children (UK)",
+      "title_zh": "Contact — 英国残障儿童家庭互助组织",
+      "organization": "Contact",
+      "organization_short": "Contact",
+      "countries": [
+        "United Kingdom"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Parent Peer Support",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Peer Support",
+        "Family Network",
+        "UK",
+        "Parent Connection",
+        "Disabled Children",
+        "Connect"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://contact.org.uk/",
+      "external_url": "https://contact.org.uk/",
+      "description": "UK charity dedicated to supporting families of disabled children through peer support, helpline, local family groups and an online community — all run by and for families in the same situation.",
+      "description_zh": "英国专为残障儿童家庭提供支持的慈善机构，通过同伴支持、帮助热线、本地家庭小组和线上社群连接同路家庭，所有服务均由有类似经历的家庭运营。",
+      "related_pages": [
+        "community-interaction",
+        "family-relationships",
+        "support-from-others"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "foundational",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000049",
+      "digest_status": "ready",
+      "resource_intro": "Contact 是英国最专注于残障儿童家庭同伴连接的慈善机构，由有类似经历的家庭运营。",
+      "digest_summary": "有残障孩子的家庭，常常有一种感觉：就算解释了很多，外面的人也很难真正明白。Contact 是英国专门为这种感觉设计的回应——它的帮助热线、本地家庭小组和线上社群，都由有类似经历的家庭运营，不是专业顾问，而是真正走过同样路的人。你可以打电话，可以加入本地小组，也可以只是在线上看看别人在写什么。没有强制参与，没有需要达到的目标——只是一个真实存在的、可以让你感到不那么孤单的地方。",
+      "key_points": [
+        "帮助热线（0808 808 3555）由有残障孩子的家长接听，不是专业顾问——这是它最不同的地方。",
+        "有本地家庭小组网络，可以在网站按地区查找，从数字连接走向现实中的面对面支持。",
+        "线上社群有按照顾者处境（如单亲照顾者、照顾青少年）分区，不只按孩子诊断分类。"
+      ],
+      "recommendation_reason": "如果你在英国，感到孤立，不需要先想好要问什么问题——你可以先打一个电话，或者只是去网站上读读别的家长在写什么。从这里开始不需要任何准备。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果你在英国，孩子有残障或特殊需求，想联系其他家庭或获得支持信息。"
+    },
+    {
+      "id": "RES-000050",
+      "title": "Sibling Leadership Network — Resources for Families",
+      "title_zh": "手足领导力网络 — 家庭支持资源",
+      "organization": "Sibling Leadership Network",
+      "organization_short": "SLN",
+      "countries": [
+        "United States",
+        "International"
+      ],
+      "resource_type": "Non-profit Organization",
+      "resource_category": "Parent Peer Support",
+      "resource_purpose": "Connect",
+      "audience": [
+        "Parents",
+        "Caregivers"
+      ],
+      "topic_tags": [
+        "Sibling Support",
+        "Family Dynamics",
+        "Peer Network",
+        "Family Relationships",
+        "Connect"
+      ],
+      "language": [
+        "en"
+      ],
+      "access": "free",
+      "url": "https://siblingleadership.org/",
+      "external_url": "https://siblingleadership.org/",
+      "description": "Network supporting siblings of people with disabilities and their families, providing connection, peer support and resources that address the often-overlooked family dynamic of growing up alongside a disabled sibling.",
+      "description_zh": "支持残障人士手足及其家庭的网络，提供连接、同伴支持和资源，关注家庭内部那个常常被忽视的维度：在有残障孩子的家庭中，其他孩子的成长与感受。",
+      "related_pages": [
+        "family-relationships",
+        "community-interaction"
+      ],
+      "evidence_level": "NGO Resource",
+      "recommendation_level": "recommended",
+      "has_pdf": false,
+      "is_online_tool": false,
+      "last_verified": "2026-07",
+      "anori_path": "/pages/resource/RES-000050",
+      "digest_status": "ready",
+      "resource_intro": "SLN 是专注于残障人士手足支持的网络，帮助家庭看见那个常常在照顾压力下被忽视的角色。",
+      "digest_summary": "在有特殊需求孩子的家庭里，有一个角色常常被遗忘：那个没有特殊需求的孩子。他们可能早早学会了独立，也可能积累了很多说不出口的感受。当家庭关系开始出现张力，有时候问题不只在夫妻之间，而是整个家庭系统都在承受压力，包括兄弟姐妹。SLN 提供了一个视角：家庭支持，不只是照顾那一个有需求的孩子，而是看见家里每一个人正在经历什么。这里有资源、有社群，也有机会让家长和其他有类似家庭结构的照顾者互相连接。",
+      "key_points": [
+        "专注于手足动态，填补了「有残障孩子的家庭里，其他孩子怎么样」这个常被忽视的问题。",
+        "提供手足支持小组资源，家长可以为其他孩子找到支持入口，而不只是为有需求的孩子。",
+        "SLN 本身由残障人士的成年手足领导，提供了一个长期视角：这个角色在家庭中经历了什么。"
+      ],
+      "recommendation_reason": "如果家里还有其他孩子，而你有时候担心他们是否也被照顾到，这是一个可以开始的地方——不只是为那个有特殊需求的孩子，而是为整个家庭。",
+      "status": "Active",
+      "date_added": "2026-07",
+      "entry_question": "如果家里有兄弟姐妹，你想了解他们需要哪些额外支持，以及有哪些资源。"
+    }
+  ]
+}

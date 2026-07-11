@@ -1,0 +1,232 @@
+---
+/**
+ * KAConceptCard.astro  v1.1
+ * Anori — Knowledge Asset Concept Card
+ * Phase D / Astro Rendering v1.0 (Passed)
+ *
+ * Five-layer Progressive Disclosure:
+ *   L1  Emotion   — memorable_sentence
+ *   L2  Mechanism — why_this_happens (icon + plain sentence + closing reframe)
+ *   L3  Evidence  — citation summary + High-grade cards
+ *   L4  Network   — related concepts + pages
+ *   L5  Reframe   — common misunderstandings
+ *
+ * Props:
+ *   prod: PROD-KA-xxxxx JSON object
+ */
+
+interface Props { prod: Record<string, any> }
+const { prod } = Astro.props
+
+const {
+  zh, website_card, popup_layers,
+  evidence_cards, common_misunderstanding,
+  ui_ready, bridge_validation,
+} = prod
+
+const tagline   = website_card?.card_tagline ?? ""
+const isBridge  = !!bridge_validation
+const color     = ui_ready?.color_theme ?? "blue"
+const evCount   = (evidence_cards ?? []).filter((c:any) => c.grade === "High").length
+const hasMeta   = (evidence_cards ?? []).some((c:any) => c.note?.includes("Meta"))
+
+const themeVars: Record<string,string> = {
+  blue:   "--ka:#3B6EE0;--ka-bg:#EEF3FD;--ka-txt:#1A3F9C;--ka-bdr:var(--border-accent)",
+  teal:   "--ka:#1A8A72;--ka-bg:#E8F6F3;--ka-txt:#0F5246;--ka-bdr:var(--border-success)",
+  coral:  "--ka:#C84B2F;--ka-bg:#FDF0EE;--ka-txt:#7A2317;--ka-bdr:var(--border-danger)",
+  purple: "--ka:#5E3FBE;--ka-bg:#F0EDFB;--ka-txt:#331F7A;--ka-bdr:var(--border-pro)",
+  gray:   "--ka:#5A6272;--ka-bg:#F2F3F5;--ka-txt:#2D3240;--ka-bdr:var(--border)",
+}
+const cssVars = themeVars[color] ?? themeVars.blue
+
+const l1 = popup_layers?.layer_1?.content ?? tagline
+const l2: string[] = popup_layers?.layer_2?.content ?? []
+const l3: any[]    = popup_layers?.layer_3?.content ?? []
+const l4           = popup_layers?.layer_4 ?? {}
+
+// Layer 2 icons — one per item by position
+const l2Icons = ["🕐", "🤝", "🏡", "📋"]
+// Closing voice line (Anori Voice — no blame, no fatalism)
+const closingLine: string = popup_layers?.layer_2?.closing_line ?? ""
+---
+
+<div class="ka" style={cssVars}>
+
+  <!-- Header -->
+  <header class="ka-head">
+    <div class="ka-title-row">
+      <span class="ka-zh">{zh}</span>
+      {isBridge && (
+        <span class="ka-badge-bridge">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M6 4v4M4 6h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          Knowledge Bridge
+        </span>
+      )}
+    </div>
+    <p class="ka-tagline">{tagline}</p>
+    <div class="ka-badges">
+      {evCount > 0 && (
+        <span class="ka-ev-badge ka-ev-green">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M4 6l1.5 1.5L8.5 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          {evCount} 项研究支持
+        </span>
+      )}
+      {hasMeta && <span class="ka-ev-badge ka-ev-blue">含 Meta-analysis</span>}
+      {isBridge && bridge_validation?.connected_domains && (
+        <span class="ka-ev-badge ka-ev-purple">
+          {bridge_validation.connected_domains.join(" ↔ ")}
+        </span>
+      )}
+    </div>
+  </header>
+
+  <!-- Layer 1 — Emotion -->
+  <details class="ka-layer" open>
+    <summary class="ka-sum">
+      <span class="ka-arrow">▾</span> 一句话理解
+    </summary>
+    <div class="ka-body">
+      <p class="ka-memorable">{l1}</p>
+    </div>
+  </details>
+
+  <!-- Layer 2 — Mechanism -->
+  <details class="ka-layer">
+    <summary class="ka-sum">
+      <span class="ka-arrow">▸</span> 为什么会这样？
+    </summary>
+    <div class="ka-body">
+      <ul class="ka-why">
+        {l2.map((item: string, i: number) => (
+          <li>
+            <span class="ka-why-icon" aria-hidden="true">{l2Icons[i] ?? "•"}</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+      {closingLine && <p class="ka-closing">{closingLine}</p>}
+    </div>
+  </details>
+
+  <!-- Layer 3 — Evidence -->
+  <details class="ka-layer">
+    <summary class="ka-sum">
+      <span class="ka-arrow">▸</span> 研究怎么说？
+    </summary>
+    <div class="ka-body">
+      {evCount > 0 && (
+        <div class="ka-ev-summary">
+          <p class="ka-ev-label">主要证据来源</p>
+          <div class="ka-ev-pills">
+            <span class="ka-pill-green">✓ {evCount} 项 High grade</span>
+            {hasMeta && <span class="ka-pill-blue">含 Meta-analysis</span>}
+          </div>
+        </div>
+      )}
+      <div class="ka-ev-list">
+        {l3.map((card: any) => (
+          <div class="ka-ev-card">
+            <span class={`ka-grade ${card.grade === "High" ? "ka-grade-high" : "ka-grade-low"}`}>
+              {card.grade}{card.year ? ` · ${card.year}` : ""}
+            </span>
+            <p>{card.headline ?? ""}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </details>
+
+  <!-- Layer 4 — Knowledge Network -->
+  <details class="ka-layer">
+    <summary class="ka-sum">
+      <span class="ka-arrow">▸</span> 可以看看哪些相关内容？
+    </summary>
+    <div class="ka-body">
+      <div class="ka-chips">
+        {(l4?.related_concepts ?? []).map((c: any) => (
+          <a href={`/concepts/${c.slug}`} class="ka-chip">
+            <strong>{c.zh}</strong>
+            <span>{c.tagline}</span>
+          </a>
+        ))}
+      </div>
+      <div class="ka-page-links">
+        {(l4?.related_pages ?? []).map((p: any) => (
+          <a href={`/${p.slug}`} class="ka-page-link">{p.zh} →</a>
+        ))}
+      </div>
+    </div>
+  </details>
+
+  <!-- Layer 5 — Reframe / Misunderstandings -->
+  {common_misunderstanding?.length > 0 && (
+    <details class="ka-layer">
+      <summary class="ka-sum ka-sum-muted">
+        <span class="ka-arrow">▸</span> 常见误解
+      </summary>
+      <div class="ka-body">
+        {common_misunderstanding.map((item: any, i: number) => (
+          <div class={`ka-mis ${i < common_misunderstanding.length - 1 ? "ka-mis-border" : ""}`}>
+            <p class="ka-mis-q">❌ {item.misunderstanding}</p>
+            <p class="ka-mis-a">✓ {item.reality}</p>
+          </div>
+        ))}
+      </div>
+    </details>
+  )}
+
+</div>
+
+<style>
+.ka{--r:12px;background:var(--surface-2);border:0.5px solid var(--ka-bdr,var(--border));border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column;gap:.85rem;font-family:var(--font-sans)}
+.ka-head{display:flex;flex-direction:column;gap:.45rem}
+.ka-title-row{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap}
+.ka-zh{font-size:1.05rem;font-weight:500;color:var(--ka)}
+.ka-badge-bridge{display:inline-flex;align-items:center;gap:.3rem;background:var(--bg-pro);color:var(--text-pro);font-size:.7rem;font-weight:500;padding:.2em .6em;border-radius:var(--radius-pill);border:0.5px solid var(--border-pro)}
+.ka-tagline{font-size:.95rem;line-height:1.6;color:var(--text-primary);margin:0;font-weight:500}
+.ka-badges{display:flex;gap:.35rem;flex-wrap:wrap}
+.ka-ev-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.74rem;font-weight:500;padding:.22em .6em;border-radius:var(--radius);border:0.5px solid}
+.ka-ev-green{background:var(--bg-success);color:var(--text-success);border-color:var(--border-success)}
+.ka-ev-blue{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}
+.ka-ev-purple{background:var(--bg-pro);color:var(--text-pro);border-color:var(--border-pro)}
+.ka-layer{border-top:0.5px solid var(--border);padding-top:.7rem}
+.ka-sum{cursor:pointer;font-size:.85rem;font-weight:500;color:var(--ka);list-style:none;display:flex;align-items:center;gap:.35rem;user-select:none}
+.ka-sum::-webkit-details-marker{display:none}
+.ka-sum-muted{color:var(--text-secondary)}
+.ka-arrow{font-size:.7rem}
+.ka-body{padding-top:.65rem;display:flex;flex-direction:column;gap:.55rem}
+.ka-memorable{margin:0;font-size:.95rem;font-weight:500;line-height:1.6;color:var(--ka-txt);background:var(--ka-bg);padding:.65rem .875rem;border-radius:8px;border-left:3px solid var(--ka)}
+.ka-why{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.ka-why li{display:flex;gap:.55rem;align-items:flex-start;font-size:var(--text-sm);line-height:1.6;color:var(--text-secondary)}
+.ka-why-icon{flex-shrink:0;font-size:.95rem;margin-top:.05rem}
+.ka-closing{margin:.35rem 0 0;font-size:.83rem;line-height:1.55;color:var(--text-muted);font-style:italic;padding-left:.3rem;border-left:2px solid var(--border)}
+.ka-ev-summary{background:var(--surface-1);border-radius:8px;padding:.65rem .875rem;display:flex;flex-direction:column;gap:.4rem}
+.ka-ev-label{margin:0;font-size:.74rem;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em}
+.ka-ev-pills{display:flex;flex-wrap:wrap;gap:.35rem}
+.ka-pill-green{font-size:.76rem;background:var(--bg-success);color:var(--text-success);padding:.18em .5em;border-radius:var(--radius-sm);font-weight:500}
+.ka-pill-blue{font-size:.76rem;background:var(--bg-accent);color:var(--text-accent);padding:.18em .5em;border-radius:var(--radius-sm);font-weight:500}
+.ka-ev-list{display:flex;flex-direction:column;gap:.4rem}
+.ka-ev-card{background:var(--surface-1);border-radius:8px;padding:.6rem .875rem;display:flex;flex-direction:column;gap:.25rem}
+.ka-ev-card p{margin:0;font-size:.85rem;line-height:1.55;color:var(--text-primary)}
+.ka-grade{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.15em .45em;border-radius:var(--radius-sm);align-self:flex-start}
+.ka-grade-high{background:#D1FAE5;color:#065F46}
+.ka-grade-low{background:#FEF3C7;color:#92400E}
+.ka-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.4rem}
+.ka-chip{display:flex;flex-direction:column;gap:.2rem;padding:.55rem .7rem;background:var(--ka-bg);border-radius:8px;text-decoration:none;transition:background .15s}
+.ka-chip:hover{filter:brightness(.96)}
+.ka-chip strong{font-size:.82rem;color:var(--ka-txt)}
+.ka-chip span{font-size:.74rem;color:var(--text-muted);line-height:1.4}
+.ka-page-links{display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-top:.2rem}
+.ka-page-link{font-size:.82rem;color:var(--ka);text-decoration:none;font-weight:500}
+.ka-page-link:hover{text-decoration:underline}
+.ka-mis{display:flex;flex-direction:column;gap:.2rem;padding:.5rem 0}
+.ka-mis-border{border-bottom:0.5px solid var(--border)}
+.ka-mis-q{margin:0;font-size:.84rem;color:var(--text-muted)}
+.ka-mis-a{margin:0;font-size:.84rem;color:var(--text-primary);font-weight:500}
+</style>

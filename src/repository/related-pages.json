@@ -1,0 +1,67 @@
+{
+  "related": {
+    "health": {
+      "pages": [
+        "leisure",
+        "family-relationships",
+        "support-from-others"
+      ]
+    },
+    "leisure": {
+      "pages": [
+        "health",
+        "support-from-others",
+        "values"
+      ]
+    },
+    "family-relationships": {
+      "pages": [
+        "health",
+        "support-from-others",
+        "values"
+      ]
+    },
+    "values": {
+      "pages": [
+        "leisure",
+        "support-from-others",
+        "career"
+      ]
+    },
+    "career": {
+      "pages": [
+        "leisure",
+        "values",
+        "financial-wellbeing"
+      ]
+    },
+    "support-from-others": {
+      "pages": [
+        "financial-wellbeing",
+        "disability-services",
+        "community-interaction"
+      ]
+    },
+    "financial-wellbeing": {
+      "pages": [
+        "support-from-others",
+        "disability-services",
+        "career"
+      ]
+    },
+    "disability-services": {
+      "pages": [
+        "support-from-others",
+        "financial-wellbeing",
+        "community-interaction"
+      ]
+    },
+    "community-interaction": {
+      "pages": [
+        "support-from-others",
+        "disability-services",
+        "family-relationships"
+      ]
+    }
+  }
+}

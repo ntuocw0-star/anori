@@ -1,0 +1,22 @@
+---
+export interface Props {
+  text: string;
+  variant?: 'default' | 'journey';
+}
+const { text, variant = 'default' } = Astro.props;
+---
+{variant === 'journey' ? (
+  <div class="up-today up-today--journey">
+    <span class="up-today-label">今天先做这一件事</span>
+    <p class="up-today-text">{text}</p>
+  </div>
+) : (
+  <div class="up-today-wrap">
+    <div class="wrap">
+      <div class="up-today">
+        <span class="up-today-label">今天先做这一件事</span>
+        <p class="up-today-text">{text}</p>
+      </div>
+    </div>
+  </div>
+)}

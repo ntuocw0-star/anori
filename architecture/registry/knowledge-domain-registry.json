@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "version": "1.0",
+    "created": "2026-07-07",
+    "description": "Anori Knowledge Operating System — Knowledge Domain Registry",
+    "hierarchy": [
+      "Evidence",
+      "VAR",
+      "REL",
+      "KA",
+      "Core Pathway (CP)",
+      "Knowledge Domain (KD)"
+    ]
+  },
+  "domains": [
+    {
+      "id": "KD-FAM",
+      "name": "Family Science",
+      "zh": "家庭科学",
+      "status": "active",
+      "core_pathway": "CP-FAM-001",
+      "ka_ids": [
+        "KA-FAM-01001",
+        "KA-FAM-03001",
+        "KA-FAM-02002",
+        "KA-FAM-02003",
+        "KA-FAM-05001"
+      ],
+      "central_question": "家庭支持系统如何影响家庭整体福祉？",
+      "outcome_node": "KA-FAM-05001",
+      "bridge_to": "KD-PAR",
+      "bridge_rel": "REL-000078",
+      "summary": "从 Family Support 到 Family Quality of Life 的完整机制主链，含反馈循环（Caregiver Burden → Family Functioning↓ → Parent Stress↑）"
+    },
+    {
+      "id": "KD-PAR",
+      "name": "Participation Science",
+      "zh": "参与科学",
+      "status": "active",
+      "core_pathway": "CP-PAR-001",
+      "ka_ids": [
+        "KA-PAR-00001",
+        "KA-PAR-00002",
+        "KA-PAR-00003",
+        "KA-PAR-00004",
+        "KA-PAR-00005"
+      ],
+      "central_question": "家庭支持最终怎样帮助孩子真正参与生活？",
+      "entry_node": "KA-FAM-05001",
+      "entry_rel": "REL-000078",
+      "planned_kas": [
+        "KA-PAR-00001 Child Participation",
+        "KA-PAR-01001 School Participation",
+        "KA-PAR-02001 Community Participation",
+        "KA-PAR-03001 Belonging",
+        "KA-PAR-04001 Quality of Life"
+      ],
+      "summary": "从 Child Participation 到 Quality of Life 的参与主链，入口节点来自 KD-FAM 的 FQoL",
+      "architecture": {
+        "core_pathway": [
+          "KA-PAR-00001",
+          "KA-PAR-00002",
+          "KA-PAR-00003",
+          "KA-PAR-00004（QoL）"
+        ],
+        "context_layer": [
+          "KA-PAR-00004（School）",
+          "KA-PAR-00005（Leisure）",
+          "KA-PAR-00006（Employment）"
+        ]
+      },
+      "core_pathway_status": "frozen"
+    },
+    {
+      "id": "KD-TRA",
+      "name": "Transition Science",
+      "zh": "转衔科学",
+      "status": "planned",
+      "core_pathway": "CP-TRA-001",
+      "ka_ids": [],
+      "central_question": "残障青年怎样从学校走向成年生活？",
+      "summary": "计划建设，连接 School Participation 和 Adult Participation"
+    }
+  ]
+}

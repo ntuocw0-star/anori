@@ -1,0 +1,208 @@
+{
+  "id": "KA-FAM-02002",
+  "canonical": "Parent Stress",
+  "zh": "父母压力",
+  "version": "1.0",
+  "created": "2026-07-07",
+  "updated": "2026-07-07",
+  "status": "Active",
+  "definition": {
+    "anori": "Parent Stress 不是「家长不够坚强」，而是当照顾需求、生活压力与可获得的支持之间长期失衡时产生的持续压力状态。它不是个人意志力的问题，而是结构性处境的自然结果。",
+    "research": "父母在履行照顾与教养角色过程中感受到的心理、生理和社会压力，受到儿童特征、家庭功能、社会支持及服务系统等多因素影响。",
+    "icf_alignment": "Environmental Factors (e) > Support and Relationships; Personal Factors; Activities & Participation (d)"
+  },
+  "why_it_matters": "Parent Stress 是 Family Science 机制主链的核心传导变量。它向上承接 Family Support 不足和 Family Functioning 受损的后果，向下同时影响 Parenting Quality、Caregiver Burden 和 Family Quality of Life。研究一致发现，降低父母压力是改善整个家庭系统状态最有效的干预切入点之一。",
+  "core_vars": [
+    {
+      "var_id": "VAR-000002",
+      "name": "父母压力",
+      "role": "primary"
+    },
+    {
+      "var_id": "VAR-000007",
+      "name": "非正式社会支持",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000008",
+      "name": "正式社会支持",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000015",
+      "name": "家庭功能",
+      "role": "predictor"
+    },
+    {
+      "var_id": "VAR-000003",
+      "name": "教养质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000009",
+      "name": "照顾者负担",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000004",
+      "name": "家庭生活质量",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000023",
+      "name": "社区参与",
+      "role": "outcome"
+    },
+    {
+      "var_id": "VAR-000018",
+      "name": "家庭韧性",
+      "role": "moderator"
+    }
+  ],
+  "key_rels": [
+    {
+      "rel_id": "REL-000006",
+      "summary": "非正式社会支持 → 降低父母压力",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000058",
+      "summary": "家庭功能改善 → 降低父母压力",
+      "grade": "High",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000003",
+      "summary": "父母压力↑ → 家庭生活质量↓",
+      "grade": "High",
+      "direction": "KA → outcome"
+    },
+    {
+      "rel_id": "REL-000035",
+      "summary": "服务可及性 → 降低父母压力",
+      "grade": "Very Low",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000045",
+      "summary": "成人服务可及性 → 降低父母压力",
+      "grade": "Very Low",
+      "direction": "predictor → KA"
+    },
+    {
+      "rel_id": "REL-000071",
+      "summary": "父母压力↑ → 教养质量↓",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "骨架 REL，STR Priority A"
+    },
+    {
+      "rel_id": "REL-000072",
+      "summary": "父母压力↑ → 家庭生活质量↓（直接路径）",
+      "grade": "Very Low",
+      "direction": "KA → outcome",
+      "note": "骨架 REL，STR Priority A"
+    },
+    {
+      "rel_id": "REL-000073",
+      "summary": "父母压力↑ → 儿童社区参与↓",
+      "grade": "Very Low",
+      "direction": "KA → child outcome",
+      "note": "骨架 REL，STR Priority A"
+    }
+  ],
+  "evidence_summary": {
+    "high_grade_count": 3,
+    "total_rel_count": 8,
+    "strongest_evidence": "REL-000006：非正式社会支持降低父母压力（High，Dunst & Trivette SR）；REL-000058：家庭功能改善降低父母压力（High，Meta-analysis）",
+    "evidence_gaps": [
+      "父母压力 → 教养质量（REL-000071，骨架，需要 Meta/SR）",
+      "父母压力 → 家庭生活质量直接路径（REL-000072，骨架，需要SR）",
+      "父母压力 → 儿童社区参与（REL-000073，骨架，需要 Longitudinal/Meta）"
+    ]
+  },
+  "mechanism_chain": {
+    "description": "Parent Stress 在主链中的传导位置",
+    "upstream": [
+      "KA-FAM-01001 Family Support",
+      "KA-FAM-03001 Family Functioning",
+      "Service Access"
+    ],
+    "downstream": [
+      "Parenting Quality",
+      "KA-FAM-02003 Caregiver Burden",
+      "KA-FAM-05001 Family Quality of Life",
+      "Child Participation"
+    ],
+    "diagram": "Family Support → Family Functioning → Parent Stress → { Parenting Quality↓, Caregiver Burden↑, Family QoL↓, Child Participation↓ }"
+  },
+  "str_new_targets": [
+    {
+      "rel_id": "REL-000071",
+      "priority": "A",
+      "search_query": "parent stress parenting quality disability meta-analysis systematic review",
+      "target_type": "Meta-analysis / SR"
+    },
+    {
+      "rel_id": "REL-000072",
+      "priority": "A",
+      "search_query": "parental stress family quality of life systematic review",
+      "target_type": "SR"
+    },
+    {
+      "rel_id": "REL-000073",
+      "priority": "A",
+      "search_query": "parent stress child participation community longitudinal",
+      "target_type": "Longitudinal / Meta"
+    }
+  ],
+  "common_misunderstanding": [
+    "父母压力是因为孩子太难带（实际上支持不足才是主因）",
+    "压力是个人心理问题，调整心态就能解决（实际上是结构性处境造成的）",
+    "父母压力不会影响孩子（实际上通过教养质量和家庭氛围直接影响）"
+  ],
+  "measurement": {
+    "scales": [
+      "PSI（Parenting Stress Index）",
+      "PSS（Perceived Stress Scale）",
+      "DASS（Depression Anxiety Stress Scales）"
+    ],
+    "note": "PSI 是专门针对父母照顾角色压力的标准工具，区分儿童域和父母域"
+  },
+  "website": {
+    "page_slug": "health",
+    "related_problems": [
+      "PRB-0022",
+      "PRB-0025",
+      "PRB-0005"
+    ],
+    "anori_reframe": "压力不是失败，而是长期需求超过支持后的自然结果。改变的不只是自己，更是支持系统。"
+  },
+  "ai_retrieval": {
+    "trigger_questions": [
+      "为什么家长压力这么大？",
+      "Parent Stress 是什么？",
+      "家长压力会影响孩子吗？",
+      "怎样降低长期照顾压力？",
+      "我是不是做得不够好？",
+      "我已经没有力气了"
+    ],
+    "answer_template": "研究发现，父母压力主要来自照顾需求和可获得支持之间的长期失衡。{evidence_card} 说明了哪些支持方式对降低压力最有研究支持。"
+  },
+  "related_kas": [
+    "KA-FAM-01001",
+    "KA-FAM-03001",
+    "KA-FAM-02003",
+    "KA-FAM-05001"
+  ],
+  "related_concepts": [
+    "CON-000002"
+  ],
+  "update_history": [
+    {
+      "date": "2026-07-07",
+      "note": "KA v1.0 建立，3条High grade REL，3条新骨架REL同步加入STR"
+    }
+  ]
+}

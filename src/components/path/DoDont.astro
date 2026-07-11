@@ -1,0 +1,30 @@
+---
+export interface Props {
+  do: string[];
+  dont: string[];
+  doLabel?: string;
+  dontLabel?: string;
+}
+const {
+  do: doItems,
+  dont: dontItems,
+  doLabel = '✓ 可以做',
+  dontLabel = '○ 不用做',
+} = Astro.props;
+---
+<section class="up-section">
+  <div class="up-dodont">
+    <div class="up-dodont-col up-dodont-col--do">
+      <p class="up-dodont-heading">{doLabel}</p>
+      <ul>
+        {doItems.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div class="up-dodont-col up-dodont-col--dont">
+      <p class="up-dodont-heading">{dontLabel}</p>
+      <ul>
+        {dontItems.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

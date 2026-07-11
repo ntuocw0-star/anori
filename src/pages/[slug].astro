@@ -1,0 +1,872 @@
+---
+/**
+ * [slug].astro — Universal Knowledge Page Template
+ * Sprint 7 · SUPPORT-001 Reading Rhythm Applied
+ *
+ * Architecture:
+ *   KOS v1.0       → WHAT (fields)
+ *   WRITING-001    → HOW (voice)
+ *   TRIGGER-001    → ENTRY (trigger selection)
+ *   SUPPORT-001    → RHYTHM (reading experience)
+ *   This template  → WHERE (rendered for all /pages/[slug])
+ *
+ * Reading Rhythm (SUPPORT-001 Section 3):
+ *   Triggers → [Pause B] → Support → Explanation
+ *   → Evidence → [Pause A] → Observation
+ *   → Open Questions → [Pause C] → Journey CTA
+ *
+ * Journey Placement (SUPPORT-001 CTA-2):
+ *   Journey moved from sidebar-only to main content area.
+ *   Sidebar retains Journey as secondary navigation.
+ *
+ * SUPPORT-001 Audit checklist:
+ *   ✓ Pause B after Triggers
+ *   ✓ Pause A after Evidence Cards
+ *   ✓ Pause C before Journey CTA
+ *   ✓ Journey in main content (not sidebar only)
+ *   ✓ No CTA inside Observation block
+ *   ✓ Max 3 Observation items
+ */
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import ConfidenceBadge from "../components/ConfidenceBadge.astro";
+import Pause from "../components/Pause.astro";
+import { pages, resolveRels, varById } from "../lib/repository";
+import relatedPagesData from "../repository/related-pages.json";
+import journeysData from "../repository/journeys.json";
+import pageContent from "../repository/page-content.json";
+import conceptRegistry from "../repository/concept-registry.json";
+import resourcesData from "../repository/resources.json";
+import FeedbackVote from "../components/FeedbackVote.astro";
+export async function getStaticPaths() {
+  return pages.map(p => ({ params: { slug: p.slug }, props: { page: p } }));
+}
+
+const { page } = Astro.props;
+const content = (pageContent as any)[page.slug] ?? {};
+
+// ── Resource count and categories for this page ───────────
+const allResources = (resourcesData as any).resources ?? [];
+const pageResources = allResources.filter((r: any) =>
+  Array.isArray(r.related_pages) && r.related_pages.includes(page.slug)
+);
+const pageResourceCount = pageResources.length;
+
+const categoryZh: Record<string, string> = {
+  'Developmental Screening': '发展筛查',
+  'Caregiver Self-care': '照顾者自我照顾',
+  'Mindfulness': '正念减压',
+  'Parent Peer Support': '家长互助',
+  'International Health Framework': '国际健康框架',
+  'Parenting Support': '育儿支持',
+  'Government Benefits': '政府补助',
+  'Financial Assistance': '经济援助',
+  'Family & Medical Leave': '家庭与医疗假',
+  'Respite Care': '喘息照顾',
+  'Family Navigation': '家庭导航',
+  'Flexible Work': '弹性工作',
+  'Return to Work': '重返职场',
+  'Learning & School Support': '学习与学校支持',
+  'Inclusive Education Framework': '融合教育',
+  'Clinical Guideline': '临床指南',
+  'Tax & Insurance': '税务与保险',
+  'Family Budget': '家庭预算',
+  'Caregiver Compensation': '照顾者补偿',
+};
+
+const catCounts: Record<string, number> = {};
+for (const r of pageResources) {
+  const cat = r.resource_category ?? '';
+  if (cat) catCounts[cat] = (catCounts[cat] ?? 0) + 1;
+}
+const pageTopCategories = Object.entries(catCounts)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5)
+  .map(([cat]) => categoryZh[cat] ?? cat)
+  .filter(Boolean);
+
+// ── Evidence ───────────────────────────────────────────────
+const pageRels = resolveRels(page);
+const evidenceCards = Array.isArray(content.evidence_cards) ? content.evidence_cards : [];
+const cardMap = Object.fromEntries(evidenceCards.map((c: any) => [c.rel_id, c]));
+
+// ── Confidence ─────────────────────────────────────────────
+const gradeOrder: Record<string, number> = { "High": 3, "Low": 2, "Very Low": 1 };
+const topGrade = pageRels.reduce((best: string, r: any) => {
+  return (gradeOrder[r.evidence_grade] ?? 0) > (gradeOrder[best] ?? 0)
+    ? r.evidence_grade : best;
+}, "Low");
+
+// ── Content fields ──────────────────────────────────────────
+const supportText: string =
+  content.support_text ??
+  content.intro ??
+  "很多来到这里的家长，正在照顾一个让他们担心的孩子，同时也在悄悄承受自己的压力。这不是你一个人的经历。研究发现，照顾者的状态，是整个家庭能否持续运作的重要基础。";
+
+const explanationText: string = content.meaning ?? page.what_is_this ?? "";
+
+const evidenceIntro: string =
+  content.evidence_intro ??
+  "研究并不是因为家长有问题才关注这里。正是因为研究不断发现，照顾者的状态影响着整个家庭的运作，研究才认真关注这里。";
+
+const evidenceSummary: string = content.summary ?? "";
+
+// ── Triggers — TRIGGER-001: first 5 only ───────────────────
+const triggers: string[] = (page.trigger_statements ?? []).slice(0, 5);
+
+// ── Observations — WRITING-001 Section 4, max 3 ────────────
+const rawObs: string[] = Array.isArray(content.observation_prompts)
+  ? content.observation_prompts.slice(0, 3)
+  : [];
+
+// ── Open Questions ──────────────────────────────────────────
+const openQuestions: string[] = Array.isArray(content.open_questions)
+  ? content.open_questions
+  : [];
+
+// ── Related pages ───────────────────────────────────────────
+const relatedSlugs: string[] = (relatedPagesData as any).related[page.slug]?.pages ?? [];
+const relatedPages = relatedSlugs
+  .map((s: string) => pages.find(p => p.slug === s))
+  .filter(Boolean)
+  .slice(0, 4);
+
+// ── One Next Step (QG-001) ───────────────────────────────────
+const primaryNext = (journeysData as any).page_primary_next?.[page.slug];
+const nextSlug: string | null = primaryNext?.primary ?? null;
+const nextPage = nextSlug ? pages.find(p => p.slug === nextSlug) ?? null : null;
+const nextBecause: string | null = primaryNext?.because ?? null;
+
+// Sidebar journey (secondary) — reads from journeys array
+// journeys.json v2.0: steps are objects {slug, because, ...}
+const pageJourney = (journeysData as any).journeys.find((j: any) => j.start === page.slug);
+const journeySteps = (pageJourney?.steps ?? [])
+  .map((s: any) => {
+    const slug = typeof s === 'string' ? s : s.slug;
+    return pages.find(p => p.slug === slug) ?? null;
+  })
+  .filter(Boolean);
+---
+
+<BaseLayout title={`${page.title} — Anori`} description={page.subtitle}>
+<SiteNav />
+
+<!-- Page Header -->
+<div class="page-header">
+  <div class="wrap">
+    <Breadcrumb items={[
+      { label: "首页",     href: "/" },
+      { label: "家庭处境", href: "/family" },
+      { label: page.title },
+    ]} />
+    <div class="page-title-row">
+      <div>
+        <h1 class="page-title">{page.title}</h1>
+        <p class="page-title-sub">{page.subtitle}</p>
+      </div>
+      <ConfidenceBadge grade={topGrade} />
+    </div>
+  </div>
+</div>
+
+<div class="wrap page-body">
+  <main class="page-main">
+
+    {/* ============================================================
+       UNIFIED LAYOUT — Knowledge Page v1.1
+       Sprint 11 新统一顺序，全站适用
+       ============================================================ */}
+
+    {/* ① Support */}
+    <section class="ko-section ko-support">
+      <p class="support-text">{supportText}</p>
+    </section>
+
+    {/* ② Practice Resources */}
+    {Array.isArray(content.practice_resources) && content.practice_resources.length > 0 && (
+      <section class="ko-section ko-resources">
+        <p class="section-label">可以参考的资源</p>
+        <div class="resource-cards">
+          {content.practice_resources.map((r: any) => {
+            const Tag = r.resource_id ? "a" : "div";
+            const href = r.resource_id ? `/resource/${r.resource_id}` : undefined;
+            return (
+              <Tag class={`resource-card${r.resource_id ? " resource-card--linked" : ""}`} href={href}>
+                <div class="resource-header">
+                  <p class="resource-name">{r.name}</p>
+                  <span class="resource-time">⏱ {r.time}</span>
+                </div>
+                <p class="resource-what">{r.what}</p>
+                <p class="resource-when"><span class="meta-label">适合：</span>{r.when}</p>
+                {r.anori_note && (
+                  <p class="resource-anori"><span class="anori-label">Anori 提示：</span>{r.anori_note}</p>
+                )}
+                {r.resource_id && <span class="resource-cta">查看资源 →</span>}
+              </Tag>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    {/* ② Real Resources — from resources.json, with working links */}
+    {pageResources.length > 0 && (
+      <section class="ko-section ko-resources">
+        <p class="section-label">推荐资源</p>
+        <div class="resource-cards">
+          {pageResources.map((r: any) => (
+            <a href={`/resource/${r.id}`} class="resource-card resource-card--linked">
+              <div class="resource-header">
+                <p class="resource-name">{r.organization_short ?? r.organization}</p>
+              </div>
+              <p class="resource-what">{r.title_zh ?? r.title}</p>
+              {r.entry_question && (
+                <p class="resource-when">{r.entry_question}</p>
+              )}
+              <span class="resource-cta">查看资源 →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* ③ First Step */}
+    {content.first_step && (
+      <section class="ko-section ko-first-step">
+        <p class="section-label">{content.first_step.title}</p>
+        <p class="ko-body">{content.first_step.content}</p>
+      </section>
+    )}
+
+    {/* ④ International Practice */}
+    {content.international_practice && (
+      <section class="ko-section ko-practice">
+        <p class="section-label">别人是怎么做的</p>
+        <div class="practice-cards">
+          {content.international_practice.items.map((item: any) => (
+            <div class="practice-card">
+              <p class="practice-title">{typeof item === 'string' ? item : item.title}</p>
+              {typeof item !== 'string' && item.body && (
+                <p class="practice-body">{item.body}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* ⑤ Explanation */}
+    {explanationText && (
+      <section class="ko-section ko-explain">
+        <p class="section-label">发生了什么</p>
+        <p class="ko-body">{explanationText}</p>
+      </section>
+    )}
+
+    {/* ⑥ Evidence */}
+    {(pageRels.length > 0) && (
+      <section class="ko-section ko-evidence">
+        <p class="section-label">研究里比较容易忽略的发现</p>
+        <div class="evidence-cards">
+          {pageRels.map((r: any, i: number) => {
+            const c = cardMap[r.id];
+            if (!c) return null;
+            const numeral = ['①','②','③','④'][i] ?? `${i+1}.`;
+            return (
+              <>
+                {i > 0 && <hr class="ec-divider" />}
+                <div class="evidence-card">
+                  <p class="ec-numeral">{numeral}</p>
+                  {c.headline && <p class="ec-headline">{c.headline}</p>}
+                  <p class="ec-meaning">{c.meaning}</p>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <Pause type="A" />
+
+    {/* ⑦ Observation */}
+    {rawObs.length > 0 && (
+      <section class="ko-section ko-observe">
+        <p class="section-label">这意味着什么</p>
+        <div class="observe-items">
+          {rawObs.map((o: string) => (
+            <p class="observe-item">{o}</p>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* ⑧ Open Questions */}
+    {openQuestions.length > 0 && (
+      <section class="ko-section ko-open">
+        <p class="section-label">目前还不确定的地方</p>
+        <ul class="oq-list">
+          {openQuestions.map((q: string) => (
+            <li class="oq-item">{q}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {/* Ending */}
+    {content.ending && (
+      <>
+        <div class="nature-divider" aria-hidden="true">
+          <svg width="120" height="16" viewBox="0 0 120 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="8" x2="48" y2="8" stroke="var(--nature-line)" stroke-width="0.75"/>
+            <path d="M56 8 C58 4, 62 2, 66 4 C68 5, 68 8, 66 10 C62 13, 58 12, 56 8Z" fill="var(--nature-green)" opacity="0.18"/>
+            <path d="M66 6 C69 3, 74 3, 76 6 C77 8, 75 11, 72 11 C68 11, 65 9, 66 6Z" fill="var(--nature-green)" opacity="0.11"/>
+            <line x1="72" y1="8" x2="120" y2="8" stroke="var(--nature-line)" stroke-width="0.75"/>
+          </svg>
+        </div>
+        <p class="page-ending">{content.ending}</p>
+      </>
+    )}
+
+    <Pause type="C" />
+
+    {/* ⑨ One Next Step */}
+    {nextPage && nextBecause && (
+      <section class="ko-section ko-next-step">
+        <hr class="journey-divider" />
+        <p class="journey-lead">{nextBecause}</p>
+        <a href={`/${nextPage.slug}`} class="next-step-card">
+          <div class="next-step-inner">
+            <span class="next-step-title">{nextPage.title}</span>
+            <span class="next-step-sub">{nextPage.subtitle}</span>
+          </div>
+          <span class="next-step-arrow">→</span>
+        </a>
+      </section>
+    )}
+
+  </main>
+
+  <!-- Sidebar: secondary navigation -->
+  <aside class="page-aside">
+
+    <!-- Related pages: clickable -->
+    {relatedPages.length > 0 && (
+      <section class="aside-section">
+        <p class="aside-label">也许你还想了解</p>
+        <ul class="related-list">
+          {relatedPages.map((p: any) => (
+            <li>
+              <a href={`/${p.slug}`} class="related-link">
+                <span class="related-title">{p.title}</span>
+                <span class="related-note">{p.trigger_statements?.[0] ?? p.subtitle}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- Practical Tip -->
+    {content.practical_tip && (
+      <section class="aside-section">
+        <p class="aside-label">💡 实用建议</p>
+        <p class="practical-tip">{content.practical_tip}</p>
+      </section>
+    )}
+
+    <!-- Confidence -->
+    <section class="aside-section">
+      <p class="aside-label">证据强度</p>
+      <ConfidenceBadge grade={topGrade} />
+      <p class="confidence-note">
+        基于本页研究关联中最高等级。
+        不同关联的证据强度可能有所不同。
+      </p>
+    </section>
+
+    <p class="source-note">
+      内容基于国际循证研究，仅供参考，不构成临床诊断或医疗建议。
+    </p>
+
+  </aside>
+</div>
+{page.slug === "disability-services" && <FeedbackVote />}
+<SiteFooter />
+
+<style>
+/* ── Header ──────────────────────────────────────────────── */
+.page-header {
+  padding: var(--sp-12) 0 var(--sp-8);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.page-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+.page-title {
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: var(--sp-1);
+}
+.page-title-sub {
+  font-size: var(--text-base);
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+/* ── Layout ──────────────────────────────────────────────── */
+.page-body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--sp-12);
+  padding-top: var(--sp-12);
+  padding-bottom: var(--sp-24);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .page-body { grid-template-columns: 1fr; }
+  .page-aside { border-top: 1px solid var(--border); padding-top: var(--sp-8); }
+}
+
+/* ── Sections ────────────────────────────────────────────── */
+.ko-section { margin-bottom: var(--space-module); }
+.section-eyebrow {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: var(--sp-5);
+}
+.section-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-5);
+}
+.ko-body {
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--ink);
+  max-width: var(--max-prose);
+  margin-bottom: var(--sp-3);
+}
+.ko-body:last-child { margin-bottom: 0; }
+
+/* Triggers */
+.trigger-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.trigger-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  font-size: var(--text-xl);
+  line-height: 1.5;
+  color: var(--ink);
+}
+.trigger-mark { color: var(--muted-lt); flex-shrink: 0; margin-top: 1px; }
+
+/* Support */
+.ko-support {
+  border-left: 3px solid var(--brand);
+  padding: var(--sp-5) var(--sp-6) var(--sp-5) var(--sp-8);
+  background: var(--paper-warm);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.support-text {
+  font-size: var(--text-lg);
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+/* Evidence */
+.evidence-intro { margin-bottom: var(--sp-4); }
+.evidence-cards {
+  margin-top: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+.evidence-card {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+}
+.ec-numeral {
+  font-size: var(--text-xs);
+  color: var(--muted-lt);
+  margin-bottom: var(--sp-3);
+  letter-spacing: 0.06em;
+}
+.ec-headline {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+}
+.ec-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+.ec-meaning {
+  font-size: var(--text-sm);
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* Observation */
+.observe-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-4);
+}
+.observe-item {
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--muted);
+  padding-left: var(--sp-5);
+  border-left: 2px solid var(--border);
+}
+.nature-divider {
+  margin-top: var(--space-ending);
+  margin-bottom: var(--sp-8);
+  display: flex;
+  align-items: center;
+}
+
+.page-ending {
+  font-size: var(--text-xl);
+  color: var(--ink);
+  line-height: 2.0;
+  font-style: italic;
+  border-left: 3px solid var(--brand);
+  padding-left: var(--sp-6);
+  margin-top: 0;
+  margin-bottom: var(--sp-10);
+  max-width: 520px;
+}
+
+.observe-close { font-size: var(--text-sm); color: var(--muted-lt); font-style: italic; }
+
+/* Open Questions */
+.oq-list { list-style: none; display: flex; flex-direction: column; gap: var(--sp-3); }
+.oq-item {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.75;
+  padding-left: var(--sp-4);
+  border-left: 2px solid var(--border);
+}
+
+/* One Next Step (QG-001) */
+.journey-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 var(--sp-10) 0;
+}
+.journey-lead {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: var(--sp-5);
+  max-width: var(--max-prose);
+}
+.next-because {
+  font-size: var(--text-base);
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: var(--sp-5);
+  max-width: var(--max-prose);
+}
+.next-step-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  color: inherit;
+  max-width: var(--max-prose);
+}
+.next-step-card:hover {
+  border-color: var(--brand);
+  box-shadow: var(--shadow-md);
+}
+.next-step-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.next-step-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--brand);
+}
+.next-step-sub {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.5;
+}
+.next-step-arrow {
+  font-size: var(--text-2xl);
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.page-aside { position: sticky; top: calc(60px + var(--sp-8)); }
+.aside-section {
+  margin-bottom: var(--sp-8);
+  padding-bottom: var(--sp-8);
+  border-bottom: 1px solid var(--border);
+}
+.aside-section:last-of-type { border-bottom: none; }
+.aside-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-4);
+}
+.related-list { list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); }
+.related-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+.related-link:hover { border-color: var(--brand); box-shadow: var(--shadow-sm); }
+.related-title { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+.related-note  { font-size: var(--text-xs); color: var(--muted); line-height: 1.5; }
+
+/* Journey aside — secondary */
+.journey-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+.journey-aside:hover { border-color: var(--brand); }
+.journey-aside-title { font-size: var(--text-sm); font-weight: 600; color: var(--brand); }
+.journey-aside-note  { font-size: var(--text-xs); color: var(--muted); line-height: 1.5; }
+
+/* Practice Resources */
+.resource-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.resource-card {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  padding: var(--sp-5) var(--sp-6);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  max-width: 640px;
+}
+.resource-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-1);
+}
+.resource-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--ink);
+}
+.resource-time {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.resource-what {
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  color: var(--ink);
+}
+.resource-when {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  line-height: 1.6;
+}
+.meta-label {
+  font-weight: 400;
+  color: var(--muted);
+  margin-right: var(--sp-1);
+}
+.resource-anori {
+  font-size: var(--text-xs);
+  line-height: 1.75;
+  color: var(--muted);
+  font-style: italic;
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-2);
+  margin-top: var(--sp-1);
+}
+
+.resource-card--linked {
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.resource-card--linked:hover {
+  border-color: var(--brand);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.resource-cta {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--brand);
+  font-weight: 500;
+  margin-top: var(--sp-2, 0.5rem);
+}
+
+.resource-more-card {
+  display: block;
+  margin-top: var(--sp-5);
+  padding: var(--sp-5) var(--sp-6);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-decoration: none;
+  transition: box-shadow var(--transition), border-color var(--transition);
+  max-width: 640px;
+}
+.resource-more-card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--brand);
+}
+.rmc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+.rmc-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--sp-1);
+}
+.rmc-subtitle {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.rmc-cta {
+  font-size: var(--text-xs);
+  color: var(--brand);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.rmc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.rmc-tag {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px var(--sp-2);
+}
+.rmc-tag--more {
+  color: var(--brand);
+  border-color: var(--brand);
+  background: transparent;
+}
+
+.anori-label {
+  font-weight: 500;
+  font-style: normal;
+  margin-right: var(--sp-1);
+}
+
+/* International Practice — card layout */
+.practice-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.practice-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.practice-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+.practice-body {
+  font-size: var(--text-sm);
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.confidence-note { font-size: var(--text-xs); color: var(--muted); line-height: 1.6; margin-top: var(--sp-3); }
+.practical-tip {
+  font-size: var(--text-sm);
+  color: var(--ink);
+  line-height: 1.85;
+  background: #fef9ec;
+  border-left: 3px solid #f0c040;
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+}
+.source-note { font-size: var(--text-xs); color: var(--muted-lt); line-height: 1.6; }
+
+@media (max-width: 640px) {
+  .page-title { font-size: var(--text-3xl); }
+  .trigger-item { font-size: var(--text-base); }
+}
+</style>
+</BaseLayout>

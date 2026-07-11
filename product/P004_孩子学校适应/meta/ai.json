@@ -1,0 +1,162 @@
+{
+  "path": "P004",
+  "title": "孩子学校适应",
+  "one_sentence": "学校不是另一个战场，而是支持系统的一部分。而你，是这个系统的中心。",
+  "outcome": "帮助家长把学校从「需要对抗的地方」变成「共同支持孩子成长的伙伴」",
+  "domain": "家校合作 / 学校参与 / 融合教育",
+  "pages": [
+    {
+      "id": "journey",
+      "url": "/paths/p004/journey",
+      "type": "journey",
+      "core_question": "孩子在学校出问题，我该怎么和学校合作？",
+      "one_outcome": "学校是支持系统的一部分，家长是中心",
+      "today_action": "读「为什么孩子在学校会出问题？」，理解学校的真实负荷",
+      "applicable_when": [
+        "孩子在学校有适应困难",
+        "孩子放学后崩溃",
+        "不知道怎么和老师说"
+      ],
+      "related_paths": [
+        "P003 孩子行为问题",
+        "P005 孩子社交参与"
+      ],
+      "safety_boundary": "本路径不提供诊断或法律建议。有正式支持计划需求，请咨询专业团队。"
+    },
+    {
+      "id": "u001",
+      "url": "/paths/p004/u001",
+      "type": "understanding",
+      "core_question": "为什么孩子在学校撑得住，回家却崩溃？",
+      "one_outcome": "学校有六项要求，放学后崩溃是正常现象",
+      "today_action": "观察孩子放学后第一个小时的状态，记下你看到的",
+      "applicable_when": [
+        "孩子放学后崩溃",
+        "老师说学校没问题但孩子在家很难"
+      ],
+      "related_paths": [
+        "P002 孩子不会表达情绪"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "sup001",
+      "url": "/paths/p004/sup001",
+      "type": "support",
+      "core_question": "我应该告诉学校什么？从哪里开始？",
+      "one_outcome": "支持方式比诊断标签更能帮老师今天行动",
+      "today_action": "写下三件事：孩子需要的支持、最困难的、做得最好的",
+      "applicable_when": [
+        "准备与学校沟通",
+        "想给老师有用的信息"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s001",
+      "url": "/paths/p004/s001",
+      "type": "support_plus",
+      "core_question": "第一次联系老师，应该说什么？",
+      "one_outcome": "第一次沟通是开始合作，不是解释孩子",
+      "today_action": "准备好要对老师说的第一句话，写下来",
+      "applicable_when": [
+        "还没有联系过老师",
+        "第一次家长会前的准备"
+      ],
+      "related_paths": [],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s002",
+      "url": "/paths/p004/s002",
+      "type": "support_plus",
+      "core_question": "学校能做什么？需要正式申请吗？",
+      "one_outcome": "很多支持今天就能开始，不需要审批",
+      "today_action": "从支持清单中选一个，今天告诉老师",
+      "applicable_when": [
+        "不知道能要求什么支持",
+        "想了解学校支持选项"
+      ],
+      "related_paths": [
+        "P001 AAC 学校支持",
+        "P003 行为学校支持"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s003",
+      "url": "/paths/p004/s003",
+      "type": "support_plus",
+      "core_question": "老师说孩子在学校很好，但我看到完全不同，怎么办？",
+      "one_outcome": "家校看到的不同，合在一起才完整",
+      "today_action": "记录孩子放学后的具体状态（不是「很糟」，而是具体行为描述）",
+      "applicable_when": [
+        "家校观察有落差",
+        "老师说没问题但家长看到困难"
+      ],
+      "related_paths": [
+        "P002 情绪放学后崩溃"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s004",
+      "url": "/paths/p004/s004",
+      "type": "support_plus",
+      "core_question": "孩子在学校没有朋友，我应该怎么帮？",
+      "one_outcome": "目标是有一个真实连结，不是很多朋友",
+      "today_action": "问孩子今天在学校有没有一件好事发生",
+      "applicable_when": [
+        "孩子在学校孤立",
+        "孩子没有朋友",
+        "想帮助学校社交"
+      ],
+      "related_paths": [
+        "P005 孩子社交参与"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s005",
+      "url": "/paths/p004/s005",
+      "type": "support_plus",
+      "core_question": "家里一套方法，学校另一套，孩子很困惑，怎么办？",
+      "one_outcome": "一致是方向一致，不是完全复制",
+      "today_action": "把一件在家最有效的支持方式告诉老师",
+      "applicable_when": [
+        "家校策略不一致",
+        "想建立家校协调"
+      ],
+      "related_paths": [
+        "P003 行为家校一致"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    },
+    {
+      "id": "s006",
+      "url": "/paths/p004/s006",
+      "type": "support_plus",
+      "core_question": "学校支持计划已经建好了，还需要做什么？",
+      "one_outcome": "调整不是失败，支持随孩子成长更新",
+      "today_action": "对比孩子上个月和这个月的学校状态，有什么变化",
+      "applicable_when": [
+        "已建立学校支持想检视",
+        "学年转换前",
+        "支持效果减弱"
+      ],
+      "related_paths": [
+        "P005 孩子社交参与"
+      ],
+      "safety_boundary": "无。",
+      "evidence_level": "★★★★★"
+    }
+  ]
+}

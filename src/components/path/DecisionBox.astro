@@ -1,0 +1,24 @@
+---
+export interface Props {
+  can_consider: { title: string; items: string[] };
+  wait_first: { title: string; items: string[] };
+}
+const { can_consider, wait_first } = Astro.props;
+---
+<section class="up-section">
+  <p class="up-section-label">判断方式</p>
+  <div class="up-decision">
+    <div class="up-decision-col up-decision-col--yes">
+      <p class="up-decision-heading">{can_consider.title}</p>
+      <ul>
+        {can_consider.items.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div class="up-decision-col up-decision-col--wait">
+      <p class="up-decision-heading">{wait_first.title}</p>
+      <ul>
+        {wait_first.items.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

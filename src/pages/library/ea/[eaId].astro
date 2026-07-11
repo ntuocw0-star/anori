@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteNav from '../../../components/SiteNav.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import ContentPageLayout from '../../../components/library/ContentPageLayout.astro';
+import seriesData from '../../../repository/library/series.json';
+import eaData from '../../../generated/evidence/ea.json';
+import kaData from '../../../repository/knowledge.json';
+import { normalizeAllEA } from '../../../repository/adapters/ea';
+import { normalizeAllKA } from '../../../repository/adapters/ka';
+import { TERMS } from '../../../i18n/terminology';
+
+const allEA = normalizeAllEA(eaData as any);
+const allKA = normalizeAllKA(kaData as any);
+export function getStaticPaths() {
+  return normalizeAllEA(eaData as any).map(ea => ({ params: { eaId: ea.id }, props: { ea } }));
+}
+const { ea } = Astro.props as any;
+const allSeries = (seriesData as any).series as any[];
+const resolvedSeries = ea.seriesIds.map((id: string) => allSeries.find(s => s.id === id)).filter(Boolean);
+const displayTitle = ea.source.paperTitle ?? ea.id;
+const seriesNavList = resolvedSeries.flatMap((series: any) => {
+  const refs = series.content_refs?.ea ?? [];
+  const index = refs.indexOf(ea.id);
+  if (index < 0) return [];
+  const make = (id: string | undefined) => {
+    if (!id) return null;
+    const item = allEA.find(entry => entry.id === id);
+    return item ? { id, title: item.source.paperTitle ?? id, href: `/library/ea/${id}` } : null;
+  };
+  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical, prev: make(refs[index - 1]), next: make(refs[index + 1]) }];
+});
+const relatedKA = allKA.filter(item => item.evidenceRefs.includes(ea.id)).slice(0, 3);
+const meta = { id: ea.id, type: 'EA' as const, title: displayTitle, summary: ea.summary, updatedAt: ea.updatedAt, status: ea.status, seriesIds: ea.seriesIds };
+---
+<BaseLayout title={`${displayTitle} · ${TERMS.ea.label} · ${TERMS.library.label} · Anori`} description={ea.summary ?? `${ea.id} ${TERMS.ea.label}`}>
+  <SiteNav />
+  <ContentPageLayout meta={meta} seriesNavList={seriesNavList}>
+    <div slot="body" class="ea-body">
+      <section><h2>研究概况</h2><dl>
+        {ea.source.authors && <div><dt>作者</dt><dd>{ea.source.authors}</dd></div>}
+        {ea.source.year && <div><dt>发表信息</dt><dd>{ea.source.year}</dd></div>}
+        {ea.source.journal && <div><dt>期刊</dt><dd>{ea.source.journal}</dd></div>}
+        {ea.source.method && <div><dt>研究方法</dt><dd>{ea.source.method}</dd></div>}
+        {ea.source.scope && <div><dt>研究范围</dt><dd>{ea.source.scope}</dd></div>}
+        {ea.qualityLevel && <div><dt>证据等级</dt><dd>{ea.qualityLevel}</dd></div>}
+        {ea.source.doi && <div><dt>DOI</dt><dd><code>{ea.source.doi}</code></dd></div>}
+      </dl></section>
+      {ea.researchQuestion && <section><h2>研究问题</h2><p>{ea.researchQuestion}</p></section>}
+      {ea.keyFindings.length > 0 && <section><h2>主要发现</h2><ul>{ea.keyFindings.map((item: string) => <li>{item}</li>)}</ul></section>}
+      {ea.parentMeaning.length > 0 && <section><h2>对家长意味着什么</h2>{ea.parentMeaning.map((item: string) => <p>{item}</p>)}</section>}
+      {ea.implications.length > 0 && <section><h2>实践提示</h2><ul>{ea.implications.map((item: string) => <li>{item}</li>)}</ul></section>}
+    </div>
+    {relatedKA.length > 0 && <div slot="related-topic"><p class="related-title">基于这项{TERMS.ea.label}的{TERMS.ka.label}</p><ul class="related-list">{relatedKA.map(item => <li><a href={`/library/ka/${item.id}`}><span>{item.title ?? item.id}</span><code>{item.id}</code></a></li>)}</ul></div>}
+  </ContentPageLayout>
+  <SiteFooter />
+</BaseLayout>
+<style>
+.ea-body{font-size:var(--text-base);line-height:1.8}.ea-body section+section{margin-top:var(--sp-10)}.ea-body h2{font-size:var(--text-sm);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-bottom:var(--sp-2);border-bottom:1px solid var(--border);margin-bottom:var(--sp-4)}
+dl{display:flex;flex-direction:column;gap:var(--sp-3)}dl div{display:grid;grid-template-columns:7rem 1fr;gap:var(--sp-4)}dt{color:var(--muted)}dd{margin:0}.ea-body p+p{margin-top:var(--sp-4)}.ea-body ul{padding-left:1.25rem}.ea-body li+li{margin-top:var(--sp-2)}.related-title{font-size:var(--text-sm);color:var(--muted);margin-bottom:var(--sp-3)}.related-list{list-style:none;display:flex;flex-direction:column;gap:var(--sp-2)}.related-list a{display:flex;justify-content:space-between;gap:var(--sp-4);padding:var(--sp-3) var(--sp-4);border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}.related-list code{font-family:var(--mono);font-size:.7rem;color:var(--muted)}@media(max-width:560px){dl div{grid-template-columns:1fr;gap:0}}
+</style>

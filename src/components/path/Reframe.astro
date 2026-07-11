@@ -1,0 +1,11 @@
+---
+export interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+{text && (
+  <div class="up-reframe">
+    <p>{text}</p>
+  </div>
+)}

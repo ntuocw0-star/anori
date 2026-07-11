@@ -1,0 +1,2053 @@
+{
+  "schema_version": "1.1",
+  "generated_at": "2026-07-10",
+  "meta": {
+    "total": 94,
+    "sources": {
+      "problem-universe": 68,
+      "parent-quote": 10,
+      "problems-json-alias": 13,
+      "manual": 3
+    },
+    "tech_debt": [
+      {
+        "id": "TD-SEARCH-001",
+        "description": "varIndex 类型分类依赖 slug 是否存在推断（有 slug → 概念，无 slug → 资源）。未来若有尚未制作概念页的真正概念，会被误分到资源分组。",
+        "fix": "在 vars.json 或 rels.json 数据里增加明确的 search_type 字段（'concept' 或 'resource'），替换当前的 slug 推断逻辑。",
+        "priority": "medium",
+        "sprint": "Sprint 16+",
+        "created_at": "2026-07-10"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "id": "QD-000001",
+      "text": "怕吸尘器",
+      "normalized_text": "怕吸尘器声音",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000002",
+      "text": "怕吹风机",
+      "normalized_text": "怕吹风机声音",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000003",
+      "text": "冲厕所会尖叫",
+      "normalized_text": "怕冲厕所声音",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000004",
+      "text": "马桶自动冲水吓到",
+      "normalized_text": "怕突然声音",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000005",
+      "text": "怕铃声",
+      "normalized_text": "怕铃声",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000006",
+      "text": "去商场就崩溃",
+      "normalized_text": "商场崩溃",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000007",
+      "text": "餐厅太吵坐不住",
+      "normalized_text": "嘈杂环境难以适应",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002",
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000008",
+      "text": "一有响声就捂耳朵",
+      "normalized_text": "捂耳朵",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000009",
+      "text": "怕气球爆",
+      "normalized_text": "怕突然巨响",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000010",
+      "text": "怕雷声",
+      "normalized_text": "怕雷声",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000011",
+      "text": "学校铃声每次都很难",
+      "normalized_text": "怕铃声",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "auditory_sensitivity",
+      "related_prb": [
+        "PRB-P007-002"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_sound",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000012",
+      "text": "孩子不让剪头发",
+      "normalized_text": "不让剪头发",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000013",
+      "text": "剪头发崩溃",
+      "normalized_text": "剪头发崩溃",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000014",
+      "text": "剪头发要按住才行",
+      "normalized_text": "剪头发困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000015",
+      "text": "洗头每次哭",
+      "normalized_text": "洗头困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000016",
+      "text": "刷牙是噩梦",
+      "normalized_text": "刷牙困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000017",
+      "text": "不让剪指甲",
+      "normalized_text": "不让剪指甲",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000018",
+      "text": "理发店进不去",
+      "normalized_text": "理发困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000019",
+      "text": "洗澡哭闹",
+      "normalized_text": "洗澡困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000020",
+      "text": "日常护理每次都要打仗",
+      "normalized_text": "日常护理困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000021",
+      "text": "一直转圈转不晕",
+      "normalized_text": "一直转圈",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "vestibular_seeking",
+      "related_prb": [
+        "PRB-P007-003"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000022",
+      "text": "停不下来",
+      "normalized_text": "停不下来",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "medium",
+      "intent": "sensory_seeking",
+      "related_prb": [
+        "PRB-P007-003"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "一直跳、转圈、爬高——停不下来",
+          "route": "/problems/prb-p007-003"
+        },
+        {
+          "label": "上课或安静时坐不住、容易分心",
+          "route": "/paths/p004/journey"
+        },
+        {
+          "label": "情绪来了就很难控制",
+          "route": "/problems/prb-0001"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000023",
+      "text": "喜欢跳一直跳",
+      "normalized_text": "一直跳",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "vestibular_seeking",
+      "related_prb": [
+        "PRB-P007-003"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000024",
+      "text": "咬衣服",
+      "normalized_text": "咬衣服",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "oral_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000025",
+      "text": "咬手",
+      "normalized_text": "咬手",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "oral_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000026",
+      "text": "咬铅笔",
+      "normalized_text": "咬铅笔",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "oral_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000027",
+      "text": "把东西放嘴里",
+      "normalized_text": "口欲行为",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "oral_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000028",
+      "text": "一直闻东西",
+      "normalized_text": "嗅觉寻求",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "olfactory_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000029",
+      "text": "闻人",
+      "normalized_text": "嗅觉寻求行为",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "olfactory_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000030",
+      "text": "走路要摸墙",
+      "normalized_text": "触觉寻求",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000031",
+      "text": "一直摸别人",
+      "normalized_text": "触觉寻求",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_seeking",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_seeking",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000032",
+      "text": "用力太大",
+      "normalized_text": "用力太大",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "proprioceptive_poor",
+      "related_prb": [
+        "PRB-P007-005"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_proprioception",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000033",
+      "text": "抱人太用力",
+      "normalized_text": "拥抱太用力",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "proprioceptive_poor",
+      "related_prb": [
+        "PRB-P007-005"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_proprioception",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000034",
+      "text": "写字把纸弄破",
+      "normalized_text": "写字力道过大",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "proprioceptive_poor",
+      "related_prb": [
+        "PRB-P007-005"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_proprioception",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000035",
+      "text": "经常撞到门框",
+      "normalized_text": "经常撞东西",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "proprioceptive_poor",
+      "related_prb": [
+        "PRB-P007-005"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_proprioception",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000036",
+      "text": "推同学不是故意的",
+      "normalized_text": "推人不知力道",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "proprioceptive_poor",
+      "related_prb": [
+        "PRB-P007-005"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_proprioception",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000037",
+      "text": "不知道轻重",
+      "normalized_text": "力道控制问题",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "proprioceptive_poor",
+      "related_prb": [
+        "PRB-P007-005"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_proprioception",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000038",
+      "text": "超市里总会崩溃",
+      "normalized_text": "超市崩溃",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000039",
+      "text": "生日派对哭着跑出来",
+      "normalized_text": "派对崩溃",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000040",
+      "text": "学校餐厅吃不下",
+      "normalized_text": "学校餐厅困难",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000041",
+      "text": "游泳课换衣服崩溃",
+      "normalized_text": "换衣服崩溃",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006",
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000042",
+      "text": "节假日不想出门",
+      "normalized_text": "节日难以适应",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000043",
+      "text": "人多就不行",
+      "normalized_text": "环境过载",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000044",
+      "text": "学校回来就崩溃",
+      "normalized_text": "放学后崩溃",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "sensory_overload",
+      "related_prb": [
+        "PRB-P007-006"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_overload",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000045",
+      "text": "袜子穿上就脱",
+      "normalized_text": "袜子问题",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000046",
+      "text": "袜子接缝要对齐",
+      "normalized_text": "袜子接缝敏感",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000047",
+      "text": "衣服标签必须剪掉",
+      "normalized_text": "衣物标签敏感",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "tactile_defense",
+      "related_prb": [
+        "PRB-P007-001"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_touch",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000048",
+      "text": "挑食很严重",
+      "normalized_text": "挑食",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "medium",
+      "intent": "oral_tactile",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_oral",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "对食物的口感、温度或混合方式很敏感",
+          "route": "/problems/prb-p007-004"
+        },
+        {
+          "label": "只接受固定品牌、固定摆放或固定吃法",
+          "route": "/paths/p002/journey"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000049",
+      "text": "只吃三四样东西",
+      "normalized_text": "极端挑食",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "oral_tactile",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_oral",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000050",
+      "text": "不吃混在一起的食物",
+      "normalized_text": "食物分离需求",
+      "source": "problem-universe",
+      "source_ref": "P007-problem-universe.md",
+      "confidence": "high",
+      "intent": "oral_tactile",
+      "related_prb": [
+        "PRB-P007-004"
+      ],
+      "related_path": [
+        "P007"
+      ],
+      "clarifier_group": "sensory_oral",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000051",
+      "text": "我已经撑不住了",
+      "normalized_text": "家长精力耗尽",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-0022",
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000052",
+      "text": "我快撑不住了",
+      "normalized_text": "家长精力耗尽",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-0022",
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000053",
+      "text": "我太累了",
+      "normalized_text": "家长疲惫",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-0022",
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000054",
+      "text": "我感觉被掏空了",
+      "normalized_text": "家长精力耗尽",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000055",
+      "text": "我不知道还能坚持多久",
+      "normalized_text": "家长不确定能否坚持",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000056",
+      "text": "没有人理解我",
+      "normalized_text": "家长孤立",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_isolation",
+      "related_prb": [
+        "PRB-P006-002"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_isolation",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000057",
+      "text": "我一个人在面对这一切",
+      "normalized_text": "家长独自应对",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_isolation",
+      "related_prb": [
+        "PRB-P006-002"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_isolation",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000058",
+      "text": "家人不理解",
+      "normalized_text": "家庭支持缺失",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_isolation",
+      "related_prb": [
+        "PRB-P006-002",
+        "PRB-P006-004"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_isolation",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000059",
+      "text": "家里人不支持",
+      "normalized_text": "家庭内部分歧",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "family_conflict",
+      "related_prb": [
+        "PRB-P006-004",
+        "PRB-0023"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "family_conflict",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000060",
+      "text": "另一半不相信孩子有问题",
+      "normalized_text": "家庭分歧",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "family_conflict",
+      "related_prb": [
+        "PRB-P006-004",
+        "PRB-0023"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "family_conflict",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000061",
+      "text": "都是我的错",
+      "normalized_text": "家长自责",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_guilt",
+      "related_prb": [
+        "PRB-P006-005",
+        "PRB-0025"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_guilt",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000062",
+      "text": "是不是我的养育方式有问题",
+      "normalized_text": "家长自责",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_guilt",
+      "related_prb": [
+        "PRB-P006-005",
+        "PRB-0025"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_guilt",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000063",
+      "text": "我对孩子发火然后很内疚",
+      "normalized_text": "发火后内疚",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_guilt",
+      "related_prb": [
+        "PRB-P006-005"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_guilt",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000064",
+      "text": "我不知道该怎么办",
+      "normalized_text": "家长迷失方向",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "direction_loss",
+      "related_prb": [
+        "PRB-P006-003",
+        "PRB-0021"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_direction",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "照顾特殊需求孩子感到迷失",
+          "route": "/paths/p006/journey"
+        },
+        {
+          "label": "不知道从哪条路径开始",
+          "route": "/"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000065",
+      "text": "我不敢休息",
+      "normalized_text": "无法放松",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-P006-006"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000066",
+      "text": "怎么照顾自己",
+      "normalized_text": "照顾者自我照顾",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_self_care",
+      "related_prb": [
+        "PRB-P006-006"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_self_care",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000067",
+      "text": "需要心理咨询吗",
+      "normalized_text": "寻求专业支持",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_self_care",
+      "related_prb": [
+        "PRB-P006-006"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_self_care",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000068",
+      "text": "我每天都在发火",
+      "normalized_text": "情绪失控",
+      "source": "problem-universe",
+      "source_ref": "P006-problem-universe.md",
+      "confidence": "high",
+      "intent": "caregiver_burnout",
+      "related_prb": [
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_burnout",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000069",
+      "text": "试了 AAC 但孩子不用",
+      "normalized_text": "AAC 使用中断",
+      "source": "parent-quote",
+      "source_ref": "EA-000001",
+      "confidence": "high",
+      "intent": "aac_abandonment",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000070",
+      "text": "AAC 开始了但停下来了",
+      "normalized_text": "AAC 使用中断",
+      "source": "parent-quote",
+      "source_ref": "EA-000001",
+      "confidence": "high",
+      "intent": "aac_abandonment",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000071",
+      "text": "为什么坚持不下去",
+      "normalized_text": "无法坚持使用 AAC",
+      "source": "parent-quote",
+      "source_ref": "EA-000001",
+      "confidence": "high",
+      "intent": "aac_abandonment",
+      "related_prb": [
+        "PRB-P001-AAC",
+        "PRB-P006-001"
+      ],
+      "related_path": [
+        "P001",
+        "P006"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "使用 AAC 坚持不下去",
+          "route": "/knowledge/ka-000001"
+        },
+        {
+          "label": "家长精力快耗尽了",
+          "route": "/paths/p006/journey"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000072",
+      "text": "学校用 AAC 但家里不知道怎么配合",
+      "normalized_text": "家校 AAC 不一致",
+      "source": "parent-quote",
+      "source_ref": "EA-000002",
+      "confidence": "high",
+      "intent": "aac_home_school",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001",
+        "P004"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000073",
+      "text": "专业人员评估完就不见了",
+      "normalized_text": "专业支持断裂",
+      "source": "parent-quote",
+      "source_ref": "EA-000001",
+      "confidence": "high",
+      "intent": "support_gap",
+      "related_prb": [
+        "PRB-P006-003"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "caregiver_direction",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000074",
+      "text": "AAC 会不会阻碍孩子说话",
+      "normalized_text": "AAC 不阻碍语言担忧",
+      "source": "parent-quote",
+      "source_ref": "EA-000003",
+      "confidence": "high",
+      "intent": "aac_misconception",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000075",
+      "text": "用了 AAC 孩子就不说话了",
+      "normalized_text": "AAC 阻碍语言误解",
+      "source": "parent-quote",
+      "source_ref": "EA-000003",
+      "confidence": "high",
+      "intent": "aac_misconception",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000076",
+      "text": "越早用 AAC 越好吗",
+      "normalized_text": "AAC 早期干预",
+      "source": "parent-quote",
+      "source_ref": "EA-000003",
+      "confidence": "high",
+      "intent": "aac_timing",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000077",
+      "text": "家里有人反对 AAC",
+      "normalized_text": "AAC 家庭分歧",
+      "source": "parent-quote",
+      "source_ref": "EA-000002",
+      "confidence": "high",
+      "intent": "aac_family_conflict",
+      "related_prb": [
+        "PRB-P006-004"
+      ],
+      "related_path": [
+        "P001",
+        "P006"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000078",
+      "text": "孩子在学校用 AAC 回家不用",
+      "normalized_text": "家校 AAC 不一致",
+      "source": "parent-quote",
+      "source_ref": "EA-000002",
+      "confidence": "high",
+      "intent": "aac_home_school",
+      "related_prb": [
+        "PRB-P001-AAC"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "aac",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000079",
+      "text": "孩子天天发疯",
+      "normalized_text": "孩子情绪失控",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "medium",
+      "intent": "emotion_dysregulation",
+      "related_prb": [
+        "PRB-0001",
+        "PRB-0002"
+      ],
+      "related_path": [
+        "P002"
+      ],
+      "clarifier_group": "emotion",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "情绪突然失控，很难平复",
+          "route": "/problems/prb-0002"
+        },
+        {
+          "label": "到了嘈杂或人多的地方就崩溃",
+          "route": "/problems/prb-p007-006"
+        },
+        {
+          "label": "想表达但说不出来",
+          "route": "/paths/p001/journey"
+        },
+        {
+          "label": "对声音、触碰或环境特别敏感",
+          "route": "/paths/p007/journey"
+        }
+      ],
+      "frequency": 0,
+      "status": "active",
+      "clarifier_display_text": "你描述的情况更接近哪一种？"
+    },
+    {
+      "id": "QD-000080",
+      "text": "孩子经常哭很难安抚",
+      "normalized_text": "难以安抚的哭闹",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "emotion_dysregulation",
+      "related_prb": [
+        "PRB-0002"
+      ],
+      "related_path": [
+        "P002"
+      ],
+      "clarifier_group": "emotion",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000081",
+      "text": "孩子情绪变化很大",
+      "normalized_text": "情绪不稳定",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "emotion_dysregulation",
+      "related_prb": [
+        "PRB-0003"
+      ],
+      "related_path": [
+        "P002"
+      ],
+      "clarifier_group": "emotion",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000082",
+      "text": "孩子突然很焦虑",
+      "normalized_text": "突发焦虑",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "anxiety",
+      "related_prb": [
+        "PRB-0004"
+      ],
+      "related_path": [
+        "P002"
+      ],
+      "clarifier_group": "emotion",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000083",
+      "text": "孩子不愿意开口说话",
+      "normalized_text": "不愿意说话",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "communication",
+      "related_prb": [
+        "PRB-0006"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "communication",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000084",
+      "text": "叫名字没有反应",
+      "normalized_text": "叫名字无反应",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "communication",
+      "related_prb": [
+        "PRB-0007"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "communication",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000085",
+      "text": "孩子不看眼睛",
+      "normalized_text": "眼神接触少",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "communication",
+      "related_prb": [
+        "PRB-0008"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "communication",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000086",
+      "text": "孩子说话越来越少",
+      "normalized_text": "语言退步",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "communication",
+      "related_prb": [
+        "PRB-0009"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "communication",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000087",
+      "text": "孩子不愿意去学校",
+      "normalized_text": "拒绝上学",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "school",
+      "related_prb": [
+        "PRB-0016"
+      ],
+      "related_path": [
+        "P004"
+      ],
+      "clarifier_group": "school",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000088",
+      "text": "老师建议做评估",
+      "normalized_text": "老师建议评估",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "assessment",
+      "related_prb": [
+        "PRB-0017"
+      ],
+      "related_path": [
+        "P004"
+      ],
+      "clarifier_group": "school",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "不知道下一步怎么做",
+          "route": "/paths/p004/journey"
+        },
+        {
+          "label": "想先了解评估是什么",
+          "route": "/paths/p004/u001"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000089",
+      "text": "孩子在学校坐不住",
+      "normalized_text": "上课无法专注",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "school",
+      "related_prb": [
+        "PRB-0018"
+      ],
+      "related_path": [
+        "P004"
+      ],
+      "clarifier_group": "school",
+      "clarifier_required": true,
+      "clarifier_options": [
+        {
+          "label": "需要动来动去，安静下来很难",
+          "route": "/paths/p007/journey"
+        },
+        {
+          "label": "容易分心，难以跟上课堂节奏",
+          "route": "/paths/p004/journey"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000090",
+      "text": "孩子在学校没有朋友",
+      "normalized_text": "社交困难",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "social",
+      "related_prb": [
+        "PRB-0019"
+      ],
+      "related_path": [
+        "P005"
+      ],
+      "clarifier_group": "social",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000091",
+      "text": "家里对孩子看法不一致",
+      "normalized_text": "家庭分歧",
+      "source": "problems-json-alias",
+      "source_ref": "problems.json",
+      "confidence": "high",
+      "intent": "family_conflict",
+      "related_prb": [
+        "PRB-0023",
+        "PRB-P006-004"
+      ],
+      "related_path": [
+        "P006"
+      ],
+      "clarifier_group": "family_conflict",
+      "clarifier_required": false,
+      "clarifier_options": [],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000092",
+      "text": "抑郁",
+      "normalized_text": "抑郁情绪",
+      "source": "manual",
+      "source_ref": null,
+      "confidence": "high",
+      "intent": "child_emotion",
+      "related_prb": [
+        "PRB-0001",
+        "PRB-0002",
+        "PRB-0003"
+      ],
+      "related_path": [
+        "P002"
+      ],
+      "clarifier_group": "emotion",
+      "clarifier_required": true,
+      "clarifier_display_text": "你想了解的是哪方面？",
+      "clarifier_options": [
+        {
+          "label": "孩子最近一直很难过、情绪低落",
+          "route": "/paths/p002/journey"
+        },
+        {
+          "label": "我想知道怎么判断孩子是否需要帮助",
+          "route": "/paths/p002/u001"
+        },
+        {
+          "label": "什么是抑郁，先了解概念",
+          "route": "/search?q=情绪低落",
+          "note": "interim — replace with /concepts/emotion when page exists"
+        },
+        {
+          "label": "我在找专业的评估量表",
+          "route": "/resource"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000093",
+      "text": "焦虑",
+      "normalized_text": "焦虑情绪",
+      "source": "manual",
+      "source_ref": null,
+      "confidence": "high",
+      "intent": "child_emotion",
+      "related_prb": [
+        "PRB-0004"
+      ],
+      "related_path": [
+        "P002"
+      ],
+      "clarifier_group": "emotion",
+      "clarifier_required": true,
+      "clarifier_display_text": "你想了解的是哪方面？",
+      "clarifier_options": [
+        {
+          "label": "孩子最近特别紧张、担心很多事",
+          "route": "/paths/p002/journey"
+        },
+        {
+          "label": "孩子害怕某些特定情况（上学、陌生人等）",
+          "route": "/paths/p004/journey"
+        },
+        {
+          "label": "孩子对声音或环境特别敏感",
+          "route": "/paths/p007/journey"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    },
+    {
+      "id": "QD-000094",
+      "text": "自闭",
+      "normalized_text": "自闭症相关",
+      "source": "manual",
+      "source_ref": null,
+      "confidence": "high",
+      "intent": "parent_concern",
+      "related_prb": [
+        "PRB-0006",
+        "PRB-0007",
+        "PRB-0008"
+      ],
+      "related_path": [
+        "P001"
+      ],
+      "clarifier_group": "diagnosis_concern",
+      "clarifier_required": true,
+      "clarifier_display_text": "你目前最担心的是什么？",
+      "clarifier_options": [
+        {
+          "label": "孩子不说话或说话很少",
+          "route": "/paths/p001/journey"
+        },
+        {
+          "label": "孩子不看人、很少互动",
+          "route": "/problems/prb-0008"
+        },
+        {
+          "label": "孩子有重复行为或对变化很抗拒",
+          "route": "/paths/p003/journey"
+        },
+        {
+          "label": "老师或医生建议去评估",
+          "route": "/problems/prb-0017"
+        }
+      ],
+      "frequency": 0,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,959 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { pages, vars, rels } from "../lib/repository";
+import problemsData from "../repository/problems.json";
+import knowledgeData from "../repository/knowledge.json";
+import resourcesData from "../repository/resources.json";
+import questionDict from "../repository/question-dictionary.json";
+import methodsData from "../repository/methods.json";
+
+const pageIndex = pages.map(p => {
+  const firstRelId = p.supporting_rel?.[0];
+  const firstRel = firstRelId ? rels.find(r => r.id === firstRelId) : null;
+  return {
+    type: "主题",
+    title: p.title,
+    body: [p.subtitle, ...p.trigger_statements].join(" "),
+    summary: p.trigger_statements[0] ?? p.subtitle ?? "",
+    triggers: p.trigger_statements,   // 运行时动态选最接近搜索词的那条
+    href: `/${p.slug}`,
+    tags: p.trigger_statements.join(" "),
+    evidence_grade: firstRel?.evidence_grade ?? "",
+  };
+});
+
+// zh → concepts slug 映射（仅已有 PROD 页面的 VAR）
+const VAR_CONCEPT_SLUGS: Record<string, string> = {
+  "社区参与":    "community-participation",
+  "归属感":      "belonging",
+  "照顾者负担":  "caregiver-burden",
+  "家庭生活质量":"family-quality-of-life",
+  "儿童参与":    "child-participation",
+  "父母压力":    "parent-stress",
+  "家庭功能":    "family-functioning",
+  "家庭支持":    "family-support",
+  "学校参与":    "school-participation",
+  "参与生活质量":"participation-quality-of-life",
+};
+
+const varIndex = vars.map(v => {
+  const slug = VAR_CONCEPT_SLUGS[v.chinese_name];
+  // Vars with a known PROD concept page → "概念"; others (measurement tools) → "资源"
+  const isConceptPage = Boolean(slug);
+  return {
+    type: isConceptPage ? "概念" : "资源",
+    title: v.chinese_name,
+    body: v.definition ?? "",
+    summary: (v.definition ?? "").slice(0, 72),
+    href: slug ? `/concepts/${slug}` : `/resource`,
+    tags: (v.aliases ?? []).join(" "),
+    evidence_grade: "",
+  };
+});
+
+const problemIndex = problemsData.problems.map(p => ({
+  type: "问题",
+  title: p.title,
+  body: p.aliases.join(" "),
+  summary: p.aliases.slice(0, 2).join("、"),
+  aliases: p.aliases,
+  search_reason: p.search_reason ?? null,
+  href: `/problems/${p.id.toLowerCase()}`,
+  tags: p.aliases.join(" "),
+  evidence_grade: "",
+}));
+
+const methodIndex = methodsData.methods.map(m => ({
+  type: "方法",
+  title: m.name,
+  body: [m.core_message, m.description, m.when_to_use].join(" "),
+  summary: m.core_message,
+  why: m.when_to_use,   // 显示在卡片上的"为什么推荐"
+  href: `/methods/${m.id.toLowerCase()}`,
+  tags: m.when_to_use,
+  evidence_grade: "",
+}));
+
+const kaIndex = (knowledgeData as any).articles.map((ka: any) => {
+  const tagsStr = (ka.tags ?? []).join(" ");
+  const bodyStr = [ka.subtitle ?? "", ka.body ?? "", (ka.triggers ?? []).join(" ")].join(" ");
+  return {
+    type: "知识",
+    title: ka.title,
+    // score() uses q = rawQ.toLowerCase(), so searchable fields must be lowercase
+    body: bodyStr.toLowerCase(),
+    summary: ka.subtitle,
+    triggers: ka.triggers ?? [],
+    href: ka.href,
+    tags: tagsStr.toLowerCase(),
+    evidence_grade: (ka.evidence_level ?? "").toLowerCase(),
+  };
+});
+
+// Resource index — official tools, scales, guides
+const resourceIndex = (resourcesData as any).resources
+  .filter((r: any) => r.status !== "archived")
+  .map((r: any) => ({
+    type: "资源",
+    title: r.title_zh || r.title,
+    title_en: r.title,
+    body: [
+      r.title, r.title_zh, r.resource_intro,
+      r.digest_summary, (r.topic_tags ?? []).join(" "),
+      r.resource_type, r.organization_short
+    ].filter(Boolean).join(" ").toLowerCase(),
+    summary: r.resource_intro ?? r.digest_summary ?? "",
+    href: `/resource/${r.id.toLowerCase()}`,
+    tags: [(r.title ?? ""), (r.title_zh ?? ""), ...(r.topic_tags ?? [])].join(" ").toLowerCase(),
+    evidence_grade: "",
+  }));
+
+const indexJson = JSON.stringify([...problemIndex, ...methodIndex, ...pageIndex, ...varIndex, ...kaIndex, ...resourceIndex]);
+// Question Dictionary: pass clarifier entries to the script
+const clarifierEntries = (questionDict as any).entries
+  .filter((e: any) => e.clarifier_required && e.status === "active")
+  .map((e: any) => ({
+    patterns: [e.text, e.normalized_text].filter(Boolean),
+    displayText: e.clarifier_display_text ?? null,
+    options: e.clarifier_options,
+  }));
+const clarifierJson = JSON.stringify(clarifierEntries);
+const keywords = ["孩子哭","发脾气","睡不好","上学","不说话","很累","评估","朋友"];
+---
+
+<BaseLayout>
+<SiteNav active="search" />
+
+<div class="sub-hero">
+  <div class="wrap">
+    <Breadcrumb items={[{ label: "首页", href: "/" }, { label: "搜索" }]} />
+    <h1 class="sub-title">搜索</h1>
+
+    <!-- 搜索框：完整一体化 Search Bar -->
+    <div class="search-field" style="max-width:600px" role="search">
+      <label for="search-input" class="sr-only">搜索</label>
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M10 10 L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input
+        type="text"
+        id="search-input"
+        name="q"
+        placeholder="试试：压力、支持、工作、休息…"
+        autocomplete="off"
+        aria-label="搜索关键词"
+      />
+      <button id="search-btn" type="button" class="search-submit" aria-label="执行搜索">搜索</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap content">
+  <div id="suggestions">
+    <p class="section-label" style="margin-bottom:var(--sp-4)">常见搜索</p>
+    <div style="display:flex;gap:var(--sp-2);flex-wrap:wrap">
+      {keywords.map(kw => (
+        <button class="pill-btn kw-chip" data-kw={kw} type="button">{kw}</button>
+      ))}
+    </div>
+  </div>
+
+  <div id="answer-banner" style="display:none;margin-top:var(--sp-8)"></div>
+  <div id="results" style="display:none;margin-top:var(--sp-4)"></div>
+  <p id="no-results" style="display:none;font-size:var(--text-sm);color:var(--muted);padding:var(--sp-8) 0">
+    没有找到相关结果。试试其他关键词，或
+    <a href="/family" style="color:var(--ink)">浏览家庭主题</a>。
+  </p>
+</div>
+
+<SiteFooter />
+
+<script define:vars={{ indexJson, clarifierJson }}>
+const INDEX = JSON.parse(indexJson);
+const CLARIFIER = JSON.parse(clarifierJson);
+
+// Result type priority weights — PRB first, Resource last
+const TYPE_WEIGHT = {
+  "问题": 2.0,
+  "方法": 1.5,
+  "主题": 1.3,
+  "知识": 1.2,
+  "概念": 0.8,
+  "资源": 0.4,
+};
+
+// Normalize: lowercase, strip ALL non-alphanumeric (incl brackets) for matching
+function normalize(str) {
+  return (str || "").toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]/g, "");
+}
+
+function weightedScore(item, q) {
+  const base = score(item, q) * (TYPE_WEIGHT[item.type] ?? 1.0);
+  const nq = normalize(q);
+
+  // Exact full-title match
+  if (normalize(item.title) === nq) return base + 300;
+  if (item.title_en && normalize(item.title_en) === nq) return base + 300;
+
+  // Word-level prefix match: any word/token in title_en starts with nq
+  // Handles "M-CHAT-R/F" → token "mchatrf" starts with "mchat"
+  const tokens = (item.title_en || item.title || "").split(/[\s,;]+/).map(normalize).filter(Boolean);
+  if (tokens.some(t => t.startsWith(nq) && nq.length >= 3)) return base + 200;
+
+  // Full normalized title starts-with (catches "幼儿自闭症...mchat...")
+  const nt = normalize(item.title);
+  const nte = normalize(item.title_en || "");
+  if (nt.startsWith(nq) || nte.startsWith(nq)) return base + 150;
+
+  // Tag word exact match
+  const tagWords = (item.tags || "").split(/\s+/).map(normalize).filter(Boolean);
+  if (tagWords.includes(nq)) return base + 200;
+
+  return base;
+}
+
+// Returns clarifier config if the query matches a clarifier pattern, else null
+function matchClarifier(q) {
+  const lq = q.toLowerCase().trim();
+  for (const entry of CLARIFIER) {
+    for (const pattern of entry.patterns) {
+      if (pattern && lq.includes(pattern.toLowerCase())) {
+        return entry;
+      }
+    }
+  }
+  return null;
+}
+
+const CONF_LABEL = {
+  "High":   "主要依据国际指南和较充分的研究整理。",
+  "Medium": "结合目前已有研究整理，不同家庭可能存在差异。",
+  "Low":    "目前研究仍在积累，后续可能随着新证据更新。",
+};
+
+function confidenceBadgeHtml(grade) {
+  if (!grade) return "";
+  const label = CONF_LABEL[grade];
+  if (!label) return "";
+  return `<span class="result-source-label">资料来源：${label}</span>`;
+}
+
+// 生成词组 token：连续 2–3 字词组 + 完整串，不拆单字避免中文误命中
+function tokenize(q) {
+  const tokens = new Set();
+  tokens.add(q);
+  for (let len = 2; len <= 3; len++) {
+    for (let i = 0; i <= q.length - len; i++) {
+      tokens.add(q.slice(i, i + len));
+    }
+  }
+  return [...tokens];
+}
+
+// Relevance scoring
+// 完整串命中：title +30 / tags +20 / body +10 / 完全一致 +20
+// 词组命中（2–3字）：title +15 / tags +8 / body +3
+// Problem alias 完整命中额外 +25（保证"哭"类词优先命中哭相关问题）
+function score(item, q) {
+  let s = 0;
+
+  // 完整串
+  if (item.title.includes(q)) s += 30;
+  if (item.tags.includes(q))  s += 20;
+  if (item.body.includes(q))  s += 10;
+  if (item.title === q)       s += 20;
+
+  // 词组（排除完整串，避免重复计分）
+  const tokens = tokenize(q).filter(t => t !== q);
+  for (const t of tokens) {
+    if (item.title.includes(t)) s += 15;
+    if (item.tags.includes(t))  s += 8;
+    if (item.body.includes(t))  s += 3;
+  }
+
+  // Problem：aliases 精确匹配 + 单字核心词提取
+  if (item.type === "问题" && item.aliases) {
+    for (const alias of item.aliases) {
+      if (!alias) continue;
+      if (q.includes(alias))      s += 35; // 搜索词包含完整 alias
+      else if (alias.includes(q)) s += 30; // alias 包含搜索词
+      else {
+        // 词组交集
+        const atoks = tokenize(alias);
+        for (const t of atoks) {
+          if (t.length >= 2 && q.includes(t)) s += 12;
+        }
+      }
+    }
+    // 单字核心词：从 q 提取每个字，在 aliases 里查包含
+    // 权重低（+6），但能让"哭"命中「一直哭」
+    for (const ch of [...q]) {
+      for (const alias of item.aliases) {
+        if (alias.includes(ch)) s += 6;
+      }
+    }
+  }
+
+  return s;
+}
+
+const inputEl   = document.getElementById('search-input');
+const btnEl     = document.getElementById('search-btn');
+const resultsEl = document.getElementById('results');
+const noResEl   = document.getElementById('no-results');
+const suggestEl = document.getElementById('suggestions');
+
+// 找最高分 Problem，生成推荐确认卡 HTML
+// topProblem 存到外部变量，供后续渲染排除用
+let _topProblemHref = null;
+
+function topProblemCardHtml(q, rawQ) {
+  const problems = INDEX.filter(i => i.type === "问题");
+  const top = problems
+    .map(i => ({ i, s: score(i, q) }))
+    .filter(({ s }) => s > 0)
+    .sort((a, b) => b.s - a.s)[0]?.i;
+
+  if (!top) {
+    _topProblemHref = null;
+    return `<div class="answer-banner"><p>你搜索的是「${rawQ}」，下面是可能相关的内容。</p></div>`;
+  }
+
+  _topProblemHref = top.href; // 记录，供下方排除重复
+
+  const phrase = top.aliases?.[0] ?? top.tags?.split(" ")[0] ?? top.title;
+  const href = top.href;
+  const bodyText = top.search_reason
+    ? top.search_reason
+    : `很多家长都是从「${phrase}」开始寻找答案。这个问题页已经整理好了可以参考的方法、相关知识和资源。`;
+
+  return `
+    <div class="top-problem-card">
+      <div class="top-problem-main">
+        <p class="top-problem-eyebrow">我们找到一个与你描述最接近的情况</p>
+        <h2 class="top-problem-title">${top.title}</h2>
+        <p class="top-problem-body">${bodyText}</p>
+        <a href="${href}" class="top-problem-cta">查看这个问题 →</a>
+      </div>
+      <div class="top-problem-badge">
+        <span class="top-problem-badge-icon">🧩</span>
+        <span class="top-problem-badge-label">家长问题</span>
+      </div>
+    </div>
+    <p class="top-problem-more-label">围绕这个问题，你可能还想了解……</p>
+  `;
+}
+
+// 按类型分组并排序：问题 → 方法 → 主题 → 概念
+const TYPE_ORDER = { "问题": 0, "方法": 1, "主题": 2, "概念": 3 };
+
+function groupAndSort(hits) {
+  const groups = { "问题": [], "方法": [], "主题": [], "知识": [], "概念": [], "资源": [] };
+  for (const h of hits) {
+    if (groups[h.type]) groups[h.type].push(h);
+  }
+  return groups;
+}
+
+// 从 trigger_statements 里选最接近搜索词的一条作推荐理由
+function bestTrigger(triggers, q) {
+  if (!triggers || !triggers.length) return null;
+  const toks = tokenize(q);
+  let best = triggers[0], bestScore = 0;
+  for (const t of triggers) {
+    let s = 0;
+    for (const tok of toks) {
+      if (t.includes(tok)) s += tok.length >= 3 ? 3 : tok.length >= 2 ? 1 : 0;
+    }
+    if (s > bestScore) { bestScore = s; best = t; }
+  }
+  return best;
+}
+
+// 四层颜色 token
+const TYPE_SKIN = {
+  "问题": "problem",
+  "方法": "method",
+  "主题": "page",
+  "概念": "resource",
+  "知识": "knowledge",
+  "资源": "resource-tool",
+};
+
+// 生成单个结果卡片 HTML
+function cardHtml(h, q) {
+  const skin = TYPE_SKIN[h.type] ?? "page";
+
+  // 推荐理由：Method 用 when_to_use；Page 用动态 trigger；其他用 summary
+  let whyText = "";
+  if (h.type === "问题" && h.search_reason) {
+    whyText = h.search_reason;
+  } else if (h.type === "方法" && h.why) {
+    whyText = h.why;
+  } else if (h.type === "主题" && h.triggers) {
+    whyText = bestTrigger(h.triggers, q) ?? "";
+  } else if (h.type === "知识" && h.triggers) {
+    whyText = bestTrigger(h.triggers, q) ?? "";
+  }
+  const whyHtml = whyText
+    ? `<p class="result-why">${whyText}</p>`
+    : "";
+  const showSummary = h.type !== "主题" && h.type !== "知识" && h.summary && !(h.type === "问题" && h.search_reason);
+
+  return `
+    <div class="result-item result-item--${skin}">
+      <div class="result-header">
+        <span class="result-type result-type--${skin}">${h.type}</span>
+      </div>
+      <h3 class="result-title">${h.title}</h3>
+      ${showSummary ? `<p class="result-summary">${h.summary}</p>` : ''}
+      ${whyHtml}
+      <div class="result-footer">
+        ${confidenceBadgeHtml(h.evidence_grade)}
+        <a href="${h.href}" class="result-cta result-cta--${skin}">${
+          h.type === "问题" ? "查看这个问题 →" :
+          h.type === "方法" ? "看看这种思路 →" :
+          h.type === "主题" ? "阅读完整主题 →" :
+          h.type === "知识" ? "阅读知识文章 →" :
+          h.type === "资源" ? "查看资源 →" :
+          "阅读整理 →"
+        }</a>
+      </div>
+    </div>
+  `;
+}
+
+// 生成分组区块 HTML（传入 q 供 cardHtml 动态选 trigger）
+function sectionHtml(label, items, q) {
+  if (!items.length) return "";
+  return `
+    <div class="result-section">
+      <p class="result-section-label">${label}</p>
+      ${items.map(h => cardHtml(h, q)).join('')}
+    </div>
+  `;
+}
+
+const answerEl  = document.getElementById('answer-banner');
+
+function doSearch() {
+  const rawQ = inputEl.value.trim();
+  const q = rawQ.toLowerCase();
+  if (!q) { reset(); return; }
+  suggestEl.style.display = 'none';
+  _topProblemHref = null;
+
+  // ── Clarifier + normal search ───────────────────────────
+  const clarifier = matchClarifier(q);
+  const hasClarifier = Boolean(clarifier);
+
+  const hits = INDEX
+    .map(item => ({ item, s: weightedScore(item, q) }))
+    .filter(({ s }) => s > 0)
+    .sort((a, b) => b.s - a.s)
+    .map(({ item }) => item);
+
+  // No results AND no clarifier → show empty state
+  if (!hits.length && !hasClarifier) {
+    answerEl.style.display  = 'none';
+    resultsEl.style.display = 'none';
+    noResEl.style.display   = 'block';
+    return;
+  }
+
+  noResEl.style.display = 'none';
+
+  if (hasClarifier) {
+    // Clarifier takes over answerEl; resultsEl is built but hidden
+    answerEl.style.display = 'block';
+    answerEl.innerHTML = `
+      <div class="clarifier-banner">
+        <p class="clarifier-prompt">${clarifier.displayText || '你描述的情况更接近哪一种？'}</p>
+        <div class="clarifier-options">
+          ${clarifier.options.map(opt => `
+            <a href="${opt.route}" class="clarifier-option">${opt.label}</a>
+          `).join('')}
+        </div>
+        <button class="clarifier-skip" type="button"
+          onclick="document.getElementById('answer-banner').style.display='none';document.getElementById('results').style.display='block'">
+          继续搜索「${rawQ}」→
+        </button>
+      </div>
+    `;
+    resultsEl.style.display = 'none';
+  } else {
+    // Normal flow: top problem card
+    answerEl.style.display = 'block';
+    answerEl.innerHTML = topProblemCardHtml(q, rawQ);
+  }
+
+  // ── 分组渲染：问题 → 方法 → 主题 → 概念 ──
+  const groups = groupAndSort(hits);
+  const footerHtml = `
+    <div class="search-footer">
+      <p class="search-footer-text">没有找到完全符合的情况，也很正常。<br>很多家长第一次都不知道该怎么描述——可以换一种说法试试。</p>
+      <ul class="search-footer-list">
+        <li><button class="search-footer-option" data-kw="孩子不说话" type="button">我更担心语言</button></li>
+        <li><button class="search-footer-option" data-kw="睡不好" type="button">我更担心睡眠</button></li>
+        <li><button class="search-footer-option" data-kw="不知道怎么办" type="button">我不知道怎么描述</button></li>
+        <li><button class="search-footer-option search-footer-browse" data-kw="" type="button">浏览全部问题</button></li>
+      </ul>
+      <button class="search-footer-reset" type="button">重新搜索</button>
+    </div>
+  `;
+  // Only show results if no clarifier is active
+  if (!hasClarifier) resultsEl.style.display = 'block';
+  // 排除顶部已推荐的 Problem，避免重复
+  const otherProblems = groups["问题"].filter(h => h.href !== _topProblemHref);
+
+  resultsEl.innerHTML = [
+    sectionHtml("你可能遇到的问题", otherProblems, q),
+    sectionHtml("知识文章", groups["知识"], q),
+    sectionHtml("可以先参考的方法", groups["方法"], q),
+    sectionHtml("推荐阅读", groups["主题"], q),
+    sectionHtml("概念解释", groups["概念"], q),
+    sectionHtml("专业工具与量表", groups["资源"], q),
+    footerHtml,
+  ].join('');
+
+  // 底部引导 chip 绑定事件
+  resultsEl.querySelectorAll('.search-footer-option, .search-footer-reset').forEach(chip => {
+    chip.addEventListener('click', () => {
+      if (chip.classList.contains('search-footer-browse')) {
+        window.location.href = '/problems';
+        return;
+      }
+      if (chip.classList.contains('search-footer-reset')) {
+        inputEl.value = '';
+        reset();
+      } else {
+        inputEl.value = chip.dataset.kw;
+        doSearch();
+      }
+      inputEl.focus();
+    });
+  });
+}
+
+function reset() {
+  answerEl.style.display  = 'none';
+  resultsEl.style.display = 'none';
+  noResEl.style.display   = 'none';
+  suggestEl.style.display = 'block';
+}
+
+btnEl.addEventListener('click', doSearch);
+inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+inputEl.addEventListener('input', doSearch);
+suggestEl.addEventListener('click', e => {
+  const chip = e.target.closest('.kw-chip');
+  if (!chip) return;
+  inputEl.value = chip.dataset.kw;
+  doSearch();
+  inputEl.focus();
+});
+</script>
+
+<style is:global>
+/* ── Screen reader only ──────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.sub-hero {
+  padding: var(--sp-16) 0 var(--sp-12);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.sub-title {
+  font-size: var(--text-4xl); font-weight: 600;
+  letter-spacing: -0.03em; line-height: 1.2; margin-bottom: var(--sp-6);
+}
+.content { padding-top: var(--sp-10); padding-bottom: var(--sp-24); }
+
+/* ── Search Bar — fully integrated ─────────────────────── */
+.search-field {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;          /* clips button corners flush */
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.search-field:focus-within {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(45,106,143,0.10);
+}
+.search-icon {
+  flex-shrink: 0;
+  margin-left: var(--sp-5);
+  color: var(--muted-lt);
+}
+.search-field input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: var(--text-base);
+  font-family: var(--font);
+  color: var(--ink);
+  outline: none;
+  padding: var(--sp-3) var(--sp-3) var(--sp-3) var(--sp-3);
+  min-width: 0;
+}
+.search-field input::placeholder { color: var(--muted-lt); }
+.search-submit {
+  flex-shrink: 0;
+  height: 100%;
+  background: var(--ink);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: var(--sp-3) var(--sp-6);
+  font-size: var(--text-sm);
+  font-family: var(--font);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.15s;
+  white-space: nowrap;
+  border-radius: 0;          /* flush inside pill — overflow:hidden handles rounding */
+}
+.search-submit:hover { background: var(--brand); }
+
+/* ── Result cards ───────────────────────────────────────── */
+.result-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-5) var(--sp-6);
+  margin-bottom: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.result-item:hover {
+  border-color: var(--muted-lt);
+  box-shadow: var(--shadow-sm);
+}
+.result-header {
+  display: flex;
+  align-items: center;
+}
+.result-type {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+/* 1. Title */
+.result-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+/* 2. Summary */
+.result-summary {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 540px;
+}
+/* 3. Footer: confidence (left) + CTA (right) */
+.result-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--sp-1);
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+.result-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  background: var(--surface-card);
+  white-space: nowrap;
+}
+.result-confidence-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+/* 4. CTA */
+.result-cta {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--brand);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+  white-space: nowrap;
+}
+.result-cta:hover { border-color: var(--brand); }
+
+/* ── Answer banner（无 Problem 命中时兜底）──────────────── */
+.answer-banner {
+  background: var(--surface-card, #F5F3EF);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  padding: var(--sp-5) var(--sp-6);
+  margin-bottom: var(--sp-2);
+}
+.answer-banner p {
+  font-size: var(--text-base);
+  color: var(--ink);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* top-problem styles moved to global below */
+
+/* ── Result sections ────────────────────────────────────── */
+.result-section {
+  margin-bottom: var(--sp-8);
+}
+.result-section-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Type badge colors ──────────────────────────────────── */
+.result-type--problem { color: #B07D2A; }
+.result-type--method  { color: var(--brand); }
+.result-type--page    { color: var(--confidence-high); }
+.result-type--resource{ color: var(--muted); }
+.result-type--knowledge{ color: #7B5EA7; }
+.result-type--resource-tool { color: var(--muted); }
+
+/* ── Clarifier ──────────────────────────────────────────── */
+.clarifier-banner {
+  background: var(--bg-brand-tint);
+  border: 1px solid #C5D8EF;
+  border-left: 4px solid var(--brand);
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.clarifier-prompt {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.clarifier-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.clarifier-option {
+  display: block;
+  padding: .6rem 1rem;
+  background: white;
+  border: 1px solid #C5D8EF;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  color: #1E4A6A;
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.clarifier-option:hover {
+  background: #E8EFF7;
+  border-color: var(--brand);
+}
+.clarifier-skip {
+  background: none;
+  border: none;
+  font-size: .8rem;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.clarifier-skip:hover { color: var(--ink); }
+
+/* ── Card left-border accent (four layers) ──────────────── */
+.result-item--problem  { border-left: 3px solid var(--confidence-medium); background: var(--bg-medium-subtle); }
+.result-item--method   { border-left: 3px solid var(--brand); background: var(--bg-brand-tint); }
+.result-item--page     { border-left: 3px solid var(--confidence-high); background: var(--bg-high-subtle); }
+.result-item--resource { border-left: 3px solid var(--border); }
+
+/* ── Why line ───────────────────────────────────────────── */
+.result-why {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.7;
+  font-style: italic;
+  margin-top: calc(var(--sp-1) * -1);
+  max-width: 480px;
+}
+
+/* ── Source label（资料来源）───────────────────────────── */
+.result-source-label {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--muted-lt);
+  line-height: 1.6;
+  margin-top: var(--sp-1);
+}
+
+/* ── CTA per layer ──────────────────────────────────────── */
+.result-cta { font-weight: 500; }
+.result-cta--problem { color: #B07D2A; }
+.result-cta--method  { color: var(--brand); }
+.result-cta--page    { color: var(--confidence-high); }
+.result-cta--resource{ color: var(--muted); }
+
+/* ── Search footer guidance ─────────────────────────────── */
+.search-footer {
+  margin-top: var(--sp-12);
+  padding: var(--sp-8) var(--sp-6);
+  border-top: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-card, #F5F3EF);
+}
+.search-footer-text {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: var(--sp-5);
+}
+.search-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--sp-5) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.search-footer-option {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--text-sm);
+  color: var(--brand);
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.6;
+}
+.search-footer-option::before { content: "○  "; color: var(--muted-lt); }
+.search-footer-option:hover { text-decoration: underline; }
+.search-footer-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--text-xs);
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ── 顶部推荐确认卡 ─────────────────────────────────────── */
+.top-problem-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-left: 4px solid var(--confidence-medium);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.top-problem-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B07D2A;
+  margin: 0;
+}
+.top-problem-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1A1A1A;
+  margin: 0;
+  line-height: 1.3;
+}
+.top-problem-body {
+  font-size: var(--text-sm);
+  color: #6B6560;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 520px;
+}
+.top-problem-cta {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #96691F;
+  background: #FDF3E3;
+  border: 1.5px solid var(--confidence-medium);
+  padding: 9px 22px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+  align-self: flex-start;
+}
+.top-problem-cta:hover { background: #FAE9C8; border-color: #B07D2A; }
+.top-problem-more-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #9B9490;
+  text-transform: uppercase;
+  margin: 8px 0 16px;
+}
+.top-problem-main { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.top-problem-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 80px;
+  padding: 16px 12px;
+  background: #FDF3E3;
+  border-radius: 8px;
+  border: 1px solid rgba(232,168,79,0.3);
+  align-self: flex-start;
+}
+.top-problem-badge-icon { font-size: 1.5rem; }
+.top-problem-badge-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B07D2A;
+  text-align: center;
+}
+.top-problem-card { flex-direction: row; gap: 20px; align-items: flex-start; }
+@media (max-width: 600px) {
+  .top-problem-card { flex-direction: column; }
+  .top-problem-badge { flex-direction: row; align-self: stretch; justify-content: flex-start; }
+}
+</style>
+</BaseLayout>
