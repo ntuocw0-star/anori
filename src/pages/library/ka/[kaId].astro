@@ -22,9 +22,27 @@ const displayTitle = ka.title ?? ka.id;
 const seriesNavList = resolvedSeries.flatMap((series: any) => {
   const refs = series.content_refs?.ka ?? [];
   const index = refs.indexOf(ka.id);
+  // 边界：当前 KA 不在该 Series 的 content_refs.ka 中时跳过
   if (index < 0) return [];
-  const make = (id: string | undefined) => { if (!id) return null; const item = allKA.find(entry => entry.id === id); return item ? { id, title: item.title ?? id, href: `/library/ka/${id}` } : null; };
-  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical, prev: make(refs[index - 1]), next: make(refs[index + 1]) }];
+  const make = (id: string | undefined) => {
+    if (!id) return null;
+    const item = allKA.find(entry => entry.id === id);
+    return item ? { id, title: item.title ?? id, href: `/library/ka/${id}` } : null;
+  };
+  // 16B.4: TOC（同类型所有条目，含 active / missing 标记）
+  const toc = refs.map((id: string) => {
+    const item = allKA.find((e: any) => e.id === id);
+    return {
+      id,
+      title: item?.title ?? id,
+      href: item ? `/library/ka/${id}` : null,
+      active: id === ka.id,
+      missing: !item,
+    };
+  });
+  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical,
+            prev: make(refs[index - 1]), next: make(refs[index + 1]),
+            currentIndex: index, total: refs.length, toc }];
 });
 const relatedEA = ka.evidenceRefs.map((id: string) => allEA.find(item => item.id === id) ?? { id, missing: true });
 const relatedKA = resolvedSeries.length ? (resolvedSeries[0].content_refs?.ka ?? []).filter((id: string) => id !== ka.id).slice(0, 3).map((id: string) => allKA.find(item => item.id === id) ?? { id, missing: true }) : [];

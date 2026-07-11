@@ -7,10 +7,13 @@ import seriesData from '../../../repository/library/series.json';
 import eaData from '../../../generated/evidence/ea.json';
 import kaData from '../../../repository/knowledge.json';
 import { normalizeAllEA } from '../../../repository/adapters/ea';
+import { normalizeAllET } from '../../../repository/adapters/et';
 import { normalizeAllKA } from '../../../repository/adapters/ka';
 import { TERMS } from '../../../i18n/terminology';
+import etData from '../../../generated/evidence/et.json';
 
 const allEA = normalizeAllEA(eaData as any);
+const allET = normalizeAllET(etData as any);
 const allKA = normalizeAllKA(kaData as any);
 export function getStaticPaths() {
   return normalizeAllEA(eaData as any).map(ea => ({ params: { eaId: ea.id }, props: { ea } }));
@@ -22,14 +25,31 @@ const displayTitle = ea.source.paperTitle ?? ea.id;
 const seriesNavList = resolvedSeries.flatMap((series: any) => {
   const refs = series.content_refs?.ea ?? [];
   const index = refs.indexOf(ea.id);
+  // 边界：当前 EA 不在该 Series 的 content_refs.ea 中时跳过（避免进度显示为第0篇）
   if (index < 0) return [];
   const make = (id: string | undefined) => {
     if (!id) return null;
     const item = allEA.find(entry => entry.id === id);
     return item ? { id, title: item.source.paperTitle ?? id, href: `/library/ea/${id}` } : null;
   };
-  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical, prev: make(refs[index - 1]), next: make(refs[index + 1]) }];
+  // 16B.4: TOC（同类型所有条目，含 active / missing 标记）
+  const toc = refs.map((id: string) => {
+    const item = allEA.find((e: any) => e.id === id);
+    return {
+      id,
+      title: item?.source?.paperTitle ?? id,
+      href: item ? `/library/ea/${id}` : null,
+      active: id === ea.id,
+      missing: !item,
+    };
+  });
+  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical,
+            prev: make(refs[index - 1]), next: make(refs[index + 1]),
+            currentIndex: index, total: refs.length, toc }];
 });
+// Secondary Relation：ET.sourceEa 是唯一权威，EA→ET 通过反查得到
+// 不读 ea.relatedEt（仅编辑备注 + validate 一致性对象，非运行时权威）
+const relatedET = allET.filter(item => item.sourceEa.includes(ea.id));
 const relatedKA = allKA.filter(item => item.evidenceRefs.includes(ea.id)).slice(0, 3);
 const meta = { id: ea.id, type: 'EA' as const, title: displayTitle, summary: ea.summary, updatedAt: ea.updatedAt, status: ea.status, seriesIds: ea.seriesIds };
 ---
@@ -51,20 +71,39 @@ const meta = { id: ea.id, type: 'EA' as const, title: displayTitle, summary: ea.
       {ea.parentMeaning.length > 0 && <section><h2>对家长意味着什么</h2>{ea.parentMeaning.map((item: string) => <p>{item}</p>)}</section>}
       {ea.implications.length > 0 && <section><h2>实践提示</h2><ul>{ea.implications.map((item: string) => <li>{item}</li>)}</ul></section>}
     </div>
-    {relatedKA.length > 0 && (
+    {(relatedET.length > 0 || relatedKA.length > 0) && (
       <div slot="related-topic">
-        {/* 16B.2: Supporting Content 统一区块 — 本轮展示 KA，16B.3 加入 ET */}
-        <p class="supporting-section-label">{TERMS.ka.label}</p>
-        <ul class="related-list">
-          {relatedKA.map(item => (
-            <li>
-              <a href={`/library/ka/${item.id}`}>
-                <span>{item.title ?? item.id}</span>
-                <code>{item.id}</code>
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* 16B.3: Supporting Content — ET 分组（反查 ET.sourceEa）+ KA 分组 */}
+        {relatedET.length > 0 && (
+          <>
+            <p class="supporting-section-label">{TERMS.et.label}</p>
+            <ul class="related-list">
+              {relatedET.map(item => (
+                <li>
+                  <a href={`/library/et/${item.id}`}>
+                    <span>{item.topic?.trim() || item.id}</span>
+                    <code>{item.id}</code>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        {relatedKA.length > 0 && (
+          <>
+            <p class="supporting-section-label" style="margin-top: relatedET.length > 0 ? 'var(--sp-6)' : undefined">{TERMS.ka.label}</p>
+            <ul class="related-list">
+              {relatedKA.map(item => (
+                <li>
+                  <a href={`/library/ka/${item.id}`}>
+                    <span>{item.title ?? item.id}</span>
+                    <code>{item.id}</code>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
     )}
   </ContentPageLayout>

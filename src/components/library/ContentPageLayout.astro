@@ -20,12 +20,25 @@ export interface NavItem {
   href: string;
 }
 
+/** 16B.4: TOC 条目，支持 missing / active 状态 */
+export interface TocItem {
+  id:      string;
+  title:   string;
+  href:    string | null;   // null = 内容记录不存在，不渲染链接
+  active:  boolean;         // true = 当前页，不渲染为链接，加 aria-current
+  missing: boolean;         // true = 引用断链
+}
+
 export interface SeriesNav {
-  seriesId: string;
-  seriesLabel: string;
-  seriesHref: string;
-  prev: NavItem | null;
-  next: NavItem | null;
+  seriesId:     string;
+  seriesLabel:  string;
+  seriesHref:   string;
+  prev:         NavItem | null;
+  next:         NavItem | null;
+  // 16B.4 新增字段
+  currentIndex: number;     // 0-based，当前条目在同类型列表中的位置
+  total:        number;     // 同类型内容总数
+  toc:          TocItem[];  // 同类型所有条目
 }
 
 interface Props {
@@ -50,6 +63,10 @@ const breadcrumbItems = [
   ...(primarySeries ? [{ label: primarySeries.label, href: primarySeries.canonical }] : []),
   { label: meta.title },
 ];
+
+const typeLabel = meta.type === 'EA' ? TERMS.ea.label
+                : meta.type === 'ET' ? TERMS.et.label
+                : TERMS.ka.label;
 ---
 <div class="content-page">
   <Breadcrumb items={breadcrumbItems} />
@@ -85,6 +102,33 @@ const breadcrumbItems = [
       {seriesNavList.map(nav => (
         <div class="series-nav-block">
           <a href={nav.seriesHref} class="series-return">↑ 返回「{nav.seriesLabel}」</a>
+
+          {/* A: 当前进度（total >= 1 时显示） */}
+          {nav.total >= 1 && (
+            <p class="series-progress">
+              第 {nav.currentIndex + 1} 篇，共 {nav.total} 篇{typeLabel}
+            </p>
+          )}
+
+          {/* B: TOC（total > 1 时显示，单篇无导航价值） */}
+          {nav.total > 1 && (
+            <ol class="series-toc" role="list">
+              {nav.toc.map(item => (
+                <li class:list={['series-toc-item', item.active && 'series-toc-item--active', item.missing && 'series-toc-item--missing']}>
+                  {item.active ? (
+                    <span aria-current="page" class="series-toc-current">
+                      {item.title}
+                    </span>
+                  ) : item.missing || !item.href ? (
+                    <span class="series-toc-missing">{item.title}</span>
+                  ) : (
+                    <a href={item.href} class="series-toc-link">{item.title}</a>
+                  )}
+                </li>
+              ))}
+            </ol>
+          )}
+
           <div class="series-prev-next">
             <div>{nav.prev ? <a class="series-nav-link" href={nav.prev.href}><span>← 上一篇</span><strong>{nav.prev.title}</strong></a> : <span class="series-empty">已是第一篇</span>}</div>
             <div>{nav.next ? <a class="series-nav-link series-nav-link--next" href={nav.next.href}><span>下一篇 →</span><strong>{nav.next.title}</strong></a> : <span class="series-empty">已是最后一篇</span>}</div>
@@ -113,8 +157,16 @@ const breadcrumbItems = [
 .content-body{margin-bottom:var(--sp-10)}
 .content-related,.content-download,.series-nav-list,.search-bridge{border-top:1px solid var(--border);padding-top:var(--sp-6);margin-bottom:var(--sp-8)}
 .content-related>h2{font-size:var(--text-sm);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:var(--sp-4)}
-.series-nav-list{display:flex;flex-direction:column;gap:var(--sp-6)}.series-nav-block{display:flex;flex-direction:column;gap:var(--sp-3)}
-.series-return{font-size:var(--text-sm);color:var(--muted)}.series-prev-next{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
+.series-nav-list{display:flex;flex-direction:column;gap:var(--sp-6)}.series-nav-block{display:flex;flex-direction:column;gap:var(--sp-4)}
+.series-return{font-size:var(--text-sm);color:var(--muted)}
+.series-progress{font-size:var(--text-sm);color:var(--muted);margin:0}
+.series-toc{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--sp-1);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.series-toc-item{display:block}
+.series-toc-link{display:block;padding:var(--sp-3) var(--sp-4);font-size:var(--text-sm);color:var(--brand);line-height:1.5}
+.series-toc-link:hover{background:var(--surface-card)}
+.series-toc-item--active .series-toc-current{display:block;padding:var(--sp-3) var(--sp-4);font-size:var(--text-sm);font-weight:600;color:var(--ink);background:var(--surface-card);border-left:3px solid var(--brand);line-height:1.5}
+.series-toc-item--missing .series-toc-missing{display:block;padding:var(--sp-3) var(--sp-4);font-size:var(--text-sm);color:var(--muted-lt);font-style:italic}
+.series-prev-next{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
 .series-nav-link{display:flex;flex-direction:column;padding:var(--sp-4);border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);font-size:var(--text-sm)}
 .series-nav-link span{color:var(--muted);font-size:var(--text-xs)}.series-nav-link--next{text-align:right}.series-empty{display:block;padding:var(--sp-4);font-size:var(--text-sm);color:var(--muted-lt)}
 .search-bridge p{font-size:var(--text-sm);color:var(--muted)}.search-bridge a{color:var(--brand);font-size:var(--text-sm)}

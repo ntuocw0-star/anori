@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SiteNav from '../../../components/SiteNav.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
+import ContentPageLayout from '../../../components/library/ContentPageLayout.astro';
+import seriesData from '../../../repository/library/series.json';
+import etData from '../../../generated/evidence/et.json';
+import eaData from '../../../generated/evidence/ea.json';
+import { normalizeAllET } from '../../../repository/adapters/et';
+import { normalizeAllEA } from '../../../repository/adapters/ea';
+import { TERMS } from '../../../i18n/terminology';
+
+const allET = normalizeAllET(etData as any);
+const allEA = normalizeAllEA(eaData as any);
+
+export function getStaticPaths() {
+  return normalizeAllET(etData as any).map(et => ({ params: { etId: et.id }, props: { et } }));
+}
+
+const { et } = Astro.props as any;
+const allSeries = (seriesData as any).series as any[];
+const resolvedSeries = et.seriesIds.map((id: string) => allSeries.find(s => s.id === id)).filter(Boolean);
+
+// 标题：topic 优先，fallback 到 actionPrompt 首句，最后用 ID
+const displayTitle = et.topic?.trim() || et.actionPrompt?.trim() || et.id;
+
+// Series 内 ET 上下篇导航（复用 EA/KA 相同逻辑）
+const seriesNavList = resolvedSeries.flatMap((series: any) => {
+  const refs = series.content_refs?.et ?? [];
+  const index = refs.indexOf(et.id);
+  // 边界：当前 ET 不在该 Series 的 content_refs.et 中时跳过
+  if (index < 0) return [];
+  const make = (id: string | undefined) => {
+    if (!id) return null;
+    const item = allET.find(entry => entry.id === id);
+    const title = item?.topic?.trim() || item?.id || id;
+    return item ? { id, title, href: `/library/et/${id}` } : null;
+  };
+  // 16B.4: TOC（同类型所有条目，含 active / missing 标记）
+  const toc = refs.map((id: string) => {
+    const item = allET.find((e: any) => e.id === id);
+    return {
+      id,
+      title: item?.topic?.trim() || id,
+      href: item ? `/library/et/${id}` : null,
+      active: id === et.id,
+      missing: !item,
+    };
+  });
+  return [{ seriesId: series.id, seriesLabel: series.label, seriesHref: series.canonical,
+            prev: make(refs[index - 1]), next: make(refs[index + 1]),
+            currentIndex: index, total: refs.length, toc }];
+});
+
+// 来源 EA（Primary Relation：ET.sourceEa 正查）
+const sourceEA = et.sourceEa.map((id: string) => allEA.find(item => item.id === id) ?? { id, missing: true });
+
+const meta = { id: et.id, type: 'ET' as const, title: displayTitle, summary: undefined, updatedAt: et.updatedAt, status: et.status, seriesIds: et.seriesIds };
+---
+<BaseLayout
+  title={`${displayTitle} · ${TERMS.et.label} · ${TERMS.library.label} · Anori`}
+  description={et.topic ?? `${et.id} ${TERMS.et.label}`}
+>
+  <SiteNav />
+  <ContentPageLayout meta={meta} seriesNavList={seriesNavList}>
+
+    <div slot="body" class="et-body">
+      {et.readingTime && (
+        <p class="et-meta">
+          <span class="et-meta-item">阅读时长 {et.readingTime}</span>
+          {et.audience && <span class="et-meta-item">适合 {et.audience}</span>}
+        </p>
+      )}
+      {et.body && (
+        <section class="et-text">
+          {et.body.split('\n\n').map((para: string) => para.trim() && <p>{para.trim()}</p>)}
+        </section>
+      )}
+      {et.actionPrompt && (
+        <section class="et-action">
+          <h2>今天可以做什么</h2>
+          {et.actionPrompt.split('\n').map((line: string) => line.trim() && <p>{line.trim()}</p>)}
+        </section>
+      )}
+    </div>
+
+    {sourceEA.length > 0 && (
+      <div slot="related-topic">
+        <p class="supporting-section-label">来源{TERMS.ea.label}</p>
+        <ul class="related-list">
+          {sourceEA.map((item: any) => (
+            <li class:list={['missing' in item && 'missing']}>
+              {'missing' in item ? (
+                <div><span>内容记录暂未找到</span><code>{item.id}</code></div>
+              ) : (
+                <a href={`/library/ea/${item.id}`}>
+                  <span>{item.source?.paperTitle ?? item.id}</span>
+                  <code>{item.id}</code>
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+  </ContentPageLayout>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+.et-body { font-size: var(--text-base); line-height: 1.8; }
+.et-meta {
+  display: flex; gap: var(--sp-4); flex-wrap: wrap;
+  font-size: var(--text-sm); color: var(--muted);
+  margin-bottom: var(--sp-6);
+}
+.et-meta-item::before { content: '· '; }
+.et-meta-item:first-child::before { content: ''; }
+.et-text { margin-bottom: var(--sp-8); }
+.et-text p + p { margin-top: var(--sp-4); }
+.et-action {
+  background: var(--surface-card);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  padding: var(--sp-5) var(--sp-6);
+  margin-top: var(--sp-8);
+}
+.et-action h2 {
+  font-size: var(--text-sm); text-transform: uppercase;
+  letter-spacing: .06em; color: var(--muted);
+  margin-bottom: var(--sp-3);
+}
+.et-action p + p { margin-top: var(--sp-2); }
+.supporting-section-label {
+  font-size: var(--text-xs); font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2); border-bottom: 1px solid var(--border);
+}
+.related-list { list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); }
+.related-list a, .related-list > li > div {
+  display: flex; justify-content: space-between;
+  gap: var(--sp-4); padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface);
+}
+.related-list code { font-family: var(--mono); font-size: .7rem; color: var(--muted); }
+.related-list .missing { opacity: .6; }
+</style>
