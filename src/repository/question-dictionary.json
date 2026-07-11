@@ -16,7 +16,10 @@
         "fix": "在 vars.json 或 rels.json 数据里增加明确的 search_type 字段（'concept' 或 'resource'），替换当前的 slug 推断逻辑。",
         "priority": "medium",
         "sprint": "Sprint 16+",
-        "created_at": "2026-07-10"
+        "created_at": "2026-07-10",
+        "status": "closed",
+        "closed_at": "2026-07-11",
+        "closed_note": "search_type 已作为 Repository 数据字段写入 vars.json（Single Source of Truth）。业务代码不得再根据 slug、href、页面是否存在等信息推断分类。"
       }
     ]
   },

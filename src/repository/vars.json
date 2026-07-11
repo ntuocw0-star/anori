@@ -5,7 +5,8 @@
     "status": "Stable Release",
     "total_canonical": 44,
     "total_deprecated": 2,
-    "total": 49
+    "total": 49,
+    "search_type_rule": "vars.json 中的记录默认 search_type='concept'。只有当一条记录本身代表具体外部实体（量表、工具、机构、服务项目、政策文件）时才允许 search_type='resource'。'涉及服务'、'属于人口学变量'、'不可干预'均不能作为 resource 的判定依据。"
   },
   "variables": [
     {
@@ -19,7 +20,8 @@
       ],
       "variable_type": "Risk",
       "definition": "家庭因经济资源不足或不确定性产生的压力状态。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000002",
@@ -35,7 +37,8 @@
       "variable_type": "Intermediate",
       "definition": "父母在照顾子女过程中感受到的心理压力总体水平。",
       "cross_reference": "See also: VAR-000009 (Caregiver Burden) — related but distinct concept",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000003",
@@ -48,7 +51,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "父母在日常互动中表现出的回应性、一致性与情感支持水平。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000004",
@@ -62,7 +66,8 @@
       "variable_type": "Outcome",
       "definition": "家庭作为整体系统在多个生活领域的满意度与功能水平。",
       "central_outcome": true,
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000005",
@@ -74,7 +79,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "父母识别、管理和调节自身情绪的能力。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000006",
@@ -85,7 +91,8 @@
       ],
       "variable_type": "Protective",
       "definition": "父母在压力情境中保持开放、适应性行动的心理能力（ACT框架）。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000007",
@@ -98,7 +105,8 @@
       ],
       "variable_type": "Protective",
       "definition": "来自家人、朋友、邻居等非正式网络的情感、工具和信息支持。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000008",
@@ -111,7 +119,8 @@
       ],
       "variable_type": "Protective",
       "definition": "来自医疗、教育、社会服务等正式机构的支持。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000009",
@@ -125,7 +134,8 @@
       "variable_type": "Intermediate",
       "definition": "照顾者在长期照护过程中积累的心理、身体和社会负担。",
       "cross_reference": "See also: VAR-000002 (Parent Stress) — related but distinct concept",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000010",
@@ -137,7 +147,8 @@
       ],
       "variable_type": "Risk",
       "definition": "个体在同伴关系中遭受排斥、欺凌或负面对待的经历。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000011",
@@ -149,7 +160,8 @@
       ],
       "variable_type": "Protective",
       "definition": "个体对其友谊关系所提供支持的满意程度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000012",
@@ -161,7 +173,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "个体经历的抑郁情绪症状水平。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000013",
@@ -173,7 +186,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "儿童的整体心理健康状态，包括内化和外化问题。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000014",
@@ -185,7 +199,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "儿童适应家庭、学校和社会环境的能力与表现。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000015",
@@ -197,7 +212,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "家庭成员之间沟通、角色分工、情感联结和问题解决的整体运作质量。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000016",
@@ -209,7 +225,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "家庭中父母对儿童情绪的回应、示范和教导方式。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000017",
@@ -221,7 +238,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "儿童在同伴互动中表现出的社交理解、沟通和合作能力。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000018",
@@ -233,7 +251,8 @@
       ],
       "variable_type": "Protective",
       "definition": "家庭面对逆境时动员资源、维持功能并从困难中恢复的能力。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000019",
@@ -245,7 +264,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "个体或家庭的整体幸福感与生活满意度。Well-being reflects subjective psychological state and satisfaction, whereas Quality of Life represents a broader multidimensional life outcome.",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000020",
@@ -257,7 +277,8 @@
       ],
       "variable_type": "Protective",
       "definition": "家庭成员共同参与的休闲、娱乐和放松活动（领域概念）。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000021",
@@ -269,7 +290,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "个体参与休闲和娱乐活动的频率、多样性和投入程度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000022",
@@ -282,7 +304,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "个体在身体、心理、社会和环境层面的整体生活质量。Quality of Life includes but is not limited to subjective well-being.",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000023",
@@ -295,7 +318,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "个体参与社区活动、社会角色和公共生活的程度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000024",
@@ -317,7 +341,8 @@
       ],
       "variable_type": "Risk",
       "definition": "社会对残障人士的偏见、歧视和隐性负面态度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000026",
@@ -329,7 +354,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "个体被排除在社会参与机会之外的状态。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000027",
@@ -342,7 +368,8 @@
       ],
       "variable_type": "Context",
       "definition": "家庭的收入、教育和职业地位等社会经济背景因素。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000028",
@@ -363,7 +390,8 @@
       ],
       "variable_type": "Context",
       "definition": "个体的性别身份，作为调节变量影响多种家庭和社会过程。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000030",
@@ -376,7 +404,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "家庭实际获得并使用所需专业服务的程度，受可及性、可负担性、可接受性等因素影响。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000031",
@@ -389,7 +418,8 @@
       ],
       "variable_type": "Protective",
       "definition": "跨机构或跨专业整合服务，减少家庭在系统间导航负担的协调机制。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000032",
@@ -402,7 +432,8 @@
       "variable_type": "Intermediate",
       "definition": "家庭对所获得专业服务质量、回应性和有效性的主观满意程度。",
       "status": "Active",
-      "note": "Reclassified from Outcome to Intermediate in Audit-002. Satisfaction influences continued engagement and FQoL."
+      "note": "Reclassified from Outcome to Intermediate in Audit-002. Satisfaction influences continued engagement and FQoL.",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000033",
@@ -414,7 +445,8 @@
       ],
       "variable_type": "Risk",
       "definition": "家庭感知到需要但未能获得的服务缺口，与压力增加和结果变差相关。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000034",
@@ -426,7 +458,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "照顾责任与工作要求之间产生的时间、角色及心理冲突。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000035",
@@ -438,7 +471,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "照顾者维持稳定就业及职业发展的能力。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000036",
@@ -450,7 +484,8 @@
       ],
       "variable_type": "Protective",
       "definition": "青年进入成年阶段前，在自我决定、生活技能、社会支持和服务知识方面的综合准备程度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000037",
@@ -462,7 +497,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "成年残障人士实际发现（find）、进入（access）并持续使用（utilize）医疗、就业、居住、社区支持等成人阶段服务的程度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000038",
@@ -475,7 +511,8 @@
       ],
       "variable_type": "Outcome",
       "definition": "个人在居住、财务、日常生活和社会角色方面自主管理的实际能力与状态。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000039",
@@ -488,7 +525,8 @@
       ],
       "variable_type": "Protective",
       "definition": "家庭成员共同参与的、以连接和愉悦为目的的休闲和娱乐活动（具体行为变量，区别于VAR-000020领域概念）。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000040",
@@ -501,7 +539,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "个人或家庭对所参与休闲活动的质量、意义和满足感的主观评价。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000041",
@@ -514,7 +553,8 @@
       ],
       "variable_type": "Protective",
       "definition": "家庭日常生活中稳定、可预期的时间安排与活动结构，为共同休闲和家庭互动创造条件。Routine的价值不在于严格规律，而在于为家庭共同活动创造可预测的时间与心理空间（Predictable Opportunity）。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000042",
@@ -527,7 +567,8 @@
       ],
       "variable_type": "Protective",
       "definition": "政府、机构或系统层面为循证实践实施所提供的资源、授权、规范和持续激励机制。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000043",
@@ -540,7 +581,8 @@
       ],
       "variable_type": "Intermediate",
       "definition": "循证干预或支持方案在实际执行过程中与原设计方案的符合程度，包括内容、剂量、质量和参与度。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000044",
@@ -553,7 +595,8 @@
       ],
       "variable_type": "Risk",
       "definition": "阻碍循证实践在真实环境中有效实施的系统性、组织性、文化性或资源性障碍因素。",
-      "status": "Active"
+      "status": "Active",
+      "search_type": "concept"
     },
     {
       "id": "VAR-000045",
@@ -563,7 +606,8 @@
         "Caregiver Self-efficacy",
         "Parenting Self-efficacy",
         "Caregiver Competence"
-      ]
+      ],
+      "search_type": "concept"
     },
     {
       "id": "VAR-000046",
@@ -574,7 +618,8 @@
         "Meaning-making",
         "Benefit Finding",
         "Positive Appraisal"
-      ]
+      ],
+      "search_type": "concept"
     },
     {
       "id": "VAR-000047",
@@ -584,7 +629,8 @@
         "Self-compassion",
         "Self-kindness",
         "Mindful Self-compassion"
-      ]
+      ],
+      "search_type": "concept"
     },
     {
       "id": "VAR-000048",
@@ -594,7 +640,8 @@
         "Caregiver Resilience",
         "Caregiver Adaptation",
         "Psychological Resilience"
-      ]
+      ],
+      "search_type": "concept"
     },
     {
       "id": "VAR-000049",
@@ -605,7 +652,8 @@
         "Role Identity",
         "Identity Reconstruction",
         "Caregiver Values"
-      ]
+      ],
+      "search_type": "concept"
     }
   ],
   "candidates": [

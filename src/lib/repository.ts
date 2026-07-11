@@ -27,6 +27,7 @@ export interface Var {
   id: string;
   canonical_name: string;
   chinese_name: string;
+  search_type?: "concept" | "resource";
   variable_type: string;
   definition: string;
   aliases: string[];

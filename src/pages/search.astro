@@ -42,11 +42,14 @@ const VAR_CONCEPT_SLUGS: Record<string, string> = {
 };
 
 const varIndex = vars.map(v => {
+  // search_type is the authoritative field from vars.json (Single Source of Truth).
+  // TD-SEARCH-001 closed: no longer inferred from slug or page existence.
+  // search_type='concept' for all research variables (vars.json default).
+  // href is determined separately by VAR_CONCEPT_SLUGS (routing concern, not classification).
+  const searchType = v.search_type ?? "concept";
   const slug = VAR_CONCEPT_SLUGS[v.chinese_name];
-  // Vars with a known PROD concept page → "概念"; others (measurement tools) → "资源"
-  const isConceptPage = Boolean(slug);
   return {
-    type: isConceptPage ? "概念" : "资源",
+    type: searchType === "concept" ? "概念" : "资源",
     title: v.chinese_name,
     body: v.definition ?? "",
     summary: (v.definition ?? "").slice(0, 72),
@@ -54,7 +57,7 @@ const varIndex = vars.map(v => {
     tags: (v.aliases ?? []).join(" "),
     evidence_grade: "",
     analytics_id: v.id ?? slug ?? v.chinese_name,
-    analytics_type: isConceptPage ? "concept" : "resource",
+    analytics_type: searchType,
   };
 });
 
