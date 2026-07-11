@@ -37,6 +37,7 @@ function main() {
   const ka = load('src/repository/knowledge.json').articles ?? [];
   const ea = load('src/generated/evidence/ea.json').items ?? [];
   const et = load('src/generated/evidence/et.json').items ?? [];
+  const userPaths = load('src/repository/user-paths.json').paths ?? [];
 
   const errors = [];
   const warnings = [];
@@ -45,6 +46,7 @@ function main() {
   const etIds = new Set(et.map(x => x.id));
   const kaIds = new Set(ka.map(x => x.id));
   const topicIds = new Set(topics.map(x => x.id));
+  const userPathIds = new Set(userPaths.map(x => x.id));
 
   for (const [label, list, key] of [
     ['Topic', topics, 'id'], ['Series', series, 'id'], ['EA', ea, 'id'], ['ET', et, 'id'], ['KA', ka, 'id'],
@@ -168,6 +170,35 @@ function main() {
     }
   }
   // ── End 16B.2 ──────────────────────────────────────────────────────────────
+
+  // ── 16B.5: 孤立内容检测（Info 级）────────────────────────────────────────
+  // Repository Validation Principle:
+  //   Validation 仅检查：引用是否存在、ID 是否合法、Primary Relation 是否一致
+  //   Validation 不检查：内容质量、编辑风格、是否已发布、是否属于暂存状态
+  const seriesEaIds = new Set(series.flatMap(s => s.content_refs?.ea ?? []));
+  const seriesEtIds = new Set(series.flatMap(s => s.content_refs?.et ?? []));
+  const seriesKaIds = new Set(series.flatMap(s => s.content_refs?.ka ?? []));
+
+  const orphanEa = ea.filter(x => !seriesEaIds.has(x.id)).map(x => x.id);
+  const orphanEt = et.filter(x => !seriesEtIds.has(x.id)).map(x => x.id);
+  const orphanKa = ka.filter(x => !seriesKaIds.has(x.id)).map(x => x.id);
+
+  if (orphanEa.length) orphanEa.forEach(id => infos.push(`Orphan EA: ${id}`));
+  else infos.push('No orphan EA.');
+  if (orphanEt.length) orphanEt.forEach(id => infos.push(`Orphan ET: ${id}`));
+  else infos.push('No orphan ET.');
+  if (orphanKa.length) orphanKa.forEach(id => infos.push(`Orphan KA: ${id}`));
+  else infos.push('No orphan KA.');
+
+  // V-01: KA related_path → user-paths.json 存在性（Warning 级）
+  for (const item of ka) {
+    for (const pid of item.related_path ?? []) {
+      if (!userPathIds.has(pid)) {
+        warnings.push(`KA "${item.id}" related_path 引用不存在的 user-path: ${pid}`);
+      }
+    }
+  }
+  // ── End 16B.5 ─────────────────────────────────────────────────────────────
 
   const report = {
     generated_at: new Date().toISOString(),

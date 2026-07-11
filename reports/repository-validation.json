@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-11T09:59:56.539Z",
+  "generated_at": "2026-07-11T12:14:39.178Z",
   "passed": true,
   "summary": {
     "errors": 0,
     "warnings": 6,
-    "infos": 0
+    "infos": 3
   },
   "errors": [],
   "warnings": [
@@ -33,5 +33,18 @@
       "message": "EA \"EA-000003\" related_ka 含非法值（脏引用）: \"KA-000003（待建）\""
     }
   ],
-  "infos": []
+  "infos": [
+    {
+      "type": "info",
+      "message": "No orphan EA."
+    },
+    {
+      "type": "info",
+      "message": "No orphan ET."
+    },
+    {
+      "type": "info",
+      "message": "No orphan KA."
+    }
+  ]
 }
