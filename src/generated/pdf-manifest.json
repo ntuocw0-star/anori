@@ -1,7 +1,7 @@
 {
   "schemaId": "PDF-Manifest",
   "schema_version": "1.0",
-  "generated_at": "2026-07-11T12:38:51.083Z",
+  "generated_at": "2026-07-11T21:43:47.045Z",
   "summary": {
     "total": 2,
     "ok": 2,
@@ -16,8 +16,8 @@
       "path": "/downloads/ka/KA-000001-one-page.pdf",
       "htmlSource": "dist\\download\\ka\\KA-000001\\one-page\\index.html",
       "status": "ok",
-      "generatedAt": "2026-07-11T12:38:47.732Z",
-      "htmlHash": "sha256:512ce1352f1ad56d22f81fe0003d419fa28eb8ce118ab30b313f6c76b9e734d6",
+      "generatedAt": "2026-07-11T21:43:43.119Z",
+      "htmlHash": "sha256:ceefbd3a28990b5dac829cbcf67f310c52419722d0b51457284a28035126300c",
       "skipped": false
     },
     {
@@ -27,8 +27,8 @@
       "path": "/downloads/ka/KA-000002-one-page.pdf",
       "htmlSource": "dist\\download\\ka\\KA-000002\\one-page\\index.html",
       "status": "ok",
-      "generatedAt": "2026-07-11T12:38:51.082Z",
-      "htmlHash": "sha256:4614e5862ea0cc52b720b1e083d6daf9db4d95092cea8c642e1888c8ea6fd780",
+      "generatedAt": "2026-07-11T21:43:47.043Z",
+      "htmlHash": "sha256:8328e89054264fb6a34fe640345c5757dd9bfd67be7c7bc29e660ea7a6ce8899",
       "skipped": false
     }
   ]
