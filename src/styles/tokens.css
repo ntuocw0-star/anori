@@ -1,9 +1,14 @@
 /**
  * Anori Design Tokens
- * Sprint 15.1B
+ * Sprint 15.1B (初版) → Sprint 16C.2 (Token Foundation v2)
  *
- * 由 global.css 的真实生产变量原值迁移而来。
- * 不在此阶段调整颜色、字号、间距或圆角数值。
+ * 16C.2 变更（2026-07-11）：
+ *   新增 --text-2xs      极小标签 / 元数据 / 角标（0.625rem ≈ 10px）
+ *   新增 --radius-md     中等圆角（卡片、按钮，8px）
+ *   新增 --shadow-focus  键盘导航 focus ring
+ *
+ * 原则：Token Foundation 只定义语义和数值，不批量迁移现有样式。
+ * 现有硬编码字号、圆角的迁移在 16C.3 / 16C.4 中逐组件审核执行。
  */
 
 :root {
@@ -28,6 +33,7 @@
   --font:         "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --mono:         "JetBrains Mono", "Courier New", monospace;
 
+  --text-2xs:  0.625rem;  /* ≈10px · 极小标签、元数据、角标 · 16C.3 迁移时按组件审核 */
   --text-xs:   0.72rem;
   --text-sm:   0.875rem;
   --text-base: 1rem;
@@ -47,7 +53,6 @@
   --sp-8:  2rem;
   --sp-10: 2.5rem;
   --sp-12: 3rem;
-  --sp-14: 3.5rem;
   --sp-16: 4rem;
   --sp-24: 6rem;
 
@@ -58,15 +63,17 @@
   --component-gap:      var(--sp-6);
 
   /* ── Shape ───────────────────────────────────────────────── */
-  --radius-sm:  4px;
-  --radius:     6px;
-  --radius-lg:  12px;
+  --radius-sm:   4px;
+  --radius:      6px;
+  --radius-md:   8px;   /* 中等圆角 · 16C.4 迁移时按组件审核 */
+  --radius-lg:   12px;
   --radius-pill: 999px;
 
   /* ── Shadow (AUDIT-001) ──────────────────────────────────── */
-  --shadow-sm: 0 1px 4px  rgba(28,43,58,0.06);
-  --shadow-md: 0 4px 16px rgba(28,43,58,0.08);
-  --shadow-lg: 0 8px 32px rgba(28,43,58,0.10);
+  --shadow-sm:    0 1px 4px  rgba(28,43,58,0.06);
+  --shadow-md:    0 4px 16px rgba(28,43,58,0.08);
+  --shadow-lg:    0 8px 32px rgba(28,43,58,0.10);
+  --shadow-focus: 0 0 0 3px rgba(45,106,143,0.15);  /* focus ring · --brand 15% opacity */
 
   /* ── Motion ──────────────────────────────────────────────── */
   --transition: 0.15s ease;
@@ -84,12 +91,6 @@
   /* Soft backgrounds — use sparingly, not on every module */
   --bg-subtle:     #F2F0EB;   /* slightly warmer than --paper, for light section separation */
   --bg-nature:     #EFF4F0;   /* barely-there sage, for nature element backgrounds only */
-  --surface-alt:      #FDFCF8;  /* 卡片面轻量变体，与 --surface 差 1 位 B 通道 */
-  --bg-brand-subtle:  #EEF4FB;  /* brand 蓝浅底，paths-section / knowledge 区块 */
-  --bg-brand-tint:    #F3F7FB;  /* brand 蓝更浅，method 卡片 / hover 背景 */
-  --bg-high-tint:     #F2F8F5;  /* confidence-high 绿浅底（resource 轻量版）*/
-  --bg-high-subtle:   #F4FAF7;  /* confidence-high 绿浅底（标准版）*/
-  --bg-medium-subtle: #FFFBF3;  /* confidence-medium 黄浅底 */
 
   /* Spacing rhythm — Sprint 12 */
   --space-ending:  var(--sp-16);  /* whitespace before Ending */
