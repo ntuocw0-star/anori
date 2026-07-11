@@ -106,7 +106,11 @@ function parseEA(filePath) {
     quality_level: meta.quality_level ?? null,
     evidence_type: meta.evidence_type ?? null,
     reading_time: meta.reading_time ?? null,
-    related_et: Array.isArray(meta.related_et) ? meta.related_et : [],
+    // 16B.2: 只输出格式合法的 ET ID（/^ET-\d{6}$/）
+    // 含"（待建）""（增补）"等注释的字符串静默丢弃，不进入 generated JSON
+    // related_ka 不输出（仅供 validate-repository.mjs 做一致性检查）
+    related_et: (Array.isArray(meta.related_et) ? meta.related_et : [])
+      .filter(id => typeof id === 'string' && /^ET-\d{6}$/.test(id)),
     related_path: Array.isArray(meta.related_path) ? meta.related_path : [],
     source: extractSource(content),
     why_read: firstBlockquote(layer0) ?? null,
