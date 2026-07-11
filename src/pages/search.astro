@@ -22,6 +22,8 @@ const pageIndex = pages.map(p => {
     href: `/${p.slug}`,
     tags: p.trigger_statements.join(" "),
     evidence_grade: firstRel?.evidence_grade ?? "",
+    analytics_id: p.slug,
+    analytics_type: "topic",
   };
 });
 
@@ -51,6 +53,8 @@ const varIndex = vars.map(v => {
     href: slug ? `/concepts/${slug}` : `/resource`,
     tags: (v.aliases ?? []).join(" "),
     evidence_grade: "",
+    analytics_id: v.id ?? slug ?? v.chinese_name,
+    analytics_type: isConceptPage ? "concept" : "resource",
   };
 });
 
@@ -64,6 +68,8 @@ const problemIndex = problemsData.problems.map(p => ({
   href: `/problems/${p.id.toLowerCase()}`,
   tags: p.aliases.join(" "),
   evidence_grade: "",
+  analytics_id: p.id,
+  analytics_type: "problem",
 }));
 
 const methodIndex = methodsData.methods.map(m => ({
@@ -75,6 +81,8 @@ const methodIndex = methodsData.methods.map(m => ({
   href: `/methods/${m.id.toLowerCase()}`,
   tags: m.when_to_use,
   evidence_grade: "",
+  analytics_id: m.id,
+  analytics_type: "method",
 }));
 
 const kaIndex = (knowledgeData as any).articles.map((ka: any) => {
@@ -90,6 +98,8 @@ const kaIndex = (knowledgeData as any).articles.map((ka: any) => {
     href: ka.href,
     tags: tagsStr.toLowerCase(),
     evidence_grade: (ka.evidence_level ?? "").toLowerCase(),
+    analytics_id: ka.id,
+    analytics_type: "ka",
   };
 });
 
@@ -109,6 +119,8 @@ const resourceIndex = (resourcesData as any).resources
     href: `/resource/${r.id.toLowerCase()}`,
     tags: [(r.title ?? ""), (r.title_zh ?? ""), ...(r.topic_tags ?? [])].join(" ").toLowerCase(),
     evidence_grade: "",
+    analytics_id: r.id,
+    analytics_type: "resource",
   }));
 
 const indexJson = JSON.stringify([...problemIndex, ...methodIndex, ...pageIndex, ...varIndex, ...kaIndex, ...resourceIndex]);
@@ -175,6 +187,108 @@ const keywords = ["孩子哭","发脾气","睡不好","上学","不说话","很�
 <script define:vars={{ indexJson, clarifierJson }}>
 const INDEX = JSON.parse(indexJson);
 const CLARIFIER = JSON.parse(clarifierJson);
+
+// ─── Analytics Runtime (inline, no import) ───────────────────────────────────
+// Schema v1.1 · Store Key: anori_search_events_v1_1
+// Full implementation in src/analytics/ (TypeScript source of truth)
+
+const _ANA_DEBUG = false; // set true locally to enable console.debug
+const _ANA_LS_KEY = 'anori_search_events_v1_1';
+const _ANA_MAX_EVENTS = 1000;
+const _ANA_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
+const _ANA_SESSION_KEY = 'anori_search_session_id';
+let _ANA_MEM_SESSION = null;
+
+function _anaGenId() {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+  return Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 9);
+}
+
+function _anaGetSessionId() {
+  try {
+    let id = sessionStorage.getItem(_ANA_SESSION_KEY);
+    if (!id) { id = _anaGenId(); sessionStorage.setItem(_ANA_SESSION_KEY, id); }
+    return id;
+  } catch {
+    if (!_ANA_MEM_SESSION) _ANA_MEM_SESSION = _anaGenId();
+    return _ANA_MEM_SESSION;
+  }
+}
+
+function _anaNormQuery(raw) {
+  return raw.trim().normalize('NFKC').toLowerCase().replace(/\s+/g, ' ');
+}
+
+function _anaLoadEvents() {
+  try {
+    const raw = localStorage.getItem(_ANA_LS_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch { return []; }
+}
+
+function _anaEvict(events) {
+  const now = Date.now();
+  const fresh = events.filter(e => now - e.ts <= _ANA_MAX_AGE_MS);
+  return fresh.length > _ANA_MAX_EVENTS ? fresh.slice(fresh.length - _ANA_MAX_EVENTS) : fresh;
+}
+
+function _anaAppend(event) {
+  try {
+    const events = _anaEvict(_anaLoadEvents());
+    events.push(event);
+    localStorage.setItem(_ANA_LS_KEY, JSON.stringify(events));
+    if (_ANA_DEBUG) console.debug('[Analytics]', event.event, event);
+  } catch { /* silent */ }
+}
+
+function _anaBase(search_id, query) {
+  return {
+    schema_version: '1.1',
+    event_id: _anaGenId(),
+    search_id,
+    ts: Date.now(),
+    session_id: _anaGetSessionId(),
+    query: query.trim(),
+    query_norm: _anaNormQuery(query),
+    locale: (typeof document !== 'undefined' ? document.documentElement.lang : undefined) || undefined,
+  };
+}
+
+function _anaTrackQuery(search_id, query, result_count, source) {
+  try {
+    _anaAppend({ ..._anaBase(search_id, query), event: 'search.query', result_count, source });
+    if (result_count === 0) {
+      _anaAppend({ ..._anaBase(search_id, query), event: 'search.no_result' });
+    }
+  } catch { /* silent */ }
+}
+
+function _anaTrackClarifierShown(search_id, query, clarifiers) {
+  try {
+    _anaAppend({ ..._anaBase(search_id, query), event: 'search.clarifier_shown', clarifiers });
+  } catch { /* silent */ }
+}
+
+function _anaTrackClarifierClick(search_id, query, clarifier_value, clarifier_index, destination_url) {
+  try {
+    _anaAppend({ ..._anaBase(search_id, query), event: 'search.clarifier_click', clarifier_value, clarifier_index, destination_url });
+  } catch { /* silent */ }
+}
+
+function _anaTrackResultClick(search_id, query, result_id, result_type, result_index, result_url) {
+  try {
+    _anaAppend({ ..._anaBase(search_id, query), event: 'search.result_click', result_id, result_type, result_index, result_url });
+  } catch { /* silent */ }
+}
+
+// Current search context (set on each formal search, used by result click handler)
+let _anaCurrentSearchId = null;
+let _anaCurrentQuery = '';
+// ─── End Analytics Runtime ────────────────────────────────────────────────────
 
 // Result type priority weights — PRB first, Resource last
 const TYPE_WEIGHT = {
@@ -337,7 +451,11 @@ function topProblemCardHtml(q, rawQ) {
         <p class="top-problem-eyebrow">我们找到一个与你描述最接近的情况</p>
         <h2 class="top-problem-title">${top.title}</h2>
         <p class="top-problem-body">${bodyText}</p>
-        <a href="${href}" class="top-problem-cta">查看这个问题 →</a>
+        <a href="${href}" class="top-problem-cta"
+           data-analytics-id="${top.analytics_id ?? ''}"
+           data-analytics-type="${top.analytics_type ?? 'problem'}"
+           data-analytics-index="0"
+           data-analytics-url="${href}">查看这个问题 →</a>
       </div>
       <div class="top-problem-badge">
         <span class="top-problem-badge-icon">🧩</span>
@@ -385,7 +503,7 @@ const TYPE_SKIN = {
 };
 
 // 生成单个结果卡片 HTML
-function cardHtml(h, q) {
+function cardHtml(h, q, tracking_index) {
   const skin = TYPE_SKIN[h.type] ?? "page";
 
   // 推荐理由：Method 用 when_to_use；Page 用动态 trigger；其他用 summary
@@ -414,7 +532,11 @@ function cardHtml(h, q) {
       ${whyHtml}
       <div class="result-footer">
         ${confidenceBadgeHtml(h.evidence_grade)}
-        <a href="${h.href}" class="result-cta result-cta--${skin}">${
+        <a href="${h.href}" class="result-cta result-cta--${skin}"
+           data-analytics-id="${h.analytics_id ?? ''}"
+           data-analytics-type="${h.analytics_type ?? ''}"
+           data-analytics-index="${tracking_index}"
+           data-analytics-url="${h.href}">${
           h.type === "问题" ? "查看这个问题 →" :
           h.type === "方法" ? "看看这种思路 →" :
           h.type === "主题" ? "阅读完整主题 →" :
@@ -428,19 +550,31 @@ function cardHtml(h, q) {
 }
 
 // 生成分组区块 HTML（传入 q 供 cardHtml 动态选 trigger）
-function sectionHtml(label, items, q) {
-  if (!items.length) return "";
-  return `
+// tracking_index_start: 当前区块第一个结果的全局视觉位置（0-based）
+// 返回 { html: string, nextIndex: number }
+function sectionHtml(label, items, q, tracking_index_start) {
+  if (!items.length) return { html: "", nextIndex: tracking_index_start };
+  let idx = tracking_index_start;
+  const cardsHtml = items.map(h => cardHtml(h, q, idx++)).join('');
+  return {
+    html: `
     <div class="result-section">
       <p class="result-section-label">${label}</p>
-      ${items.map(h => cardHtml(h, q)).join('')}
+      ${cardsHtml}
     </div>
-  `;
+  `,
+    nextIndex: idx,
+  };
 }
 
 const answerEl  = document.getElementById('answer-banner');
 
-function doSearch() {
+// options.source: 触发来源（正式搜索时传入）
+// options.trackQuery: true = 正式搜索，记录 Analytics；false = 实时预览，不记录
+function doSearch(options) {
+  const source = (options && options.source) || 'keyboard';
+  const trackQuery = (options && options.trackQuery === true);
+
   const rawQ = inputEl.value.trim();
   const q = rawQ.toLowerCase();
   if (!q) { reset(); return; }
@@ -456,6 +590,19 @@ function doSearch() {
     .filter(({ s }) => s > 0)
     .sort((a, b) => b.s - a.s)
     .map(({ item }) => item);
+
+  // ── Analytics: 正式搜索时记录 search.query ───────────────
+  if (trackQuery) {
+    _anaCurrentSearchId = _anaGenId();
+    _anaCurrentQuery = rawQ;
+    const resultCount = hits.length;
+    _anaTrackQuery(_anaCurrentSearchId, rawQ, resultCount, source);
+    // Clarifier shown（同一次正式搜索最多记录一次）
+    if (hasClarifier) {
+      const clarifierLabels = (clarifier.options || []).map(opt => opt.label);
+      _anaTrackClarifierShown(_anaCurrentSearchId, rawQ, clarifierLabels);
+    }
+  }
 
   // No results AND no clarifier → show empty state
   if (!hits.length && !hasClarifier) {
@@ -474,8 +621,11 @@ function doSearch() {
       <div class="clarifier-banner">
         <p class="clarifier-prompt">${clarifier.displayText || '你描述的情况更接近哪一种？'}</p>
         <div class="clarifier-options">
-          ${clarifier.options.map(opt => `
-            <a href="${opt.route}" class="clarifier-option">${opt.label}</a>
+          ${clarifier.options.map((opt, idx) => `
+            <a href="${opt.route}" class="clarifier-option"
+               data-analytics-clarifier-value="${opt.label}"
+               data-analytics-clarifier-index="${idx}"
+               data-analytics-clarifier-url="${opt.route}">${opt.label}</a>
           `).join('')}
         </div>
         <button class="clarifier-skip" type="button"
@@ -508,15 +658,25 @@ function doSearch() {
   // Only show results if no clarifier is active
   if (!hasClarifier) resultsEl.style.display = 'block';
   // 排除顶部已推荐的 Problem，避免重复
+  // 顶部推荐 Problem 已分配 tracking_index = 0，分组结果从 1 开始
   const otherProblems = groups["问题"].filter(h => h.href !== _topProblemHref);
+  const hasTopProblem = Boolean(_topProblemHref);
+  let trackIdx = hasTopProblem ? 1 : 0;
+
+  const s1 = sectionHtml("你可能遇到的问题", otherProblems, q, trackIdx);
+  trackIdx = s1.nextIndex;
+  const s2 = sectionHtml("知识文章", groups["知识"], q, trackIdx);
+  trackIdx = s2.nextIndex;
+  const s3 = sectionHtml("可以先参考的方法", groups["方法"], q, trackIdx);
+  trackIdx = s3.nextIndex;
+  const s4 = sectionHtml("推荐阅读", groups["主题"], q, trackIdx);
+  trackIdx = s4.nextIndex;
+  const s5 = sectionHtml("概念解释", groups["概念"], q, trackIdx);
+  trackIdx = s5.nextIndex;
+  const s6 = sectionHtml("专业工具与量表", groups["资源"], q, trackIdx);
 
   resultsEl.innerHTML = [
-    sectionHtml("你可能遇到的问题", otherProblems, q),
-    sectionHtml("知识文章", groups["知识"], q),
-    sectionHtml("可以先参考的方法", groups["方法"], q),
-    sectionHtml("推荐阅读", groups["主题"], q),
-    sectionHtml("概念解释", groups["概念"], q),
-    sectionHtml("专业工具与量表", groups["资源"], q),
+    s1.html, s2.html, s3.html, s4.html, s5.html, s6.html,
     footerHtml,
   ].join('');
 
@@ -532,7 +692,7 @@ function doSearch() {
         reset();
       } else {
         inputEl.value = chip.dataset.kw;
-        doSearch();
+        doSearch({ source: 'suggestion', trackQuery: true });
       }
       inputEl.focus();
     });
@@ -546,15 +706,43 @@ function reset() {
   suggestEl.style.display = 'block';
 }
 
-btnEl.addEventListener('click', doSearch);
-inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
-inputEl.addEventListener('input', doSearch);
+btnEl.addEventListener('click', () => doSearch({ source: 'button', trackQuery: true }));
+inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch({ source: 'keyboard', trackQuery: true }); });
+inputEl.addEventListener('input', () => doSearch({ trackQuery: false }));
 suggestEl.addEventListener('click', e => {
   const chip = e.target.closest('.kw-chip');
   if (!chip) return;
   inputEl.value = chip.dataset.kw;
-  doSearch();
+  doSearch({ source: 'suggestion', trackQuery: true });
   inputEl.focus();
+});
+
+// ── Analytics: 结果点击事件委托 ──────────────────────────────
+// 监听 answer-banner（顶部推荐 + Clarifier）和 results（分组结果）
+[answerEl, resultsEl].forEach(container => {
+  container.addEventListener('click', e => {
+    // 结果点击（top-problem-cta 和 result-cta）
+    const resultLink = e.target.closest('[data-analytics-id][data-analytics-type][data-analytics-index]');
+    if (resultLink && !resultLink.hasAttribute('data-analytics-clarifier-value')) {
+      const id = resultLink.dataset.analyticsId;
+      const type = resultLink.dataset.analyticsType;
+      const index = parseInt(resultLink.dataset.analyticsIndex, 10);
+      const url = resultLink.dataset.analyticsUrl || resultLink.getAttribute('href') || '';
+      if (id && type && _anaCurrentSearchId) {
+        _anaTrackResultClick(_anaCurrentSearchId, _anaCurrentQuery, id, type, index, url);
+      }
+    }
+
+    // Clarifier 点击
+    const clarifierLink = e.target.closest('[data-analytics-clarifier-value]');
+    if (clarifierLink && _anaCurrentSearchId) {
+      const value = clarifierLink.dataset.analyticsClarifierValue || '';
+      const index = parseInt(clarifierLink.dataset.analyticsClarifierIndex || '0', 10);
+      const url = clarifierLink.dataset.analyticsClarifierUrl || clarifierLink.getAttribute('href') || '';
+      _anaTrackClarifierClick(_anaCurrentSearchId, _anaCurrentQuery, value, index, url);
+      // 不阻止原有跳转行为
+    }
+  });
 });
 </script>
 
@@ -624,7 +812,7 @@ suggestEl.addEventListener('click', e => {
   white-space: nowrap;
   border-radius: 0;          /* flush inside pill — overflow:hidden handles rounding */
 }
-.search-submit:hover { background: var(--brand); }
+.search-submit:hover { background: #2D6A8F; }
 
 /* ── Result cards ───────────────────────────────────────── */
 .result-item {
@@ -738,65 +926,65 @@ suggestEl.addEventListener('click', e => {
 
 /* ── Type badge colors ──────────────────────────────────── */
 .result-type--problem { color: #B07D2A; }
-.result-type--method  { color: var(--brand); }
-.result-type--page    { color: var(--confidence-high); }
+.result-type--method  { color: #2D6A8F; }
+.result-type--page    { color: #5B9E7A; }
 .result-type--resource{ color: var(--muted); }
 .result-type--knowledge{ color: #7B5EA7; }
 .result-type--resource-tool { color: var(--muted); }
 
 /* ── Clarifier ──────────────────────────────────────────── */
 .clarifier-banner {
-  background: var(--bg-brand-tint);
+  background: #F3F7FB;
   border: 1px solid #C5D8EF;
-  border-left: 4px solid var(--brand);
+  border-left: 4px solid #2D6A8F;
   border-radius: 0 8px 8px 0;
   padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: var(--sp-4);
+  gap: 1rem;
 }
 .clarifier-prompt {
   font-size: .9rem;
   font-weight: 600;
-  color: var(--ink);
+  color: #1C2B3A;
 }
 .clarifier-options {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-2);
+  gap: .5rem;
 }
 .clarifier-option {
   display: block;
   padding: .6rem 1rem;
   background: white;
   border: 1px solid #C5D8EF;
-  border-radius: var(--radius);
-  font-size: var(--text-sm);
+  border-radius: 6px;
+  font-size: .875rem;
   color: #1E4A6A;
   text-decoration: none;
   transition: background .15s, border-color .15s;
 }
 .clarifier-option:hover {
   background: #E8EFF7;
-  border-color: var(--brand);
+  border-color: #2D6A8F;
 }
 .clarifier-skip {
   background: none;
   border: none;
   font-size: .8rem;
-  color: var(--muted);
+  color: #5A6978;
   cursor: pointer;
   text-align: left;
   padding: 0;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.clarifier-skip:hover { color: var(--ink); }
+.clarifier-skip:hover { color: #1C2B3A; }
 
 /* ── Card left-border accent (four layers) ──────────────── */
-.result-item--problem  { border-left: 3px solid var(--confidence-medium); background: var(--bg-medium-subtle); }
-.result-item--method   { border-left: 3px solid var(--brand); background: var(--bg-brand-tint); }
-.result-item--page     { border-left: 3px solid var(--confidence-high); background: var(--bg-high-subtle); }
+.result-item--problem  { border-left: 3px solid #E8A84F; background: #FFFBF3; }
+.result-item--method   { border-left: 3px solid #2D6A8F; background: #F3F7FB; }
+.result-item--page     { border-left: 3px solid #5B9E7A; background: #F4FAF7; }
 .result-item--resource { border-left: 3px solid var(--border); }
 
 /* ── Why line ───────────────────────────────────────────── */
@@ -821,8 +1009,8 @@ suggestEl.addEventListener('click', e => {
 /* ── CTA per layer ──────────────────────────────────────── */
 .result-cta { font-weight: 500; }
 .result-cta--problem { color: #B07D2A; }
-.result-cta--method  { color: var(--brand); }
-.result-cta--page    { color: var(--confidence-high); }
+.result-cta--method  { color: #2D6A8F; }
+.result-cta--page    { color: #5B9E7A; }
 .result-cta--resource{ color: var(--muted); }
 
 /* ── Search footer guidance ─────────────────────────────── */
@@ -871,9 +1059,9 @@ suggestEl.addEventListener('click', e => {
 
 /* ── 顶部推荐确认卡 ─────────────────────────────────────── */
 .top-problem-card {
-  background: var(--surface);
+  background: #FDFCF9;
   border: 1.5px solid var(--border);
-  border-left: 4px solid var(--confidence-medium);
+  border-left: 4px solid #E8A84F;
   border-radius: 8px;
   padding: 28px 32px;
   margin-bottom: 16px;
@@ -898,7 +1086,7 @@ suggestEl.addEventListener('click', e => {
   line-height: 1.3;
 }
 .top-problem-body {
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   color: #6B6560;
   line-height: 1.75;
   margin: 0;
@@ -907,13 +1095,13 @@ suggestEl.addEventListener('click', e => {
 .top-problem-cta {
   display: inline-block;
   margin-top: 4px;
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   font-weight: 600;
   color: #96691F;
   background: #FDF3E3;
-  border: 1.5px solid var(--confidence-medium);
+  border: 1.5px solid #E8A84F;
   padding: 9px 22px;
-  border-radius: var(--radius-pill);
+  border-radius: 999px;
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s;
   align-self: flex-start;
