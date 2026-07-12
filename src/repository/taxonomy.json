@@ -1,0 +1,1426 @@
+{
+  "meta": {
+    "version": "1.0",
+    "status": "frozen",
+    "date": "2026-07-12",
+    "domain_count": 6,
+    "concept_count": 35,
+    "cross_domain_concept_count": 8,
+    "schema_note": "Concept 是 Knowledge Graph 的节点（检索单位）。Topic（topics.json）是编辑策展专题页，两者保持独立。concept_refs 字段用于 EA/ET/KA/Series/Problem/Resource/User Path 中引用 Concept，格式为数组。"
+  },
+  "domains": [
+    {
+      "id": "domain-family-wellbeing",
+      "slug": "family-wellbeing",
+      "label": {
+        "zh": "家庭福祉",
+        "en": "Family Wellbeing"
+      },
+      "order": 1,
+      "status": "active"
+    },
+    {
+      "id": "domain-participation",
+      "slug": "participation",
+      "label": {
+        "zh": "生活与社会参与",
+        "en": "Participation"
+      },
+      "order": 2,
+      "status": "active"
+    },
+    {
+      "id": "domain-communication",
+      "slug": "communication",
+      "label": {
+        "zh": "沟通与交流",
+        "en": "Communication"
+      },
+      "order": 3,
+      "status": "active"
+    },
+    {
+      "id": "domain-mental-health",
+      "slug": "mental-health",
+      "label": {
+        "zh": "心理健康与行为",
+        "en": "Mental Health & Behaviour"
+      },
+      "order": 4,
+      "status": "active"
+    },
+    {
+      "id": "domain-service-access",
+      "slug": "service-access",
+      "label": {
+        "zh": "服务获取与支持",
+        "en": "Service Access & Support"
+      },
+      "order": 5,
+      "status": "active"
+    },
+    {
+      "id": "domain-policy-implementation",
+      "slug": "policy-implementation",
+      "label": {
+        "zh": "政策与实施",
+        "en": "Policy & Implementation"
+      },
+      "order": 6,
+      "status": "active"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "concept-parent-stress",
+      "slug": "parent-stress",
+      "label": {
+        "zh": "父母压力",
+        "en": "Parent Stress"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "父母或主要照顾者在照顾有特殊需求子女过程中体验到的心理压力与主观负担感。不包括客观照顾负担（→ caregiver-burden），不包括整体心理资源（→ caregiver-psychological-resources）。",
+        "en": "Psychological stress and subjective burden experienced by parents or primary caregivers of children with special needs. Excludes objective caregiving burden (→ caregiver-burden) and broader psychological resources (→ caregiver-psychological-resources)."
+      },
+      "aliases": {
+        "zh": [
+          "亲职压力",
+          "照顾压力"
+        ],
+        "en": [
+          "Parental Stress",
+          "Parenting Stress"
+        ]
+      },
+      "search_terms": [
+        "父母崩溃",
+        "家长压力",
+        "带娃太累",
+        "parent stress",
+        "parenting pressure"
+      ],
+      "related_vars": [
+        "VAR-000002"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-caregiver-burden",
+      "slug": "caregiver-burden",
+      "label": {
+        "zh": "照顾者负担",
+        "en": "Caregiver Burden"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "照顾者在时间、体力、经济和社会关系方面承受的客观照顾负担。区别于主观心理压力（→ parent-stress）。",
+        "en": "Objective caregiving burden encompassing time, physical, financial, and social relational demands. Distinct from subjective psychological stress (→ parent-stress)."
+      },
+      "aliases": {
+        "zh": [
+          "照顾负担"
+        ],
+        "en": [
+          "Caregiving Burden"
+        ]
+      },
+      "search_terms": [
+        "照顾太多",
+        "没有时间",
+        "精力耗尽",
+        "caregiver burden",
+        "caregiving demands"
+      ],
+      "related_vars": [
+        "VAR-000009"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-caregiver-psychological-resources",
+      "slug": "caregiver-psychological-resources",
+      "label": {
+        "zh": "照顾者心理资源",
+        "en": "Caregiver Psychological Resources"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "照顾者维持心理健康和持续照顾能力的内在资源，包括自我效能、照顾意义感、韧性、身份认同和自我关怀。不包括外部服务支持（→ formal/informal-social-support），不包括压力与负担本身（→ parent-stress / caregiver-burden）。此节点合并了 v1 阶段内容尚稀疏的若干子概念，待内容扩展后可拆分。",
+        "en": "Internal psychological resources enabling caregivers to sustain wellbeing and caregiving capacity, including self-efficacy, sense of meaning, resilience, identity, and self-care. Excludes external support and stress/burden constructs. Merged node for v1; may be split as content expands."
+      },
+      "aliases": {
+        "zh": [
+          "照顾者内在资源",
+          "照顾者心理韧性"
+        ],
+        "en": [
+          "Caregiver Internal Resources",
+          "Caregiver Resilience"
+        ]
+      },
+      "search_terms": [
+        "怎么坚持下去",
+        "找到意义",
+        "自我照顾",
+        "self-efficacy",
+        "sense of meaning"
+      ],
+      "related_vars": [
+        "VAR-000045",
+        "VAR-000046",
+        "VAR-000047",
+        "VAR-000048",
+        "VAR-000049"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-family-functioning",
+      "slug": "family-functioning",
+      "label": {
+        "zh": "家庭功能",
+        "en": "Family Functioning"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "家庭成员之间的互动、沟通、角色分工、适应能力与整体运作质量。不包括家庭整体生活质量（→ family-quality-of-life）。",
+        "en": "Family interaction, communication, role distribution, adaptability, and overall functioning quality. Excludes family-level quality of life (→ family-quality-of-life)."
+      },
+      "aliases": {
+        "zh": [
+          "家庭运作",
+          "家庭互动"
+        ],
+        "en": [
+          "Family Function",
+          "Family Interaction"
+        ]
+      },
+      "search_terms": [
+        "家庭关系",
+        "家人相处",
+        "家庭沟通",
+        "family functioning"
+      ],
+      "related_vars": [
+        "VAR-000015"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-family-resilience",
+      "slug": "family-resilience",
+      "label": {
+        "zh": "家庭韧性",
+        "en": "Family Resilience"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "家庭作为整体在面对逆境、压力或危机时的应对、适应和恢复能力。区别于照顾者个人韧性（→ caregiver-psychological-resources）。",
+        "en": "The family unit's capacity to cope, adapt, and recover from adversity, stress, or crisis. Distinct from individual caregiver resilience (→ caregiver-psychological-resources)."
+      },
+      "aliases": {
+        "zh": [
+          "家庭抗逆力",
+          "家庭复原力"
+        ],
+        "en": [
+          "Family Hardiness"
+        ]
+      },
+      "search_terms": [
+        "家庭怎么撑过去",
+        "家庭应对",
+        "family resilience",
+        "family coping"
+      ],
+      "related_vars": [
+        "VAR-000018"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-family-quality-of-life",
+      "slug": "family-quality-of-life",
+      "label": {
+        "zh": "家庭生活质量",
+        "en": "Family Quality of Life"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "家庭成员对家庭生活各维度（物质、情感、社会、健康等）整体满意程度的主观评估。不等同于儿童福祉（→ child-wellbeing）或家庭功能（→ family-functioning）。",
+        "en": "Family members' subjective assessment of overall satisfaction across life domains (material, emotional, social, health). Distinct from child wellbeing and family functioning."
+      },
+      "aliases": {
+        "zh": [
+          "FQOL",
+          "家庭生活满意度"
+        ],
+        "en": [
+          "Family Life Quality"
+        ]
+      },
+      "search_terms": [
+        "生活质量",
+        "家庭满意度"
+      ],
+      "related_vars": [
+        "VAR-000004"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-family-leisure",
+      "slug": "family-leisure",
+      "label": {
+        "zh": "家庭休闲",
+        "en": "Family Leisure"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing",
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "家庭成员共同参与的休闲、娱乐和非正式活动，及其对家庭联结和福祉的影响。跨挂 participation 是因为家庭休闲同时是一种参与形式。",
+        "en": "Shared leisure, recreation, and informal activities among family members, and their impact on family cohesion and wellbeing. Cross-listed under participation as a form of family participation."
+      },
+      "aliases": {
+        "zh": [
+          "家庭共同休闲",
+          "家庭娱乐活动"
+        ],
+        "en": [
+          "Family Recreation",
+          "Shared Family Activities"
+        ]
+      },
+      "search_terms": [
+        "家庭活动",
+        "一起玩",
+        "休息时间",
+        "family leisure",
+        "family activities"
+      ],
+      "related_vars": [
+        "VAR-000020",
+        "VAR-000039"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-parenting-quality",
+      "slug": "parenting-quality",
+      "label": {
+        "zh": "教养质量",
+        "en": "Parenting Quality"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "父母在养育过程中的敏感性、回应性、一致性和支持性等教养行为的质量。不等同于父母压力（压力影响教养质量，但两者是不同构念）。",
+        "en": "Quality of parenting behaviours including sensitivity, responsiveness, consistency, and support. Distinct from parent stress, which influences but is not the same construct."
+      },
+      "aliases": {
+        "zh": [
+          "亲职质量",
+          "养育质量"
+        ],
+        "en": [
+          "Parenting Behaviour Quality"
+        ]
+      },
+      "search_terms": [
+        "怎么更好地养育",
+        "教养方式",
+        "parenting quality",
+        "parenting behaviour"
+      ],
+      "related_vars": [
+        "VAR-000003"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-psychological-flexibility",
+      "slug": "psychological-flexibility",
+      "label": {
+        "zh": "心理灵活性",
+        "en": "Psychological Flexibility"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "个体在面对困难想法和情绪时，保持开放、接纳并采取符合价值观行动的能力。主要来自接受与承诺疗法（ACT）框架，适用于照顾者和家长群体。",
+        "en": "The ability to remain open and accepting in the presence of difficult thoughts and emotions while taking values-based action. Primarily from the ACT framework; applies to caregivers and parents."
+      },
+      "aliases": {
+        "zh": [
+          "心理弹性（ACT框架）"
+        ],
+        "en": [
+          "Psych Flex",
+          "ACT Psychological Flexibility"
+        ]
+      },
+      "search_terms": [
+        "接受",
+        "不对抗情绪",
+        "价值观行动",
+        "psychological flexibility",
+        "ACT"
+      ],
+      "related_vars": [
+        "VAR-000006"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-work-family-conflict",
+      "slug": "work-family-conflict",
+      "label": {
+        "zh": "工作家庭冲突",
+        "en": "Work-Family Conflict"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "工作角色与家庭照顾角色之间的时间、精力或行为冲突。特指有特殊需求子女的家庭中角色冲突加剧的情况。",
+        "en": "Time, energy, or behavioural conflict between work and family caregiving roles. Specifically addresses heightened role conflict in families of children with special needs."
+      },
+      "aliases": {
+        "zh": [
+          "工作与家庭平衡"
+        ],
+        "en": [
+          "Work-Life Conflict",
+          "Work-Caregiving Conflict"
+        ]
+      },
+      "search_terms": [
+        "上班还是照顾孩子",
+        "请假",
+        "工作家庭冲突",
+        "work family conflict",
+        "work caregiving"
+      ],
+      "related_vars": [
+        "VAR-000034"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-family-financial-wellbeing",
+      "slug": "family-financial-wellbeing",
+      "label": {
+        "zh": "家庭财务福祉",
+        "en": "Family Financial Wellbeing"
+      },
+      "primary_domain": "family-wellbeing",
+      "domains": [
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "家庭在财务资源、经济安全感和财务压力方面的整体状态。包括经济压力、财务负担和财务满意度。不包括服务可及性（→ service-accessibility），尽管经济因素影响服务获取。",
+        "en": "Family financial resources, economic security, and financial stress. Includes economic pressure, financial burden, and financial satisfaction. Distinct from service accessibility despite financial factors affecting access."
+      },
+      "aliases": {
+        "zh": [
+          "家庭经济状况",
+          "经济压力"
+        ],
+        "en": [
+          "Family Economic Wellbeing",
+          "Financial Stress"
+        ]
+      },
+      "search_terms": [
+        "钱不够",
+        "经济负担",
+        "补贴",
+        "financial wellbeing",
+        "economic stress"
+      ],
+      "related_vars": [
+        "VAR-000001"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-community-participation",
+      "slug": "community-participation",
+      "label": {
+        "zh": "社区参与",
+        "en": "Community Participation"
+      },
+      "primary_domain": "participation",
+      "domains": [
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "儿童或家庭在社区活动、组织和场所中的参与程度与体验质量。不包括学校参与（→ school-participation）。",
+        "en": "The extent and quality of child or family involvement in community activities, organisations, and settings. Distinct from school participation."
+      },
+      "aliases": {
+        "zh": [
+          "社区融入"
+        ],
+        "en": [
+          "Community Involvement",
+          "Community Engagement"
+        ]
+      },
+      "search_terms": [
+        "加入社区活动",
+        "融入社区",
+        "community participation",
+        "community inclusion"
+      ],
+      "related_vars": [
+        "VAR-000023"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-school-participation",
+      "slug": "school-participation",
+      "label": {
+        "zh": "学校参与",
+        "en": "School Participation"
+      },
+      "primary_domain": "participation",
+      "domains": [
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "儿童在学校教育、课外活动和学校社交环境中的参与程度与体验质量。包括融合教育和特殊教育场景。",
+        "en": "Child involvement in school education, extracurricular activities, and school social environments. Includes mainstream and special education settings."
+      },
+      "aliases": {
+        "zh": [
+          "学校融合",
+          "教育参与"
+        ],
+        "en": [
+          "School Inclusion",
+          "Educational Participation"
+        ]
+      },
+      "search_terms": [
+        "上学",
+        "融合教育",
+        "学校支持",
+        "school participation",
+        "inclusion"
+      ],
+      "related_vars": [],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-leisure-participation",
+      "slug": "leisure-participation",
+      "label": {
+        "zh": "休闲参与",
+        "en": "Leisure Participation"
+      },
+      "primary_domain": "participation",
+      "domains": [
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "儿童在非正式休闲活动（体育、艺术、游戏等）中的参与程度与体验质量。区别于家庭休闲（→ family-leisure），此节点聚焦儿童个人参与。",
+        "en": "Child participation in informal leisure activities (sport, arts, play). Distinct from family leisure (→ family-leisure), which focuses on shared family activity."
+      },
+      "aliases": {
+        "zh": [
+          "课外活动参与",
+          "兴趣活动参与"
+        ],
+        "en": [
+          "Recreational Participation",
+          "Activity Participation"
+        ]
+      },
+      "search_terms": [
+        "兴趣班",
+        "课外活动",
+        "玩耍",
+        "leisure participation",
+        "recreational activities"
+      ],
+      "related_vars": [
+        "VAR-000021"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-employment",
+      "slug": "employment",
+      "label": {
+        "zh": "就业",
+        "en": "Employment"
+      },
+      "primary_domain": "participation",
+      "domains": [
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "有特殊需求人士的就业获取、就业质量、就业稳定性和职业发展。包括支持性就业。不包括父母就业稳定性（→ work-family-conflict）。",
+        "en": "Employment access, quality, stability, and career development for people with special needs. Includes supported employment. Distinct from parental employment stability (→ work-family-conflict)."
+      },
+      "aliases": {
+        "zh": [
+          "职业参与",
+          "就业支持"
+        ],
+        "en": [
+          "Supported Employment",
+          "Vocational Participation"
+        ]
+      },
+      "search_terms": [
+        "找工作",
+        "就业困难",
+        "支持性就业",
+        "employment",
+        "job support"
+      ],
+      "related_vars": [
+        "VAR-000035"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-transition-to-adulthood",
+      "slug": "transition-to-adulthood",
+      "label": {
+        "zh": "成年转衔",
+        "en": "Transition to Adulthood"
+      },
+      "primary_domain": "participation",
+      "domains": [
+        "participation",
+        "service-access"
+      ],
+      "scope_note": {
+        "zh": "有特殊需求青少年从学校向成年生活（就业、独立生活、社区参与）的过渡过程，以及相关服务系统的衔接。跨挂 service-access 是因为转衔涉及成人服务体系的获取。",
+        "en": "The transition process from school to adult life (employment, independent living, community) for young people with special needs, including adult service system navigation. Cross-listed under service-access due to adult service involvement."
+      },
+      "aliases": {
+        "zh": [
+          "成人转衔",
+          "学校到成年过渡"
+        ],
+        "en": [
+          "School-to-Adult Transition",
+          "Adult Transition"
+        ]
+      },
+      "search_terms": [
+        "长大以后怎么办",
+        "毕业后",
+        "成年服务",
+        "transition",
+        "school to work"
+      ],
+      "related_vars": [
+        "VAR-000036",
+        "VAR-000037"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-independent-living",
+      "slug": "independent-living",
+      "label": {
+        "zh": "独立生活",
+        "en": "Independent Living"
+      },
+      "primary_domain": "participation",
+      "domains": [
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "有特殊需求成人在日常生活技能、居住安排和自主决策方面的独立程度与支持需求。",
+        "en": "The degree of independence and support needs for adults with special needs in daily living skills, housing arrangements, and self-determination."
+      },
+      "aliases": {
+        "zh": [
+          "自立生活",
+          "独立自主"
+        ],
+        "en": [
+          "Self-Determination",
+          "Supported Living"
+        ]
+      },
+      "search_terms": [
+        "自己生活",
+        "独立能力",
+        "daily living",
+        "independent living"
+      ],
+      "related_vars": [
+        "VAR-000038"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-aac",
+      "slug": "aac",
+      "label": {
+        "zh": "辅助沟通（AAC）",
+        "en": "Augmentative & Alternative Communication"
+      },
+      "primary_domain": "communication",
+      "domains": [
+        "communication",
+        "participation"
+      ],
+      "scope_note": {
+        "zh": "辅助与替代沟通（AAC）系统的使用、实施和效果，包括高科技设备（语音生成设备）和低科技方式（图片、符号）。跨挂 participation 是因为 AAC 是沟通参与的核心工具。",
+        "en": "Use, implementation, and outcomes of augmentative and alternative communication (AAC) systems, including high-tech (SGDs) and low-tech (pictures, symbols) approaches. Cross-listed under participation as AAC is a core tool for communicative participation."
+      },
+      "aliases": {
+        "zh": [
+          "替代沟通",
+          "辅助技术沟通",
+          "AAC系统"
+        ],
+        "en": [
+          "AAC",
+          "Aided Communication",
+          "SGD"
+        ]
+      },
+      "search_terms": [
+        "不会说话",
+        "图片交流",
+        "沟通板",
+        "augmentative communication",
+        "picture exchange"
+      ],
+      "related_vars": [],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": [
+        "series-aac"
+      ]
+    },
+    {
+      "id": "concept-social-communication",
+      "slug": "social-communication",
+      "label": {
+        "zh": "社交沟通",
+        "en": "Social Communication"
+      },
+      "primary_domain": "communication",
+      "domains": [
+        "communication"
+      ],
+      "scope_note": {
+        "zh": "儿童在社交场景中理解和运用沟通规则、语用能力和社交互动技能。与 AAC 不同，此节点关注的是沟通能力本身而非工具。",
+        "en": "Children's ability to understand and apply communication rules, pragmatic competence, and social interaction skills in social contexts. Unlike AAC, this focuses on communicative competence rather than tools."
+      },
+      "aliases": {
+        "zh": [
+          "社交语言能力",
+          "语用能力"
+        ],
+        "en": [
+          "Pragmatic Communication",
+          "Social Language"
+        ]
+      },
+      "search_terms": [
+        "社交技能",
+        "不懂怎么说话",
+        "social communication",
+        "pragmatics"
+      ],
+      "related_vars": [
+        "VAR-000017"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-peer-relationships",
+      "slug": "peer-relationships",
+      "label": {
+        "zh": "同伴关系",
+        "en": "Peer Relationships"
+      },
+      "primary_domain": "communication",
+      "domains": [
+        "communication",
+        "participation",
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "儿童与同龄人之间的友谊质量、社交接纳度和同伴互动。区别于同伴受欺凌（→ peer-victimisation），此节点关注正向社交关系。",
+        "en": "Quality of friendships, social acceptance, and peer interactions among children. Distinct from peer victimisation (→ peer-victimisation); this node focuses on positive social relationships."
+      },
+      "aliases": {
+        "zh": [
+          "友谊",
+          "同伴社交"
+        ],
+        "en": [
+          "Friendship",
+          "Peer Social Relationships"
+        ]
+      },
+      "search_terms": [
+        "有没有朋友",
+        "交朋友",
+        "被接受",
+        "peer relationships",
+        "social acceptance"
+      ],
+      "related_vars": [
+        "VAR-000011"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-peer-victimisation",
+      "slug": "peer-victimisation",
+      "label": {
+        "zh": "同伴受欺凌",
+        "en": "Peer Victimisation"
+      },
+      "primary_domain": "communication",
+      "domains": [
+        "communication",
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "儿童遭受同伴欺凌、排斥和社交伤害的经历及其影响。区别于同伴关系（→ peer-relationships），此节点关注负面社交经历。",
+        "en": "Children's experiences of bullying, exclusion, and social harm by peers, and their impacts. Distinct from peer relationships (→ peer-relationships), which focuses on positive social experiences."
+      },
+      "aliases": {
+        "zh": [
+          "被欺负",
+          "欺凌受害"
+        ],
+        "en": [
+          "Bullying Victimisation",
+          "Peer Bullying"
+        ]
+      },
+      "search_terms": [
+        "被排斥",
+        "校园欺凌",
+        "peer victimisation",
+        "bullying"
+      ],
+      "related_vars": [
+        "VAR-000010"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-child-mental-health",
+      "slug": "child-mental-health",
+      "label": {
+        "zh": "儿童心理健康",
+        "en": "Child Mental Health"
+      },
+      "primary_domain": "mental-health",
+      "domains": [
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "有特殊需求儿童的整体心理健康状态，包括情绪、行为和社交方面的健康与困难。不包括儿童福祉的主观满意度维度（→ child-wellbeing）。",
+        "en": "Overall mental health of children with special needs, encompassing emotional, behavioural, and social health and difficulties. Excludes subjective wellbeing dimensions (→ child-wellbeing)."
+      },
+      "aliases": {
+        "zh": [
+          "儿童心理",
+          "孩子心理健康"
+        ],
+        "en": [
+          "Child Psychological Health",
+          "Child Behavioural Health"
+        ]
+      },
+      "search_terms": [
+        "孩子情绪问题",
+        "行为问题",
+        "心理健康",
+        "child mental health",
+        "emotional difficulties"
+      ],
+      "related_vars": [
+        "VAR-000013"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-child-adaptation",
+      "slug": "child-adaptation",
+      "label": {
+        "zh": "儿童适应",
+        "en": "Child Adaptation"
+      },
+      "primary_domain": "mental-health",
+      "domains": [
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "儿童在面对挑战、变化或逆境时的适应性应对和积极调整能力。关注保护性因素和正向发展结果。",
+        "en": "Children's adaptive coping and positive adjustment when facing challenges, changes, or adversity. Focuses on protective factors and positive developmental outcomes."
+      },
+      "aliases": {
+        "zh": [
+          "儿童适应能力",
+          "儿童抗逆力"
+        ],
+        "en": [
+          "Child Adjustment",
+          "Child Resilience"
+        ]
+      },
+      "search_terms": [
+        "孩子适应能力",
+        "如何应对",
+        "child adaptation",
+        "child coping"
+      ],
+      "related_vars": [
+        "VAR-000014"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-emotion-regulation-socialisation",
+      "slug": "emotion-regulation-socialisation",
+      "label": {
+        "zh": "情绪调节与社会化",
+        "en": "Emotion Regulation & Socialisation"
+      },
+      "primary_domain": "mental-health",
+      "domains": [
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "儿童管理和表达情绪的能力（情绪调节），以及父母/照顾者通过教养行为帮助儿童理解和表达情绪的过程（情绪社会化）。两个构念在文献中高度共现，合并为 v1 节点，待内容扩展时可拆分。",
+        "en": "Children's capacity to manage and express emotions (emotion regulation) and the process by which parents/caregivers help children understand and express emotions (emotion socialisation). Merged for v1 due to high co-occurrence in literature."
+      },
+      "aliases": {
+        "zh": [
+          "情绪管理",
+          "情绪教育"
+        ],
+        "en": [
+          "Emotion Regulation",
+          "Emotion Socialisation"
+        ]
+      },
+      "search_terms": [
+        "孩子情绪失控",
+        "发脾气",
+        "emotional coaching"
+      ],
+      "related_vars": [
+        "VAR-000005",
+        "VAR-000016"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-depression",
+      "slug": "depression",
+      "label": {
+        "zh": "抑郁",
+        "en": "Depression"
+      },
+      "primary_domain": "mental-health",
+      "domains": [
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "照顾者或家长的抑郁症状和抑郁障碍。与父母压力（→ parent-stress）不同，此节点特指临床意义上的抑郁，而非一般性压力。",
+        "en": "Depressive symptoms and depressive disorders in caregivers or parents. Distinct from parent stress (→ parent-stress); this node specifically addresses clinically significant depression rather than general stress."
+      },
+      "aliases": {
+        "zh": [
+          "抑郁症",
+          "情绪低落"
+        ],
+        "en": [
+          "Depressive Disorder",
+          "Depressive Symptoms"
+        ]
+      },
+      "search_terms": [
+        "抑郁",
+        "无力感",
+        "depression"
+      ],
+      "related_vars": [
+        "VAR-000012"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-child-wellbeing",
+      "slug": "child-wellbeing",
+      "label": {
+        "zh": "儿童福祉",
+        "en": "Child Wellbeing"
+      },
+      "primary_domain": "mental-health",
+      "domains": [
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "儿童的主观幸福感、生活满意度及整体正向发展结果。不包括家庭整体生活质量（→ family-quality-of-life）；不包括照顾者福祉（→ caregiver-psychological-resources）；不等同于心理健康诊断（→ child-mental-health）。",
+        "en": "Child subjective wellbeing, life satisfaction, and overall positive developmental outcomes. Excludes family-level quality of life, caregiver wellbeing, and clinical mental health diagnoses."
+      },
+      "aliases": {
+        "zh": [
+          "儿童幸福感",
+          "生活质量（儿童）"
+        ],
+        "en": [
+          "Child Subjective Wellbeing",
+          "Child Life Satisfaction"
+        ]
+      },
+      "search_terms": [
+        "孩子开心吗",
+        "儿童幸福",
+        "child wellbeing",
+        "life satisfaction"
+      ],
+      "related_vars": [
+        "VAR-000019",
+        "VAR-000022"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-formal-social-support",
+      "slug": "formal-social-support",
+      "label": {
+        "zh": "正式社会支持",
+        "en": "Formal Social Support"
+      },
+      "primary_domain": "service-access",
+      "domains": [
+        "service-access",
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "来自医疗、教育、社会服务等正式机构和专业人员的支持。区别于非正式社会支持（→ informal-social-support）。此节点关注支持的来源和质量，而非服务可及性障碍（→ service-accessibility）。",
+        "en": "Support from formal institutions and professionals including healthcare, education, and social services. Distinct from informal social support. Focuses on support source and quality, not accessibility barriers."
+      },
+      "aliases": {
+        "zh": [
+          "专业支持",
+          "机构支持"
+        ],
+        "en": [
+          "Professional Support",
+          "Institutional Support"
+        ]
+      },
+      "search_terms": [
+        "专业帮助",
+        "formal support"
+      ],
+      "related_vars": [
+        "VAR-000008"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-informal-social-support",
+      "slug": "informal-social-support",
+      "label": {
+        "zh": "非正式社会支持",
+        "en": "Informal Social Support"
+      },
+      "primary_domain": "service-access",
+      "domains": [
+        "service-access",
+        "family-wellbeing"
+      ],
+      "scope_note": {
+        "zh": "来自家人、朋友、邻居、同伴家长等非正式网络的情感、工具和信息支持。此节点关注感知到的支持质量，不是支持来源的机构属性。",
+        "en": "Emotional, instrumental, and informational support from informal networks including family, friends, neighbours, and peer parents. Focuses on perceived support quality, not institutional source."
+      },
+      "aliases": {
+        "zh": [
+          "社会支持网络",
+          "朋友家人支持"
+        ],
+        "en": [
+          "Social Network Support",
+          "Natural Support"
+        ]
+      },
+      "search_terms": [
+        "家人帮忙",
+        "朋友支持",
+        "peer support",
+        "informal support",
+        "social network"
+      ],
+      "related_vars": [
+        "VAR-000007"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-service-accessibility",
+      "slug": "service-accessibility",
+      "label": {
+        "zh": "服务可及性",
+        "en": "Service Accessibility"
+      },
+      "primary_domain": "service-access",
+      "domains": [
+        "service-access"
+      ],
+      "scope_note": {
+        "zh": "家庭实际获取和使用所需专业服务的程度，受可及性（地理）、可负担性（经济）、可接受性（文化）和可获得性（供给）等因素影响。包括成人服务可及性（转衔相关）和未满足服务需求。",
+        "en": "The degree to which families can access and use needed services, influenced by accessibility (geographic), affordability, acceptability (cultural), and availability (supply). Includes adult service access and unmet service needs."
+      },
+      "aliases": {
+        "zh": [
+          "服务获取",
+          "服务障碍"
+        ],
+        "en": [
+          "Service Access",
+          "Service Barriers"
+        ]
+      },
+      "search_terms": [
+        "找不到服务",
+        "等候名单",
+        "服务缺乏",
+        "waitlist"
+      ],
+      "related_vars": [
+        "VAR-000030",
+        "VAR-000033",
+        "VAR-000037"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-service-coordination",
+      "slug": "service-coordination",
+      "label": {
+        "zh": "服务协调",
+        "en": "Service Coordination"
+      },
+      "primary_domain": "service-access",
+      "domains": [
+        "service-access"
+      ],
+      "scope_note": {
+        "zh": "不同服务提供者和系统之间的协作、信息共享和服务整合，以确保家庭获得连贯一致的支持。",
+        "en": "Collaboration, information sharing, and integration across different service providers and systems to ensure families receive coherent and consistent support."
+      },
+      "aliases": {
+        "zh": [
+          "服务整合",
+          "跨系统协调"
+        ],
+        "en": [
+          "Service Integration",
+          "Care Coordination"
+        ]
+      },
+      "search_terms": [
+        "服务衔接",
+        "机构之间沟通",
+        "service coordination"
+      ],
+      "related_vars": [
+        "VAR-000031"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-service-satisfaction",
+      "slug": "service-satisfaction",
+      "label": {
+        "zh": "服务满意度",
+        "en": "Service Satisfaction"
+      },
+      "primary_domain": "service-access",
+      "domains": [
+        "service-access"
+      ],
+      "scope_note": {
+        "zh": "家庭对所接受服务的主观满意程度，包括服务质量、专业人员态度和服务结果等维度的感知。",
+        "en": "Family subjective satisfaction with received services, including perceptions of service quality, professional attitudes, and service outcomes."
+      },
+      "aliases": {
+        "zh": [
+          "服务质量感知"
+        ],
+        "en": [
+          "Service Quality Perception",
+          "Client Satisfaction"
+        ]
+      },
+      "search_terms": [
+        "对服务满意吗",
+        "服务好不好",
+        "service satisfaction",
+        "service quality"
+      ],
+      "related_vars": [
+        "VAR-000032"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-policy-support",
+      "slug": "policy-support",
+      "label": {
+        "zh": "政策支持",
+        "en": "Policy Support"
+      },
+      "primary_domain": "policy-implementation",
+      "domains": [
+        "policy-implementation"
+      ],
+      "scope_note": {
+        "zh": "政府、机构或系统层面为循证实践实施所提供的政策、资源、授权和激励机制。此节点关注政策作为系统性支持要素，而非具体政策内容。",
+        "en": "Government, institutional, or systems-level policies, resources, mandates, and incentives for evidence-based practice implementation. Focuses on policy as a systemic enabling factor, not specific policy content."
+      },
+      "aliases": {
+        "zh": [
+          "系统支持",
+          "政策保障"
+        ],
+        "en": [
+          "Systems Support",
+          "Policy Enablers"
+        ]
+      },
+      "search_terms": [
+        "政府政策",
+        "补贴政策",
+        "policy support",
+        "government funding"
+      ],
+      "related_vars": [
+        "VAR-000042"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-implementation-fidelity",
+      "slug": "implementation-fidelity",
+      "label": {
+        "zh": "实施忠实度",
+        "en": "Implementation Fidelity"
+      },
+      "primary_domain": "policy-implementation",
+      "domains": [
+        "policy-implementation"
+      ],
+      "scope_note": {
+        "zh": "循证干预或支持方案在实际执行中与原设计方案的符合程度。用于评估干预实施质量的核心实施科学变量。",
+        "en": "The degree to which evidence-based interventions are implemented as originally designed. A core implementation science variable for assessing implementation quality."
+      },
+      "aliases": {
+        "zh": [
+          "方案执行度",
+          "干预忠实性"
+        ],
+        "en": [
+          "Program Fidelity",
+          "Intervention Fidelity"
+        ]
+      },
+      "search_terms": [
+        "按照方案执行",
+        "实施质量",
+        "implementation fidelity"
+      ],
+      "related_vars": [
+        "VAR-000043"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-implementation-barriers",
+      "slug": "implementation-barriers",
+      "label": {
+        "zh": "实施障碍",
+        "en": "Implementation Barriers"
+      },
+      "primary_domain": "policy-implementation",
+      "domains": [
+        "policy-implementation"
+      ],
+      "scope_note": {
+        "zh": "阻碍循证实践在真实环境中有效实施的系统性、组织性、文化性或资源性障碍因素。",
+        "en": "Systemic, organisational, cultural, or resource barriers that impede effective implementation of evidence-based practices in real-world settings."
+      },
+      "aliases": {
+        "zh": [
+          "推广障碍",
+          "实施挑战"
+        ],
+        "en": [
+          "Implementation Challenges",
+          "Adoption Barriers"
+        ]
+      },
+      "search_terms": [
+        "为什么推不动",
+        "实施困难",
+        "implementation barriers",
+        "adoption challenges"
+      ],
+      "related_vars": [
+        "VAR-000044"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    },
+    {
+      "id": "concept-social-exclusion-ableism",
+      "slug": "social-exclusion-ableism",
+      "label": {
+        "zh": "社会排斥与能力主义",
+        "en": "Social Exclusion & Ableism"
+      },
+      "primary_domain": "policy-implementation",
+      "domains": [
+        "policy-implementation",
+        "participation",
+        "mental-health"
+      ],
+      "scope_note": {
+        "zh": "社会结构、制度障碍和能力主义文化对残障人士及其家庭参与的阻碍。主要分析单位是环境和制度，而非个体心理反应。归属 policy-implementation 是因为解决之道在于制度变革；同时跨挂 participation 和 mental-health 反映其多维影响。",
+        "en": "Structural, institutional, and cultural barriers to participation facing disabled individuals and their families. The primary unit of analysis is environment and institution. Anchored in policy-implementation as the locus of change; cross-listed in participation and mental-health for multi-domain impact."
+      },
+      "aliases": {
+        "zh": [
+          "社会排斥",
+          "残障歧视",
+          "能力主义"
+        ],
+        "en": [
+          "Social Exclusion",
+          "Disability Discrimination",
+          "Ableism"
+        ]
+      },
+      "search_terms": [
+        "歧视",
+        "不被接受",
+        "社会融合",
+        "discrimination"
+      ],
+      "related_vars": [
+        "VAR-000025",
+        "VAR-000026"
+      ],
+      "status": "ready",
+      "related_concepts": [],
+      "related_series": []
+    }
+  ]
+}

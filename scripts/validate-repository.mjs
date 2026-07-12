@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 const ROOT = path.resolve(process.cwd());
 const REPORT_FILE = path.join(ROOT, 'reports/repository-validation.json');
@@ -217,6 +218,11 @@ function main() {
     process.exit(1);
   }
   console.log(`Repository validation passed: ${ea.length} EA, ${et.length} ET, ${ka.length} KA, ${series.length} Series${changed ? ' (report updated)' : ''}`);
+
+  // ── 17B.1: Taxonomy 验证 ─────────────────────────────────────────────────
+  const taxResult = spawnSync('node', ['scripts/validate-taxonomy.mjs'],
+    { cwd: ROOT, stdio: 'inherit' });
+  if (taxResult.status !== 0) process.exit(1);
 }
 
 try { main(); } catch (error) {

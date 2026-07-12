@@ -26,7 +26,7 @@ const resolved = gradeMap[grade] ?? { label: "研究支持程度待确认", cls:
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: var(--text-xs);
+  font-size: 0.72rem;
   font-family: "JetBrains Mono", "Courier New", monospace;
   padding: 3px 8px;
   border-radius: var(--radius-sm);
@@ -40,7 +40,7 @@ const resolved = gradeMap[grade] ?? { label: "研究支持程度待确认", cls:
   border-color: #C2DFC9;
   color: #2E7A47;
 }
-.cb--high .cb-dot { background: var(--confidence-high); }
+.cb--high .cb-dot { background: #5B9E7A; }
 
 /* Low */
 .cb--low {
@@ -48,7 +48,7 @@ const resolved = gradeMap[grade] ?? { label: "研究支持程度待确认", cls:
   border-color: #F3D99B;
   color: #8A6200;
 }
-.cb--low .cb-dot { background: var(--confidence-medium); }
+.cb--low .cb-dot { background: #E8A84F; }
 
 /* Very Low */
 .cb--verylow {
@@ -56,7 +56,7 @@ const resolved = gradeMap[grade] ?? { label: "研究支持程度待确认", cls:
   border-color: #C4D5E3;
   color: #3A5A72;
 }
-.cb--verylow .cb-dot { background: var(--confidence-low); }
+.cb--verylow .cb-dot { background: #2D6A8F; }
 
 /* Unknown fallback */
 .cb--unknown {

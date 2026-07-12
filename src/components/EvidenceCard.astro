@@ -85,11 +85,11 @@ const gradeColor: Record<string, string> = {
 
 <style>
 .ec {
-  background: var(--surface-alt);
+  background: #FDFCF8;
   border: 1px solid rgba(160,148,132,0.14);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ── 层1 Research ────────────────────────────────────── */
@@ -141,7 +141,7 @@ const gradeColor: Record<string, string> = {
   font-size: 10px; text-transform: uppercase;
   letter-spacing: 0.08em; color: var(--muted-lt);
   background: rgba(148,136,120,0.08);
-  padding: 2px var(--sp-2); border-radius: 3px;
+  padding: 2px var(--sp-2); border-radius: var(--radius-sm);
 }
 .ec-arrow {
   font-size: var(--text-lg); color: rgba(148,136,120,0.45);
@@ -152,7 +152,7 @@ const gradeColor: Record<string, string> = {
 .ec-meaning {
   padding: var(--sp-5) var(--sp-6) var(--sp-6);
   border-bottom: 1px solid rgba(160,148,132,0.08);
-  background: var(--surface-alt);
+  background: #FDFCF8;
   border-left: 2px solid rgba(148,136,120,0.28);  /* FROZEN */
 }
 .ec-layer-label {
