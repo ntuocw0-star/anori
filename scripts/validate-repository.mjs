@@ -223,6 +223,11 @@ function main() {
   const taxResult = spawnSync('node', ['scripts/validate-taxonomy.mjs'],
     { cwd: ROOT, stdio: 'inherit' });
   if (taxResult.status !== 0) process.exit(1);
+
+  // ── 17D: Repository Analytics（Read Only — 報告生成のみ）──────────────────
+  const analyticsResult = spawnSync('node', ['scripts/repository-analytics.mjs'],
+    { cwd: ROOT, stdio: 'inherit' });
+  if (analyticsResult.status !== 0) process.exit(1);
 }
 
 try { main(); } catch (error) {
