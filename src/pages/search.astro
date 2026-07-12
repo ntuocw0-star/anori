@@ -780,7 +780,7 @@ suggestEl.addEventListener('click', e => {
 }
 .search-field:focus-within {
   border-color: var(--brand);
-  box-shadow: 0 0 0 3px rgba(45,106,143,0.10);
+  box-shadow: var(--shadow-focus);
 }
 .search-icon {
   flex-shrink: 0;
@@ -961,7 +961,7 @@ suggestEl.addEventListener('click', e => {
   padding: .6rem 1rem;
   background: white;
   border: 1px solid #C5D8EF;
-  border-radius: 6px;
+  border-radius: var(--radius);
   font-size: .875rem;
   color: #1E4A6A;
   text-decoration: none;
@@ -1065,7 +1065,7 @@ suggestEl.addEventListener('click', e => {
   background: #FDFCF9;
   border: 1.5px solid var(--border);
   border-left: 4px solid #E8A84F;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 28px 32px;
   margin-bottom: 16px;
   display: flex;
@@ -1104,7 +1104,7 @@ suggestEl.addEventListener('click', e => {
   background: #FDF3E3;
   border: 1.5px solid #E8A84F;
   padding: 9px 22px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s;
   align-self: flex-start;
@@ -1128,7 +1128,7 @@ suggestEl.addEventListener('click', e => {
   min-width: 80px;
   padding: 16px 12px;
   background: #FDF3E3;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px solid rgba(232,168,79,0.3);
   align-self: flex-start;
 }

@@ -26,8 +26,6 @@ const topicLabel = topicPage?.title ?? topicParam;
 
 const isEmpty = resources.length === 0 && !topicParam;
 ---
-const isEmpty = resources.length === 0;
----
 
 <BaseLayout title="资源" description="国际循证资源库 — 政府指南、NGO 支持、专业工具">
 <SiteNav active="resource" />
@@ -156,10 +154,10 @@ const isEmpty = resources.length === 0;
 /* ── 空状态 ────────────────────────────────────────────── */
 .res-empty { max-width: 680px; }
 .res-empty-inner {
-  background: var(--surface-alt);
+  background: #FDFCF8;
   border: 1px solid rgba(160,148,132,0.14);
-  border-radius: 16px; padding: var(--sp-10);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  border-radius: var(--radius-lg); padding: var(--sp-10);
+  box-shadow: var(--shadow-sm);
 }
 .res-empty-label {
   font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
@@ -181,7 +179,7 @@ const isEmpty = resources.length === 0;
 .res-empty-cat {
   background: #FAF8F4;
   border: 1px solid rgba(148,136,120,0.1);
-  border-radius: 8px; padding: var(--sp-4);
+  border-radius: var(--radius-md); padding: var(--sp-4);
 }
 .res-empty-cat-name {
   font-size: var(--text-sm); font-weight: 600;

@@ -750,12 +750,12 @@ const journeySteps = (pageJourney?.steps ?? [])
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 .resource-card--linked:hover {
-  border-color: var(--brand);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-color: var(--brand, #2D6A8F);
+  box-shadow: var(--shadow-sm);
 }
 .resource-cta {
   font-size: var(--text-xs, 0.75rem);
-  color: var(--brand);
+  color: var(--brand, #2D6A8F);
   font-weight: 500;
   margin-top: var(--sp-2, 0.5rem);
 }

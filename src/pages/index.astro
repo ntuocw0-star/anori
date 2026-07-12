@@ -315,7 +315,7 @@ const assistEntries = [
   transition: border-color 0.15s, box-shadow 0.15s; color: inherit;
 }
 .search-prompt:hover {
-  border-color: var(--ink); box-shadow: 0 2px 12px rgba(26,26,26,0.08);
+  border-color: var(--ink); box-shadow: var(--shadow-sm);
 }
 .search-placeholder { flex: 1; font-size: var(--text-sm); color: var(--muted-lt); }
 .search-enter {
@@ -327,14 +327,14 @@ const assistEntries = [
 /* ── ② P001–P005 行动路径（主入口） ─────────────────────── */
 .paths-section {
   padding: var(--sp-16) 0;
-  background: var(--bg-brand-subtle);
+  background: #EEF4FB;
   border-top: 1px solid #C8D8EC;
   border-bottom: 1px solid #C8D8EC;
 }
 .paths-eyebrow {
   font-size: var(--text-xs); font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--brand); margin-bottom: var(--sp-2);
+  color: #2D6A8F; margin-bottom: var(--sp-2);
 }
 .paths-header { margin-bottom: var(--sp-8); }
 .paths-title {
@@ -359,7 +359,7 @@ const assistEntries = [
   transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
 }
 .path-card:hover {
-  border-color: var(--brand);
+  border-color: #2D6A8F;
   background: #F5F9FD;
   box-shadow: 0 4px 16px rgba(45,106,143,0.12);
 }
@@ -371,7 +371,7 @@ const assistEntries = [
 }
 .path-card-cta {
   font-size: var(--text-xs); font-weight: 600;
-  color: var(--brand);
+  color: #2D6A8F;
   padding-top: var(--sp-3);
   border-top: 1px solid #C8D8EC;
   margin-top: var(--sp-1);
@@ -394,7 +394,7 @@ const assistEntries = [
 /* ── ③ 辅助选择入口 ──────────────────────────────────────── */
 .assist-section {
   padding: var(--sp-14) 0 var(--sp-16);
-  background: var(--surface);
+  background: #FDFCF9;
   border-bottom: none;
 }
 .assist-header { margin-bottom: var(--sp-8); }
@@ -418,7 +418,7 @@ const assistEntries = [
 .assist-group {
   padding: 20px 22px;
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   background: rgba(255,255,255,0.7);
 }
 .assist-group-label {

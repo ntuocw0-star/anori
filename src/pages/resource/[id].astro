@@ -294,7 +294,7 @@ const typeLabel: Record<string, string> = {
 .rh-badge {
   font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
   text-transform: uppercase; color: white;
-  background: var(--brand);
+  background: var(--brand, #2D6A8F);
   padding: 3px var(--sp-3); border-radius: var(--radius-sm);
 }
 .rh-org {
@@ -352,14 +352,14 @@ const typeLabel: Record<string, string> = {
 
 /* ── 为什么推荐 ───────────────────────────── */
 .rh-section--why {
-  background: #FAF6EE; border-radius: 10px;
+  background: #FAF6EE; border-radius: var(--radius-lg);
   padding: var(--sp-6); border-left: 2px solid rgba(185,90,72,0.35);
 }
 .rh-section--why .rh-section-label { border-color: rgba(185,90,72,0.2); }
 
 /* ── 中文导览（核心） ─────────────────────── */
 .rh-section--digest {
-  background: #F4F8FB; border-radius: 10px;
+  background: #F4F8FB; border-radius: var(--radius-lg);
   padding: var(--sp-6); border-left: 2px solid var(--brand);
 }
 .rh-section--digest .rh-section-label { border-color: rgba(45,106,143,0.2); }
@@ -370,7 +370,7 @@ const typeLabel: Record<string, string> = {
 .rh-point {
   font-size: var(--text-base); color: var(--ink); line-height: 1.7;
   padding: var(--sp-4) var(--sp-5);
-  background: var(--surface-alt); border-radius: 8px;
+  background: #FDFCF8; border-radius: var(--radius-md);
   border: 1px solid rgba(160,148,132,0.12);
   border-left: 2px solid rgba(148,136,120,0.3);
 }
@@ -380,7 +380,7 @@ const typeLabel: Record<string, string> = {
 .rh-suggestion {
   font-size: var(--text-base); color: var(--ink); line-height: 1.7;
   padding: var(--sp-3) var(--sp-4); border-radius: var(--radius);
-  background: var(--bg-high-tint); border-left: 2px solid var(--confidence-high);
+  background: #F2F8F5; border-left: 2px solid #5B9E7A;
 }
 
 /* ── Chip（方法/概念等） ─────────────────── */
@@ -398,7 +398,7 @@ const typeLabel: Record<string, string> = {
 .rh-page-link {
   display: flex; flex-direction: column; gap: var(--sp-1);
   padding: var(--sp-4) var(--sp-5);
-  background: var(--bg-high-subtle); border-left: 3px solid var(--confidence-high);
+  background: #F4FAF7; border-left: 3px solid #5B9E7A;
   border-radius: 0 8px 8px 0; text-decoration: none;
   transition: background 0.15s;
 }
@@ -432,8 +432,8 @@ const typeLabel: Record<string, string> = {
 }
 .rh-official-row {
   display: flex; align-items: center; gap: var(--sp-6); flex-wrap: wrap;
-  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
-  border-radius: 10px; padding: var(--sp-5) var(--sp-6);
+  background: #FDFCF8; border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-lg); padding: var(--sp-5) var(--sp-6);
 }
 .rh-official-info { flex: 1; }
 .rh-official-org { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
@@ -449,8 +449,8 @@ const typeLabel: Record<string, string> = {
 /* ── 侧边栏 ───────────────────────────────── */
 .rh-aside { position: sticky; top: 80px; display: flex; flex-direction: column; gap: var(--sp-3); }
 .rh-aside-card {
-  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
-  border-radius: 10px; padding: var(--sp-4) var(--sp-5);
+  background: #FDFCF8; border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-lg); padding: var(--sp-4) var(--sp-5);
 }
 .rh-aside-label {
   font-size: 10px; font-weight: 500; letter-spacing: 0.1em;

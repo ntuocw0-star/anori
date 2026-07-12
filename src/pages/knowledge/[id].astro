@@ -210,7 +210,7 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
 
 <style>
 .ka-top {
-  background: var(--surface);
+  background: #FDFCF9;
   border-bottom: 1px solid var(--border);
   padding: var(--sp-12) 0 var(--sp-10);
 }
@@ -234,7 +234,7 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
   background: rgba(148,136,120,0.08); border: 1px solid var(--border);
   border-radius: var(--radius-pill); padding: var(--sp-1) var(--sp-3);
 }
-.ka-badge--evidence { color: var(--confidence-high); border-color: rgba(91,158,122,0.3); background: rgba(91,158,122,0.06); }
+.ka-badge--evidence { color: #5B9E7A; border-color: rgba(91,158,122,0.3); background: rgba(91,158,122,0.06); }
 
 .ka-layout {
   display: grid; grid-template-columns: 1fr 220px;
@@ -245,7 +245,7 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
 
 .ka-lead {
   padding: var(--sp-5) var(--sp-6);
-  background: var(--bg-brand-subtle); border-left: 3px solid var(--brand);
+  background: #EEF4FB; border-left: 3px solid #2D6A8F;
   border-radius: 0 8px 8px 0;
 }
 .ka-lead-text { font-size: var(--text-base); font-weight: 600; color: #1E4A6A; line-height: 1.6; }
@@ -264,20 +264,20 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
 .ka-findings { display: flex; flex-direction: column; gap: var(--sp-3); list-style: none; padding: 0; }
 .ka-finding-item {
   padding: var(--sp-3) var(--sp-4) var(--sp-3) var(--sp-8);
-  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
-  border-radius: 8px; font-size: var(--text-sm); color: var(--ink);
+  background: #FDFCF8; border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-md); font-size: var(--text-sm); color: var(--ink);
   line-height: 1.7; position: relative;
 }
 .ka-finding-item::before {
   content: "✓"; position: absolute; left: var(--sp-3);
-  color: var(--confidence-high); font-weight: 800; font-size: var(--text-xs); top: var(--sp-3);
+  color: #5B9E7A; font-weight: 800; font-size: var(--text-xs); top: var(--sp-3);
 }
 
 .ka-actions { display: flex; flex-direction: column; gap: var(--sp-3); padding-left: 0; list-style: none; counter-reset: action; }
 .ka-action-item {
   counter-increment: action;
   padding: var(--sp-4) var(--sp-5) var(--sp-4) calc(var(--sp-5) + 2rem);
-  background: var(--bg-brand-tint); border-radius: 8px;
+  background: #F3F7FB; border-radius: var(--radius-md);
   font-size: var(--text-sm); color: var(--ink); line-height: 1.7;
   position: relative;
 }
@@ -285,7 +285,7 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
   content: counter(action); position: absolute;
   left: var(--sp-4); top: 50%; transform: translateY(-50%);
   width: 1.5rem; height: 1.5rem; border-radius: 50%;
-  background: var(--brand); color: white;
+  background: #2D6A8F; color: white;
   font-size: var(--text-xs); font-weight: 700;
   display: flex; align-items: center; justify-content: center;
 }
@@ -302,28 +302,28 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
 .ka-path-card {
   display: flex; align-items: center; justify-content: space-between;
   padding: var(--sp-4) var(--sp-5);
-  background: var(--bg-brand-tint); border-left: 3px solid var(--brand);
+  background: #F3F7FB; border-left: 3px solid #2D6A8F;
   border-radius: 0 8px 8px 0; text-decoration: none;
   transition: background 0.15s;
 }
 .ka-path-card:hover { background: #E8EFF7; }
 .ka-path-title { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
-.ka-path-arrow { font-size: var(--text-sm); color: var(--brand); }
+.ka-path-arrow { font-size: var(--text-sm); color: #2D6A8F; }
 
 .ka-evidence-list { display: flex; flex-direction: column; gap: var(--sp-3); }
 .ka-evidence-item {
   display: flex; flex-direction: column; gap: var(--sp-1);
   padding: var(--sp-4) var(--sp-5);
-  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
-  border-radius: 8px;
+  background: #FDFCF8; border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-md);
 }
 .ka-evidence-id { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.06em; color: var(--muted); }
 .ka-evidence-note { font-size: var(--text-sm); color: var(--ink); line-height: 1.6; }
 
 .ka-aside { position: sticky; top: 80px; display: flex; flex-direction: column; gap: var(--sp-3); }
 .ka-aside-card {
-  background: var(--surface-alt); border: 1px solid rgba(160,148,132,0.14);
-  border-radius: 10px; padding: var(--sp-4) var(--sp-5);
+  background: #FDFCF8; border: 1px solid rgba(160,148,132,0.14);
+  border-radius: var(--radius-lg); padding: var(--sp-4) var(--sp-5);
   display: flex; flex-direction: column; gap: var(--sp-2);
 }
 .ka-aside-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-lt); }
@@ -355,14 +355,14 @@ const relatedPaths: Record<string, { label: string; href: string }> = {
 .ka-series-link {
   display: flex; flex-direction: column; gap: 2px;
   padding: var(--sp-3) var(--sp-4);
-  background: var(--bg-brand-tint); border-radius: 8px;
+  background: #F3F7FB; border-radius: var(--radius-md);
   text-decoration: none; flex: 1; min-width: 120px;
   transition: background 0.15s; border: 1px solid var(--border);
 }
 .ka-series-link:hover { background: #E8EFF7; }
 .ka-series-link--prev { border-left: 3px solid var(--muted-lt); }
-.ka-series-link--next { border-left: 3px solid var(--brand); }
-.ka-series-dir { font-size: var(--text-xs); color: var(--brand); font-weight: 600; }
+.ka-series-link--next { border-left: 3px solid #2D6A8F; }
+.ka-series-dir { font-size: var(--text-xs); color: #2D6A8F; font-weight: 600; }
 .ka-series-label { font-size: var(--text-xs); color: var(--muted); }
 
 .up-evidence-ka { margin-top: var(--sp-4); padding-top: var(--sp-4); border-top: 1px solid rgba(255,255,255,0.15); }

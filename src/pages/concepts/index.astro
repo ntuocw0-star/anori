@@ -18,7 +18,7 @@ const concepts = [
 ];
 
 const colorMap: Record<string, string> = {
-  blue:  "var(--brand)",
+  blue:  "var(--brand, #2D6A8F)",
   teal:  "#1A8A72",
   coral: "#C84B2F",
 };
@@ -52,7 +52,7 @@ const colorMap: Record<string, string> = {
 
 <style>
 .clist-hero {
-  background: var(--surface);
+  background: var(--surface, #FDFCF9);
   border-bottom: 1px solid var(--border);
   padding: var(--sp-16, 4rem) 0 var(--sp-10, 2.5rem);
 }
@@ -91,7 +91,7 @@ const colorMap: Record<string, string> = {
   transition: box-shadow 0.15s, border-color 0.15s;
 }
 .clist-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: var(--shadow-sm);
   border-color: var(--c);
 }
 .clist-zh {
