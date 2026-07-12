@@ -1,7 +1,7 @@
 {
   "ea": {
     "EA-000001.md": {
-      "mtime": 1783674044673.382,
+      "mtime": 1783837525762.6462,
       "item": {
         "id": "EA-000001",
         "type": "Systematic Review + Qualitative Meta-Synthesis",
@@ -70,7 +70,7 @@
       }
     },
     "EA-000002.md": {
-      "mtime": 1783684657984.885,
+      "mtime": 1783837525749.2974,
       "item": {
         "id": "EA-000002",
         "type": "Scoping Review",
@@ -82,8 +82,7 @@
         "evidence_type": "Qualitative（Scoping Review）",
         "reading_time": "10 min",
         "related_et": [
-          "ET-000002",
-          "ET-000006（待建）"
+          "ET-000002"
         ],
         "related_path": [
           "P001",
@@ -132,7 +131,7 @@
       }
     },
     "EA-000003.md": {
-      "mtime": 1783689801184.6562,
+      "mtime": 1783837525740.1619,
       "item": {
         "id": "EA-000003",
         "type": "Systematic Review",
@@ -143,10 +142,7 @@
         "quality_level": "High",
         "evidence_type": "Quantitative（干预效果综述）",
         "reading_time": "10 min",
-        "related_et": [
-          "ET-000004（增补）",
-          "ET-000007（待建）"
-        ],
+        "related_et": [],
         "related_path": [
           "P001"
         ],
@@ -199,7 +195,7 @@
   },
   "et": {
     "ET-000001.md": {
-      "mtime": 1783674044693.858,
+      "mtime": 1783837525785.1038,
       "item": {
         "id": "ET-000001",
         "source_ea": [
@@ -220,7 +216,7 @@
       }
     },
     "ET-000002.md": {
-      "mtime": 1783674044703.6226,
+      "mtime": 1783837525801.0222,
       "item": {
         "id": "ET-000002",
         "source_ea": [
@@ -241,7 +237,7 @@
       }
     },
     "ET-000003.md": {
-      "mtime": 1783674044713.6333,
+      "mtime": 1783837525821.1091,
       "item": {
         "id": "ET-000003",
         "source_ea": [
@@ -261,7 +257,7 @@
       }
     },
     "ET-000004.md": {
-      "mtime": 1783674044718.5093,
+      "mtime": 1783837525793.8442,
       "item": {
         "id": "ET-000004",
         "source_ea": [
@@ -281,7 +277,7 @@
       }
     },
     "ET-000006.md": {
-      "mtime": 1783685367119.2905,
+      "mtime": 1783837525811.5496,
       "item": {
         "id": "ET-000006",
         "source_ea": [

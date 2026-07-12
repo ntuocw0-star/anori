@@ -1,7 +1,7 @@
 {
   "schemaId": "Evidence-Index",
   "schema_version": "1.0",
-  "generated_at": "2026-07-10T22:48:50.420Z",
+  "generated_at": "2026-07-12T06:27:55.354Z",
   "source_dir": "knowledge\\evidence\\cards\\Deconstruction",
   "count": 3,
   "items": [
@@ -82,8 +82,7 @@
       "evidence_type": "Qualitative（Scoping Review）",
       "reading_time": "10 min",
       "related_et": [
-        "ET-000002",
-        "ET-000006（待建）"
+        "ET-000002"
       ],
       "related_path": [
         "P001",
@@ -140,10 +139,7 @@
       "quality_level": "High",
       "evidence_type": "Quantitative（干预效果综述）",
       "reading_time": "10 min",
-      "related_et": [
-        "ET-000004（增补）",
-        "ET-000007（待建）"
-      ],
+      "related_et": [],
       "related_path": [
         "P001"
       ],

@@ -44,7 +44,11 @@
           "KA-000002"
         ]
       },
-      "order": 1
+      "order": 1,
+      "concept_refs": {
+        "primary": "concept-aac",
+        "secondary": []
+      }
     }
   ]
 }

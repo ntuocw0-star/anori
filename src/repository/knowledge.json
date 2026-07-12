@@ -59,6 +59,12 @@
         "order": 1,
         "next": "KA-000002",
         "previous": null
+      },
+      "concept_refs": {
+        "primary": "concept-aac",
+        "secondary": [
+          "concept-parent-stress"
+        ]
       }
     },
     {
@@ -125,6 +131,10 @@
         "order": 2,
         "next": null,
         "previous": "KA-000001"
+      },
+      "concept_refs": {
+        "primary": "concept-aac",
+        "secondary": []
       }
     }
   ]

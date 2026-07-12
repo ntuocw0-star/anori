@@ -283,10 +283,13 @@
       "aliases": {
         "zh": [
           "FQOL",
-          "家庭生活满意度"
+          "家庭生活满意度",
+          "参与生活质量"
         ],
         "en": [
-          "Family Life Quality"
+          "Family Life Quality",
+          "participation-qol",
+          "participation quality of life"
         ]
       },
       "search_terms": [
@@ -510,11 +513,13 @@
       },
       "aliases": {
         "zh": [
-          "社区融入"
+          "社区融入",
+          "儿童参与"
         ],
         "en": [
           "Community Involvement",
-          "Community Engagement"
+          "Community Engagement",
+          "child-participation"
         ]
       },
       "search_terms": [
@@ -548,11 +553,15 @@
       "aliases": {
         "zh": [
           "学校融合",
-          "教育参与"
+          "教育参与",
+          "儿童参与",
+          "孩子参与"
         ],
         "en": [
           "School Inclusion",
-          "Educational Participation"
+          "Educational Participation",
+          "child-participation",
+          "children's participation"
         ]
       },
       "search_terms": [
@@ -589,7 +598,8 @@
         ],
         "en": [
           "Recreational Participation",
-          "Activity Participation"
+          "Activity Participation",
+          "participation-qol"
         ]
       },
       "search_terms": [
@@ -824,11 +834,14 @@
       "aliases": {
         "zh": [
           "友谊",
-          "同伴社交"
+          "同伴社交",
+          "归属感"
         ],
         "en": [
           "Friendship",
-          "Peer Social Relationships"
+          "Peer Social Relationships",
+          "belonging",
+          "sense of belonging"
         ]
       },
       "search_terms": [
@@ -1094,11 +1107,13 @@
       "aliases": {
         "zh": [
           "专业支持",
-          "机构支持"
+          "机构支持",
+          "家庭支持"
         ],
         "en": [
           "Professional Support",
-          "Institutional Support"
+          "Institutional Support",
+          "family-support"
         ]
       },
       "search_terms": [
@@ -1135,7 +1150,8 @@
         ],
         "en": [
           "Social Network Support",
-          "Natural Support"
+          "Natural Support",
+          "family-support"
         ]
       },
       "search_terms": [

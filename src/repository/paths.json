@@ -6,9 +6,21 @@
     "total": 9,
     "central_outcome": "VAR-000004",
     "topology": {
-      "upstream_layer": ["PATH-000003","PATH-000009"],
-      "mechanism_layer": ["PATH-000002","PATH-000005","PATH-000006","PATH-000007","PATH-000008"],
-      "convergence_layer": ["PATH-000001","PATH-000004"]
+      "upstream_layer": [
+        "PATH-000003",
+        "PATH-000009"
+      ],
+      "mechanism_layer": [
+        "PATH-000002",
+        "PATH-000005",
+        "PATH-000006",
+        "PATH-000007",
+        "PATH-000008"
+      ],
+      "convergence_layer": [
+        "PATH-000001",
+        "PATH-000004"
+      ]
     }
   },
   "paths": [
@@ -18,10 +30,32 @@
       "chinese_name": "父母压力网络",
       "topology_layer": "Convergence",
       "governing_question": "Q-000001",
-      "main_chain": ["REL-000001","REL-000002","REL-000003"],
-      "cross_network": ["PATH-000003","PATH-000005","PATH-000006","PATH-000007","PATH-000008","PATH-000009"],
-      "supported_page": ["Health","Family Relationships","Financial Well-being","Support from Others"],
-      "status": "Active"
+      "main_chain": [
+        "REL-000001",
+        "REL-000002",
+        "REL-000003"
+      ],
+      "cross_network": [
+        "PATH-000003",
+        "PATH-000005",
+        "PATH-000006",
+        "PATH-000007",
+        "PATH-000008",
+        "PATH-000009"
+      ],
+      "supported_page": [
+        "Health",
+        "Family Relationships",
+        "Financial Well-being",
+        "Support from Others"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-parent-stress",
+        "secondary": [
+          "concept-caregiver-burden"
+        ]
+      }
     },
     {
       "id": "PATH-000002",
@@ -29,14 +63,35 @@
       "chinese_name": "家庭功能网络",
       "topology_layer": "Mechanism",
       "governing_question": "Q-000002",
-      "main_chain": ["REL-000022","REL-000009","REL-000020"],
+      "main_chain": [
+        "REL-000022",
+        "REL-000009",
+        "REL-000020"
+      ],
       "branch": {
-        "outcome": ["REL-000017"],
-        "parenting_loop": ["REL-000023"]
+        "outcome": [
+          "REL-000017"
+        ],
+        "parenting_loop": [
+          "REL-000023"
+        ]
       },
-      "cross_network": ["PATH-000001","PATH-000003","PATH-000008"],
-      "supported_page": ["Family Relationships","Health"],
-      "status": "Active"
+      "cross_network": [
+        "PATH-000001",
+        "PATH-000003",
+        "PATH-000008"
+      ],
+      "supported_page": [
+        "Family Relationships",
+        "Health"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-family-functioning",
+        "secondary": [
+          "concept-family-resilience"
+        ]
+      }
     },
     {
       "id": "PATH-000003",
@@ -46,14 +101,40 @@
       "upstream_node": true,
       "upstream_note": "Upstream Structural Node. No incoming PATH connections by design. Influence propagates downstream through other networks.",
       "governing_question": "Q-000003",
-      "main_chain": ["REL-000006","REL-000002","REL-000016","REL-000017"],
+      "main_chain": [
+        "REL-000006",
+        "REL-000002",
+        "REL-000016",
+        "REL-000017"
+      ],
       "branch": {
-        "resilience": ["REL-000024","REL-000022","REL-000017"],
-        "community": ["REL-000025","REL-000027"]
+        "resilience": [
+          "REL-000024",
+          "REL-000022",
+          "REL-000017"
+        ],
+        "community": [
+          "REL-000025",
+          "REL-000027"
+        ]
       },
-      "cross_network": ["PATH-000001","PATH-000002","PATH-000004","PATH-000005"],
-      "supported_page": ["Support from Others","Family Relationships"],
-      "status": "Active"
+      "cross_network": [
+        "PATH-000001",
+        "PATH-000002",
+        "PATH-000004",
+        "PATH-000005"
+      ],
+      "supported_page": [
+        "Support from Others",
+        "Family Relationships"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-informal-social-support",
+        "secondary": [
+          "concept-formal-social-support"
+        ]
+      }
     },
     {
       "id": "PATH-000004",
@@ -61,14 +142,37 @@
       "chinese_name": "社区参与网络",
       "topology_layer": "Convergence",
       "governing_question": "Q-000004",
-      "main_chain": ["REL-000030","REL-000029"],
+      "main_chain": [
+        "REL-000030",
+        "REL-000029"
+      ],
       "branch": {
-        "service": ["REL-000025","REL-000029"],
-        "barrier": ["REL-000014","REL-000031"]
+        "service": [
+          "REL-000025",
+          "REL-000029"
+        ],
+        "barrier": [
+          "REL-000014",
+          "REL-000031"
+        ]
       },
-      "cross_network": ["PATH-000003","PATH-000005","PATH-000007","PATH-000008"],
-      "supported_page": ["Community Interaction","Leisure"],
-      "status": "Active"
+      "cross_network": [
+        "PATH-000003",
+        "PATH-000005",
+        "PATH-000007",
+        "PATH-000008"
+      ],
+      "supported_page": [
+        "Community Interaction",
+        "Leisure"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-community-participation",
+        "secondary": [
+          "concept-school-participation"
+        ]
+      }
     },
     {
       "id": "PATH-000005",
@@ -77,15 +181,44 @@
       "topology_layer": "Mechanism",
       "governing_question": "Q-000005",
       "question_text": "为什么很多家庭知道有服务，却没有真正获得支持？",
-      "main_chain": ["REL-000032","REL-000033","REL-000034"],
+      "main_chain": [
+        "REL-000032",
+        "REL-000033",
+        "REL-000034"
+      ],
       "branch": {
-        "unmet_need": ["REL-000036","REL-000037","REL-000003"],
-        "access_to_stress": ["REL-000034","REL-000035","REL-000003"]
+        "unmet_need": [
+          "REL-000036",
+          "REL-000037",
+          "REL-000003"
+        ],
+        "access_to_stress": [
+          "REL-000034",
+          "REL-000035",
+          "REL-000003"
+        ]
       },
-      "candidate_rel": ["CANDIDATE-001"],
-      "cross_network": ["PATH-000001","PATH-000004","PATH-000007"],
-      "supported_page": ["Disability-related Services","Support from Others","Health","Financial Well-being"],
-      "status": "Active"
+      "candidate_rel": [
+        "CANDIDATE-001"
+      ],
+      "cross_network": [
+        "PATH-000001",
+        "PATH-000004",
+        "PATH-000007"
+      ],
+      "supported_page": [
+        "Disability-related Services",
+        "Support from Others",
+        "Health",
+        "Financial Well-being"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-service-accessibility",
+        "secondary": [
+          "concept-service-coordination"
+        ]
+      }
     },
     {
       "id": "PATH-000006",
@@ -94,11 +227,32 @@
       "topology_layer": "Mechanism",
       "governing_question": "Q-000006",
       "question_text": "为什么很多照顾者在孩子成长过程中，越来越难维持工作与职业发展？",
-      "main_chain": ["REL-000038","REL-000039","REL-000040","REL-000041"],
-      "candidate_rel": ["CANDIDATE-002"],
-      "cross_network": ["PATH-000001","PATH-000007","PATH-000009"],
-      "supported_page": ["Career","Financial Well-being","Health","Family Relationships","Disability-related Services"],
-      "status": "Active"
+      "main_chain": [
+        "REL-000038",
+        "REL-000039",
+        "REL-000040",
+        "REL-000041"
+      ],
+      "candidate_rel": [
+        "CANDIDATE-002"
+      ],
+      "cross_network": [
+        "PATH-000001",
+        "PATH-000007",
+        "PATH-000009"
+      ],
+      "supported_page": [
+        "Career",
+        "Financial Well-being",
+        "Health",
+        "Family Relationships",
+        "Disability-related Services"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-employment",
+        "secondary": []
+      }
     },
     {
       "id": "PATH-000007",
@@ -108,15 +262,43 @@
       "governing_question": "Q-000007",
       "question_text": "为什么孩子成年以后，家庭压力没有结束，反而进入新的阶段？",
       "expected_answer": "不是因为成年本身，而是因为：Transition Readiness不足 → Adult Service Access缺口 → Independent Living无法实现 → Family Quality of Life持续受压 → Parent Stress进入新阶段",
-      "main_chain": ["REL-000042","REL-000043","REL-000044"],
+      "main_chain": [
+        "REL-000042",
+        "REL-000043",
+        "REL-000044"
+      ],
       "branch": {
-        "stress_relief": ["REL-000045"],
-        "participation": ["REL-000046","REL-000027"]
+        "stress_relief": [
+          "REL-000045"
+        ],
+        "participation": [
+          "REL-000046",
+          "REL-000027"
+        ]
       },
-      "candidate_rel": ["CANDIDATE-003"],
-      "cross_network": ["PATH-000001","PATH-000004","PATH-000005","PATH-000006"],
-      "supported_page": ["Health","Support from Others","Disability-related Services","Career","Community Interaction"],
-      "status": "Active"
+      "candidate_rel": [
+        "CANDIDATE-003"
+      ],
+      "cross_network": [
+        "PATH-000001",
+        "PATH-000004",
+        "PATH-000005",
+        "PATH-000006"
+      ],
+      "supported_page": [
+        "Health",
+        "Support from Others",
+        "Disability-related Services",
+        "Career",
+        "Community Interaction"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-transition-to-adulthood",
+        "secondary": [
+          "concept-independent-living"
+        ]
+      }
     },
     {
       "id": "PATH-000008",
@@ -126,16 +308,44 @@
       "governing_question": "Q-000008",
       "question_text": "为什么有些家庭一起休闲以后，关系变好了、压力降低了，而有些家庭却越来越疏远？",
       "expected_answer": "差异不在于做什么休闲，而在于：Family Routine Balance是否支撑Shared Family Leisure发生 → Leisure Satisfaction是否真正产生 → Family Functioning是否得到改善 → Family Quality of Life是否提升",
-      "main_chain": ["REL-000047","REL-000048","REL-000017"],
+      "main_chain": [
+        "REL-000047",
+        "REL-000048",
+        "REL-000017"
+      ],
       "branch": {
-        "satisfaction": ["REL-000051"],
-        "burden": ["REL-000049"],
-        "community": ["REL-000050","REL-000027"]
+        "satisfaction": [
+          "REL-000051"
+        ],
+        "burden": [
+          "REL-000049"
+        ],
+        "community": [
+          "REL-000050",
+          "REL-000027"
+        ]
       },
-      "candidate_rel": ["CANDIDATE-004"],
-      "cross_network": ["PATH-000001","PATH-000002","PATH-000004"],
-      "supported_page": ["Family Relationships","Leisure","Community Interaction","Health"],
-      "status": "Active"
+      "candidate_rel": [
+        "CANDIDATE-004"
+      ],
+      "cross_network": [
+        "PATH-000001",
+        "PATH-000002",
+        "PATH-000004"
+      ],
+      "supported_page": [
+        "Family Relationships",
+        "Leisure",
+        "Community Interaction",
+        "Health"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-family-leisure",
+        "secondary": [
+          "concept-leisure-participation"
+        ]
+      }
     },
     {
       "id": "PATH-000009",
@@ -148,14 +358,40 @@
       "question_text": "为什么已经有很多有效的支持方法，真正能够长期实施的却很少？",
       "expected_answer": "不是因为干预本身无效，而是因为：Policy Support → Implementation Fidelity ↑ / Implementation Barrier → Implementation Fidelity ↓ / Implementation Fidelity → Service Access → Formal Support → Parent Stress ↓ → Family Quality of Life ↑",
       "ai_trigger": "当用户问'为什么这些方法没有效果？'时，优先调用此PATH",
-      "main_chain": ["REL-000052","REL-000054","REL-000033","REL-000007","REL-000055"],
+      "main_chain": [
+        "REL-000052",
+        "REL-000054",
+        "REL-000033",
+        "REL-000007",
+        "REL-000055"
+      ],
       "branch": {
-        "barrier": ["REL-000053"]
+        "barrier": [
+          "REL-000053"
+        ]
       },
-      "candidate_rel": ["CANDIDATE-005"],
-      "cross_network": ["PATH-000005","PATH-000001","PATH-000006","PATH-000007"],
-      "supported_page": ["Disability-related Services","Support from Others","Career","Community Interaction"],
-      "status": "Active"
+      "candidate_rel": [
+        "CANDIDATE-005"
+      ],
+      "cross_network": [
+        "PATH-000005",
+        "PATH-000001",
+        "PATH-000006",
+        "PATH-000007"
+      ],
+      "supported_page": [
+        "Disability-related Services",
+        "Support from Others",
+        "Career",
+        "Community Interaction"
+      ],
+      "status": "Active",
+      "concept_refs": {
+        "primary": "concept-policy-support",
+        "secondary": [
+          "concept-implementation-barriers"
+        ]
+      }
     }
   ]
 }
