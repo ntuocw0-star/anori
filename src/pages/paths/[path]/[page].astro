@@ -83,6 +83,9 @@ const isUnderstanding = pageInfo.type === "understanding";
 const isSupport = pageInfo.type === "support";
 const isSupportPlus = pageInfo.type === "support_plus";
 
+// S19-P2: only P001 and P006 show today_box early (immediately after Reframe)
+const isActionPilot = isJourney && (userPath.id === "p001" || userPath.id === "p006");
+
 const typeLabel: Record<string, string> = {
   journey: "路径入口",
   understanding: "理解",
@@ -147,6 +150,11 @@ const pageKeywords: string[] = seoData.keywords ?? [];
         {/* Reframe */}
         {content.reframe && <Reframe text={content.reframe} />}
 
+        {/* Today box — P001/P006 only: shown early for immediate action */}
+        {isActionPilot && content.today_box && (
+          <TodayBox text={content.today_box} variant="journey" />
+        )}
+
         {/* What you might feel */}
         {content.what_you_might_feel?.length > 0 && (
           <section class="up-section">
@@ -192,8 +200,8 @@ const pageKeywords: string[] = seoData.keywords ?? [];
           />
         )}
 
-        {/* Today box for journey */}
-        {content.today_box && (
+        {/* Today box — non-pilot journeys: original position after support_grid */}
+        {!isActionPilot && content.today_box && (
           <TodayBox text={content.today_box} variant="journey" />
         )}
 
