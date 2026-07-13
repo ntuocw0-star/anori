@@ -1,0 +1,38 @@
+{
+  "id": "RI-ANORI-0002",
+  "version": "1.0.0",
+  "schema_version": "ORS-v1.0",
+  "title": {
+    "zh-Hans": "每周家庭观察记录",
+    "en": "Weekly Family Observation Sheet"
+  },
+  "organization_id": null,
+  "language_status": "bilingual_zh_en",
+  "reuse_status": "open_license",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "verification_status": "draft",
+  "target_age": { "min": 2, "max": null },
+  "audience": ["parent"],
+  "printable": true,
+  "related_ka": [],
+  "related_ea": [],
+  "related_path": [],
+  "educational_framework": ["parent_implemented", "visual_supports"],
+  "disclaimer": "standard_v1",
+  "file_package": {
+    "print": "family-observation-sheet.pdf",
+    "mobile": "family-observation-sheet-mobile.png",
+    "thumbnail": "thumbnail.png",
+    "preview": "preview.webp"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "Initial draft. Sprint 20B-3. ORS v1.0 compliant."
+    }
+  ],
+  "generated_at": "2026-07-13T00:00:00Z"
+}

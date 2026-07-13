@@ -1,0 +1,64 @@
+{
+  "id": "RI-ANORI-0001",
+  "version": "1.0.0",
+  "schema_version": "ORS-v1.0",
+  "title": {
+    "zh-Hans": "先做——然后 视觉支持卡",
+    "en": "First–Then Visual Support Card"
+  },
+  "organization_id": null,
+  "language_status": "bilingual_zh_en",
+  "reuse_status": "open_license",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "verification_status": "ready",
+  "target_age": {
+    "min": 2,
+    "max": 8
+  },
+  "audience": [
+    "parent",
+    "educator"
+  ],
+  "printable": true,
+  "related_ka": [],
+  "related_ka_gap": "KA-Visual-001 (规划中)",
+  "related_ea": [],
+  "related_path": [],
+  "educational_framework": [
+    "visual_supports",
+    "structured_teaching"
+  ],
+  "disclaimer": "standard_v1",
+  "file_package": {
+    "print_blank": "first-then-card-blank.pdf",
+    "print_prefilled": "first-then-card-prefilled.pdf",
+    "mobile_blank": "first-then-card-blank-mobile.png",
+    "mobile_prefilled": "first-then-card-prefilled-mobile.png",
+    "thumbnail_blank": "thumbnail-blank.png",
+    "thumbnail_prefilled": "thumbnail-prefilled.png",
+    "preview_blank": "preview-blank.webp",
+    "preview_prefilled": "preview-prefilled.webp"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "Initial release. Sprint 20B-2. ORS v1.0 compliant."
+    },
+    {
+      "version": "1.0.0-qa",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "QA build: arrow +20% weight/length, blank write area taller (5-line grid), title ZH 28pt bolder."
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "QA passed. Status promoted to ready. Sprint 20B-2 complete."
+    }
+  ],
+  "generated_at": "2026-07-13T00:00:00Z"
+}
