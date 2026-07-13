@@ -6,6 +6,14 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import puppeteer from 'puppeteer';
 
+// Skip PDF generation on Vercel and other CI environments.
+// Chrome is not available in these environments and PDFs are not
+// required for the website to function.
+if (process.env.VERCEL || process.env.CI) {
+  console.log('[PDF] 检测到 Vercel/CI 环境，跳过 PDF 生成。');
+  process.exit(0);
+}
+
 const ROOT = process.cwd();
 const DIST_ROOT = path.join(ROOT, 'dist');
 const HTML_ROOT = path.join(DIST_ROOT, 'download', 'ka');
