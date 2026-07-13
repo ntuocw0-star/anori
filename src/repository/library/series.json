@@ -49,6 +49,42 @@
         "primary": "concept-aac",
         "secondary": []
       }
+    },
+    {
+      "id": "series-parent-stress",
+      "slug": "parent-stress",
+      "label": "父母压力文献库",
+      "description": "照顾有特殊需求孩子的父母，压力从哪里来，以及什么真正有帮助。",
+      "status": "draft",
+      "canonical": "/library/series/parent-stress",
+      "source_keys": [
+        "parent-stress",
+        "parenting-stress",
+        "caregiver-burden",
+        "父母压力"
+      ],
+      "cover": null,
+      "statistics": {
+        "ea": 1,
+        "et": 1,
+        "ka": 1
+      },
+      "content_refs": {
+        "ea": [
+          "EA-000004"
+        ],
+        "et": [
+          "ET-000007"
+        ],
+        "ka": [
+          "KA-000003"
+        ]
+      },
+      "order": 2,
+      "concept_refs": {
+        "primary": "concept-parent-stress",
+        "secondary": []
+      }
     }
   ]
 }

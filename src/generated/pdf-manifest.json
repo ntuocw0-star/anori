@@ -1,11 +1,11 @@
 {
   "schemaId": "PDF-Manifest",
   "schema_version": "1.0",
-  "generated_at": "2026-07-12T05:34:10.753Z",
+  "generated_at": "2026-07-12T14:14:41.314Z",
   "summary": {
-    "total": 2,
-    "ok": 2,
-    "skipped": 2,
+    "total": 3,
+    "ok": 3,
+    "skipped": 3,
     "failed": 0
   },
   "items": [
@@ -16,8 +16,8 @@
       "path": "/downloads/ka/KA-000001-one-page.pdf",
       "htmlSource": "dist\\download\\ka\\KA-000001\\one-page\\index.html",
       "status": "ok",
-      "generatedAt": "2026-07-12T05:24:18.153Z",
-      "htmlHash": "sha256:c90b6fe5258820ad822e84eb5e1b31366e495bbd8f61c45bb6b02f086ea7ed6d",
+      "generatedAt": "2026-07-12T07:44:12.822Z",
+      "htmlHash": "sha256:a47987932bfaeac39f31da86cecc82b7d197354ca58b4ece29f1126bbfc3720e",
       "skipped": true
     },
     {
@@ -29,6 +29,17 @@
       "status": "ok",
       "generatedAt": "2026-07-12T05:24:22.024Z",
       "htmlHash": "sha256:e6875b5011699cd47b39e3e5f02d25363cbeaf7ec2fb4d421a54c195dd5f0d11",
+      "skipped": true
+    },
+    {
+      "contentId": "KA-000003",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000003-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000003\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-12T07:28:12.743Z",
+      "htmlHash": "sha256:50a3453eeb23f2d19740e72629ebdc2733dadcbd991a4fe1755d90c9a87836df",
       "skipped": true
     }
   ]

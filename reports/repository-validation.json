@@ -1,38 +1,13 @@
 {
-  "generated_at": "2026-07-11T12:14:39.178Z",
+  "generated_at": "2026-07-13T06:26:49.250Z",
   "passed": true,
   "summary": {
     "errors": 0,
-    "warnings": 6,
+    "warnings": 0,
     "infos": 3
   },
   "errors": [],
-  "warnings": [
-    {
-      "type": "warning",
-      "message": "EA \"EA-000002\" related_et 含非法值（脏引用）: \"ET-000006（待建）\""
-    },
-    {
-      "type": "warning",
-      "message": "EA \"EA-000002\" related_ka 包含 KA-000001，但 KA-000001.related_ea 未引用 EA-000002（双向不一致）"
-    },
-    {
-      "type": "warning",
-      "message": "EA \"EA-000002\" related_ka 含非法值（脏引用）: \"KA-000002（待建）\""
-    },
-    {
-      "type": "warning",
-      "message": "EA \"EA-000003\" related_et 含非法值（脏引用）: \"ET-000004（增补）\""
-    },
-    {
-      "type": "warning",
-      "message": "EA \"EA-000003\" related_et 含非法值（脏引用）: \"ET-000007（待建）\""
-    },
-    {
-      "type": "warning",
-      "message": "EA \"EA-000003\" related_ka 含非法值（脏引用）: \"KA-000003（待建）\""
-    }
-  ],
+  "warnings": [],
   "infos": [
     {
       "type": "info",

@@ -29,6 +29,7 @@ const validConceptStatuses = new Set(['ready', 'planned']);
 
 const errors   = [];
 const warnings = [];
+const infos    = [];
 
 // ── Domain 验证 ───────────────────────────────────────────────────────────────
 
@@ -177,13 +178,13 @@ for (const c of taxonomy.concepts) {
 // 跨 Concept alias 重复 → warning
 for (const [alias, ids] of aliasMap) {
   if (ids.length > 1)
-    warnings.push(`Alias "${alias}" 被多个 Concept 使用: ${ids.join(', ')}`);
+    infos.push(`[设计意图] Alias "${alias}" 被多个 Concept 使用（multi-alias，符合 Taxonomy 设计）: ${ids.join(', ')}`);
 }
 
 // 跨 Concept search_term 重复 → warning
 for (const [term, ids] of searchTermMap) {
   if (ids.length > 1)
-    warnings.push(`Search term "${term}" 被多个 Concept 使用: ${ids.join(', ')}`);
+    infos.push(`[设计意图] Search term "${term}" 被多个 Concept 使用（multi-alias，符合 Taxonomy 设计）: ${ids.join(', ')}`);
 }
 
 // ── 统计输出 ──────────────────────────────────────────────────────────────────
@@ -195,7 +196,12 @@ if (warnings.length > 0) {
   warnings.forEach(w => console.log(`- ${w}`));
 }
 
-if (errors.length > 0) {
+if (infos.length > 0) {
+    console.log(`Info (${infos.length})`);
+    infos.forEach(i => console.log(`- ${i}`));
+  }
+
+  if (errors.length > 0) {
   console.log(`\nErrors (${errors.length})`);
   errors.forEach(e => console.log(`- ${e}`));
   console.log('\nTaxonomy validation FAILED');

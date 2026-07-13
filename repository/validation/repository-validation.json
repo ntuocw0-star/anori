@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-07-12T07:44:12.929Z",
+  "passed": true,
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 3
+  },
+  "errors": [],
+  "warnings": [],
+  "infos": [
+    {
+      "type": "info",
+      "message": "No orphan EA."
+    },
+    {
+      "type": "info",
+      "message": "No orphan ET."
+    },
+    {
+      "type": "info",
+      "message": "No orphan KA."
+    }
+  ]
+}

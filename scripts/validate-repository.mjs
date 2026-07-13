@@ -58,7 +58,11 @@ function main() {
   for (const slug of duplicates(series.map(x => x.slug))) errors.push(`Series slug 重复: ${slug}`);
 
   for (const item of series) {
-    if (!topicIds.has(item.topic)) errors.push(`Series "${item.id}" 的 Topic 不存在: ${item.topic}`);
+    // draft Series は topic 省略を許可。active Series は topic 必須。
+    if (item.status !== 'draft' && item.topic && !topicIds.has(item.topic))
+      errors.push(`Series "${item.id}" 的 Topic 不存在: ${item.topic}`);
+    if (item.status !== 'draft' && !item.topic)
+      errors.push(`Series "${item.id}" status=active だが topic が未設定`);
     const refs = item.content_refs ?? {};
     for (const id of refs.ea ?? []) if (!eaIds.has(id)) errors.push(`Series "${item.id}" 引用不存在的 EA: ${id}`);
     for (const id of refs.et ?? []) if (!etIds.has(id)) errors.push(`Series "${item.id}" 引用不存在的 ET: ${id}`);

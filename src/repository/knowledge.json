@@ -48,7 +48,8 @@
         "p006"
       ],
       "related_ea": [
-        "EA-000001"
+        "EA-000001",
+        "EA-000002"
       ],
       "evidence_level": "High",
       "evidence_note": "基于 Systematic Review + Qualitative Meta-Synthesis · 19项研究 · 297位家长",
@@ -136,6 +137,38 @@
         "primary": "concept-aac",
         "secondary": []
       }
+    },
+    {
+      "id": "KA-000003",
+      "title": "父母压力：为什么努力以后还是会觉得累？",
+      "subtitle": "研究怎么说，以及今天可以做什么",
+      "series": {
+        "name": "父母压力",
+        "slug": "parent-stress",
+        "order": 1,
+        "next": null,
+        "previous": null
+      },
+      "related_ea": [
+        "EA-000004"
+      ],
+      "related_path": [
+        "p001"
+      ],
+      "tags": [
+        "父母压力",
+        "照顾者",
+        "支持",
+        "疲惫",
+        "韧性"
+      ],
+      "concept_refs": {
+        "primary": "concept-parent-stress",
+        "secondary": []
+      },
+      "status": "draft",
+      "reading_time": "6 min",
+      "one_sentence": "父母压力并不是个人软弱，而是有发展性障碍孩子的家庭中被反复观察到的普遍现象。"
     }
   ]
 }

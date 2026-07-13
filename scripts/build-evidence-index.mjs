@@ -2,11 +2,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(process.cwd());
-const EA_SRC_DIR = path.join(ROOT, 'knowledge/evidence/cards/Deconstruction');
-const ET_SRC_DIR = path.join(ROOT, 'knowledge/evidence/cards/ET');
+const EA_SRC_DIR = path.join(ROOT, 'repository/knowledge/evidence/cards/Deconstruction');
+const ET_SRC_DIR = path.join(ROOT, 'repository/knowledge/evidence/cards/ET');
 const OUT_DIR = path.join(ROOT, 'src/generated/evidence');
 const MANIFEST_OUT = path.join(ROOT, 'src/generated/manifest.json');
 const CACHE_FILE = path.join(ROOT, '.cache/evidence-index.json');
+console.log('ROOT =', ROOT);
+console.log('EA =', EA_SRC_DIR);
+console.log('ET =', ET_SRC_DIR);
+console.log('cwd =', process.cwd());
 
 function readJson(file, fallback) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }

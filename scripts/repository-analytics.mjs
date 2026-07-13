@@ -63,6 +63,18 @@ function loadConceptRefsFromMd(dir) {
 
 const EA_REFS = loadConceptRefsFromMd(path.join(ROOT, 'knowledge/evidence/cards/Deconstruction'));
 const ET_REFS = loadConceptRefsFromMd(path.join(ROOT, 'knowledge/evidence/cards/ET'));
+
+// MD content キャッシュ（coverageScore で Status 行を参照するため）
+function loadMdCache(dir) {
+  const cache = {};
+  if (!fs.existsSync(dir)) return cache;
+  for (const fn of fs.readdirSync(dir).filter(f => f.endsWith('.md'))) {
+    cache[fn.replace('.md', '')] = fs.readFileSync(path.join(dir, fn), 'utf8');
+  }
+  return cache;
+}
+const EA_MD_CACHE = loadMdCache(path.join(ROOT, 'knowledge/evidence/cards/Deconstruction'));
+const ET_MD_CACHE = loadMdCache(path.join(ROOT, 'knowledge/evidence/cards/ET'));
 const ka_data    = load('src/repository/knowledge.json');
 const series_data= load('src/repository/library/series.json');
 const paths_data = load('src/repository/paths.json');
@@ -89,6 +101,28 @@ function getPrimary(obj, mdRefs) {
 function getSecondary(obj, mdRefs) {
   if (mdRefs && obj?.id && mdRefs[obj.id]) return mdRefs[obj.id].secondary ?? [];
   return obj?.concept_refs?.secondary ?? [];
+}
+
+/**
+ * オブジェクトの Coverage スコア（0=なし / 0.5=draft / 1.0=active）
+ * Markdown の Status ヘッダーまたは JSON の status フィールドを参照
+ */
+function coverageScore(obj, mdContent) {
+  // Markdown ファイルから Status を取得
+  if (mdContent) {
+    const m = mdContent.match(/\*\*Status:\*\*\s*([^\n]+)/);
+    if (m) {
+      const s = m[1].trim().toLowerCase();
+      if (s.startsWith('draft')) return 0.5;
+      if (s.startsWith('active') || s.startsWith('gold')) return 1.0;
+    }
+  }
+  // JSON フィールド
+  const s = (obj?.status ?? '').toLowerCase();
+  if (s === 'draft') return 0.5;
+  if (s === 'active' || s === 'published') return 1.0;
+  // status 未設定は active 扱い（既存コンテンツへの後方互換）
+  return 1.0;
 }
 
 /** 各 Concept の Problem 数（related_kas → concept slug マッピング）*/
@@ -120,15 +154,18 @@ function calcUFC(prb, mth, pathCount) {
 }
 
 function calcKFC(ka, et, ea) {
+  // ka / et / ea は coverageScore の合計（0=なし, 0.5=draft, 1.0=active）
   const s = 1.0 +
-            (ka > 0 ? 1.0 : 0.0) +
-            (et > 0 ? 1.0 : 0.0) +
-            (ea > 0 ? 1.0 : 0.0);
+            Math.min(1.0, ka) +   // 複数ある場合も 1.0 上限
+            Math.min(1.0, et) +
+            Math.min(1.0, ea);
   return Math.round(s / 4.0 * 100);
 }
 
 function lifecycle(ea, et, ka, ser) {
-  if (ea > 0 && et > 0 && ka > 0 && ser > 0) return 'Established';
+  // Established: 全て active (>=1.0) が必要。draft は Growing 扱い
+  if (ea >= 1.0 && et >= 1.0 && ka >= 1.0 && ser >= 1.0) return 'Established';
+  if (ea > 0 && et > 0 && ka > 0 && ser > 0) return 'Growing';  // draft 混在
   if (ka > 0) return 'Growing';
   return 'Seed';
 }
@@ -147,11 +184,17 @@ const stats = {};
 for (const c of concepts) {
   const cid = c.id;
 
-  const n_ea   = ea_items.filter(x => getPrimary(x, EA_REFS) === cid).length;
-  const n_et   = et_items.filter(x => getPrimary(x, ET_REFS) === cid).length;
-  const n_ka   = ka_items.filter(x => getPrimary(x) === cid).length;
-  const n_ser  = series.filter(x => getPrimary(x) === cid).length;
-  const n_path = paths.filter(x => getPrimary(x) === cid).length;
+  // Draft は 0.5 としてカウント（Coverage に計上するが full ではない）
+  const n_ea   = ea_items.filter(x => getPrimary(x, EA_REFS) === cid)
+    .reduce((s, x) => s + coverageScore(x, EA_MD_CACHE[x.id]), 0);
+  const n_et   = et_items.filter(x => getPrimary(x, ET_REFS) === cid)
+    .reduce((s, x) => s + coverageScore(x, ET_MD_CACHE[x.id]), 0);
+  const n_ka   = ka_items.filter(x => getPrimary(x) === cid)
+    .reduce((s, x) => s + coverageScore(x, null), 0);
+  const n_ser  = series.filter(x => getPrimary(x) === cid)
+    .reduce((s, x) => s + coverageScore(x, null), 0);
+  const n_path = paths.filter(x => getPrimary(x) === cid)
+    .reduce((s, x) => s + coverageScore(x, null), 0);
   const n_prb  = problemsForConcept(cid).length;
   const n_mth  = methods.filter(x => getPrimary(x) === cid).length;
 
