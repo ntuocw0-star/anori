@@ -23,28 +23,6 @@ const topicLabel = topicPage?.title ?? topicParam;
 
 const isEmpty = resources.length === 0 && !topicParam;
 
-const originalResources = [
-  {
-    id: "RI-ANORI-0001",
-    title: "First–Then 视觉支持卡",
-    title_en: "First–Then Visual Support Card",
-    description: '帮助家庭用清晰的“先做—然后”结构呈现活动顺序。提供预填版与空白版，可打印或在手机上使用。',
-    status: "ready",
-    version: "1.0.0",
-    preview: "/downloads/resources/RI-ANORI-0001/first-then-card-prefilled-mobile.png",
-    downloads: [
-      {
-        label: "下载预填版 PDF",
-        href: "/downloads/resources/RI-ANORI-0001/first-then-card-prefilled.pdf",
-      },
-      {
-        label: "下载空白版 PDF",
-        href: "/downloads/resources/RI-ANORI-0001/first-then-card-blank.pdf",
-      },
-    ],
-  },
-];
-
 // resource_type → sidebar slug 映射
 // International Organization 单独保留，不并入 ngo
 const TYPE_TO_SLUG: Record<string, string> = {
@@ -102,47 +80,6 @@ const sidebarCats = [
         <a href="/resource" class="res-clear-filter">查看全部资源 →</a>
       )}
     </div>
-
-    {originalResources.length > 0 && (
-      <section class="original-resources">
-        <div class="original-header">
-          <p class="original-eyebrow">ANORI ORIGINALS</p>
-          <h2>Anori 原创资源</h2>
-          <p>打开即可理解，拿来即可使用，设计有据可依。</p>
-        </div>
-
-        <div class="original-grid">
-          {originalResources.map((resource) => (
-            <article class="original-card">
-              <img
-                src={resource.preview}
-                alt={`${resource.title}预览`}
-                class="original-preview"
-              />
-
-              <div class="original-content">
-                <div class="original-meta">
-                  <span class="original-status">可使用</span>
-                  <span>v{resource.version}</span>
-                </div>
-
-                <h3>{resource.title}</h3>
-                <p class="original-title-en">{resource.title_en}</p>
-                <p class="original-description">{resource.description}</p>
-
-                <div class="original-actions">
-                  {resource.downloads.map((download) => (
-                    <a href={download.href} download>
-                      {download.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    )}
 
     {isEmpty ? (
       <div class="res-empty">
@@ -344,116 +281,5 @@ const sidebarCats = [
   .res-nav { flex-direction: row; flex-wrap: wrap; }
   .res-nav-item { width: auto; font-size: var(--text-xs); padding: var(--sp-2) var(--sp-3); }
   .res-grid { grid-template-columns: 1fr; }
-}
-
-.original-resources {
-  margin-bottom: var(--sp-16);
-}
-
-.original-header {
-  margin-bottom: var(--sp-6);
-}
-
-.original-eyebrow {
-  margin-bottom: var(--sp-2);
-  color: var(--brand);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-}
-
-.original-header h2 {
-  margin-bottom: var(--sp-2);
-  font-size: var(--text-2xl);
-}
-
-.original-header > p:last-child {
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.original-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--sp-5);
-}
-
-.original-card {
-  overflow: hidden;
-  background: #fdfcf8;
-  border: 1px solid rgba(160, 148, 132, 0.18);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.original-preview {
-  display: block;
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  background: #f4f1eb;
-}
-
-.original-content {
-  padding: var(--sp-6);
-}
-
-.original-meta {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-3);
-  margin-bottom: var(--sp-3);
-  color: var(--muted-lt);
-  font-size: var(--text-xs);
-}
-
-.original-status {
-  padding: 2px 8px;
-  color: var(--brand);
-  background: rgba(37, 99, 235, 0.08);
-  border-radius: 99px;
-  font-weight: 600;
-}
-
-.original-card h3 {
-  margin-bottom: 2px;
-  font-size: var(--text-xl);
-}
-
-.original-title-en {
-  margin-bottom: var(--sp-4);
-  color: var(--muted-lt);
-  font-size: var(--text-sm);
-}
-
-.original-description {
-  color: var(--muted);
-  line-height: 1.75;
-}
-
-.original-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-3);
-  margin-top: var(--sp-5);
-}
-
-.original-actions a {
-  padding: var(--sp-2) var(--sp-4);
-  color: white;
-  background: var(--brand);
-  border-radius: var(--radius);
-  font-size: var(--text-sm);
-  font-weight: 500;
-}
-
-@media (max-width: 900px) {
-  .original-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .original-preview {
-    height: 240px;
-  }
 }
 </style>
