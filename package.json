@@ -12,6 +12,7 @@
     "check": "astro check"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "astro": "^4.16.0",
     "puppeteer": "^25.3.0"
   },

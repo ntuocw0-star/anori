@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 // CHANGE-008: Added DM Serif Display font (UI-001 Section 3)
 // CHANGE-006: lang prop now dynamic for multilingual support (Master Spec Part 15.1)
 export interface Props {
@@ -30,10 +31,9 @@ const pageTitle = alreadyBranded ? normalizedTitle : `${normalizedTitle} — Ano
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="/brand/logo.png" />
-  <!-- S18-01: Vercel Analytics — page view tracking only, no config required -->
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <slot />
+  <Analytics />
 </body>
 </html>
