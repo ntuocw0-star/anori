@@ -5,13 +5,11 @@ import SiteFooter from "../components/SiteFooter.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import ResourceCard from "../components/ResourceCard.astro";
 import resourcesData from "../repository/resources.json";
-import categoriesData from "../repository/resource-categories.json";
 import pagesData from "../repository/pages.json";
 
 const allResources = (resourcesData as any).resources ?? [];
-const categories = (categoriesData as any).categories ?? [];
 
-// URL 参数过滤
+// URL 参数过滤（topic）
 const topicParam = Astro.url.searchParams.get("topic") ?? "";
 const resources = topicParam
   ? allResources.filter((r: any) =>
@@ -19,12 +17,43 @@ const resources = topicParam
     )
   : allResources;
 
-// 找到 topic 对应的页面名称
 const allPages = (pagesData as any).pages ?? [];
 const topicPage = topicParam ? allPages.find((p: any) => p.slug === topicParam) : null;
 const topicLabel = topicPage?.title ?? topicParam;
 
 const isEmpty = resources.length === 0 && !topicParam;
+
+// resource_type → sidebar slug 映射
+// International Organization 单独保留，不并入 ngo
+const TYPE_TO_SLUG: Record<string, string> = {
+  "Government Agency":         "government",
+  "Guideline Organization":    "guidelines",
+  "Professional Organization": "professional",
+  "Non-profit Organization":   "ngo",
+  "NGO Resource":              "ngo",
+  "Research Website":          "research",
+  "Assessment / Screening":    "assessment",
+  "International Organization":"international",
+};
+
+// 统计每个 slug 的资源数量
+const countBySlug: Record<string, number> = { all: resources.length };
+for (const r of resources) {
+  const slug = TYPE_TO_SLUG[r.resource_type] ?? "other";
+  countBySlug[slug] = (countBySlug[slug] ?? 0) + 1;
+}
+
+// 侧边栏分类列表
+const sidebarCats = [
+  { slug: "international", label: "国际组织",   count: countBySlug["international"] ?? 0 },
+  { slug: "government",    label: "政府资源",   count: countBySlug["government"]    ?? 0 },
+  { slug: "ngo",           label: "非营利组织",  count: countBySlug["ngo"]           ?? 0 },
+  { slug: "professional",  label: "专业组织",   count: countBySlug["professional"]  ?? 0 },
+  { slug: "guidelines",    label: "指南与标准",  count: countBySlug["guidelines"]    ?? 0 },
+  { slug: "assessment",    label: "评估与筛查",  count: countBySlug["assessment"]    ?? 0 },
+  { slug: "research",      label: "研究与循证",  count: countBySlug["research"]      ?? 0 },
+  { slug: "family",        label: "家庭支持",   count: 0,  disabled: true },
+];
 ---
 
 <BaseLayout title="资源" description="国际循证资源库 — 政府指南、NGO 支持、专业工具">
@@ -53,7 +82,6 @@ const isEmpty = resources.length === 0 && !topicParam;
     </div>
 
     {isEmpty ? (
-      <!-- 空状态 — 内容导入中 -->
       <div class="res-empty">
         <div class="res-empty-inner">
           <p class="res-empty-label">资源整理中</p>
@@ -62,63 +90,75 @@ const isEmpty = resources.length === 0 && !topicParam;
             我们会陆续收录来自国际组织、政府机构和专业协会的可信资源，
             按照与 Repository 同等的质量标准逐条审核后导入。
           </p>
-          <div class="res-empty-cats">
-            {categories.map((cat: any) => (
-              <div class="res-empty-cat">
-                <p class="res-empty-cat-name">{cat.label}</p>
-                <p class="res-empty-cat-desc">{cat.description}</p>
-              </div>
-            ))}
-          </div>
           <p class="res-empty-note">
             如果你知道某个优质资源还没有收录，欢迎告诉我们。
           </p>
         </div>
       </div>
     ) : (
-      <!-- 有资源时的布局 -->
       <div class="res-layout">
 
         <!-- 分类侧边 -->
         <aside class="res-sidebar">
           <p class="res-sidebar-label">资源分类</p>
-          <nav class="res-nav">
-            <a href="#" class="res-nav-item active" data-filter="all">全部资源</a>
-            {categories.map((cat: any) => (
-              <a href="#" class="res-nav-item" data-filter={cat.slug}>{cat.label}</a>
+          <nav class="res-nav" id="res-filter-nav">
+            <button class="res-nav-item active" data-filter="all">
+              全部资源
+              <span class="res-nav-count">{resources.length}</span>
+            </button>
+            {sidebarCats.map((cat: any) => (
+              cat.disabled ? (
+                <span class="res-nav-item res-nav-item--disabled" aria-disabled="true">
+                  {cat.label}
+                  <span class="res-nav-badge">建设中</span>
+                </span>
+              ) : (
+                <button class="res-nav-item" data-filter={cat.slug}>
+                  {cat.label}
+                  <span class="res-nav-count">{cat.count}</span>
+                </button>
+              )
             ))}
-          </nav>
-          <div class="res-sidebar-divider"></div>
-          <p class="res-sidebar-label">访问方式</p>
-          <nav class="res-nav">
-            <a href="#" class="res-nav-item" data-access="free">免费</a>
-            <a href="#" class="res-nav-item" data-access="registration">免费注册</a>
-            <a href="#" class="res-nav-item" data-access="all">全部</a>
           </nav>
         </aside>
 
         <!-- 资源网格 -->
-        <main class="res-grid" id="res-grid">
-          {resources.map((r: any) => (
-            <ResourceCard
-              id={r.id}
-              title={r.title}
-              title_zh={r.title_zh}
-              organization={r.organization}
-              organization_short={r.organization_short}
-              countries={r.countries}
-              resource_type={r.resource_type}
-              audience={r.audience}
-              topic_tags={r.topic_tags}
-              language={r.language}
-              access={r.access}
-              description={r.description}
-              description_zh={r.description_zh}
-              url={r.url}
-              related_pages={r.related_pages}
-            />
-          ))}
-        </main>
+        <div>
+          <p class="res-filter-label" id="res-filter-label" aria-live="polite"></p>
+          <div class="res-filter-empty" id="res-filter-empty" hidden>
+            <p>该分类暂无资源。</p>
+          </div>
+          <main class="res-grid" id="res-grid">
+            {resources.map((r: any) => {
+              const enriched = r.id === 'RES-000001' || r.id === 'RES-000016' || r.id === 'RES-000004';
+              return (
+                <div class="res-card-wrap" data-type={TYPE_TO_SLUG[r.resource_type] ?? "other"}>
+                  <ResourceCard
+                    id={r.id}
+                    title={r.title}
+                    title_zh={r.title_zh}
+                    organization={r.organization}
+                    organization_short={r.organization_short}
+                    countries={r.countries}
+                    resource_type={r.resource_type}
+                    audience={r.audience}
+                    topic_tags={r.topic_tags}
+                    language={r.language}
+                    access={r.access}
+                    description={r.description}
+                    description_zh={r.description_zh}
+                    url={r.url}
+                    related_pages={r.related_pages}
+                    enriched={enriched}
+                    entry_question={r.entry_question}
+                    recommendation_reason={r.recommendation_reason}
+                    key_points={r.key_points}
+                  />
+                </div>
+              );
+            })}
+          </main>
+        </div>
 
       </div>
     )}
@@ -129,14 +169,43 @@ const isEmpty = resources.length === 0 && !topicParam;
 <SiteFooter />
 </BaseLayout>
 
+<script>
+(function () {
+  const nav   = document.getElementById('res-filter-nav');
+  const grid  = document.getElementById('res-grid');
+  const label = document.getElementById('res-filter-label');
+  const empty = document.getElementById('res-filter-empty');
+  if (!nav || !grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.res-card-wrap'));
+  const btns  = Array.from(nav.querySelectorAll('button[data-filter]'));
+
+  function applyFilter(slug) {
+    let shown = 0;
+    for (const card of cards) {
+      const match = slug === 'all' || card.dataset.type === slug;
+      card.hidden = !match;
+      if (match) shown++;
+    }
+    if (empty)  empty.hidden  = shown > 0;
+    if (label)  label.textContent = slug === 'all' ? '' : `已筛选：${shown} 个资源`;
+    for (const btn of btns) {
+      btn.classList.toggle('active', btn.dataset.filter === slug);
+    }
+  }
+
+  for (const btn of btns) {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.filter || 'all'));
+  }
+})();
+</script>
+
 <style>
 .res-page {
   min-height: 80vh;
   background: #F8F6F1;
   padding: var(--sp-20) 0 var(--sp-24);
 }
-
-/* ── 顶部 ──────────────────────────────────────────────── */
 .res-hero { margin-bottom: var(--sp-12); }
 .res-title {
   font-size: var(--text-3xl); font-weight: 600;
@@ -144,14 +213,9 @@ const isEmpty = resources.length === 0 && !topicParam;
 }
 .res-desc { font-size: var(--text-base); color: var(--muted); line-height: 1.8; }
 .res-clear-filter {
-  display: inline-block;
-  margin-top: var(--sp-3);
-  font-size: var(--text-sm);
-  color: var(--brand);
-  font-weight: 500;
+  display: inline-block; margin-top: var(--sp-3);
+  font-size: var(--text-sm); color: var(--brand); font-weight: 500;
 }
-
-/* ── 空状态 ────────────────────────────────────────────── */
 .res-empty { max-width: 680px; }
 .res-empty-inner {
   background: #FDFCF8;
@@ -161,8 +225,7 @@ const isEmpty = resources.length === 0 && !topicParam;
 }
 .res-empty-label {
   font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted-lt);
-  margin-bottom: var(--sp-3);
+  text-transform: uppercase; color: var(--muted-lt); margin-bottom: var(--sp-3);
 }
 .res-empty-title {
   font-size: var(--text-3xl); font-weight: 600;
@@ -172,23 +235,7 @@ const isEmpty = resources.length === 0 && !topicParam;
   font-size: var(--text-base); color: var(--muted);
   line-height: 1.85; margin-bottom: var(--sp-8);
 }
-.res-empty-cats {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: var(--sp-3); margin-bottom: var(--sp-8);
-}
-.res-empty-cat {
-  background: #FAF8F4;
-  border: 1px solid rgba(148,136,120,0.1);
-  border-radius: var(--radius-md); padding: var(--sp-4);
-}
-.res-empty-cat-name {
-  font-size: var(--text-sm); font-weight: 600;
-  color: var(--ink); margin-bottom: var(--sp-1);
-}
-.res-empty-cat-desc { font-size: var(--text-xs); color: var(--muted); line-height: 1.6; }
 .res-empty-note { font-size: var(--text-xs); color: var(--muted-lt); font-style: italic; }
-
-/* ── 有资源布局 ────────────────────────────────────────── */
 .res-layout { display: grid; grid-template-columns: 200px 1fr; gap: var(--sp-12); }
 .res-sidebar { display: flex; flex-direction: column; gap: var(--sp-2); }
 .res-sidebar-label {
@@ -199,23 +246,40 @@ const isEmpty = resources.length === 0 && !topicParam;
 .res-sidebar-label:first-child { margin-top: 0; }
 .res-nav { display: flex; flex-direction: column; gap: 2px; }
 .res-nav-item {
+  all: unset; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between;
   font-size: var(--text-sm); color: var(--muted);
   padding: var(--sp-2) var(--sp-3); border-radius: var(--radius);
-  transition: background 0.15s, color 0.15s; text-decoration: none;
-  display: block;
+  transition: background 0.15s, color 0.15s;
+  cursor: pointer; width: 100%; line-height: 1.5;
 }
 .res-nav-item:hover { background: rgba(148,136,120,0.08); color: var(--ink); }
 .res-nav-item.active { background: rgba(148,136,120,0.12); color: var(--ink); font-weight: 500; }
-.res-sidebar-divider { height: 1px; background: var(--border); margin: var(--sp-5) 0; }
-.res-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-5);
+.res-nav-item--disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+.res-nav-count {
+  font-size: 10px; color: var(--muted-lt);
+  background: rgba(148,136,120,0.08);
+  padding: 1px 6px; border-radius: 99px; flex-shrink: 0;
 }
-
-/* ── 响应式 ────────────────────────────────────────────── */
+.res-nav-badge {
+  font-size: 10px; color: var(--muted-lt);
+  border: 1px solid var(--border);
+  padding: 1px 6px; border-radius: 99px; flex-shrink: 0;
+}
+.res-filter-label {
+  font-size: var(--text-xs); color: var(--muted);
+  margin-bottom: var(--sp-4); min-height: 1.5em;
+}
+.res-filter-empty {
+  padding: var(--sp-10); text-align: center;
+  color: var(--muted); font-size: var(--text-sm);
+}
+.res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-5); }
 @media (max-width: 900px) {
   .res-layout { grid-template-columns: 1fr; }
-  .res-sidebar { flex-direction: row; flex-wrap: wrap; }
+  .res-sidebar { flex-direction: row; flex-wrap: wrap; gap: var(--sp-2); }
+  .res-nav { flex-direction: row; flex-wrap: wrap; }
+  .res-nav-item { width: auto; font-size: var(--text-xs); padding: var(--sp-2) var(--sp-3); }
   .res-grid { grid-template-columns: 1fr; }
-  .res-empty-cats { grid-template-columns: 1fr; }
 }
 </style>
