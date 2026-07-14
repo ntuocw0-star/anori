@@ -1,0 +1,68 @@
+{
+  "id": "RI-ANORI-0002",
+  "version": "1.0.0",
+  "schema_version": "ORS-v1.0",
+  "title": {
+    "zh-Hans": "每周家庭观察记录",
+    "en": "Weekly Family Observation Sheet"
+  },
+  "organization_id": null,
+  "language_status": "bilingual_zh_en",
+  "reuse_status": "open_license",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "verification_status": "ready",
+  "target_age": {
+    "min": 2,
+    "max": null
+  },
+  "audience": [
+    "parent"
+  ],
+  "printable": true,
+  "related_ka": [],
+  "related_ea": [],
+  "related_path": [],
+  "educational_framework": [
+    "parent_implemented",
+    "visual_supports"
+  ],
+  "disclaimer": "standard_v1",
+  "file_package": {
+    "print_pdf": "family-observation-sheet.pdf",
+    "screen_pdf": "family-observation-sheet-screen.pdf",
+    "mobile_print": "family-observation-sheet-mobile.png",
+    "mobile_screen": "family-observation-sheet-mobile-screen.png",
+    "thumbnail_print": "thumbnail.png",
+    "thumbnail_screen": "thumbnail-screen.png",
+    "preview_print": "preview.webp",
+    "preview_screen": "preview-screen.webp"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "Initial draft. Sprint 20B-3. ORS v1.0 compliant."
+    },
+    {
+      "version": "1.0.0-ir",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "Internal Review build. ① Day col bolder. ② Highlight box stronger. + Screen Edition added (ORS 3.5 Dual Edition)."
+    },
+    {
+      "version": "1.0.0-qa",
+      "date": "2026-07-13",
+      "author": "Anori",
+      "notes": "Internal Review passed. QA stage. v1.1 candidate: day column width +3–5mm."
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-07-14",
+      "author": "Anori",
+      "notes": "QA passed (digital review). Physical print QA deferred to v1.1. verification_status: qa → ready. Sprint 20B-3 complete."
+    }
+  ],
+  "generated_at": "2026-07-13T00:00:00Z"
+}

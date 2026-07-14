@@ -1,13 +1,26 @@
 {
-  "generated_at": "2026-07-13T06:26:49.250Z",
+  "generated_at": "2026-07-14T02:21:51.916Z",
   "passed": true,
   "summary": {
     "errors": 0,
-    "warnings": 0,
-    "infos": 3
+    "warnings": 3,
+    "infos": 5
   },
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    {
+      "type": "warning",
+      "message": "KA \"KA-Visual-001\" series.name 无法解析: 视觉支持"
+    },
+    {
+      "type": "warning",
+      "message": "KA \"KA-Family-001\" series.name 无法解析: 家庭支持"
+    },
+    {
+      "type": "warning",
+      "message": "KA \"KA-Participation-001\" series.name 无法解析: 参与"
+    }
+  ],
   "infos": [
     {
       "type": "info",
@@ -19,7 +32,15 @@
     },
     {
       "type": "info",
-      "message": "No orphan KA."
+      "message": "Orphan KA: KA-Visual-001"
+    },
+    {
+      "type": "info",
+      "message": "Orphan KA: KA-Family-001"
+    },
+    {
+      "type": "info",
+      "message": "Orphan KA: KA-Participation-001"
     }
   ]
 }

@@ -5,6 +5,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 import PageCard from "../components/PageCard.astro";
 import { pages, vars, rels } from "../lib/repository";
 import problemsData from "../repository/problems.json";
+import userPathsData from "../repository/user-paths.json";
 
 const CATEGORY_ORDER = ["emotion", "communication", "sleep", "school", "caregiver"] as const;
 type CategoryKey = typeof CATEGORY_ORDER[number];
@@ -112,54 +113,34 @@ const assistEntries = [
   </div>
 </section>
 
-<!-- ② P001–P005 行动路径（主入口） -->
-<section class="paths-section">
-  <div class="wrap">
-    <div class="paths-header">
-      <p class="paths-eyebrow">行动路径</p>
-      <h2 class="paths-title">从孩子的情况开始</h2>
-      <p class="paths-sub">每条路径对应一个真实的家长处境，一步一步带你走到今天可以做的事。</p>
-    </div>
-    <p class="paths-guide">不知道从哪里开始也没关系，选择一个最接近你今天情况的入口。</p>
-    <div class="paths-grid">
-      <a href="/paths/p001/journey" class="path-card">
-        <p class="path-card-sentence">不会说话不等于不会沟通。今天可以从一张图片开始。</p>
-        <p class="path-card-title">孩子不会说话</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-      <a href="/paths/p002/journey" class="path-card">
-        <p class="path-card-sentence">崩溃不是脾气问题。先读懂来源，再决定支持方式。</p>
-        <p class="path-card-title">孩子不会表达情绪</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-      <a href="/paths/p003/journey" class="path-card">
-        <p class="path-card-sentence">行为是信息，不是问题。找到来源，才能真正帮到孩子。</p>
-        <p class="path-card-title">孩子行为问题</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-      <a href="/paths/p004/journey" class="path-card">
-        <p class="path-card-sentence">学校不是另一个战场，而是支持系统的一部分。</p>
-        <p class="path-card-title">孩子学校适应</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-      <a href="/paths/p005/journey" class="path-card">
-        <p class="path-card-sentence">社交不是让孩子变成别的样子，而是帮他找到属于他的方式。</p>
-        <p class="path-card-title">孩子社交参与</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-      <a href="/paths/p006/journey" class="path-card path-card--caregiver">
-        <p class="path-card-sentence">你一直在支撑孩子，却很少有人问过：你还撑得住吗？</p>
-        <p class="path-card-title">我已经很累了，该怎么办？</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-      <a href="/paths/p007/journey" class="path-card">
-        <p class="path-card-sentence">剪头发崩溃、怕吸尘器、一直转圈——这些可能来自同一个原因。</p>
-        <p class="path-card-title">感觉处理</p>
-        <span class="path-card-cta">进入路径 →</span>
-      </a>
-    </div>
-  </div>
-</section>
+<!-- ② 行动路径（自动读取 user-paths.json） -->
+{(() => {
+  const userPaths = (userPathsData as any).paths as any[];
+  return (
+    <section class="paths-section">
+      <div class="wrap">
+        <div class="paths-header">
+          <p class="paths-eyebrow">行动路径</p>
+          <h2 class="paths-title">从孩子的情况开始</h2>
+          <p class="paths-sub">每条路径对应一个真实的家长处境，一步一步带你走到今天可以做的事。</p>
+        </div>
+        <p class="paths-guide">不知道从哪里开始也没关系，选择一个最接近你今天情况的入口。</p>
+        <div class="paths-grid">
+          {userPaths.map((up: any) => (
+            <a
+              href={`/paths/${up.id}/journey`}
+              class={`path-card${up.id === 'p006' ? ' path-card--caregiver' : ''}`}
+            >
+              <p class="path-card-sentence">{up.one_sentence}</p>
+              <p class="path-card-title">{up.title}</p>
+              <span class="path-card-cta">进入路径 →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+})()}
 
 <!-- ③ 辅助选择入口 -->
 <section class="assist-section">

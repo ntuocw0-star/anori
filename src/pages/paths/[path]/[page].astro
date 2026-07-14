@@ -272,6 +272,25 @@ const pageKeywords: string[] = seoData.keywords ?? [];
           />
         )}
 
+        {/* Practice Resources — each card renders its own anori_note */}
+        {content.practice_resources?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">实用资源</p>
+            <div class="up-resource-cards">
+              {content.practice_resources.map((res: any) => (
+                <div class="up-resource-card">
+                  <p class="up-resource-name">{res.name}</p>
+                  {res.what && <p class="up-resource-what">{res.what}</p>}
+                  {res.when && <p class="up-resource-when"><span>适合时机：</span>{res.when}</p>}
+                  {res.anori_note && (
+                    <p class="up-resource-note"><span class="up-resource-note-label">Anori 提示：</span>{res.anori_note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Next Steps */}
         <NextSteps steps={nextStepsResolved} />
 
@@ -483,6 +502,25 @@ const pageKeywords: string[] = seoData.keywords ?? [];
           />
         )}
 
+        {/* Practice Resources — each card renders its own anori_note */}
+        {content.practice_resources?.length > 0 && (
+          <section class="up-section">
+            <p class="up-section-label">实用资源</p>
+            <div class="up-resource-cards">
+              {content.practice_resources.map((res: any) => (
+                <div class="up-resource-card">
+                  <p class="up-resource-name">{res.name}</p>
+                  {res.what && <p class="up-resource-what">{res.what}</p>}
+                  {res.when && <p class="up-resource-when"><span>适合时机：</span>{res.when}</p>}
+                  {res.anori_note && (
+                    <p class="up-resource-note"><span class="up-resource-note-label">Anori 提示：</span>{res.anori_note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Next Steps */}
         <NextSteps steps={nextStepsResolved} />
 
@@ -543,5 +581,9 @@ const pageKeywords: string[] = seoData.keywords ?? [];
 <SiteFooter />
 </BaseLayout>
 
+
+<style>
+.up-resource-cards{display:flex;flex-direction:column;gap:var(--sp-4)}.up-resource-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--sp-5)}.up-resource-name{font-weight:600;font-size:var(--text-sm);color:var(--ink);margin-bottom:var(--sp-2)}.up-resource-what{font-size:var(--text-sm);color:var(--muted);line-height:1.65}.up-resource-when{font-size:var(--text-xs);color:var(--muted-lt);margin-top:var(--sp-2)}.up-resource-when span{font-weight:500}.up-resource-note{font-size:var(--text-xs);color:var(--brand);background:rgba(37,99,235,.06);border-radius:var(--radius);padding:var(--sp-2) var(--sp-3);margin-top:var(--sp-3);line-height:1.65}.up-resource-note-label{font-weight:600;margin-right:.25em}
+</style>
 
 <!-- styles in global.css -->

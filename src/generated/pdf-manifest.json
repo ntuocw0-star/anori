@@ -1,11 +1,11 @@
 {
   "schemaId": "PDF-Manifest",
   "schema_version": "1.0",
-  "generated_at": "2026-07-13T10:43:38.974Z",
+  "generated_at": "2026-07-14T03:03:46.635Z",
   "summary": {
-    "total": 3,
-    "ok": 3,
-    "skipped": 3,
+    "total": 6,
+    "ok": 6,
+    "skipped": 6,
     "failed": 0
   },
   "items": [
@@ -40,6 +40,39 @@
       "status": "ok",
       "generatedAt": "2026-07-13T09:43:12.026Z",
       "htmlHash": "sha256:63ec08143c3a2d965f4b432353c2267ed33c4905703acfce64ebf156e13bfff0",
+      "skipped": true
+    },
+    {
+      "contentId": "KA-Family-001",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-Family-001-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-Family-001\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-14T02:33:04.847Z",
+      "htmlHash": "sha256:b641e60674a529802a3b5c8538629e6836d20377a639612e6779f2b784622b5d",
+      "skipped": true
+    },
+    {
+      "contentId": "KA-Participation-001",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-Participation-001-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-Participation-001\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-14T02:33:20.280Z",
+      "htmlHash": "sha256:867d952be98fe3be5b907fa211d1bdb993de671b578d7d179a9bd85dd83a77e6",
+      "skipped": true
+    },
+    {
+      "contentId": "KA-Visual-001",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-Visual-001-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-Visual-001\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-14T02:33:34.122Z",
+      "htmlHash": "sha256:4133f3b0d7db66a4ef27982c6410e95cf6b0aa9b1eb56f7f5648a4f6c9a6d39f",
       "skipped": true
     }
   ]

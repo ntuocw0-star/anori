@@ -1116,6 +1116,181 @@
           ]
         }
       ]
+    },
+    {
+      "id": "p008",
+      "title": "孩子的发展与学习",
+      "one_sentence": "发展不是一条所有孩子同时到达的直线。先看见孩子正在怎样学习，再判断他需要什么支持。",
+      "description": "帮助家长理解发展差异、里程碑与学习方式，找到观察和支持的起点",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "孩子的发展与学习 Journey",
+          "type": "journey",
+          "one_outcome": "理解孩子的发展变化，知道从哪里开始观察",
+          "one_moment": "从担忧走到可以做的第一件事",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "孩子的发展与学习"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "发展差异是什么意思？",
+          "type": "understanding",
+          "one_outcome": "理解发展差异不等于发育障碍",
+          "one_moment": "换一种方式描述孩子的状态",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "孩子的发展与学习",
+            "发展差异是什么意思？"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "今天可以观察什么？",
+          "type": "support",
+          "one_outcome": "知道如何记录孩子的发展变化，为下一步准备",
+          "one_moment": "今天记下一件孩子做了但上个月还不会做的事",
+          "next": [
+            "s001",
+            "s002"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "孩子的发展与学习",
+            "今天可以观察什么？"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "发展里程碑怎么看？",
+          "type": "support_plus",
+          "one_outcome": "能用里程碑清单作为对话工具，而不是焦虑来源",
+          "one_moment": "带着记录去和专业人员说一件具体的事",
+          "next": [
+            "s002"
+          ],
+          "prev": "sup001",
+          "breadcrumb": [
+            "首页",
+            "孩子的发展与学习",
+            "发展里程碑怎么看？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "他用不同的方式在学习",
+          "type": "support_plus",
+          "one_outcome": "识别孩子偏好的一种学习方式",
+          "one_moment": "今天试一种不一样的教他某件事的方式",
+          "next": [],
+          "prev": "s001",
+          "cross_path": "p009",
+          "breadcrumb": [
+            "首页",
+            "孩子的发展与学习",
+            "他用不同的方式在学习"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p009",
+      "title": "沟通与表达",
+      "one_sentence": "沟通不只发生在说话里。眼神、动作、图片和设备，都可能成为孩子表达自己的方式。",
+      "description": "帮助家长理解口语之外的沟通方式，找到适合孩子的表达支持入口",
+      "pages": [
+        {
+          "id": "journey",
+          "title": "沟通与表达 Journey",
+          "type": "journey",
+          "one_outcome": "理解沟通不只是说话，知道孩子现在用什么方式在表达",
+          "one_moment": "看见孩子已经在用的一种沟通方式",
+          "next": [
+            "u001"
+          ],
+          "prev": null,
+          "breadcrumb": [
+            "首页",
+            "沟通与表达"
+          ]
+        },
+        {
+          "id": "u001",
+          "title": "沟通是什么，不只是说话",
+          "type": "understanding",
+          "one_outcome": "理解沟通的多种形式，看见孩子已经在做的事",
+          "one_moment": "数出孩子今天用了几种方式表达自己",
+          "next": [
+            "sup001"
+          ],
+          "prev": "journey",
+          "breadcrumb": [
+            "首页",
+            "沟通与表达",
+            "沟通是什么，不只是说话"
+          ]
+        },
+        {
+          "id": "sup001",
+          "title": "从今天开始支持沟通",
+          "type": "support",
+          "one_outcome": "找到一个今天可以试的沟通支持方式",
+          "one_moment": "今天在一个固定时刻等孩子表达，而不是代替他说",
+          "next": [
+            "s001",
+            "s002"
+          ],
+          "prev": "u001",
+          "breadcrumb": [
+            "首页",
+            "沟通与表达",
+            "从今天开始支持沟通"
+          ]
+        },
+        {
+          "id": "s001",
+          "title": "图片和视觉支持怎么用？",
+          "type": "support_plus",
+          "one_outcome": "能做出或打印第一张视觉支持卡片",
+          "one_moment": "用图片替代一次口头指令",
+          "next": [
+            "s002"
+          ],
+          "prev": "sup001",
+          "cross_path": "p001",
+          "breadcrumb": [
+            "首页",
+            "沟通与表达",
+            "图片和视觉支持怎么用？"
+          ]
+        },
+        {
+          "id": "s002",
+          "title": "他在用什么方式告诉我他要什么？",
+          "type": "support_plus",
+          "one_outcome": "记录下孩子目前用的三种沟通方式",
+          "one_moment": "回应一次孩子的非语言表达",
+          "next": [],
+          "prev": "s001",
+          "cross_path": "p008",
+          "breadcrumb": [
+            "首页",
+            "沟通与表达",
+            "他在用什么方式告诉我他要什么？"
+          ]
+        }
+      ]
     }
   ]
 }

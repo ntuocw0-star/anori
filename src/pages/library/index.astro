@@ -5,18 +5,41 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import topicsData from '../../repository/library/topics.json';
 import seriesData from '../../repository/library/series.json';
+import kaData from '../../repository/knowledge.json';
 import { TERMS } from '../../i18n/terminology';
 const topics = ((topicsData as any).topics as any[]).filter(t=>t.status==='active').sort((a,b)=>a.order-b.order);
 const seriesMap = new Map(((seriesData as any).series as any[]).map(s=>[s.id,s]));
+const foundationKAs = ((kaData as any).articles as any[]).filter((ka: any) => ka.foundation === true);
 ---
 <BaseLayout title={`${TERMS.library.label} · Anori`} description={`浏览 Anori 收录的${TERMS.ea.label}与${TERMS.ka.label}，按${TERMS.topic.label}与${TERMS.series.label}组织。`}>
 <SiteNav />
 <div class="library-hero"><div class="library-wrap"><Breadcrumb items={[{label:'首页',href:'/'},{label:TERMS.library.label}]} /><h1>{TERMS.library.label}</h1><p>按{TERMS.topic.label}浏览{TERMS.ea.label}、{TERMS.et.label}与{TERMS.ka.label}。</p><form action="/search" method="get" role="search"><label class="sr-only" for="library-q">{TERMS.search.label}</label><input id="library-q" name="q" type="search" placeholder="描述你观察到的情况，例如：孩子不会表达需求……"/><button>{TERMS.search.label}</button></form><small>不知道该如何描述也没关系，可以先输入你观察到的情况。</small></div></div>
 <main class="library-wrap topics">
+{foundationKAs.length > 0 && (
+  <section class="foundation-block">
+    <div class="foundation-head">
+      <p class="eyebrow">FOUNDATION KNOWLEDGE</p>
+      <h2>基础知识</h2>
+      <p>回答三个最基础的问题：工具为什么有效、环境为什么重要、参与是什么意思。</p>
+    </div>
+    <div class="foundation-grid">
+      {foundationKAs.map((ka: any) => (
+        <a class="foundation-card" href={`/library/ka/${ka.id}`}>
+          <span class="ka-badge">KA</span>
+          <h3>{ka.title}</h3>
+          <p>{ka.one_sentence}</p>
+          <span class="read-link">阅读 →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
 {topics.map(topic=>{const topicSeries=(topic.series??[]).map((id:string)=>seriesMap.get(id)).filter(Boolean).filter((s:any)=>s.status==='active').sort((a:any,b:any)=>a.order-b.order);return <section class="topic-block"><div class="topic-head"><div><h2>{topic.label}</h2><p>{topic.description}</p></div><a href={`/library/${topic.slug}`}>浏览{TERMS.topic.label} →</a></div><div class="series-grid">{topicSeries.map((series:any)=><a class="series-card" href={series.canonical}><span class="eyebrow">{series.cover?.title??TERMS.series.label}</span><h3>{series.label}</h3><p>{series.description}</p><div class="stats"><span><strong>{series.statistics?.ea??0}</strong> {TERMS.ea.label}</span><span><strong>{series.statistics?.et??0}</strong> {TERMS.et.label}</span><span><strong>{series.statistics?.ka??0}</strong> {TERMS.ka.label}</span></div></a>)}</div></section>})}
 </main>
 <SiteFooter />
 </BaseLayout>
 <style>
-.library-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:var(--sp-10) 0}.library-wrap{max-width:760px;margin:0 auto;padding:0 var(--sp-6)}.library-hero h1{font-family:var(--font-display);font-size:var(--text-4xl);margin:var(--sp-4) 0 var(--sp-2)}.library-hero p{color:var(--muted);margin-bottom:var(--sp-5)}form{display:flex;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:#fff}input{flex:1;border:0;padding:var(--sp-4);font:inherit;min-width:0}button{border:0;background:var(--ink);color:#fff;padding:0 var(--sp-6);cursor:pointer}.library-hero small{display:block;color:var(--muted);margin-top:var(--sp-2)}.topics{padding-top:var(--sp-12);padding-bottom:var(--sp-24)}.topic-block+ .topic-block{margin-top:var(--sp-16)}.topic-head{display:flex;justify-content:space-between;gap:var(--sp-6);align-items:end;margin-bottom:var(--sp-5)}.topic-head h2{font-size:var(--text-xl)}.topic-head p{color:var(--muted);font-size:var(--text-sm)}.topic-head>a{color:var(--brand);font-size:var(--text-sm);white-space:nowrap}.series-grid{display:grid;gap:var(--sp-4)}.series-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--sp-6);transition:.15s}.series-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}.eyebrow{font-size:var(--text-xs);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}.series-card h3{font-size:var(--text-lg);margin:var(--sp-2) 0}.series-card p{color:var(--muted);font-size:var(--text-sm)}.stats{display:flex;gap:var(--sp-6);margin-top:var(--sp-5);font-size:var(--text-xs);color:var(--muted)}.stats strong{font-size:var(--text-lg);color:var(--ink);margin-right:.2rem}@media(max-width:560px){.topic-head{align-items:start;flex-direction:column}.library-hero h1{font-size:var(--text-3xl)}}
+.library-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:var(--sp-10) 0}.library-wrap{max-width:760px;margin:0 auto;padding:0 var(--sp-6)}.library-hero h1{font-family:var(--font-display);font-size:var(--text-4xl);margin:var(--sp-4) 0 var(--sp-2)}.library-hero p{color:var(--muted);margin-bottom:var(--sp-5)}form{display:flex;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:#fff}input{flex:1;border:0;padding:var(--sp-4);font:inherit;min-width:0}button{border:0;background:var(--ink);color:#fff;padding:0 var(--sp-6);cursor:pointer}.library-hero small{display:block;color:var(--muted);margin-top:var(--sp-2)}.topics{padding-top:var(--sp-12);padding-bottom:var(--sp-24)}.topic-block+.topic-block{margin-top:var(--sp-16)}.topic-head{display:flex;justify-content:space-between;gap:var(--sp-6);align-items:end;margin-bottom:var(--sp-5)}.topic-head h2{font-size:var(--text-xl)}.topic-head p{color:var(--muted);font-size:var(--text-sm)}.topic-head>a{color:var(--brand);font-size:var(--text-sm);white-space:nowrap}.series-grid{display:grid;gap:var(--sp-4)}.series-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--sp-6);transition:.15s}.series-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}.eyebrow{font-size:var(--text-xs);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}.series-card h3{font-size:var(--text-lg);margin:var(--sp-2) 0}.series-card p{color:var(--muted);font-size:var(--text-sm)}.stats{display:flex;gap:var(--sp-6);margin-top:var(--sp-5);font-size:var(--text-xs);color:var(--muted)}.stats strong{font-size:var(--text-lg);color:var(--ink);margin-right:.2rem}
+.foundation-block{margin-bottom:var(--sp-16)}.foundation-head{margin-bottom:var(--sp-6)}.foundation-head h2{font-size:var(--text-xl);margin:var(--sp-1) 0 var(--sp-2)}.foundation-head>p:last-child{color:var(--muted);font-size:var(--text-sm)}.foundation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--sp-4)}.foundation-card{display:flex;flex-direction:column;gap:var(--sp-2);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--sp-6);transition:.15s;text-decoration:none;color:inherit}.foundation-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--brand)}.ka-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.08em;color:var(--brand);background:rgba(37,99,235,.08);border-radius:99px;padding:2px 8px;width:fit-content}.foundation-card h3{font-size:var(--text-base);font-weight:600;line-height:1.4;margin:0}.foundation-card>p{font-size:var(--text-sm);color:var(--muted);line-height:1.6;flex:1}.read-link{font-size:var(--text-sm);color:var(--brand);font-weight:500;margin-top:var(--sp-2)}
+@media(max-width:560px){.topic-head{align-items:start;flex-direction:column}.library-hero h1{font-size:var(--text-3xl)}.foundation-grid{grid-template-columns:1fr}}
 </style>
