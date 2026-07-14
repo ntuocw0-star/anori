@@ -1,9 +1,9 @@
 {
   "schemaId": "Translation-Index",
   "schema_version": "1.0",
-  "generated_at": "2026-07-13T06:22:42.083Z",
+  "generated_at": "2026-07-14T07:49:52.386Z",
   "source_dir": "repository\\knowledge\\evidence\\cards\\ET",
-  "count": 6,
+  "count": 22,
   "items": [
     {
       "id": "ET-000001",
@@ -108,6 +108,251 @@
       "body": "你有没有怀疑过，自己是不是太脆弱了？\n\n研究有一个答案。\n\n研究者花了很多年，比较了很多家庭——有 ASD 孩子的家庭，和没有特殊需求孩子的家庭。他们测量父母的压力水平，然后把结果放在一起。\n\n结论是：差距是真实的，而且很大。\n\n不是稍微高一点，是合并分析显示，差距达到统计学上的大效应量。这在统计上叫做\"大效应量\"。它的意思是：这不是偶然，这是可以被反复观察到的规律。\n\n**你感到累，不是你太敏感，也不是你不够坚强。**\n**你感到的压力，在数据里是真实存在的。**",
       "action_prompt": "你不需要证明自己\"够累了才可以说累\"。\n\n数据已经帮你说了这件事。",
       "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000007.md"
+    },
+    {
+      "id": "ET-000008",
+      "source_ea": [],
+      "topic": "为什么视觉支持有效",
+      "audience": "家长",
+      "target_path": [
+        "p009/s001",
+        "p001/sup001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000008.md"
+    },
+    {
+      "id": "ET-000009",
+      "source_ea": [],
+      "topic": "哪些孩子适合视觉支持",
+      "audience": "家长",
+      "target_path": [
+        "p009/u001",
+        "p001/u001",
+        "p007/u001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000009.md"
+    },
+    {
+      "id": "ET-000010",
+      "source_ea": [],
+      "topic": "常见视觉支持形式",
+      "audience": "家长",
+      "target_path": [
+        "p009/s001",
+        "p009/sup001"
+      ],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000010.md"
+    },
+    {
+      "id": "ET-000011",
+      "source_ea": [],
+      "topic": "视觉支持实施原则",
+      "audience": "家长",
+      "target_path": [
+        "p009/sup001",
+        "p009/s001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000011.md"
+    },
+    {
+      "id": "ET-000012",
+      "source_ea": [],
+      "topic": "沟通不等于说话",
+      "audience": "家长",
+      "target_path": [
+        "p009/journey",
+        "p001/journey"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000012.md"
+    },
+    {
+      "id": "ET-000013",
+      "source_ea": [],
+      "topic": "AAC 是沟通，不是放弃说话",
+      "audience": "家长",
+      "target_path": [
+        "p001/u001",
+        "p009/u001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000013.md"
+    },
+    {
+      "id": "ET-000014",
+      "source_ea": [],
+      "topic": "为什么不需要等待才开始 AAC",
+      "audience": "家长",
+      "target_path": [
+        "p001/sup001",
+        "p009/sup001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000014.md"
+    },
+    {
+      "id": "ET-000015",
+      "source_ea": [],
+      "topic": "AAC 有哪些形式",
+      "audience": "家长",
+      "target_path": [
+        "p001/sup001",
+        "p001/s001",
+        "p001/s002",
+        "p009/s001"
+      ],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000015.md"
+    },
+    {
+      "id": "ET-000016",
+      "source_ea": [],
+      "topic": "共同注意：沟通从这里开始",
+      "audience": "家长",
+      "target_path": [
+        "p009/u001",
+        "p001/u001",
+        "p008/u001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000016.md"
+    },
+    {
+      "id": "ET-000017",
+      "source_ea": [],
+      "topic": "回应比纠正更重要",
+      "audience": "家长",
+      "target_path": [
+        "p009/sup001",
+        "p001/sup001"
+      ],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000017.md"
+    },
+    {
+      "id": "ET-000018",
+      "source_ea": [],
+      "topic": "语言发展不是一条统一的时间线",
+      "audience": "家长",
+      "target_path": [
+        "p008/u001",
+        "p009/u001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000018.md"
+    },
+    {
+      "id": "ET-000019",
+      "source_ea": [],
+      "topic": "理解语言和表达语言不是同一件事",
+      "audience": "家长",
+      "target_path": [
+        "p008/u001",
+        "p009/u001",
+        "p001/u001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000019.md"
+    },
+    {
+      "id": "ET-000020",
+      "source_ea": [],
+      "topic": "孩子是怎样学会语言的",
+      "audience": "家长",
+      "target_path": [
+        "p008/u001",
+        "p009/u001"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000020.md"
+    },
+    {
+      "id": "ET-000021",
+      "source_ea": [],
+      "topic": "在家怎样支持语言发展",
+      "audience": "家长",
+      "target_path": [
+        "p008/sup001",
+        "p009/sup001"
+      ],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000021.md"
+    },
+    {
+      "id": "ET-000022",
+      "source_ea": [],
+      "topic": "什么时候值得进一步寻求支持",
+      "audience": "家长",
+      "target_path": [
+        "p008/s001",
+        "p009/s002"
+      ],
+      "reading_time": "3 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000022.md"
+    },
+    {
+      "id": "ET-000023",
+      "source_ea": [],
+      "topic": "双语环境与语言发展",
+      "audience": "家长",
+      "target_path": [
+        "p008/u001",
+        "p009/u001"
+      ],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000023.md"
     }
   ]
 }

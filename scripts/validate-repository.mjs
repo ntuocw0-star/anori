@@ -109,7 +109,7 @@ function main() {
 
   // ── 16B.2: EA Markdown 原始 metadata 检查 ─────────────────────────────────
   // 直接读 Markdown 文件（不读 generated/ea.json），保留脏引用可见性
-  const EA_MD_DIR = path.join(ROOT, 'knowledge/evidence/cards/Deconstruction');
+  const EA_MD_DIR = path.join(ROOT, 'repository/knowledge/evidence/cards/Deconstruction');
   const VALID_ET_ID = /^ET-\d{6}$/;
   const VALID_KA_ID = /^KA-\d{6}$/;
 

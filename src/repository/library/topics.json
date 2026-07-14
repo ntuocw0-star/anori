@@ -1,15 +1,155 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10",
+  "updated_at": "2026-07-14",
   "topics": [
     {
       "id": "topic-aac",
       "slug": "aac",
       "label": "辅助沟通（AAC）",
       "description": "关于辅助沟通系统的研究、实践与家庭支持资源。",
-      "series": ["series-aac"],
+      "series": [
+        "series-aac"
+      ],
       "order": 1,
       "status": "active"
+    },
+    {
+      "id": "topic-visual-supports",
+      "slug": "visual-supports",
+      "label": "视觉支持",
+      "description": "视觉支持为什么有效、哪些孩子适合、常见形式与实施原则。",
+      "series": [
+        "series-visual-supports"
+      ],
+      "order": 2,
+      "status": "active"
+    },
+    {
+      "id": "topic-communication",
+      "slug": "communication",
+      "label": "沟通与 AAC",
+      "description": "沟通不等于说话、AAC 的证据基础、共同注意与回应策略。",
+      "series": [
+        "series-communication"
+      ],
+      "order": 3,
+      "status": "active"
+    },
+    {
+      "id": "topic-language",
+      "slug": "language",
+      "label": "语言发展",
+      "description": "语言发展的时间线、理解与表达的区别、家庭支持策略与双语环境。",
+      "series": [
+        "series-language-development"
+      ],
+      "order": 4,
+      "status": "active"
+    },
+    {
+      "id": "topic-parent-stress",
+      "slug": "parent-stress",
+      "label": "父母压力",
+      "description": "照顾有特殊需求孩子的父母，压力从哪里来，以及什么真正有帮助。",
+      "series": [
+        "series-parent-stress"
+      ],
+      "order": 5,
+      "status": "active"
+    },
+    {
+      "id": "topic-social-communication",
+      "slug": "social-communication",
+      "label": "社交沟通",
+      "description": "社交沟通是什么、游戏与同伴互动如何发展、家庭怎样支持社交沟通。",
+      "series": [],
+      "order": 6,
+      "status": "planned"
+    },
+    {
+      "id": "topic-play",
+      "slug": "play",
+      "label": "游戏与学习",
+      "description": "游戏在儿童发展中的角色、游戏技能如何支持学习与社交。",
+      "series": [],
+      "order": 7,
+      "status": "planned"
+    },
+    {
+      "id": "topic-peer",
+      "slug": "peer",
+      "label": "同伴互动",
+      "description": "同伴关系的发展、友谊的建立、融合环境中的支持策略。",
+      "series": [],
+      "order": 8,
+      "status": "planned"
+    },
+    {
+      "id": "topic-school",
+      "slug": "school",
+      "label": "学校适应",
+      "description": "学校准备度、融合教育、家校协作与学业支持。",
+      "series": [],
+      "order": 9,
+      "status": "planned"
+    },
+    {
+      "id": "topic-family-support",
+      "slug": "family-support",
+      "label": "家庭支持",
+      "description": "家庭系统、照顾者资源、家庭生活质量与支持网络。",
+      "series": [
+        "series-family-support"
+      ],
+      "order": 10,
+      "status": "active"
+    },
+    {
+      "id": "topic-participation",
+      "slug": "participation",
+      "label": "参与",
+      "description": "参与的意义、ICF 框架、日常生活参与的促进策略。",
+      "series": [
+        "series-participation"
+      ],
+      "order": 11,
+      "status": "active"
+    },
+    {
+      "id": "topic-transition",
+      "slug": "transition",
+      "label": "过渡与衔接",
+      "description": "生命阶段过渡（早期干预到学校、学校到成人）的支持与规划。",
+      "series": [],
+      "order": 12,
+      "status": "planned"
+    },
+    {
+      "id": "topic-emotion",
+      "slug": "emotion",
+      "label": "情绪调节",
+      "description": "情绪理解与调节、行为背后的情绪信号、家庭支持策略。",
+      "series": [],
+      "order": 13,
+      "status": "planned"
+    },
+    {
+      "id": "topic-sensory",
+      "slug": "sensory",
+      "label": "感觉处理",
+      "description": "感觉处理差异、感觉支持策略、日常生活中的感觉调节。",
+      "series": [],
+      "order": 14,
+      "status": "planned"
+    },
+    {
+      "id": "topic-early-intervention",
+      "slug": "early-intervention",
+      "label": "早期干预",
+      "description": "早期干预的证据基础、何时开始、家长实施的支持策略。",
+      "series": [],
+      "order": 15,
+      "status": "planned"
     }
   ]
 }

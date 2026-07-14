@@ -157,6 +157,7 @@ function buildIndex(srcDir, parser, schemaId, cache, cacheKey) {
   const nextCache = {};
   let hits = 0;
   let parsed = 0;
+  let skipped = 0;
   const items = [];
 
   for (const file of files) {
@@ -168,10 +169,15 @@ function buildIndex(srcDir, parser, schemaId, cache, cacheKey) {
       nextCache[file] = cached;
       hits++;
     } else {
-      const item = parser(filePath);
-      items.push(item);
-      nextCache[file] = { mtime, item };
-      parsed++;
+      try {
+        const item = parser(filePath);
+        items.push(item);
+        nextCache[file] = { mtime, item };
+        parsed++;
+      } catch (err) {
+        console.warn(`[WARN] 跳过 ${file}: ${err instanceof Error ? err.message : err}`);
+        skipped++;
+      }
     }
   }
 
@@ -187,6 +193,7 @@ function buildIndex(srcDir, parser, schemaId, cache, cacheKey) {
     },
     hits,
     parsed,
+    skipped,
     deleted: Object.keys(previous).filter(f => !nextCache[f]).length,
   };
 }
@@ -219,7 +226,7 @@ function main() {
   fs.mkdirSync(path.dirname(CACHE_FILE), { recursive: true });
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2) + '\n', 'utf8');
 
-  console.log(`EA ${ea.index.count}: ${ea.hits} cache, ${ea.parsed} parsed, ${ea.deleted} deleted${eaChanged ? ', updated' : ''}`);
+  console.log(`EA ${ea.index.count}: ${ea.hits} cache, ${ea.parsed} parsed, ${ea.deleted} deleted, ${ea.skipped ?? 0} skipped${eaChanged ? ', updated' : ''}`);
   console.log(`ET ${et.index.count}: ${et.hits} cache, ${et.parsed} parsed, ${et.deleted} deleted${etChanged ? ', updated' : ''}`);
   console.log(`Manifest ${manifestChanged ? 'updated' : 'unchanged'}`);
 }

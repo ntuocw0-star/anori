@@ -1,15 +1,15 @@
 {
   "ea": {
     "EA-000001.md": {
-      "mtime": 1783837525762.6462,
+      "mtime": 1784012162411.2007,
       "item": {
         "id": "EA-000001",
-        "type": "Systematic Review + Qualitative Meta-Synthesis",
+        "type": null,
         "topic": "AAC · 家长体验",
         "population": "家长 / 照顾者（2–17岁复杂沟通需求儿童）",
         "sample": "19项研究 · 297位家长",
         "year": 2022,
-        "quality_level": "High",
+        "quality_level": null,
         "evidence_type": "Qualitative",
         "reading_time": "12 min",
         "related_et": [
@@ -18,11 +18,7 @@
           "ET-000003",
           "ET-000004"
         ],
-        "related_path": [
-          "P001",
-          "P004",
-          "P006"
-        ],
+        "related_path": [],
         "source": {
           "paper_title": "Parents' Perceptions and Experiences with Their Children's Use of Augmentative/Alternative Communication: A Systematic Review and Qualitative Meta-Synthesis",
           "authors": "Berenguer, C.; Martínez, E. R.; De Stasio, S.; Baixauli, I.",
@@ -249,6 +245,435 @@
         ],
         "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000004.md"
       }
+    },
+    "EA-000005.md": {
+      "mtime": 1784016752327.0142,
+      "item": {
+        "id": "EA-000005",
+        "type": null,
+        "topic": "topic-visual-supports",
+        "population": "\"儿童、青少年、年轻成人（自闭症谱系障碍）\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "systematic_review",
+        "reading_time": "15 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Evidence-Based Practices for Children, Youth, and Young Adults with Autism: Third Generation Review",
+          "authors": "Hume, K.; Steinbrenner, J. R.; Odom, S. L.; Morin, K. L.; Nowell, S. W.; Tomaszewski, B.; Szendrey, S.; McIntyre, N. S.; Yücesoy-Özkan, S.; Savage, M. N.",
+          "journal": "Journal of Autism and Developmental Disorders",
+          "year": "2021 · Vol. 51(11) · pp. 4013–4032",
+          "doi": "10.1007/s10803-020-04844-2",
+          "access": "Subscription · Preprint: https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP Report 2020.pdf",
+          "method": "Systematic Review（Third Generation）",
+          "scope": "1990–2017 · 567 篇研究（累计 972 篇）· 自闭症儿童、青少年和年轻成人"
+        },
+        "why_read": "它不问视觉支持是否有效，而是在 972 篇研究里，给视觉支持颁发了\"循证实践\"的认证。",
+        "research_question": "1990–2017 年间，哪些干预实践对自闭症儿童和青少年有明确正效应？",
+        "key_findings": [
+          "视觉支持被正式认定为循证干预实践",
+          "定义：任何帮助学习者在没有额外提示的情况下独立参与目标行为或技能的视觉呈现",
+          "适用年龄跨度广（幼儿期至青年期）",
+          "在任务参与、独立表现、减少适应不良行为等多个领域有效",
+          "此为该领域第三次迭代综述，结论已通过三代研究者独立复制"
+        ],
+        "parent_meaning": [
+          "很多家长后来才发现，视觉支持背后有将近三十年的研究积累——972 篇研究，三代学者独立验证，最终被认定为\"循证实践\"。这不是某个治疗师的个人偏好，而是目前我们能找到的最高等级的科学支持。",
+          "很多家长后来才发现，视觉支持适用的年龄和场景范围非常广——从幼儿期到青年期，从任务切换到沟通表达，不是只给\"最严重的孩子\"用的特殊工具。\n\n---"
+        ],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000005.md"
+      }
+    },
+    "EA-000006.md": {
+      "mtime": 1784016752348.9495,
+      "item": {
+        "id": "EA-000006",
+        "type": null,
+        "topic": "topic-visual-supports",
+        "population": "\"自闭症谱系障碍个体，幼儿至成年\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "systematic_review",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Evaluating Visual Activity Schedules as Evidence-Based Practice for Individuals with Autism Spectrum Disorders",
+          "authors": "Knight, V.; Sartini, E.; Spriggs, A. D.",
+          "journal": "Journal of Autism and Developmental Disorders",
+          "year": "2015 · Vol. 45(1) · pp. 157–178",
+          "doi": "10.1007/s10803-014-2201-z",
+          "access": "Subscription",
+          "method": "Systematic Review",
+          "scope": "1993–2013 · 31 篇研究（16 篇达质量标准）· ASD 个体，幼儿至成年"
+        },
+        "why_read": "它不看视觉支持整体，而是专门盯住视觉时间表（Visual Schedule）这一种形式，回答：有多少研究证明它有效？",
+        "research_question": "视觉活动时间表（一系列图片展示活动顺序）是否可以被认定为 ASD 人群的循证实践？",
+        "key_findings": [
+          "视觉活动时间表可被认定为 ASD 人群的 EBP",
+          "与系统教学程序结合时效果最一致",
+          "适用于从幼儿到成年的各年龄段",
+          "可推广至不同环境（普通教育、社区、家庭）",
+          "不同视觉格式（静态图片 vs. 平板）效果相当，个体偏好不同"
+        ],
+        "parent_meaning": [
+          "很多家长后来才发现，视觉时间表不是\"孩子适应了再撤掉\"的脚手架，而是一个有30年研究支持的工具——研究覆盖了从幼儿到成年的个体，说明它的价值不只在早期。\n\n---"
+        ],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000006.md"
+      }
+    },
+    "EA-000007.md": {
+      "mtime": 1784016752384.0522,
+      "item": {
+        "id": "EA-000007",
+        "type": null,
+        "topic": "topic-visual-supports",
+        "population": "\"ASD 儿童及其家庭\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "scoping_review",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Visual Supports at Home and in the Community for Individuals with Autism Spectrum Disorders: A Scoping Review",
+          "authors": "Rutherford, M.; Baxter, J.; Grayson, Z.; Johnston, L.; O'Hare, A.",
+          "journal": "Autism: The International Journal of Research and Practice",
+          "year": "2020 · Vol. 24(3) · pp. 447–469",
+          "doi": "10.1177/1362361319871756",
+          "access": "Subscription",
+          "method": "Scoping Review",
+          "scope": "家庭和社区环境中的视觉支持研究"
+        },
+        "why_read": "大多数视觉支持研究在学校或诊室做。这篇专门看家庭和社区——那才是家长真正需要用的地方。",
+        "research_question": "家庭和社区环境中，视觉支持的使用情况、效果和障碍是什么？",
+        "key_findings": [
+          "家庭和社区中使用视觉支持有正面效果的记录",
+          "该场景的研究相对稀缺（多数研究集中在教育环境）",
+          "家长实施的主要挑战：一致性、家庭成员认同度、缺乏持续专业支持",
+          "家长作为实施者是可行的，但需要支持和培训"
+        ],
+        "parent_meaning": [
+          "很多家长后来才发现，在家里一致地用视觉支持，要比在学校难得多——因为家里有不同的家庭成员、不固定的日常节奏、以及很多学校不会面对的干扰。研究者也看到了这一点，所以专门研究了这个场景。\n\n---"
+        ],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000007.md"
+      }
+    },
+    "EA-000008.md": {
+      "mtime": 1784016752426.6096,
+      "item": {
+        "id": "EA-000008",
+        "type": null,
+        "topic": "topic-visual-supports",
+        "population": "\"自闭症儿童、青少年、年轻成人\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "ebp_report",
+        "reading_time": "30 min（选择性阅读）",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Evidence-Based Practices for Children, Youth, and Young Adults with Autism (NCAEP 2020 Full Report)",
+          "authors": "Steinbrenner, J. R.; Hume, K.; Odom, S. L.; Morin, K. L.; Nowell, S. W.; Tomaszewski, B.; Szendrey, S.; McIntyre, N. S.; Yücesoy-Özkan, S.; Savage, M. N.",
+          "journal": "Frank Porter Graham Child Development Institute, University of North Carolina at Chapel Hill（灰色文献）",
+          "year": "2020",
+          "doi": "无（技术报告）",
+          "access": "Open Access: https://ncaep.fpg.unc.edu/sites/ncaep.fpg.unc.edu/files/imce/documents/EBP Report 2020.pdf",
+          "method": "Evidence-Based Practice Report（技术报告）",
+          "scope": "28 项循证实践的完整定义、实施检查表和年龄段分层数据"
+        },
+        "why_read": "EA-000005 是同行评审版本。这篇是完整技术报告——免费、可直链、含实施检查表，家长和专业人员都可以直接用。",
+        "research_question": "视觉支持的完整操作定义和实施标准是什么？",
+        "key_findings": [
+          "视觉支持操作定义：\"任何帮助学习者在没有额外提示的情况下独立参与目标行为或技能的视觉呈现\"",
+          "28 项 EBP 完整列表",
+          "视觉支持实施检查表（可直接用于家庭和教育场景）",
+          "年龄段分层效果数据（0–5、6–11、12–21 岁）"
+        ],
+        "parent_meaning": [
+          "很多家长后来才发现，NCAEP 的完整报告里有一份视觉支持实施检查表——免费下载，一条一条列出了什么做对了、什么还需要调整。如果视觉支持用了但感觉没效果，可以先对照这份清单查一查。\n\n---"
+        ],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000008.md"
+      }
+    },
+    "EA-000009.md": {
+      "mtime": 1784012162496.8354,
+      "item": {
+        "id": "EA-000009",
+        "type": null,
+        "topic": "topic-communication",
+        "population": "\"0-6 岁儿童（ASD、发育迟缓、脑瘫等）\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "systematic_review",
+        "reading_time": "10 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "A Systematic Review of Augmentative and Alternative Communication Interventions for Children Aged From 0 to 6 Years",
+          "authors": "Leonet, O.; Orcasitas-Vicandi, M.; Langarika-Rocafort, A.; Idoiaga Mondragon, N.; Roman Etxebarrieta, G.",
+          "journal": "Language, Speech, and Hearing Services in Schools, 2022, Vol. 53(3), pp. 894-920",
+          "doi": "10.1044/2022_LSHSS-21-00191",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "家长最常问：孩子这么小可以用 AAC 吗？这篇专门回答 0-6 岁。",
+        "research_question": "0-6 岁幼儿的 AAC 干预，对哪些沟通结果有效？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000009.md"
+      }
+    },
+    "EA-000010.md": {
+      "mtime": 1784014554422.4817,
+      "item": {
+        "id": "EA-000010",
+        "type": null,
+        "topic": "topic-communication",
+        "population": "\"ASD 儿童（各年龄段）\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "systematic_review",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Augmentative and Alternative Communication and Speech Production for Individuals with ASD: A Systematic Review",
+          "authors": "White, E. N.; Ayres, K. M.; Snyder, S. K.; Cagliani, R. R.; Ledford, J. R.",
+          "journal": "Journal of Autism and Developmental Disorders, 2021, Vol. 51(11), pp. 4199-4212",
+          "doi": "10.1007/s10803-021-04868-2",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "家长最大的担心：用了 AAC 孩子就不说话了。这篇覆盖 45 年的证据专门回答这个问题。",
+        "research_question": "AAC 干预对 ASD 儿童的口语产出有什么影响？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000010.md"
+      }
+    },
+    "EA-000011.md": {
+      "mtime": 1784014554475.6191,
+      "item": {
+        "id": "EA-000011",
+        "type": null,
+        "topic": "topic-communication",
+        "population": "\"有复杂沟通需求的人群（ASD、发育性障碍等）\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "meta_analysis",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Effects of Interventions That Include Aided Augmentative and Alternative Communication Input on the Communication of Individuals with Complex Communication Needs: A Meta-Analysis",
+          "authors": "O'Neill, T.; Light, J.; Pope, L.",
+          "journal": "Journal of Speech Language and Hearing Research, 2018, Vol. 61(7), pp. 1743-1765",
+          "doi": "10.1044/2018_JSLHR-L-17-0132",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "它不问孩子用 AAC 有没有效果，而是问当大人也用 AAC 示范时，效果是否更好。",
+        "research_question": "当干预包含 Aided AAC Input，对沟通结果有什么影响？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000011.md"
+      }
+    },
+    "EA-000012.md": {
+      "mtime": 1784014554527.97,
+      "item": {
+        "id": "EA-000012",
+        "type": null,
+        "topic": "topic-communication",
+        "population": "\"有复杂沟通需求的个体（ASD、发育性障碍等）\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "systematic_review",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "A Systematic Review of Augmented Input Interventions and Exploratory Analysis of Moderators",
+          "authors": "Chazin, K. T.; Ledford, J. R.; Pak, N. S.",
+          "journal": "American Journal of Speech-Language Pathology, 2021, Vol. 30(3), pp. 1210-1223",
+          "doi": "10.1044/2020_AJSLP-20-00102",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "EA-000011 问有没有效果，这篇问什么条件下效果更好。两篇合起来才是完整的使用指南。",
+        "research_question": "Augmented Input 在什么条件下效果更好？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000012.md"
+      }
+    },
+    "EA-000013.md": {
+      "mtime": 1784014554581.175,
+      "item": {
+        "id": "EA-000013",
+        "type": null,
+        "topic": "topic-communication",
+        "population": "\"所有有复杂沟通需求的人群\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "guideline",
+        "reading_time": "选择性阅读",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Augmentative and Alternative Communication (AAC) - ASHA Practice Portal",
+          "authors": "American Speech-Language-Hearing Association (ASHA)",
+          "journal": "ASHA Practice Portal（在线资源，持续更新）",
+          "doi": "无",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "当家长问专业协会怎么说，这就是那个答案。",
+        "research_question": "专业协会对 AAC 的官方临床建议是什么？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000013.md"
+      }
+    },
+    "EA-000014.md": {
+      "mtime": 1784025367802.613,
+      "item": {
+        "id": "EA-000014",
+        "type": null,
+        "topic": "topic-language",
+        "population": "\"Late talkers，18-42 个月\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "systematic_review",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "A Systematic Review of Interventions for Late Talkers: Intervention Approaches, Elements, and Vocabulary Outcomes",
+          "authors": "（待核实完整作者列表，Western Sydney University）",
+          "journal": "American Journal of Speech-Language Pathology, 2022",
+          "doi": "10.1044/2022_AJSLP-21-00168",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "它专门看 18-42 个月语言迟缓的幼儿，回答：干预有没有用？什么方式最有效？",
+        "research_question": "18-42 个月的 Late talkers，哪些干预方式对词汇发展有效？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000014.md"
+      }
+    },
+    "EA-000015.md": {
+      "mtime": 1784012162586.7166,
+      "item": {
+        "id": "EA-000015",
+        "type": null,
+        "topic": "topic-language",
+        "population": "\"有或处于语言障碍风险的儿童，8 岁以下\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "meta_analysis",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "The Effects of Parent-Implemented Language Interventions on Child Linguistic Outcomes: A Meta-Analysis",
+          "authors": "Heidlage, J. K.; Cunningham, J. E.; Kaiser, A. P.; Trivette, C. M.; Barton, E. E.; Frey, J. R.; Roberts, M. Y.",
+          "journal": "Early Childhood Research Quarterly, 2020, Vol. 50, pp. 6-23",
+          "doi": "10.1016/j.ecresq.2018.12.006",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "这是 Language Development 知识域证据等级最高的 EA——25 项 RCT 的 Meta 分析，专门研究家长在家里怎么做语言干预。",
+        "research_question": "家长实施的语言干预，对儿童语言结果有什么效果？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000015.md"
+      }
+    },
+    "EA-000016.md": {
+      "mtime": 1784014554646.4119,
+      "item": {
+        "id": "EA-000016",
+        "type": null,
+        "topic": "topic-language",
+        "population": "\"语言障碍或发育迟缓儿童，18-60 个月\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "meta_analysis",
+        "reading_time": "8 min",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "The Effectiveness of Parent-Implemented Language Interventions: A Meta-Analysis",
+          "authors": "Roberts, M. Y.; Kaiser, A. P.",
+          "journal": "American Journal of Speech-Language Pathology, 2011, Vol. 20(3), pp. 180-199",
+          "doi": "10.1044/1058-0360(2011/10-0055)",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "它是 EA-000015（Heidlage 2020）的前身。两篇合起来，跨越十年的独立 Meta 分析，得出一致结论。",
+        "research_question": "家长实施的语言干预，对 18-60 个月儿童的语言发展效果如何？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000016.md"
+      }
+    },
+    "EA-000017.md": {
+      "mtime": 1784014554696.2903,
+      "item": {
+        "id": "EA-000017",
+        "type": null,
+        "topic": "topic-language",
+        "population": "\"双语儿童及其家庭\"",
+        "sample": null,
+        "year": null,
+        "quality_level": null,
+        "evidence_type": "guideline",
+        "reading_time": "选择性阅读",
+        "related_et": [],
+        "related_path": [],
+        "source": {
+          "paper_title": "Bilingualism - ASHA Practice Portal",
+          "authors": "American Speech-Language-Hearing Association (ASHA)",
+          "journal": "ASHA Practice Portal（在线资源，持续更新）",
+          "doi": "无",
+          "method": "Systematic Review / Meta-Analysis / Guideline",
+          "scope": "—"
+        },
+        "why_read": "华语家庭最常被告知的一件事：先停一种语言。ASHA 的官方立场正好相反。",
+        "research_question": "双语环境对儿童语言发展有什么影响？专业协会怎么建议？",
+        "key_findings": [],
+        "parent_meaning": [],
+        "implications": [],
+        "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000017.md"
+      }
     }
   },
   "et": {
@@ -372,6 +797,299 @@
         "body": "你有没有怀疑过，自己是不是太脆弱了？\n\n研究有一个答案。\n\n研究者花了很多年，比较了很多家庭——有 ASD 孩子的家庭，和没有特殊需求孩子的家庭。他们测量父母的压力水平，然后把结果放在一起。\n\n结论是：差距是真实的，而且很大。\n\n不是稍微高一点，是合并分析显示，差距达到统计学上的大效应量。这在统计上叫做\"大效应量\"。它的意思是：这不是偶然，这是可以被反复观察到的规律。\n\n**你感到累，不是你太敏感，也不是你不够坚强。**\n**你感到的压力，在数据里是真实存在的。**",
         "action_prompt": "你不需要证明自己\"够累了才可以说累\"。\n\n数据已经帮你说了这件事。",
         "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000007.md"
+      }
+    },
+    "ET-000008.md": {
+      "mtime": 1784016025932.8467,
+      "item": {
+        "id": "ET-000008",
+        "source_ea": [],
+        "topic": "为什么视觉支持有效",
+        "audience": "家长",
+        "target_path": [
+          "p009/s001",
+          "p001/sup001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000008.md"
+      }
+    },
+    "ET-000009.md": {
+      "mtime": 1784016025995.8123,
+      "item": {
+        "id": "ET-000009",
+        "source_ea": [],
+        "topic": "哪些孩子适合视觉支持",
+        "audience": "家长",
+        "target_path": [
+          "p009/u001",
+          "p001/u001",
+          "p007/u001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000009.md"
+      }
+    },
+    "ET-000010.md": {
+      "mtime": 1784016026060.4023,
+      "item": {
+        "id": "ET-000010",
+        "source_ea": [],
+        "topic": "常见视觉支持形式",
+        "audience": "家长",
+        "target_path": [
+          "p009/s001",
+          "p009/sup001"
+        ],
+        "reading_time": "4 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000010.md"
+      }
+    },
+    "ET-000011.md": {
+      "mtime": 1784016026115.746,
+      "item": {
+        "id": "ET-000011",
+        "source_ea": [],
+        "topic": "视觉支持实施原则",
+        "audience": "家长",
+        "target_path": [
+          "p009/sup001",
+          "p009/s001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000011.md"
+      }
+    },
+    "ET-000012.md": {
+      "mtime": 1784015203029.42,
+      "item": {
+        "id": "ET-000012",
+        "source_ea": [],
+        "topic": "沟通不等于说话",
+        "audience": "家长",
+        "target_path": [
+          "p009/journey",
+          "p001/journey"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000012.md"
+      }
+    },
+    "ET-000013.md": {
+      "mtime": 1784015203079.15,
+      "item": {
+        "id": "ET-000013",
+        "source_ea": [],
+        "topic": "AAC 是沟通，不是放弃说话",
+        "audience": "家长",
+        "target_path": [
+          "p001/u001",
+          "p009/u001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000013.md"
+      }
+    },
+    "ET-000014.md": {
+      "mtime": 1784015203115.32,
+      "item": {
+        "id": "ET-000014",
+        "source_ea": [],
+        "topic": "为什么不需要等待才开始 AAC",
+        "audience": "家长",
+        "target_path": [
+          "p001/sup001",
+          "p009/sup001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000014.md"
+      }
+    },
+    "ET-000015.md": {
+      "mtime": 1784015203160.823,
+      "item": {
+        "id": "ET-000015",
+        "source_ea": [],
+        "topic": "AAC 有哪些形式",
+        "audience": "家长",
+        "target_path": [
+          "p001/sup001",
+          "p001/s001",
+          "p001/s002",
+          "p009/s001"
+        ],
+        "reading_time": "4 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000015.md"
+      }
+    },
+    "ET-000016.md": {
+      "mtime": 1784015203195.9722,
+      "item": {
+        "id": "ET-000016",
+        "source_ea": [],
+        "topic": "共同注意：沟通从这里开始",
+        "audience": "家长",
+        "target_path": [
+          "p009/u001",
+          "p001/u001",
+          "p008/u001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000016.md"
+      }
+    },
+    "ET-000017.md": {
+      "mtime": 1784015203229.4016,
+      "item": {
+        "id": "ET-000017",
+        "source_ea": [],
+        "topic": "回应比纠正更重要",
+        "audience": "家长",
+        "target_path": [
+          "p009/sup001",
+          "p001/sup001"
+        ],
+        "reading_time": "4 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000017.md"
+      }
+    },
+    "ET-000018.md": {
+      "mtime": 1784015203264.6746,
+      "item": {
+        "id": "ET-000018",
+        "source_ea": [],
+        "topic": "语言发展不是一条统一的时间线",
+        "audience": "家长",
+        "target_path": [
+          "p008/u001",
+          "p009/u001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000018.md"
+      }
+    },
+    "ET-000019.md": {
+      "mtime": 1784015203317.1125,
+      "item": {
+        "id": "ET-000019",
+        "source_ea": [],
+        "topic": "理解语言和表达语言不是同一件事",
+        "audience": "家长",
+        "target_path": [
+          "p008/u001",
+          "p009/u001",
+          "p001/u001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000019.md"
+      }
+    },
+    "ET-000020.md": {
+      "mtime": 1784015203366.7517,
+      "item": {
+        "id": "ET-000020",
+        "source_ea": [],
+        "topic": "孩子是怎样学会语言的",
+        "audience": "家长",
+        "target_path": [
+          "p008/u001",
+          "p009/u001"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000020.md"
+      }
+    },
+    "ET-000021.md": {
+      "mtime": 1784015203412.771,
+      "item": {
+        "id": "ET-000021",
+        "source_ea": [],
+        "topic": "在家怎样支持语言发展",
+        "audience": "家长",
+        "target_path": [
+          "p008/sup001",
+          "p009/sup001"
+        ],
+        "reading_time": "4 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000021.md"
+      }
+    },
+    "ET-000022.md": {
+      "mtime": 1784015203438.3176,
+      "item": {
+        "id": "ET-000022",
+        "source_ea": [],
+        "topic": "什么时候值得进一步寻求支持",
+        "audience": "家长",
+        "target_path": [
+          "p008/s001",
+          "p009/s002"
+        ],
+        "reading_time": "3 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000022.md"
+      }
+    },
+    "ET-000023.md": {
+      "mtime": 1784015203479.2192,
+      "item": {
+        "id": "ET-000023",
+        "source_ea": [],
+        "topic": "双语环境与语言发展",
+        "audience": "家长",
+        "target_path": [
+          "p008/u001",
+          "p009/u001"
+        ],
+        "reading_time": "4 min",
+        "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+        "body": null,
+        "action_prompt": null,
+        "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000023.md"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10",
+  "updated_at": "2026-07-14",
   "series": [
     {
       "id": "series-aac",
@@ -22,22 +22,24 @@
         "image": null
       },
       "statistics": {
-        "ea": 3,
-        "et": 5,
+        "ea": 4,
+        "et": 6,
         "ka": 2
       },
       "content_refs": {
         "ea": [
           "EA-000001",
           "EA-000002",
-          "EA-000003"
+          "EA-000003",
+          "EA-000004"
         ],
         "et": [
           "ET-000001",
           "ET-000002",
           "ET-000003",
           "ET-000004",
-          "ET-000006"
+          "ET-000006",
+          "ET-000007"
         ],
         "ka": [
           "KA-000001",
@@ -48,6 +50,156 @@
       "concept_refs": {
         "primary": "concept-aac",
         "secondary": []
+      }
+    },
+    {
+      "id": "series-visual-supports",
+      "slug": "visual-supports",
+      "label": "视觉支持文献库",
+      "description": "视觉支持为什么有效、哪些孩子适合、常见形式与实施原则的研究证据与知识摘要。",
+      "topic": "topic-visual-supports",
+      "status": "active",
+      "canonical": "/library/series/visual-supports",
+      "source_keys": [
+        "视觉支持",
+        "visual supports",
+        "first-then",
+        "visual schedule"
+      ],
+      "cover": {
+        "title": "视觉支持专题",
+        "subtitle": "研究证据 → 知识主题 → 家庭应用",
+        "image": null
+      },
+      "statistics": {
+        "ea": 4,
+        "et": 4,
+        "ka": 1
+      },
+      "content_refs": {
+        "ea": [
+          "EA-000005",
+          "EA-000006",
+          "EA-000007",
+          "EA-000008"
+        ],
+        "et": [
+          "ET-000008",
+          "ET-000009",
+          "ET-000010",
+          "ET-000011"
+        ],
+        "ka": [
+          "KA-Visual-001"
+        ]
+      },
+      "order": 2,
+      "concept_refs": {
+        "primary": "concept-visual-supports",
+        "secondary": []
+      }
+    },
+    {
+      "id": "series-communication",
+      "slug": "communication",
+      "label": "沟通与 AAC 文献库",
+      "description": "沟通不等于说话、AAC 的证据基础、共同注意与回应策略的研究证据与知识主题。",
+      "topic": "topic-communication",
+      "status": "active",
+      "canonical": "/library/series/communication",
+      "source_keys": [
+        "沟通",
+        "AAC",
+        "辅助沟通",
+        "共同注意",
+        "communication",
+        "joint attention"
+      ],
+      "cover": {
+        "title": "沟通与 AAC 专题",
+        "subtitle": "研究证据 → 知识主题 → 家庭应用",
+        "image": null
+      },
+      "statistics": {
+        "ea": 5,
+        "et": 6,
+        "ka": 0
+      },
+      "content_refs": {
+        "ea": [
+          "EA-000009",
+          "EA-000010",
+          "EA-000011",
+          "EA-000012",
+          "EA-000013"
+        ],
+        "et": [
+          "ET-000012",
+          "ET-000013",
+          "ET-000014",
+          "ET-000015",
+          "ET-000016",
+          "ET-000017"
+        ],
+        "ka": []
+      },
+      "order": 3,
+      "concept_refs": {
+        "primary": "concept-communication",
+        "secondary": [
+          "concept-aac",
+          "concept-joint-attention"
+        ]
+      }
+    },
+    {
+      "id": "series-language-development",
+      "slug": "language-development",
+      "label": "语言发展文献库",
+      "description": "语言发展的时间线、理解与表达的区别、家庭支持策略与双语环境的研究证据与知识主题。",
+      "topic": "topic-language",
+      "status": "active",
+      "canonical": "/library/series/language-development",
+      "source_keys": [
+        "语言发展",
+        "语言迟缓",
+        "双语",
+        "language development",
+        "late talker"
+      ],
+      "cover": {
+        "title": "语言发展专题",
+        "subtitle": "研究证据 → 知识主题 → 家庭应用",
+        "image": null
+      },
+      "statistics": {
+        "ea": 4,
+        "et": 6,
+        "ka": 0
+      },
+      "content_refs": {
+        "ea": [
+          "EA-000014",
+          "EA-000015",
+          "EA-000016",
+          "EA-000017"
+        ],
+        "et": [
+          "ET-000018",
+          "ET-000019",
+          "ET-000020",
+          "ET-000021",
+          "ET-000022",
+          "ET-000023"
+        ],
+        "ka": []
+      },
+      "order": 4,
+      "concept_refs": {
+        "primary": "concept-language-development",
+        "secondary": [
+          "concept-bilingualism"
+        ]
       }
     },
     {
@@ -80,9 +232,83 @@
           "KA-000003"
         ]
       },
-      "order": 2,
+      "order": 5,
       "concept_refs": {
         "primary": "concept-parent-stress",
+        "secondary": []
+      }
+    },
+    {
+      "id": "series-family-support",
+      "slug": "family-support",
+      "label": "家庭支持文献库",
+      "description": "家庭环境如何支持孩子发展——养育关怀框架、家庭角色与家庭生活质量。",
+      "topic": "topic-family-support",
+      "status": "active",
+      "canonical": "/library/series/family-support",
+      "source_keys": [
+        "家庭支持",
+        "养育关怀",
+        "family support",
+        "nurturing care"
+      ],
+      "cover": {
+        "title": "家庭支持专题",
+        "subtitle": "知识文章 · Foundation",
+        "image": null
+      },
+      "statistics": {
+        "ea": 0,
+        "et": 0,
+        "ka": 1
+      },
+      "content_refs": {
+        "ea": [],
+        "et": [],
+        "ka": [
+          "KA-Family-001"
+        ]
+      },
+      "order": 6,
+      "concept_refs": {
+        "primary": "concept-family-support",
+        "secondary": []
+      }
+    },
+    {
+      "id": "series-participation",
+      "slug": "participation",
+      "label": "参与文献库",
+      "description": "参与的意义、技能与参与的区别、ICF 框架与家庭参与支持策略。",
+      "topic": "topic-participation",
+      "status": "active",
+      "canonical": "/library/series/participation",
+      "source_keys": [
+        "参与",
+        "participation",
+        "ICF",
+        "生活质量"
+      ],
+      "cover": {
+        "title": "参与专题",
+        "subtitle": "知识文章 · Foundation",
+        "image": null
+      },
+      "statistics": {
+        "ea": 0,
+        "et": 0,
+        "ka": 1
+      },
+      "content_refs": {
+        "ea": [],
+        "et": [],
+        "ka": [
+          "KA-Participation-001"
+        ]
+      },
+      "order": 7,
+      "concept_refs": {
+        "primary": "concept-participation",
         "secondary": []
       }
     }

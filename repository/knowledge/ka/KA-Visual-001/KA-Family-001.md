@@ -214,4 +214,6 @@
 | Framework | `nurturing_care` · `parent_implemented` · `naturalistic_intervention` |
 | related_resource | RI-WHO-0001 · RI-WHO-0003 |
 | related_ea | 待补充 |
+| series | series-family-support |
+| series_name | 家庭支持 |
 | verification_status | internal_review |
