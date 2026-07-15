@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-14",
+  "updated_at": "2026-07-15",
   "topics": [
     {
       "id": "topic-aac",
       "slug": "aac",
-      "label": "辅助沟通（AAC）",
-      "description": "关于辅助沟通系统的研究、实践与家庭支持资源。",
+      "label": "不会说话，不代表不能沟通",
+      "description": "孩子有很多表达方式，说话只是其中一种。这里收录了关于辅助沟通的研究与家庭实践。",
       "series": [
         "series-aac"
       ],
@@ -16,8 +16,8 @@
     {
       "id": "topic-visual-supports",
       "slug": "visual-supports",
-      "label": "视觉支持",
-      "description": "视觉支持为什么有效、哪些孩子适合、常见形式与实施原则。",
+      "label": "为什么图片能帮助孩子？",
+      "description": "图片不会消失，所以孩子有时间理解。这里解释视觉支持为什么有效，以及怎样在家里开始。",
       "series": [
         "series-visual-supports"
       ],
@@ -27,8 +27,8 @@
     {
       "id": "topic-communication",
       "slug": "communication",
-      "label": "沟通与 AAC",
-      "description": "沟通不等于说话、AAC 的证据基础、共同注意与回应策略。",
+      "label": "沟通不只是说话",
+      "description": "眼神、手势、图片、声音，都是沟通。这里收录了关于沟通发展的研究与实践。",
       "series": [
         "series-communication"
       ],
@@ -38,8 +38,8 @@
     {
       "id": "topic-language",
       "slug": "language",
-      "label": "语言发展",
-      "description": "语言发展的时间线、理解与表达的区别、家庭支持策略与双语环境。",
+      "label": "孩子怎样学会语言？",
+      "description": "每个孩子的语言发展节奏不同。这里解释理解与表达的区别，以及家庭怎样支持。",
       "series": [
         "series-language-development"
       ],
@@ -49,8 +49,8 @@
     {
       "id": "topic-parent-stress",
       "slug": "parent-stress",
-      "label": "父母压力",
-      "description": "照顾有特殊需求孩子的父母，压力从哪里来，以及什么真正有帮助。",
+      "label": "照顾孩子，谁来照顾你？",
+      "description": "照顾有特殊需求的孩子，压力是真实的。这里收录了关于照顾者压力的研究，以及什么真正有帮助。",
       "series": [
         "series-parent-stress"
       ],
@@ -107,8 +107,8 @@
     {
       "id": "topic-participation",
       "slug": "participation",
-      "label": "参与",
-      "description": "参与的意义、ICF 框架、日常生活参与的促进策略。",
+      "label": "如何让孩子参与更多？",
+      "description": "参与不只是出席。这里收录了关于日常参与的研究，以及家庭怎样创造更多参与机会。",
       "series": [
         "series-participation"
       ],

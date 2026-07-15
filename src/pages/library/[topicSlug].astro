@@ -5,9 +5,126 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import topicsData from '../../repository/library/topics.json';
 import seriesData from '../../repository/library/series.json';
+import kaData from '../../repository/knowledge.json';
+import { normalizeAllKA } from '../../repository/adapters/ka';
 import { TERMS } from '../../i18n/terminology';
-export function getStaticPaths(){return ((topicsData as any).topics as any[]).filter(t=>t.status==='active').map(topic=>({params:{topicSlug:topic.slug},props:{topic}}));}
-const {topic}=Astro.props as any;const allSeries=(seriesData as any).series as any[];const seriesList=(topic.series??[]).map((id:string)=>allSeries.find(s=>s.id===id)).filter(Boolean).filter((s:any)=>s.status==='active').sort((a:any,b:any)=>a.order-b.order);
+
+export function getStaticPaths() {
+  return ((topicsData as any).topics as any[])
+    .filter(t => t.status === 'active')
+    .map(topic => ({ params: { topicSlug: topic.slug }, props: { topic } }));
+}
+
+const { topic } = Astro.props as any;
+const allSeries = (seriesData as any).series as any[];
+const seriesList = (topic.series ?? [])
+  .map((id: string) => allSeries.find(s => s.id === id))
+  .filter(Boolean)
+  .filter((s: any) => s.status === 'active')
+  .sort((a: any, b: any) => a.order - b.order);
+
+// knowledge.json 的 topic 值是 slug 格式（"visual-supports"、"AAC"）
+// 用 topic.slug 做大小写不敏感匹配
+const allKAs = normalizeAllKA(kaData as any);
+const topicKAs = allKAs.filter((ka: any) =>
+  ka.topic?.toLowerCase() === topic.slug?.toLowerCase()
+);
 ---
-<BaseLayout title={`${topic.label} · ${TERMS.library.label} · Anori`} description={topic.description}><SiteNav /><main class="topic-page"><Breadcrumb items={[{label:'首页',href:'/'},{label:TERMS.library.label,href:'/library'},{label:topic.label}]} /><header><p class="eyebrow">{TERMS.library.label} · {TERMS.topic.label}</p><h1>{topic.label}</h1><p>{topic.description}</p></header><section><h2>{TERMS.series.label}列表</h2>{seriesList.length===0?<p class="empty">此{TERMS.topic.label}暂无已发布的{TERMS.series.label}。</p>:<div class="list">{seriesList.map((series:any)=><a class="card" href={series.canonical}><div><h3>{series.label}</h3><p>{series.description}</p></div><div class="stats"><span>{series.statistics.ea} {TERMS.ea.label}</span><span>{series.statistics.et} {TERMS.et.label}</span><span>{series.statistics.ka} {TERMS.ka.label}</span></div><strong>查看完整{TERMS.series.label} →</strong></a>)}</div>}</section></main><SiteFooter /></BaseLayout>
-<style>.topic-page{max-width:760px;margin:0 auto;padding:var(--sp-6) var(--sp-6) var(--sp-24)}header{padding:var(--sp-10) 0 var(--sp-8);border-bottom:1px solid var(--border);margin-bottom:var(--sp-8)}.eyebrow{font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}header h1{font-size:var(--text-3xl);margin:var(--sp-2) 0}header>p:last-child{color:var(--muted)}section>h2{font-size:var(--text-sm);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:var(--sp-4)}.list{display:flex;flex-direction:column;gap:var(--sp-4)}.card{padding:var(--sp-6);border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface)}.card h3{font-size:var(--text-lg)}.card p{font-size:var(--text-sm);color:var(--muted);margin-top:var(--sp-2)}.stats{display:flex;gap:var(--sp-5);color:var(--muted);font-size:var(--text-xs);margin:var(--sp-4) 0}.card>strong{color:var(--brand);font-size:var(--text-sm)}.empty{color:var(--muted)}</style>
+<BaseLayout title={`${topic.label} · ${TERMS.library.label} · Anori`} description={topic.description}>
+  <SiteNav />
+  <main class="topic-page">
+    <Breadcrumb items={[
+      { label: '首页', href: '/' },
+      { label: TERMS.library.label, href: '/library' },
+      { label: topic.label }
+    ]} />
+
+    <header>
+      <p class="eyebrow">{TERMS.library.label} · {TERMS.topic.label}</p>
+      <h1>{topic.label}</h1>
+      <p>{topic.description}</p>
+    </header>
+
+    {/* KA 区块：问题入口，放在最前 */}
+    {topicKAs.length > 0 && (
+      <section class="ka-section">
+        <h2 class="section-label">先从这里开始</h2>
+        <div class="ka-list">
+          {topicKAs.map((ka: any) => (
+            <a class="ka-card" href={`/library/ka/${ka.id}`}>
+              <span class="ka-badge">KA</span>
+              <div class="ka-body">
+                <h3>{ka.title}</h3>
+                {ka.one_liner && <p class="one-liner">{ka.one_liner}</p>}
+                {ka.reading_time && <span class="reading-time">{ka.reading_time} 阅读</span>}
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* Series 区块：想深入了解 */}
+    {seriesList.length > 0 && (
+      <section class="series-section">
+        <h2 class="section-label">想深入了解</h2>
+        <div class="list">
+          {seriesList.map((series: any) => (
+            <a class="card" href={series.canonical}>
+              <div>
+                <h3>{series.label}</h3>
+                <p>{series.description}</p>
+              </div>
+              <div class="stats">
+                <span>{series.statistics?.ea ?? 0} {TERMS.ea.label}</span>
+                <span>{series.statistics?.et ?? 0} {TERMS.et.label}</span>
+                <span>{series.statistics?.ka ?? 0} {TERMS.ka.label}</span>
+              </div>
+              <strong>查看完整{TERMS.series.label} →</strong>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {seriesList.length === 0 && topicKAs.length === 0 && (
+      <p class="empty">此主题暂无已发布的内容。</p>
+    )}
+
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+.topic-page { max-width: 760px; margin: 0 auto; padding: var(--sp-6) var(--sp-6) var(--sp-24); }
+
+header { padding: var(--sp-10) 0 var(--sp-8); border-bottom: 1px solid var(--border); margin-bottom: var(--sp-8); }
+.eyebrow { font-size: var(--text-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+header h1 { font-size: var(--text-3xl); margin: var(--sp-2) 0; }
+header > p:last-child { color: var(--muted); }
+
+.section-label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: var(--sp-4); }
+
+.ka-section { margin-bottom: var(--sp-12); }
+.ka-list { display: flex; flex-direction: column; gap: var(--sp-3); }
+.ka-card { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-5) var(--sp-6); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); transition: .15s; text-decoration: none; color: inherit; }
+.ka-card:hover { border-color: var(--brand); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.ka-badge { flex-shrink: 0; font-size: 10px; font-weight: 600; letter-spacing: .08em; color: var(--brand); background: rgba(37,99,235,.08); border-radius: 99px; padding: 2px 8px; }
+.ka-body { flex: 1; min-width: 0; }
+.ka-body h3 { font-size: var(--text-base); font-weight: 600; line-height: 1.4; margin: 0 0 var(--sp-1); }
+.one-liner { font-size: var(--text-sm); color: var(--muted); margin: 0; line-height: 1.5; }
+.reading-time { font-size: var(--text-xs); color: var(--muted); margin-top: var(--sp-2); display: block; }
+.arrow { color: var(--brand); font-size: var(--text-lg); flex-shrink: 0; }
+
+.series-section { }
+.list { display: flex; flex-direction: column; gap: var(--sp-4); }
+.card { padding: var(--sp-6); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); transition: .15s; text-decoration: none; color: inherit; display: block; }
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.card h3 { font-size: var(--text-lg); }
+.card p { font-size: var(--text-sm); color: var(--muted); margin-top: var(--sp-2); }
+.stats { display: flex; gap: var(--sp-5); color: var(--muted); font-size: var(--text-xs); margin: var(--sp-4) 0; }
+.card > strong { color: var(--brand); font-size: var(--text-sm); }
+
+.empty { color: var(--muted); }
+</style>
