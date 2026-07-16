@@ -30,45 +30,91 @@ export interface NormalizedEA {
   evidenceType?: string;
   topic?: string;
   sourceFile?: string;
+  // EA Editorial Framework v1.0 新字段
+  insight?: string;
+  keyFinding?: string;
+  whyItMatters?: string;
+  limitations?: string;
+  sourceEa: string[];
 }
 
 function stringArray(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((v): v is string => typeof v === 'string') : [];
 }
 
+function str(value: unknown): string | undefined {
+  return typeof value === 'string' && value.trim() ? value.trim() : undefined;
+}
+
 export function normalizeEA(raw: Record<string, unknown>): NormalizedEA {
   const source = (raw.source ?? {}) as Record<string, unknown>;
-  const whyRead = typeof raw.why_read === 'string' ? raw.why_read : undefined;
-  const researchQuestion = typeof raw.research_question === 'string' ? raw.research_question : undefined;
+  const whyRead = str(raw.why_read);
+  const researchQuestion = str(raw.research_question);
+
+  // 新字段（EA Editorial Framework v1.0）
+  const insight = str(raw.insight);
+  const keyFinding = str(raw.key_finding);
+  const whyItMatters = str(raw.why_it_matters);
+  const limitations = str(raw.limitations);
+
+  // keyFindings：旧格式用数组，新格式用单字符串 key_finding
+  // 两者都尝试，保证新旧 EA 都能显示内容
+  const keyFindingsFromArray = stringArray(raw.key_findings);
+  const keyFindings = keyFindingsFromArray.length > 0
+    ? keyFindingsFromArray
+    : keyFinding ? [keyFinding] : [];
+
+  // parentMeaning：旧格式 parent_meaning 数组，新格式用 why_it_matters 字符串
+  const parentMeaningFromArray = stringArray(raw.parent_meaning);
+  const parentMeaning = parentMeaningFromArray.length > 0
+    ? parentMeaningFromArray
+    : whyItMatters ? [whyItMatters] : [];
+
+  // implications：旧格式数组，新格式用 limitations 字符串
+  const implicationsFromArray = stringArray(raw.implications);
+  const implications = implicationsFromArray.length > 0
+    ? implicationsFromArray
+    : limitations ? [limitations] : [];
+
+  // summary：insight 优先（新格式），fallback 到 whyRead / researchQuestion
+  const summary = insight ?? whyRead ?? researchQuestion;
 
   return {
     id: String(raw.id ?? ''),
-    summary: whyRead ?? researchQuestion,
+    summary,
     updatedAt: undefined,
     status: undefined,
     seriesIds: resolveSeriesIdsFromTopic(raw.topic),
     source: {
-      paperTitle: typeof source.paper_title === 'string' ? source.paper_title : undefined,
-      authors: typeof source.authors === 'string' ? source.authors : undefined,
-      journal: typeof source.journal === 'string' ? source.journal : undefined,
+      paperTitle: str(source.paper_title),
+      authors: str(source.authors),
+      journal: str(source.journal),
       year: typeof source.year === 'string' || typeof source.year === 'number' ? source.year : undefined,
-      doi: typeof source.doi === 'string' ? source.doi : undefined,
-      access: typeof source.access === 'string' ? source.access : undefined,
-      method: typeof source.method === 'string' ? source.method : undefined,
-      scope: typeof source.scope === 'string' ? source.scope : undefined,
+      doi: str(source.doi),
+      access: str(source.access),
+      method: str(source.method),
+      scope: str(source.scope),
     },
     whyRead,
     researchQuestion,
-    keyFindings: stringArray(raw.key_findings),
-    parentMeaning: stringArray(raw.parent_meaning),
-    implications: stringArray(raw.implications),
+    keyFindings,
+    parentMeaning,
+    implications,
     relatedEt: stringArray(raw.related_et),
     relatedPath: stringArray(raw.related_path),
-    readingTime: typeof raw.reading_time === 'string' ? raw.reading_time : undefined,
-    qualityLevel: typeof raw.quality_level === 'string' ? raw.quality_level : undefined,
-    evidenceType: typeof raw.evidence_type === 'string' ? raw.evidence_type : undefined,
-    topic: typeof raw.topic === 'string' ? raw.topic : undefined,
-    sourceFile: typeof raw._source_file === 'string' ? raw._source_file : undefined,
+    readingTime: str(raw.reading_time),
+    qualityLevel: str(raw.quality_level),
+    evidenceType: str(raw.evidence_type),
+    topic: str(raw.topic),
+    sourceFile: str(raw._source_file),
+    // 新字段直接透传（供未来模板扩展使用）
+    insight,
+    keyFinding,
+    whyItMatters,
+    limitations,
+    sourceEa: stringArray(raw.supports_et).length > 0
+      ? stringArray(raw.supports_et)
+      : stringArray(raw.related_et),
   };
 }
 

@@ -31,6 +31,11 @@ const kaItems = (refs.ka ?? []).map((id: string) => kaMap.get(id) ?? { id, missi
 const eaTitle = (item: any) => item.source?.paperTitle ?? item.id;
 const etTitle = (item: any) => item.topic ?? item.id;
 const kaTitle = (item: any) => item.title ?? item.id;
+const etPreview = (item: any) => {
+  if (!item.body) return undefined;
+  const plain = item.body.replace(/[#*`>\-_]/g, "").replace(/\s+/g, " ").trim();
+  return plain.length > 80 ? plain.slice(0, 80) + "……" : plain;
+};
 ---
 <BaseLayout title={`${series.label} · ${TERMS.library.label} · Anori`} description={series.description}>
   <SiteNav />
@@ -91,7 +96,13 @@ const kaTitle = (item: any) => item.title ?? item.id;
               {missing ? (
                 <div class="static"><div><strong>内容记录暂未找到</strong></div><small>引用断链</small></div>
               ) : (
-                <a href={`/library/et/${item.id}`}><div><strong>{etTitle(item)}</strong></div><span>→</span></a>
+                <a href={`/library/et/${item.id}`}>
+                  <div>
+                    <strong>{etTitle(item)}</strong>
+                    {etPreview(item) && <em class="et-preview">{etPreview(item)}</em>}
+                  </div>
+                  <span>→</span>
+                </a>
               )}
             </li>;
           })}
@@ -146,6 +157,7 @@ header > p { color: var(--muted); }
 .ka-first h2 span { background: rgba(37,99,235,.1); color: var(--brand); }
 .ka-item > a { align-items: flex-start; }
 .one-liner { display: block; font-style: normal; font-size: var(--text-sm); color: var(--muted); margin-top: var(--sp-1); }
+.et-preview { display: block; font-style: normal; font-size: var(--text-sm); color: var(--muted); margin-top: var(--sp-1); line-height: 1.5; }
 
 .ea-last { opacity: .85; }
 

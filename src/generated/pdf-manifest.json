@@ -1,11 +1,11 @@
 {
   "schemaId": "PDF-Manifest",
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T00:41:17.405Z",
+  "generated_at": "2026-07-16T01:56:17.683Z",
   "summary": {
     "total": 7,
     "ok": 7,
-    "skipped": 6,
+    "skipped": 7,
     "failed": 0
   },
   "items": [
@@ -73,7 +73,7 @@
       "status": "ok",
       "generatedAt": "2026-07-16T00:41:17.372Z",
       "htmlHash": "sha256:b8d0868dafbd3e2ce5493701f4efa92632d214661ad12361e856753a37919087",
-      "skipped": false
+      "skipped": true
     },
     {
       "contentId": "KA-Visual-001",

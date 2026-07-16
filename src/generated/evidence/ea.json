@@ -1,9 +1,9 @@
 {
   "schemaId": "Evidence-Index",
   "schema_version": "1.0",
-  "generated_at": "2026-07-15T10:28:55.226Z",
+  "generated_at": "2026-07-16T08:13:23.191Z",
   "source_dir": "repository\\knowledge\\evidence\\cards\\Deconstruction",
-  "count": 49,
+  "count": 56,
   "items": [
     {
       "id": "EA-000001",
@@ -656,8 +656,28 @@
         "SCD 与 ASD 不能同时诊断，但社交沟通问题是 ASD 的核心特征之一",
         "社交沟通技能包括：根据情境调整说话风格、理解他人观点、理解并恰当运用言语与非言语沟通规则"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这份文件最重要的信息，是它把\"社交沟通\"定义为四个彼此影响的成分——而不是单一的\"说话能力\"。",
+        "这意味着：一个词汇量丰富的孩子，可能在社交互动或社会认知上仍然遇到困难；而一个不会说话的孩子，可能在社交意图和共同注意上发展得很好。",
+        "\"会说话\"和\"能社交沟通\"是两件不同的事。这是家长在理解孩子时最容易混淆的地方，也是这份文件最有价值的地方。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000024"
+      ],
+      "insight": "ASHA 的 Practice Portal 不是一篇论文，而是一个领域的共识入口。它回答的不是\"某个研究发现了什么\"，而是\"这个领域目前对社交沟通的定义和临床实践是什么\"。",
+      "key_finding": "社交沟通使个体能够在社会框架内与他人沟通或互动，涵盖四个核心成分：语用（Pragmatics）、社交互动（Social Interaction）、社会认知（Social Cognition）、语言加工（Language Processing）",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000018.md"
     },
     {
@@ -687,8 +707,27 @@
         "SCD 不能与 ASD 同时诊断；若个体同时符合 ASD 诊断标准，则社交沟通困难归属于 ASD",
         "SCD 诊断通常不在 4–5 岁前作出，因为需要孩子已具备足够的语言基础才能检测到高级语用缺陷"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项诊断标准对家长最重要的信息不是\"如何诊断\"，而是它揭示了一件事：**社交沟通困难是真实存在的，不是孩子\"性格内向\"或\"不爱说话\"**。",
+        "如果孩子在语法和词汇上没有明显问题，但在对话轮替、理解言外之意、调整不同场合的说话方式上持续遇到困难——这不是教养问题，而是一种有名字、有支持路径的发展差异。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000024"
+      ],
+      "insight": "DSM-5 在 2013 年第一次把\"社交（语用）沟通障碍\"作为一个独立诊断类别写进去。在此之前，有些孩子有明显的社交沟通困难，但不符合 ASD 诊断，也找不到合适的分类——他们的困难在诊断系统里是\"不可见的\"。这份文件让他们的困难有了名字。",
+      "key_finding": "SCD 被定义为在以社交为目的使用言语与非言语沟通方面存在持续困难",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000019.md"
     },
     {
@@ -719,8 +758,27 @@
         "情绪调节能力与后续社交沟通发展正相关；社交沟通能力同样影响情绪调节",
         "两者在生命早期（2岁起）即同步发展，共同构成日后功能基础"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "当孩子在社交场合情绪失调（哭闹、退缩、爆发），不一定是\"行为问题\"。研究告诉我们，这很可能是社交沟通中的某个环节——比如无法理解他人意图，或无法表达自己的需求——触发了情绪反应。",
+        "换句话说：支持孩子的社交沟通，同时也是在支持他的情绪调节；反过来也一样。这两件事不需要分开来做。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000024"
+      ],
+      "insight": "大多数人把情绪调节和社交沟通当成两件独立的事。这篇综述告诉我们它们是双向的——不是\"先学会情绪调节，再学社交沟通\"，而是两者在发展中相互塑造。",
+      "key_finding": "情绪调节与社交沟通之间存在双向关系，呈现年龄相关模式",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000020.md"
     },
     {
@@ -750,8 +808,27 @@
         "与典型语言障碍不同，SCD 个体在音韵加工、词汇量及高阶语法语义技能方面可能表现正常，核心缺陷集中于语用层面",
         "SCD 与 ASD 的鉴别诊断是临床挑战，两者在语用困难上有显著重叠"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这篇综述揭示了一个重要区别：**语言结构正常，不等于社交沟通没有困难。**",
+        "有些孩子在测词汇、测语法时表现完全正常，但在真实的对话中——理解玩笑、感受到对话规则、知道什么时候该说什么——却持续遇到困难。这不是\"不够努力\"，而是一种特定的语用层面的差异，有清晰的研究记录。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000024"
+      ],
+      "insight": "DSM-5 加入 SCD 这个新类别时，很多临床医生和研究者都在问：这个类别的证据基础在哪里？它和语用语言障碍有什么关系？和 ASD 又如何区分？这篇综述就是回答这些问题最重要的早期文献之一。",
+      "key_finding": "SCD 个体的特征性困难包括：难以将语言用于社交目的、在不同社交情境中匹配沟通方式、遵守情境规则（如对话轮替）、理解非字面语言",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000021.md"
     },
     {
@@ -782,8 +859,27 @@
         "社会定向（social orienting）与共同注意（joint attention）共享神经发育机制",
         "早期社交沟通能力是长期语言和沟通结局的预测因子"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "在孩子说出第一个词之前，沟通已经在发生了。",
+        "9 个月时用哭声或手势\"要求\"东西，10 个月时看向你再看向一样东西——这些都是社交沟通的早期形式。它们不是语言的前身，而是语言发展的基础。如果这些早期行为没有出现，值得留意，而不是等到语言延迟才开始关注。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 2,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000024"
+      ],
+      "insight": "它记录了早期社交沟通的具体发展时间线——不是模糊的\"早期\"，而是 9 个月、10 个月、12 个月这些具体节点。这让家长有了可以观察的参考点。",
+      "key_finding": "在典型发展中，约 9 个月时婴儿开始通过沟通调节他人行为（如提出要求、拒绝）",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000022.md"
     },
     {
@@ -813,8 +909,28 @@
         "JA 在 ASD 中常见受损，是早期诊断和干预的重要目标",
         "评估方法从人工行为编码（ESCS）发展至眼动追踪（eye-tracking）、EEG、AI 辅助系统"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "共同注意不只是\"一起看同一个东西\"。真正的共同注意是：两个人都知道彼此正在关注同一件事。",
+        "这个\"知道彼此都在关注\"的能力，是孩子后来能够进行对话、学习新词汇、理解他人意图的基础。它的发展从出生后几个月就开始了，但最清晰地出现在 9–12 个月。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000024",
+        "ET-000025"
+      ],
+      "insight": "这篇综述的主题是\"如何测量共同注意\"，但它在介绍方法之前，给出了迄今最清晰的共同注意定义，并系统梳理了它为什么重要。即使不关心评估方法，前面的理论部分也值得阅读。",
+      "key_finding": "共同注意（JA）是两个个体对同一物体或事件共享关注焦点的过程，在早期儿童期的社交沟通、认知发展和语言习得中发挥核心作用",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000023.md"
     },
     {
@@ -844,8 +960,27 @@
         "EEG、fNIRS、fMRI 研究共同证实：共同注意涉及\"社交脑\"多个神经网络，包括颞顶联合区（TPJ）、内侧前额叶（mPFC）等",
         "共同注意的神经基础是典型与非典型发展的早期指标，为 ASD 早期识别提供了神经层面的依据"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "孩子在 9–12 个月开始出现共同注意，不只是一个行为里程碑，而是整个\"社交脑\"开始整合运作的信号。",
+        "这意味着，这个阶段的互动质量——照顾者如何回应孩子的目光、如何跟随孩子的注意焦点——正在参与塑造孩子大脑社交网络的发展方式。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000025"
+      ],
+      "insight": "这篇综述把行为观察到的共同注意现象，连接到了大脑层面的证据。它告诉我们：共同注意不只是一个行为里程碑，而是大脑社交网络发展的早期可见信号。",
+      "key_finding": "共同注意约在 9 个月时出现，并在生命第二年逐渐增多",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000024.md"
     },
     {
@@ -876,8 +1011,27 @@
         "常用评估方法：眼动追踪（eye-tracking）、EEG、行为编码（ESCS）",
         "在婴儿期评估共同注意，有助于了解典型与非典型发展的早期轨迹"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "共同注意不是某个特定年龄才突然出现的技能——它在生命第一年就已经在发展，而且它的早期形态，研究者们已经知道如何观察和测量。",
+        "这意味着：如果家长在孩子第一年就注意到某些互动模式与同龄孩子明显不同，这种观察是有依据的，不是\"想多了\"。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000025"
+      ],
+      "insight": "如果你想知道\"共同注意在生命第一年是如何被研究的\"，这篇综述给出了最系统的答案。它同时也证实：共同注意的延迟，在第一年就已经可以被识别。",
+      "key_finding": "共同注意是个体将自身注意焦点与他人有目的地协调的能力，在生命第一年内开始发展",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000025.md"
     },
     {
@@ -909,8 +1063,28 @@
         "12 个月时的 RJA 水平可预测 24 个月时的接受性语言能力，即使在控制认知发展水平之后，这一关联依然成立",
         "IJA 与语言的关联主要是当期相关，预测性较弱"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "当你指向窗外说\"你看，鸟！\"，孩子跟着看过去——这个简单的动作，是他 12 个月时最重要的语言学习动力之一。",
+        "研究告诉我们，孩子在 12 个月时\"跟随你的目光\"的能力，可以预测他在 24 个月时能听懂多少话。这不是偶然的关联，而是在控制了其他认知因素之后依然成立的发现。",
+        "共同看向同一件东西，是孩子学词汇的方式。照顾者指向物体、说出名字、孩子跟随——这个三步动作，每天发生无数次，每次都在建立语言的基础。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000025"
+      ],
+      "insight": "很多研究告诉我们共同注意和语言发展有关，但这篇研究更进一步：它区分了两种共同注意（回应 vs 主动），并追踪了 12 个月时的表现如何预测 24 个月时的语言能力。这是发展研究中少有的真正预测性证据。",
+      "key_finding": "RJA（跟随他人注意）比 IJA（主动引导他人注意）发展更早",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000026.md"
     },
     {
@@ -943,8 +1117,28 @@
         "同时改善了游戏技能（g = 0.33）和自闭症症状表现（g = 0.70）",
         "语言结局的改善在本研究中未达显著性"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项 Meta 分析告诉我们两件事：",
+        "第一，共同注意是可以被支持的。18 项高质量研究一致显示，干预后孩子的共同注意能力有显著改善——效应量中等至较强。",
+        "第二，越早越好。年龄是最强的调节变量，年龄越小的孩子从干预中获益越大。这不是说\"晚了就没用\"，而是提醒我们：如果有担忧，尽早行动比等待观察更有意义。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000025"
+      ],
+      "insight": "这是目前关于共同注意干预效果最新、最系统的 Meta 分析，纳入了 18 项 RCT。它不只回答\"有没有效\"，还回答\"什么条件下效果更好\"——年龄是最重要的调节变量。",
+      "key_finding": "共同注意干预显著改善儿童的共同注意技能（效应量 g = 0.53，95% CI [0.34, 0.72]）",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000027.md"
     },
     {
@@ -975,8 +1169,27 @@
         "对语言技能的影响证据不充分——各研究结果混合，不能得出一致结论",
         "研究对象年龄在 21.4–53 个月，多数研究由母亲实施"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项综述给了家长一个清晰的信号：**在日常生活中支持共同注意是有效的，家长是真正的干预实施者，而不只是配合治疗师的角色。**",
+        "同时，它也诚实地指出：这种支持对语言发展的直接影响，目前证据还不够一致。这不是说无效，而是说共同注意的改善和语言改善之间，可能需要时间和其他因素的配合。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000025"
+      ],
+      "insight": "这篇综述专门看\"由家长来做\"的共同注意干预——而不是治疗师做的。这对家长来说是最直接的证据：我在家做这件事，有用吗？",
+      "key_finding": "11 项研究中，8 项报告亲子介导共同注意干预改善了 ASD 儿童的共同注意技能（正向结果）",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000028.md"
     },
     {
@@ -1007,8 +1220,27 @@
         "纵向追踪 32 名婴儿在 8 个月和 12 个月的共同注意表现，发现其表现与 18 个月时 ASD 早期征兆存在关联",
         "针对共同注意的早期干预可改善这类儿童的社交表现"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究揭示的，不是\"共同注意有困难 = ASD\"——而是：**共同注意的早期差异，是值得关注的发展信号，可以在正式诊断之前很久就被观察到。**",
+        "如果家长在孩子 8–12 个月时感觉互动\"有些不对劲\"——孩子不太跟着你的目光看、不太把你拉去看他喜欢的东西——这种感觉是有研究支持的，不是过度担忧。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000025"
+      ],
+      "insight": "这项研究在孩子 18 个月被识别出 ASD 早期征兆之前，就追踪了他们 8 个月和 12 个月时的表现。它让我们看到：共同注意的差异，在诊断出现之前很久就已经可以被观察到。",
+      "key_finding": "共同注意是理解他人表征的早期能力，对符号思维发展和语言习得至关重要",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000029.md"
     },
     {
@@ -1039,8 +1271,28 @@
         "婴儿的回应间隔与照顾者的回应间隔显著相关：照顾者慢下来，婴儿也会相应延长（动态互惠性）",
         "0–70 个月的轮流互动发展轨迹已被系统记录，总体变化趋势随时间趋于稳定"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "轮流说话不是孩子长大以后才学的事，也不是\"单向教给\"孩子的。它从出生后几个月就开始了，而且是双方一起建立的节奏。",
+        "研究发现的\"动态互惠性\"告诉我们：当你对孩子说话时放慢速度、留出空间，孩子的回应也会相应调整。你的节奏，在塑造他的节奏。",
+        "这意味着：慢下来、等一等，不是被动，而是一种主动的支持方式。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000026"
+      ],
+      "insight": "这篇研究回答了一个很具体的问题：轮流互动的时间节奏，是什么时候建立的？婴儿从什么时候开始\"等待\"？答案比大多数人想的早得多——而且不是孩子单方面学会的，而是双方共同调节的。",
+      "key_finding": "婴儿平均在约 1 秒内回应照顾者的话语，这一时间节奏从出生早期就已存在",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000030.md"
     },
     {
@@ -1071,8 +1323,27 @@
         "轮流互动不只涉及声音，也涉及手势等多模态信号——这一维度在既往研究中被低估",
         "照顾者和婴儿相互影响，共同建立轮流节奏"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "很多人认为\"轮流说话\"是上幼儿园以后才需要学的技能。实际上，它的雏形在出生后几个月就在建立，而且不只是声音——孩子用手势、目光、动作\"接\"你的互动，也是轮流的一种。",
+        "当孩子 9 个月时开始在你说话后\"停一停\"，这不是不知道怎么回应，而是他的轮流互动正在从\"同时\"变成\"交替\"——这是正常发展的一个质变节点。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000026"
+      ],
+      "insight": "这篇综述把轮流互动的发展从\"声音层面\"扩展到\"多模态层面\"——手势、目光、身体动作也是轮流互动的组成部分。这让我们对\"什么是轮流\"有了更完整的理解。",
+      "key_finding": "在生命第一年内，婴幼儿与照顾者的互动从\"双方同时发声\"逐渐转变为\"交替模式\"，第二年趋于稳定",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000031.md"
     },
     {
@@ -1104,8 +1375,28 @@
         "这一效应独立于家庭收入、IQ 和成人单向话语量——互动质量，而非输入数量",
         "结构神经影像研究发现，对话轮次与左侧弓状束（连接语言区的关键白质通路）的微结构显著相关"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "\"多跟孩子说话\"是正确的，但这项研究告诉我们一个更重要的事：**重要的不是你说了多少，而是你们来回了多少次。**",
+        "和孩子的对话不需要高深的词汇，也不需要持续不断——而是需要真正的来回：你说，他回应；他发声，你接住。这种来回互动，在大脑层面留下了可测量的痕迹。",
+        "更重要的是：这个效应与家庭收入、孩子的智力水平无关。每个家庭，每一天，都有机会创造这种来回。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000026"
+      ],
+      "insight": "这项研究改变了我们对\"语言环境\"的理解。在此之前，\"多和孩子说话\"是共识；这项研究说：不只是说话，而是要和孩子\"对话\"。对话轮次，而不是单向话语量，才是大脑语言区发育的关键。",
+      "key_finding": "与成人发生更多对话轮次的孩子，在布罗卡区（Broca's area）表现出更强的激活",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000032.md"
     },
     {
@@ -1136,8 +1427,27 @@
         "第三年出现语言延迟的婴儿，更可能在早期与照顾者的轮流互动中表现出较大的声音间隔",
         "照顾者的声音回应（vocal response）比非声音回应更能延伸轮流互动的持续时间"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "当孩子咿呀发声时，用声音回应他——即使只是简单的\"嗯\"\"哦\"——比用表情或动作回应，更能让轮流继续下去。",
+        "这项研究还发现，9 个月时的互动节奏（重叠多还是交替多），可以预测三年后的语言发展。这不是说\"9 个月时出问题就注定语言延迟\"，而是说：早期的互动质量，在塑造语言发展的轨迹。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000026"
+      ],
+      "insight": "这项研究告诉我们：轮流互动的时间节奏，在孩子 9 个月时就已经能预测三年后的语言发展。这是一个极早的预测窗口，也意味着极早的支持机会。",
+      "key_finding": "婴儿期的声音轮流互动体验可以预测其后续社交情感和语言发展",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000033.md"
     },
     {
@@ -1167,8 +1477,28 @@
         "互动质量比互动数量（如话语量）的预测力更强",
         "早期轮流互动的影响窗口比通常认为的更早"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究最重要的信息是：**支持孩子语言发展，从出生后第一个月就开始了，不需要等到孩子\"能说话\"才去想。**",
+        "3 个月时的对话轮流——即使只是你说话、孩子用表情回应、你再接着说——这种简单的来回，在三年后的语言发展中留有印记。",
+        "这不是说\"3 个月时没有足够互动就会造成永久损害\"——而是说，每一天早期的高质量互动，都在积累。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000026"
+      ],
+      "insight": "大多数关于语言发展的研究关注 12 个月以后。这项研究说：**3 个月**时的互动质量，与第三年的语言能力有关联。这把\"支持语言发展\"的时间窗口推到了我们通常认为的更早。",
+      "key_finding": "3 个月时母婴互动的质量（包括照顾者的敏感性、婴儿导向语言和对话轮流）与孩子第三年的语言产出能力存在显著纵向关联",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000034.md"
     },
     {
@@ -1200,8 +1530,28 @@
         "ASD 个体在上述三个层面均有证据支持存在差异",
         "社会动机理论认为：社交认知缺陷（如心智理论困难）是社会动机差异的结果，而非原因"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这个理论框架对家长理解孩子有一个根本性的影响：**\"不主动分享\"\"不来找我玩\"，不一定是孩子\"不想\"，而可能是社交互动对他来说的奖励感不同。**",
+        "这不是说孩子不在乎你——而是说\"一起看一件事\"\"被别人注意到\"这些体验，对他的吸引力可能与典型发展的孩子有所不同。",
+        "理解这一点，可以帮助家长从\"为什么孩子不肯配合\"转向\"怎样让互动对孩子更有意义\"。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000027"
+      ],
+      "insight": "在这篇论文之前，ASD 的社交困难主要被解释为认知问题（如心智理论缺陷）。这篇综述提出了一个不同的视角：核心不是\"不能\"，而是动机层面的差异——社交互动对 ASD 个体的奖励价值可能不同。这改变了我们理解和支持 ASD 社交困难的思路。",
+      "key_finding": "社会动机是一种内在驱动力，使个体倾向于关注社交刺激、寻求社交互动，并在关系中获得满足感",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000035.md"
     },
     {
@@ -1232,8 +1582,28 @@
         "对特殊兴趣刺激（restricted interests）的神经反应增强（d = 0.42）",
         "结论支持社会动机假说的广泛版本：ASD 的奖励加工系统整体存在差异，而不只是\"对社交没有反应\""
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究最重要的信息，是它纠正了一个常见误解：ASD 孩子对社交\"完全没有反应\"。",
+        "实际上，神经影像显示的是奖励加工系统的整体差异——包括对特殊兴趣的反应显著增强。这意味着孩子不是\"没有动机\"，而是他的奖励系统有自己的方式工作。",
+        "对家长来说，这提示我们：利用孩子已有的兴趣来建立互动，比强迫进入他不感兴趣的社交情境更有意义。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000027"
+      ],
+      "insight": "Chevallier 等人（EA-000035）提出了社会动机理论，这篇 Meta 分析用神经影像证据来检验它。结果是：理论基本成立，但比预期更复杂——差异不只在社交奖励，也涉及非社交奖励。",
+      "key_finding": "ASD 个体对社交奖励在纹状体区域表现出非典型加工（效应量 d = -0.25）",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000036.md"
     },
     {
@@ -1265,8 +1635,28 @@
         "这意味着：IJA 困难出现早，且相对独立于一般社会定向能力",
         "结果提示 IJA 缺乏是 ASD 的较为特异性的早期标志之一"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究让我们看到：**\"不来拉我一起看\"和\"不看人的脸\"，是两件不同的事。**",
+        "后来确诊 ASD 的孩子，在 9–12 个月时仍然会看别人的脸——但他们不怎么主动发起\"你也来看\"的行为。这不是因为他们不关注人，而是主动分享体验这一特定的行为，发展得不一样。",
+        "对家长来说，这意味着：如果孩子会看你、会回应你，但很少主动拉你去看他喜欢的东西——这种具体的观察值得被认真对待。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000027"
+      ],
+      "insight": "家庭录像研究的特别之处在于：它看到了孩子在最自然的环境里真实发生的行为——不是在实验室里被测试，而是在家里被家人录下来的日常片段。这让发现更贴近家长实际观察到的情况。",
+      "key_finding": "后来确诊 ASD 的儿童在 9–12 个月时，IJA（主动引导他人注意）行为显著减少",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000037.md"
     },
     {
@@ -1297,8 +1687,28 @@
         "有语言延迟的婴儿在声明性指向的发展路径上与典型发展儿童存在差异",
         "指向行为不只是手势，还涉及眼神切换（确认对方也在关注）和声音——是多模态的社交沟通行为"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "孩子伸手要东西，和孩子拉着你去看一样东西——这是两种完全不同的沟通。",
+        "前者（命令性）是\"帮我实现这件事\"；后者（声明性）是\"我想让你也知道这件事存在\"。后者需要更高的社交动机，也是后来语言发展的更强预测因子。",
+        "所以当孩子开始主动指向事物、转头看你确认你也在看——这不只是一个手势，而是一个非常重要的发展里程碑。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000027"
+      ],
+      "insight": "这篇研究把\"指向\"这个看似简单的行为，分解成了两种根本不同的动机：要东西，还是分享体验。这个区分，是理解孩子社交沟通发展的核心工具之一。",
+      "key_finding": "婴儿指向行为分为命令性指向（imperative，为了获得某物）和声明性指向（declarative，为了与他人分享兴趣或提供信息）",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000038.md"
     },
     {
@@ -1328,8 +1738,27 @@
         "社会动机在 ASD 中具有遗传性（heritable），家族史是重要风险因素",
         "SMI 在诊断前就已可量化测量，提供了早期识别的可能路径"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究的意义不是\"发现了一个诊断工具\"，而是它告诉我们：**社会动机的差异，在 ASD 诊断出现之前就已经存在，而且可以被观察和测量。**",
+        "这对家长来说是一个重要的信息：如果孩子在 6–12 个月时对社交互动的兴趣明显低于同龄孩子，这不是\"性格问题\"，而是一个值得关注的早期信号——即使现在还太早作出任何结论。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000027"
+      ],
+      "insight": "这项研究用标准化工具在诊断之前就测量了社会动机——并发现这个测量可以预测 24 个月时的 ASD 诊断。它把\"社会动机差异是 ASD 的前兆\"这个假设，从理论推进到了可测量的实证。",
+      "key_finding": "6、12、24 个月时的社会动机指数（SMI）较低，与 24 个月时的 ASD 诊断显著相关",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000039.md"
     },
     {
@@ -1360,8 +1789,28 @@
         "大多数研究报告部分儿童在技能泛化方面取得了成功——技能从干预情境迁移到日常生活",
         "干预模式（直接 vs 远程）和剂量对效果的影响结论不一致"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项综述给了家长一个清晰的信号：**由家长来实施的社交沟通干预，不是\"聊胜于无\"，而是有循证支持的正式干预路径。**",
+        "PRT、ESDM、JASPER 都是经过严格研究验证的方案，而且它们都强调家长是干预的核心实施者，不只是配合治疗师的角色。",
+        "同时，\"技能泛化\"的成功也很重要——孩子在日常生活中也能用到练习的技能，不只是在特定情境下。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000028"
+      ],
+      "insight": "这是目前关于\"家庭来做\"的社交沟通干预最全面的系统综述。它不只回答\"有没有效\"，还明确指出了哪些方案已经达到\"循证实践\"的标准——这给家长和专业人员提供了具体的方向。",
+      "key_finding": "PRT（关键反应训练）、ESDM（早期丹佛干预模型）、JASPER（共同注意—象征性游戏—参与—调节）三个亲子介导干预方案被认定为\"已建立的循证实践\"",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000040.md"
     },
     {
@@ -1393,8 +1842,28 @@
         "NDBI 已被适用于更广泛的社交沟通发展延迟人群（不限于 ASD）",
         "干预地点从诊所扩展到家庭、学校、社区"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "NDBI 的核心理念，用一句话说就是：**在孩子已有的兴趣和日常生活里，用自然的方式教他社交沟通。**",
+        "这意味着：\n- 不需要专门设置\"练习时间\"\n- 不需要使用人工奖励（贴纸、糖果）\n- 吃饭、洗澡、玩耍都是干预的场所\n- 孩子喜欢的东西，是干预的起点",
+        "这不是\"轻量版干预\"——这是目前证据最强的早期干预框架之一。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000028"
+      ],
+      "insight": "如果你想理解\"为什么有效的干预都强调在日常生活中做\"，这篇文章给出了最清晰的框架答案。NDBI 的五个核心特征，是目前最简洁、最有共识的早期干预原则总结。",
+      "key_finding": "NDBI 的 5 个核心特征：① 在自然情境与日常惯例中实施；② 跟随孩子的兴趣和引导；③ 使用自然结果作为强化；④ 运用行为策略教授发展适宜的技能；⑤ 强调孩子在学习情境中的社会参与",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000041.md"
     },
     {
@@ -1424,8 +1893,27 @@
         "日常惯例为孩子提供：结构与可预测性（帮助孩子预期并参与）、高频真实机会、以及减少泛化需求的学习情境",
         "早期干预模式在自然环境中实施，证据基础持续增强"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "你不需要特别腾出时间\"练社交沟通\"。你每天已经在做的事——换衣服、吃饭、洗澡、出门——本身就是孩子学习社交沟通最重要的情境。",
+        "研究告诉我们，日常惯例之所以有效，是因为它有三个特别的优势：孩子知道接下来会发生什么（更容易主动参与）；它每天重复发生（远多于每周一次的治疗）；在生活中学到的技能不需要再\"迁移\"——因为孩子就是在用到这些技能的地方学的。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000028"
+      ],
+      "insight": "这篇研究直接回答了家长最常问的问题：日常生活中的互动，真的重要吗？答案是：不只重要，而且是孩子学习社交沟通最重要的情境——比任何单独的训练都更自然、更有效。",
+      "key_finding": "日常活动中的照顾者互动对幼儿社交沟通和语言技能的习得至关重要，这对有无发育延迟的儿童均成立",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000042.md"
     },
     {
@@ -1455,8 +1943,27 @@
         "不同方案在具体结果领域有差异：各方案在社交沟通、语言、认知、游戏等不同维度的效果有所侧重",
         "家长执行保真度（fidelity）是影响干预效果的重要因素，不同方案对保真度的支持方式也有差异"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究告诉我们：不是\"某一种方法对所有孩子都最好\"，而是不同方案有不同的侧重点和适用情境。",
+        "对家长来说，最重要的不是找到\"最好的方法\"，而是找到当前适合这个孩子、这个家庭、这个阶段的方法——并且能够高质量地执行它。执行质量（保真度），往往比方案选择更重要。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000028"
+      ],
+      "insight": "之前的综述告诉我们 NDBI 整体有效，这篇研究进一步问：不同的 NDBI 方案，哪个更适合什么情况？这是目前最系统地回答这个问题的研究。",
+      "key_finding": "亲子介导 NDBI 整体有效，支持这一结论的证据稳健",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000043.md"
     },
     {
@@ -1487,8 +1994,28 @@
         "但证据质量为中至低度——效果真实，但受到实施质量、孩子个体差异等多重因素影响",
         "调节变量分析显示：干预的实施质量（保真度）是最重要的效果预测因子之一"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项研究的结论是\"有效，但不是立竿见影的\"——这是一个诚实而重要的信息。",
+        "对家长来说，它提醒我们：早期干预（3 岁前）是有依据的，值得投入；但效果因孩子和执行方式不同而有差异，不存在\"只要开始就一定如何\"的保证。",
+        "最重要的不是找到\"神奇方法\"，而是找到适合当前孩子的方法，并高质量地持续执行。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000028"
+      ],
+      "insight": "这是专门针对\"3 岁以下\"这个年龄段的最新 Meta 分析。它填补了一个重要的证据缺口：最小的孩子，从家庭干预中能获益多少？",
+      "key_finding": "整体结果支持亲子介导干预对 3 岁以下 ASD 儿童有积极效果",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000044.md"
     },
     {
@@ -1519,8 +2046,28 @@
         "24 个月及以上儿童的令人担忧表现包括：词汇少于 50 个词、语言清晰度差、年龄相应测试中的明显缺陷",
         "AAP 建议在每次健康儿童就诊时进行发展监测，4–5 岁时特别关注"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这篇文章最重要的信息是：**\"等等看\"不是一个没有代价的选择。**",
+        "每一次推迟评估，都可能推迟孩子获得支持的时间。早期评估不是为了\"贴标签\"，而是为了更快地知道孩子需要什么、可以得到什么支持。",
+        "家长不需要等到医生提出来——主动在就诊时说出你的担忧，是你的权利，也是孩子的机会。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000029"
+      ],
+      "insight": "这篇文章专门写给家庭医生，告诉他们什么时候需要将孩子转介给语言专科。对家长来说，它提供了一个清晰的参考框架：什么表现，在什么年龄，应该引起关注。",
+      "key_finding": "早期转介评估可以减少长期沟通障碍的发展，以及对社交和学业发展的不良影响",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000045.md"
     },
     {
@@ -1552,8 +2099,28 @@
         "明确反对将\"等待观察\"作为面对发展担忧的默认策略",
         "父母的担忧是识别发展延迟的重要入口，应被纳入监测流程"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**\"再等等看\"不是没有代价的建议。**",
+        "这份指南背后的数据是：6 个孩子里有 1 个存在某种发展延迟，但 4 个里只有不到 1 个在 3 岁前获得了早期干预服务。也就是说，大量有需要的孩子因为\"等等看\"而错过了早期支持。",
+        "你的担忧，是发现孩子发展需求最重要的来源之一。这不是\"过度敏感\"，而是你作为家长最有价值的观察。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000029"
+      ],
+      "insight": "这份指南修订了我们如何看待发展里程碑——不再是\"平均年龄\"，而是\"75% 的孩子应该做到的年龄\"。更重要的是，它明确说：等待观察，不是没有代价的选择。",
+      "key_finding": "修订后的里程碑反映 75% 的儿童能完成特定技能的年龄（而非平均年龄），旨在减少\"等待观察\"的情况",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000046.md"
     },
     {
@@ -1583,8 +2150,28 @@
         "单个里程碑略有延迟不一定需要立即评估，但多项技能缺失或技能退步需要立即关注",
         "ASHA 明确支持\"更早识别\"的方向，强调里程碑必须基于循证，以便家庭做出有依据的决定"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "里程碑不是用来评判孩子\"是否达标\"的，而是帮助家长和医生识别\"什么时候值得进一步了解\"。",
+        "ASHA 给出的原则很清晰：**如果孩子缺乏多项技能、一段时间内没有习得新技能，或者已有的技能开始消失——这三种情况，任何一种都值得主动寻求评估。**",
+        "不需要等到\"很多项都不对\"——一旦有持续的担忧，就可以开口。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000029"
+      ],
+      "insight": "ASHA 是言语语言领域最权威的专业机构之一。这份里程碑和声明是 SLP 在评估儿童时使用的参考标准，也是家长理解\"什么算正常范围\"最可靠的来源之一。",
+      "key_finding": "ASHA 2023 年发布的里程碑反映 75% 儿童能在特定年龄段展现特定技能的证据基础",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000047.md"
     },
     {
@@ -1616,8 +2203,28 @@
         "2.5–5.15 岁进入干预的儿童，比 5.15–7.14 岁才开始的儿童，在干预中取得了更大的进步",
         "干预效果受测量情境影响：在与干预相似的情境中测量，效果更大；在真实泛化情境中，效果相对减小"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "\"越早开始越好\"不只是一句口号——这项 Meta 分析提供了具体的数据支持。",
+        "2.5–5 岁进入干预，比 5 岁以后才开始的孩子，进步更大。这不是说\"5 岁以后就晚了\"，而是告诉我们：**当有担忧时，越早行动，孩子的发展空间越大。**",
+        "早期大脑的可塑性，是这一发现背后的生物学基础。每推迟一段时间寻求评估和支持，就是让这个窗口窄一些。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000029"
+      ],
+      "insight": "这项 Meta 分析回答了一个家长最关心的问题：早点开始，真的有用吗？答案是：有，而且有量化数据支持。",
+      "key_finding": "进入干预项目的年龄与发展结局存在关联：更早开始获得支持的儿童，后续发展结局更好",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000048.md"
     },
     {
@@ -1649,9 +2256,419 @@
         "父母与临床人员之间清晰准确的沟通是高质量儿科护理的关键组成部分",
         "有 ASD 家族史等风险因素的儿童，应接受更频繁的发展监测"
       ],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "这项政策声明揭示了一个让人难以接受的现实：**如果没有主动筛查，超过一半有发展或行为困难的孩子，会在上幼儿园之前一直被忽视。**",
+        "这不是在批评任何人，而是说：发展困难往往是\"安静的\"——孩子可能看起来很好，但在某些领域悄悄地落后了。",
+        "家长最重要的行动，就是主动：在每次儿科就诊时说出你的担忧，不要假设医生已经发现了。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-social-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000029"
+      ],
+      "insight": "这是 AAP 关于发展监测的核心政策声明。它告诉我们：不做常规筛查的代价，是超过一半有发展或行为困难的孩子在上幼儿园之前都没有被识别出来。这个数据应该让所有关心孩子发展的人都停下来思考。",
+      "key_finding": "没有常规筛查，至少 50% 有发展或行为障碍的儿童在入幼儿园前未被识别",
+      "why_it_matters": null,
+      "limitations": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000049.md"
+    },
+    {
+      "id": "EA-000050",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童家长（与 TD 和其他障碍比较）",
+      "sample": null,
+      "year": 2013,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Meta-analysis",
+      "reading_time": "10 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "The Impact of Parenting Stress: A Meta-analysis of Studies Comparing the Experience of Parenting Stress in Parents of Children With and Without Autism Spectrum Disorder",
+        "authors": "Hayes, S. A.; Watson, S. L.",
+        "journal": "Journal of Autism and Developmental Disorders",
+        "year": "2013 · Vol. 43(3) · pp. 629–642",
+        "doi": "10.1007/s10803-012-1604-y",
+        "access": "Paywalled (Springer)",
+        "method": "Meta-analysis",
+        "scope": "ASD 儿童家长 vs. 典型发展儿童家长 vs. 其他障碍儿童家长；多项研究合并；PSI / QRS 等量表"
+      },
+      "why_read": "它不是说 ASD 家长很辛苦，而是第一次用数字告诉你辛苦到什么程度。",
+      "research_question": "ASD 儿童家长的照顾压力，到底比其他家长高多少？这个差距是边缘性的，还是实质性的？",
+      "key_findings": [],
+      "parent_meaning": [
+        "很多家长后来才发现，自己感受到的压力程度，并不是因为自己太脆弱，或者方法不对。研究数据显示，ASD 家长的照顾压力在统计意义上显著高于其他家长——不是高一点点，是高出一个级别。这不是主观感受，这是可以测量的。",
+        "很多家长后来才发现，即使跟同样在照顾特殊需求孩子的家长相比，ASD 家长的压力水平也更高。这不是比较谁更苦，而是说明 ASD 照顾有它特定的压力来源，需要被认真对待。",
+        "很多家长后来才发现，这种高压力是结构性的、系统性的——不是因为你不努力，而是因为这件事本来就很难。知道这一点，不会让事情变容易，但可以让你对自己更公平。\n\n---"
+      ],
+      "implications": [
+        "如果你感到疲惫到一个说不清楚的程度，不需要为此解释。研究已经测量了这件事，并且给出了答案",
+        "这篇文献不直接告诉你怎么做，但它可以成为你向支持体系寻求帮助时的底气：这不是你的问题，这是可以被测量的结构性压力",
+        "感到比周围的家长更累，即使你已经很努力——这是真实存在的，不是比较心理，不是夸大"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Foundational Evidence · Concept & Magnitude",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是说 ASD 家长很辛苦，而是第一次用数字告诉你辛苦到什么程度。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000050.md"
+    },
+    {
+      "id": "EA-000051",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童家长及家庭（幼儿至青少年，跨研究）",
+      "sample": null,
+      "year": 2012,
+      "quality_level": null,
+      "evidence_type": "Qualitative · Narrative Review",
+      "reading_time": "15 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Parent and Family Impact of Autism Spectrum Disorders: A Review and Proposed Model for Intervention Evaluation",
+        "authors": "Karst, J. S.; Van Hecke, A. V.",
+        "journal": "Clinical Child and Family Psychology Review",
+        "year": "2012 · Vol. 15(3) · pp. 247–277",
+        "doi": "10.1007/s10567-012-0119-6",
+        "access": "Paywalled (Springer)",
+        "method": "Narrative Review",
+        "scope": "ASD 对家长和家庭的多维度影响；干预评估模型提案；覆盖压力、婚姻、同胞、财务、家庭功能等维度"
+      },
+      "why_read": "它不只是说家长很累，而是第一次把\"为什么这么累\"画成了一张地图。",
+      "research_question": "ASD 到底从哪些方面影响了家长和家庭？这些影响之间有什么关系？现有的干预研究为什么经常失败——是因为它们只看孩子，忽略了家庭？",
+      "key_findings": [
+        "家长心理健康：高水平抑郁、焦虑、压力——高于 TD 儿童家长，也高于其他障碍儿童家长",
+        "亲职效能（Parenting Efficacy）：显著降低——家长对自己照顾孩子的能力缺乏信心",
+        "婚姻关系：离婚率高于一般家庭，夫妻满意度下降",
+        "财务负担：治疗费用（直接）和就业影响（间接）形成双重负担",
+        "时间压力：照顾需求全面挤压父母的就业和个人生活",
+        "同胞影响：兄弟姐妹的心理和社交发展受到影响",
+        "家庭整体功能：凝聚力、适应性、沟通均受不同程度影响"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，婚姻关系变得紧张、对自己失去信心、感觉孩子的进步没有带来自己期待的轻松——这些不是个人失败，而是文献里反复记录的模式。知道这一点，不会让事情变容易，但会让你对自己更公平。",
+        "很多家长后来才发现，研究已经显示：家长压力越高，孩子从早期干预中获益越小。这不是在责怪家长——而是说明，支持家长本身就是在支持孩子。如果专业人员只关注孩子，忽略你的状态，这是一个系统缺陷。",
+        "很多家长后来才发现，孩子行为更难管 → 自己更累 → 更难做出正向回应 → 孩子行为更难管……这个循环不需要任何人的错误就能启动。认识它，是打断它的第一步。",
+        "很多家长后来才发现，财务负担不只是数字，它影响了哪些干预可以持续、哪些需要放弃、以及谁能继续工作。这是真实的压力来源，不是借口。\n\n---"
+      ],
+      "implications": [
+        "如果你感到亲子关系、婚姻关系、个人状态同时承压，这不是偶然——这些是同一件事的不同面向",
+        "留意那个循环：孩子行为更难 → 你更累 → 你的回应质量下降 → 孩子行为更难。认识它，才能有意识地打断它",
+        "向专业人员明确提出：你也需要支持，不只是孩子需要干预",
+        "感到婚姻关系因为照顾压力出现持续紧张",
+        "对自己照顾孩子的能力失去信心，且这种感觉持续存在",
+        "发现自己越来越难以做出正向的亲子互动"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Foundational Mechanism Overview",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不只是说家长很累，而是第一次把\"为什么这么累\"画成了一张地图。",
+      "key_finding": "家长心理健康：高水平抑郁、焦虑、压力——高于 TD 儿童家长，也高于其他障碍儿童家长",
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000051.md"
+    },
+    {
+      "id": "EA-000052",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童家长（综合 61 项研究）",
+      "sample": "67项研究纳入综述 · 61项进入meta-analysis",
+      "year": 2018,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Meta-analysis",
+      "reading_time": "14 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "The Association Between Emotional and Behavioral Problems in Children with Autism Spectrum Disorder and Psychological Distress in Their Parents: A Systematic Review and Meta-analysis",
+        "authors": "Yorke, I.; White, P.; Weston, A.; Rafla, M.; Charman, T.; Simonoff, E.",
+        "journal": "Journal of Autism and Developmental Disorders",
+        "year": "2018 · Vol. 48(10) · pp. 3393–3415",
+        "doi": "10.1007/s10803-018-3605-y",
+        "access": "Open Access",
+        "method": "Systematic Review + Meta-analysis",
+        "scope": "67 项研究纳入综述，61 项进入 meta-analysis；PROSPERO: CRD42017057915；儿童年龄 3–25 岁；King's College London"
+      },
+      "why_read": "它不只是说孩子的行为问题让家长很累，而是第一次用 61 项研究的数据量化了这个关联，并且发现了一个让很多人意外的结论：孩子焦虑（内化行为）和孩子攻击性（外化行为）对家长压力的影响，差不多一样大。",
+      "research_question": "ASD 儿童的情绪和行为问题（EBP），到底会让家长的压力和心理健康恶化多少？这个关联是稳健的还是因为测量工具有问题？孩子的焦虑和孩子的攻击行为，哪个影响更大？以及，这个关系是单向的还是双向的？",
+      "key_findings": [],
+      "parent_meaning": [
+        "很多家长后来才发现，自己因为孩子的焦虑、退缩、情绪崩溃而感到压力，和因为孩子的攻击行为而感到压力，在研究里测出来的程度几乎是一样的。孩子\"安静地痛苦\"，不代表你的压力更小。",
+        "很多家长后来才发现，这个关系不是单向的——不只是孩子的行为问题让你更累，你的状态也在影响孩子的行为表现。这不是说你要更努力，而是说支持你，本身就是在支持孩子。",
+        "很多家长后来才发现，研究显示让家长压力升高的，主要不是\"孩子有 ASD\"这件事本身，而是具体的行为挑战——攻击行为、情绪崩溃、焦虑表现。这意味着，如果能减少这些行为，家长压力也可能随之改善。",
+        "很多家长后来才发现，对自己育儿能力失去信心，可能比孩子行为问题本身更直接影响自己的压力水平。这不是要你更自信，而是说：如果你感到这样，这是一个需要被支持的信号，不是一个需要被克服的弱点。\n\n---"
+      ],
+      "implications": [
+        "如果孩子的焦虑或退缩让你感到同样疲惫，这是真实的——不要低估安静型挑战对你的影响",
+        "如果你发现自己越来越不相信自己能做好这件事，这是一个需要被支持的信号，不是意志力问题",
+        "孩子的行为挑战（无论是外化还是内化）持续影响你的日常功能，且没有改善趋势",
+        "你感到自己的育儿能力在下降，而不只是感到疲惫"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Mechanism · Child Behavior Problems",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不只是说孩子的行为问题让家长很累，而是第一次用 61 项研究的数据量化了这个关联，并且发现了一个让很多人意外的结论：孩子焦虑（内化行为）和孩子攻击性（外化行为）对家长压力的影响，差不多一样大。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000052.md"
+    },
+    {
+      "id": "EA-000053",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童家长（5-18岁儿童）",
+      "sample": "7项ASD研究（11项总计）",
+      "year": 2019,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Systematic Review",
+      "reading_time": "10 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Associations between Parenting Stress, Parent Mental Health and Child Sleep Problems for Children with ADHD and ASD: Systematic Review",
+        "authors": "Martin, C. A.; Papadopoulos, N.; Chellew, T.; Rinehart, N. J.; Sciberras, E.",
+        "journal": "Research in Developmental Disabilities",
+        "year": "2019 · Vol. 93 · Article 103463",
+        "doi": "10.1016/j.ridd.2019.103463",
+        "access": "Paywalled (Elsevier)",
+        "method": "Systematic Review（叙述性综述，无 meta-analysis）",
+        "scope": "11 项研究（4 ADHD + **7 ASD**）；儿童 5–18 岁；Deakin University / Murdoch Children's Research Institute"
+      },
+      "why_read": "它不只是说孩子不睡觉让家长很累，而是系统整理了 7 项 ASD 研究，确认这个关联是真实的——同时指出一个研究界还没有答案的问题：到底是孩子不睡让家长更累，还是家长更累让孩子睡不好，还是两者都有？",
+      "research_question": "ASD 儿童的睡眠问题，和家长的照顾压力、心理健康问题，到底有没有系统性的关联？这个关联有多稳健？以及，我们现在知道的是因果关系，还是只是相关？",
+      "key_findings": [
+        "5/6 项研究发现显著关联，效应量从小到大不等",
+        "横断面层面：儿童睡眠问题与家长照顾压力的正向关联是稳健的",
+        "在不同研究样本、不同睡眠测量工具下均有出现",
+        "5/6 项研究发现显著关联，效应量从小到大不等",
+        "两项纵向研究提供了跨时间的证据，但方向性尚不明确"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，那种\"只要孩子睡不好我第二天就不对劲\"的感受，不只是主观体验。7 项针对 ASD 家庭的研究里，有 5 项确认了这个关联。你不是太敏感，你是被真实的压力影响了。",
+        "很多家长后来才发现，儿童睡眠问题和家长的心理健康（包括抑郁和焦虑症状）也有关联，不只是让你更累。长期睡眠不足的环境，对情绪的影响是真实且累积的。",
+        "很多家长后来才发现，是孩子不睡让你更累，还是你更累让孩子更难入睡，研究界目前还没有确定的答案。两个方向都可能存在，这意味着从任何一个方向入手都可能有帮助。\n\n---"
+      ],
+      "implications": [
+        "如果孩子的睡眠问题是当前最大的压力来源，这是一个值得被认真对待的信号，而不是\"等孩子大了就好了\"",
+        "改善孩子睡眠的干预，有可能同时让你感到更好——这两件事是连接的",
+        "儿童睡眠问题持续超过 2–3 个月，且影响你的日常功能",
+        "你发现自己的情绪状态和孩子的睡眠质量高度绑定",
+        "ASD 儿童的睡眠问题发生率显著高于典型发展儿童——如果孩子睡眠问题很顽固，不是因为你做错了什么"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Mechanism · Sleep Problems",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不只是说孩子不睡觉让家长很累，而是系统整理了 7 项 ASD 研究，确认这个关联是真实的——同时指出一个研究界还没有答案的问题：到底是孩子不睡让家长更累，还是家长更累让孩子睡不好，还是两者都有？",
+      "key_finding": "5/6 项研究发现显著关联，效应量从小到大不等",
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000053.md"
+    },
+    {
+      "id": "EA-000054",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 幼儿家长（Pathways in ASD 多中心队列）",
+      "sample": null,
+      "year": 2011,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Psychometric",
+      "reading_time": "10 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Factor Analysis of the Parenting Stress Index–Short Form with Parents of Young Children with Autism Spectrum Disorders",
+        "authors": "Zaidman-Zait, A.; Mirenda, P.; Zumbo, B. D.; Georgiades, S.; Szatmari, P.; Bryson, S.; Fombonne, E.; Roberts, W.; Smith, I.; Vaillancourt, T.; Volden, J.; Waddell, C.; Zwaigenbaum, L.; Duku, E.; Thompson, A.; Pathways in ASD Study Team",
+        "journal": "Autism Research",
+        "year": "2011 · Vol. 4(5) · pp. 336–346",
+        "doi": "10.1002/aur.213",
+        "access": "Paywalled (Wiley)",
+        "method": "Psychometric Validation（CFA + EFA）",
+        "scope": "Pathways in ASD Study（加拿大多中心前瞻性队列）；ASD 幼儿家长；验证 PSI-SF 三因素结构在 ASD 样本中的适用性"
+      },
+      "why_read": "它不是给家长读的——它是给研究者和临床工作者读的。这篇文献揭示了一个关键问题：研究界最常用的照顾压力量表，在 ASD 家长样本里，可能测量的不完全是我们以为它在测量的东西。",
+      "research_question": "PSI-SF 的原始三因素结构（亲职困扰、亲子互动失调、孩子行为难度），在 ASD 儿童家长这个具体群体里，还能成立吗？如果不成立，什么样的结构更合适？",
+      "key_findings": [
+        "**Parent-Child Dysfunctional Interaction（亲子互动失调）**：在 ASD 家长中区分度低——因为 ASD 儿童的发展特征使得\"互动困难\"很难与\"照顾压力本身\"区分",
+        "**Difficult Child（孩子行为难度）**：条目直接描述儿童行为特征，与独立的 EBP 量表存在概念重叠——这解释了为什么同时使用这两个量表会得到虚高的相关"
+      ],
+      "parent_meaning": [
+        "有一种常用的压力测量工具，里面包含了\"孩子有多难管\"的问题。如果孩子本来就有很多行为挑战，这些问题会自动让你的\"压力分数\"升高——即使你的实际心理感受并没有那么高。研究者后来意识到这个问题，开始区分\"量表测出来的数字\"和\"家长真实感受到的压力\"。",
+        "这篇文献说的不是\"研究是错的\"，而是\"研究需要用更合适的工具\"。你的真实体验比任何量表都更复杂，这正是为什么量化研究需要被谨慎解读。\n\n---"
+      ],
+      "implications": [
+        "在报告 PSI 数据时，区分总分与子量表分数，尤其注意 Difficult Child 子量表的概念边界",
+        "如果同时使用 PSI 和儿童行为量表（如 CBCL），需要讨论两者的内容重叠",
+        "推荐使用 Parental Distress 子量表作为\"纯家长压力\"的测量指标"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Measurement · PSI-SF ASD Validation",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是给家长读的——它是给研究者和临床工作者读的。这篇文献揭示了一个关键问题：研究界最常用的照顾压力量表，在 ASD 家长样本里，可能测量的不完全是我们以为它在测量的东西。",
+      "key_finding": "**Parent-Child Dysfunctional Interaction（亲子互动失调）**：在 ASD 家长中区分度低——因为 ASD 儿童的发展特征使得\"互动困难\"很难与\"照顾压力本身\"区分",
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000054.md"
+    },
+    {
+      "id": "EA-000055",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 青少年及成年子女的母亲（中年至老年，Wisconsin + Massachusetts）",
+      "sample": "379 名母亲（Wave 1）· 5 波数据 · 10 年追踪",
+      "year": 2011,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Longitudinal",
+      "reading_time": "14 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Trajectories of Emotional Well-Being in Mothers of Adolescents and Adults with Autism",
+        "authors": "Barker, E. T.; Hartley, S. L.; Seltzer, M. M.; Floyd, F. J.; Greenberg, J. S.; Orsmond, G. I.",
+        "journal": "Developmental Psychology",
+        "year": "2011 · Vol. 47(2) · pp. 551–561",
+        "doi": "10.1037/a0021268",
+        "access": "Open Access (PMC)",
+        "method": "Longitudinal Study · 5 waves · 10 years · HLM",
+        "scope": "N=379 名母亲；子女均值年龄 21.91 岁（范围 10–52 岁）；母亲均值年龄 51.22 岁；Wisconsin + Massachusetts；Wave 1: 1998 → Wave 5: 2008"
+      },
+      "why_read": "它不只是说家长会随着时间变好——它发现，焦虑和抑郁的变化轨迹完全不同，而且是孩子的具体行为（而不是 ASD 诊断本身）在决定妈妈 10 年里的心理状态走向。",
+      "research_question": "在照顾 ASD 青少年和成年子女的过程中，母亲的心理状态（抑郁症状和焦虑）会随时间怎样变化？孩子的行为问题、居住状态、母亲的社会支持——这些因素，哪些真正在影响这条轨迹？",
+      "key_findings": [
+        "在 10 年内，抑郁症状**没有显著的线性升降**",
+        "年长母亲在研究开始时抑郁症状略低",
+        "当纳入儿童行为变量后，抑郁症状实际呈现轻微上升趋势",
+        "子女离家**不改变**抑郁轨迹",
+        "焦虑在 10 年内**显著线性下降**",
+        "年长母亲起点更低",
+        "子女搬出去住后，焦虑**显著下降**（这是唯一对焦虑有显著效应但对抑郁无效应的变量）",
+        "社会支持网络缩小 → 焦虑升高"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，研究里追踪 10 年的数据显示，对未来的担忧和焦虑，平均来说随着时间会减少一些。但抑郁的感受——那种沉重、无力、提不起劲——不会自然改善。这是两件不一样的事，不能混为一谈。",
+        "很多家长后来才发现，10 年的追踪数据显示：当孩子行为问题更严重的时候，妈妈的抑郁和焦虑都会上升。而 ASD 症状严重程度本身，在控制行为问题后，没有独立影响。这意味着：如果行为挑战减少，你的状态也可能改善。",
+        "很多家长后来才发现，子女搬到社区居所后，对未来的担忧（焦虑）确实下降了。但抑郁症状没有随之改变。这可能是因为长期照顾积累的心理损耗，不是居住安排改变能立刻修复的。",
+        "很多家长后来才发现，那个\"随着时间焦虑会改善\"的平均趋势，掩盖了一部分母亲实际上在持续恶化的真实情况。如果你感到没有在变好，你不是例外，你是数据里真实存在的那一部分。\n\n---"
+      ],
+      "implications": [
+        "如果你感到焦虑是主要困扰，研究有一些好消息：平均来说这会随时间有所改善，尤其当孩子的行为挑战减少的时候",
+        "如果你感到的是那种沉重、无力、抑郁的感受，不要等待它自然消失——研究显示这部分不会自动改善",
+        "维持你的社会支持网络——不只是为了感觉好一点，研究显示这直接影响你 10 年里的焦虑轨迹",
+        "抑郁症状（无力感、对事物失去兴趣、睡眠和食欲改变）持续超过 2 周",
+        "感到自己的状态在持续恶化，而不是平稳"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Contextual Trajectory · Maternal Psychological Wellbeing",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不只是说家长会随着时间变好——它发现，焦虑和抑郁的变化轨迹完全不同，而且是孩子的具体行为（而不是 ASD 诊断本身）在决定妈妈 10 年里的心理状态走向。",
+      "key_finding": "在 10 年内，抑郁症状**没有显著的线性升降**",
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000055.md"
+    },
+    {
+      "id": "EA-000056",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童家长（21 项 RCT 综合，以母亲为主）",
+      "sample": "21项RCT",
+      "year": 2024,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Meta-analysis",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Effectiveness of Parent-Focused Interventions for Improving the Mental Health of Parents and Their Children with Autism Spectrum Disorder: A Systematic Review and Meta-analysis",
+        "authors": "Li, S. N.; Chien, W. T.; Lam, S. K. K.; Chen, Z. Y.; Ma, X.",
+        "journal": "Research in Autism Spectrum Disorders",
+        "year": "2024 · Vol. 114 · Article 102389",
+        "doi": "10.1016/j.rasd.2024.102389",
+        "access": "Paywalled (Elsevier)",
+        "method": "Systematic Review + Meta-analysis（21 RCT）",
+        "scope": "PubMed、Embase、PsycINFO、CINAHL、Cochrane Central Register、ProQuest、CNKI；截至 2022 年 12 月 31 日；21 项 RCT；GRADE 评估"
+      },
+      "why_read": "它不只是说\"有帮助\"，而是第一次从 21 项随机对照试验里，同时告诉你哪种方法最有效、要做多久、谁应该参加——并且用 GRADE 方法评估了这个答案的可信度。",
+      "research_question": "以家长为直接目标的干预，能有效降低照顾压力、抑郁症状和心理困扰吗？哪种方法（正念、ACT、CBT、心理教育）最有效？最佳干预时长是多久？只针对家长，还是同时针对亲子双方更好？",
+      "key_findings": [],
+      "parent_meaning": [
+        "很多家长后来才发现，帮助家长减轻照顾压力不只是\"试试看\"，而是有 21 项随机对照研究支撑的方向。平均来说，压力的改善幅度是大效应量——不是边缘性的数字，而是有实质意义的差距。",
+        "很多家长后来才发现，\"了解更多关于 ASD 的知识\"（心理教育）对减轻照顾压力的帮助比较有限。相比之下，练习正念、学习如何与自己的情绪保持一定距离（ACT），在研究里对压力和抑郁的改善效果更好。",
+        "很多家长后来才发现，研究显示 5 到 8 周的干预已经能产生有意义的效果，时间更长并不代表效果更好。这意味着这是一个可以被纳入真实日常生活的承诺，而不是一个巨大的额外负担。",
+        "很多家长后来才发现，家长接受支持后，孩子的问题行为也有所减少，亲子关系也得到改善——即使干预不直接针对孩子。支持你自己，本身就是一种对孩子的支持。\n\n---"
+      ],
+      "implications": [
+        "正念练习和接纳承诺疗法（ACT）是目前证据最好的起点——可以先了解这两个方向",
+        "如果时间有限，研究显示 5–8 周的结构化课程已经能产生有意义的改变",
+        "寻找专门针对 ASD 家长的团体支持课程——仅家长参与的形式在研究里效果最好",
+        "照顾压力已经影响你的日常功能（睡眠、情绪、人际关系）",
+        "感到自己的心理状态在持续恶化，而不是平稳",
+        "开始正念练习或任何新的心理调适方法时，前期可能感觉没有效果——这是正常的适应期，不是失败"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Foundational Intervention Review",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不只是说\"有帮助\"，而是第一次从 21 项随机对照试验里，同时告诉你哪种方法最有效、要做多久、谁应该参加——并且用 GRADE 方法评估了这个答案的可信度。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000056.md"
     }
   ]
 }

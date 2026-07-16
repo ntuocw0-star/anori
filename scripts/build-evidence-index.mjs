@@ -100,6 +100,58 @@ function parseParagraphs(section) {
     .filter(Boolean);
 }
 
+// coverage_layer 自动映射表（来自 33A Schema + 33C coverageLayerMap）
+const coverageLayerMap = {
+  'Topic Worldview':        'Concept',
+  'Shared Attention':       'Development',
+  'Reciprocal Interaction': 'Development',
+  'Shared Experience':      'Development',
+  'Parent Role Reframing':  'Support',
+  'Decision Support':       'Decision',
+};
+
+// ① Insight section 提取（EA Editorial Framework v1.0 新格式）
+function extractInsight(content) {
+  // 尝试新格式：## ① Insight
+  const newFormat = extractSection(content, '① Insight');
+  if (newFormat) {
+    // 去掉 **这项证据最大的发现是：** 前缀，取 blockquote 内容
+    const bq = firstBlockquote(newFormat);
+    if (bq) return bq;
+    // fallback：取第一个非空段落
+    return newFormat.split('\n').find(l => l.trim() && !l.startsWith('#')) ?? null;
+  }
+  // 旧格式 fallback：Layer 0 的 blockquote
+  const layer0 = extractSection(content, 'Layer 0');
+  return firstBlockquote(layer0) ?? null;
+}
+
+// Why It Matters section 提取
+function extractWhyItMatters(content) {
+  const section = extractSection(content, '④ Why It Matters');
+  if (!section) return null;
+  return section.split('\n').filter(l => l.trim() && !l.startsWith('#')).join(' ').trim() || null;
+}
+
+// Limitations section 提取
+function extractLimitations(content) {
+  const section = extractSection(content, '⑥ Limitations');
+  if (!section) return null;
+  return bulletItems(section).join(' ') || section.trim() || null;
+}
+
+// Key Finding（单数）提取 — 取 key_findings 第一条，或 ## ③ Key Finding section
+function extractKeyFinding(content, keyFindings) {
+  const section = extractSection(content, '③ Key Finding');
+  if (section) {
+    const bq = firstBlockquote(section);
+    if (bq) return bq;
+    const bullets = bulletItems(section);
+    if (bullets.length) return bullets[0];
+  }
+  return keyFindings[0] ?? null;
+}
+
 function parseEA(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const meta = parseMetadataBlock(content);
@@ -109,7 +161,11 @@ function parseEA(filePath) {
   const layer2 = extractSection(content, 'Layer 2');
   const layer3 = extractSection(content, 'Layer 3');
   const layer5 = extractSection(content, 'Layer 5');
+
+  const key_findings = bulletItems(layer2);
+
   return {
+    // ── 原有字段（保持不变，向后兼容）──
     id: meta.id,
     type: meta.type ?? null,
     topic: meta.topic ?? null,
@@ -120,32 +176,81 @@ function parseEA(filePath) {
     evidence_type: meta.evidence_type ?? null,
     reading_time: meta.reading_time ?? null,
     // 16B.2: 只输出格式合法的 ET ID（/^ET-\d{6}$/）
-    // 含"（待建）""（增补）"等注释的字符串静默丢弃，不进入 generated JSON
-    // related_ka 不输出（仅供 validate-repository.mjs 做一致性检查）
     related_et: (Array.isArray(meta.related_et) ? meta.related_et : [])
       .filter(id => typeof id === 'string' && /^ET-\d{6}$/.test(id)),
     related_path: Array.isArray(meta.related_path) ? meta.related_path : [],
     source: extractSource(content),
     why_read: firstBlockquote(layer0) ?? null,
     research_question: firstBlockquote(layer1) ?? null,
-    key_findings: bulletItems(layer2),
+    key_findings,
     parent_meaning: parseParagraphs(layer3),
     implications: bulletItems(layer5),
+
+    // ── 33A Contract 新增字段（可选，向前兼容）──
+    content_type: 'EA',
+    tier: meta.tier ? Number(meta.tier) : null,
+    series: meta.series ?? null,
+    editorial_role: meta.editorial_role ?? null,
+    framework: meta.framework ?? null,
+    is_foundational: meta.is_foundational === true || meta.is_foundational === 'true',
+    confidence: meta.confidence ?? null,
+    concept_refs: meta.concept_refs
+      ? (typeof meta.concept_refs === 'string'
+          ? { primary: meta.concept_refs, secondary: [] }
+          : meta.concept_refs)
+      : null,
+    // supports_et：Contract 命名（related_et 的 alias）
+    supports_et: (Array.isArray(meta.supports_et) ? meta.supports_et : [])
+      .filter(id => typeof id === 'string' && /^ET-\d{6}$/.test(id)),
+
+    // Reading Pattern 新字段（EA Editorial Framework v1.0）
+    insight: extractInsight(content),
+    key_finding: extractKeyFinding(content, key_findings),
+    why_it_matters: extractWhyItMatters(content),
+    limitations: extractLimitations(content),
+
     _source_file: path.relative(ROOT, filePath),
   };
+}
+
+// ET body 提取：兼容旧格式（核心转译 section）和新格式（ET 文本 section）
+function extractETBody(content) {
+  // 新格式（ET Standard v2.0）：## ET 文本（家长版）
+  const newSection = extractSection(content, 'ET 文本（家长版）');
+  if (newSection && newSection.length > 50) return newSection.trim();
+
+  // 旧格式 fallback：## 核心转译 > ET 文本
+  const core = extractSection(content, '核心转译');
+  const bodyMatch = core.match(/\*\*ET 文本（家长版）：\*\*[\s\S]*?---\s*\n([\s\S]*?)\n---/);
+  return bodyMatch ? bodyMatch[1].trim() : null;
+}
+
+// ET action_prompt 提取：兼容旧格式
+function extractETActionPrompt(content) {
+  const core = extractSection(content, '核心转译');
+  const actionMatch = core.match(/\*\*(?:如果你现在正好在这里|今天不要做什么)[：:]\*\*\s*\n([\s\S]*?)(?=\n---|$)/);
+  if (actionMatch) return actionMatch[1].trim();
+
+  // 新格式：⑤ 接下来可以留意什么
+  const observeSection = extractSection(content, '⑤ 接下来可以留意什么');
+  return observeSection.trim() || null;
 }
 
 function parseET(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const meta = parseMetadataBlock(content);
   if (!meta.id) throw new Error(`ET 缺少 id: ${filePath}`);
-  const core = extractSection(content, '核心转译');
-  const bodyMatch = core.match(/\*\*ET 文本（家长版）：\*\*[\s\S]*?---\s*\n([\s\S]*?)\n---/);
-  const actionMatch = core.match(/\*\*(?:如果你现在正好在这里|今天不要做什么)[：:]\*\*\s*\n([\s\S]*?)(?=\n---|$)/);
+
   const sourceEa = Array.isArray(meta.source_ea)
     ? meta.source_ea
     : typeof meta.source_ea === 'string' ? [meta.source_ea] : [];
+
+  // coverage_layer：从 editorial_role 自动推导（33A Gap Analysis）
+  const editorialRole = meta.editorial_role ?? null;
+  const coverageLayer = editorialRole ? (coverageLayerMap[editorialRole] ?? null) : null;
+
   return {
+    // ── 原有字段（保持不变，向后兼容）──
     id: meta.id,
     source_ea: sourceEa,
     topic: meta.topic ?? null,
@@ -153,8 +258,23 @@ function parseET(filePath) {
     target_path: Array.isArray(meta.target_path) ? meta.target_path : [],
     reading_time: meta.reading_time ?? null,
     tone: meta.tone ?? null,
-    body: bodyMatch ? bodyMatch[1].trim() : null,
-    action_prompt: actionMatch ? actionMatch[1].trim() : null,
+    body: extractETBody(content),
+    action_prompt: extractETActionPrompt(content),
+
+    // ── 33A Contract 新增字段（可选，向前兼容）──
+    content_type: 'ET',
+    series: meta.series ?? null,
+    editorial_role: editorialRole,
+    coverage_layer: coverageLayer,           // 自动推导，不需要手工填写
+    hero_sentence: meta.hero_sentence ?? null,
+    target_ka: meta.target_ka ?? null,
+    framework: meta.framework ?? null,
+    concept_refs: meta.concept_refs
+      ? (typeof meta.concept_refs === 'string'
+          ? { primary: meta.concept_refs, secondary: [] }
+          : meta.concept_refs)
+      : null,
+
     _source_file: path.relative(ROOT, filePath),
   };
 }
