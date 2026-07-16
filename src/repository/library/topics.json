@@ -60,11 +60,13 @@
     {
       "id": "topic-social-communication",
       "slug": "social-communication",
-      "label": "社交沟通",
-      "description": "社交沟通是什么、游戏与同伴互动如何发展、家庭怎样支持社交沟通。",
-      "series": [],
+      "label": "社交沟通是怎样发展的？",
+      "description": "社交沟通不只是说话，而是在真实关系中理解他人、表达自己。这里从共同注意、轮流互动到家庭支持，整理了早期社交沟通发展的研究证据。",
+      "series": [
+        "series-social-communication"
+      ],
       "order": 6,
-      "status": "planned"
+      "status": "active"
     },
     {
       "id": "topic-play",

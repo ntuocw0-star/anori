@@ -91,6 +91,15 @@ function numberedParagraphs(section) {
     .map(m => m[1].trim()).filter(Boolean);
 }
 
+function parseParagraphs(section) {
+  const numbered = numberedParagraphs(section);
+  if (numbered.length > 0) return numbered;
+  return section
+    .split(/\n\s*\n+/)
+    .map(paragraph => paragraph.trim())
+    .filter(Boolean);
+}
+
 function parseEA(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const meta = parseMetadataBlock(content);
@@ -120,7 +129,7 @@ function parseEA(filePath) {
     why_read: firstBlockquote(layer0) ?? null,
     research_question: firstBlockquote(layer1) ?? null,
     key_findings: bulletItems(layer2),
-    parent_meaning: numberedParagraphs(layer3),
+    parent_meaning: parseParagraphs(layer3),
     implications: bulletItems(layer5),
     _source_file: path.relative(ROOT, filePath),
   };

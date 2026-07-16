@@ -1,7 +1,7 @@
 {
   "schemaId": "PDF-Manifest",
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T00:09:56.911Z",
+  "generated_at": "2026-07-16T00:41:17.405Z",
   "summary": {
     "total": 7,
     "ok": 7,
@@ -71,8 +71,8 @@
       "path": "/downloads/ka/KA-SocialComm-001-one-page.pdf",
       "htmlSource": "dist\\download\\ka\\KA-SocialComm-001\\one-page\\index.html",
       "status": "ok",
-      "generatedAt": "2026-07-16T00:09:56.876Z",
-      "htmlHash": "sha256:7ab4927045cb4b129d2b5d3ccc7a742a44dae8f4f9586a43a59400c7d35c50bc",
+      "generatedAt": "2026-07-16T00:41:17.372Z",
+      "htmlHash": "sha256:b8d0868dafbd3e2ce5493701f4efa92632d214661ad12361e856753a37919087",
       "skipped": false
     },
     {
