@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-10",
+  "generated_at": "2026-07-15",
   "articles": [
     {
       "id": "KA-Visual-001",
@@ -354,6 +354,76 @@
       "status": "draft",
       "reading_time": "6 min",
       "one_sentence": "父母压力并不是个人软弱，而是有发展性障碍孩子的家庭中被反复观察到的普遍现象。"
+    },
+    {
+      "id": "KA-SocialComm-001",
+      "title": "为什么孩子不回应我？",
+      "subtitle": "不回应，通常不是态度问题，而是某个发展中的能力还在建立",
+      "one_sentence": "不回应，通常不是态度问题，而是某个发展中的能力还在建立。",
+      "body": "你叫他的名字，他没有回头。你指向窗外的鸟，他没有跟着看。你兴奋地说「你看！」，他只顾着自己手里的东西。这不一定是孩子「不听话」，也不一定是他「不在乎你」。它更可能是一个信号——提示你去更了解他现在的发展状态。「不回应」可能涉及不同的发展能力：跟随别人目光的能力、主动发起「你来看」的能力，或者互动节奏的差异。这些能力在 9–12 个月时开始发展，受到社交动机、发展阶段和互动经验的影响。",
+      "key_findings": [
+        "共同注意（跟随别人目光）在 9–12 个月时出现，是词汇学习的重要通道",
+        "主动分享体验（发起共同注意）比跟随别人更晚出现，需要更高的社交动机",
+        "对话往返的质量对语言相关脑区发育有独立贡献，比单纯听到的词汇量更重要",
+        "早期互动节奏（9 个月时）可预测三年后的语言发展",
+        "共同注意干预对 5 岁以下儿童有循证支持，年龄越小效果越大"
+      ],
+      "what_you_can_do": [
+        "叫名字之前先走近，蹲下与孩子保持同样高度，面对面比从远处呼唤更容易引发回应",
+        "跟着孩子的注意力走，而不是把他拉向你选定的东西——共同关注同一件事，互动就在发生",
+        "说完一句话后停下来等几秒，给孩子处理和回应的时间",
+        "用声音、表情和手势一起互动，让互动更容易被注意到",
+        "在每天已经发生的日常惯例里（吃饭、换衣服、洗澡）建立高质量的来回互动"
+      ],
+      "seek_help_if": [
+        "叫名字持续没有回应（不是偶尔，是持续）",
+        "到 12 个月从未出现任何手势（如指向或挥手）",
+        "曾经有过的回应方式现在消失或减少了",
+        "有持续担忧且已观察一段时间但孩子没有出现新的进步"
+      ],
+      "tags": [
+        "社交沟通",
+        "共同注意",
+        "轮流互动",
+        "早期发展",
+        "家庭支持"
+      ],
+      "href": "/library/ka/KA-SocialComm-001",
+      "related_path": [],
+      "related_ea": [
+        "EA-000024",
+        "EA-000026",
+        "EA-000030",
+        "EA-000035",
+        "EA-000045",
+        "EA-000046",
+        "EA-000047"
+      ],
+      "evidence_level": "High",
+      "evidence_note": "基于 ASHA Practice Portal、AAP Clinical Guidelines、Meta-Analysis（18 RCT，1165名儿童）及多项纵向研究",
+      "topic": "social-communication",
+      "priority": 9,
+      "foundation": true,
+      "series": {
+        "name": "社交沟通",
+        "order": 1,
+        "next": null,
+        "previous": null
+      },
+      "concept_refs": {
+        "primary": "concept-social-communication",
+        "secondary": [
+          "concept-joint-attention",
+          "concept-turn-taking",
+          "concept-early-intervention"
+        ]
+      },
+      "connection": {
+        "related": [
+          "KA-Visual-001",
+          "KA-Family-001"
+        ]
+      }
     }
   ]
 }

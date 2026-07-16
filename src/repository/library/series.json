@@ -311,6 +311,89 @@
         "primary": "concept-participation",
         "secondary": []
       }
+    },
+    {
+      "id": "series-social-communication",
+      "slug": "social-communication",
+      "label": "社交沟通是怎样发展的？",
+      "description": "社交沟通不只是说话，而是在真实关系中理解他人、表达自己。这里从共同注意、轮流互动到家庭支持，整理了早期社交沟通发展的研究证据。",
+      "topic": "topic-social-communication",
+      "status": "active",
+      "canonical": "/library/series/social-communication",
+      "source_keys": [
+        "社交沟通",
+        "共同注意",
+        "轮流互动",
+        "social communication",
+        "joint attention",
+        "turn-taking"
+      ],
+      "cover": {
+        "title": "社交沟通专题",
+        "subtitle": "研究证据 → 知识主题 → 家庭应用",
+        "image": null
+      },
+      "statistics": {
+        "ea": 32,
+        "et": 6,
+        "ka": 1
+      },
+      "content_refs": {
+        "ea": [
+          "EA-000018",
+          "EA-000019",
+          "EA-000020",
+          "EA-000021",
+          "EA-000022",
+          "EA-000023",
+          "EA-000024",
+          "EA-000025",
+          "EA-000026",
+          "EA-000027",
+          "EA-000028",
+          "EA-000029",
+          "EA-000030",
+          "EA-000031",
+          "EA-000032",
+          "EA-000033",
+          "EA-000034",
+          "EA-000035",
+          "EA-000036",
+          "EA-000037",
+          "EA-000038",
+          "EA-000039",
+          "EA-000040",
+          "EA-000041",
+          "EA-000042",
+          "EA-000043",
+          "EA-000044",
+          "EA-000045",
+          "EA-000046",
+          "EA-000047",
+          "EA-000048",
+          "EA-000049"
+        ],
+        "et": [
+          "ET-000024",
+          "ET-000025",
+          "ET-000026",
+          "ET-000027",
+          "ET-000028",
+          "ET-000029"
+        ],
+        "ka": [
+          "KA-SocialComm-001"
+        ]
+      },
+      "order": 8,
+      "concept_refs": {
+        "primary": "concept-social-communication",
+        "secondary": [
+          "concept-joint-attention",
+          "concept-turn-taking",
+          "concept-early-intervention"
+        ]
+      }
     }
   ]
 }

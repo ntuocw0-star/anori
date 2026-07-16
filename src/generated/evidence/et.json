@@ -1,9 +1,9 @@
 {
   "schemaId": "Translation-Index",
   "schema_version": "1.0",
-  "generated_at": "2026-07-14T07:49:52.386Z",
+  "generated_at": "2026-07-15T10:28:55.250Z",
   "source_dir": "repository\\knowledge\\evidence\\cards\\ET",
-  "count": 22,
+  "count": 28,
   "items": [
     {
       "id": "ET-000001",
@@ -353,6 +353,116 @@
       "body": null,
       "action_prompt": null,
       "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000023.md"
+    },
+    {
+      "id": "ET-000024",
+      "source_ea": [
+        "EA-000018",
+        "EA-000019",
+        "EA-000020",
+        "EA-000021",
+        "EA-000022",
+        "EA-000023"
+      ],
+      "topic": "什么是社交沟通",
+      "audience": "家长",
+      "target_path": [],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000024.md"
+    },
+    {
+      "id": "ET-000025",
+      "source_ea": [
+        "EA-000024",
+        "EA-000025",
+        "EA-000026",
+        "EA-000027",
+        "EA-000028",
+        "EA-000029"
+      ],
+      "topic": "共同注意为什么重要",
+      "audience": "家长",
+      "target_path": [],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000025.md"
+    },
+    {
+      "id": "ET-000026",
+      "source_ea": [
+        "EA-000030",
+        "EA-000031",
+        "EA-000032",
+        "EA-000033",
+        "EA-000034"
+      ],
+      "topic": "轮流互动是怎样发展的",
+      "audience": "家长",
+      "target_path": [],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000026.md"
+    },
+    {
+      "id": "ET-000027",
+      "source_ea": [
+        "EA-000035",
+        "EA-000036",
+        "EA-000037",
+        "EA-000038",
+        "EA-000039"
+      ],
+      "topic": "为什么孩子不主动分享",
+      "audience": "家长",
+      "target_path": [],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000027.md"
+    },
+    {
+      "id": "ET-000028",
+      "source_ea": [
+        "EA-000040",
+        "EA-000041",
+        "EA-000042",
+        "EA-000043",
+        "EA-000044"
+      ],
+      "topic": "怎样在家支持社交沟通",
+      "audience": "家长",
+      "target_path": [],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000028.md"
+    },
+    {
+      "id": "ET-000029",
+      "source_ea": [
+        "EA-000045",
+        "EA-000046",
+        "EA-000047",
+        "EA-000048",
+        "EA-000049"
+      ],
+      "topic": "什么时候需要寻求帮助",
+      "audience": "家长",
+      "target_path": [],
+      "reading_time": "4 min",
+      "tone": "Anori Voice（陪伴 · 不评判 · 直接）",
+      "body": null,
+      "action_prompt": null,
+      "_source_file": "repository\\knowledge\\evidence\\cards\\ET\\ET-000029.md"
     }
   ]
 }
