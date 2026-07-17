@@ -1,41 +1,17 @@
 {
-  "generated_at": "2026-07-16T08:13:53.441Z",
+  "generated_at": "2026-07-17T00:46:56.142Z",
   "passed": true,
   "summary": {
     "errors": 0,
     "warnings": 0,
-    "infos": 9
+    "infos": 3
   },
   "errors": [],
   "warnings": [],
   "infos": [
     {
       "type": "info",
-      "message": "Orphan EA: EA-000050"
-    },
-    {
-      "type": "info",
-      "message": "Orphan EA: EA-000051"
-    },
-    {
-      "type": "info",
-      "message": "Orphan EA: EA-000052"
-    },
-    {
-      "type": "info",
-      "message": "Orphan EA: EA-000053"
-    },
-    {
-      "type": "info",
-      "message": "Orphan EA: EA-000054"
-    },
-    {
-      "type": "info",
-      "message": "Orphan EA: EA-000055"
-    },
-    {
-      "type": "info",
-      "message": "Orphan EA: EA-000056"
+      "message": "No orphan EA."
     },
     {
       "type": "info",

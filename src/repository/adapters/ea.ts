@@ -36,6 +36,8 @@ export interface NormalizedEA {
   whyItMatters?: string;
   limitations?: string;
   sourceEa: string[];
+  // 知识库中文显示标题
+  displayTitle?: string;
 }
 
 function stringArray(value: unknown): string[] {
@@ -115,6 +117,7 @@ export function normalizeEA(raw: Record<string, unknown>): NormalizedEA {
     sourceEa: stringArray(raw.supports_et).length > 0
       ? stringArray(raw.supports_et)
       : stringArray(raw.related_et),
+    displayTitle: str(raw.display_title),
   };
 }
 

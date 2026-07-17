@@ -209,6 +209,7 @@ function parseEA(filePath) {
     why_it_matters: extractWhyItMatters(content),
     limitations: extractLimitations(content),
 
+    display_title: meta.display_title ?? null,
     _source_file: path.relative(ROOT, filePath),
   };
 }

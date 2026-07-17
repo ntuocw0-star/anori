@@ -1,9 +1,9 @@
 {
   "schemaId": "Evidence-Index",
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T08:13:23.191Z",
+  "generated_at": "2026-07-17T02:12:31.520Z",
   "source_dir": "repository\\knowledge\\evidence\\cards\\Deconstruction",
-  "count": 56,
+  "count": 66,
   "items": [
     {
       "id": "EA-000001",
@@ -65,6 +65,25 @@
         "初期使用 AAC 时孩子不一定马上主动使用——这是正常的适应过程，不是失败",
         "家长感到疲惫和不确定，是这条路上几乎所有人都会经历的，不是放弃的信号"
       ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-aac",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000001",
+        "ET-000002",
+        "ET-000003",
+        "ET-000004"
+      ],
+      "insight": "它不是告诉你 AAC 有没有用，而是告诉你家长为什么坚持不下去。",
+      "key_finding": "许多家长难以获得持续的专业支持，AAC 介入往往在初期评估后就中断",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"AAC 使用体验：家长视角的系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000001.md"
     },
     {
@@ -124,6 +143,20 @@
         "家庭内部对 AAC 的分歧导致孩子在家中的使用几乎为零",
         "没有任何专业人员在主动协调学校和家庭的 AAC 接轨工作"
       ],
+      "content_type": "EA",
+      "tier": null,
+      "series": null,
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "EA-000001 告诉你家长为什么坚持不下去。这篇告诉你学校为什么是那个最难协调的环节。",
+      "key_finding": "照顾者的情绪状态、对 AAC 的信念和接受程度，直接影响 AAC 在家庭中的使用质量",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"家长与学校专业人员在 AAC 上的协作经验\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000002.md"
     },
     {
@@ -186,6 +219,20 @@
         "已经使用 AAC 超过三个月，但家长不确定自己的使用方式是否正确",
         "孩子对 AAC 完全没有反应，需要评估是否需要调整 AAC 类型或词汇系统"
       ],
+      "content_type": "EA",
+      "tier": null,
+      "series": null,
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "EA-000001 告诉你为什么家长坚持不下去，EA-000002 告诉你为什么家校配合这么难。这篇告诉你：AAC 到底有没有用？",
+      "key_finding": "使用 AAC 的儿童在表达性和接受性沟通上均显示改善",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"0–6 岁儿童 AAC 干预的系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000003.md"
     },
     {
@@ -237,6 +284,20 @@
         "感到比\"普通\"父母更累——这是有数据支撑的，不是你太敏感",
         "感到外人不理解你的处境——这种孤立感很常见，因为你们的处境本来就不在同一条基线上"
       ],
+      "content_type": "EA",
+      "tier": null,
+      "series": null,
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不问\"要怎么做\"，而是先回答\"你的压力到底有多高\"。",
+      "key_finding": "合并效应量为 **large**（Cohen's d）",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"ASD 家长照顾压力的幅度：元分析基线\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000004.md"
     },
     {
@@ -275,6 +336,25 @@
         "很多家长后来才发现，视觉支持适用的年龄和场景范围非常广——从幼儿期到青年期，从任务切换到沟通表达，不是只给\"最严重的孩子\"用的特殊工具。\n\n---"
       ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-visual-supports",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000008",
+        "ET-000009",
+        "ET-000010",
+        "ET-000011"
+      ],
+      "insight": "它不问视觉支持是否有效，而是在 972 篇研究里，给视觉支持颁发了\"循证实践\"的认证。",
+      "key_finding": "视觉支持被正式认定为循证干预实践",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"ASD 循证实践：第三代综述（2020）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000005.md"
     },
     {
@@ -312,6 +392,23 @@
         "很多家长后来才发现，视觉时间表不是\"孩子适应了再撤掉\"的脚手架，而是一个有30年研究支持的工具——研究覆盖了从幼儿到成年的个体，说明它的价值不只在早期。\n\n---"
       ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-visual-supports",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000010",
+        "ET-000011"
+      ],
+      "insight": "它不看视觉支持整体，而是专门盯住视觉时间表（Visual Schedule）这一种形式，回答：有多少研究证明它有效？",
+      "key_finding": "视觉活动时间表可被认定为 ASD 人群的 EBP",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"视觉活动时间表作为 ASD 循证实践的评估\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000006.md"
     },
     {
@@ -348,6 +445,24 @@
         "很多家长后来才发现，在家里一致地用视觉支持，要比在学校难得多——因为家里有不同的家庭成员、不固定的日常节奏、以及很多学校不会面对的干扰。研究者也看到了这一点，所以专门研究了这个场景。\n\n---"
       ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-visual-supports",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000009",
+        "ET-000010",
+        "ET-000011"
+      ],
+      "insight": "大多数视觉支持研究在学校或诊室做。这篇专门看家庭和社区——那才是家长真正需要用的地方。",
+      "key_finding": "家庭和社区中使用视觉支持有正面效果的记录",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"ASD 家庭与社区中的视觉支持：范围综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000007.md"
     },
     {
@@ -384,6 +499,25 @@
         "很多家长后来才发现，NCAEP 的完整报告里有一份视觉支持实施检查表——免费下载，一条一条列出了什么做对了、什么还需要调整。如果视觉支持用了但感觉没效果，可以先对照这份清单查一查。\n\n---"
       ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-visual-supports",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000008",
+        "ET-000009",
+        "ET-000010",
+        "ET-000011"
+      ],
+      "insight": "EA-000005 是同行评审版本。这篇是完整技术报告——免费、可直链、含实施检查表，家长和专业人员都可以直接用。",
+      "key_finding": "视觉支持操作定义：\"任何帮助学习者在没有额外提示的情况下独立参与目标行为或技能的视觉呈现\"",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"ASD 儿童循证实践报告（NCAEP 2020）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000008.md"
     },
     {
@@ -409,8 +543,30 @@
       "why_read": "家长最常问：孩子这么小可以用 AAC 吗？这篇专门回答 0-6 岁。",
       "research_question": "0-6 岁幼儿的 AAC 干预，对哪些沟通结果有效？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "不需要等孩子准备好再开始 AAC。29 篇研究告诉我们：0-6 岁是最好的窗口。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000013",
+        "ET-000014",
+        "ET-000015"
+      ],
+      "insight": "家长最常问：孩子这么小可以用 AAC 吗？这篇专门回答 0-6 岁。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"0–6 岁儿童 AAC 干预的系统综述（第二篇）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000009.md"
     },
     {
@@ -436,8 +592,28 @@
       "why_read": "家长最大的担心：用了 AAC 孩子就不说话了。这篇覆盖 45 年的证据专门回答这个问题。",
       "research_question": "AAC 干预对 ASD 儿童的口语产出有什么影响？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "这 45 年的研究，没有一个支持用了 AAC 不说话的担心。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000013"
+      ],
+      "insight": "家长最大的担心：用了 AAC 孩子就不说话了。这篇覆盖 45 年的证据专门回答这个问题。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"AAC 与 ASD 人士的语言产出：系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000010.md"
     },
     {
@@ -463,8 +639,29 @@
       "why_read": "它不问孩子用 AAC 有没有效果，而是问当大人也用 AAC 示范时，效果是否更好。",
       "research_question": "当干预包含 Aided AAC Input，对沟通结果有什么影响？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "你拿起图片给孩子示范，这本身就是有效的干预。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000015",
+        "ET-000017"
+      ],
+      "insight": "它不问孩子用 AAC 有没有效果，而是问当大人也用 AAC 示范时，效果是否更好。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"辅助性 AAC 输入干预对沟通的影响：元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000011.md"
     },
     {
@@ -490,8 +687,29 @@
       "why_read": "EA-000011 问有没有效果，这篇问什么条件下效果更好。两篇合起来才是完整的使用指南。",
       "research_question": "Augmented Input 在什么条件下效果更好？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "只用图片指，不够。配合等待和回应，才是最有效的组合。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000015",
+        "ET-000017"
+      ],
+      "insight": "EA-000011 问有没有效果，这篇问什么条件下效果更好。两篇合起来才是完整的使用指南。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"增强输入干预的系统综述与调节变量探索分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000012.md"
     },
     {
@@ -517,8 +735,33 @@
       "why_read": "当家长问专业协会怎么说，这就是那个答案。",
       "research_question": "专业协会对 AAC 的官方临床建议是什么？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "专业协会的官方立场是：不需要等。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-communication",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000012",
+        "ET-000013",
+        "ET-000014",
+        "ET-000015",
+        "ET-000016",
+        "ET-000017"
+      ],
+      "insight": "当家长问专业协会怎么说，这就是那个答案。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"AAC 实践指南（ASHA Practice Portal）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000013.md"
     },
     {
@@ -544,8 +787,30 @@
       "why_read": "它专门看 18-42 个月语言迟缓的幼儿，回答：干预有没有用？什么方式最有效？",
       "research_question": "18-42 个月的 Late talkers，哪些干预方式对词汇发展有效？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "家长实施语言干预，效果和专业人员做的一样好。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-language-development",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "Moderate",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000018",
+        "ET-000021",
+        "ET-000022"
+      ],
+      "insight": "它专门看 18-42 个月语言迟缓的幼儿，回答：干预有没有用？什么方式最有效？",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"晚语儿童干预的系统综述：干预方法与词汇结果\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000014.md"
     },
     {
@@ -571,8 +836,29 @@
       "why_read": "这是 Language Development 知识域证据等级最高的 EA——25 项 RCT 的 Meta 分析，专门研究家长在家里怎么做语言干预。",
       "research_question": "家长实施的语言干预，对儿童语言结果有什么效果？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "在游戏里说话、读绘本，就是有 RCT 支持的语言干预。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-language-development",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": true,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000020",
+        "ET-000021"
+      ],
+      "insight": "这是 Language Development 知识域证据等级最高的 EA——25 项 RCT 的 Meta 分析，专门研究家长在家里怎么做语言干预。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"家长实施语言干预对儿童语言结果的影响：元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000015.md"
     },
     {
@@ -598,8 +884,28 @@
       "why_read": "它是 EA-000015（Heidlage 2020）的前身。两篇合起来，跨越十年的独立 Meta 分析，得出一致结论。",
       "research_question": "家长实施的语言干预，对 18-60 个月儿童的语言发展效果如何？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "2011 年就有 Meta 分析证明家长实施语言干预有效。2020 年再次证实。十年两次验证，结论很稳。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-language-development",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000021"
+      ],
+      "insight": "它是 EA-000015（Heidlage 2020）的前身。两篇合起来，跨越十年的独立 Meta 分析，得出一致结论。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"家长实施语言干预的有效性：元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000016.md"
     },
     {
@@ -625,8 +931,28 @@
       "why_read": "华语家庭最常被告知的一件事：先停一种语言。ASHA 的官方立场正好相反。",
       "research_question": "双语环境对儿童语言发展有什么影响？专业协会怎么建议？",
       "key_findings": [],
-      "parent_meaning": [],
+      "parent_meaning": [
+        "**很多家长后来才发现……**",
+        "ASHA 说：不要停用母语，这不是解决办法。",
+        "---"
+      ],
       "implications": [],
+      "content_type": "EA",
+      "tier": 1,
+      "series": "series-language-development",
+      "editorial_role": null,
+      "framework": null,
+      "is_foundational": false,
+      "confidence": "High",
+      "concept_refs": null,
+      "supports_et": [
+        "ET-000023"
+      ],
+      "insight": "华语家庭最常被告知的一件事：先停一种语言。ASHA 的官方立场正好相反。",
+      "key_finding": null,
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"双语与语言发展（ASHA Practice Portal）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000017.md"
     },
     {
@@ -678,6 +1004,7 @@
       "key_finding": "社交沟通使个体能够在社会框架内与他人沟通或互动，涵盖四个核心成分：语用（Pragmatics）、社交互动（Social Interaction）、社会认知（Social Cognition）、语言加工（Language Processing）",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"社交沟通障碍实践指南（ASHA Practice Portal）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000018.md"
     },
     {
@@ -728,6 +1055,7 @@
       "key_finding": "SCD 被定义为在以社交为目的使用言语与非言语沟通方面存在持续困难",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"社交（语用）沟通障碍：DSM-5 概览\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000019.md"
     },
     {
@@ -779,6 +1107,7 @@
       "key_finding": "情绪调节与社交沟通之间存在双向关系，呈现年龄相关模式",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"情绪调节与社交沟通的双向关系：系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000020.md"
     },
     {
@@ -829,6 +1158,7 @@
       "key_finding": "SCD 个体的特征性困难包括：难以将语言用于社交目的、在不同社交情境中匹配沟通方式、遵守情境规则（如对话轮替）、理解非字面语言",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"社交语用沟通障碍：DSM-5 新分类研究综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000021.md"
     },
     {
@@ -880,6 +1210,7 @@
       "key_finding": "在典型发展中，约 9 个月时婴儿开始通过沟通调节他人行为（如提出要求、拒绝）",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"有语言与认知迟缓的自闭症幼儿的语用贡献\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000022.md"
     },
     {
@@ -931,6 +1262,7 @@
       "key_finding": "共同注意（JA）是两个个体对同一物体或事件共享关注焦点的过程，在早期儿童期的社交沟通、认知发展和语言习得中发挥核心作用",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"自闭症中的共同注意：行为观察到 AI 的评估综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000023.md"
     },
     {
@@ -981,6 +1313,7 @@
       "key_finding": "共同注意约在 9 个月时出现，并在生命第二年逐渐增多",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"8–24 个月婴儿共同注意的神经关联：系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000024.md"
     },
     {
@@ -1032,6 +1365,7 @@
       "key_finding": "共同注意是个体将自身注意焦点与他人有目的地协调的能力，在生命第一年内开始发展",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"生命第一年共同注意发展的测量方法：范围综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000025.md"
     },
     {
@@ -1085,6 +1419,7 @@
       "key_finding": "RJA（跟随他人注意）比 IJA（主动引导他人注意）发展更早",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"响应共同注意作为发展催化剂：与语言的纵向关联\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000026.md"
     },
     {
@@ -1139,6 +1474,7 @@
       "key_finding": "共同注意干预显著改善儿童的共同注意技能（效应量 g = 0.53，95% CI [0.34, 0.72]）",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASD 幼儿共同注意干预效果：元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000027.md"
     },
     {
@@ -1190,6 +1526,7 @@
       "key_finding": "11 项研究中，8 项报告亲子介导共同注意干预改善了 ASD 儿童的共同注意技能（正向结果）",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"家长介导共同注意干预对 ASD 儿童的效果：系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000028.md"
     },
     {
@@ -1241,6 +1578,7 @@
       "key_finding": "共同注意是理解他人表征的早期能力，对符号思维发展和语言习得至关重要",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"共同注意与 18 个月婴儿自闭症风险标志的关系\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000029.md"
     },
     {
@@ -1293,6 +1631,7 @@
       "key_finding": "婴儿平均在约 1 秒内回应照顾者的话语，这一时间节奏从出生早期就已存在",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"成人与儿童轮流互动发展：贝叶斯元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000030.md"
     },
     {
@@ -1344,6 +1683,7 @@
       "key_finding": "在生命第一年内，婴幼儿与照顾者的互动从\"双方同时发声\"逐渐转变为\"交替模式\"，第二年趋于稳定",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"儿童早期轮流互动的理解与产出：多维度综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000031.md"
     },
     {
@@ -1397,6 +1737,7 @@
       "key_finding": "与成人发生更多对话轮次的孩子，在布罗卡区（Broca's area）表现出更强的激活",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"超越三千万词：对话暴露量与语言相关脑功能的关联\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000032.md"
     },
     {
@@ -1448,6 +1789,7 @@
       "key_finding": "婴儿期的声音轮流互动体验可以预测其后续社交情感和语言发展",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"照顾者对牙牙学语的反应如何组织轮流互动\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000033.md"
     },
     {
@@ -1499,6 +1841,7 @@
       "key_finding": "3 个月时母婴互动的质量（包括照顾者的敏感性、婴儿导向语言和对话轮流）与孩子第三年的语言产出能力存在显著纵向关联",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"3 个月母婴互动与 3 岁儿童语言产出的关联\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000034.md"
     },
     {
@@ -1552,6 +1895,7 @@
       "key_finding": "社会动机是一种内在驱动力，使个体倾向于关注社交刺激、寻求社交互动，并在关系中获得满足感",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"自闭症的社交动机理论\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000035.md"
     },
     {
@@ -1604,6 +1948,7 @@
       "key_finding": "ASD 个体对社交奖励在纹状体区域表现出非典型加工（效应量 d = -0.25）",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"自闭症社交动机假说的评估：系统综述与元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000036.md"
     },
     {
@@ -1657,6 +2002,7 @@
       "key_finding": "后来确诊 ASD 的儿童在 9–12 个月时，IJA（主动引导他人注意）行为显著减少",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"9–12 个月 ASD 儿童的社交定向与共同注意：家庭录像研究\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000037.md"
     },
     {
@@ -1709,6 +2055,7 @@
       "key_finding": "婴儿指向行为分为命令性指向（imperative，为了获得某物）和声明性指向（declarative，为了与他人分享兴趣或提供信息）",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"有与无语言迟缓婴儿在不同动机下的指向发展路径\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000038.md"
     },
     {
@@ -1759,6 +2106,7 @@
       "key_finding": "6、12、24 个月时的社会动机指数（SMI）较低，与 24 个月时的 ASD 诊断显著相关",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"婴儿期社交动机与 ASD 家族复发风险的关联\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000039.md"
     },
     {
@@ -1811,6 +2159,7 @@
       "key_finding": "PRT（关键反应训练）、ESDM（早期丹佛干预模型）、JASPER（共同注意—象征性游戏—参与—调节）三个亲子介导干预方案被认定为\"已建立的循证实践\"",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASD 幼儿家庭介导社交沟通干预的系统综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000040.md"
     },
     {
@@ -1864,6 +2213,7 @@
       "key_finding": "NDBI 的 5 个核心特征：① 在自然情境与日常惯例中实施；② 跟随孩子的兴趣和引导；③ 使用自然结果作为强化；④ 运用行为策略教授发展适宜的技能；⑤ 强调孩子在学习情境中的社会参与",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"自然发展行为干预（NDBI）专题导论\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000041.md"
     },
     {
@@ -1914,6 +2264,7 @@
       "key_finding": "日常活动中的照顾者互动对幼儿社交沟通和语言技能的习得至关重要，这对有无发育延迟的儿童均成立",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASD 幼儿在不同情境中的社交沟通与家长语言回应\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000042.md"
     },
     {
@@ -1964,6 +2315,7 @@
       "key_finding": "亲子介导 NDBI 整体有效，支持这一结论的证据稳健",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"家长介导 NDBI 对 ASD 儿童发展技能的比较有效性：网络元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000043.md"
     },
     {
@@ -2016,6 +2368,7 @@
       "key_finding": "整体结果支持亲子介导干预对 3 岁以下 ASD 儿童有积极效果",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"3 岁以下 ASD 儿童家长介导干预：系统综述与元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000044.md"
     },
     {
@@ -2068,6 +2421,7 @@
       "key_finding": "早期转介评估可以减少长期沟通障碍的发展，以及对社交和学业发展的不良影响",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"儿童语言与言语迟缓综述\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000045.md"
     },
     {
@@ -2121,6 +2475,7 @@
       "key_finding": "修订后的里程碑反映 75% 的儿童能完成特定技能的年龄（而非平均年龄），旨在减少\"等待观察\"的情况",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"发展监测工具的循证里程碑\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000046.md"
     },
     {
@@ -2172,6 +2527,7 @@
       "key_finding": "ASHA 2023 年发布的里程碑反映 75% 儿童能在特定年龄段展现特定技能的证据基础",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASHA 0–5 岁发展里程碑（2023）\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000047.md"
     },
     {
@@ -2225,6 +2581,7 @@
       "key_finding": "进入干预项目的年龄与发展结局存在关联：更早开始获得支持的儿童，后续发展结局更好",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"早期干预对 ASD 儿童社交沟通结果的影响：元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000048.md"
     },
     {
@@ -2278,6 +2635,7 @@
       "key_finding": "没有常规筛查，至少 50% 有发展或行为障碍的儿童在入幼儿园前未被识别",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"通过发展监测和筛查识别有发展障碍的婴幼儿\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000049.md"
     },
     {
@@ -2328,6 +2686,7 @@
       "key_finding": null,
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASD 家长照顾压力的幅度：元分析基线\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000050.md"
     },
     {
@@ -2390,6 +2749,7 @@
       "key_finding": "家长心理健康：高水平抑郁、焦虑、压力——高于 TD 儿童家长，也高于其他障碍儿童家长",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASD 对家庭的多维影响：机制总览与干预评估框架\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000051.md"
     },
     {
@@ -2442,6 +2802,7 @@
       "key_finding": null,
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"儿童行为问题与家长心理困扰的关联：元分析\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000052.md"
     },
     {
@@ -2500,6 +2861,7 @@
       "key_finding": "5/6 项研究发现显著关联，效应量从小到大不等",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"儿童睡眠问题与家长压力及心理健康的关联\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000053.md"
     },
     {
@@ -2552,6 +2914,7 @@
       "key_finding": "**Parent-Child Dysfunctional Interaction（亲子互动失调）**：在 ASD 家长中区分度低——因为 ASD 儿童的发展特征使得\"互动困难\"很难与\"照顾压力本身\"区分",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"PSI-SF 在 ASD 样本中的因素结构验证\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000054.md"
     },
     {
@@ -2614,6 +2977,7 @@
       "key_finding": "在 10 年内，抑郁症状**没有显著的线性升降**",
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"ASD 家长心理健康的十年轨迹：五波纵向追踪\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000055.md"
     },
     {
@@ -2668,7 +3032,680 @@
       "key_finding": null,
       "why_it_matters": null,
       "limitations": null,
+      "display_title": "\"以家长为目标的干预对 ASD 家长 QoL 与压力的效果\"",
       "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000056.md"
+    },
+    {
+      "id": "EA-000057",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "障碍儿童家庭（普通发展 / 智力发展障碍，非 ASD-specific）",
+      "sample": null,
+      "year": 2005,
+      "quality_level": null,
+      "evidence_type": "Conceptual · Framework",
+      "reading_time": "8 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Conceptualizing and Measuring Family Quality of Life",
+        "authors": "Summers, J. A.; Poston, D. J.; Turnbull, A. P.; Marquis, J.; Hoffman, L.; Mannan, H.; Wang, M.",
+        "journal": "Journal of Intellectual Disability Research",
+        "year": "2005 · Vol. 49(10) · pp. 777–783",
+        "doi": "10.1111/j.1365-2788.2005.00751.x",
+        "access": "Paywalled (Wiley)",
+        "method": "Conceptual Review + Scale Introduction（FQoL Framework 综合论述）",
+        "scope": "Beach Center FQoL Framework 正式提出；五领域定义；双维度测量逻辑（重要性与满意度）；障碍领域服务问责的家庭结果框架"
+      },
+      "why_read": "它不是一篇测量论文，而是第一次说清楚\"家庭生活质量\"到底是什么——以及为什么它和孩子的生活质量是两件不同的事。",
+      "research_question": "**Family Quality of Life 是什么？它包括哪些维度？如何测量它？**",
+      "key_findings": [
+        "**儿童端**：发展进步、行为改善、沟通发展",
+        "**家长端**：家长压力、家长心理健康",
+        "**动态（dynamic）**：FQoL 不是固定状态，而是随时间和情境变化的",
+        "**集体性（collectively）**：以家庭整体为单位，而非单个成员的体验加总",
+        "**主观性（subjectively）**：由家庭成员自己定义什么是\"好的家庭生活\"",
+        "**重要性（Importance）**：这件事对你的家庭有多重要？",
+        "**满意度（Satisfaction）**：你对这件事目前的状况有多满意？",
+        "因素结构符合五领域理论框架",
+        "具有可接受的信度",
+        "收敛效度初步建立"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，长期以来大多数研究只关心孩子有没有进步、行为有没有改善。这篇文章代表了一个转折点——它开始把\"这个家庭整体的生活怎么样\"作为一个需要被认真测量的问题。",
+        "很多家长后来才发现，FQoL 测量的是整个家庭作为一个系统的状态——家人之间的互动、养育的信心、情感支持、物质保障和服务满意度——这五个方面合在一起，才能描述一个家庭真正过得怎么样。",
+        "很多家长后来才发现，这个框架同时问两个问题：这件事对你的家庭重要吗？以及你对现状满意吗？一件事可以非常重要，但你非常不满意。研究者们后来发现，\"满意度\"才是反映家庭实际状况最敏感的指标。",
+        "很多家长后来才发现，在五个领域里，情感健康——家庭成员能不能获得支持、有没有自己的时间——是 ASD 家庭最一致感到不满意的领域。这不是偶然的，而是照顾高需求孩子的结构性代价。\n\n---"
+      ],
+      "implications": [
+        "如果有机会被问到\"你们家过得怎么样\"，这五个领域提供了一个思考自己处境的框架：我们家的互动怎么样？养育的信心怎么样？情感支持够不够？物质上有没有保障？服务上有没有拿到需要的？",
+        "不是每个领域都要同等重要——可以先识别哪个领域让你最不满意，那就是最需要支持的地方",
+        "在初次家庭评估时，可以用这五个领域作为问题框架，而不是只问孩子的诊断和功能水平",
+        "满意度评分比重要性评分更能反映家庭当前的实际需求"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Foundational Framework · FQoL Conceptualization",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是一篇测量论文，而是第一次说清楚\"家庭生活质量\"到底是什么——以及为什么它和孩子的生活质量是两件不同的事。",
+      "key_finding": "**儿童端**：发展进步、行为改善、沟通发展",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"家庭生活质量（FQoL）的概念框架\"",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000057.md"
+    },
+    {
+      "id": "EA-000058",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "障碍儿童家庭（DD · ID · 混合样本；非 ASD-specific）",
+      "sample": "488 家庭（两项研究合并）",
+      "year": 2006,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Psychometric",
+      "reading_time": "10 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Assessing Family Outcomes: Psychometric Evaluation of the Beach Center Family Quality of Life Scale",
+        "authors": "Hoffman, L.; Marquis, J.; Poston, D.; Summers, J. A.; Turnbull, A.",
+        "journal": "Journal of Marriage and Family",
+        "year": "2006 · Vol. 68(4) · pp. 1069–1083",
+        "doi": "10.1111/j.1741-3737.2006.00314.x",
+        "access": "Paywalled (Wiley)",
+        "method": "Psychometric Validation（两个研究，含 CFA）",
+        "scope": "Beach Center FQoL Scale 最终版开发与验证；n = 488 障碍儿童家庭；25 项目 · 五因素结构；内部一致性、重测信度、收敛效度"
+      },
+      "why_read": "它不是在定义 FQoL 是什么，而是在证明我们有一个可以可靠测量它的工具。",
+      "research_question": "**我们能否开发出一个有良好心理测量属性的量表，可靠地评估障碍儿童家庭的生活质量？**",
+      "key_findings": [
+        "Family Interaction 满意度均分与 Family APGAR（5 项家庭功能量表）相关：r(87) = .68, p < .001",
+        "Emotional Well-being 满意度与相关情感支持量表相关：r = .60, p < .001",
+        "Hoffman et al. (2006) 的 n=488 来自障碍儿童家庭（DD/ID 混合）",
+        "五因素结构在 ASD 家庭中是否完全适用，需要独立验证",
+        "目前最佳的 ASD-specific 验证：Rivard et al. (2017)，法语，幼儿新诊断，n=452，五因素结构\"基本适用\"但拟合度不完美",
+        "**英语 ASD 学龄和成人家庭的 CFA 验证，至今仍为 Gap**"
+      ],
+      "parent_meaning": [
+        "因为\"家庭生活质量\"是一个复杂的、多维度的状态，一句话无法捕捉。家人之间的关系、养育的信心、情感上有没有支撑、钱够不够用、服务能不能拿到——这五件事各自独立，不会因为某一件好就带动其他件。25 个具体问题，是为了把这五件事都测量清楚，而不是让它们互相抵消。",
+        "研究者发现，\"你对现状满意吗\"比\"这件事对你重要吗\"更能反映家庭真实的状况，也更能检测出支持服务前后的变化。几乎所有家庭都会说\"情感支持对我很重要\"——但这个回答本身无法区分获得了充分支持和完全没有支持的家庭。满意度才能做到这种区分。",
+        "基本准，但不完全等同。研究者后来在 ASD 家庭里重新检验了这个量表的结构，发现五个领域的框架总体成立，但个别项目的适用性有差异。这不影响用这个工具评估 ASD 家庭，但解读时要注意：数字反映的是家庭的真实感受，而不是被精确校准过的\"ASD 标准\"。\n\n---"
+      ],
+      "implications": [
+        "引用 Beach Center FQoL 数据时，明确标注使用的是满意度评分还是重要性评分",
+        "报告子量表分数，不只报告总分——五个领域的分布比总分更能指导实践",
+        "在 ASD 家庭中使用时，附注\"开发样本为 DD/ID 家庭，ASD 验证参见 Rivard et al. (2017)\"",
+        "Disability-related Support 子量表重测信度较低（r=.60），纵向研究中解读变化时需谨慎"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Measurement · Beach Center FQoL Scale",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是在定义 FQoL 是什么，而是在证明我们有一个可以可靠测量它的工具。",
+      "key_finding": "Family Interaction 满意度均分与 Family APGAR（5 项家庭功能量表）相关：r(87) = .68, p < .001",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"Beach Center FQoL 量表的心理测量验证\"",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000058.md"
+    },
+    {
+      "id": "EA-000059",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童及青少年（6–18 岁）的家长（以母亲为主）",
+      "sample": "84 名家长（在线问卷 + 电话访谈）",
+      "year": 2015,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Cross-sectional · Hierarchical Regression",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Family Quality of Life and ASD: The Role of Child Adaptive Functioning and Behavior Problems",
+        "authors": "Gardiner, E.; Iarocci, G.",
+        "journal": "Autism Research",
+        "year": "2015 · Vol. 8(2) · pp. 199–213",
+        "doi": "10.1002/aur.1442",
+        "access": "Paywalled (Wiley / INSAR)",
+        "method": "Cross-sectional survey + hierarchical regression",
+        "scope": "ASD-specific；n=84 家长（儿童 6–18 岁）；Beach Center FQoL Scale；Vineland ABAS（适应功能）+ CBCL（行为问题）；加拿大（英属哥伦比亚大学）"
+      },
+      "why_read": "它不只是说孩子的状况影响了家庭生活质量，而是第一次把\"适应功能\"和\"行为问题\"分开来测量，并且发现：**让家庭最难过的，不是 ASD 的核心症状，而是孩子在日常生活中能不能自己照顾自己。**",
+      "research_question": "**在 ASD 家庭中，儿童的适应功能（特别是日常生活技能）和行为问题，哪个对家庭生活质量的影响更大？ASD 症状严重程度本身，在控制这两个变量后，还有独立影响吗？**",
+      "key_findings": [
+        "84 名 ASD 儿童及青少年（6–18 岁）的家长，在线问卷 + 电话访谈",
+        "ASD 子女以男孩为主（约 75%）；家长以母亲为主",
+        "平均整体 FQoL 得分：**M = 3.62（SD = 0.63）**，5 分制",
+        "作为参照：后续研究中服务使用良好样本的 FQoL 均值约为 3.86——Gardiner & Iarocci 样本略低，反映了普通社区 ASD 家庭的基线水平",
+        "行为问题（CBCL 内化 + 外化）在单变量分析中显著预测 FQoL",
+        "在控制适应功能后，行为问题的独立效应减弱（但在部分子领域仍显著）",
+        "外化行为问题对 Parenting 和 Emotional Well-being 领域的效应最一致"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，研究数据显示：在控制孩子能不能自己穿衣、上厕所、吃饭、做家务这些事之后，ASD 诊断的严重程度并不能独立预测家庭生活质量。这不是说 ASD 不重要，而是说：让家庭最日夜操劳的，是日常照顾负担，而不是 ASD 的标签。",
+        "很多家长后来才发现，帮助孩子提高日常生活技能（穿衣、如厕、简单家务），不只是对孩子的独立性有好处，也会直接改善家庭整体的生活质量——这一点有研究数据支持。这不是说要给孩子施加压力，而是说支持孩子发展日常生活技能，是对整个家庭系统的投资。",
+        "很多家长后来才发现，研究显示外化行为问题（攻击性、对立、情绪崩溃）对\"你有没有信心帮助孩子成长\"这个感受影响最大。这不是因为你不够好，而是研究者测量了这件事并且发现它是真实的、普遍的——不是你一个人的感受。",
+        "很多家长后来才发现，在五个 FQoL 领域中，情感健康受儿童行为问题和适应功能的双重影响最多，是最脆弱、最难守住的领域。当其他领域还在，情感健康往往已经最先消耗掉了。\n\n---"
+      ],
+      "implications": [
+        "如果你感到日常照顾负担是家里最沉的那部分，研究者也测量了这件事，结论是：孩子的日常自理能力提升，确实会减轻这部分负担",
+        "可以和治疗师讨论：除了 ASD 的核心症状，日常生活技能（穿衣、如厕、简单家务）是否也是干预目标",
+        "如果孩子的攻击行为或情绪崩溃让你感到养育信心在下降，这是一个需要被支持的信号——不是意志力问题，而是有研究依据的真实压力",
+        "家庭功能评估时，把\"儿童日常生活技能\"加入常规评估内容",
+        "行为支持计划应该包含\"家庭 QoL\"作为综合结果指标，而不只关注儿童行为改变",
+        "ASD 儿童日常生活技能发展速度通常慢于同龄儿童，且随年龄可能进一步分化——如果进展缓慢，不是你做错了什么"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Predictor Analysis · Child-level Determinants of ASD Family FQoL",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不只是说孩子的状况影响了家庭生活质量，而是第一次把\"适应功能\"和\"行为问题\"分开来测量，并且发现：**让家庭最难过的，不是 ASD 的核心症状，而是孩子在日常生活中能不能自己照顾自己。**",
+      "key_finding": "84 名 ASD 儿童及青少年（6–18 岁）的家长，在线问卷 + 电话访谈",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"ASD 家庭 FQoL 的儿童端预测因素\"",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000059.md"
+    },
+    {
+      "id": "EA-000060",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童（0–18 岁）家长（以母亲为主，跨多国）",
+      "sample": "12 项研究（系统综述）",
+      "year": 2016,
+      "quality_level": null,
+      "evidence_type": "Qualitative · Systematic Review",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "The Quality of Life of Parents of Children with Autism Spectrum Disorder: A Systematic Review",
+        "authors": "Vasilopoulou, E.; Nisbet, J.",
+        "journal": "Research in Autism Spectrum Disorders",
+        "year": "2016 · Vol. 23 · pp. 36–49",
+        "doi": "10.1016/j.rasd.2015.11.008",
+        "access": "Open Access（Elsevier，Complimentary access）",
+        "method": "Systematic Review（叙述性综合，无 meta-analysis）",
+        "scope": "ASD 儿童（0–18 岁）家长 QoL；12 项研究纳入；多种 QoL 工具（以 WHOQOL-BREF、SF-36 为主）；多国"
+      },
+      "why_read": "它是目前唯一系统回顾 ASD 家长生活质量研究的综述——但读的时候需要记住一件事：它测量的是\"家长个人 QoL\"，而不完全是\"整个家庭的生活质量\"。",
+      "research_question": "**ASD 儿童家长的生活质量（QoL）在哪些领域受到影响？这种影响与哪些儿童、家长和情境因素有关？现有研究的方法质量如何？**",
+      "key_findings": [
+        "数据库：PsycINFO、PubMed、CINAHL、ERIC、SCOPUS",
+        "检索截至：2015 年（发表 2016 年）",
+        "初始筛查 → 12 项研究符合纳入标准",
+        "**纳入标准**：ASD 儿童（0–18 岁）的家长；报告 QoL 的实证研究；英文发表",
+        "儿童行为问题 → QoL↓（多项研究支持）",
+        "ASD 严重程度 → 与 QoL 关系不一致（部分显著，部分不显著）",
+        "儿童年龄 → 关系不一致",
+        "家长就业 → 环境领域 QoL↑",
+        "家长情绪调节 / 应对方式 → QoL↑",
+        "诊断接受程度 → 与 QoL 正向关联",
+        "社会支持 → QoL↑（多项研究支持）",
+        "财务负担 → QoL↓",
+        "服务获取 → 与 QoL 正向关联",
+        "所有纳入研究为横断面设计，无法确认因果方向",
+        "样本以白人、中产、母亲为主——代表性有限",
+        "测量工具异质性高，研究间结果难以直接比较",
+        "多数研究样本量偏小（N < 200）",
+        "缺乏以家庭为整体分析单位的 FQoL 研究",
+        "2016 年后 Beach Center FQoL 使用量大幅增加，但本综述未能覆盖"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，研究者追踪了 12 项研究，发现 ASD 家长在心理和社会这两个领域受到的影响最一致——不是暂时的倦怠，而是一种在多个研究、多种测量工具下都出现的模式。你感到的改变，不是想象出来的。",
+        "很多家长后来才发现，综述显示社会关系领域是受影响最一致的两个领域之一。照顾 ASD 孩子改变了家长与朋友、伴侣、社区的连接方式——这不是个人问题，而是一个被系统记录的结构性影响。",
+        "很多家长后来才发现，综述显示在职业上保持参与的家长，在环境和物质条件方面的 QoL 更高。这不是在说\"你应该去工作\"，而是说就业带来的财务保障、社会连接和个人身份，对 QoL 有真实的保护作用。",
+        "很多家长后来才发现，在一些研究中，灵性或宗教信仰与更好的 QoL 相关。不是所有人都会用这个路径，但如果你有这样的资源，研究数据支持它是真实有帮助的。\n\n---"
+      ],
+      "implications": [
+        "引用本综述时，注明测量工具主要为个人 QoL 量表，与 Beach Center FQoL（家庭整体）有概念区别",
+        "本综述提供了\"ASD 家长 QoL 整体受损\"的最强系统综述证据；更细致的领域分析建议结合 Beach Center FQoL 系列研究（跨 EA-000059 等）",
+        "2016 年后有大量新研究——需要考虑发表时间局限"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Overview · ASD Family Quality of Life",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它是目前唯一系统回顾 ASD 家长生活质量研究的综述——但读的时候需要记住一件事：它测量的是\"家长个人 QoL\"，而不完全是\"整个家庭的生活质量\"。",
+      "key_finding": "数据库：PsycINFO、PubMed、CINAHL、ERIC、SCOPUS",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"ASD 家长生活质量：系统综述\"",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000060.md"
+    },
+    {
+      "id": "EA-000061",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童（3–18 岁）家长，参与团体培训项目",
+      "sample": "12 项研究（系统综述）",
+      "year": 2020,
+      "quality_level": null,
+      "evidence_type": "Qualitative · Systematic Review",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "The Effects of Parent Training Programs on the Quality of Life and Stress Levels of Parents Raising a Child with Autism Spectrum Disorder: A Systematic Review of the Literature",
+        "authors": "Lichtlé, J.; Downes, N.; Engelberg, A.; Cappe, E.",
+        "journal": "Review Journal of Autism and Developmental Disorders",
+        "year": "2020 · Vol. 7(3) · pp. 242–262",
+        "doi": "10.1007/s40489-019-00190-x",
+        "access": "Paywalled (Springer)",
+        "method": "Systematic Review（叙述性综合，12 项研究）",
+        "scope": "ASD 儿童家长的团体培训项目；结果变量：家长 QoL + 压力水平；同时评估实施保真度（implementation fidelity）；法国团队（Université Paris Cité）"
+      },
+      "why_read": "它不是在问\"干预有没有效果\"，而是在问一个更具体的问题：**专门为 ASD 家长设计的团体培训，有没有改善家长自己的生活质量和压力水平？**",
+      "research_question": "**面向 ASD 儿童家长的团体培训项目，能否改善家长的 QoL 和压力水平？不同类型的培训（正念、心理教育、行为管理）效果是否不同？现有研究的实施保真度报告是否充分？**",
+      "key_findings": [
+        "数据库：PsycINFO、Medline、PubMed、Web of Science、ERIC",
+        "纳入标准：ASD 儿童家长；团体培训形式；报告 QoL 或压力结果；有对照或前后测设计",
+        "初始筛查 → **12 项研究纳入最终分析**",
+        "发表时间跨度：约 2000–2019 年",
+        "心理教育：知识改善明确，QoL 和压力改善不一致",
+        "行为管理培训：儿童行为改善有证据，家长 QoL 效应较弱",
+        "培训内容的完整交付程度",
+        "培训师的能力和一致性",
+        "参与者的参与率和完成率",
+        "剂量（dose）——实际接受了多少培训"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，有研究者系统地找了 12 项专门针对 ASD 家长的团体培训研究，问的是\"这些课程之后，家长自己过得有没有好一些\"。结果是：大多数研究发现有改善，特别是压力和 QoL 方面。",
+        "很多家长后来才发现，在不同类型的家长培训中，正念课程（帮助你注意到自己的感受、不被它淹没）是目前改善家长 QoL 和压力效果最一致的方向。不是\"学更多关于 ASD 的知识\"，而是\"学习和自己的状态待在一起的方式\"。",
+        "很多家长后来才发现，这些研究评估的都是团体培训——不只是内容本身，也包括和其他 ASD 家长在一起这件事。研究还没有完全分清楚\"是内容有效还是团体本身有效\"，但两者都可能很重要。",
+        "很多家长后来才发现，综述作者指出了一个诚实的问题：大多数研究没有充分报告培训到底有没有按设计执行。这意味着即使效果不错，我们也不完全确定是哪个部分在起作用。这不是说培训没用，而是研究方法还有待完善。\n\n---"
+      ],
+      "implications": [
+        "如果你有机会参加面向 ASD 家长的团体课程，正念类课程的证据支持最充分——可以主动询问所在地区是否有此类项目",
+        "团体形式很重要：和其他 ASD 家长在一起本身有价值，不只是课程内容",
+        "如果一个培训主要是告诉你关于 ASD 的信息（心理教育），它对知识帮助很大，但对减轻你自己的压力帮助可能相对有限",
+        "开展家长培训项目时，建立实施保真度的记录流程（出勤率、内容完成情况、培训师一致性）",
+        "选择或设计家长支持项目时，将家长 QoL 和压力列为明确的结果指标，而不只是儿童进步"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Parent Training and Family-Related Quality-of-Life Outcomes",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是在问\"干预有没有效果\"，而是在问一个更具体的问题：**专门为 ASD 家长设计的团体培训，有没有改善家长自己的生活质量和压力水平？**",
+      "key_finding": "数据库：PsycINFO、Medline、PubMed、Web of Science、ERIC",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "\"家长培训对 ASD 家长 QoL 与压力的效果\"",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000061.md"
+    },
+    {
+      "id": "EA-000062",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "普通成人 / 非 ASD-specific（一般健康心理学样本）",
+      "sample": null,
+      "year": 1985,
+      "quality_level": null,
+      "evidence_type": "Conceptual · Review · Framework",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Stress, Social Support, and the Buffering Hypothesis",
+        "authors": "Cohen, S.; Wills, T. A.",
+        "journal": "Psychological Bulletin",
+        "year": "1985 · Vol. 98(2) · pp. 310–357",
+        "doi": "10.1037/0033-2909.98.2.310",
+        "access": "Paywalled (APA)",
+        "method": "Narrative Review + Meta-synthesis（里程碑综述）",
+        "scope": "社会支持与压力-健康关系的系统整合；感知支持与实际支持的区分；Main Effect Model 与 Stress-Buffering Model 的比较检验；测量工具与理论模型的匹配分析"
+      },
+      "why_read": "它不是在说\"有支持比没支持好\"，而是第一次系统回答了：为什么有些支持能保护人，有些支持却没有效果？以及，什么时候支持才会发挥作用？",
+      "research_question": "**社会支持与健康的关系，在什么条件下成立？支持是直接改善健康（无论压力水平如何），还是在高压力时才发挥缓冲作用？测量方式的不同，是否解释了研究间的矛盾结果？**",
+      "key_findings": [
+        "社会支持提供意义感、归属感和认同感",
+        "降低孤立感和基础焦虑水平",
+        "促使个体维持健康行为（如规律睡眠、就医）",
+        "❌ 没有建立社会支持与 ASD 家长具体压力的关联（这是 EA-000065 的任务）",
+        "❌ 没有建立支持干预的有效性（这是 EA-000066 的任务）",
+        "❌ 没有建立特定支持类型与特定结果的匹配有效性（匹配假说后续研究仍不一致）",
+        "❌ 没有解决感知支持与实际支持哪个\"更真实\"——两者测量不同构念，无优劣之分",
+        "⚠️ 文章发表于 1985 年；许多具体机制路径在后续研究中被修正或细化"
+      ],
+      "parent_meaning": [
+        "**这是一篇里程碑性叙述综述，不是系统综述或 meta-analysis。**",
+        "| 特征 | 说明 |\n|---|---|\n| **文章性质** | 叙述性综述；无 PRISMA；无预注册 |\n| **引用广度** | 综合了 1976–1984 年间数十项实证研究 |\n| **影响力** | 引用次数超过 15,000 次（Google Scholar）；被视为社会支持领域最重要的单篇综述 |\n| **方法局限** | 叙述性整合，无效应量合并；作者对纳入文献有选择性 |\n| **年代限制** | 发表于 1985 年；其后的研究已在细节上有所修正 |\n| **跨时间稳定性** | 核心概念框架（感知 vs. 实际；双模型）至今仍是领域标准 |",
+        "使用本文作为 Framework Anchor 的合理性：它确立了后续 40 年研究的概念语言和分析框架，而不是提供具体效应量。",
+        "---"
+      ],
+      "implications": [
+        "识别你最需要的支持类型：是\"有人理解我\"（情感性）、\"有人帮我做事\"（工具性）、\"有人告诉我该怎么办\"（信息性），还是\"有人肯定我做得够好\"（评估性）？",
+        "主动建立和维护支持网络——不要等到最需要的时候才开始寻找，那时往往已经没有精力去建立关系",
+        "区分\"有人在旁边\"和\"感到被支持\"：亲戚在场不等于你得到了支持；真正的支持感来自被理解和被回应",
+        "在评估家庭需求时，除了\"使用了哪些服务\"，还应该问：\"你觉得在需要的时候有人可以帮你吗？\"",
+        "设计支持项目时，思考：这个项目提供的是哪种功能的支持？目标家庭最缺的是哪种？"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Foundational Framework · Social Support Theory",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是在说\"有支持比没支持好\"，而是第一次系统回答了：为什么有些支持能保护人，有些支持却没有效果？以及，什么时候支持才会发挥作用？",
+      "key_finding": "社会支持提供意义感、归属感和认同感",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "社会支持如何保护家庭：直接效应与压力缓冲模型",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000062.md"
+    },
+    {
+      "id": "EA-000063",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "大学生（初步开发样本，n=275；非 ASD-specific）",
+      "sample": "n = 275（136 名女性，139 名男性，大学生）",
+      "year": 1988,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Psychometric",
+      "reading_time": "8 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "The Multidimensional Scale of Perceived Social Support",
+        "authors": "Zimet, G. D.; Dahlem, N. W.; Zimet, S. G.; Farley, G. K.",
+        "journal": "Journal of Personality Assessment",
+        "year": "1988 · Vol. 52(1) · pp. 30–41",
+        "doi": "10.1207/s15327752jpa5201_2",
+        "access": "Paywalled (Taylor & Francis)",
+        "method": "Scale Development + Psychometric Validation",
+        "scope": "感知社会支持量表（MSPSS）的开发与验证；三来源结构（Family / Friends / Significant Other）；n = 275 名大学生（初步开发）；内部一致性、因素结构、收敛效度"
+      },
+      "why_read": "它不是理论文章，而是一把测量工具——但选错了工具，所有后续研究的结论都会偏移。",
+      "research_question": "**能否开发一个简短、可靠的自评量表，测量个体对来自不同来源的社会支持的感知程度？**",
+      "key_findings": [
+        "三个因素与理论预设（Family / Friends / Significant Other）完全对应",
+        "各条目在对应因素上负荷高，在其他因素上负荷低（结构效度清晰）",
+        "三因素之间存在中等程度的正相关——提示存在一个高阶\"一般感知支持\"因子，但三来源的区分仍然有意义",
+        "感知支持高分 → 抑郁症状低（负相关，假设方向成立）",
+        "感知支持高分 → 焦虑症状低（负相关）",
+        "与生活满意度正相关",
+        "❌ 没有建立 MSPSS 与 ASD 特定压力的关联（这需要 ASD-specific 研究）",
+        "❌ 没有建立感知支持对 ASD 家长 QoL 的效应量（EA-000065 的任务）",
+        "❌ 没有区分支持的功能类型（情感/工具/信息/评估）——MSPSS 按来源分，不按功能分",
+        "❌ 没有提供 Formal Support 的测量方案——MSPSS 的三个来源均为非正式支持",
+        "⚠️ 开发年代（1988年）：后续研究已对量表结构进行细化，部分研究建议在特定人群中调整使用"
+      ],
+      "parent_meaning": [
+        "**这是一篇量表开发研究，评估维度与实证研究不同。**",
+        "| 特征 | 说明 |\n|---|---|\n| **文章性质** | Scale development，包含初步验证数据 |\n| **开发样本** | n = 275，大学生，单一机构 |\n| **后续验证** | 超过 35 年、数千项研究的使用和验证历史；三因素结构高度稳定 |\n| **影响力** | 引用次数超过 15,000 次；是感知支持研究的主流工具 |\n| **主要局限** | 不区分功能类型；不覆盖正式支持；来源为非正式网络 |\n| **ASD 适用性** | 被广泛用于 ASD 家长研究；英语 ASD 样本独立 CFA 仍为 Gap |",
+        "MSPSS 的价值来自跨文化、跨临床群体的大量后续验证，而非初始开发论文的样本代表性。在使用中，稳健的因素结构和高内部一致性是其主要优势。",
+        "---"
+      ],
+      "implications": [
+        "使用 MSPSS 时，明确报告是总分还是子量表分数，以及哪个来源的支持是主要分析对象",
+        "当研究关注 Formal Support（如专业服务满意度）时，MSPSS 不是合适的工具——需要使用 Family Support Scale（Dunst et al., 1986）或类似工具",
+        "在 ASD 学龄期家庭样本中使用 MSPSS 时，建议附注：英语 ASD 学龄样本独立 CFA 仍缺失，三因素结构基于跨文化类推",
+        "若需要区分支持功能类型（情感/工具/信息/评估），MSPSS 不够——考虑 ISEL 或 MOS Social Support Survey"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Measurement · MSPSS · Perceived Social Support",
+      "framework": null,
+      "is_foundational": true,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是理论文章，而是一把测量工具——但选错了工具，所有后续研究的结论都会偏移。",
+      "key_finding": "三个因素与理论预设（Family / Friends / Significant Other）完全对应",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "MSPSS：感知社会支持量表的开发与验证",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000063.md"
+    },
+    {
+      "id": "EA-000064",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童（0–18 岁）的家长（以母亲为主；多国多文化）",
+      "sample": "18 项研究（质性研究综合）",
+      "year": 2025,
+      "quality_level": null,
+      "evidence_type": "Qualitative · Systematic Review · Thematic Synthesis",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Social Support Experiences in Parents of Children With ASD: A Qualitative Systematic Review",
+        "authors": "Gao, X.; Drani, S.",
+        "journal": "SAGE Open",
+        "year": "2025",
+        "doi": "10.1177/21582440251336174",
+        "access": "Open Access (SAGE)",
+        "method": "Qualitative Systematic Review（主题合成 · Thematic Synthesis）",
+        "scope": "2013–2023 年发表的 ASD 家长社会支持体验质性研究；18 项研究纳入；多国多文化；GRADE-CERQual 质量评估；PRISMA 流程"
+      },
+      "why_read": "它不是在统计 ASD 家长接受了多少服务，而是第一次系统整合了 18 项研究，问了一个更真实的问题：**这些家长在什么地方感到孤立，又是谁在真正帮助他们？**",
+      "research_question": "**ASD 儿童家长对社会支持的体验是什么？他们从哪里获得支持、在哪里感到缺乏支持、面临哪些障碍，以及这些体验在不同文化背景下有什么差异？**",
+      "key_findings": [
+        "数据库：PsycInfo、PubMed、Web of Science、Scopus",
+        "检索截至：2024 年 11 月（发表 2025 年）",
+        "初始检索 → 纳入 **18 项质性研究**（2013–2023）",
+        "纳入标准：ASD 儿童（0–18 岁）家长；质性设计（访谈、焦点小组）；报告社会支持相关体验",
+        "质量评估：Modified CASP（研究质量大多数为高）；GRADE-CERQual（置信度评估）",
+        "配偶/伴侣 → 双亲家庭中最核心的非正式支持",
+        "专业服务（治疗师、学校）→ 高度依赖，但满意度参差不齐",
+        "扩展家庭 → 依赖度高，但质量差异大（理解程度影响极大）",
+        "同伴家长（Other ASD Parents）→ 跨研究最一致的高满意度来源",
+        "理解 ASD 的家庭成员 → 当扩展家庭真正理解时，支持质量高",
+        "朋友网络 → 照顾负担导致社交萎缩；ASD 不被理解导致回避",
+        "信息性服务（导航、协调）→ 家长不知道去哪里获取信息",
+        "❌ 没有提供量化效应量（这是质性综述，无 SMD 或 r 值）",
+        "❌ 没有建立支持与压力/QoL 的因果关系（见 EA-000065）",
+        "❌ 没有评估干预效果（见 EA-000066）",
+        "⚠️ 纳入研究以母亲为主，父亲视角代表性不足",
+        "⚠️ 英语研究为主，非英语 ASD 家庭社会支持研究系统性不足"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，这不是你一个人的迷茫。18 项研究里，几乎每一项都记录了诊断后的信息真空——拿到诊断书，不知道去哪里、不知道该做什么。这是服务系统的设计问题，不是你不够努力去找。",
+        "很多家长后来才发现，研究显示同伴家长（有类似经历的家长）是满意度最高、最被感受到有帮助的支持来源。不是专业人员，不是家人，而是那个\"她也知道那是什么感觉\"的人。",
+        "很多家长后来才发现，友谊流失不是因为你不够好，而是照顾的密度让你几乎没有能量去维护原本的社交关系。研究记录了这个过程：不是某一天朋友决定离开，而是联系越来越少，直到某天才意识到那条线断了。",
+        "很多家长后来才发现，扩展家庭在不理解 ASD 的情况下给出的建议或评判，可能比没有支持更难承受。研究里反复出现这一主题：\"他们以为在帮我，但他们说的话让我更累。\"这不是你不懂感恩，而是不匹配的支持确实有这种效果。",
+        "很多家长后来才发现，污名是跨文化研究里最一致的发现之一——无论是东亚的\"家族耻辱\"，还是西方的\"被邻居回避\"，都被研究记录了下来。这种感受是真实的、普遍的，不是你的问题。\n\n---"
+      ],
+      "implications": [
+        "如果你在诊断后感到茫然，这是一个已被记录的普遍体验——主动寻找\"诊断后导航\"服务（如果有的话），或向治疗师直接提出：\"我不知道接下来该做什么，能帮我梳理吗？\"",
+        "找一个有相似经历的家长群体，哪怕是线上的——研究显示这是满意度最高的支持来源",
+        "如果家人的\"支持\"让你感到更累，这种感受是真实的；你不需要用感激去掩盖它",
+        "评估家庭支持时，区分\"有没有人\"和\"有没有被理解\"——家庭人口多不等于支持充足",
+        "在服务计划中加入\"同伴连结\"的推荐——不只是心理教育课程，而是和有类似经历的家长建立联系",
+        "友谊流失、感到孤立是 ASD 照顾中的结构性风险，不是因为你不值得被朋友支持"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Overview · ASD Parent Social Support Experiences",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是在统计 ASD 家长接受了多少服务，而是第一次系统整合了 18 项研究，问了一个更真实的问题：**这些家长在什么地方感到孤立，又是谁在真正帮助他们？**",
+      "key_finding": "数据库：PsycInfo、PubMed、Web of Science、Scopus",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "ASD 家长的社会支持体验：质性系统综述",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000064.md"
+    },
+    {
+      "id": "EA-000065",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童家长（综合 28 项研究；中国研究为主，含西方样本）",
+      "sample": "N = 13,270（28 项研究的合并样本）",
+      "year": 2022,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Meta-Analytic SEM",
+      "reading_time": "14 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "The Mediating Effect of Parenting Stress on the Relationship Between Social Support and Quality of Life in Parents of Children With Autistic Spectrum Disorder: A Meta-Analytic Structural Equation Modeling",
+        "authors": "Wang, Z.; Wang, L.; Chang, S.; Wang, H.",
+        "journal": "Frontiers in Psychiatry",
+        "year": "2022 · Vol. 13 · Article 713620",
+        "doi": "10.3389/fpsyt.2022.713620",
+        "access": "Open Access (Frontiers)",
+        "method": "Meta-Analytic Structural Equation Modeling（MASEM · Two-Stage Approach）",
+        "scope": "28 项实证研究 · N = 13,270 · ASD 儿童家长；SS → PS → QoL 中介路径；调节变量分析（测量工具、家长角色、儿童年龄、文化背景）"
+      },
+      "why_read": "它不是又一项说\"社会支持对家长有帮助\"的研究——而是目前最大规模的证据，第一次回答了：**帮助是通过什么路径发生的？**",
+      "research_question": "**在 ASD 儿童家长中，社会支持是否通过降低照顾压力来改善生活质量（中介模型）？其他变量（测量工具、家长角色、儿童年龄、文化背景）是否调节这条路径？**",
+      "key_findings": [
+        "社会支持对 QoL 有直接改善作用（不经由压力）",
+        "社会支持同时通过降低压力来间接改善 QoL",
+        "两条路径均显著",
+        "MSPSS 与 PSI 组合：路径系数稳健",
+        "不同 QoL 测量工具（个人 QoL vs. 家庭 FQoL）影响 SS → QoL 路径",
+        "母亲样本和父亲样本的路径强度有差异",
+        "母亲承担更多照顾责任，SS → PS 的调节效应可能更显著",
+        "但大多数纳入研究以母亲为主，父亲数据有限",
+        "儿童年龄调节 SS → PS 的关系",
+        "具体方向：年龄较大的儿童群体中，某些路径强度有变化（见原文 Table）",
+        "在东方文化中，社会支持对 QoL 有更强的直接影响——支持本身（归属感、关系质量）在东方文化语境中直接影响幸福感",
+        "在西方文化中，压力对 QoL 的负向影响更强——降低压力是改善西方家长 QoL 的更关键路径",
+        "❌ 没有建立缓冲效应（Stress × Support 交互项）的证据",
+        "❌ 没有区分支持来源（Family/Friends/Professional）的分别贡献",
+        "❌ 没有区分支持功能类型（情感/工具/信息/评估）的分别效应",
+        "❌ 没有提供干预研究的效应量（这是 EA-000066 的任务）",
+        "⚠️ 大多数纳入研究为横断面设计，因果方向为推断而非确认",
+        "⚠️ 中国研究在纳入样本中占比较高，可能影响 Eastern/Western 的比较效度",
+        "⚠️ 父亲样本代表性不足，家长角色调节效应有待更均衡的数据"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，研究把 13,270 名 ASD 家长的数据合在一起，得出的结论是：感知到有支持的家长，生活质量更好。这不是安慰的话，这是经过系统分析的结果。",
+        "很多家长后来才发现，研究发现支持对生活质量的一部分作用，是通过降低照顾压力来实现的——支持减少了那种\"一个人扛着所有\"的感受，而这种感受减轻后，其他方面才有了改善的空间。",
+        "很多家长后来才发现，即使压力水平相同，感知到有支持的家长生活质量也更好。这说明被支持的感受本身有价值，不只是因为减少了压力。",
+        "很多家长后来才发现，在东亚文化背景下，感受到有人支持你这件事本身对生活质量的直接影响更强；在西方背景下，压力减轻是更关键的路径。但无论哪种背景，结论都是：有支持的家长过得更好。\n\n---"
+      ],
+      "implications": [
+        "研究数据显示，增强感知支持可以同时通过两个路径改善你的生活质量：直接的（被支持本身有价值）和间接的（先降低压力）",
+        "减少照顾压力和增强社会支持，是相互强化的，不是两选一的问题",
+        "在制定支持计划时，将\"增强家长感知支持\"和\"降低照顾压力\"作为并列目标，而非只关注其中一个",
+        "在跨文化服务中，调整支持设计的优先级：东方背景家庭可能更重视关系和归属感；西方背景家庭可能更需要具体的压力减轻干预"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Core Pathway Analysis · Social Support → Parent Stress → Quality of Life",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是又一项说\"社会支持对家长有帮助\"的研究——而是目前最大规模的证据，第一次回答了：**帮助是通过什么路径发生的？**",
+      "key_finding": "社会支持对 QoL 有直接改善作用（不经由压力）",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "社会支持如何改善 ASD 家长生活质量：照顾压力的中介路径",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000065.md"
+    },
+    {
+      "id": "EA-000066",
+      "type": null,
+      "topic": "topic-family-support",
+      "population": "ASD 儿童（0–18 岁）的家长/照顾者",
+      "sample": null,
+      "year": 2026,
+      "quality_level": null,
+      "evidence_type": "Quantitative · Meta-analysis",
+      "reading_time": "12 min",
+      "related_et": [],
+      "related_path": [],
+      "source": {
+        "paper_title": "Effects of Respite Care on the Quality of Life of Caregivers of Children With Autism Spectrum Disorder in Comparison With Parent Training: A Systematic Review and Meta-Analysis",
+        "authors": "Takatani, S.; Nakaguchi, H.; Honda, J.; Soejima, T.; Kitao, M.; Lin, Q.; Nishimura, N.",
+        "journal": "Cureus",
+        "year": "2026 · Published: 2026-01-12",
+        "doi": "10.7759/cureus.101377",
+        "access": "Open Access (Cureus / PMC)",
+        "method": "Systematic Review + Meta-analysis（Random-effects model · SMD）",
+        "scope": "ASD 儿童（0–18 岁）家长；喘息服务（RC）vs. 家长培训（PT）对照顾者 QoL 的效果；6 个数据库；截至 2025 年 9 月；RC 组 5 项研究，PT 组 10 项研究；RoBANS-2 偏倚风险评估"
+      },
+      "why_read": "它不是在问\"喘息服务有没有用\"，而是第一次把喘息服务和家长培训放在同一个天平上，问了一个更具体的问题：**对 ASD 家长的生活质量，哪种支持方式更有效？**",
+      "research_question": "**喘息服务（RC）和家长培训（PT）哪种干预对 ASD 儿童照顾者的 QoL 改善更有效？RC 的效应量如何，与 PT 相比结论是否一致？**",
+      "key_findings": [
+        "数据库：PubMed、CINAHL、Web of Science、Cochrane Central Register、PsycINFO、Embase",
+        "截止：2025 年 9 月",
+        "纳入标准：ASD 儿童（0–18 岁）家长/照顾者；RC 或 PT 干预；QoL 为结果变量；量化研究设计",
+        "最终纳入：**RC 组 5 项研究，PT 组 10 项研究**",
+        "偏倚风险：所有纳入研究均为高偏倚风险（RoBANS-2）",
+        "缺乏随机化（大多数为前后测设计或准随机）",
+        "样本量小（各研究 n 差异大）",
+        "结果测量工具异质性（不同 QoL 量表）",
+        "无盲法",
+        "本综述测量的是**照顾者个人 QoL**（使用各种个人 QoL 量表）",
+        "这与 Beach Center FQoL Scale 测量的**家庭整体生活质量**不等同",
+        "因此，本 EA 的结论是\"RC 改善了照顾者个人 QoL\"，不能直接引用为\"RC 改善了家庭整体 FQoL\"",
+        "❌ 没有建立 RC 的长期效果（大多数研究为短期测量）",
+        "❌ 没有评估 RC 对儿童本身的影响（不在本综述范围）",
+        "❌ 没有比较不同形式 RC 的相对效果（上门 vs. 日间照顾 vs. 营地）",
+        "❌ 没有建立 RC 改善家庭整体 FQoL 的直接证据",
+        "⚠️ 所有纳入研究均为高偏倚风险——结论可信但需谨慎表述",
+        "⚠️ RC 研究数量（5项）远少于 PT（10项），比较基础不均衡"
+      ],
+      "parent_meaning": [
+        "很多家长后来才发现，有研究专门把\"让家长暂时从照顾中脱离\"作为干预来研究，结果是：这种形式的支持改善了家长的生活质量，而且是 5 项研究里最一致的发现之一。暂时离开不是放弃，而是让自己可以继续。",
+        "很多家长后来才发现，当研究把\"有人替你照顾孩子一段时间\"和\"参加家长技能培训课程\"放在一起比较，喘息服务的效果反而更大、更稳定。这不是说培训没有用，而是说让自己真正休息这件事被严重低估了。",
+        "很多家长后来才发现，家长培训能帮助你更有效地应对照顾挑战，但喘息服务帮助的是另一件事：让你在那些挑战出现之前，还剩下足够的能量。",
+        "很多家长后来才发现，寻求临时的照顾替代不是软弱的信号，而是目前证据显示最有效的支持形式之一。这项研究把它和结构化培训课程放在一起比较，结果喘息服务赢了。\n\n---"
+      ],
+      "implications": [
+        "如果你从来没有使用过喘息服务，这项综述提供了这件事值得尝试的证据依据——不是为了孩子，而是为了你自己",
+        "向社工、治疗团队或社区服务机构明确询问：当地有没有喘息服务资源？能申请什么？",
+        "不需要在完全崩溃之后才寻求喘息服务——定期使用作为预防，比危机后使用更有效",
+        "在初次家庭评估时，主动询问照顾者是否有定期的休息机会——而不是等家长自己开口",
+        "协助家庭识别和申请喘息服务资源（包括本地、政府补贴、NGO 项目）",
+        "喘息服务的转介，应和心理咨询、家长培训一样，成为支持计划的常规选项"
+      ],
+      "content_type": "EA",
+      "tier": 1,
+      "series": null,
+      "editorial_role": "Improvement Evidence · Respite Care and Caregiver QoL",
+      "framework": null,
+      "is_foundational": false,
+      "confidence": null,
+      "concept_refs": null,
+      "supports_et": [],
+      "insight": "它不是在问\"喘息服务有没有用\"，而是第一次把喘息服务和家长培训放在同一个天平上，问了一个更具体的问题：**对 ASD 家长的生活质量，哪种支持方式更有效？**",
+      "key_finding": "数据库：PubMed、CINAHL、Web of Science、Cochrane Central Register、PsycINFO、Embase",
+      "why_it_matters": null,
+      "limitations": null,
+      "display_title": "喘息服务对 ASD 家长生活质量的效果：系统综述与元分析",
+      "_source_file": "repository\\knowledge\\evidence\\cards\\Deconstruction\\EA-000066.md"
     }
   ]
 }
