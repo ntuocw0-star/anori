@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-07-17T00:46:56.142Z",
+  "generated_at": "2026-07-18T00:54:12.432Z",
   "passed": true,
   "summary": {
     "errors": 0,
-    "warnings": 0,
+    "warnings": 1,
     "infos": 3
   },
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    {
+      "type": "warning",
+      "message": "EA \"EA-000004\" related_ka 包含 KA-000003，但 KA-000003.related_ea 未引用 EA-000004（双向不一致）"
+    }
+  ],
   "infos": [
     {
       "type": "info",

@@ -1,11 +1,11 @@
 {
   "schemaId": "PDF-Manifest",
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T01:56:17.683Z",
+  "generated_at": "2026-07-18T00:54:11.728Z",
   "summary": {
-    "total": 7,
-    "ok": 7,
-    "skipped": 7,
+    "total": 12,
+    "ok": 12,
+    "skipped": 6,
     "failed": 0
   },
   "items": [
@@ -38,9 +38,64 @@
       "path": "/downloads/ka/KA-000003-one-page.pdf",
       "htmlSource": "dist\\download\\ka\\KA-000003\\one-page\\index.html",
       "status": "ok",
-      "generatedAt": "2026-07-15T10:30:29.133Z",
-      "htmlHash": "sha256:63ec08143c3a2d965f4b432353c2267ed33c4905703acfce64ebf156e13bfff0",
-      "skipped": true
+      "generatedAt": "2026-07-18T00:52:23.847Z",
+      "htmlHash": "sha256:1e65478045a8a7c29cf661122a2df5d765662d196b2d10e51546fad5983499e8",
+      "skipped": false
+    },
+    {
+      "contentId": "KA-000004",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000004-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000004\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-18T00:52:44.560Z",
+      "htmlHash": "sha256:1dcebc21db9d9c0eea42110a6eb1cf6b01ac30ffd0dbf85361258409e2fe57d0",
+      "skipped": false
+    },
+    {
+      "contentId": "KA-000005",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000005-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000005\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-18T00:53:08.295Z",
+      "htmlHash": "sha256:e72090bfd54947230c0c4bbb7958f5321bba5c78ea5f8aead37fe2ea64f2a444",
+      "skipped": false
+    },
+    {
+      "contentId": "KA-000006",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000006-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000006\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-18T00:53:27.398Z",
+      "htmlHash": "sha256:b8a7d45a3208702b1e310be1f1d555574dbfa265de42e7e826123311fc532e35",
+      "skipped": false
+    },
+    {
+      "contentId": "KA-000007",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000007-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000007\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-18T00:53:48.251Z",
+      "htmlHash": "sha256:db6ebb5a77033d3bb421a6a8c6f4a616bdc0be6f5b0c169228f8de9427f111d2",
+      "skipped": false
+    },
+    {
+      "contentId": "KA-000008",
+      "bundleType": "ka-one-page",
+      "schemaId": "KA-OnePage",
+      "path": "/downloads/ka/KA-000008-one-page.pdf",
+      "htmlSource": "dist\\download\\ka\\KA-000008\\one-page\\index.html",
+      "status": "ok",
+      "generatedAt": "2026-07-18T00:54:11.628Z",
+      "htmlHash": "sha256:320a044ff2af24970d3bd24150964f21b059012d7cd505396f2f3ec317a9c087",
+      "skipped": false
     },
     {
       "contentId": "KA-Family-001",
