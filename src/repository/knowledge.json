@@ -61,7 +61,10 @@
           "KA-Family-001",
           "KA-Participation-001"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-Family-001",
@@ -123,7 +126,10 @@
           "KA-Visual-001",
           "KA-Participation-001"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-Participation-001",
@@ -185,7 +191,10 @@
           "KA-Visual-001",
           "KA-Family-001"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000001",
@@ -251,7 +260,10 @@
         "secondary": [
           "concept-parent-stress"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000002",
@@ -321,7 +333,10 @@
       "concept_refs": {
         "primary": "concept-aac",
         "secondary": []
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-SocialComm-001",
@@ -391,7 +406,10 @@
           "KA-Visual-001",
           "KA-Family-001"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000003",
@@ -451,7 +469,10 @@
         "secondary": [
           "concept-asd-caregiving"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000004",
@@ -509,7 +530,10 @@
         "secondary": [
           "concept-perceived-support"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000005",
@@ -567,7 +591,10 @@
         "secondary": [
           "concept-unmet-needs"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000006",
@@ -625,7 +652,10 @@
         "secondary": [
           "concept-behaviour-problems-pse"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000007",
@@ -683,7 +713,10 @@
         "secondary": [
           "concept-meaning-making"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000008",
@@ -741,7 +774,10 @@
         "secondary": [
           "concept-emotional-wellbeing"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000009",
@@ -790,7 +826,10 @@
         "secondary": [
           "concept-joint-attention"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000010",
@@ -839,7 +878,10 @@
         "secondary": [
           "concept-social-communication"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000011",
@@ -888,7 +930,10 @@
         "secondary": [
           "concept-social-communication"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000012",
@@ -937,7 +982,10 @@
         "secondary": [
           "concept-social-communication"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000013",
@@ -986,7 +1034,10 @@
         "secondary": [
           "concept-social-communication"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000014",
@@ -1035,7 +1086,10 @@
         "secondary": [
           "concept-social-communication"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000015",
@@ -1085,7 +1139,10 @@
         "secondary": [
           "concept-attendance-involvement"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000016",
@@ -1135,7 +1192,10 @@
         "secondary": [
           "concept-participation"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000017",
@@ -1185,7 +1245,10 @@
         "secondary": [
           "concept-attendance-involvement"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000018",
@@ -1235,7 +1298,10 @@
         "secondary": [
           "concept-attendance-involvement"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000019",
@@ -1285,7 +1351,10 @@
         "secondary": [
           "concept-participation-pattern"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000020",
@@ -1335,7 +1404,10 @@
         "secondary": [
           "concept-adolescence-participation"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     },
     {
       "id": "KA-000021",
@@ -1385,7 +1457,10 @@
         "secondary": [
           "concept-environment-50-64-percent"
         ]
-      }
+      },
+      "search_keywords": [],
+      "related_et": [],
+      "related_ka": []
     }
   ]
 }
